@@ -1,21 +1,76 @@
-"""CLI entry point (stub). Full pipeline wiring lands next."""
+"""CLI: run Verdict over the frozen demo corpora (deterministic, offline).
+
+  python -m verdict --list              # list available frozen claims
+  python -m verdict --id C08            # resolve a frozen claim by id
+  python -m verdict "some claim text"   # match a frozen claim by text (else guidance)
+"""
 from __future__ import annotations
 
 import sys
 
 from . import DISCLAIMER, __version__
+from .corpora import available, load_rows
+from .verdict import VerdictCard, run_frozen
+
+_SIGN = {1: "+", -1: "-", 0: "0"}
+
+
+def render_card(card: VerdictCard) -> str:
+    out = [f"CLAIM: {card.claim}"]
+    conf = f"   ·   confidence {card.confidence:.2f}" if card.confidence is not None else ""
+    out += [f"VERDICT: {card.verdict.value}{conf}", "", "gate trace:"]
+    for g in card.gate_trace:
+        out.append(f"  [{'ok' if g.passed else '--'}] {g.gate}: {g.detail}")
+    out += ["", "evidence ledger:"]
+    for r in card.ledger:
+        flag = "EXCLUDED " if not r.integrity_ok else ""
+        n = f"n={r.n}" if r.n else ""
+        out.append(f"  {flag}[{_SIGN.get(r.direction, '?')}] {r.source_id:16} {r.design:22} {n:9} {r.finding}")
+        if not r.integrity_ok and r.integrity_note:
+            out.append(f"        -> {r.integrity_note}")
+    out += ["", DISCLAIMER]
+    return "\n".join(out)
+
+
+def _match_by_text(text: str) -> str | None:
+    t = text.lower()
+    for cid in available():
+        meta, _ = load_rows(cid)
+        if t in meta.get("claim", "").lower() or meta.get("claim", "").lower() in t:
+            return cid
+    return None
 
 
 def main() -> int:
-    print(f"Verdict v{__version__}")
-    print(DISCLAIMER)
-    if len(sys.argv) < 2:
-        print('\nusage: python -m verdict "your biomedical efficacy claim"')
+    print(f"Verdict v{__version__}\n")
+    args = sys.argv[1:]
+
+    if not args or args[0] in ("-h", "--help"):
+        print(__doc__)
         return 0
-    claim = " ".join(sys.argv[1:])
-    print(f'\nclaim: {claim!r}')
-    print("pipeline not wired yet — see verdict/verdict.py evaluate() and the gate engine in verdict/gates.py")
-    return 0
+    if args[0] == "--list":
+        ids = available()
+        print("frozen claims:" if ids else "no frozen corpora yet (populate benchmark/corpora/*.json)")
+        for cid in ids:
+            meta, _ = load_rows(cid)
+            print(f"  {cid}  {meta.get('claim', '')}")
+        return 0
+
+    if args[0] == "--id":
+        if len(args) < 2:
+            print("usage: python -m verdict --id C08")
+            return 2
+        print(render_card(run_frozen(args[1])))
+        return 0
+
+    claim = " ".join(args)
+    cid = _match_by_text(claim)
+    if cid:
+        print(render_card(run_frozen(cid)))
+        return 0
+    print(f"no frozen corpus matches {claim!r}.")
+    print("Use --list, or run the live pipeline (needs ANTHROPIC_API_KEY + NCBI_EMAIL).")
+    return 1
 
 
 if __name__ == "__main__":

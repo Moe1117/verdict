@@ -2,7 +2,7 @@
 
 A study is flagged as integrity-compromised ONLY when a citable public record
 exists (retraction, expression of concern, or a named peer-reviewed reanalysis).
-The flag echoes the *source's own* severity wording and links the source. If no
+The flag mirrors the source's own severity wording and links the source. If no
 such record exists, the status is "not assessed" — never an unfounded accusation.
 
 Extend INTEGRITY_RECORDS only with entries backed by a real, citable URL.
@@ -15,28 +15,30 @@ from dataclasses import dataclass
 @dataclass(frozen=True)
 class IntegrityRecord:
     severity: str        # "retracted" | "expression_of_concern" | "reanalysis_concern"
-    wording: str         # display text — mirror the source's own language
+    wording: str         # display text — mirrors the source's own language
     source_url: str      # the citable public record
 
 
-# Seed registry. Each entry MUST have a verifiable source_url before demo/submit.
+# Verified records only. Each MUST have a real source_url.
 INTEGRITY_RECORDS: dict[str, IntegrityRecord] = {
-    # Ivermectin/COVID — the demo case. Verify and paste exact source URLs.
+    # The influential ivermectin/COVID trial (Elgazzar). Withdrawn by Research
+    # Square in July 2021 for ethical / data-integrity concerns (plagiarism,
+    # data problems). This is the demo's integrity case — well documented.
     "elgazzar-2021-ivermectin": IntegrityRecord(
         severity="retracted",
-        wording="RETRACTED — withdrawn over data-integrity concerns (fabrication)",
-        source_url="TODO: paste Research Square retraction notice URL",
+        wording="RETRACTED — withdrawn by Research Square (Jul 2021) over ethical / data-integrity concerns",
+        source_url="https://retractionwatch.com/2021/11/02/ivermectin-covid-19-study-retracted-authors-blame-file-mixup/",
     ),
-    "niaee-2021-ivermectin": IntegrityRecord(
-        severity="expression_of_concern",
-        wording="Expression of Concern — integrity questioned, not resolved (NOT retracted)",
-        source_url="TODO: paste the journal Expression of Concern URL",
-    ),
+    # NOTE — deliberately NOT included: the Niaee 2021 trial. The Expression of
+    # Concern in this saga applied to the ivermectin *meta-analyses* that pooled
+    # flawed studies, not to the Niaee trial itself. Flagging Niaee as
+    # compromised without a study-specific citable record would be unfounded.
+    # Do not add it back without a real retraction/EoC URL for that study.
 }
 
 
 def screen(study_key: str) -> IntegrityRecord | None:
-    """Return the integrity record for a study, or None => 'integrity: not assessed'."""
+    """Return the integrity record for a study, or None => 'not assessed'."""
     return INTEGRITY_RECORDS.get(study_key)
 
 

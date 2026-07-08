@@ -1,0 +1,10 @@
+{
+  "claim_id": "SAMPLE",
+  "claim": "SYNTHETIC TEST DATA (not real evidence): agent X improves outcome Y",
+  "expected_verdict": "Not Supported",
+  "rows": [
+    {"citation": "Retracted et al 2021", "source_id": "PMID:TEST-RETRACTED", "design": "rct", "direction": 1, "population_match": true, "n": "600", "finding": "claimed large benefit; later retracted", "integrity_ok": false, "integrity_note": "synthetic test retraction record"},
+    {"citation": "Clean Platform Trial 2022", "source_id": "NCT:TEST0001", "design": "rct", "direction": 0, "population_match": true, "n": "3000", "finding": "no benefit vs standard of care"},
+    {"citation": "Clean Meta 2022", "source_id": "PMID:TEST-META", "design": "meta-analysis of rcts", "direction": 0, "population_match": true, "n": "8000", "finding": "pooled null result"}
+  ]
+}

@@ -43,6 +43,9 @@ class EvidenceRow:
     population_match: bool        # does the study population match the claim?
     source_id: str = ""          # PMID / NCT / DOI
     integrity_ok: bool = True     # False when a citable retraction/EoC applies (see integrity.py)
+    n: str = ""                   # sample size (display)
+    finding: str = ""             # one-line finding (display; our words, no verbatim abstract)
+    integrity_note: str = ""      # why integrity_ok is False, with a citable source
     note: str = ""
 
     @property
