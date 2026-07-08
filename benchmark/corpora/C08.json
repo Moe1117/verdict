@@ -1,0 +1,113 @@
+{
+  "claim_id": "C08",
+  "claim": "Ivermectin improves clinical outcomes in COVID-19",
+  "expected_verdict": "Not Supported",
+  "rows": [
+    {
+      "citation": "Reis 2022 New England Journal of Medicine",
+      "source_id": "PMID:35353979",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "finding": "TOGETHER platform RCT: early ivermectin in ~3,500 symptomatic high-risk outpatients did not reduce hospitalization/prolonged ED observation vs placebo; no benefit.",
+      "n": "3515 (1358 ivermectin vs 1355 placebo, mITT)",
+      "integrity_ok": true,
+      "integrity_note": "Large double-blind placebo-controlled adaptive platform trial; no integrity concerns.",
+      "n_int": 3515,
+      "year": 2022
+    },
+    {
+      "citation": "Hayward 2024 Journal of Infection",
+      "source_id": "PMID:38431155",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "finding": "PRINCIPLE platform RCT (8,811 community adults): ivermectin gave no clinically meaningful faster recovery (HR ~1.15, below pre-specified 1.2 threshold) and no difference in hospitalization/death or 6-month recovery.",
+      "n": "8811 (2157 ivermectin vs 3256 usual care)",
+      "integrity_ok": true,
+      "integrity_note": "Large NIHR-funded open-label adaptive platform trial; no integrity concerns.",
+      "n_int": 8811,
+      "year": 2024
+    },
+    {
+      "citation": "Lim 2022 JAMA Internal Medicine",
+      "source_id": "PMID:35179551",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "finding": "I-TECH RCT (490 high-risk mild-to-moderate patients, Malaysia): ivermectin did not prevent progression to severe disease (21.6% vs 17.3%) and showed no secondary-outcome benefit.",
+      "n": "490 (241 ivermectin vs 249 control)",
+      "integrity_ok": true,
+      "integrity_note": "Investigator-initiated multicenter RCT; no integrity concerns.",
+      "n_int": 490,
+      "year": 2022
+    },
+    {
+      "citation": "Marcolino 2022 BMC Infectious Diseases",
+      "source_id": "PMID:35870876",
+      "design": "meta-analysis of rcts",
+      "direction": -1,
+      "population_match": true,
+      "finding": "Systematic review/meta-analysis of RCTs: ivermectin showed no significant effect on mortality, mechanical ventilation, or clinical improvement ('evidence beyond the hype' is null).",
+      "n": "14 RCTs synthesized",
+      "integrity_ok": true,
+      "integrity_note": "Post-hype synthesis; no integrity concerns.",
+      "n_int": 14,
+      "year": 2022
+    },
+    {
+      "citation": "Zein 2021 Diabetes & Metabolic Syndrome",
+      "source_id": "PMID:34237554",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "finding": "Early meta-analysis (RCTs, ~1,788 patients) reported ivermectin associated with reduced mortality; this pooled benefit was driven by trials later withdrawn/flagged (Elgazzar, Niaee) and does not survive clean re-analysis.",
+      "n": "RCTs / ~1788 patients",
+      "integrity_ok": true,
+      "integrity_note": "The meta-analysis itself is not retracted, but its positive signal depended on primary studies later withdrawn/questioned; illustrates fragility of the early pro-ivermectin evidence.",
+      "n_int": 1788,
+      "year": 2021
+    },
+    {
+      "citation": "Elgazzar 2020 Research Square (preprint)",
+      "source_id": "DOI:10.21203/rs.3.rs-100956/v3",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "finding": "Widely-cited preprint RCT claimed a large ivermectin mortality reduction and underpinned early positive meta-analyses. WITHDRAWN by Research Square (14 Jul 2021) for data-integrity/ethical concerns: duplicated patient records, deaths recorded before enrollment, and plagiarism.",
+      "n": "~600 claimed (data integrity compromised)",
+      "integrity_ok": false,
+      "integrity_note": "Preprint withdrawn by Research Square for data-integrity/ethical concerns; never peer-reviewed yet drove early positive meta-analyses. Corroborated by Nature (d41586-021-02081-w) and multiple outlets.",
+      "n_int": 600,
+      "year": 2020
+    },
+    {
+      "citation": "Shakhsi Niaee 2021 Asian Pacific Journal of Tropical Medicine",
+      "source_id": "DOI:10.4103/1995-7645.318304",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "finding": "Multicenter RCT (180 hospitalized adults) reported ivermectin sharply cut mortality vs controls; a positive study that fed pro-ivermectin meta-analyses. Data sleuths and an editorial note raised concerns over implausible baseline stratification/randomization; it is excluded from post-scrutiny meta-analyses.",
+      "n": "180 (six arms)",
+      "integrity_ok": true,
+      "integrity_note": "Concerns raised informally (data sleuths, editorial note) over implausible baseline stratification; NOT a formal Expression of Concern \u2014 the journal stated the paper was not retracted and no retraction was pending. The formal EoCs were issued on downstream reviews (Kory; Bryant/Lawrie, Am J Ther), not on this primary study.",
+      "n_int": 180,
+      "year": 2021
+    }
+  ],
+  "integrity_records": [
+    {
+      "study": "Elgazzar et al., Efficacy and Safety of Ivermectin for Treatment and Prophylaxis of COVID-19 (Research Square preprint rs-100956)",
+      "severity": "retracted",
+      "wording": "Withdrawn by Research Square on 14 July 2021 following data-integrity and ethical concerns: duplicated patient records (~79), deaths recorded on dates before the trial began, and plagiarised text. The preprint was never peer-reviewed but was cited widely and fed multiple pro-ivermectin meta-analyses; removing it reverses most early positive pooled results.",
+      "source_url": "https://www.researchsquare.com/article/rs-100956/v1"
+    },
+    {
+      "study": "Shakhsi Niaee et al., Ivermectin as an adjunct treatment for hospitalized adult COVID-19 patients (Asian Pacific Journal of Tropical Medicine 2021;14(6):266-273)",
+      "severity": "reanalysis_concern",
+      "wording": "Data analysts flagged 'unexpected/implausible stratification across baseline variables' and probable randomization failure; an editorial note recorded concerns. NOTE: the paper itself did NOT receive a formal Expression of Concern from its journal, which stated it was not retracted and no retraction was pending. The February 2022 Expressions of Concern reported by Retraction Watch were issued on the downstream meta-analyses (Kory et al.; Bryant/Lawrie et al. in American Journal of Therapeutics), not on this primary trial. The study is excluded from post-scrutiny ivermectin meta-analyses.",
+      "source_url": "https://retractionwatch.com/2022/02/11/ivermectin-papers-slapped-with-expressions-of-concern/"
+    }
+  ],
+  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed."
+}

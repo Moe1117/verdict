@@ -1,0 +1,87 @@
+{
+  "claim_id": "C01",
+  "claim": "Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia",
+  "expected_verdict": "Supported",
+  "rows": [
+    {
+      "citation": "Edwards & Moore 2003, BMC Family Practice",
+      "source_id": "PMID:14969594",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "n": "pooled double-blind RCTs of statins in hypercholesterolaemia (>=12 weeks)",
+      "finding": "Dose-specific meta-analysis of double-blind RCTs: fixed-dose atorvastatin 10 mg lowered LDL-C by >30% from baseline (statins overall 24-49%), directly supporting atorvastatin's LDL-lowering effect in hypercholesterolaemia.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction or expression of concern found.",
+      "n_int": 12,
+      "year": 2003
+    },
+    {
+      "citation": "Rogers 2007, Clinical Therapeutics",
+      "source_id": "PMID:17472817",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "n": "18 head-to-head trials (17 published + 1 unpublished; adults >=18 with elevated TC/LDL-C)",
+      "finding": "Dose-specific meta-analysis of atorvastatin-vs-simvastatin head-to-head RCTs found atorvastatin produced significantly greater LDL-C reductions in the majority of dose comparisons (2-4x the potency of simvastatin) in hyperlipidemic adults.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction or expression of concern found.",
+      "n_int": 18,
+      "year": 2007
+    },
+    {
+      "citation": "Nicholls 2010 (VOYAGER), American Journal of Cardiology",
+      "source_id": "PMID:20102893",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "n": "32,258 individual patients",
+      "finding": "Individual-patient-data pooled meta-analysis found atorvastatin 10-80 mg lowered LDL-C dose-dependently, with each doubling of dose giving ~4-6% further LDL-C reduction.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction or expression of concern found.",
+      "n_int": 32258,
+      "year": 2010
+    },
+    {
+      "citation": "Baigent 2005 (CTT), Lancet",
+      "source_id": "PMID:16214597",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "n": "90,056 participants, 14 statin RCTs",
+      "finding": "Prospective meta-analysis of 14 statin RCTs (including atorvastatin trials) achieved mean 1-year LDL-C differences up to 1.77 mmol/L, confirming statins robustly lower LDL-C; class-level anchor for atorvastatin's mechanism.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction or expression of concern; only a standard 2005 erratum (Lancet 366(9494):1358).",
+      "n_int": 90056,
+      "year": 2005
+    },
+    {
+      "citation": "Colhoun 2004 (CARDS), Lancet",
+      "source_id": "PMID:15325833",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "n": "2,838 (type 2 diabetes, primary prevention, LDL-C <=4.14 mmol/L at entry)",
+      "finding": "Placebo-controlled RCT of atorvastatin 10 mg/day lowered LDL-C and reduced major cardiovascular events by 37%; direct atorvastatin trial evidence, but the population is type 2 diabetics enrolled at non-elevated LDL-C rather than a hyperlipidemia cohort.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction or expression of concern found.",
+      "n_int": 2838,
+      "year": 2004
+    },
+    {
+      "citation": "Karlson 2015 (VOYAGER), European Journal of Preventive Cardiology",
+      "source_id": "PMID:26246463",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "n": "38,052 patient exposures",
+      "finding": "VOYAGER pooled RCT analysis quantified dose-dependent atorvastatin LDL-C lowering (e.g. atorvastatin ~15 mg is equipotent to the ~39% LDL-C reduction of rosuvastatin 5 mg; higher atorvastatin doses give larger reductions), confirming dose-dependent LDL-C lowering.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction or expression of concern found.",
+      "n_int": 38052,
+      "year": 2015
+    }
+  ],
+  "integrity_records": [],
+  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed."
+}

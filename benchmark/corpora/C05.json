@@ -1,0 +1,87 @@
+{
+  "claim_id": "C05",
+  "claim": "Metformin reduces cancer incidence in adults without diabetes",
+  "expected_verdict": "Not Supported",
+  "rows": [
+    {
+      "citation": "Heckman-Stoddard 2025 Cancer Prev Res (Phila)",
+      "source_id": "PMID:40243198",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "n": "3234",
+      "finding": "In the Diabetes Prevention Program RCT of adults at high diabetes risk (non-diabetic, impaired glucose tolerance at randomization), metformin 850 mg BID did not reduce total cancer incidence vs placebo over a median 21 years (546 first cancers; HR 0.90, 95% CI 0.73-1.10).",
+      "integrity_ok": true,
+      "integrity_note": "No retraction or expression of concern (verified). Trial = NCT00004992 (DPP/DPPOS), enrollment 3,234, confirmed on ClinicalTrials.gov. Only bundle row with a true non-diabetic population and RCT-tier design \u2014 load-bearing for the verdict.",
+      "n_int": 3234,
+      "year": 2025
+    },
+    {
+      "citation": "Stevens 2012 Diabetologia",
+      "source_id": "PMID:22875195",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": false,
+      "n": "51681 person-years (11 RCTs, 398 cancers)",
+      "finding": "Collaborative meta-analysis of randomized trials found no reduction in cancer with metformin (summary RR 1.02, 95% CI 0.82-1.26), directly refuting the ~one-third reduction seen in observational studies.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction/EoC (verified). Trials mostly enrolled diabetic patients, so population match to non-diabetic adults is only partial \u2014 honestly flagged false.",
+      "n_int": 51681,
+      "year": 2012
+    },
+    {
+      "citation": "Dickerman 2023 Epidemiology",
+      "source_id": "PMID:37227368",
+      "design": "target-trial emulation",
+      "direction": 0,
+      "population_match": false,
+      "n": "population-based UK EHR (2009-2016)",
+      "finding": "Emulating a target trial removed the apparent protective signal: primary 6-year cancer risk difference (metformin vs no metformin, in individuals WITH diabetes) was ~0 (ITT -0.2%, 95% CI -1.6% to 1.3%); a secondary emulation regardless of diabetes status was also near-zero, whereas naive observational methods appeared strongly protective.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction/EoC (verified). CORRECTED population_match true->false: the headline emulation is restricted to individuals with diabetes; only a secondary analysis is diabetes-agnostic. Explicitly shows the observational protective signal is an analytic artifact.",
+      "n_int": 2009,
+      "year": 2023
+    },
+    {
+      "citation": "Chang 2020 Cancer Prev Res (Phila)",
+      "source_id": "PMID:32958585",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": false,
+      "n": "8541 (6 RCTs)",
+      "finding": "Meta-analysis of 6 RCTs found no significant association between metformin and skin cancer (melanoma OR 0.82, 0.27-2.43; total skin cancer OR 0.71, 0.42-1.20); parallel cohort meta-analysis also null.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction/EoC (verified). Diabetes/prediabetes populations; site-specific (skin), so population_match false.",
+      "n_int": 8541,
+      "year": 2020
+    },
+    {
+      "citation": "Noto 2012 PLoS One",
+      "source_id": "PMID:22448244",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": false,
+      "n": "210892 (10 studies, mostly observational)",
+      "finding": "The naive observational signal: pooled all-cancer incidence RR 0.67 (95% CI 0.53-0.85) favoring metformin, but derived mainly from cohort/case-control studies in diabetic patients; authors themselves flag need for RCTs.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction/EoC (verified). Represents the confounded observational signal later refuted by RCTs/TTE; diabetic population only, so population_match false. Normalized to 'systematic review' (pools observational data, not RCTs).",
+      "n_int": 210892,
+      "year": 2012
+    },
+    {
+      "citation": "Wang 2014 Diabetes Res Clin Pract",
+      "source_id": "PMID:24837144",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": false,
+      "n": "13 studies (10 cohort, 3 case-control)",
+      "finding": "Observational meta-analysis reporting reduced pancreatic cancer risk with metformin (RR 0.63, 95% CI 0.46-0.86) in type 2 diabetes \u2014 a site-specific instance of the same confounded observational signal, from cohort/case-control data only.",
+      "integrity_ok": true,
+      "integrity_note": "No retraction/EoC (verified). Purely observational; diabetic population; susceptible to time-related/immortal-time bias. Normalized to 'systematic review' (pools observational data, not RCTs).",
+      "n_int": 13,
+      "year": 2014
+    }
+  ],
+  "integrity_records": [],
+  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed."
+}

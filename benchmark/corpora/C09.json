@@ -1,0 +1,100 @@
+{
+  "claim_id": "C09",
+  "claim": "Fenbendazole treats cancer in humans",
+  "expected_verdict": "Insufficient",
+  "rows": [
+    {
+      "citation": "Nguyen J et al. 2024, Anticancer Research",
+      "source_id": "PMID:39197912",
+      "design": "systematic review",
+      "direction": 0,
+      "population_match": true,
+      "n": "narrative review (no human efficacy studies to pool)",
+      "finding": "Review of oral fenbendazole for cancer concludes all anticancer evidence is preclinical (in vitro / animal) and explicitly states clinical trials are still needed to assess anticancer effect, dose and safety in humans \u2014 no human efficacy demonstrated.",
+      "integrity_ok": true,
+      "integrity_note": "Verified PMID:39197912, DOI 10.21873/anticanres.17197; abstract confirms preclinical-only and explicit call for trials. Design note: this is a narrative review; mapped to nearest allowed vocabulary term 'systematic review'.",
+      "n_int": 0,
+      "year": 2024
+    },
+    {
+      "citation": "Yamaguchi T et al. 2021, Case Reports in Oncology",
+      "source_id": "PMID:34248555",
+      "design": "case report",
+      "direction": -1,
+      "population_match": true,
+      "n": "1 (80F, advanced NSCLC)",
+      "finding": "First human report of self-administered fenbendazole for cancer: patient developed severe drug-induced liver injury and had NO tumor shrinkage \u2014 anticancer claim not supported, net harm observed.",
+      "integrity_ok": true,
+      "integrity_note": "Verified PMID:34248555, DOI 10.1159/000516276; abstract confirms DILI and explicitly 'she did not experience tumor shrinkage'.",
+      "n_int": 1,
+      "year": 2021
+    },
+    {
+      "citation": "Skaara TR et al. 2025, Tidsskrift for den Norske Laegeforening",
+      "source_id": "PMID:41097960",
+      "design": "case report",
+      "direction": -1,
+      "population_match": true,
+      "n": "1 (male cancer patient)",
+      "finding": "Cancer patient taking 2 g/day fenbendazole as alternative therapy developed cholestasis with biopsy-confirmed lobular/portal liver inflammation; framed as unproven alternative treatment causing toxicity, no efficacy benefit.",
+      "integrity_ok": true,
+      "integrity_note": "Verified PMID:41097960, DOI 10.4045/tidsskr.25.0229; Norwegian-language case report, abstract confirms 2 g/day fenbendazole, cholestasis and biopsy-confirmed inflammation.",
+      "n_int": 1,
+      "year": 2025
+    },
+    {
+      "citation": "Duan Q et al. 2012, JAALAS",
+      "source_id": "PMID:22776123",
+      "design": "preclinical",
+      "direction": -1,
+      "population_match": false,
+      "n": "BALB/c mice, EMT6 mammary tumors",
+      "finding": "In vivo mouse study: therapeutic fenbendazole diet (150 ppm) did NOT alter tumor growth, invasion or metastasis and did not enhance radiation response \u2014 a direct in-vivo null for antitumor efficacy.",
+      "integrity_ok": true,
+      "integrity_note": "Verified PMID:22776123 (PMC3314526); abstract confirms 'medicated diet did not alter tumor growth, invasion, or metastasis'. Mouse study \u2014 population_match false, correct.",
+      "n_int": 6,
+      "year": 2012
+    },
+    {
+      "citation": "Dogra N et al. 2018, Scientific Reports",
+      "source_id": "PMID:30093705",
+      "design": "preclinical",
+      "direction": 1,
+      "population_match": false,
+      "n": "A549 human cell lines + nu/nu mouse xenografts",
+      "finding": "Fenbendazole acts as a moderate microtubule destabilizer, inhibits glucose uptake/GLUT-HKII, and slowed human tumor xenograft growth in nude mice fed the drug orally \u2014 supportive but strictly preclinical (cells + mice).",
+      "integrity_ok": true,
+      "integrity_note": "Verified PMID:30093705, DOI 10.1038/s41598-018-30158-6; no retraction or expression-of-concern found on PubMed record or web search as of 2026-07.",
+      "n_int": 549,
+      "year": 2018
+    },
+    {
+      "citation": "Chang CS et al. 2023, Journal of Gynecologic Oncology",
+      "source_id": "PMID:37170725",
+      "design": "preclinical",
+      "direction": 1,
+      "population_match": false,
+      "n": "ovarian cancer cell lines + PDX/xenograft mice",
+      "finding": "Plain oral fenbendazole showed NO tumor reduction in ovarian-cancer xenografts (poor solubility); only IV-administered PLGA-nanoparticle reformulation reduced tumor weight \u2014 highlighting that the oral route humans self-dose failed even in mice.",
+      "integrity_ok": true,
+      "integrity_note": "Verified PMID:37170725, DOI 10.3802/jgo.2023.34.e58. Note: direction=+1 reflects net positive anticancer signal for reformulated FZ, but the abstract explicitly states oral FZ had 'no effect on tumor reduction' \u2014 supportive only for a non-human, non-oral formulation.",
+      "n_int": 0,
+      "year": 2023
+    },
+    {
+      "citation": "Park D et al. 2022, Korean Journal of Physiology & Pharmacology",
+      "source_id": "PMID:36039738",
+      "design": "preclinical",
+      "direction": 1,
+      "population_match": false,
+      "n": "SNU-C5 colorectal cancer cell lines (in vitro)",
+      "finding": "Fenbendazole induced apoptosis and G2/M arrest in 5-FU-resistant colorectal cancer cells in vitro \u2014 mechanistic cell-culture support only, no in-vivo or human evidence.",
+      "integrity_ok": true,
+      "integrity_note": "Verified PMID:36039738, DOI 10.4196/kjpp.2022.26.5.377; in vitro only, population_match false correct.",
+      "n_int": 5,
+      "year": 2022
+    }
+  ],
+  "integrity_records": [],
+  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed."
+}
