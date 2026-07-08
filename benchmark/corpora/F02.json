@@ -1,0 +1,110 @@
+{
+  "claim_id": "F02",
+  "claim": "Resveratrol supplementation improves cardiovascular or metabolic health outcomes in humans",
+  "expected_verdict": "Insufficient",
+  "rows": [
+    {
+      "source_id": "PMID:12003802",
+      "design": "preclinical",
+      "direction": 1,
+      "population_match": false,
+      "integrity_ok": false,
+      "integrity_note": "RETRACTED (Am J Physiol Heart Circ Physiol 2012;302(11):H2446, DOI 10.1152/ajpheart.zh4-0450-retr.2012; retraction PMID:22833916). PubMed article-type 'Retracted Publication'. Isolated rat-heart study from the Dipak K. Das lab (UConn Cardiovascular Research Center); retracted amid UConn's misconduct finding of data fabrication/falsification across Das's lab. Animal, not human, and fraudulent \u2014 excluding it removes the mechanistic 'cardioprotection' anchor.",
+      "finding": "Claimed resveratrol pharmacologically preconditions/protects the ischemic rat heart via NO. Data from the retracted study; not usable as evidence.",
+      "n_int": 0,
+      "year": 2002
+    },
+    {
+      "source_id": "PMID:24111838",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Sahebkar 2013, Nutr Rev (DOI 10.1111/nure.12081). 7 RCTs, n=282 (141 per arm). Independent of any Das work.",
+      "finding": "No significant effect of resveratrol on total cholesterol, LDL, HDL, or triglycerides; robust to dose, duration, and CV-risk status. Null surrogate outcomes.",
+      "n_int": 141,
+      "year": 2013
+    },
+    {
+      "source_id": "PMID:25885871",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Sahebkar/Banach 2015, Int J Cardiol (DOI 10.1016/j.ijcard.2015.04.008). 10 RCTs / 11 treatment arms.",
+      "finding": "No benefit on CRP, total cholesterol, LDL, triglycerides, glucose, or systolic/diastolic BP; slightly lowered HDL. Concludes no benefit on CV risk factors. Surrogate endpoints only.",
+      "n_int": 0,
+      "year": 2015
+    },
+    {
+      "source_id": "PMID:31264084",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Akbari/Asemi 2019, High Blood Press Cardiovasc Prev (DOI 10.1007/s40292-019-00324-6). 28 RCTs (33 findings). Very high heterogeneity (I2=96.5%) undercuts reliability.",
+      "finding": "Significantly increased flow-mediated dilation (surrogate) in metabolic syndrome, but no effect on systolic or diastolic BP. Mixed/surrogate-only; heterogeneity extreme.",
+      "n_int": 0,
+      "year": 2019
+    },
+    {
+      "source_id": "PMID:37843843",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Gimblet/Jalal 2024, CJASN (DOI 10.2215/CJN.0000000000000337). NCT03597568. Small (n=28), 6-week crossover, single surrogate endpoint.",
+      "finding": "400 mg/d resveratrol improved brachial-artery flow-mediated dilation vs placebo in CKD+diabetes; no change in eGFR, HbA1c, BP. Positive but surrogate-only, tiny, short.",
+      "n_int": 28,
+      "year": 2024
+    },
+    {
+      "source_id": "PMID:26840331",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Zortea 2016, Nutrients (DOI 10.3390/nu8020073). NCT02062190. Very small (n=19 men), 4 weeks.",
+      "finding": "200 mg/d resveratrol produced no significant change in body weight, waist circumference, glucose, or total cholesterol in schizophrenia patients. Null.",
+      "n_int": 10,
+      "year": 2016
+    },
+    {
+      "source_id": "PMID:26234526",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Faghihzadeh 2015, Br J Nutr (DOI 10.1017/S0007114515002433). n=50, 12 weeks, NAFLD.",
+      "finding": "500 mg/d resveratrol gave no significant change in blood pressure, insulin-resistance markers, lipid profile, or anthropometrics (reduced ALT/steatosis only). Null on CV/metabolic risk factors.",
+      "n_int": 25,
+      "year": 2015
+    },
+    {
+      "source_id": "PMID:27523436",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Saldanha/Mafra 2016, J Ren Nutr (DOI 10.1053/j.jrn.2016.06.005). Pilot, n=20, 4-week crossover.",
+      "finding": "500 mg/d resveratrol had no antioxidant/anti-inflammatory effect (Nrf2, NF-kB, cytokines unchanged) in non-dialyzed CKD patients. Null.",
+      "n_int": 20,
+      "year": 2016
+    }
+  ],
+  "integrity_records": [
+    {
+      "study": "Hattori R, Otani H, Maulik N, Das DK. Pharmacological preconditioning with resveratrol: role of nitric oxide. Am J Physiol Heart Circ Physiol. 2002;282(6):H1988-95. PMID:12003802 / DOI:10.1152/ajpheart.01012.2001",
+      "severity": "retracted-fabrication",
+      "wording": "RETRACTED. PubMed article-type 'Retracted Publication'. Formal retraction notice: 'Retraction. Pharmacological preconditioning with resveratrol: role of nitric oxide.' Am J Physiol Heart Circ Physiol 2012;302(11):H2446 (PMID:22833916; DOI:10.1152/ajpheart.zh4-0450-retr.2012), published June 1, 2012. Retracted following the University of Connecticut Health Center's investigation of Dipak K. Das, which found data fabrication/falsification across his Cardiovascular Research Center lab and led to ~20 retractions. This paper is a rat-heart (non-human) study and cannot support a human-outcomes claim.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/22833916/"
+    },
+    {
+      "study": "Dipak K. Das research-misconduct case (University of Connecticut Health Center investigation, 2012)",
+      "severity": "institutional-misconduct-finding",
+      "wording": "UConn reported a three-year, ~60,000-page investigation finding 145 counts of fabrication and falsification of data across Dipak K. Das's Cardiovascular Research Center lab; 11 journals were notified and the university declined federal grant funds. Das's body of work underpinned many resveratrol-cardioprotection claims. Reported by Retraction Watch (June 4, 2012).",
+      "source_url": "https://retractionwatch.com/2012/06/04/retraction-count-for-resveratrol-researcher-dipak-das-rises-to-12/"
+    }
+  ],
+  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed."
+}

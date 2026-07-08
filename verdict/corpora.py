@@ -19,9 +19,13 @@ _FIELDS = {f.name for f in dataclasses.fields(EvidenceRow)}
 
 
 def _rows_from(data: dict) -> list[EvidenceRow]:
-    # Robust to schema drift: keep only known EvidenceRow fields.
-    return [EvidenceRow(**{k: v for k, v in row.items() if k in _FIELDS})
-            for row in data.get("rows", [])]
+    # Robust to schema drift: keep only known EvidenceRow fields; default citation.
+    out = []
+    for row in data.get("rows", []):
+        d = {k: v for k, v in row.items() if k in _FIELDS}
+        d.setdefault("citation", d.get("source_id", ""))
+        out.append(EvidenceRow(**d))
+    return out
 
 
 def load_path(path: str) -> tuple[dict, list[EvidenceRow]]:

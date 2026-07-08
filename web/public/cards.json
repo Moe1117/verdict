@@ -1,227 +1,5 @@
 [
   {
-    "id": "C01",
-    "claim": "Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia",
-    "verdict": "Supported",
-    "expected": "Supported",
-    "confidence": "high",
-    "gate_trace": [
-      {
-        "gate": "direct-evidence",
-        "passed": true,
-        "detail": "5 trial-grade on-population study(ies)"
-      },
-      {
-        "gate": "sufficiency",
-        "passed": true,
-        "detail": "trial evidence adequate to assess"
-      },
-      {
-        "gate": "consistency",
-        "passed": true,
-        "detail": "trial evidence agrees: effect present"
-      }
-    ],
-    "ledger": [
-      {
-        "citation": "Edwards & Moore 2003, BMC Family Practice",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:14969594",
-        "integrity_ok": true,
-        "n": "pooled double-blind RCTs of statins in hypercholesterolaemia (>=12 weeks)",
-        "n_int": 12,
-        "year": 2003,
-        "finding": "Dose-specific meta-analysis of double-blind RCTs: fixed-dose atorvastatin 10 mg lowered LDL-C by >30% from baseline (statins overall 24-49%), directly supporting atorvastatin's LDL-lowering effect in hypercholesterolaemia.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      },
-      {
-        "citation": "Rogers 2007, Clinical Therapeutics",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:17472817",
-        "integrity_ok": true,
-        "n": "18 head-to-head trials (17 published + 1 unpublished; adults >=18 with elevated TC/LDL-C)",
-        "n_int": 18,
-        "year": 2007,
-        "finding": "Dose-specific meta-analysis of atorvastatin-vs-simvastatin head-to-head RCTs found atorvastatin produced significantly greater LDL-C reductions in the majority of dose comparisons (2-4x the potency of simvastatin) in hyperlipidemic adults.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      },
-      {
-        "citation": "Nicholls 2010 (VOYAGER), American Journal of Cardiology",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:20102893",
-        "integrity_ok": true,
-        "n": "32,258 individual patients",
-        "n_int": 32258,
-        "year": 2010,
-        "finding": "Individual-patient-data pooled meta-analysis found atorvastatin 10-80 mg lowered LDL-C dose-dependently, with each doubling of dose giving ~4-6% further LDL-C reduction.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      },
-      {
-        "citation": "Baigent 2005 (CTT), Lancet",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:16214597",
-        "integrity_ok": true,
-        "n": "90,056 participants, 14 statin RCTs",
-        "n_int": 90056,
-        "year": 2005,
-        "finding": "Prospective meta-analysis of 14 statin RCTs (including atorvastatin trials) achieved mean 1-year LDL-C differences up to 1.77 mmol/L, confirming statins robustly lower LDL-C; class-level anchor for atorvastatin's mechanism.",
-        "integrity_note": "No retraction or expression of concern; only a standard 2005 erratum (Lancet 366(9494):1358).",
-        "note": ""
-      },
-      {
-        "citation": "Colhoun 2004 (CARDS), Lancet",
-        "design": "rct",
-        "direction": 1,
-        "population_match": false,
-        "source_id": "PMID:15325833",
-        "integrity_ok": true,
-        "n": "2,838 (type 2 diabetes, primary prevention, LDL-C <=4.14 mmol/L at entry)",
-        "n_int": 2838,
-        "year": 2004,
-        "finding": "Placebo-controlled RCT of atorvastatin 10 mg/day lowered LDL-C and reduced major cardiovascular events by 37%; direct atorvastatin trial evidence, but the population is type 2 diabetics enrolled at non-elevated LDL-C rather than a hyperlipidemia cohort.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      },
-      {
-        "citation": "Karlson 2015 (VOYAGER), European Journal of Preventive Cardiology",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:26246463",
-        "integrity_ok": true,
-        "n": "38,052 patient exposures",
-        "n_int": 38052,
-        "year": 2015,
-        "finding": "VOYAGER pooled RCT analysis quantified dose-dependent atorvastatin LDL-C lowering (e.g. atorvastatin ~15 mg is equipotent to the ~39% LDL-C reduction of rosuvastatin 5 mg; higher atorvastatin doses give larger reductions), confirming dose-dependent LDL-C lowering.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      }
-    ],
-    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
-  },
-  {
-    "id": "C05",
-    "claim": "Metformin reduces cancer incidence in adults without diabetes",
-    "verdict": "Not Supported",
-    "expected": "Not Supported",
-    "confidence": "high",
-    "gate_trace": [
-      {
-        "gate": "direct-evidence",
-        "passed": true,
-        "detail": "1 trial-grade on-population study(ies)"
-      },
-      {
-        "gate": "sufficiency",
-        "passed": true,
-        "detail": "trial evidence adequate to assess"
-      },
-      {
-        "gate": "consistency",
-        "passed": true,
-        "detail": "trial evidence agrees: no effect (evidence of absence)"
-      }
-    ],
-    "ledger": [
-      {
-        "citation": "Heckman-Stoddard 2025 Cancer Prev Res (Phila)",
-        "design": "rct",
-        "direction": 0,
-        "population_match": true,
-        "source_id": "PMID:40243198",
-        "integrity_ok": true,
-        "n": "3234",
-        "n_int": 3234,
-        "year": 2025,
-        "finding": "In the Diabetes Prevention Program RCT of adults at high diabetes risk (non-diabetic, impaired glucose tolerance at randomization), metformin 850 mg BID did not reduce total cancer incidence vs placebo over a median 21 years (546 first cancers; HR 0.90, 95% CI 0.73-1.10).",
-        "integrity_note": "No retraction or expression of concern (verified). Trial = NCT00004992 (DPP/DPPOS), enrollment 3,234, confirmed on ClinicalTrials.gov. Only bundle row with a true non-diabetic population and RCT-tier design \u2014 load-bearing for the verdict.",
-        "note": ""
-      },
-      {
-        "citation": "Stevens 2012 Diabetologia",
-        "design": "meta-analysis of rcts",
-        "direction": 0,
-        "population_match": false,
-        "source_id": "PMID:22875195",
-        "integrity_ok": true,
-        "n": "51681 person-years (11 RCTs, 398 cancers)",
-        "n_int": 51681,
-        "year": 2012,
-        "finding": "Collaborative meta-analysis of randomized trials found no reduction in cancer with metformin (summary RR 1.02, 95% CI 0.82-1.26), directly refuting the ~one-third reduction seen in observational studies.",
-        "integrity_note": "No retraction/EoC (verified). Trials mostly enrolled diabetic patients, so population match to non-diabetic adults is only partial \u2014 honestly flagged false.",
-        "note": ""
-      },
-      {
-        "citation": "Dickerman 2023 Epidemiology",
-        "design": "target-trial emulation",
-        "direction": 0,
-        "population_match": false,
-        "source_id": "PMID:37227368",
-        "integrity_ok": true,
-        "n": "population-based UK EHR (2009-2016)",
-        "n_int": 2009,
-        "year": 2023,
-        "finding": "Emulating a target trial removed the apparent protective signal: primary 6-year cancer risk difference (metformin vs no metformin, in individuals WITH diabetes) was ~0 (ITT -0.2%, 95% CI -1.6% to 1.3%); a secondary emulation regardless of diabetes status was also near-zero, whereas naive observational methods appeared strongly protective.",
-        "integrity_note": "No retraction/EoC (verified). CORRECTED population_match true->false: the headline emulation is restricted to individuals with diabetes; only a secondary analysis is diabetes-agnostic. Explicitly shows the observational protective signal is an analytic artifact.",
-        "note": ""
-      },
-      {
-        "citation": "Chang 2020 Cancer Prev Res (Phila)",
-        "design": "meta-analysis of rcts",
-        "direction": 0,
-        "population_match": false,
-        "source_id": "PMID:32958585",
-        "integrity_ok": true,
-        "n": "8541 (6 RCTs)",
-        "n_int": 8541,
-        "year": 2020,
-        "finding": "Meta-analysis of 6 RCTs found no significant association between metformin and skin cancer (melanoma OR 0.82, 0.27-2.43; total skin cancer OR 0.71, 0.42-1.20); parallel cohort meta-analysis also null.",
-        "integrity_note": "No retraction/EoC (verified). Diabetes/prediabetes populations; site-specific (skin), so population_match false.",
-        "note": ""
-      },
-      {
-        "citation": "Noto 2012 PLoS One",
-        "design": "systematic review",
-        "direction": 1,
-        "population_match": false,
-        "source_id": "PMID:22448244",
-        "integrity_ok": true,
-        "n": "210892 (10 studies, mostly observational)",
-        "n_int": 210892,
-        "year": 2012,
-        "finding": "The naive observational signal: pooled all-cancer incidence RR 0.67 (95% CI 0.53-0.85) favoring metformin, but derived mainly from cohort/case-control studies in diabetic patients; authors themselves flag need for RCTs.",
-        "integrity_note": "No retraction/EoC (verified). Represents the confounded observational signal later refuted by RCTs/TTE; diabetic population only, so population_match false. Normalized to 'systematic review' (pools observational data, not RCTs).",
-        "note": ""
-      },
-      {
-        "citation": "Wang 2014 Diabetes Res Clin Pract",
-        "design": "systematic review",
-        "direction": 1,
-        "population_match": false,
-        "source_id": "PMID:24837144",
-        "integrity_ok": true,
-        "n": "13 studies (10 cohort, 3 case-control)",
-        "n_int": 13,
-        "year": 2014,
-        "finding": "Observational meta-analysis reporting reduced pancreatic cancer risk with metformin (RR 0.63, 95% CI 0.46-0.86) in type 2 diabetes \u2014 a site-specific instance of the same confounded observational signal, from cohort/case-control data only.",
-        "integrity_note": "No retraction/EoC (verified). Purely observational; diabetic population; susceptible to time-related/immortal-time bias. Normalized to 'systematic review' (pools observational data, not RCTs).",
-        "note": ""
-      }
-    ],
-    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
-  },
-  {
     "id": "C08",
     "claim": "Ivermectin improves clinical outcomes in COVID-19",
     "verdict": "Not Supported",
@@ -352,103 +130,6 @@
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
-    "id": "C14",
-    "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
-    "verdict": "Contested",
-    "expected": "Contested",
-    "confidence": "high",
-    "gate_trace": [
-      {
-        "gate": "direct-evidence",
-        "passed": true,
-        "detail": "2 trial-grade on-population study(ies)"
-      },
-      {
-        "gate": "sufficiency",
-        "passed": true,
-        "detail": "trial evidence adequate to assess"
-      },
-      {
-        "gate": "definitive-evidence",
-        "passed": false,
-        "detail": "large RCTs themselves conflict"
-      }
-    ],
-    "ledger": [
-      {
-        "citation": "Bhatt DL, et al. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (REDUCE-IT). N Engl J Med. 2019;380(1):11-22.",
-        "design": "rct",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:30415628",
-        "integrity_ok": true,
-        "n": "8179",
-        "n_int": 8179,
-        "year": 2019,
-        "finding": "In statin-treated patients with elevated triglycerides (135-499 mg/dL) and high CV risk (established CVD or diabetes + risk factors), 4 g/day icosapent ethyl (purified EPA) lowered the primary composite of CV death/MI/stroke/coronary revascularization/unstable angina vs placebo (17.2% vs 22.0%; HR 0.75, 95% CI 0.68-0.83; P<0.001); key secondary composite HR 0.74 (0.65-0.83); CV death also reduced (4.3% vs 5.2%; HR 0.80, 95% CI 0.66-0.98). Median follow-up 4.9 y. POSITIVE. Note: mineral-oil placebo and high-risk/hypertriglyceridemic population limit generalizability to general adults. NCT01492361.",
-        "integrity_note": "Amarin-funded pivotal RCT (NEJMoa1812792); mineral-oil placebo controversy noted in later literature but trial itself is peer-reviewed NEJM, no retraction/misconduct. VERIFIED: PMID, n, HR, CIs, NCT all match PubMed record (published online Nov 2018; print 2019;380(1):11-22).",
-        "note": ""
-      },
-      {
-        "citation": "Nicholls SJ, et al. Effect of High-Dose Omega-3 Fatty Acids vs Corn Oil on Major Adverse Cardiovascular Events (STRENGTH). JAMA. 2020;324(22):2268-2280.",
-        "design": "rct",
-        "direction": 0,
-        "population_match": true,
-        "source_id": "PMID:33190147",
-        "integrity_ok": true,
-        "n": "13078",
-        "n_int": 13078,
-        "year": 2020,
-        "finding": "In statin-treated high-CV-risk patients with hypertriglyceridemia and low HDL-C, 4 g/day omega-3 carboxylic acid (EPA+DHA) vs corn oil showed NO difference in the primary MACE composite (12.0% vs 12.2%; HR 0.99, 95% CI 0.90-1.09; P=0.84); trial halted early for futility per prespecified interim. NULL. NCT02104817.",
-        "integrity_note": "AstraZeneca-funded (JAMA 2020.22258, PMC7667577); peer-reviewed, prematurely stopped for futility; no integrity concerns. VERIFIED: PMID, n=13078, HR 0.99 (0.90-1.09), P=0.84, corn-oil comparator, NCT all match PubMed.",
-        "note": ""
-      },
-      {
-        "citation": "Manson JE, et al. Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer (VITAL). N Engl J Med. 2019;380(1):23-32.",
-        "design": "rct",
-        "direction": 0,
-        "population_match": false,
-        "source_id": "PMID:30415637",
-        "integrity_ok": true,
-        "n": "25871",
-        "n_int": 25871,
-        "year": 2019,
-        "finding": "Primary-prevention trial in general US adults (men >=50, women >=55) at usual risk; 1 g/day marine n-3 vs placebo showed NO reduction in major CV events (HR 0.92, 95% CI 0.80-1.06; P=0.24) over median 5.3 y. Secondary total-MI signal (HR 0.72, 95% CI 0.59-0.90) but null primary. NULL. Best population match to 'general adults'. NCT01169259.",
-        "integrity_note": "NIH-funded (NEJMoa1811403, PMC6392053); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=25871, HR 0.92 (0.80-1.06), P=0.24, median 5.3 y, total-MI HR 0.72, NCT all match PubMed.",
-        "note": ""
-      },
-      {
-        "citation": "ASCEND Study Collaborative Group (Bowman L, et al.). Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. N Engl J Med. 2018;379(16):1540-1550.",
-        "design": "rct",
-        "direction": 0,
-        "population_match": false,
-        "source_id": "PMID:30146932",
-        "integrity_ok": true,
-        "n": "15480",
-        "n_int": 15480,
-        "year": 2018,
-        "finding": "In patients with diabetes and no baseline atherosclerotic CVD, 1 g/day n-3 fatty acids vs olive-oil placebo showed NO difference in first serious vascular event (8.9% vs 9.2%; rate ratio 0.97, 95% CI 0.87-1.08; P=0.55) over mean 7.4 y. NULL. Diabetic (not general-adult) population. NCT00135226.",
-        "integrity_note": "British Heart Foundation-funded (NEJMoa1804989); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=15480, RR 0.97 (0.87-1.08), P=0.55, mean 7.4 y, olive-oil placebo, NCT00135226 (also ISRCTN60635500) all match PubMed.",
-        "note": ""
-      },
-      {
-        "citation": "Hu Y, Hu FB, Manson JE. Marine Omega-3 Supplementation and Cardiovascular Disease: An Updated Meta-Analysis of 13 Randomized Controlled Trials Involving 127477 Participants. J Am Heart Assoc. 2019;8(19):e013543.",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": false,
-        "source_id": "PMID:31567003",
-        "integrity_ok": true,
-        "n": "127477",
-        "n_int": 127477,
-        "year": 2019,
-        "finding": "Pooled 13 RCTs (127,477 participants; mean treatment 5.0 y). Excluding REDUCE-IT, marine omega-3 was associated with significant reductions in MI (RR 0.92, 0.86-0.99), CHD death (RR 0.92, 0.86-0.98), total CHD (RR 0.95, 0.91-0.99), CVD death (RR 0.93, 0.88-0.99), and total CVD (RR 0.97, 0.94-0.99); associations strengthened with REDUCE-IT included but introduced statistically significant heterogeneity. Linear dose-response for total CVD/major vascular events. Weakly POSITIVE overall; heterogeneity underscores the contested picture.",
-        "integrity_note": "NIH-funded (JAHA.119.013543, PMC6806028); peer-reviewed JAHA systematic review/meta-analysis; explicitly flags REDUCE-IT-driven heterogeneity; no integrity concerns. VERIFIED: PMID, n=127477, 13 RCTs, all RRs and CIs match PubMed abstract.",
-        "note": ""
-      }
-    ],
-    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
-  },
-  {
     "id": "C09",
     "claim": "Fenbendazole treats cancer in humans",
     "verdict": "Insufficient",
@@ -558,6 +239,543 @@
         "year": 2022,
         "finding": "Fenbendazole induced apoptosis and G2/M arrest in 5-FU-resistant colorectal cancer cells in vitro \u2014 mechanistic cell-culture support only, no in-vivo or human evidence.",
         "integrity_note": "Verified PMID:36039738, DOI 10.4196/kjpp.2022.26.5.377; in vitro only, population_match false correct.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "C01",
+    "claim": "Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia",
+    "verdict": "Supported",
+    "expected": "Supported",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "5 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: effect present"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Edwards & Moore 2003, BMC Family Practice",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:14969594",
+        "integrity_ok": true,
+        "n": "pooled double-blind RCTs of statins in hypercholesterolaemia (>=12 weeks)",
+        "n_int": 12,
+        "year": 2003,
+        "finding": "Dose-specific meta-analysis of double-blind RCTs: fixed-dose atorvastatin 10 mg lowered LDL-C by >30% from baseline (statins overall 24-49%), directly supporting atorvastatin's LDL-lowering effect in hypercholesterolaemia.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      },
+      {
+        "citation": "Rogers 2007, Clinical Therapeutics",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:17472817",
+        "integrity_ok": true,
+        "n": "18 head-to-head trials (17 published + 1 unpublished; adults >=18 with elevated TC/LDL-C)",
+        "n_int": 18,
+        "year": 2007,
+        "finding": "Dose-specific meta-analysis of atorvastatin-vs-simvastatin head-to-head RCTs found atorvastatin produced significantly greater LDL-C reductions in the majority of dose comparisons (2-4x the potency of simvastatin) in hyperlipidemic adults.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      },
+      {
+        "citation": "Nicholls 2010 (VOYAGER), American Journal of Cardiology",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:20102893",
+        "integrity_ok": true,
+        "n": "32,258 individual patients",
+        "n_int": 32258,
+        "year": 2010,
+        "finding": "Individual-patient-data pooled meta-analysis found atorvastatin 10-80 mg lowered LDL-C dose-dependently, with each doubling of dose giving ~4-6% further LDL-C reduction.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      },
+      {
+        "citation": "Baigent 2005 (CTT), Lancet",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:16214597",
+        "integrity_ok": true,
+        "n": "90,056 participants, 14 statin RCTs",
+        "n_int": 90056,
+        "year": 2005,
+        "finding": "Prospective meta-analysis of 14 statin RCTs (including atorvastatin trials) achieved mean 1-year LDL-C differences up to 1.77 mmol/L, confirming statins robustly lower LDL-C; class-level anchor for atorvastatin's mechanism.",
+        "integrity_note": "No retraction or expression of concern; only a standard 2005 erratum (Lancet 366(9494):1358).",
+        "note": ""
+      },
+      {
+        "citation": "Colhoun 2004 (CARDS), Lancet",
+        "design": "rct",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:15325833",
+        "integrity_ok": true,
+        "n": "2,838 (type 2 diabetes, primary prevention, LDL-C <=4.14 mmol/L at entry)",
+        "n_int": 2838,
+        "year": 2004,
+        "finding": "Placebo-controlled RCT of atorvastatin 10 mg/day lowered LDL-C and reduced major cardiovascular events by 37%; direct atorvastatin trial evidence, but the population is type 2 diabetics enrolled at non-elevated LDL-C rather than a hyperlipidemia cohort.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      },
+      {
+        "citation": "Karlson 2015 (VOYAGER), European Journal of Preventive Cardiology",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:26246463",
+        "integrity_ok": true,
+        "n": "38,052 patient exposures",
+        "n_int": 38052,
+        "year": 2015,
+        "finding": "VOYAGER pooled RCT analysis quantified dose-dependent atorvastatin LDL-C lowering (e.g. atorvastatin ~15 mg is equipotent to the ~39% LDL-C reduction of rosuvastatin 5 mg; higher atorvastatin doses give larger reductions), confirming dose-dependent LDL-C lowering.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "C14",
+    "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
+    "verdict": "Contested",
+    "expected": "Contested",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "2 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "definitive-evidence",
+        "passed": false,
+        "detail": "large RCTs themselves conflict"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Bhatt DL, et al. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (REDUCE-IT). N Engl J Med. 2019;380(1):11-22.",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:30415628",
+        "integrity_ok": true,
+        "n": "8179",
+        "n_int": 8179,
+        "year": 2019,
+        "finding": "In statin-treated patients with elevated triglycerides (135-499 mg/dL) and high CV risk (established CVD or diabetes + risk factors), 4 g/day icosapent ethyl (purified EPA) lowered the primary composite of CV death/MI/stroke/coronary revascularization/unstable angina vs placebo (17.2% vs 22.0%; HR 0.75, 95% CI 0.68-0.83; P<0.001); key secondary composite HR 0.74 (0.65-0.83); CV death also reduced (4.3% vs 5.2%; HR 0.80, 95% CI 0.66-0.98). Median follow-up 4.9 y. POSITIVE. Note: mineral-oil placebo and high-risk/hypertriglyceridemic population limit generalizability to general adults. NCT01492361.",
+        "integrity_note": "Amarin-funded pivotal RCT (NEJMoa1812792); mineral-oil placebo controversy noted in later literature but trial itself is peer-reviewed NEJM, no retraction/misconduct. VERIFIED: PMID, n, HR, CIs, NCT all match PubMed record (published online Nov 2018; print 2019;380(1):11-22).",
+        "note": ""
+      },
+      {
+        "citation": "Nicholls SJ, et al. Effect of High-Dose Omega-3 Fatty Acids vs Corn Oil on Major Adverse Cardiovascular Events (STRENGTH). JAMA. 2020;324(22):2268-2280.",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:33190147",
+        "integrity_ok": true,
+        "n": "13078",
+        "n_int": 13078,
+        "year": 2020,
+        "finding": "In statin-treated high-CV-risk patients with hypertriglyceridemia and low HDL-C, 4 g/day omega-3 carboxylic acid (EPA+DHA) vs corn oil showed NO difference in the primary MACE composite (12.0% vs 12.2%; HR 0.99, 95% CI 0.90-1.09; P=0.84); trial halted early for futility per prespecified interim. NULL. NCT02104817.",
+        "integrity_note": "AstraZeneca-funded (JAMA 2020.22258, PMC7667577); peer-reviewed, prematurely stopped for futility; no integrity concerns. VERIFIED: PMID, n=13078, HR 0.99 (0.90-1.09), P=0.84, corn-oil comparator, NCT all match PubMed.",
+        "note": ""
+      },
+      {
+        "citation": "Manson JE, et al. Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer (VITAL). N Engl J Med. 2019;380(1):23-32.",
+        "design": "rct",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:30415637",
+        "integrity_ok": true,
+        "n": "25871",
+        "n_int": 25871,
+        "year": 2019,
+        "finding": "Primary-prevention trial in general US adults (men >=50, women >=55) at usual risk; 1 g/day marine n-3 vs placebo showed NO reduction in major CV events (HR 0.92, 95% CI 0.80-1.06; P=0.24) over median 5.3 y. Secondary total-MI signal (HR 0.72, 95% CI 0.59-0.90) but null primary. NULL. Best population match to 'general adults'. NCT01169259.",
+        "integrity_note": "NIH-funded (NEJMoa1811403, PMC6392053); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=25871, HR 0.92 (0.80-1.06), P=0.24, median 5.3 y, total-MI HR 0.72, NCT all match PubMed.",
+        "note": ""
+      },
+      {
+        "citation": "ASCEND Study Collaborative Group (Bowman L, et al.). Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. N Engl J Med. 2018;379(16):1540-1550.",
+        "design": "rct",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:30146932",
+        "integrity_ok": true,
+        "n": "15480",
+        "n_int": 15480,
+        "year": 2018,
+        "finding": "In patients with diabetes and no baseline atherosclerotic CVD, 1 g/day n-3 fatty acids vs olive-oil placebo showed NO difference in first serious vascular event (8.9% vs 9.2%; rate ratio 0.97, 95% CI 0.87-1.08; P=0.55) over mean 7.4 y. NULL. Diabetic (not general-adult) population. NCT00135226.",
+        "integrity_note": "British Heart Foundation-funded (NEJMoa1804989); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=15480, RR 0.97 (0.87-1.08), P=0.55, mean 7.4 y, olive-oil placebo, NCT00135226 (also ISRCTN60635500) all match PubMed.",
+        "note": ""
+      },
+      {
+        "citation": "Hu Y, Hu FB, Manson JE. Marine Omega-3 Supplementation and Cardiovascular Disease: An Updated Meta-Analysis of 13 Randomized Controlled Trials Involving 127477 Participants. J Am Heart Assoc. 2019;8(19):e013543.",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:31567003",
+        "integrity_ok": true,
+        "n": "127477",
+        "n_int": 127477,
+        "year": 2019,
+        "finding": "Pooled 13 RCTs (127,477 participants; mean treatment 5.0 y). Excluding REDUCE-IT, marine omega-3 was associated with significant reductions in MI (RR 0.92, 0.86-0.99), CHD death (RR 0.92, 0.86-0.98), total CHD (RR 0.95, 0.91-0.99), CVD death (RR 0.93, 0.88-0.99), and total CVD (RR 0.97, 0.94-0.99); associations strengthened with REDUCE-IT included but introduced statistically significant heterogeneity. Linear dose-response for total CVD/major vascular events. Weakly POSITIVE overall; heterogeneity underscores the contested picture.",
+        "integrity_note": "NIH-funded (JAHA.119.013543, PMC6806028); peer-reviewed JAHA systematic review/meta-analysis; explicitly flags REDUCE-IT-driven heterogeneity; no integrity concerns. VERIFIED: PMID, n=127477, 13 RCTs, all RRs and CIs match PubMed abstract.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "F04",
+    "claim": "Hydroxychloroquine improves clinical outcomes in COVID-19",
+    "verdict": "Not Supported",
+    "expected": "Not Supported",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "integrity-screen",
+        "passed": true,
+        "detail": "excluded 1 study(ies) with documented integrity concerns"
+      },
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "4 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: no effect (evidence of absence)"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "PMID:32205204",
+        "design": "prospective cohort",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:32205204",
+        "integrity_ok": false,
+        "n": "",
+        "n_int": 26,
+        "year": 2020,
+        "finding": "Gautret et al. open-label non-randomized single-arm study (20 treated patients analyzed, 6 co-treated with azithromycin; external/refusal controls) reporting faster nasopharyngeal viral clearance with HCQ +/- azithromycin. This was the flawed early positive signal that drove the HCQ hypothesis; it measured viral load, not clinical outcomes, and was not a controlled outcomes trial. Subject to an ISAC/Elsevier statement / Expression of Concern (April 2020) over inclusion criteria, patient triage and methodology, and fully RETRACTED (retraction notice published in print Jan 2025, IJAA 65(1):107416; online 2024). Design normalized to 'prospective cohort' (single-arm treated + non-randomized comparators, prospective daily viral-load follow-up) \u2014 it is NOT a case report.",
+        "integrity_note": "Retracted. Retraction notice: 'Retraction notice to Hydroxychloroquine and azithromycin as a treatment of COVID-19...' PMID:39730229, DOI:10.1016/j.ijantimicag.2024.107416 (IJAA 2025;65(1):107416). Retraction cited ethical concerns and methodological flaws: 6 treated patients (incl. 1 death, 3 ICU transfers) dropped from analysis, inconsistent PCR positivity cutoffs between arms, and selective outcome reporting (day-6 vs planned day-7/day-14). Preceded by ISAC Board statement (3 Apr 2020) that the article 'does not meet the Society's expected standard.'",
+        "note": ""
+      },
+      {
+        "citation": "PMID:33031652",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:33031652",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 1561,
+        "year": 2020,
+        "finding": "RECOVERY trial (Horby et al., N Engl J Med; NCT04381936; DOI:10.1056/NEJMoa2022926). Large open-label platform RCT in hospitalized COVID-19: 1561 HCQ vs 3155 usual care. 28-day mortality 27.0% HCQ vs 25.0% usual care (rate ratio 1.09, 95% CI 0.97-1.23); HCQ patients less likely to be discharged alive by 28 days (RR 0.90, 0.83-0.98) and, if not ventilated at baseline, higher frequency of invasive ventilation or death. No clinical benefit, trend to harm. Arm closed for lack of efficacy at interim analysis.",
+        "integrity_note": "Verified against PubMed abstract; NCT04381936 confirmed as RECOVERY (Univ. of Oxford). DOI:10.1056/NEJMoa2022926.",
+        "note": ""
+      },
+      {
+        "citation": "PMID:33264556",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:33264556",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 947,
+        "year": 2020,
+        "finding": "WHO SOLIDARITY interim results (Pan et al., N Engl J Med; NCT04315948; DOI:10.1056/NEJMoa2023184). Multinational open-label RCT: death in 104/947 HCQ vs 84/906 control (rate ratio 1.19, 95% CI 0.89-1.59). HCQ had little or no effect on in-hospital mortality, initiation of ventilation, or duration of hospitalization. Null for benefit.",
+        "integrity_note": "Verified against PubMed abstract (HCQ arm 104/947 vs 84/906, RR 1.19). NCT04315948 is the ClinicalTrials.gov ID cited by the SOLIDARITY paper (shared registration with DisCoVeRy). DOI:10.1056/NEJMoa2023184.",
+        "note": ""
+      },
+      {
+        "citation": "PMID:33165621",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:33165621",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 242,
+        "year": 2020,
+        "finding": "ORCHID trial (Self et al., JAMA; NCT04332991; DOI:10.1001/jama.2020.22240). Blinded, placebo-controlled RCT in hospitalized adults (479 randomized; 242 HCQ / 237 placebo), stopped for futility. No difference in COVID Outcomes Scale at day 14 (adjusted OR 1.02, 95% CI 0.73-1.42) and no difference in 28-day mortality (10.4% HCQ vs 10.6% placebo). Null.",
+        "integrity_note": "Verified against PubMed abstract; NCT04332991 confirmed as ORCHID (blinded placebo-controlled). DOI:10.1001/jama.2020.22240. n reported as 242 HCQ (479 total randomized).",
+        "note": ""
+      },
+      {
+        "citation": "PMID:33859192",
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:33859192",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 10012,
+        "year": 2021,
+        "finding": "CORRECTED CITATION. Axfors et al. international collaborative meta-analysis of RCTs (Nature Communications; DOI:10.1038/s41467-021-22446-z). Pooled all-cause mortality across 26 HCQ RCTs (10,012 patients; dominated by RECOVERY + SOLIDARITY): OR 1.11 (95% CI 1.02-1.20; I2=0%). HCQ associated with increased mortality and no clinical benefit; chloroquine (4 trials, 307 patients) OR 1.77 (0.15-21.13), no benefit.",
+        "integrity_note": "CORRECTION: original bundle cited PMID:34800996 / DOI:10.1186/s12879-021-06829-7, which is a DIFFERENT paper (convalescent-plasma meta-analysis, BMC Infect Dis) that does NOT support the finding text. Correct Axfors HCQ meta-analysis is PMID:33859192, Nat Commun 2021;12(1):2349, DOI:10.1038/s41467-021-22446-z. Also corrected: n_int 5480->10012 and '28 HCQ RCTs'->'26 HCQ RCTs' per the verified abstract. (An author correction to this paper exists at PMID:33990619, DOI:10.1038/s41467-021-23559-1 \u2014 the primary article remains valid, not retracted.)",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "F01",
+    "claim": "Hydroxyethyl starch (HES) is a safe and effective fluid for volume resuscitation in critically ill adults",
+    "verdict": "Not Supported",
+    "expected": "Not Supported",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "integrity-screen",
+        "passed": true,
+        "detail": "excluded 1 study(ies) with documented integrity concerns"
+      },
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "5 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: no effect (evidence of absence)"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Boldt J, et al. Cardiopulmonary bypass priming using a high dose of a balanced hydroxyethyl starch versus an albumin-based priming strategy. Anesth Analg. 2009;109(6):1752-62. RETRACTED. DOI 10.1213/ANE.0b013e3181b5a24b",
+        "design": "rct",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:19923501",
+        "integrity_ok": false,
+        "n": "",
+        "n_int": 25,
+        "year": 2009,
+        "finding": "Joachim Boldt RCT: 6% HES 130/0.42 vs albumin priming for cardiopulmonary bypass in 50 CABG patients; falsely reported HES REDUCED inflammation (IL-6/IL-10), endothelial damage (ICAM-1), renal tubular injury (a-GST, NGAL) and better preserved coagulation/platelet function - i.e. made HES look protective and safe. FABRICATED: retracted by Anesthesia & Analgesia (Dec 2010, PMID:21106980); the 2014 editor's note (PMID:25329035) names this exact paper and states the Klinikum Ludwigshafen investigation 'determined that the study was fabricated' (no IRB approval, no informed consent, missing/fabricated data). Cardiac-surgery CPB-priming population, not general critically-ill ICU resuscitation.",
+        "integrity_note": "RETRACTED / FABRICATED. PubMed article-type flag: 'Retracted Publication'. Retraction notice: Shafer SL. Notice of retraction. Anesth Analg. 2010;111(6):1567 (PMID:21106980, DOI 10.1213/ANE.0b013e3182040b99). Reaffirmed by editor's note PMID:25329035 (2014) which names this HES-vs-albumin CPB-priming paper and states the Klinikum Ludwigshafen investigation found it fabricated. Part of the ~88/89-article joint retraction (18 editors-in-chief, 2011); Boldt is anesthesiology's retraction record-holder (>180 papers). His fabricated trials systematically made HES appear safe/effective; excluding them flips the honest verdict to harm (Not Supported).",
+        "note": ""
+      },
+      {
+        "citation": "Brunkhorst FM, et al. Intensive insulin therapy and pentastarch resuscitation in severe sepsis. N Engl J Med. 2008;358(2):125-39. NCT00135473. DOI 10.1056/NEJMoa070716",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:18184958",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 262,
+        "year": 2008,
+        "finding": "VISEP trial. In 537 evaluable patients with severe sepsis, 10% pentastarch (HES 200/0.5) vs modified Ringer's lactate. HES caused higher rates of acute renal failure and renal-replacement therapy, with toxicity increasing with cumulative dose; trial stopped early for safety. Authors: 'As used in this study, HES was harmful, and its toxicity increased with accumulating doses.' (NCT00135473)",
+        "integrity_note": "",
+        "note": ""
+      },
+      {
+        "citation": "Perner A, et al. Hydroxyethyl starch 130/0.42 versus Ringer's acetate in severe sepsis. N Engl J Med. 2012;367(2):124-34. NCT00962156. DOI 10.1056/NEJMoa1204242",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:22738085",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 398,
+        "year": 2012,
+        "finding": "6S trial. 804 patients with severe sepsis randomized to 6% HES 130/0.42 (Tetraspan) vs Ringer's acetate. At 90 days, death 51% (HES) vs 43% (Ringer's), relative risk 1.17 (95% CI 1.01-1.36, P=0.03); more renal-replacement therapy (22% vs 16%, RR 1.35, 95% CI 1.01-1.80, P=0.04) and a trend to more severe bleeding (10% vs 6%). HES increased death and RRT.",
+        "integrity_note": "",
+        "note": ""
+      },
+      {
+        "citation": "Myburgh JA, et al. Hydroxyethyl starch or saline for fluid resuscitation in intensive care (CHEST). N Engl J Med. 2012;367(20):1901-11. NCT00935168. DOI 10.1056/NEJMoa1209759",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:23075127",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 3315,
+        "year": 2012,
+        "finding": "CHEST trial. 7000 ICU patients randomized to 6% HES 130/0.4 (Voluven) vs 0.9% saline. No mortality benefit (90-day death 18.0% vs 17.0%, RR 1.06, 95% CI 0.96-1.18, NS) but MORE renal-replacement therapy (7.0% vs 5.8%, RR 1.21, 95% CI 1.00-1.45, P=0.04) and significantly more adverse events (5.3% vs 2.8%, P<0.001). HES gave no benefit and more renal harm in general critically ill adults.",
+        "integrity_note": "",
+        "note": ""
+      },
+      {
+        "citation": "Haase N, Perner A, et al. Hydroxyethyl starch 130/0.38-0.45 versus crystalloid or albumin in patients with sepsis: systematic review with meta-analysis and trial sequential analysis. BMJ. 2013;346:f839. DOI 10.1136/bmj.f839",
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:23418281",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 3456,
+        "year": 2013,
+        "finding": "Systematic review + meta-analysis + trial sequential analysis of 9 RCTs (3456 sepsis patients) of HES 130/0.38-0.45 vs crystalloid or albumin. HES increased renal-replacement therapy (RR 1.36, 1.08-1.72), red-cell transfusion (RR 1.29, 1.13-1.48) and serious adverse events (RR 1.30, 1.02-1.67); in low-risk-of-bias trials the relative risk of death was 1.11 (1.00-1.23). Authors: 'unlikely that HES 130/0.38-0.45 provides overall clinical benefit for patients with sepsis.' Clean, post-Boldt evidence synthesis.",
+        "integrity_note": "",
+        "note": ""
+      },
+      {
+        "citation": "Serpa Neto A, et al. Fluid resuscitation with hydroxyethyl starches in patients with sepsis is associated with an increased incidence of acute kidney injury and use of renal replacement therapy: a systematic review and meta-analysis. J Crit Care. 2013;29(1):185.e1-7. DOI 10.1016/j.jcrc.2013.09.031",
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:24262273",
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 4624,
+        "year": 2013,
+        "finding": "Systematic review and meta-analysis of 10 trials (4624 septic patients), HES vs crystalloid. HES increased acute kidney injury (RR 1.24, 1.13-1.36), need for renal-replacement therapy (RR 1.36, 1.17-1.57), red-cell transfusion (RR 1.14, 1.01-1.93) and 90-day mortality (RR 1.14, 1.04-1.26). Authors favor crystalloids over HES for sepsis resuscitation.",
+        "integrity_note": "",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "C05",
+    "claim": "Metformin reduces cancer incidence in adults without diabetes",
+    "verdict": "Not Supported",
+    "expected": "Not Supported",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "1 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: no effect (evidence of absence)"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Heckman-Stoddard 2025 Cancer Prev Res (Phila)",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:40243198",
+        "integrity_ok": true,
+        "n": "3234",
+        "n_int": 3234,
+        "year": 2025,
+        "finding": "In the Diabetes Prevention Program RCT of adults at high diabetes risk (non-diabetic, impaired glucose tolerance at randomization), metformin 850 mg BID did not reduce total cancer incidence vs placebo over a median 21 years (546 first cancers; HR 0.90, 95% CI 0.73-1.10).",
+        "integrity_note": "No retraction or expression of concern (verified). Trial = NCT00004992 (DPP/DPPOS), enrollment 3,234, confirmed on ClinicalTrials.gov. Only bundle row with a true non-diabetic population and RCT-tier design \u2014 load-bearing for the verdict.",
+        "note": ""
+      },
+      {
+        "citation": "Stevens 2012 Diabetologia",
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:22875195",
+        "integrity_ok": true,
+        "n": "51681 person-years (11 RCTs, 398 cancers)",
+        "n_int": 51681,
+        "year": 2012,
+        "finding": "Collaborative meta-analysis of randomized trials found no reduction in cancer with metformin (summary RR 1.02, 95% CI 0.82-1.26), directly refuting the ~one-third reduction seen in observational studies.",
+        "integrity_note": "No retraction/EoC (verified). Trials mostly enrolled diabetic patients, so population match to non-diabetic adults is only partial \u2014 honestly flagged false.",
+        "note": ""
+      },
+      {
+        "citation": "Dickerman 2023 Epidemiology",
+        "design": "target-trial emulation",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:37227368",
+        "integrity_ok": true,
+        "n": "population-based UK EHR (2009-2016)",
+        "n_int": 2009,
+        "year": 2023,
+        "finding": "Emulating a target trial removed the apparent protective signal: primary 6-year cancer risk difference (metformin vs no metformin, in individuals WITH diabetes) was ~0 (ITT -0.2%, 95% CI -1.6% to 1.3%); a secondary emulation regardless of diabetes status was also near-zero, whereas naive observational methods appeared strongly protective.",
+        "integrity_note": "No retraction/EoC (verified). CORRECTED population_match true->false: the headline emulation is restricted to individuals with diabetes; only a secondary analysis is diabetes-agnostic. Explicitly shows the observational protective signal is an analytic artifact.",
+        "note": ""
+      },
+      {
+        "citation": "Chang 2020 Cancer Prev Res (Phila)",
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:32958585",
+        "integrity_ok": true,
+        "n": "8541 (6 RCTs)",
+        "n_int": 8541,
+        "year": 2020,
+        "finding": "Meta-analysis of 6 RCTs found no significant association between metformin and skin cancer (melanoma OR 0.82, 0.27-2.43; total skin cancer OR 0.71, 0.42-1.20); parallel cohort meta-analysis also null.",
+        "integrity_note": "No retraction/EoC (verified). Diabetes/prediabetes populations; site-specific (skin), so population_match false.",
+        "note": ""
+      },
+      {
+        "citation": "Noto 2012 PLoS One",
+        "design": "systematic review",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:22448244",
+        "integrity_ok": true,
+        "n": "210892 (10 studies, mostly observational)",
+        "n_int": 210892,
+        "year": 2012,
+        "finding": "The naive observational signal: pooled all-cancer incidence RR 0.67 (95% CI 0.53-0.85) favoring metformin, but derived mainly from cohort/case-control studies in diabetic patients; authors themselves flag need for RCTs.",
+        "integrity_note": "No retraction/EoC (verified). Represents the confounded observational signal later refuted by RCTs/TTE; diabetic population only, so population_match false. Normalized to 'systematic review' (pools observational data, not RCTs).",
+        "note": ""
+      },
+      {
+        "citation": "Wang 2014 Diabetes Res Clin Pract",
+        "design": "systematic review",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:24837144",
+        "integrity_ok": true,
+        "n": "13 studies (10 cohort, 3 case-control)",
+        "n_int": 13,
+        "year": 2014,
+        "finding": "Observational meta-analysis reporting reduced pancreatic cancer risk with metformin (RR 0.63, 95% CI 0.46-0.86) in type 2 diabetes \u2014 a site-specific instance of the same confounded observational signal, from cohort/case-control data only.",
+        "integrity_note": "No retraction/EoC (verified). Purely observational; diabetic population; susceptible to time-related/immortal-time bias. Normalized to 'systematic review' (pools observational data, not RCTs).",
         "note": ""
       }
     ],

@@ -1,0 +1,235 @@
+{
+  "summary": {
+    "n": 24,
+    "accuracy": {
+      "verdict": 0.625,
+      "naive_vote": 0.75,
+      "plain_llm": 0.75
+    },
+    "verdict_accuracy_when_answered": 0.652,
+    "verdict_abstention_rate": 0.042,
+    "confidently_wrong": {
+      "verdict": 0,
+      "naive_vote": 1,
+      "plain_llm": 2
+    }
+  },
+  "claims": [
+    {
+      "id": "T01",
+      "claim": "Lecanemab slows clinical decline on the CDR-SB by 27% over 18 months versus placebo in early symptomatic Alzheimer's disease.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T02",
+      "claim": "Donanemab slows decline on the iADRS by about 35% over 76 weeks in early symptomatic Alzheimer's disease with low/medium tau.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T03",
+      "claim": "Tirzepatide produces mean weight loss of approximately 20-22% at the 15 mg dose over 72 weeks in adults with obesity without diabetes.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T04",
+      "claim": "Semaglutide 2.4 mg reduces the risk of major adverse cardiovascular events by 20% in adults with established cardiovascular disease and overweight/obesity without diabetes.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T05",
+      "claim": "MDMA-assisted therapy significantly reduces PTSD symptom severity on the CAPS-5 versus placebo-plus-therapy in moderate-to-severe PTSD.",
+      "gold": "Contested",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T06",
+      "claim": "Aducanumab reduces amyloid plaque and slows clinical decline in early Alzheimer's disease.",
+      "gold": "Contested",
+      "verdict": "Contested",
+      "naive": "Not Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "T07",
+      "claim": "Zuranolone provides rapid reduction in depressive symptoms on the HAM-D17 by day 15 in postpartum depression.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T08",
+      "claim": "Lecanemab in cognitively unimpaired individuals with amyloid pathology delays progression to symptomatic Alzheimer's disease (preclinical/secondary-prevention).",
+      "gold": "Insufficient",
+      "verdict": "Not Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "T09",
+      "claim": "Retatrutide (GGG triple agonist) produces mean weight loss of about 24% at the highest dose over 48 weeks in adults with obesity.",
+      "gold": "Supported",
+      "verdict": "Not Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T10",
+      "claim": "Lecanemab and donanemab meaningfully improve day-to-day cognition such that patients and families notice clear functional benefit.",
+      "gold": "Contested",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "T11",
+      "claim": "Mavacamten improves peak oxygen uptake and symptom class in symptomatic obstructive hypertrophic cardiomyopathy.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T12",
+      "claim": "Lecanemab's benefit in ApoE4 homozygotes outweighs the elevated risk of ARIA in that subgroup.",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "T13",
+      "claim": "Tofersen slows decline and lowers neurofilament light in SOD1-mutation ALS, though it missed its primary functional endpoint.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T14",
+      "claim": "Omaveloxolone modestly slows neurological deterioration on the mFARS over 48 weeks in Friedreich's ataxia.",
+      "gold": "Supported",
+      "verdict": "Insufficient",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T15",
+      "claim": "Lenacapavir given twice yearly provides near-complete protection against HIV acquisition in women and gender-diverse populations.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T16",
+      "claim": "Resmetirom improves NASH resolution and liver fibrosis versus placebo in biopsy-confirmed MASH with moderate-to-advanced fibrosis.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T17",
+      "claim": "Pimavanserin reduces psychosis symptoms in dementia-related psychosis across dementia subtypes.",
+      "gold": "Contested",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "T18",
+      "claim": "Donanemab's benefit is concentrated in the low-tau subgroup, with attenuated or uncertain benefit in high-tau patients.",
+      "gold": "Supported",
+      "verdict": "Not Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T19",
+      "claim": "CagriSema (cagrilintide + semaglutide) achieves roughly 22-23% weight loss at 68 weeks, falling short of the ~25% pre-trial expectation.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Not Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T20",
+      "claim": "Orforglipron, an oral small-molecule GLP-1 agonist, produces meaningful weight loss (~10-15%) in obesity in Phase 2.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T21",
+      "claim": "Sotatercept reduces pulmonary vascular resistance and improves 6-minute walk distance when added to background therapy in pulmonary arterial hypertension.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T22",
+      "claim": "Donanemab-treated patients who reach amyloid clearance can stop dosing and retain benefit, supporting a limited-duration treatment paradigm.",
+      "gold": "Supported",
+      "verdict": "Contested",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "T23",
+      "claim": "Trontinemab (brain-shuttle anti-amyloid antibody) achieves rapid deep amyloid clearance with low ARIA rates in early Alzheimer's disease.",
+      "gold": "Supported",
+      "verdict": "Contested",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "T24",
+      "claim": "Gantenerumab slows clinical decline in early symptomatic Alzheimer's disease.",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    }
+  ]
+}

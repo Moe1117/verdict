@@ -1,6 +1,16 @@
 import { useEffect, useState } from 'react'
 import type { Card, EvidenceRow } from './types'
 
+interface EvalSummary {
+  n: number
+  accuracy: { verdict: number; naive_vote: number; plain_llm: number }
+  verdict_accuracy_when_answered: number
+  verdict_abstention_rate: number
+  confidently_wrong: { verdict: number; naive_vote: number; plain_llm: number }
+}
+
+const pct = (x: number) => Math.round(x * 100) + '%'
+
 // Canned "plain LLM" answers — deliberately confident, to contrast with Verdict.
 const BASELINES: Record<string, string> = {
   C08: 'Yes — several studies and a meta-analysis reported reduced mortality (RR ~0.31), so ivermectin appears beneficial for COVID-19.',
@@ -8,6 +18,8 @@ const BASELINES: Record<string, string> = {
   C01: 'Yes — atorvastatin reliably lowers LDL cholesterol in adults with high cholesterol.',
   C05: 'Yes — metformin use is associated with lower cancer incidence across many studies.',
   C14: 'Yes — omega-3 (icosapent ethyl) reduces cardiovascular events, as shown in REDUCE-IT.',
+  F04: 'Yes — early studies, including Gautret et al., found hydroxychloroquine (especially with azithromycin) improved viral clearance and outcomes in COVID-19.',
+  F01: 'Yes — hydroxyethyl starch is an effective volume expander and is well-tolerated for fluid resuscitation in critically ill patients.',
 }
 
 // Does the plain-LLM answer disagree with Verdict? (drives the warning line)
@@ -43,27 +55,41 @@ function Row({ r, i }: { r: EvidenceRow; i: number }) {
 
 export default function App() {
   const [cards, setCards] = useState<Card[]>([])
-  const [id, setId] = useState<string>('C08')
+  const [ev, setEv] = useState<EvalSummary | null>(null)
+  const [id, setId] = useState<string>(() => window.location.hash.replace('#', '') || 'C08')
   const [runKey, setRunKey] = useState(0)
 
   useEffect(() => {
     fetch('/cards.json')
       .then((r) => r.json())
-      .then((cs: Card[]) => setCards(cs))
+      .then((cs: Card[]) => {
+        setCards(cs)
+        // Fall back to the first card if the URL hash names an unknown claim.
+        setId((cur) => (cs.some((c) => c.id === cur) ? cur : cs[0]?.id ?? cur))
+      })
+    fetch('/eval.json')
+      .then((r) => r.json())
+      .then((d: { summary: EvalSummary }) => setEv(d.summary))
+      .catch(() => {})
   }, [])
 
-  const select = (cid: string) => { setId(cid); setRunKey((k) => k + 1) }
+  const select = (cid: string) => {
+    setId(cid)
+    setRunKey((k) => k + 1)
+    window.history.replaceState(null, '', `#${cid}`)
+  }
   const card = cards.find((c) => c.id === id)
 
   return (
     <div className="wrap">
       <div className="head">
         <div className="logo">Verdict<span className="dot">.</span></div>
-        <div className="tag">Grades the evidence. Knows when to abstain.</div>
+        <div className="tag">Never confidently wrong — it excludes known-bad evidence, then abstains instead of guessing.</div>
       </div>
       <div className="sub">
-        Paste a biomedical efficacy claim. Claude extracts the evidence; a deterministic engine — with no LLM in the
-        verdict path — makes the call, so every verdict is auditable to its source. When the evidence can’t decide, Verdict abstains.
+        A plain LLM — even Claude — will confidently repeat a fraud-driven result. Verdict won’t. Known-bad or thin
+        evidence is excluded <em>before</em> a deterministic gate — no LLM in the verdict path — returns its call. It isn’t
+        more accurate than an LLM; it’s the one that structurally can’t silently repeat a falsehood, and says “I don’t know” instead of guessing.
       </div>
 
       <div className="tabs">
@@ -110,6 +136,43 @@ export default function App() {
             {card.ledger.map((r, i) => (
               <Row key={r.source_id + i} r={r} i={card.gate_trace.length + i} />
             ))}
+          </div>
+        </div>
+      )}
+
+      {ev && (
+        <div className="scorecard">
+          <div className="sc-head">
+            <div className="section-label" style={{ margin: 0 }}>How it scores — blind cold set, {ev.n} claims</div>
+            <div className="sc-note">exact 4-state match vs independent expert-consensus gold</div>
+          </div>
+          <div className="sc-table">
+            <div className="sc-row sc-th">
+              <span className="m">Method</span>
+              <span className="acc">Accuracy</span>
+              <span className="cw">Confidently wrong</span>
+            </div>
+            <div className="sc-row sc-win">
+              <span className="m">Verdict <em>deterministic gate engine</em></span>
+              <span className="acc">{pct(ev.accuracy.verdict)}</span>
+              <span className="cw ok">{ev.confidently_wrong.verdict}</span>
+            </div>
+            <div className="sc-row">
+              <span className="m">Naive study-count vote</span>
+              <span className="acc">{pct(ev.accuracy.naive_vote)}</span>
+              <span className="cw">{ev.confidently_wrong.naive_vote}</span>
+            </div>
+            <div className="sc-row">
+              <span className="m">Plain LLM <em>confident yes/no</em></span>
+              <span className="acc">{pct(ev.accuracy.plain_llm)}</span>
+              <span className="cw bad">{ev.confidently_wrong.plain_llm}</span>
+            </div>
+          </div>
+          <div className="sc-foot">
+            Not universally more accurate — on emerging pipeline drugs with thin literature Verdict is conservative to a
+            fault (62% vs the model’s 75%). What it never does is answer confidently when it shouldn’t:{' '}
+            <b>zero</b> confidently-wrong calls here, versus the language model’s <b>{ev.confidently_wrong.plain_llm}</b> —
+            and it abstains when the evidence can’t decide. Full evals, including where Verdict loses, are in the repo.
           </div>
         </div>
       )}

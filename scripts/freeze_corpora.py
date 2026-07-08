@@ -41,11 +41,11 @@ def main(path: str) -> None:
     for c in data["corpora"]:
         cid = c["claim_id"]
         for r in c["rows"]:
-            r["n_int"] = _n_int(r.get("n", ""))
-            r["year"] = _year(r.get("citation", ""))
+            r["n_int"] = r.get("n_int") or _n_int(r.get("n", ""))
+            r["year"] = r.get("year") or _year(r.get("citation", ""))
         rec = {
             "claim_id": cid,
-            "claim": CLAIMS.get(cid, cid),
+            "claim": c.get("claim") or CLAIMS.get(cid, cid),
             "expected_verdict": c["expected_verdict"],
             "rows": c["rows"],
             "integrity_records": c.get("integrity_records", []),

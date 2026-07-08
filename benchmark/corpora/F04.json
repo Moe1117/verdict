@@ -1,0 +1,83 @@
+{
+  "claim_id": "F04",
+  "claim": "Hydroxychloroquine improves clinical outcomes in COVID-19",
+  "expected_verdict": "Not Supported",
+  "rows": [
+    {
+      "source_id": "PMID:32205204",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "integrity_ok": false,
+      "n_int": 26,
+      "year": 2020,
+      "finding": "Gautret et al. open-label non-randomized single-arm study (20 treated patients analyzed, 6 co-treated with azithromycin; external/refusal controls) reporting faster nasopharyngeal viral clearance with HCQ +/- azithromycin. This was the flawed early positive signal that drove the HCQ hypothesis; it measured viral load, not clinical outcomes, and was not a controlled outcomes trial. Subject to an ISAC/Elsevier statement / Expression of Concern (April 2020) over inclusion criteria, patient triage and methodology, and fully RETRACTED (retraction notice published in print Jan 2025, IJAA 65(1):107416; online 2024). Design normalized to 'prospective cohort' (single-arm treated + non-randomized comparators, prospective daily viral-load follow-up) \u2014 it is NOT a case report.",
+      "integrity_note": "Retracted. Retraction notice: 'Retraction notice to Hydroxychloroquine and azithromycin as a treatment of COVID-19...' PMID:39730229, DOI:10.1016/j.ijantimicag.2024.107416 (IJAA 2025;65(1):107416). Retraction cited ethical concerns and methodological flaws: 6 treated patients (incl. 1 death, 3 ICU transfers) dropped from analysis, inconsistent PCR positivity cutoffs between arms, and selective outcome reporting (day-6 vs planned day-7/day-14). Preceded by ISAC Board statement (3 Apr 2020) that the article 'does not meet the Society's expected standard.'"
+    },
+    {
+      "source_id": "PMID:33031652",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "integrity_ok": true,
+      "n_int": 1561,
+      "year": 2020,
+      "finding": "RECOVERY trial (Horby et al., N Engl J Med; NCT04381936; DOI:10.1056/NEJMoa2022926). Large open-label platform RCT in hospitalized COVID-19: 1561 HCQ vs 3155 usual care. 28-day mortality 27.0% HCQ vs 25.0% usual care (rate ratio 1.09, 95% CI 0.97-1.23); HCQ patients less likely to be discharged alive by 28 days (RR 0.90, 0.83-0.98) and, if not ventilated at baseline, higher frequency of invasive ventilation or death. No clinical benefit, trend to harm. Arm closed for lack of efficacy at interim analysis.",
+      "integrity_note": "Verified against PubMed abstract; NCT04381936 confirmed as RECOVERY (Univ. of Oxford). DOI:10.1056/NEJMoa2022926."
+    },
+    {
+      "source_id": "PMID:33264556",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "integrity_ok": true,
+      "n_int": 947,
+      "year": 2020,
+      "finding": "WHO SOLIDARITY interim results (Pan et al., N Engl J Med; NCT04315948; DOI:10.1056/NEJMoa2023184). Multinational open-label RCT: death in 104/947 HCQ vs 84/906 control (rate ratio 1.19, 95% CI 0.89-1.59). HCQ had little or no effect on in-hospital mortality, initiation of ventilation, or duration of hospitalization. Null for benefit.",
+      "integrity_note": "Verified against PubMed abstract (HCQ arm 104/947 vs 84/906, RR 1.19). NCT04315948 is the ClinicalTrials.gov ID cited by the SOLIDARITY paper (shared registration with DisCoVeRy). DOI:10.1056/NEJMoa2023184."
+    },
+    {
+      "source_id": "PMID:33165621",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "integrity_ok": true,
+      "n_int": 242,
+      "year": 2020,
+      "finding": "ORCHID trial (Self et al., JAMA; NCT04332991; DOI:10.1001/jama.2020.22240). Blinded, placebo-controlled RCT in hospitalized adults (479 randomized; 242 HCQ / 237 placebo), stopped for futility. No difference in COVID Outcomes Scale at day 14 (adjusted OR 1.02, 95% CI 0.73-1.42) and no difference in 28-day mortality (10.4% HCQ vs 10.6% placebo). Null.",
+      "integrity_note": "Verified against PubMed abstract; NCT04332991 confirmed as ORCHID (blinded placebo-controlled). DOI:10.1001/jama.2020.22240. n reported as 242 HCQ (479 total randomized)."
+    },
+    {
+      "source_id": "PMID:33859192",
+      "design": "meta-analysis of rcts",
+      "direction": -1,
+      "population_match": true,
+      "integrity_ok": true,
+      "n_int": 10012,
+      "year": 2021,
+      "finding": "CORRECTED CITATION. Axfors et al. international collaborative meta-analysis of RCTs (Nature Communications; DOI:10.1038/s41467-021-22446-z). Pooled all-cause mortality across 26 HCQ RCTs (10,012 patients; dominated by RECOVERY + SOLIDARITY): OR 1.11 (95% CI 1.02-1.20; I2=0%). HCQ associated with increased mortality and no clinical benefit; chloroquine (4 trials, 307 patients) OR 1.77 (0.15-21.13), no benefit.",
+      "integrity_note": "CORRECTION: original bundle cited PMID:34800996 / DOI:10.1186/s12879-021-06829-7, which is a DIFFERENT paper (convalescent-plasma meta-analysis, BMC Infect Dis) that does NOT support the finding text. Correct Axfors HCQ meta-analysis is PMID:33859192, Nat Commun 2021;12(1):2349, DOI:10.1038/s41467-021-22446-z. Also corrected: n_int 5480->10012 and '28 HCQ RCTs'->'26 HCQ RCTs' per the verified abstract. (An author correction to this paper exists at PMID:33990619, DOI:10.1038/s41467-021-23559-1 \u2014 the primary article remains valid, not retracted.)"
+    }
+  ],
+  "integrity_records": [
+    {
+      "study": "Gautret et al. 2020, 'Hydroxychloroquine and azithromycin as a treatment of COVID-19: results of an open-label non-randomized clinical trial', Int J Antimicrob Agents 56(1):105949 (PMID:32205204, DOI:10.1016/j.ijantimicag.2020.105949)",
+      "severity": "retracted",
+      "wording": "Retracted. The retraction notice (published in print Int J Antimicrob Agents 2025;65(1):107416; online 2024; PMID:39730229, DOI:10.1016/j.ijantimicag.2024.107416) cites ethical concerns and methodological flaws, including exclusion of 6 treated patients from the analysis (1 death and 3 ICU transfers among them), inconsistent PCR positivity thresholds between arms, and selective outcome reporting (day-6 data vs planned day-7/day-14 follow-up). Several authors disagreed with the retraction.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/39730229/"
+    },
+    {
+      "study": "Gautret et al. 2020 \u2014 ISAC Board statement / Expression of Concern (April 2020)",
+      "severity": "expression of concern",
+      "wording": "The ISAC Board (publisher of the International Journal of Antimicrobial Agents) issued a statement on 3 April 2020 that 'the article does not meet the Society's expected standard, especially relating to the lack of better explanations of the inclusion criteria and the triage of patients to ensure patient safety,' and initiated an independent methodological review.",
+      "source_url": "https://www.isac.world/news-and-publications/gautret-et-al-investigation"
+    },
+    {
+      "study": "Bundle citation error: PMID:34800996 (DOI:10.1186/s12879-021-06829-7) mis-cited as the Axfors HCQ meta-analysis",
+      "severity": "citation mismatch (corrected)",
+      "wording": "PMID:34800996 is 'Association between convalescent plasma treatment and mortality in COVID-19: a collaborative systematic review and meta-analysis of randomized clinical trials' (BMC Infect Dis 2021) \u2014 a convalescent-plasma study that does not support the HCQ meta-analysis finding text in the bundle. Replaced with the correct source: Axfors et al., Nat Commun 2021;12(1):2349, PMID:33859192, DOI:10.1038/s41467-021-22446-z (HCQ OR 1.11, 95% CI 1.02-1.20; 26 trials; 10,012 patients).",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33859192/"
+    }
+  ],
+  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed."
+}
