@@ -34,6 +34,17 @@ def test_input_guard_returns_undecidable(monkeypatch):
     assert card.gate_trace[0].gate == "input-guard"
 
 
+def test_model_falls_back_on_empty_or_unset(monkeypatch):
+    """VERDICT_MODEL='' (as in a freshly-copied .env) must NOT blank the model — a real
+    400 on the live path. Empty is treated as unset; read at call time, not import time."""
+    monkeypatch.delenv("VERDICT_MODEL", raising=False)
+    assert parse.model() == "claude-sonnet-5"
+    monkeypatch.setenv("VERDICT_MODEL", "")
+    assert parse.model() == "claude-sonnet-5"
+    monkeypatch.setenv("VERDICT_MODEL", "claude-opus-4-8")
+    assert parse.model() == "claude-opus-4-8"
+
+
 def test_extract_row_maps_structured_output(monkeypatch):
     payload = {"design": "rct", "direction": 1, "population_match": True, "outcome_match": False,
                "dramatic_effect": False, "integrity_ok": True, "n_int": 1200, "year": 2019,

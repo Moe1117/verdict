@@ -9,7 +9,13 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 
-MODEL = os.getenv("VERDICT_MODEL", "claude-sonnet-5")
+DEFAULT_MODEL = "claude-sonnet-5"
+
+
+def model() -> str:
+    """Resolve the extraction/parse model at call time. An empty VERDICT_MODEL (as in a
+    freshly-copied .env) is treated as unset, not as a blank model id."""
+    return os.getenv("VERDICT_MODEL") or DEFAULT_MODEL
 
 
 @dataclass
@@ -58,7 +64,7 @@ def call_tool(system: str, user: str, tool: dict, max_tokens: int = 1024) -> dic
     import anthropic
     client = anthropic.Anthropic()
     msg = client.messages.create(
-        model=MODEL, max_tokens=max_tokens, system=system, tools=[tool],
+        model=model(), max_tokens=max_tokens, system=system, tools=[tool],
         tool_choice={"type": "tool", "name": tool["name"]},
         messages=[{"role": "user", "content": user}],
     )
