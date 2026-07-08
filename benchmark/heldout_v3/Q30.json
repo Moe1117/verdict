@@ -1,0 +1,100 @@
+{
+  "claim_id": "Q30",
+  "claim": "Esketamine nasal spray improves treatment-resistant depression",
+  "domain": "psych",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Regulatory and guideline consensus treats esketamine nasal spray (SPRAVATO) as an efficacious, FDA-approved (March 5, 2019) adjunctive treatment for treatment-resistant depression (TRD), so the directional claim \"improves TRD\" is SUPPORTED \u2014 with genuine caveats about the STRENGTH of effect. Of the three pivotal 4-week acute trials, only TRANSFORM-2 (flexible dose, PMID 31109201) met its primary MADRS endpoint (LS-mean diff -4.0; 95% CI -7.31,-0.64), while TRANSFORM-1 (fixed dose, PMID 31290965; 84 mg p=0.088) and TRANSFORM-3 (elderly, PMID 31734084; p=0.059) both MISSED their primary MADRS endpoints. The decisive positive evidence is the SUSTAIN-1 randomized-withdrawal relapse-prevention trial (PMID 31166571), strongly positive (HR 0.49 for relapse in stable remitters, p=0.003, NNT 6; HR 0.30 in stable responders). FDA independently confirmed this exact package (three short-term trials \u2014 one positive \u2014 plus one positive longer-term maintenance/relapse trial) and approved under a REMS with a boxed warning. A 2025 meta-analysis of 5 RCTs (PMID 40020133) finds significant MADRS reduction (SMD -3.88) and higher response (RR 1.99). The \"Contested\" framing in the literature is about effect size and effect-vs-active-comparator magnitude and the two failed acute trials, not about whether esketamine improves TRD at all. MADRS severity and time-to-relapse are accepted clinical outcomes, not surrogates.",
+  "outcome": "Depression severity (MADRS change from baseline to day 28) and time-to-relapse in stable remitters/responders",
+  "population": "Adults with treatment-resistant depression (nonresponse to >=2 adequate antidepressant trials in the current episode), esketamine given adjunctively with a newly initiated oral antidepressant",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Esketamine nasal spray (SPRAVATO) improves treatment-resistant depression and is FDA-approved (2019) for TRD as an add-on to an oral antidepressant. The pivotal short-term acute program was mixed (TRANSFORM-2 positive on MADRS; TRANSFORM-1 and TRANSFORM-3 missed their primary endpoints), but the SUSTAIN-1 relapse-prevention trial was strongly positive (roughly halving relapse risk), which anchored approval. It works rapidly and is genuinely effective, though the modest and inconsistent acute effect vs active comparator, dissociative side effects, and REMS monitoring requirements temper enthusiasm."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:31109201",
+      "citation": "Popova V, Daly EJ, Trivedi M, et al. Efficacy and Safety of Flexibly Dosed Esketamine Nasal Spray Combined With a Newly Initiated Oral Antidepressant in Treatment-Resistant Depression: A Randomized Double-Blind Active-Controlled Study (TRANSFORM-2). Am J Psychiatry. 2019;176(6):428-438. doi:10.1176/appi.ajp.2019.19020172 (NCT02418585)",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Janssen-sponsored pivotal Phase 3 RCT; positive primary endpoint. Industry funding noted; no retraction/integrity flag (verified via PubMed article_types).",
+      "n_int": 114,
+      "year": 2019,
+      "finding": "TRANSFORM-2, the flexible-dose pivotal acute trial (N=227 randomized): change in MADRS at day 28 significantly greater with esketamine+AD vs AD+placebo (LS-mean diff -4.0; SE 1.69; 95% CI -7.31 to -0.64). The one positive short-term acute pivotal trial. MADRS is a clinical severity endpoint, not a surrogate."
+    },
+    {
+      "source_id": "PMID:31166571",
+      "citation": "Daly EJ, Trivedi MH, Janik A, et al. Efficacy of Esketamine Nasal Spray Plus Oral Antidepressant Treatment for Relapse Prevention in Patients With Treatment-Resistant Depression (SUSTAIN-1): A Randomized Clinical Trial. JAMA Psychiatry. 2019;76(9):893-903. doi:10.1001/jamapsychiatry.2019.1189 (NCT02493868)",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Janssen-sponsored randomized-withdrawal maintenance Phase 3 trial; strongly positive; no integrity flags (verified via PubMed).",
+      "n_int": 90,
+      "year": 2019,
+      "finding": "SUSTAIN-1 relapse-prevention (randomized withdrawal; 176 stable remitters): continued esketamine+AD roughly halved relapse risk vs AD+placebo (HR 0.49; 95% CI 0.29-0.84; log-rank p=0.003; NNT 6; 26.7% vs 45.3% relapsed). In stable responders (n=121) HR 0.30 (0.16-0.55; NNT 4). The decisive positive trial anchoring approval; time-to-relapse is a clinical outcome named in the claim, not a surrogate."
+    },
+    {
+      "source_id": "PMID:31290965",
+      "citation": "Fedgchin M, Trivedi M, Daly EJ, et al. Efficacy and Safety of Fixed-Dose Esketamine Nasal Spray Combined With a New Oral Antidepressant in Treatment-Resistant Depression (TRANSFORM-1): A Randomized, Double-Blind, Active-Controlled Study. Int J Neuropsychopharmacol. 2019;22(10):616-630. doi:10.1093/ijnp/pyz039 (NCT02417064)",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Janssen-sponsored pivotal Phase 3 RCT; primary endpoint NOT met; reported transparently. n_int corrected from an erroneous 227 (that was TRANSFORM-2's total N) to ~115 (esketamine 84mg arm of the N=346 three-arm trial).",
+      "n_int": 115,
+      "year": 2019,
+      "finding": "TRANSFORM-1, fixed-dose pivotal acute trial (N=346 randomized 1:1:1 to esketamine 56mg, 84mg, or placebo): did NOT meet the primary MADRS endpoint. Esketamine 84 mg/AD vs AD/placebo LS-mean diff -3.2 (95% CI -6.88, 0.45; 2-sided p=0.088); the 56 mg comparison (nominal diff -4.1, p=0.027) could not be formally tested per the hierarchical testing sequence. A failed pivotal acute trial contradicting a large short-term MADRS effect."
+    },
+    {
+      "source_id": "PMID:31734084",
+      "citation": "Ochs-Ross R, Daly EJ, Zhang Y, et al. Efficacy and Safety of Esketamine Nasal Spray Plus an Oral Antidepressant in Elderly Patients With Treatment-Resistant Depression (TRANSFORM-3). Am J Geriatr Psychiatry. 2020;28(2):121-141. doi:10.1016/j.jagp.2019.10.008 (NCT02422186)",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Janssen-sponsored pivotal Phase 3 RCT in elderly (>=65y); primary endpoint NOT met; reported transparently. Epub 2019-10-17 (print 2020); year kept as 2019.",
+      "n_int": 72,
+      "year": 2019,
+      "finding": "TRANSFORM-3, pivotal acute trial in elderly (>=65y) TRD: did NOT meet the primary MADRS endpoint (median-unbiased treatment difference -3.6; 95% CI -7.20, 0.07; weighted-combination MMRM z=1.89, two-sided p=0.059). Nominal benefit confined to the 65-74y subgroup (-4.9; p=0.017). A second failed acute pivotal trial, driving the 'Contested'/modest-effect framing."
+    },
+    {
+      "source_id": "PMID:40020133",
+      "citation": "Ouyang Y, Li J. Efficacy of esketamine nasal spray for treatment-resistant depression: A meta-analysis of randomized controlled studies. Medicine (Baltimore). 2025;104(9):e41495. doi:10.1097/MD.0000000000041495",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Independent authorship (Univ. Queensland / Chongqing Medical Univ.); pools the same Janssen-sponsored pivotal RCTs; random-effects, high heterogeneity; inherits sponsor-trial limitations. No integrity flag.",
+      "n_int": 0,
+      "year": 2025,
+      "finding": "Meta-analysis of 5 RCTs: esketamine nasal spray significantly reduced MADRS (SMD -3.88; 95% CI -5.71 to -2.05; p<0.0001) and increased response (RR 1.99; 95% CI 1.28-3.10; p=0.002), decreased Sheehan Disability (SMD -3.01) and PHQ-9 (SMD -2.32) vs control, at cost of more dizziness (RR 3.55) and nausea (RR 3.88). Pooled evidence favors efficacy on the claimed MADRS/response outcome; pools the same manufacturer trials with high heterogeneity."
+    },
+    {
+      "source_id": "NCT02493868",
+      "citation": "U.S. FDA. SPRAVATO (esketamine) nasal spray \u2014 approval for treatment-resistant depression (adjunct to an oral antidepressant), March 5 2019; label + REMS + boxed warning. FDA Center for Drug Evaluation and Research (NDA 211243). Regulatory basis: three short-term acute trials (one positive) plus the positive SUSTAIN-1 maintenance trial (NCT02493868).",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "FDA approval under a REMS and boxed warning due to sedation/dissociation/abuse potential and suicidality signal; Fast Track + Breakthrough Therapy designations. Verified against the FDA press announcement of March 5, 2019 and DailyMed label. source_id reuses the SUSTAIN-1 NCT as a checkable regulatory anchor (duplicate of Row 2).",
+      "n_int": 0,
+      "year": 2019,
+      "finding": "FDA approved esketamine (SPRAVATO) on March 5, 2019 for treatment-resistant depression as adjunct to a newly initiated oral antidepressant, based on three short-term (4-week) trials (one demonstrating statistically significant effect) plus one longer-term maintenance-of-effect trial (SUSTAIN-1) showing significantly longer time to relapse. Establishes regulatory consensus that esketamine improves TRD, dispensed only under a REMS."
+    }
+  ]
+}

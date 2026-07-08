@@ -1,0 +1,87 @@
+{
+  "claim_id": "Q26",
+  "claim": "Pembrolizumab improves survival as second-line therapy in advanced gastric cancer",
+  "domain": "oncology",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The directly on-point pivotal RCT, KEYNOTE-061 (Shitara, Lancet 2018; NCT02370498), randomized pretreated advanced gastric/GEJ cancer patients with PD-L1 CPS>=1 to pembrolizumab vs paclitaxel as SECOND-LINE therapy and FAILED its co-primary overall-survival endpoint: median OS 9.1 vs 8.3 months, HR 0.82 (95% CI 0.66-1.03), one-sided p=0.0421 against a prespecified threshold of 0.0135 \u2014 i.e., no significant OS benefit. PFS actually favored paclitaxel (HR 1.27). The only positive pembrolizumab monotherapy data in pretreated gastric cancer came from KEYNOTE-059 cohort 1 (Fuchs, JAMA Oncol 2018; NCT02335411), a single-arm phase 2 measuring the SURROGATE endpoint objective response rate (11.6% overall, 15.5% in PD-L1+), which supported a 2017 FDA accelerated approval in the third-line-plus setting \u2014 not an OS demonstration. That accelerated approval was voluntarily WITHDRAWN by Merck effective 2021 in consultation with the FDA after the confirmatory requirement to show an OS benefit in a phase 3 study was not met (ODAC voted 6-2 to withdraw on 29 April 2021; Merck announced withdrawal 1 July 2021). KEYNOTE-062 (Shitara, JAMA Oncol 2020; NCT02494583) further showed first-line pembrolizumab monotherapy was only non-inferior \u2014 not superior \u2014 to chemotherapy for OS. Across the randomized evidence, single-agent pembrolizumab has never demonstrated a statistically significant OS improvement as second-line therapy in PD-L1+ advanced gastric cancer, and the corresponding US indication was withdrawn. Clinical/regulatory consensus: Not Supported.",
+  "outcome": "overall survival",
+  "population": "pretreated PD-L1+ (CPS>=1) advanced gastric / gastro-oesophageal junction adenocarcinoma",
+  "provenance": "Verified independently: PMIDs 29880231, 29543932, 32880601 confirmed via PubMed metadata (titles, designs, N, effect sizes, article types \u2014 none retracted). NCT02370498 confirmed via ClinicalTrials.gov (phase 3, OS/PFS co-primary, second-line, completed). 2021 withdrawal confirmed via Merck press release (1 Jul 2021) and corroborated by FiercePharma, CancerNetwork, BioCentury, TargetedOnc, pharmaphorum (ODAC 6-2 on 29 Apr 2021).",
+  "rows": [
+    {
+      "source_id": "PMID:29880231",
+      "citation": "Shitara K, et al. Pembrolizumab versus paclitaxel for previously treated, advanced gastric or gastro-oesophageal junction cancer (KEYNOTE-061): a randomised, open-label, controlled, phase 3 trial. Lancet. 2018;392(10142):123-133. DOI:10.1016/S0140-6736(18)31257-1 (NCT02370498).",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 196,
+      "year": 2018,
+      "finding": "Pivotal SECOND-LINE phase 3 in exactly the claimed population (PD-L1 CPS>=1 advanced gastric/GEJ). Pembrolizumab vs paclitaxel MISSED the OS primary endpoint: median OS 9.1 vs 8.3 mo, HR 0.82 (95% CI 0.66-1.03), one-sided p=0.0421 vs prespecified 0.0135 threshold \u2014 no significant OS benefit. PFS favored paclitaxel (HR 1.27). Directly contradicts the claim. VERIFIED: PubMed abstract confirms all figures; article types include 'Randomized Controlled Trial'/'Clinical Trial, Phase III'; NOT retracted.",
+      "integrity_note": "MSD-funded but negative for sponsor; endpoint prespecified; not retracted. Independently re-verified against PubMed."
+    },
+    {
+      "source_id": "PMID:29543932",
+      "citation": "Fuchs CS, et al. Safety and Efficacy of Pembrolizumab Monotherapy in Patients With Previously Treated Advanced Gastric and Gastroesophageal Junction Cancer: Phase 2 KEYNOTE-059 Trial. JAMA Oncol. 2018;4(5):e180013. DOI:10.1001/jamaoncol.2018.0013 (NCT02335411).",
+      "design": "prospective cohort",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 259,
+      "year": 2018,
+      "finding": "Single-arm, open-label phase 2 (cohort 1), third-line-plus. Primary endpoint was ORR (11.6% overall; 15.5% in PD-L1+), a SURROGATE \u2014 not OS. This ORR/durability read-out was the basis for the 2017 FDA accelerated approval, but it does not establish a survival benefit and has no comparator arm. VERIFIED: PubMed article type is 'Clinical Trial, Phase II'; abstract explicitly states 'single-arm, multicohort'.",
+      "integrity_note": "CORRECTED design tag from 'rct' to 'prospective cohort' \u2014 this is a single-arm phase 2 with no randomization/control, mapped to the least-wrong available enum. Outcome is surrogate ORR, not the claimed OS endpoint (direction 0)."
+    },
+    {
+      "source_id": "PMID:32880601",
+      "citation": "Shitara K, et al. Efficacy and Safety of Pembrolizumab or Pembrolizumab Plus Chemotherapy vs Chemotherapy Alone for First-line, Advanced Gastric Cancer: KEYNOTE-062 Phase 3 RCT. JAMA Oncol. 2020;6(10):1571-1580. DOI:10.1001/jamaoncol.2020.3370 (NCT02494583).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 256,
+      "year": 2020,
+      "finding": "First-line phase 3 RCT (NOT second-line, so population mismatch on line of therapy). Pembrolizumab monotherapy was NON-INFERIOR but not superior to chemotherapy for OS in CPS>=1 (10.6 vs 11.1 mo, HR 0.91, 99.2% CI 0.69-1.18). Corroborates that single-agent pembrolizumab does not deliver an OS improvement over standard therapy in advanced gastric cancer. VERIFIED via PubMed; N=256 monotherapy arm confirmed.",
+      "integrity_note": "Different line of therapy from the claim (population_match=false is honest, not a suppressed contradiction \u2014 first-line does not contradict the second-line claim). Included for consistency of the OS evidence picture."
+    },
+    {
+      "source_id": "NCT02370498",
+      "citation": "KEYNOTE-061: A Phase III, Randomized, Open-label Trial of Pembrolizumab (MK-3475) Versus Paclitaxel in Advanced Gastric/GEJ Adenocarcinoma Progressed After First-Line Platinum + Fluoropyrimidine. ClinicalTrials.gov NCT02370498.",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 196,
+      "year": 2018,
+      "finding": "Registry record for the pivotal second-line trial confirming design (phase 3, randomized 1:1 pembrolizumab vs paclitaxel, co-primary endpoints OS and PFS in PD-L1 CPS>=1 participants) \u2014 independent verification of the KEYNOTE-061 primary source. VERIFIED via ClinicalTrials.gov: status COMPLETED, enrollment 592, has_results=true, OS listed as primary outcome in PD-L1 positive participants.",
+      "integrity_note": "Trial registry cross-check of the negative pivotal RCT. Re-verified directly against ClinicalTrials.gov."
+    },
+    {
+      "source_id": "https://www.merck.com/news/merck-provides-update-on-keytruda-pembrolizumab-indication-in-third-line-gastric-cancer-in-the-us/",
+      "citation": "Merck. Merck Provides Update on KEYTRUDA (pembrolizumab) Indication in Third-Line Gastric Cancer in the US. News release, Business Wire, 1 July 2021. (Underlying: FDA ODAC 6-2 vote to withdraw, 29 April 2021.)",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 0,
+      "year": 2021,
+      "finding": "Regulatory consensus row: the FDA accelerated approval for single-agent pembrolizumab in pretreated PD-L1+ (CPS>=1) gastric/GEJ cancer (granted Sep 2017 on ORR from KEYNOTE-059) was voluntarily WITHDRAWN in 2021 because the post-marketing requirement to demonstrate an OS benefit in a phase 3 trial was not met (confirmatory KEYNOTE-061/062 failed to show significant OS improvement). ODAC voted 6-2 to withdraw on 29 Apr 2021; Merck announced withdrawal 1 Jul 2021. Confirms the OS-benefit claim is Not Supported at the regulatory level.",
+      "integrity_note": "CORRECTED source_id from a placeholder DOI (which misleadingly resolved to the KEYNOTE-059 paper) to the real, checkable Merck press release URL. Corroborated by FiercePharma, CancerNetwork, BioCentury, TargetedOnc, and pharmaphorum."
+    }
+  ],
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Pembrolizumab does not have proven overall-survival benefit as second-line therapy in advanced gastric cancer. The pivotal phase 3 KEYNOTE-061 trial compared pembrolizumab to paclitaxel in previously treated PD-L1 CPS>=1 gastric/GEJ cancer and MISSED its overall survival primary endpoint (median OS 9.1 vs 8.3 months, HR 0.82, p=0.0421, not crossing the 0.0135 significance threshold); PFS even favored paclitaxel. The earlier accelerated approval was based on the single-arm KEYNOTE-059 study using objective response rate (a surrogate), not survival, and that third-line accelerated approval was voluntarily withdrawn in 2021 after failing to confirm an OS benefit. So the claim is Not Supported for second-line therapy."
+  }
+}

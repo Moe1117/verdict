@@ -1,0 +1,103 @@
+{
+  "claim_id": "Q15",
+  "claim": "Intensive glycemic control reduces cardiovascular events in type 2 diabetes",
+  "domain": "metabolic",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The three purpose-built cardiovascular-outcome RCTs of intensive glycemic control in high-CV-risk T2D converge against the claim. ACCORD (NEJM 2008, PMID 18539917) was STOPPED EARLY because intensive therapy INCREASED all-cause mortality (HR 1.22, 95% CI 1.01-1.46) and did not significantly reduce the primary MACE composite (HR 0.90, 95% CI 0.78-1.04, P=0.16); it did reduce nonfatal MI (HR 0.76) but at the cost of excess death. ADVANCE (PMID 18539916) showed no effect on major macrovascular events (HR 0.94, P=0.32), CV death (HR 0.88, P=0.12), or all-cause death (HR 0.93, P=0.28) \u2014 its positive combined primary endpoint was driven by a reduction in microvascular nephropathy, a different endpoint. VADT (PMID 19092145) showed no effect on major CV events (HR 0.88, P=0.14) or death (HR 1.07). The prospectively planned CONTROL-group meta-analysis (Turnbull, Diabetologia 2009, PMID 19655124; 27,049 patients, 2,370 events) found only a modest 9% reduction in major CV events (HR 0.91, 0.84-0.99) driven by a 15% MI reduction (HR 0.85), with NO mortality benefit (all-cause HR 1.04; CV death HR 1.10) and a 2.5-fold excess of severe hypoglycemia (HR 2.48); benefit was absent in those with pre-existing macrovascular disease. UKPDS 33 (PMID 9742976) in newly diagnosed patients showed no significant macrovascular benefit during the trial. The only clear mortality benefit \u2014 UKPDS 34 metformin (PMID 9742977, 36% all-cause mortality reduction) \u2014 is a metformin-specific, newly-diagnosed-population, legacy-effect finding, not evidence that lowering glycemia per se reduces CV events in the high-risk population of the claim. Consensus (ADA Standards of Care 2023 and ACP guidance): guidelines moved to individualized HbA1c targets and caution against tight control in high-CV-risk/long-duration patients; of the three trials achieving HbA1c <7%, none reduced all-cause or CV death. The claim as stated is Not Supported.",
+  "outcome": "MACE (nonfatal MI, nonfatal stroke, CV death) and all-cause/CV mortality",
+  "population": "Type 2 diabetes at high cardiovascular risk (established CVD or multiple risk factors; typically longer-duration disease)",
+  "provenance": "PubMed-verified landmark RCTs and a prospectively planned group-level meta-analysis; all six PMIDs, DOIs, abstracts, Ns, and effect sizes independently re-confirmed via get_article_metadata. Gold consensus corroborated against ADA Standards of Care 2023 (dc23-s006) and ACP guidance (M17-0939). No retractions found.",
+  "build_confidence": "high",
+  "notes": "Surrogate/endpoint-mismatch detection is decisive for ADVANCE: its positive primary composite is driven by microvascular nephropathy, NOT the claimed MACE/mortality outcome (macrovascular and mortality components null) \u2014 outcome_match=false. UKPDS 33/34 populations are NEWLY DIAGNOSED, not the high-CV-risk population of the claim \u2014 population_match=false; UKPDS 34's benefit is metformin-specific rather than a glycemia-lowering effect. No dramatic_effect anywhere: chronic disease with an actively CONTRADICTING RCT (ACCORD showing harm), the opposite of an all-or-none fatal-disease rescue. The strongest pro-claim datum (Turnbull meta-analysis) still shows no mortality benefit. Re-verification found every PMID, N, HR, and design correct; ACCORD's nonfatal-MI component was in fact reduced (HR 0.76), which does not change the Not Supported verdict since MACE was null and mortality increased.",
+  "rows": [
+    {
+      "source_id": "PMID:18539917",
+      "citation": "Action to Control Cardiovascular Risk in Diabetes (ACCORD) Study Group. Effects of intensive glucose lowering in type 2 diabetes. N Engl J Med. 2008;358(24):2545-59. DOI:10.1056/NEJMoa0802743",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Landmark NIH-funded RCT (NCT00000620); intensive arm stopped early for excess mortality. No retraction; standard RCT article type confirmed on PubMed.",
+      "n_int": 5128,
+      "year": 2008,
+      "finding": "N=10,251 high-CV-risk T2D (35% prior CV event). Intensive therapy (target HbA1c <6%; achieved 6.4% vs 7.5%) did NOT significantly reduce the primary MACE composite (352 vs 371 events; HR 0.90, 95% CI 0.78-1.04, P=0.16) and INCREASED all-cause mortality (257 vs 203 deaths; HR 1.22, 95% CI 1.01-1.46, P=0.04). Intensive regimen halted at mean 3.5y. Nonfatal MI was reduced (HR 0.76, 0.62-0.92) but offset by excess death. Directly contradicts the claim on the mortality/MACE limb."
+    },
+    {
+      "source_id": "PMID:18539916",
+      "citation": "ADVANCE Collaborative Group. Intensive blood glucose control and vascular outcomes in patients with type 2 diabetes. N Engl J Med. 2008;358(24):2560-72. DOI:10.1056/NEJMoa0802987",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Large independent RCT (NCT00145925); no retraction. Positive PRIMARY composite is microvascular-driven, not MACE.",
+      "n_int": 5571,
+      "year": 2008,
+      "finding": "N=11,140 T2D (median 5y follow-up; achieved HbA1c 6.5% vs 7.3%). NO significant effect on major MACROVASCULAR events (HR 0.94, 95% CI 0.84-1.06, P=0.32), CV death (HR 0.88, 95% CI 0.74-1.04, P=0.12), or all-cause death (HR 0.93, 95% CI 0.83-1.06, P=0.28). The positive combined primary endpoint (HR 0.90) was driven by a 21% reduction in nephropathy (microvascular) \u2014 a SURROGATE/endpoint mismatch to the claimed CV-event outcome. Neutral on MACE/mortality."
+    },
+    {
+      "source_id": "PMID:19092145",
+      "citation": "Duckworth W, et al. (VADT). Glucose control and vascular complications in veterans with type 2 diabetes. N Engl J Med. 2009;360(2):129-39. DOI:10.1056/NEJMoa0808431",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VA-funded RCT (NCT00032487) in long-standing T2D; no retraction. PubMed indexes entry 2008-12-17; journal issue 2009;360(2). Year 2009 retained per citation.",
+      "n_int": 892,
+      "year": 2009,
+      "finding": "N=1,791 veterans with poorly-controlled long-standing T2D (mean 11.5y since dx; 40% prior CV event). Intensive control (median HbA1c 6.9% vs 8.4%) had NO significant effect on major CV events (235 vs 264; HR 0.88, 95% CI 0.74-1.05, P=0.14) and no effect on all-cause death (HR 1.07, 95% CI 0.81-1.42, P=0.62). Excess adverse events, predominantly hypoglycemia (24.1% vs 17.6%). Neutral \u2014 does not support the claim."
+    },
+    {
+      "source_id": "PMID:19655124",
+      "citation": "Turnbull FM, et al. (Control Group). Intensive glucose control and macrovascular outcomes in type 2 diabetes. Diabetologia. 2009;52(11):2288-98. DOI:10.1007/s00125-009-1470-0",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prospectively planned group-level meta-analysis pooling ACCORD/ADVANCE/VADT/UKPDS with pre-specified outcomes; indexed Meta-Analysis, no retraction.",
+      "n_int": 13541,
+      "year": 2009,
+      "finding": "Pooled N=27,049; 2,370 major vascular events over 4.4y. Intensive control gave a MODEST 9% reduction in major CV events (HR 0.91, 95% CI 0.84-0.99), driven by a 15% MI reduction (HR 0.85, 0.76-0.94). Crucially NO mortality benefit: all-cause HR 1.04 (0.90-1.20), CV death HR 1.10 (0.84-1.42); severe hypoglycemia HR 2.48 (1.91-3.21). Benefit absent in those with pre-existing macrovascular disease (HR 1.00 vs 0.84; interaction P=0.04). Weak MI signal but null on the mortality limb of the claim."
+    },
+    {
+      "source_id": "PMID:9742976",
+      "citation": "UK Prospective Diabetes Study (UKPDS) Group. Intensive blood-glucose control with sulphonylureas or insulin compared with conventional treatment (UKPDS 33). Lancet. 1998;352(9131):837-53.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Foundational long-term RCT; no retraction. Population is NEWLY DIAGNOSED (median age 54), not high-CV-risk.",
+      "n_int": 2729,
+      "year": 1998,
+      "finding": "N=3,867 NEWLY diagnosed T2D (median age 54, low baseline CV risk). Intensive control cut microvascular endpoints 25% (P=0.0099) but showed NO significant macrovascular benefit: any-diabetes-related endpoint 12% lower (P=0.029, largely microvascular) and all-cause mortality only 6% lower (95% CI -10 to 20, P=0.44); MI reduction ~16% did not reach significance (P~0.052). Population mismatch to the high-risk claim; neutral on macrovascular events during the trial."
+    },
+    {
+      "source_id": "PMID:9742977",
+      "citation": "UK Prospective Diabetes Study (UKPDS) Group. Effect of intensive blood-glucose control with metformin (UKPDS 34). Lancet. 1998;352(9131):854-65.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "RCT sub-study; no retraction. Benefit is metformin-specific and in newly-diagnosed overweight patients \u2014 not a general glycemia-lowering effect in high-risk T2D.",
+      "n_int": 342,
+      "year": 1998,
+      "finding": "N=753 overweight NEWLY diagnosed T2D (342 metformin vs 411 diet; median 10.7y). Metformin arm reduced all-cause mortality 36% (95% CI 9-55, P=0.011), diabetes-related death 42% (P=0.017), and any diabetes-related endpoint 32% (P=0.002) vs diet. A genuine mortality benefit \u2014 but drug-specific (metformin outperformed the SU/insulin arms) and in a low-risk newly-diagnosed population. Supports metformin, not the broad high-risk claim."
+    }
+  ],
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Intensive glycemic control does not reliably reduce cardiovascular events in type 2 diabetes, and in high-risk patients it can be harmful. The pivotal ACCORD trial was stopped early because targeting near-normal HbA1c INCREASED all-cause mortality (HR 1.22) without reducing the primary MACE composite. ADVANCE and VADT both found no significant reduction in macrovascular events or mortality. Meta-analyses show at most a modest reduction in nonfatal MI but no reduction in cardiovascular or all-cause death, offset by a roughly 2-3x increase in severe hypoglycemia. The main mortality benefit historically cited (UKPDS metformin arm) is drug-specific and in newly diagnosed patients, not evidence that intensive glucose lowering itself reduces CV events in high-risk T2D. Consequently guidelines shifted to individualized HbA1c targets rather than uniformly tight control. The claim is not supported."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "claim_id": "Q35",
+  "claim": "Voxelotor improves clinical outcomes in sickle cell disease",
+  "domain": "rare/gene",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "Regulatory and clinical consensus is that voxelotor did NOT improve the claimed clinical outcomes (vaso-occlusive crises / mortality / organ endpoints). The pivotal HOPE trial (NCT03036813; Vichinsky, NEJM 2019, PMID 31199090; 72-wk follow-up Howard, Lancet Haematol 2021, PMID 33838113) met only its SURROGATE primary endpoint \u2014 hemoglobin response >1 g/dL (51% vs 7% placebo) \u2014 and did NOT significantly reduce vaso-occlusive crises (a pre-specified secondary endpoint). FDA granted only accelerated approval (2019 for ages 12+, Dec 2021 for ages 4+) explicitly on that surrogate, contingent on confirmatory verification of clinical benefit. That confirmation failed: on 25-26 Sep 2024 Pfizer voluntarily withdrew voxelotor (Oxbryta) from ALL worldwide markets and discontinued all trials/expanded-access, and FDA/MHRA issued alerts, because post-marketing trials AND two real-world registry studies showed a HIGHER rate of vaso-occlusive crises AND MORE deaths on voxelotor versus placebo. Confirmatory/pediatric/extension trials (HOPE Kids 2 NCT04218084; OLE NCT04188509 and NCT03573882) were all TERMINATED in 2024. Independent real-world claims data (MarketScan, PMID 41277817) showed no reduction in VOC frequency. The surrogate benefit never translated into clinical benefit and the risk-benefit is unfavorable. Not Supported (and arguably harmful).",
+  "outcome": "clinical outcomes \u2014 vaso-occlusive crisis (VOC) frequency and mortality/organ endpoints",
+  "population": "Sickle cell disease; indicated population ages 4-65 (pivotal HOPE RCT enrolled ages 12-65)",
+  "provenance": "PubMed get_article_metadata independently re-verified PMIDs 31199090 (HOPE, NEJM 2019), 40307078 (Yassin systematic review, Blood Rev 2025), 41277817 (Udeze MarketScan, J Comp Eff Res 2025), and 33838113 (HOPE 72-wk follow-up, Lancet Haematol 2021 \u2014 NOT a regulatory placeholder). ClinicalTrials.gov get_trial_details verified NCT03036813 (HOPE, COMPLETED, VOC secondary), NCT04218084 (HOPE Kids 2, TERMINATED, N=236), NCT04188509 (OLE, TERMINATED), NCT03573882 (OLE 034, TERMINATED) \u2014 all Pfizer. Exa web_search verified the Sept 2024 worldwide withdrawal via FDA safety alert (2024-09-26), Pfizer/BusinessWire press release (2024-09-25), MHRA Class-2 recall EL(24)A/44 (2024-09-30), and the Pfizer Dear-HCP letter \u2014 all citing an imbalance of MORE VOCs and MORE deaths vs placebo in postmarketing trials plus two real-world registries. No retractions found on any PMID.",
+  "rows": [
+    {
+      "source_id": "PMID:31199090",
+      "citation": "Vichinsky E, et al. A Phase 3 Randomized Trial of Voxelotor in Sickle Cell Disease. N Engl J Med. 2019;381(6):509-519. DOI:10.1056/NEJMoa1903212 (HOPE, NCT03036813).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED via PubMed. Landmark pivotal Phase 3 RCT, industry-funded (Global Blood Therapeutics). Not retracted (article types: RCT / Phase III / Multicenter). PRIMARY endpoint was a SURROGATE \u2014 hemoglobin response >1 g/dL at wk 24: 51% (1500mg) vs 7% placebo. Vaso-occlusive crisis (the CLAIMED clinical outcome) was a SECONDARY endpoint and was NOT significantly reduced. Basis for FDA accelerated approval on the surrogate. n_int=274 is total randomized (1500mg arm n=90; ages 12-65).",
+      "n_int": 274,
+      "year": 2019,
+      "finding": "Voxelotor 1500 mg raised hemoglobin (51% vs 7% response) and cut hemolysis markers \u2014 a surrogate win \u2014 but did NOT show a significant reduction in vaso-occlusive crises. direction=0 on the CLAIMED clinical outcome; outcome_match=false (surrogate)."
+    },
+    {
+      "source_id": "PMID:33838113",
+      "citation": "Howard J, et al. Voxelotor in adolescents and adults with sickle cell disease (HOPE): long-term follow-up results of a randomised, double-blind, placebo-controlled, phase 3 trial. Lancet Haematol. 2021;8(5):e323-e333. DOI:10.1016/S2352-3026(21)00059-4 (NCT03036813, 72-week final analysis).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED via PubMed. This is the HOPE 72-week FINAL analysis \u2014 the corpus previously mislabeled this PMID as a regulatory 'placeholder'; it is a real, distinct RCT report. Confirms durable Hb rise (+1.0 g/dL) and hemolysis-marker improvement (surrogates), but 6 deaths occurred (2 per arm) ALL judged unrelated to treatment and VOC benefit was not demonstrated. At 72 weeks there was NO death imbalance and NO clinical-outcome benefit \u2014 the drug remained a surrogate-only success.",
+      "n_int": 274,
+      "year": 2021,
+      "finding": "72-week HOPE data: sustained surrogate benefit (hemoglobin, hemolysis markers) but no established VOC benefit; deaths balanced 2-vs-2, unrelated to treatment. Confirms clinical benefit was never shown on the claimed outcome. direction=0, outcome_match=false (surrogate)."
+    },
+    {
+      "source_id": "FDA:oxbryta-withdrawal-2024-09-26",
+      "citation": "FDA Drug Safety Alert, 'FDA is alerting patients and health care professionals about the voluntary withdrawal of Oxbryta from the market due to safety concerns,' 26 Sep 2024 (fda.gov/drugs/drug-alerts-and-statements). Corroborated by Pfizer press release 25 Sep 2024 (pfizer.com / BusinessWire) and MHRA Class-2 Medicines Recall EL(24)A/44, 30 Sep 2024 (gov.uk).",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "PRIMARY REGULATORY EVIDENCE, verified by direct fetch of the FDA alert, Pfizer/BusinessWire release, MHRA recall notice, and Pfizer Dear-HCP letter. Pfizer voluntarily withdrew Oxbryta from ALL worldwide markets and discontinued all trials/expanded-access on 25-26 Sep 2024. Stated basis: post-marketing clinical trials showed a HIGHER rate of vaso-occlusive crises AND MORE deaths on voxelotor vs placebo, plus a higher VOC rate in TWO real-world registry studies; accelerated-approval surrogate never confirmed. This row is now correctly sourced to the regulatory documents (no fabricated PMID).",
+      "n_int": 0,
+      "year": 2024,
+      "finding": "Global regulatory withdrawal (FDA/MHRA/Pfizer): in postmarketing trials and two real-world registries, voxelotor showed MORE vaso-occlusive crises and MORE deaths vs placebo \u2014 the claimed clinical outcome was worsened, not improved. Benefit no longer outweighs risk. Decisive evidence against the claim."
+    },
+    {
+      "source_id": "NCT04218084",
+      "citation": "HOPE Kids 2 (NCT04218084): Phase 3, Randomized, Double-Blind, Placebo-Controlled Study of Voxelotor in Pediatric Participants With SCD. Sponsor: Pfizer. Status: TERMINATED (2024).",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED via ClinicalTrials.gov: TERMINATED, N=236, Pfizer, ages 2-<15. PRIMARY endpoint was TCD (transcranial-Doppler) velocity, a stroke-risk clinical measure; VOC annualized incidence was a secondary. Terminated administratively as part of Pfizer's Sept-2024 global program shutdown, so the confirmatory clinical-benefit read-out was never delivered. outcome_match=true (confirmatory clinical-benefit trial on stroke-risk/VOC), not a surrogate lab endpoint.",
+      "n_int": 236,
+      "year": 2024,
+      "finding": "Confirmatory pediatric Phase 3 (stroke-risk/TCD + VOC) TERMINATED during the 2024 worldwide withdrawal; required post-marketing confirmation of clinical benefit was never achieved. Weighs against the claim."
+    },
+    {
+      "source_id": "PMID:40307078",
+      "citation": "Yassin M, et al. Evidence and gaps in clinical outcomes of novel pharmacologic therapies for sickle cell disease: a systematic literature review. Blood Rev. 2025;73:101298. DOI:10.1016/j.blre.2025.101298 (97 studies to 31 May 2024).",
+      "design": "systematic review",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED via PubMed. Systematic review of 97 studies. States HOPE showed 51% hemoglobin response and reduced hemolysis, but that for voxelotor real-world VOC/hospitalization results are 'inconsistent and not conclusive,' calling for end-organ outcome studies. Not retracted.",
+      "n_int": 0,
+      "year": 2025,
+      "finding": "Confirms surrogate benefit (Hb/hemolysis) but no consistent clinical-outcome (VOC/hospitalization) benefit for voxelotor; explicit evidence gap on the claimed outcome. Scores against the claim."
+    },
+    {
+      "source_id": "PMID:41277817",
+      "citation": "Udeze C, et al. Adherence, treatment utilization, clinical and economic outcomes of SCD patients with recurrent VOC treated with recently approved chronic therapies in the US (Merative MarketScan). J Comp Eff Res. 2025;14(12):e240232. DOI:10.57264/cer-2024-0232.",
+      "design": "prospective cohort",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED via PubMed. NOTE: this is a RETROSPECTIVE claims-database cohort (Merative MarketScan, Jan 2015-Sep 2022; 12-mo pre/post index), not prospective \u2014 schema enum lacks 'retrospective cohort', flagged here so design is not overstated. Voxelotor n=110 (of 440 total across three therapies). Mean VOC 7.21 (baseline) vs 7.27 (follow-up) was the pooled all-therapy figure, reported as 'similar across' the L-glutamine/crizanlizumab/voxelotor subgroups; low adherence (PDC 0.37) and ~50% higher costs. Not retracted.",
+      "n_int": 110,
+      "year": 2025,
+      "finding": "Real-world US claims data: no reduction in VOC frequency after starting these chronic therapies (pooled 7.21 baseline vs 7.27 follow-up, similar in the voxelotor subgroup); patients continued frequent crises. Contradicts a clinical-outcome benefit for voxelotor."
+    }
+  ],
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "Voxelotor does not clearly improve clinical outcomes in sickle cell disease. Its pivotal HOPE trial (NEJM 2019; 72-week follow-up Lancet Haematol 2021) met only a surrogate endpoint \u2014 raising hemoglobin by >1 g/dL in 51% of patients versus 7% on placebo, and reducing hemolysis markers \u2014 but did NOT significantly reduce vaso-occlusive crises, the key clinical outcome. It received FDA accelerated approval in 2019 (ages 12+) and 2021 (ages 4+) on that surrogate. In September 2024, Pfizer voluntarily withdrew voxelotor (Oxbryta) from all global markets and halted all trials after post-marketing trials and two real-world registries showed MORE vaso-occlusive crises and MORE deaths on voxelotor than placebo, with FDA and MHRA issuing safety actions. So the honest answer is No: voxelotor improved a laboratory surrogate but failed to improve \u2014 and may have worsened \u2014 clinical outcomes, leading to its worldwide withdrawal."
+  },
+  "build_confidence": "high"
+}

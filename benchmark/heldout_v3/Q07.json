@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q07",
+  "claim": "Digoxin reduces mortality in patients with heart failure",
+  "domain": "cardiology",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The definitive evidence directly contradicts a mortality benefit. The DIG trial (NEJM 1997, PMID 9036306), the only large placebo-controlled mortality RCT in HFrEF (LVEF <=0.45) in sinus rhythm on background diuretics + ACE inhibitors (N=6800 main trial), found all-cause mortality unaffected: 34.8% digoxin vs 35.1% placebo, RR 0.99 (95% CI 0.91-1.07), P=0.80. Digoxin reduced HF hospitalization only. The Ziff BMJ 2015 systematic review/meta-analysis (PMID 26321114) confirms a neutral mortality effect when restricted to randomized trials (pooled RR 0.99, 95% CI 0.93-1.05); apparent harm in observational data is driven by prescription/confounding bias. Withdrawal RCTs (RADIANCE, PMID 8505940; Adams/PROVED-RADIANCE analysis, PMID 9207619) show digoxin withdrawal worsens HF symptoms, functional capacity and LVEF \u2014 establishing a symptomatic/hospitalization benefit, NOT a mortality benefit (outcome mismatch). The Rathore post-hoc DIG analysis (JAMA 2003, PMID 12588271) shows high serum concentrations (>=1.2 ng/mL) are associated with INCREASED mortality, reinforcing the absence of any survival benefit. Guidelines (ACC/AHA, ESC) accordingly position digoxin only for symptom/hospitalization reduction (Class IIa/IIb), never for mortality reduction. Consensus: the mortality-reduction claim is Not Supported.",
+  "outcome": "all-cause mortality",
+  "population": "HFrEF in sinus rhythm",
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Digoxin does not reduce mortality in heart failure. The landmark DIG trial (NEJM 1997) randomized 6800 patients with HFrEF in sinus rhythm to digoxin or placebo on top of diuretics and ACE inhibitors and found no effect on all-cause mortality (34.8% vs 35.1%, RR 0.99, 95% CI 0.91-1.07). What digoxin did do was reduce hospitalizations for worsening heart failure. Meta-analyses of randomized data confirm a neutral mortality effect, and post-hoc analyses suggest higher serum concentrations may even increase mortality. Digoxin is therefore used for symptom control and reducing hospitalizations, not to improve survival."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:9036306",
+      "citation": "The Digitalis Investigation Group. The effect of digoxin on mortality and morbidity in patients with heart failure. N Engl J Med. 1997;336(8):525-33. DOI:10.1056/NEJM199702203360801",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Landmark NIH-funded double-blind placebo-controlled RCT; no retraction; definitive mortality trial for this claim. Verified via PubMed: title, journal, year, RCT type, and numbers (34.8% vs 35.1%, RR 0.99 [0.91-1.07], P=0.80; HF-hosp 26.8% vs 34.7%, RR 0.72) all match abstract.",
+      "n_int": 3397,
+      "year": 1997,
+      "finding": "In HFrEF (LVEF <=0.45) in sinus rhythm on diuretics + ACE inhibitors (main trial N=6800; digoxin arm n=3397), all-cause mortality was unaffected: 34.8% digoxin vs 35.1% placebo, RR 0.99 (95% CI 0.91-1.07), P=0.80. Digoxin reduced HF hospitalization (26.8% vs 34.7%, RR 0.72) but NOT mortality."
+    },
+    {
+      "source_id": "PMID:26321114",
+      "citation": "Ziff OJ, Lane DA, Samra M, et al. Safety and efficacy of digoxin: systematic review and meta-analysis of observational and controlled trial data. BMJ. 2015;351:h4451. DOI:10.1136/bmj.h4451",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prospectively registered (CRD42014010783); pools observational AND RCT data (52 studies, 621,845 patients) but explicitly isolates the RCT-pooled estimate as the unbiased signal. Verified via PubMed: RCT-pooled RR 0.99 (0.93-1.05), unadjusted RR 1.76, hospital-admission RR 0.92 all match abstract.",
+      "n_int": 0,
+      "year": 2015,
+      "finding": "Pooled all-cause mortality in randomized controlled trials was neutral: RR 0.99 (95% CI 0.93-1.05). Apparent harm in unadjusted/observational data (RR 1.76) reflects prescription bias; digoxin reduced hospital admissions (RR 0.92)."
+    },
+    {
+      "source_id": "PMID:12588271",
+      "citation": "Rathore SS, Curtis JP, Wang Y, Bristow MR, Krumholz HM. Association of serum digoxin concentration and outcomes in patients with heart failure. JAMA. 2003;289(7):871-8. DOI:10.1001/jama.289.7.871",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Post-hoc analysis of the randomized DIG trial (men, LVEF <=45%); hypothesis-generating, not primary randomization. Verified via PubMed: SDC >=1.2 ng/mL +11.8% absolute mortality, adjusted HR 1.16; low SDC 0.5-0.8 ng/mL lower mortality; digoxin-arm subgroups 572+322+277=1171 confirm n_int.",
+      "n_int": 1171,
+      "year": 2003,
+      "finding": "Higher serum digoxin concentrations were associated with increased all-cause mortality (>=1.2 ng/mL: +11.8% absolute vs placebo; adjusted HR 1.16). Only low SDC (0.5-0.8 ng/mL) showed lower mortality; overall no survival benefit, and high levels indicate harm."
+    },
+    {
+      "source_id": "PMID:8505940",
+      "citation": "Packer M, Gheorghiade M, Young JB, et al. Withdrawal of digoxin from patients with chronic heart failure treated with angiotensin-converting-enzyme inhibitors. RADIANCE Study. N Engl J Med. 1993;329(1):1-7. DOI:10.1056/NEJM199307013290101",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Randomized double-blind withdrawal trial (N=178; digoxin-continuation arm n=85, placebo n=93); endpoint is worsening HF/functional capacity \u2014 a symptomatic surrogate, NOT mortality. Verified via PubMed: worsening-HF RR 5.9 (2.1-17.2), functional/LVEF/QoL deterioration all match abstract.",
+      "n_int": 85,
+      "year": 1993,
+      "finding": "Withdrawing digoxin (NYHA II-III, LVEF <=35%, sinus rhythm, on ACE inhibitor) increased worsening HF (RR 5.9) and worsened exercise capacity, LVEF and quality of life. Establishes a symptomatic/functional benefit, not a mortality benefit; trial was not powered for and did not assess mortality."
+    },
+    {
+      "source_id": "PMID:9207619",
+      "citation": "Adams KF, Gheorghiade M, Uretsky BF, Young JB, Ahmed S, Tomasko L, Packer M. Patients with mild heart failure worsen during withdrawal from digoxin therapy. J Am Coll Cardiol. 1997;30(1):42-8. DOI:10.1016/s0735-1097(97)00133-2",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Analysis of the randomized PROVED and RADIANCE withdrawal trials; endpoint is treatment failure/functional deterioration, not mortality. Verified via PubMed: title, JACC 1997, and functional-deterioration findings match abstract.",
+      "n_int": 0,
+      "year": 1997,
+      "finding": "Across the PROVED and RADIANCE withdrawal RCTs, patients (including those with only mild HF) deteriorated after digoxin withdrawal \u2014 increased treatment failure, worsened exercise capacity and LVEF. Confirms symptomatic role only; does not demonstrate any mortality reduction."
+    }
+  ],
+  "provenance": "All 5 rows independently re-verified against PubMed via get_article_metadata (PMIDs 9036306, 26321114, 12588271, 8505940, 9207619). Every title, journal, year, article-type, and numeric result confirmed against the source abstracts. No 'Retracted Publication' article-type on any row; no retractions or FDA actions relevant. DIG trial (RR 0.99, P=0.80), Ziff RCT-pooled RR 0.99, Rathore high-SDC HR 1.16 / +11.8%, RADIANCE worsening-HF RR 5.9, and Adams PROVED/RADIANCE functional deterioration all match. n_int values checked: DIG digoxin arm=3397; Rathore digoxin subgroups 572+322+277=1171; RADIANCE digoxin-continuation arm=85. outcome_match=false correctly flags the two withdrawal trials' surrogate endpoints; no conflicting trial was wrongly marked population_match=false.",
+  "build_confidence": "high",
+  "notes": "Surrogate/outcome-mismatch flag is critical: the withdrawal trials (RADIANCE, PROVED/Adams) are frequently misread as showing digoxin 'works' \u2014 but their endpoints are worsening HF and functional capacity, NOT mortality, so outcome_match=false. The claimed outcome (all-cause mortality) is addressed directly only by DIG and the RCT meta-analysis, both neutral (direction 0). Rathore adds a contradicting signal (direction -1) at high serum concentrations. No dramatic_effect anywhere (DIG is a null result, not all-or-none). Net GOLD verdict: Not Supported. Digoxin's mortality question in atrial fibrillation is a separate, more controversial (observational-harm) literature, out of scope for this sinus-rhythm claim. Adversarial audit found no hallucinated PMID, wrong N, wrong direction, mislabeled design that changes the verdict, wrong outcome_match, wrong dramatic_effect, fabricated retraction, or mis-flagged population_match."
+}

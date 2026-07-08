@@ -8,7 +8,7 @@
     "certainty_signals": [
       "decision-grade evidence genuinely conflicts"
     ],
-    "confidence": "88% (95% CI 53%-98%, n=8)",
+    "confidence": "56% (95% CI 33%-77%, n=16)",
     "robustness": {
       "stability": 0.833,
       "survives_drop_largest": true,
@@ -181,7 +181,7 @@
     "certainty_signals": [
       "base: a single sub-large RCT"
     ],
-    "confidence": "77% (95% CI 50%-92%, n=13)",
+    "confidence": "81% (95% CI 57%-93%, n=16)",
     "robustness": {
       "stability": 0.75,
       "survives_drop_largest": true,
@@ -310,7 +310,7 @@
     "certainty_signals": [
       "base: 1 meta-analysis(es) of RCTs"
     ],
-    "confidence": "89% (95% CI 77%-95%, n=46)",
+    "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -439,7 +439,7 @@
     "certainty_signals": [
       "no decision-grade on-outcome evidence (absence / indirectness)"
     ],
-    "confidence": "43% (95% CI 16%-75%, n=7)",
+    "confidence": "44% (95% CI 19%-73%, n=9)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -580,7 +580,7 @@
     "certainty_signals": [
       "base: 1 meta-analysis(es) of RCTs"
     ],
-    "confidence": "89% (95% CI 77%-95%, n=46)",
+    "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -709,7 +709,7 @@
     "certainty_signals": [
       "base: 2 meta-analysis(es) of RCTs"
     ],
-    "confidence": "89% (95% CI 77%-95%, n=46)",
+    "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -904,7 +904,7 @@
     "certainty_signals": [
       "base: 2 meta-analysis(es) of RCTs"
     ],
-    "confidence": "89% (95% CI 77%-95%, n=46)",
+    "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -1099,7 +1099,7 @@
     "certainty_signals": [
       "decision-grade evidence genuinely conflicts"
     ],
-    "confidence": "88% (95% CI 53%-98%, n=8)",
+    "confidence": "56% (95% CI 33%-77%, n=16)",
     "robustness": {
       "stability": 0.833,
       "survives_drop_largest": true,
@@ -1272,7 +1272,7 @@
     "certainty_signals": [
       "base: 2 meta-analysis(es) of RCTs"
     ],
-    "confidence": "89% (95% CI 77%-95%, n=46)",
+    "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
       "stability": 0.667,
       "survives_drop_largest": false,

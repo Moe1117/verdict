@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q01",
+  "claim": "Dapagliflozin reduces heart-failure events in heart failure with mildly reduced or preserved ejection fraction",
+  "domain": "cardiology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus is unequivocal support. DELIVER (Solomon, NEJM 2022; N=6263; LVEF >40%) met its primary endpoint: dapagliflozin reduced the composite of worsening HF (HF hospitalization or urgent HF visit) or CV death, HR 0.82 (95% CI 0.73-0.92; P<0.001), driven principally by fewer worsening-HF events (HR 0.79, 0.69-0.91), with benefit consistent across the full EF spectrum including LVEF >=60%. This is the exact molecule, population, and outcome of the claim. The finding is confirmed by same-class evidence: EMPEROR-Preserved (empagliflozin; Anker, NEJM 2021; N=5988; LVEF >40%; NCT03057951) hit the same composite (HR 0.79, 0.69-0.90), and a prespecified patient-/trial-level meta-analysis of DELIVER + EMPEROR-Preserved (Vaduganathan, Lancet 2022; 12,251 patients) gave HR 0.80 (0.73-0.87) for CV death or HF hospitalization with a strong reduction in HF hospitalization (0.74, 0.67-0.83). Regulatory bodies acted on this: the US FDA (May 8, 2023), EMA, and others expanded the dapagliflozin HF indication across the full LVEF range based on DELIVER, and major guidelines (ACC/AHA/HFSA, ESC) recommend SGLT2 inhibitors as foundational therapy in HFmrEF/HFpEF. The endpoint is a hard clinical composite (not a surrogate), and no randomized trial contradicts the effect. Verdict: Supported.",
+  "outcome": "Composite of worsening heart failure (HF hospitalization or urgent HF visit) or cardiovascular death; principal driver is reduction in worsening-HF events",
+  "population": "Heart failure with mildly reduced or preserved ejection fraction (HFmrEF/HFpEF), LVEF >40%, NYHA II-IV",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Dapagliflozin reduces heart-failure events in HFmrEF/HFpEF. The pivotal DELIVER trial (Solomon et al., NEJM 2022; 6,263 patients with LVEF >40%) showed that dapagliflozin 10 mg significantly reduced the composite of worsening heart failure or cardiovascular death versus placebo (HR 0.82, 95% CI 0.73-0.92; P<0.001), with the benefit driven mainly by fewer worsening-HF events (HR 0.79). The effect was consistent across the entire ejection-fraction range, including LVEF >=60%, and in patients with and without diabetes. This is corroborated by EMPEROR-Preserved with the same-class drug empagliflozin (HR 0.79 for CV death or HF hospitalization) and by a Lancet 2022 meta-analysis pooling both trials (HR 0.80). On the strength of DELIVER, the FDA (May 2023), EMA, and others expanded the dapagliflozin heart-failure indication to the full LVEF spectrum, and guidelines now recommend SGLT2 inhibitors as foundational therapy for HFmrEF/HFpEF. The claim is well established."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:36027570",
+      "citation": "Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in Heart Failure with Mildly Reduced or Preserved Ejection Fraction (DELIVER). N Engl J Med. 2022;387(12):1089-1098. DOI:10.1056/NEJMoa2206286. NCT03619213.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Primary pivotal RCT; exact drug, population (LVEF >40%), and claimed composite outcome. Prespecified primary endpoint met. Verified: PMID/title/journal/DOI exact; N=6263 (dapa arm 3131); article type Randomized Controlled Trial; no retraction.",
+      "n_int": 3131,
+      "year": 2022,
+      "finding": "Dapagliflozin 10 mg vs placebo in 6,263 patients with LVEF >40% reduced the primary composite of worsening HF (HF hospitalization or urgent HF visit) or CV death: 512/3131 (16.4%) vs 610/3132 (19.5%), HR 0.82 (95% CI 0.73-0.92; P<0.001). Worsening-HF component HR 0.79 (0.69-0.91); CV death HR 0.88 (0.74-1.05). Benefit consistent across EF including LVEF >=60% and regardless of diabetes."
+    },
+    {
+      "source_id": "PMID:34449189",
+      "citation": "Anker SD, Butler J, Filippatos G, et al. Empagliflozin in Heart Failure with a Preserved Ejection Fraction (EMPEROR-Preserved). N Engl J Med. 2021;385(16):1451-1461. DOI:10.1056/NEJMoa2107038. NCT03057951.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Confirmatory same-class RCT (empagliflozin, not dapagliflozin) in the identical population/outcome; supports the SGLT2-inhibitor class effect underpinning the claim. NCT corrected from 03057977 (which is EMPEROR-Reduced) to 03057951 (EMPEROR-Preserved, per NEJM abstract). Verified: PMID/title/journal/DOI exact; N=5988 (empa arm 2997); article type Randomized Controlled Trial; no retraction.",
+      "n_int": 2997,
+      "year": 2021,
+      "finding": "Empagliflozin vs placebo in 5,988 patients with class II-IV HF and LVEF >40% reduced the composite of CV death or HF hospitalization: 415/2997 (13.8%) vs 511/2991 (17.1%), HR 0.79 (95% CI 0.69-0.90; P<0.001), driven mainly by lower HF hospitalization (HR 0.73, 0.61-0.88); effect consistent irrespective of diabetes status."
+    },
+    {
+      "source_id": "PMID:36041474",
+      "citation": "Vaduganathan M, Docherty KF, Claggett BL, et al. SGLT-2 inhibitors in patients with heart failure: a comprehensive meta-analysis of five randomised controlled trials. Lancet. 2022;400(10354):757-767. DOI:10.1016/S0140-6736(22)01429-5. PROSPERO CRD42022327527.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified trial-level meta-analysis; DELIVER + EMPEROR-Preserved pool is the HFmrEF/HFpEF-specific estimate directly matching the claim population. Verified: PMID/title/journal/DOI exact; article type Meta-Analysis; effect sizes match abstract; no retraction.",
+      "n_int": 6125,
+      "year": 2022,
+      "finding": "Prespecified meta-analysis. In DELIVER + EMPEROR-Preserved (12,251 HFmrEF/HFpEF patients), SGLT2 inhibitors reduced CV death or first HF hospitalization HR 0.80 (95% CI 0.73-0.87), with reductions in CV death (0.88, 0.77-1.00) and first HF hospitalization (0.74, 0.67-0.83). Across all five trials (21,947 patients) HR 0.77 (0.72-0.82) for the composite."
+    },
+    {
+      "source_id": "PMID:34459213",
+      "citation": "Packer M, Butler J, Zannad F, et al. Effect of Empagliflozin on Worsening Heart Failure Events in Patients With Heart Failure and Preserved Ejection Fraction: EMPEROR-Preserved. Circulation. 2021;144(16):1284-1294. DOI:10.1161/CIRCULATIONAHA.121.056824. NCT03057951.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified secondary/worsening-HF analysis of EMPEROR-Preserved; directly addresses the worsening-HF-events component of the claim (inpatient + outpatient). Same-class drug (empagliflozin). NCT corrected from 03057977 (EMPEROR-Reduced) to 03057951 (EMPEROR-Preserved). Verified: PMID/title/journal/DOI exact; article type Randomized Controlled Trial; no retraction.",
+      "n_int": 2997,
+      "year": 2021,
+      "finding": "In HFpEF (LVEF >40%, N=5988), empagliflozin reduced the composite of CV death, HF hospitalization, or emergency/urgent HF visit requiring IV treatment: 432 vs 546 patients, HR 0.77 (95% CI 0.67-0.87; P<0.0001), significant from 18 days; reduced ICU-requiring HF hospitalizations (HR 0.71) and outpatient diuretic intensification (HR 0.76)."
+    },
+    {
+      "source_id": "NCT03619213",
+      "citation": "US FDA label expansion for dapagliflozin (Farxiga), sNDA 202293Orig1s026, approved 8 May 2023, to reduce risk of CV death, HF hospitalization, and urgent HF visits in adults with HF across the full LVEF spectrum, based on DELIVER (NCT03619213); paralleled by EMA/EU, UK, Japan approvals.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory action row anchored to the DELIVER trial registry ID (NCT03619213), the basis for the FDA expansion; documents formal regulatory consensus for the exact drug/population/outcome. Verified via official FDA NDA 202293Orig1s026 approval letter (May 8, 2023) and AstraZeneca press release.",
+      "n_int": 3131,
+      "year": 2023,
+      "finding": "On the basis of DELIVER, the FDA (8 May 2023) expanded the dapagliflozin HF indication to the full range of LVEF (including HFmrEF/HFpEF), for reducing CV death, HF hospitalization, and urgent HF visits; EMA, UK, and Japan enacted parallel full-spectrum HF indications. Major guidelines recommend SGLT2 inhibitors as foundational therapy in HFmrEF/HFpEF."
+    }
+  ],
+  "provenance": "All rows independently re-verified against primary sources. PubMed get_article_metadata: exact titles/journals/DOIs/PMIDs and abstracts with effect sizes confirmed for all 4 PMIDs; article types checked (RCT/RCT/Meta-Analysis/RCT) \u2014 no 'Retracted Publication'. ClinicalTrials.gov get_trial_details: NCT03619213 = DELIVER (N=6263, dapagliflozin, HFpEF LVEF>40%, AstraZeneca, COMPLETED); NCT03057951 = EMPEROR-Preserved (N=5988, empagliflozin, HFpEF); NCT03057977 = EMPEROR-Reduced (N=3730, HFrEF) \u2014 the two EMPEROR-Preserved citations had wrongly cited NCT03057977 and were corrected to NCT03057951. FDA label expansion confirmed via official FDA NDA 202293Orig1s026 approval letter (approval date 8 May 2023) and AstraZeneca/TCTMD/Healio sources.",
+  "notes": "Claim is Supported at high confidence. DELIVER (PMID 36027570) is the exact-match pivotal RCT (drug + HFmrEF/HFpEF population + worsening-HF/CV-death composite), reinforced by same-class EMPEROR-Preserved and a prespecified meta-analysis, and formalized by FDA/EMA label expansions plus guideline recommendations. Outcome is a hard clinical composite, NOT a surrogate, so outcome_match=true throughout. dramatic_effect=false everywhere: robust but ordinary ~18-20% RRR from adequately powered RCTs, not all-or-none. No contradicting RCT exists. Adversarial checks: no hallucinated PMID, no wrong N, no wrong direction, no mislabeled design, no fabricated retraction, no conflicting trial mismarked as population_match=false. Single factual error found and fixed: EMPEROR-Preserved NCT (03057977\u219203057951). build_confidence: high.",
+  "build_confidence": "high"
+}

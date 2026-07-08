@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q05",
+  "claim": "Alirocumab reduces cardiovascular events after acute coronary syndrome",
+  "domain": "cardiology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus. The pivotal ODYSSEY OUTCOMES trial (Schwartz et al., NEJM 2018; NCT01663402) randomized 18,924 patients 1-12 months post-ACS on high-intensity/maximally-tolerated statin and showed alirocumab reduced the primary MACE composite (CHD death, non-fatal MI, fatal/non-fatal ischemic stroke, or unstable angina requiring hospitalization) with HR 0.85 (95% CI 0.78-0.93, P<0.001), with a nominal all-cause mortality signal (HR 0.85, 95% CI 0.73-0.98). This is a direct population-and-outcome match to the claim. On the strength of this pivotal cardiovascular outcomes trial, the FDA approved (April 2019, retained through the 2024 label) alirocumab (Praluent) 'to reduce the risk of myocardial infarction, stroke, and unstable angina requiring hospitalization in adults with established cardiovascular disease.' Corroborated at the class level by FOURIER (Sabatine, NEJM 2017), where the distinct PCSK9 inhibitor evolocumab reduced the primary MACE composite by an identical HR 0.85 in a broader stable-ASCVD population, and by PCSK9-inhibitor meta-analyses showing consistent reductions in MI, ischemic stroke, and coronary revascularization. No contradicting randomized trial. Consensus verdict: Supported.",
+  "outcome": "MACE composite (CHD death, non-fatal MI, fatal/non-fatal ischemic stroke, or unstable angina requiring hospitalization)",
+  "population": "Adults 1-12 months after acute coronary syndrome receiving high-intensity or maximally-tolerated statin therapy with residual atherogenic dyslipidemia",
+  "provenance": "PubMed get_article_metadata (PMIDs 30403574, 28304224, 37937036) + ClinicalTrials.gov get_trial_details (NCT01663402) + FDA accessdata label 125559s019s020lbl (2019) and 125559s039lbl (2024) + Sanofi/Regeneron 2019 press releases",
+  "build_confidence": "high",
+  "notes": "All 5 rows independently confirmed; no defects. FOURIER population_match=false is correct (distinct drug + broader ASCVD), and it is class-confirmatory (direction +1), not a masked contradiction.",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Alirocumab reduces cardiovascular events after acute coronary syndrome. The landmark ODYSSEY OUTCOMES trial (Schwartz et al., NEJM 2018), which randomized 18,924 patients who had had an ACS 1-12 months earlier and were on high-intensity statin therapy, showed that alirocumab reduced the primary MACE composite (coronary heart disease death, non-fatal MI, ischemic stroke, or unstable angina requiring hospitalization) with a hazard ratio of 0.85 (95% CI 0.78-0.93, P<0.001), an absolute risk reduction from 11.1% to 9.5% over a median 2.8 years, along with a nominal reduction in all-cause mortality (HR 0.85). On the basis of this trial the FDA approved alirocumab in 2019 to reduce the risk of MI, stroke, and unstable angina in adults with established cardiovascular disease. The benefit is consistent with the class effect seen with evolocumab in FOURIER (HR 0.85). This is firmly established, guideline-endorsed, secondary-prevention evidence."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:30403574",
+      "citation": "Schwartz GG, Steg PG, Szarek M, et al. Alirocumab and Cardiovascular Outcomes after Acute Coronary Syndrome (ODYSSEY OUTCOMES). N Engl J Med. 2018;379(22):2097-2107. DOI:10.1056/NEJMoa1801174",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: NEJM 2018, DOI 10.1056/NEJMoa1801174, article type 'Randomized Controlled Trial', no retraction/correction flag. Landmark double-blind placebo-controlled pivotal trial; funded by Sanofi/Regeneron; blinded CEC-adjudicated endpoints.",
+      "n_int": 9462,
+      "year": 2018,
+      "finding": "In 18,924 post-ACS (1-12 mo) patients on high-intensity/max-tolerated statin, alirocumab reduced the primary MACE composite (CHD death, non-fatal MI, fatal/non-fatal ischemic stroke, or unstable angina requiring hospitalization): 903 (9.5%) vs 1052 (11.1%), HR 0.85 (95% CI 0.78-0.93), P<0.001; all-cause mortality 334 (3.5%) vs 392 (4.1%), HR 0.85 (0.73-0.98). Exact population and outcome match (NCT01663402); abstract-confirmed N and effect sizes."
+    },
+    {
+      "source_id": "NCT01663402",
+      "citation": "ClinicalTrials.gov. ODYSSEY OUTCOMES: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab. NCT01663402 (Phase 3, INTERVENTIONAL, COMPLETED, enrollment 18,924).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via ClinicalTrials.gov get_trial_details: Phase 3, INTERVENTIONAL, COMPLETED, enrollment 18,924, interventions alirocumab/placebo, primary outcome = time to first MACE (CEC-adjudicated, blinded) comprising CHD death, non-fatal MI, fatal/non-fatal ischemic stroke, unstable angina requiring hospitalization. Matches the published trial.",
+      "n_int": 9462,
+      "year": 2018,
+      "finding": "Registry confirmation of the pivotal trial: interventional Phase 3, post-ACS population on statin, MACE composite primary endpoint, completed with 18,924 participants. Corroborates design/N/outcome of PMID:30403574."
+    },
+    {
+      "source_id": "NCT01663402-FDA:NDA125559",
+      "citation": "U.S. FDA. PRALUENT (alirocumab) Prescribing Information. CV-events indication approved April 2019 (label 125559s019s020lbl); retained in current label (125559s039lbl, rev. 3/2024). accessdata.fda.gov/drugsatfda_docs/label/2024/125559s039lbl.pdf",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via FDA accessdata: Indications updated 4/2019 based on ODYSSEY OUTCOMES; 2024 label retains the identical CV indication and reproduces Table 2 (N=9462/arm, primary composite HR 0.85, 95% CI 0.78-0.93, p=0.0003; ACM HR 0.85, 0.73-0.98).",
+      "n_int": 9462,
+      "year": 2019,
+      "finding": "FDA approved alirocumab 'to reduce the risk of myocardial infarction, stroke, and unstable angina requiring hospitalization in adults with established cardiovascular disease' (April 2019, retained 2024) \u2014 regulatory consensus that alirocumab reduces clinical CV events; approval driven by the post-ACS ODYSSEY OUTCOMES population."
+    },
+    {
+      "source_id": "PMID:28304224",
+      "citation": "Sabatine MS, Giugliano RP, Keech AC, et al. Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease (FOURIER). N Engl J Med. 2017;376(18):1713-1722. DOI:10.1056/NEJMoa1615664",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: NEJM 2017, DOI 10.1056/NEJMoa1615664, article type 'Randomized Controlled Trial', no retraction. Distinct drug (evolocumab, not alirocumab), same PCSK9-inhibitor class; broader stable-ASCVD population, not restricted to recent ACS. Class-confirmatory context, not direct evidence for alirocumab (NCT01764633).",
+      "n_int": 13784,
+      "year": 2017,
+      "finding": "In 27,564 stable ASCVD patients on statin, evolocumab reduced the primary MACE composite (CV death/MI/stroke/UA hospitalization/coronary revascularization): 9.8% vs 11.3%, HR 0.85 (95% CI 0.79-0.92, P<0.001) and the key secondary CV death/MI/stroke HR 0.80 (0.73-0.88, P<0.001). Confirms the PCSK9-inhibition class effect on hard CV events; population is broader ASCVD, so population_match false."
+    },
+    {
+      "source_id": "PMID:37937036",
+      "citation": "Bodapati AP, Hanif A, Okafor DK, et al. PCSK-9 Inhibitors and Cardiovascular Outcomes: A Systematic Review With Meta-Analysis. Cureus. 2023;15(10):e46605. DOI:10.7759/cureus.46605",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Cureus 2023, DOI 10.7759/cureus.46605, article type 'Review', PMC10626223. Systematic review/meta-analysis of 41 RCTs (76,304 patients; 27,218 on alirocumab). Low-impact journal but standard methodology (random-effects, JBI appraisal, funnel plots); direction consistent with pivotal trials.",
+      "n_int": 27218,
+      "year": 2023,
+      "finding": "Pooled across 41 RCTs, alirocumab significantly reduced MI, coronary revascularization, ischemic stroke, and all-cause mortality vs control; alirocumab-subgroup RR for major adverse sequelae 0.88 (0.72-1.04). Supports a consistent reduction in clinical CV events with alirocumab across the randomized evidence base."
+    }
+  ]
+}

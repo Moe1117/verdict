@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q13",
+  "claim": "Pioglitazone reduces cardiovascular events in patients with type 2 diabetes",
+  "domain": "metabolic",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The evidence is genuinely mixed and the regulatory/clinical consensus is that a CV-event-reduction benefit is NOT established. The pivotal dedicated CV-outcome RCT in the exact claimed population, PROactive (Dormandy, Lancet 2005; NCT00174993; n=5238 T2D with macrovascular disease), MISSED its primary composite endpoint (HR 0.90, 95% CI 0.80-1.02, p=0.095). It was positive only on its main secondary composite of all-cause death + non-fatal MI + stroke (HR 0.84, 0.72-0.98, p=0.027) \u2014 a debated, hierarchically-secondary finding \u2014 and pioglitazone increased serious heart failure. A manufacturer-data meta-analysis (Lincoff, JAMA 2007; 19 trials, 16,390 pts) showed a significant reduction in death/MI/stroke (HR 0.82, 0.72-0.94) but again with increased serious HF (HR 1.41). Supportive evidence in a non-diabetic, insulin-resistant post-stroke/TIA population (IRIS, Kernan NEJM 2016; NCT00091949) reduced stroke/MI (HR 0.76) but does NOT match the T2D claim population and adds weight-gain/edema/fracture harms. Critically, the FDA-approved label (ACTOS) indicates pioglitazone ONLY for glycemic control and states in \u00a75.8 that 'there have been no clinical studies establishing conclusive evidence of macrovascular risk reduction.' Thus: a signal exists (secondary endpoints + meta-analysis) but the primary pre-specified CV outcome failed, benefits are offset by heart-failure harm, and no regulator recognizes a CV-event indication \u2014 the textbook definition of Contested rather than Supported.",
+  "outcome": "MACE composite (cardiovascular death / non-fatal MI / non-fatal stroke)",
+  "population": "Type 2 diabetes with established macrovascular disease",
+  "baseline": {
+    "answer": "No",
+    "confidence": "medium",
+    "text": "The evidence is mixed and pioglitazone is not established as reducing cardiovascular events in type 2 diabetes. The pivotal dedicated CV-outcomes trial, PROactive (2005), failed its primary composite endpoint (HR 0.90, p=0.095) in T2D patients with macrovascular disease; it reached significance only on a secondary composite of death/MI/stroke (HR 0.84, p=0.027), and it increased heart failure. A pooled meta-analysis (Lincoff, JAMA 2007) found a significant reduction in death/MI/stroke (HR 0.82) but again more heart failure. Supportive data in non-diabetic insulin-resistant stroke/TIA patients (IRIS, 2016; HR 0.76) do not apply to the T2D population. The FDA label explicitly states there is no conclusive evidence of macrovascular risk reduction, and pioglitazone is approved only for glycemic control. So the claim is best characterized as contested/plausible but not proven \u2014 the primary endpoint was missed and any ischemic benefit is offset by increased heart-failure risk."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:16214598",
+      "citation": "Dormandy JA, et al. Secondary prevention of macrovascular events in patients with type 2 diabetes in the PROactive Study (PROspective pioglitAzone Clinical Trial In macroVascular Events): a randomised controlled trial. Lancet. 2005;366(9493):1279-89. NCT00174993. DOI:10.1016/S0140-6736(05)67528-9",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Takeda/Lilly-sponsored, double-blind, ITT. Landmark dedicated CV-outcomes trial in the exact claimed population.",
+      "n_int": 2605,
+      "year": 2005,
+      "finding": "PIVOTAL. n=5238 T2D with established macrovascular disease, mean follow-up 34.5 mo. PRIMARY composite endpoint (all-cause death, non-fatal MI, stroke, ACS, coronary/leg revascularization, amputation) was MISSED: 514 vs 572 events, HR 0.90 (0.80-1.02), p=0.095. Main SECONDARY endpoint = the cleaner death+MI+stroke MACE composite was positive: HR 0.84 (0.72-0.98), p=0.027. Heart-failure hospitalization increased (6% vs 4%). Direction 0 on the CLAIMED primary CV outcome (failed); outcome_match false because the pre-specified primary composite is broader/softer than pure MACE and the positive result was only on a secondary endpoint. VERIFIED against Lancet abstract: n=5238 (2605 pio/2633 placebo), 34.5 mo, HR 0.90 p=0.095, secondary HR 0.84 p=0.027, HF 6% vs 4% \u2014 all exact."
+    },
+    {
+      "source_id": "PMID:17848652",
+      "citation": "Lincoff AM, Wolski K, Nicholls SJ, Nissen SE. Pioglitazone and risk of cardiovascular events in patients with type 2 diabetes mellitus: a meta-analysis of randomized trials. JAMA. 2007;298(10):1180-8. DOI:10.1001/jama.298.10.1180",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Independent analysis of manufacturer-supplied (Takeda) individual patient-level data across 19 trials; potential source bias mitigated by independent academic authorship. I2=0% (no heterogeneity).",
+      "n_int": 8554,
+      "year": 2007,
+      "finding": "19 RCTs, 16,390 T2D patients. Death/MI/stroke MACE composite occurred in 375/8554 (4.4%, pioglitazone) vs 450/7836 (5.7%, control): HR 0.82 (0.72-0.94), p=0.005 \u2014 supports the claim on a true MACE endpoint. BUT serious heart failure increased: HR 1.41 (1.14-1.76), p=0.002 (without excess HF mortality). Benefit homogeneous across established-vs-no vascular disease (I2=0%). VERIFIED against JAMA abstract: all counts, HRs, CIs, p-values exact."
+    },
+    {
+      "source_id": "PMID:26886418",
+      "citation": "Kernan WN, et al. (IRIS trial). Pioglitazone after Ischemic Stroke or Transient Ischemic Attack. N Engl J Med. 2016;374(14):1321-31. NCT00091949. DOI:10.1056/NEJMoa1506930",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "NIH/NINDS-funded (non-industry), double-blind, high-quality. Population is NON-diabetic insulin-resistant post-stroke/TIA \u2014 does NOT match the T2D claim population, so population_match=false is correct (this is supportive off-population evidence, not a conflicting T2D trial).",
+      "n_int": 1939,
+      "year": 2016,
+      "finding": "n=3876 NON-diabetic patients with insulin resistance (HOMA-IR>3.0) and recent ischemic stroke/TIA. Primary outcome (fatal/non-fatal stroke or MI) at 4.8 yr: 175/1939 (9.0%) vs 228/1937 (11.8%), HR 0.76 (0.62-0.93), p=0.007 \u2014 mechanistically supportive of pioglitazone's vascular benefit on a MACE-type outcome. Also reduced new diabetes (HR 0.48). Harms: weight gain, edema, and bone fracture (5.1% vs 3.2%). population_match false: these patients did not have type 2 diabetes. VERIFIED against NEJM abstract: all figures exact."
+    },
+    {
+      "source_id": "PMID:18538774",
+      "citation": "Dormandy JA, et al. Impact of peripheral arterial disease in patients with diabetes \u2014 results from PROactive (PROactive 11). Atherosclerosis. 2008;202(1):272-81. DOI:10.1016/j.atherosclerosis.2008.03.002",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Post-hoc subgroup analysis of the PROactive RCT; underpowered subgroups; hypothesis-generating only (disclosed as post-hoc despite design tag 'rct').",
+      "n_int": 619,
+      "year": 2008,
+      "finding": "Post-hoc PROactive subgroup (n=1274 with baseline PAD; 619 pio/655 placebo). The favorable pioglitazone effect on the primary and main secondary endpoints seen in the no-PAD subgroup (primary p=0.0160, ACS p=0.0287) was NOT observed in the PAD subgroup, and pioglitazone increased leg revascularizations early on. Demonstrates heterogeneity of CV effect within the claimed population \u2014 reinforcing a Contested verdict. Direction 0 on CV events overall. VERIFIED against Atherosclerosis abstract: n=1274 (619/655), p-values exact."
+    },
+    {
+      "source_id": "FDA:ACTOS-label-5.8",
+      "citation": "US FDA. ACTOS (pioglitazone) Prescribing Information, \u00a71 Indications and \u00a75.8 Macrovascular Outcomes (current DailyMed label, setid d2ddc491-88a9-4063-9150-443b4fa4330c; also Takeda GBL PI). dailymed.nlm.nih.gov ACTOS label.",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Authoritative regulatory consensus statement; reflects FDA adjudication of PROactive and the full trial program. Section number 5.8 matches current label (older labels number it 5.9); verbatim language confirmed on DailyMed and Takeda PI.",
+      "n_int": 0,
+      "year": 2016,
+      "finding": "REGULATORY GROUND TRUTH. Pioglitazone is indicated ONLY as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes. \u00a75.8 states verbatim: 'There have been no clinical studies establishing conclusive evidence of macrovascular risk reduction with ACTOS.' FDA reviewed PROactive (primary endpoint failed) and declined a CV-benefit indication; label also carries CHF/heart-failure boxed-warning-adjacent cautions. Direction -1: the regulator does NOT recognize a CV-event-reduction benefit, so the claim as stated is not supported by approved labeling. VERIFIED verbatim on DailyMed and Takeda PI."
+    }
+  ],
+  "provenance": "Independently re-verified. Four PMIDs fetched via PubMed get_article_metadata (16214598, 17848652, 26886418, 18538774): all resolve to the exact claimed titles/journals/years, PubMed article_types confirm designs (RCT / Meta-Analysis / RCT / RCT-post-hoc), and NONE is a Retracted Publication. Every N, HR, CI, and p-value in rows 1-4 matches the source abstract verbatim (PROactive n=5238/2605-2633, HR 0.90 p=0.095 primary, HR 0.84 p=0.027 secondary, HF 6% vs 4%; Lincoff 19 trials/16,390, 375/8554 vs 450/7836, HR 0.82 0.72-0.94 p=0.005, HF HR 1.41 1.14-1.76 p=0.002, I2=0%; IRIS n=3876, 175/1939 9.0% vs 228/1937 11.8%, HR 0.76 0.62-0.93 p=0.007, fracture 5.1% vs 3.2%; PAD subgroup n=1274 619/655). NCT00174993 details retrieved from ClinicalTrials.gov: confirmed PROactive, Phase 3, T2D with established macrovascular disease, primary composite = broad endpoint (all-cause mortality/MI/stroke/ACS/amputation/cardiac intervention/bypass/leg revascularization) \u2014 corroborating outcome_match=false on the primary. FDA ACTOS \u00a75.8 language ('no clinical studies establishing conclusive evidence of macrovascular risk reduction with ACTOS') confirmed verbatim on DailyMed and the Takeda global PI. dramatic_effect=false is correct on all rows. The adversarial warning about a conflicting trial wrongly marked population_match=false does not apply: IRIS's population_match=false is correct (genuinely non-diabetic cohort) and IRIS is a supportive (+1) row, not a conflicting one.",
+  "build_confidence": "high",
+  "notes": "Surrogate/outcome-match nuance drives the verdict: PROactive's PRIMARY endpoint was a broad composite that mixed hard MACE with revascularizations/amputations and FAILED (HR 0.90, p=0.095); the positive result was only its main SECONDARY (cleaner death/MI/stroke) endpoint. Lincoff meta-analysis supports a true-MACE benefit but on manufacturer data and with a countervailing heart-failure harm (HR 1.41). IRIS supports the mechanism but is off-population (non-diabetic). The FDA has explicitly refused to recognize macrovascular benefit. Net GOLD verdict = Contested, not Supported. A gate requiring a positive PRIMARY endpoint in the claimed population would land on Not Supported; documented consensus framing is Contested. No row required correction; all five verified against primary sources and retained."
+}

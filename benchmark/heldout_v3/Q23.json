@@ -1,0 +1,72 @@
+{
+  "claim_id": "Q23",
+  "claim": "Adding palbociclib to letrozole improves overall survival in HR-positive advanced breast cancer",
+  "domain": "oncology",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "Palbociclib + letrozole is FDA/EMA-approved on the basis of a large, statistically significant PROGRESSION-FREE SURVIVAL benefit (PALOMA-2, Finn NEJM 2016, PFS HR 0.58) \u2014 but PFS is a surrogate, not overall survival. The protocol-specified secondary OS endpoint of the same pivotal trial was formally NEGATIVE: PALOMA-2 final OS (Slamon/Finn JCO 2024) gave HR 0.96 (95% CI 0.78-1.18), one-sided P=.34; median 53.9 vs 51.2 months \u2014 no significant OS improvement (imbalance-corrected sensitivity HR 0.92, 95% CI 0.76-1.12, remained non-significant). The second palbociclib pivotal trial, PALOMA-3 (palbociclib + fulvestrant, Turner NEJM 2018), also did not meet statistical significance for OS in the ITT population (HR 0.81, 95% CI 0.64-1.03, P=.09), though direction favored palbociclib. By explicit contrast, ribociclib + letrozole (MONALEESA-2, Hortobagyi NEJM 2022) DID show a significant OS benefit (HR 0.76, P=.008); the PALOMA-2 JCO authors themselves state 'Currently, only ribociclib has shown a statistically significant improvement in OS in this setting.' Therefore the specific claim \u2014 that adding PALBOCICLIB to letrozole improves OS \u2014 is contradicted by its own pivotal randomized OS analysis and is Not Supported at the level of statistical significance, despite a clear PFS benefit and a numerically favorable but non-significant OS point estimate.",
+  "outcome": "overall survival",
+  "population": "HR+/HER2- advanced (metastatic) breast cancer, first-line (PALOMA-2) or endocrine-pretreated (PALOMA-3)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Palbociclib is a CDK4/6 inhibitor that, added to letrozole, substantially improves outcomes in HR-positive/HER2-negative advanced breast cancer. The PALOMA-2 trial showed palbociclib plus letrozole roughly doubled progression-free survival (about 25 vs 14 months) versus letrozole alone, and this combination is a standard first-line therapy expected to extend overall survival in these patients."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:27959613",
+      "citation": "Finn RS, Martin M, Rugo HS, et al. Palbociclib and Letrozole in Advanced Breast Cancer (PALOMA-2). N Engl J Med. 2016;375(20):1925-1936. DOI:10.1056/NEJMoa1607303",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal phase 3, double-blind, 2:1 randomization, N=666. Primary endpoint (PFS) met; funded by Pfizer. Verified against PubMed metadata + abstract; article types include 'Randomized Controlled Trial, Clinical Trial, Phase III'; NOT retracted.",
+      "n_int": 444,
+      "year": 2016,
+      "finding": "PALOMA-2 pivotal trial: primary endpoint was PROGRESSION-FREE SURVIVAL (a surrogate), median 24.8 vs 14.5 months (HR 0.58, 95% CI 0.46-0.72, P<0.001). OS was only a secondary endpoint and not reported as significant here. Direction on the CLAIMED outcome (OS) = 0 because this report establishes the PFS surrogate benefit, not an OS benefit."
+    },
+    {
+      "source_id": "PMID:38252901",
+      "citation": "Slamon DJ, Dieras V, Rugo HS, ... Finn RS. Overall Survival With Palbociclib Plus Letrozole in Advanced Breast Cancer (PALOMA-2 final OS). J Clin Oncol. 2024;42(9):994-1000. DOI:10.1200/JCO.23.00137",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Protocol-specified final OS analysis of the pivotal PALOMA-2 RCT; 405 deaths (273/444 palbociclib arm vs 132/222 placebo, confirmed in JCO text), median follow-up 90.1 months. Imbalance in unknown survival status (13.3% vs 21.2%) noted; sensitivity analysis with recovered data also non-significant. Verified against PubMed + JCO/PMC full text.",
+      "n_int": 444,
+      "year": 2024,
+      "finding": "PIVOTAL NEGATIVE OS RESULT: median OS 53.9 vs 51.2 months, HR 0.96 (95% CI 0.78-1.18), stratified one-sided P=.34. With recovered survival data HR 0.92 (95% CI 0.76-1.12), one-sided P=.21. Authors: 'OS was not significantly improved with palbociclib plus letrozole.' Directly contradicts the claim on the exact claimed outcome and population."
+    },
+    {
+      "source_id": "PMID:30345905",
+      "citation": "Turner NC, Slamon DJ, Ro J, et al. Overall Survival with Palbociclib and Fulvestrant in Advanced Breast Cancer (PALOMA-3). N Engl J Med. 2018;379(20):1926-1936. DOI:10.1056/NEJMoa1810527",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 RCT, palbociclib+FULVESTRANT (not letrozole) in endocrine-pretreated HR+/HER2- ABC; 521 randomized 2:1 (n_int=347 palbociclib). OS prespecified secondary; ITT result non-significant. Verified against PubMed + NEJM abstract; NOT retracted.",
+      "n_int": 347,
+      "year": 2018,
+      "finding": "PALOMA-3: ITT median OS 34.9 vs 28.0 months, HR 0.81 (95% CI 0.64-1.03), P=.09 \u2014 favorable direction but NOT statistically significant. Different endocrine partner (fulvestrant) and pretreated population; scored direction 0 (null on formal significance)."
+    },
+    {
+      "source_id": "PMID:35263519",
+      "citation": "Hortobagyi GN, Stemmer SM, Burris HA, et al. Overall Survival with Ribociclib plus Letrozole in Advanced Breast Cancer (MONALEESA-2 final OS). N Engl J Med. 2022;386(10):942-950. DOI:10.1056/NEJMoa2114663",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 RCT of a DIFFERENT CDK4/6 inhibitor (RIBOCICLIB) + letrozole, same population/partner; 334 per arm, hierarchical testing preserved validity. Verified against PubMed + NEJM full text. Direction corrected from -1 to 0: because this trial does not test palbociclib, a positive ribociclib OS result cannot directly contradict the palbociclib-specific claim \u2014 it is class-contrast/drug-specificity context (null with respect to the claimed intervention), not evidence against palbociclib.",
+      "n_int": 334,
+      "year": 2022,
+      "finding": "Contrast trial: ribociclib+letrozole gave significant OS benefit, median 63.9 vs 51.4 months, HR 0.76 (95% CI 0.63-0.93), two-sided P=.008. Demonstrates drug-SPECIFICITY: only ribociclib (not palbociclib) has shown a statistically significant first-line OS benefit. Included as context; does not directly test the palbociclib claim, hence direction 0 (not -1)."
+    }
+  ]
+}

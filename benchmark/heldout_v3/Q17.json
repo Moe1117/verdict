@@ -1,0 +1,86 @@
+{
+  "claim_id": "Q17",
+  "claim": "Nivolumab improves survival in previously-treated advanced non-small-cell lung cancer",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Two positive phase III RCTs with overall survival as the PRIMARY endpoint (a hard clinical endpoint, not a surrogate) established nivolumab over docetaxel in pretreated advanced NSCLC: CheckMate 017 in squamous histology (Brahmer, NEJM 2015, NCT01642004; median OS 9.2 vs 6.0 mo, HR 0.59) and CheckMate 057 in nonsquamous histology (Borghaei, NEJM 2015, NCT01673867; median OS 12.2 vs 9.4 mo, HR 0.73). Both underpinned FDA approval of nivolumab for previously-treated metastatic NSCLC in 2015 (squamous March 2015, nonsquamous October 2015), and the pooled 5-year follow-up (Borghaei/Gettinger/Vokes, JCO 2021) confirmed a durable OS advantage (13.4% vs 2.6% alive at 5 years). A network meta-analysis of 5 trials/3024 patients (Tan, Lung Cancer 2017) confirmed checkpoint inhibitors including nivolumab improve OS vs docetaxel across PD-L1 levels. The only contradicting signal is a narrow subgroup (EGFR-mutation-positive, TKI-pretreated; Cavanna, Oncotarget 2019), where docetaxel outperformed checkpoint inhibitors on OS \u2014 a recognized carve-out that does not overturn the overall consensus. This is documented clinical and regulatory consensus: Supported.",
+  "outcome": "overall survival",
+  "population": "pretreated advanced/metastatic NSCLC (progressed after platinum-based chemotherapy)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Nivolumab improves overall survival versus docetaxel in previously-treated advanced NSCLC. This was established by two pivotal phase III trials with OS as the primary endpoint: CheckMate 017 in squamous NSCLC (median OS 9.2 vs 6.0 months, HR 0.59) and CheckMate 057 in nonsquamous NSCLC (median OS 12.2 vs 9.4 months, HR 0.73), both published in NEJM in 2015 and both leading to FDA approval. Long-term pooled follow-up showed a durable ~5-fold higher 5-year survival rate. The benefit is a settled standard of care, with the main exception being EGFR-mutant, TKI-pretreated patients, who derive little benefit from checkpoint inhibitors versus chemotherapy."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:26028407",
+      "citation": "Brahmer J, et al. Nivolumab versus Docetaxel in Advanced Squamous-Cell Non-Small-Cell Lung Cancer (CheckMate 017). N Engl J Med. 2015;373:123-135. DOI:10.1056/NEJMoa1504627",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal registrational phase III (NCT01642004); OS primary endpoint. Verified via PubMed metadata; no retraction (article types include Randomized Controlled Trial, Clinical Trial Phase III).",
+      "n_int": 135,
+      "year": 2015,
+      "finding": "In pretreated advanced squamous NSCLC, nivolumab vs docetaxel: median OS 9.2 vs 6.0 mo (HR 0.59, 95% CI 0.44-0.79, p<0.001); 1-yr OS 42% vs 24%. 272 randomized; nivolumab arm n=135. OS was the PRIMARY endpoint (hard clinical outcome, not a surrogate)."
+    },
+    {
+      "source_id": "PMID:26412456",
+      "citation": "Borghaei H, et al. Nivolumab versus Docetaxel in Advanced Nonsquamous Non-Small-Cell Lung Cancer (CheckMate 057). N Engl J Med. 2015;373:1627-1639. DOI:10.1056/NEJMoa1507643",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal registrational phase III (CheckMate 057 = NCT01673867, per abstract); OS primary endpoint. Verified via PubMed metadata; no retraction.",
+      "n_int": 292,
+      "year": 2015,
+      "finding": "In pretreated advanced nonsquamous NSCLC, nivolumab vs docetaxel: median OS 12.2 vs 9.4 mo (HR 0.73, 96% CI 0.59-0.89, p=0.002); 1-yr OS 51% vs 39%. 582 randomized; nivolumab arm n=292. OS was the PRIMARY endpoint."
+    },
+    {
+      "source_id": "PMID:33449799",
+      "citation": "Borghaei H, Gettinger S, Vokes EE, et al. Five-Year Outcomes From the Randomized, Phase III Trials CheckMate 017 and 057: Nivolumab Versus Docetaxel in Previously Treated NSCLC. J Clin Oncol. 2021;39:723-733. DOI:10.1200/JCO.20.01605",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pooled long-term follow-up of the two pivotal RCTs (N=854); confirms durability of OS benefit. Verified via PubMed metadata; no retraction.",
+      "n_int": 427,
+      "year": 2021,
+      "finding": "Pooled 5-year follow-up (CheckMate 017+057, N=854): 5-yr OS 13.4% (nivolumab) vs 2.6% (docetaxel), a five-fold and durable survival advantage; 5-yr PFS 8.0% vs 0%. Confirms the primary OS benefit over long term."
+    },
+    {
+      "source_id": "PMID:29290267",
+      "citation": "Tan PS, Aguiar P, Haaland B, Lopes G. Comparative effectiveness of immune-checkpoint inhibitors for previously treated advanced NSCLC - systematic review and network meta-analysis of 3024 participants. Lung Cancer. 2017;115:84-88. DOI:10.1016/j.lungcan.2017.11.017",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Network meta-analysis of 5 RCTs (PubMed article types: Systematic Review, Network Meta-Analysis); OS endpoint. Confirms class effect including nivolumab. Verified; no retraction.",
+      "n_int": 3024,
+      "year": 2017,
+      "finding": "Across 5 trials (3024 pts), checkpoint inhibitors incl. nivolumab improved OS vs docetaxel across PD-L1 expression levels in previously-treated advanced NSCLC; little evidence of difference among nivolumab/pembrolizumab/atezolizumab; positive PD-L1 dose-response."
+    },
+    {
+      "source_id": "PMID:30719215",
+      "citation": "Cavanna L, Citterio C, Orlandi E. Immune checkpoint inhibitors in EGFR-mutation positive TKI-treated patients with advanced NSCLC: network meta-analysis. Oncotarget. 2019;10:209-215. DOI:10.18632/oncotarget.26541",
+      "design": "meta-analysis of rcts",
+      "direction": -1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Bayesian network meta-analysis of 4 randomized trials restricted to the EGFR-mutant, TKI-pretreated subgroup. PubMed tags only 'Journal Article', but the abstract explicitly describes an NMA of RCTs, so the design label is defensible. Contradicts the claim ONLY in this narrow carve-out, correctly flagged population_match=false. No retraction.",
+      "n_int": 4,
+      "year": 2019,
+      "finding": "In the EGFR-mutation-positive, TKI-pretreated subgroup, docetaxel yielded BETTER OS than checkpoint inhibitors (incl. nivolumab) across 4 RCTs \u2014 a recognized exception (population_match=false) that does not overturn the overall pretreated-NSCLC consensus."
+    }
+  ]
+}

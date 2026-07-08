@@ -1,0 +1,100 @@
+{
+  "claim_id": "Q28",
+  "claim": "Natalizumab reduces relapses in relapsing multiple sclerosis",
+  "domain": "neuro",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Overwhelming, convergent Level-1 evidence with regulatory ratification. The pivotal Phase 3 AFFIRM RCT (Polman, NEJM 2006, N=942) hit its 1-year primary endpoint of clinical relapse rate, cutting the rate ~68% (1-yr ARR 0.25 vs 0.74 placebo; p<0.001; label MS1 2-yr ARR 0.22 vs 0.67) \u2014 the claimed outcome (ARR) measured directly, not a surrogate. The SENTINEL RCT (Rudick, NEJM 2006, N=1171) independently confirmed a relapse-rate benefit as add-on to interferon beta-1a (2-yr ARR 0.34 vs 0.75; p<0.001). FDA granted accelerated approval (2004; label reaffirmed 3/2025) for relapsing forms of MS, with the 2004 approval reducing relapse frequency by 66% (AFFIRM) and 54% (SENTINEL). Network meta-analysis of 14 RCTs (9,412 patients) places natalizumab among the highest-efficacy agents for ARR reduction. Large real-world cohorts (MSBase) reproduce the effect (ARR 1.5->0.2). The only nuance is loss of efficacy in the ~6% who develop persistent anti-natalizumab antibodies \u2014 a durability caveat in a minority, not the core effect. Consensus: Supported.",
+  "outcome": "annualized relapse rate",
+  "population": "relapsing multiple sclerosis (relapsing-remitting MS)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Natalizumab reduces relapses in relapsing MS. In the pivotal AFFIRM Phase 3 trial it cut the annualized relapse rate by about 68% versus placebo (roughly 0.23 vs 0.73) and reduced the risk of sustained disability progression by ~42% over two years. The SENTINEL trial showed a similar relapse-rate reduction when natalizumab was added to interferon beta-1a. On the strength of these results the FDA approved natalizumab (Tysabri) for relapsing forms of MS specifically to reduce the frequency of relapses. Its use is limited by the risk of progressive multifocal leukoencephalopathy (PML), especially in JC-virus-antibody-positive patients, but the relapse-reduction efficacy itself is not in doubt."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:16510744",
+      "citation": "Polman CH, et al. A randomized, placebo-controlled trial of natalizumab for relapsing multiple sclerosis (AFFIRM). N Engl J Med. 2006;354(9):899-910. DOI:10.1056/NEJMoa044397. NCT00027300.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3, double-blind, placebo-controlled pivotal trial; industry-sponsored (Biogen/Elan) but NEJM-published with clear primary endpoints. Not retracted. Verified against PubMed metadata and NCT00027300 record.",
+      "n_int": 627,
+      "year": 2006,
+      "finding": "Pivotal AFFIRM trial, N=942 (627 natalizumab, 315 placebo). Primary endpoint clinical relapse rate reduced 68% at 1 year (p<0.001); also 42% reduction in sustained disability progression over 2 years (HR 0.58). Directly measures the claimed outcome (ARR) in the exact population."
+    },
+    {
+      "source_id": "PMID:16510745",
+      "citation": "Rudick RA, et al. Natalizumab plus interferon beta-1a for relapsing multiple sclerosis (SENTINEL). N Engl J Med. 2006;354(9):911-23. DOI:10.1056/NEJMoa044396. NCT00030966.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3, double-blind, placebo-controlled add-on RCT; industry-sponsored. Two PML cases (one fatal) emerged in this trial \u2014 a safety signal, not an efficacy-integrity flaw. Not retracted. Abstract verified via PubMed.",
+      "n_int": 589,
+      "year": 2006,
+      "finding": "SENTINEL trial, N=1171 (589 natalizumab+IFN, 582 placebo+IFN) relapsing despite interferon beta-1a. Adding natalizumab lowered annualized relapse rate to 0.34 vs 0.75 over 2 years (p<0.001) and cut sustained disability progression 24% (HR 0.76). Independent confirmatory RCT on the claimed outcome."
+    },
+    {
+      "source_id": "NCT00027300",
+      "citation": "U.S. FDA. TYSABRI (natalizumab) accelerated approval (2004) and current prescribing information (rev 3/2025); indicated as monotherapy for relapsing forms of MS. FDA news release 2004; Elan/Biogen SEC 6-K 2004; DailyMed setid c5fdde91.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "FDA accelerated approval Nov 2004 based on 1-year AFFIRM+SENTINEL data; 2004 release cites 66% (AFFIRM) and 54% (SENTINEL) 1-yr relapse-rate reductions; label Table 5 (MS1) reports 2-yr ARR 0.22 vs 0.67. Carries PML boxed warning + TOUCH REMS. Regulatory ratification, not primary data. Verified via FDA 2004 news release, SEC filing, and 2025 DailyMed label.",
+      "n_int": 942,
+      "year": 2004,
+      "finding": "FDA approved natalizumab for relapsing forms of MS 'to reduce the frequency of clinical relapses' (AFFIRM 66% and SENTINEL 54% 1-yr relapse-rate reductions cited; 1-yr ARR 0.25 vs 0.74). Label reports annualized relapse rate lower with natalizumab in both pivotal studies MS1/MS2. NCT00027300 is AFFIRM, the anchor pivotal registration."
+    },
+    {
+      "source_id": "PMID:30195200",
+      "citation": "Xu X, et al. Efficacy and safety of monoclonal antibody therapies for relapsing remitting multiple sclerosis: a network meta-analysis. Mult Scler Relat Disord. 2018;25:322-328. DOI:10.1016/j.msard.2018.08.026.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Network meta-analysis of 14 RCTs; primary efficacy outcome pre-specified as annualized relapse rate. Standard NMA limitations (indirect comparison) but methodologically sound. Article type 'Network Meta-Analysis' confirmed via PubMed.",
+      "n_int": 9412,
+      "year": 2018,
+      "finding": "Network meta-analysis, 14 RCTs / 9,412 patients, primary outcome = annualized relapse rate. Natalizumab (alone and +interferon beta-1a) showed significant ARR reduction vs placebo/interferon and ranked among the highest-efficacy monoclonals. Pooled Level-1 evidence directly on the claimed outcome."
+    },
+    {
+      "source_id": "PMID:25546031",
+      "citation": "Kalincik T, et al. Switch to natalizumab versus fingolimod in active relapsing-remitting multiple sclerosis (MSBase). Ann Neurol. 2015;77(3):425-35. DOI:10.1002/ana.24339.",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Large international prospective observational registry (MSBase) with propensity-score matching and pairwise-censored analysis; non-randomized, residual confounding possible but rigorously adjusted. Numbers verified via PubMed abstract.",
+      "n_int": 407,
+      "year": 2015,
+      "finding": "Real-world MSBase cohort, 792 included, 578 propensity-matched (natalizumab n=407, fingolimod n=171) active RRMS patients switching therapy. Annualized relapse rate fell from 1.5 to 0.2 on natalizumab (1.3 to 0.4 on fingolimod), with 50% relative post-switch difference in relapse hazard (p=0.002). Confirms the relapse-reduction effect outside trial conditions."
+    },
+    {
+      "source_id": "PMID:17761550",
+      "citation": "Calabresi PA, et al. The incidence and significance of anti-natalizumab antibodies: results from AFFIRM and SENTINEL. Neurology. 2007;69(14):1391-403. DOI:10.1212/01.wnl.0000277457.17420.b5.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pre-specified immunogenicity sub-analysis of the two pivotal RCTs (RCT-derived data; PubMed article type includes Randomized Controlled Trial). Shows a boundary condition (efficacy loss with persistent neutralizing antibodies), not a contradiction of the overall effect. Not retracted.",
+      "n_int": 625,
+      "year": 2007,
+      "finding": "Immunogenicity analysis of AFFIRM/SENTINEL: antibodies detected in 57/625 (9%) natalizumab patients in AFFIRM, persistent in 6%; persistent antibodies abolished the relapse-rate benefit in that subgroup (relapse p=0.009 loss vs antibody-negative). Antibody-negative majority retained full efficacy \u2014 qualifies durability in a minority while reaffirming the relapse-reduction effect."
+    }
+  ]
+}

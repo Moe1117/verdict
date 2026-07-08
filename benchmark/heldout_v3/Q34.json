@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q34",
+  "claim": "Betibeglogene autotemcel gene therapy achieves transfusion independence in transfusion-dependent beta-thalassemia",
+  "domain": "rare/gene",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented regulatory/clinical consensus. Betibeglogene autotemcel (beti-cel, Zynteglo) received FDA regular approval on 2022-08-17 specifically on the primary endpoint of transfusion independence (TI). Across the two pivotal single-arm phase 3 trials \u2014 HGB-207/Northstar-2 (NCT02906202; NEJM 2022, 20/22 = 91% TI in non-b0/b0) and HGB-212/Northstar-3 (NCT03207009; Lancet 2024, 16/18 = 89% TI in severe/b0/b0 genotypes) \u2014 the FDA-label pooled cut was 32/36 (89%, 95% CI 74-97) of evaluable patients across ages and genotypes achieving durable TI, and all who achieved TI maintained it. This was preceded by the phase 1/2 HGB-204/205 studies (NEJM 2018, 12/13 non-b0/b0 stopped transfusions) and corroborated by first real-world European experience (Blood Adv 2025, 8/8 TI). TI is the direct clinical outcome named in the claim (not a surrogate), the natural history of transfusion-dependent beta-thalassemia is lifelong transfusion dependence, single-arm design is the accepted regulatory standard for this ultra-rare fatal-course disease, and no randomized trial contradicts the result \u2014 an all-or-none / very-large-effect pattern. Consensus verdict: Supported.",
+  "outcome": "transfusion independence",
+  "population": "transfusion-dependent beta-thalassemia (adult and pediatric, non-b0/b0 and b0/b0 / severe genotypes)",
+  "provenance": "PubMed (PMIDs 29669226, 34891223, 39527960, 39418614), ClinicalTrials.gov (NCT02906202, NCT03207009, NCT01745120, NCT02151526), FDA Orphan Drug/approval records + DailyMed ZYNTEGLO label (regular approval 2022-08-17). Independently re-verified 2026-07-08 via PubMed metadata, ClinicalTrials.gov trial records, DailyMed/FDA label, and bluebird bio approval release.",
+  "build_confidence": "high",
+  "notes": "All rows re-verified against real PMIDs/NCTs; no retractions/corrections detected. TI defined as weighted-average Hb >=9 g/dL without pRBC transfusions for >=12 months \u2014 the exact endpoint the claim names, so outcome_match=true (not a surrogate). REVISION: rows 1-3 relabeled from 'rct' to 'prospective cohort' because all three trials are non-randomised single-arm studies (confirmed in NEJM/Lancet full texts and ClinicalTrials.gov). FDA-label pooled phase 3 TI = 32/36 (89%, 95% CI 74-97); note the label's Study-2 snapshot is 12/14 while the later Lancet 2024 publication reports 16/18 for HGB-212 \u2014 both are real cuts of the same trial and correctly attributed to their respective sources. Marketing authorization was later voluntarily withdrawn in Europe for non-safety (commercial) reasons \u2014 does not bear on efficacy consensus.",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Betibeglogene autotemcel (beti-cel, marketed as Zynteglo) achieves transfusion independence in the large majority of patients with transfusion-dependent beta-thalassemia. In the pivotal phase 3 single-arm trials HGB-207 (Northstar-2) and HGB-212 (Northstar-3), roughly 89-91% of evaluable patients achieved durable transfusion independence (weighted-average Hb >=9 g/dL with no red-cell transfusions for >=12 months), including patients with the severe b0/b0 genotype and pediatric patients. The FDA granted regular approval in August 2022 on the basis of this transfusion-independence endpoint. Against a natural history of lifelong transfusion dependence, this is a large, durable effect and the claim is well supported."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:34891223",
+      "citation": "Locatelli F, Thompson AA, Kwiatkowski JL, et al. Betibeglogene Autotemcel Gene Therapy for Non-b0/b0 Genotype b-Thalassemia (HGB-207/Northstar-2). N Engl J Med. 2022;386(5):415-427. doi:10.1056/NEJMoa2113206",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal open-label single-arm phase 3; industry-funded (Bluebird Bio) but primary endpoint pre-specified and consistent with independent real-world data. Single-arm interventional design (relabeled from 'rct').",
+      "n_int": 23,
+      "year": 2022,
+      "finding": "Transfusion independence in 20/22 evaluable patients (91%), including 6/7 (86%) <12y; average Hb 11.7 g/dL during TI; all who achieved TI maintained it; no cancers. Single-arm, non-randomised, open-label phase 3 (NCT02906202)."
+    },
+    {
+      "source_id": "PMID:39527960",
+      "citation": "Kwiatkowski JL, Walters MC, Hongeng S, et al. Betibeglogene autotemcel gene therapy in patients with transfusion-dependent, severe genotype b-thalassaemia (HGB-212/Northstar-3): a non-randomised, single-arm, phase 3 trial. Lancet. 2024;404(10468):2175-2186. doi:10.1016/S0140-6736(24)01884-1",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "integrity_note": "Confirmatory pivotal single-arm phase 3 in the hardest-to-treat severe/b0/b0 genotypes; extends efficacy to the population where allogeneic HSCT and prior therapies are least effective. Single-arm interventional design (relabeled from 'rct').",
+      "n_int": 18,
+      "year": 2024,
+      "finding": "16/18 (89%; 95% CI 65.3-98.6) reached and maintained transfusion independence to last follow-up (median 47.9 mo) in severe genotypes (b0/b0, b0/b+IVS1-110, b+IVS1-110/b+IVS1-110); no beti-cel-related SAEs, no deaths. Non-randomised single-arm phase 3 (NCT03207009)."
+    },
+    {
+      "source_id": "PMID:29669226",
+      "citation": "Thompson AA, Walters MC, Kwiatkowski J, et al. Gene Therapy in Patients with Transfusion-Dependent b-Thalassemia (HGB-204/205). N Engl J Med. 2018;378(16):1479-1493. doi:10.1056/NEJMoa1705342",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Foundational phase 1/2 single-arm studies; genotype-dependent effect (strong in non-b0/b0, partial in b0/b0) motivated the vector/dose optimization used in the later phase 3 trials. Single-arm interventional design (relabeled from 'rct').",
+      "n_int": 22,
+      "year": 2018,
+      "finding": "12/13 non-b0/b0 patients stopped red-cell transfusions (total Hb 8.2-13.7 g/dL). In 9 b0/b0 or 2xIVS1-110 patients, median annualized transfusion volume fell 73% and 3/9 discontinued transfusions. No drug-related SAEs; dramatic_effect=false due to only partial response in b0/b0 at this early phase (NCT01745120, NCT02151526)."
+    },
+    {
+      "source_id": "PMID:39418614",
+      "citation": "Mirza A, Ritsert ML, Tao G, et al. Gene therapy in transfusion-dependent non-b0/b0 genotype b-thalassemia: first real-world experience of beti-cel. Blood Adv. 2025;9(1):29-38. doi:10.1182/bloodadvances.2024014104",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Independent single-center real-world cohort during active EU license; corroborates trial efficacy but reports notable non-hematologic AEs (endocrine dysfunction, one polycythemia, psychiatric sequelae).",
+      "n_int": 8,
+      "year": 2025,
+      "finding": "All 8 treated patients (non-b0/b0, >=12y) achieved transfusion independence within 8-59 days post-infusion (post-treatment Hb 11.3-19.3 g/dL); no deaths. Confirms efficacy outside the sponsor trials while flagging real-world toxicities."
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMoa2113206",
+      "citation": "U.S. FDA. ZYNTEGLO (betibeglogene autotemcel) \u2014 Regular approval 2022-08-17; DailyMed prescribing information; Orphan Drug approval record. Efficacy basis: pooled HGB-207 + HGB-212 transfusion independence.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "integrity_note": "FDA regular (not accelerated) approval granted specifically on the transfusion-independence endpoint; label reports pooled TI 32/36 (89%, 95% CI 74-97). source_id uses the pivotal-trial DOI as a checkable anchor since the approval derives from these trials; regulatory facts independently verified against DailyMed/FDA label, bluebird bio release, and FDA Orphan Drug database.",
+      "n_int": 41,
+      "year": 2022,
+      "finding": "FDA approved beti-cel for adult and pediatric b-thalassemia requiring regular RBC transfusions (approval 2022-08-17); across the phase 3 studies (41 patients aged 4-34) 32/36 (89%, 95% CI 74-97) evaluable patients across ages and genotypes achieved durable TI; all who achieved TI remained transfusion-free. Regulatory consensus that the claimed outcome is met."
+    }
+  ]
+}

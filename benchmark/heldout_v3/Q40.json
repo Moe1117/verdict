@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q40",
+  "claim": "Early goal-directed therapy reduces mortality in sepsis",
+  "domain": "critical-care",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "A single-center RCT (Rivers 2001, n=263) reported a large in-hospital mortality reduction with EGDT (46.5%\u219230.5%, P=0.009), which drove its incorporation into Surviving Sepsis Campaign guidelines. However, three large multicenter RCTs conducted specifically to test generalizability all found NO mortality benefit of protocolized EGDT vs usual care: ProCESS (2014, n=1341, US, 60-day mortality 21.0% EGDT vs 18.9% usual care), ARISE (2014, n=1600, Australia/NZ, 90-day mortality 18.6% vs 18.8%), and ProMISe (2015, n=1260, England, 90-day mortality 29.5% vs 29.2%). The prospectively-designed PRISM patient-level meta-analysis of all three (2017, n=3723) confirmed no mortality benefit (90-day mortality 24.9% vs 25.4%; adjusted OR 0.97, 95% CI 0.82\u20131.14) and found EGDT increased ICU use, cardiovascular support, and costs. This is a textbook case of a landmark single-center finding failing to replicate; guidelines subsequently removed the mandatory EGDT bundle. The claim that EGDT specifically reduces mortality (vs. the components of good usual care \u2014 early antibiotics and fluids) is Not Supported. The favorable Rivers result is best explained by an unusually high control-arm mortality and single-center context, not a reproducible EGDT mortality effect.",
+  "outcome": "mortality",
+  "population": "early septic shock",
+  "provenance": "PubMed / ClinicalTrials.gov verified: Rivers 2001 (PMID 11794169, DOI 10.1056/NEJMoa010307); ProCESS 2014 (PMID 24635773, DOI 10.1056/NEJMoa1401602, NCT00510835); ARISE 2014 (PMID 25272316, DOI 10.1056/NEJMoa1404380, NCT00975793); ProMISe 2015 (PMID 25776532, DOI 10.1056/NEJMoa1500896, ISRCTN36307479); PRISM meta-analysis 2017 (PMID 28320242, DOI 10.1056/NEJMoa1701380, NCT02030158). All titles/designs/N/outcomes independently confirmed via PubMed metadata and ClinicalTrials.gov; no retractions.",
+  "notes": "Surrogate note: Rivers reported favorable EGDT effects on physiologic surrogates (ScvO2, lactate, base deficit, APACHE II) as secondary outcomes, but its primary endpoint WAS in-hospital clinical mortality, so outcome_match=true. Every multicenter trial's primary endpoint is also clinical mortality (60-day for ProCESS, 90-day for ARISE/ProMISe/PRISM). The direction split is the crux: 1 supportive single-center RCT vs 3 contradicting large multicenter RCTs plus 1 patient-level meta-analysis. No dramatic_effect qualifies \u2014 the supportive effect is directly contradicted by randomized trials, disqualifying all-or-none reasoning.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. While the original single-center Rivers trial (2001) showed a striking mortality reduction with early goal-directed therapy (EGDT) and led to its adoption in sepsis guidelines, three large multicenter randomized trials \u2014 ProCESS (2014), ARISE (2014), and ProMISe (2015) \u2014 each found no mortality benefit of protocolized EGDT compared with usual care. A patient-level meta-analysis of all three (PRISM, 2017) confirmed no reduction in mortality and showed EGDT increased ICU resource use and costs. The modern consensus is that early recognition, prompt antibiotics, and adequate fluid resuscitation matter, but the specific EGDT protocol (central venous catheter-guided ScvO2 targets, inotropes, transfusion thresholds) does not itself reduce mortality. The claim is not supported."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:11794169",
+      "citation": "Rivers E, et al. Early goal-directed therapy in the treatment of severe sepsis and septic shock. N Engl J Med. 2001;345(19):1368-77. DOI 10.1056/NEJMoa010307",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Single-center RCT (PubMed confirmed; not retracted). Foundational but non-replicated; unusually high control-arm mortality (46.5%) later criticized.",
+      "n_int": 130,
+      "year": 2001,
+      "finding": "Single-center RCT (n=263; 130 EGDT / 133 standard): 6h EGDT reduced in-hospital mortality (primary endpoint) from 46.5% (standard) to 30.5% (EGDT), P=0.009. Drove guideline adoption but never replicated."
+    },
+    {
+      "source_id": "PMID:24635773",
+      "citation": "ProCESS Investigators (Yealy DM, et al). A randomized trial of protocol-based care for early septic shock. N Engl J Med. 2014;370(18):1683-93. DOI 10.1056/NEJMoa1401602",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Multicenter US RCT, 31 EDs; NCT00510835; PubMed/CT.gov confirmed; not retracted.",
+      "n_int": 439,
+      "year": 2014,
+      "finding": "Multicenter RCT (n=1341; 439 EGDT / 446 protocol-standard / 456 usual care): 60-day in-hospital mortality (primary) 21.0% EGDT vs 18.2% protocol-standard vs 18.9% usual care. RR protocol vs usual care 1.04 (0.82-1.31), P=0.83. No benefit of protocolized EGDT."
+    },
+    {
+      "source_id": "PMID:25272316",
+      "citation": "ARISE Investigators (Peake SL, et al). Goal-directed resuscitation for patients with early septic shock. N Engl J Med. 2014;371(16):1496-506. DOI 10.1056/NEJMoa1404380",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Multicenter RCT, 51 centers (mostly Australia/NZ); NCT00975793; PubMed/CT.gov confirmed; not retracted.",
+      "n_int": 796,
+      "year": 2014,
+      "finding": "Multicenter RCT (n=1600; 796 EGDT / 804 usual care): 90-day all-cause mortality (primary) 18.6% EGDT vs 18.8% usual care; absolute difference -0.3 pp, 95% CI -4.1 to 3.6, P=0.90. No mortality benefit."
+    },
+    {
+      "source_id": "PMID:25776532",
+      "citation": "Mouncey PR, et al (ProMISe Trial). Trial of early, goal-directed resuscitation for septic shock. N Engl J Med. 2015;372(14):1301-11. DOI 10.1056/NEJMoa1500896",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pragmatic multicenter RCT, 56 hospitals England; ISRCTN36307479 (correctly not an NCT); PubMed confirmed; not retracted.",
+      "n_int": 630,
+      "year": 2015,
+      "finding": "Pragmatic RCT (n=1260; 630 EGDT / 630 usual care): 90-day mortality (primary) 29.5% EGDT vs 29.2% usual care; RR 1.01, 95% CI 0.85-1.20, P=0.90. EGDT increased costs and organ-support days; probability of cost-effectiveness below 20%."
+    },
+    {
+      "source_id": "PMID:28320242",
+      "citation": "PRISM Investigators (Rowan KM, Angus DC, et al). Early, goal-directed therapy for septic shock \u2014 a patient-level meta-analysis. N Engl J Med. 2017;376(23):2223-2234. DOI 10.1056/NEJMoa1701380",
+      "design": "meta-analysis of rcts",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prospectively-designed individual-patient-data meta-analysis of ProCESS/ARISE/ProMISe; NCT02030158 (SAP registration); PubMed/CT.gov confirmed; not retracted. Highest tier of evidence for this claim.",
+      "n_int": 1852,
+      "year": 2017,
+      "finding": "Patient-level meta-analysis (n=3723, 138 hospitals, 7 countries): 90-day mortality (primary) 24.9% EGDT (462/1852) vs 25.4% usual care (475/1871); adjusted OR 0.97, 95% CI 0.82-1.14, P=0.68. EGDT increased ICU use and cardiovascular support days and costs. No mortality benefit across subgroups."
+    }
+  ]
+}

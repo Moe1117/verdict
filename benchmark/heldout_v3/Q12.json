@@ -1,0 +1,73 @@
+{
+  "claim_id": "Q12",
+  "claim": "Dulaglutide reduces cardiovascular events in patients with type 2 diabetes",
+  "domain": "metabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The dedicated dulaglutide cardiovascular outcomes trial, REWIND (Gerstein et al., Lancet 2019; NCT01394952; n=9901, median follow-up 5.4 y), met its primary endpoint: the 3-point MACE composite (CV death, non-fatal MI, non-fatal stroke) occurred in 12.0% on dulaglutide vs 13.4% on placebo, HR 0.88 (95% CI 0.79-0.99), p=0.026. Uniquely among GLP-1 RA CVOTs, ~69% of REWIND participants had no established CV disease (31.5% prior CVD; primary prevention), matching the claimed population. The effect is corroborated at the class level by a large meta-analysis of 11 RCTs / 85,373 participants (Badve/Sattar, Lancet Diabetes Endocrinol 2025) showing MACE HR 0.87 (0.81-0.93), and it is formally recognized by the FDA: the Trulicity (dulaglutide) label carries an indication to reduce the risk of MACE in adults with T2D and established CVD or multiple CV risk factors. A neutral within-class trial (ELIXA/lixisenatide) reflects molecule-level heterogeneity but does not contradict the dulaglutide-specific finding. Consensus is clearly Supported.",
+  "outcome": "3-point MACE (cardiovascular death, non-fatal myocardial infarction, non-fatal stroke)",
+  "population": "Adults with type 2 diabetes with previous CV event or CV risk factors; ~69% without established CVD (primary prevention)",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Dulaglutide reduces cardiovascular events in patients with type 2 diabetes. This was established by the REWIND trial (Gerstein et al., Lancet 2019), a double-blind randomized placebo-controlled cardiovascular outcomes trial of 9,901 patients with T2D and either prior CV disease or CV risk factors. Over a median 5.4 years, dulaglutide 1.5 mg weekly reduced the primary 3-point MACE composite (CV death, non-fatal MI, non-fatal stroke) with a hazard ratio of 0.88 (95% CI 0.79-0.99, p=0.026). Notably, about two-thirds of REWIND participants had no established cardiovascular disease, making it the first GLP-1 receptor agonist trial to demonstrate CV benefit largely in a primary-prevention population. The finding is supported by class-level meta-analyses of GLP-1 receptor agonists (MACE HR ~0.87) and is reflected in the FDA-approved Trulicity label, which carries an indication to reduce the risk of major adverse cardiovascular events in adults with T2D and established CVD or multiple CV risk factors."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:31189511",
+      "citation": "Gerstein HC, et al. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial. Lancet. 2019;394(10193):121-130. DOI:10.1016/S0140-6736(19)31149-3. NCT01394952.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed pivotal CVOT; verified in PubMed, not retracted. Industry-sponsored (Eli Lilly) but independently adjudicated MACE, ITT analysis.",
+      "n_int": 4949,
+      "year": 2019,
+      "finding": "Primary 3-point MACE occurred in 12.0% (594/4949 dulaglutide) vs 13.4% (663/4952 placebo); HR 0.88 (95% CI 0.79-0.99), p=0.026; median 5.4y follow-up. 31.5% had prior CVD (~68.5% primary prevention). Direct, exact match to claimed drug, outcome, and population."
+    },
+    {
+      "source_id": "PMID:39608381",
+      "citation": "Badve SV, Bilal A, Lee MMY, Sattar N, Gerstein HC, et al. Effects of GLP-1 receptor agonists on kidney and cardiovascular disease outcomes: a meta-analysis of randomised controlled trials. Lancet Diabetes Endocrinol. 2025;13(1):15-28. DOI:10.1016/S2213-8587(24)00271-7.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "PROSPERO-registered (CRD42024528864) systematic review/meta-analysis; verified in PubMed, not retracted.",
+      "n_int": 85373,
+      "year": 2025,
+      "finding": "Across 11 RCTs (85,373 participants), GLP-1 receptor agonists reduced 3-point MACE by 13%: HR 0.87 (95% CI 0.81-0.93); all-cause death HR 0.88 (0.83-0.93). Class-level corroboration including dulaglutide/REWIND."
+    },
+    {
+      "source_id": "PMID:26630143",
+      "citation": "Pfeffer MA, et al. Lixisenatide in Patients with Type 2 Diabetes and Acute Coronary Syndrome (ELIXA). N Engl J Med. 2015;373(23):2247-2257. DOI:10.1056/NEJMoa1509225. NCT01147250.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed pivotal CVOT; verified in PubMed, not retracted. Sanofi-sponsored.",
+      "n_int": 3034,
+      "year": 2015,
+      "finding": "Different GLP-1 RA (lixisenatide) in recent-ACS T2D patients (n=6068 total): 4-point MACE HR 1.02 (95% CI 0.89-1.17); noninferior but not superior (neutral). Shows CV benefit is not uniform across the GLP-1 RA class; population is secondary-prevention post-ACS, genuinely distinct from the claim's broad ~69%-primary-prevention T2D, and does not contradict the dulaglutide-specific result."
+    },
+    {
+      "source_id": "NCT01394952",
+      "citation": "U.S. FDA. TRULICITY (dulaglutide) Prescribing Information, Indications and Usage; Clinical Studies 14.5 (REWIND). Eli Lilly. Verified via accessdata.fda.gov (125469s061s062lbl.pdf) and DailyMed.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Official FDA-approved label verified verbatim; MACE indication granted on the basis of REWIND (Clinical Studies 14.5).",
+      "n_int": 4949,
+      "year": 2020,
+      "finding": "FDA label indicates dulaglutide to reduce the risk of major adverse cardiovascular events (CV death, non-fatal MI, non-fatal stroke) in adults with T2D who have established CVD or multiple CV risk factors, citing REWIND (Clinical Studies 14.5). Regulatory confirmation of the claim."
+    }
+  ]
+}

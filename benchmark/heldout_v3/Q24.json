@@ -1,0 +1,86 @@
+{
+  "claim_id": "Q24",
+  "claim": "Adding olaratumab to doxorubicin improves survival in advanced soft-tissue sarcoma",
+  "domain": "oncology",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "Textbook confirmatory reversal, independently re-verified. A 133-patient open-label phase 1b + randomized phase 2 trial (Tap, Lancet 2016, NCT01185964; PMID 27291997) reported a striking OS gain with olaratumab+doxorubicin (median OS 26.5 vs 14.7 months; HR 0.46, 95% CI 0.30-0.71, p=0.0003) \u2014 but OS was a SECONDARY endpoint (PFS primary, two-sided alpha 0.2, HR 0.67 p=0.0615) and the trial was underpowered for OS. This drove FDA accelerated approval (Lartruvo, BLA 761038, 10/19/2016) and EMA conditional authorization. The required confirmatory phase 3 ANNOUNCE (Tap, JAMA 2020, NCT02451943; PMID 32259228; N=509, dual OS primary endpoints) found NO survival benefit: total STS 20.4 vs 19.7 months (HR 1.05, 95% CI 0.84-1.30, p=0.69); LMS 21.6 vs 21.9 months (HR 0.95, 95% CI 0.69-1.31, p=0.76). The fully powered phase 3 supersedes the small phase 2. Eli Lilly withdrew the drug globally; FDA revoked BLA 761038 effective 2/25/2020 (Fed. Reg. 85 FR 43587). A retrospective UK real-world cohort (Gennatas 2020) matched the negative phase 3 on PFS/ORR. Consensus and regulatory status: olaratumab does NOT improve survival in advanced STS. Not Supported.",
+  "outcome": "overall survival",
+  "population": "advanced soft-tissue sarcoma",
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Olaratumab does not improve survival in advanced soft-tissue sarcoma. Although an early randomized phase 2 trial (Tap et al., Lancet 2016) reported a dramatic ~12-month overall-survival benefit when olaratumab was added to doxorubicin (HR ~0.46), which led to FDA accelerated approval (Lartruvo) in 2016, the confirmatory phase 3 ANNOUNCE trial (Tap et al., JAMA 2020, N=509) found no survival difference at all (median OS 20.4 vs 19.7 months; HR 1.05). Eli Lilly subsequently withdrew the drug and the FDA revoked its approval in 2020. This is a well-known example of a striking early-phase signal that failed confirmation."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:27291997",
+      "citation": "Tap WD, et al. Olaratumab and doxorubicin versus doxorubicin alone for treatment of soft-tissue sarcoma: an open-label phase 1b and randomised phase 2 trial. Lancet. 2016;388(10043):488-97. DOI:10.1016/S0140-6736(16)30587-6",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed metadata; not retracted (article types: Clinical Trial Phase I, Phase II, RCT). OS was a SECONDARY endpoint (PFS primary, two-sided alpha 0.2). Single-country (16 US sites), underpowered for OS; OS benefit later NOT confirmed in phase 3 ANNOUNCE.",
+      "n_int": 66,
+      "year": 2016,
+      "finding": "Phase 2 (N=133 randomized; 66 olaratumab+doxo vs 67 doxo): median OS 26.5 vs 14.7 months, stratified HR 0.46 (95% CI 0.30-0.71), p=0.0003; PFS (primary) 6.6 vs 4.1 months, HR 0.67 (0.44-1.02), p=0.0615; ORR 18.2% vs 11.9%. Striking but underpowered OS signal drove FDA accelerated approval. dramatic_effect=false because the fully powered phase 3 RCT (ANNOUNCE) directly contradicted it."
+    },
+    {
+      "source_id": "PMID:32259228",
+      "citation": "Tap WD, et al. Effect of Doxorubicin Plus Olaratumab vs Doxorubicin Plus Placebo on Survival in Patients With Advanced Soft Tissue Sarcomas: The ANNOUNCE Randomized Clinical Trial. JAMA. 2020;323(13):1266-1276. DOI:10.1001/jama.2020.1707",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed metadata; not retracted (article types: Clinical Trial Phase III, RCT). Confirmatory phase 3, double-blind, placebo-controlled, 110 sites/25 countries, dual OS primary endpoints (total STS + LMS). Definitive negative trial that supersedes the phase 2.",
+      "n_int": 258,
+      "year": 2020,
+      "finding": "Phase 3 ANNOUNCE (N=509; olaratumab n=258, placebo n=251): NO OS benefit. Total STS median OS 20.4 vs 19.7 months, HR 1.05 (95% CI 0.84-1.30), p=0.69; leiomyosarcoma 21.6 vs 21.9 months, HR 0.95 (95% CI 0.69-1.31), p=0.76. Authors state findings did NOT confirm the phase 2 OS benefit."
+    },
+    {
+      "source_id": "NCT02451943",
+      "citation": "A Randomized, Double-Blind, Placebo-Controlled, Phase 3 Trial of Doxorubicin Plus Olaratumab Versus Doxorubicin Plus Placebo in Advanced/Metastatic Soft Tissue Sarcoma (ANNOUNCE). ClinicalTrials.gov NCT02451943.",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via ClinicalTrials.gov: status COMPLETED, has_results=true, enrollment 509, Phase 3, sponsor Eli Lilly. Dual PRIMARY endpoints both = Overall Survival (total STS + LMS). Confirms the true clinical endpoint (OS), not a surrogate.",
+      "n_int": 258,
+      "year": 2020,
+      "finding": "Registry/results record confirming ANNOUNCE design: N=509, olaratumab+doxorubicin vs placebo+doxorubicin, dual primary endpoint overall survival (total STS + LMS). Results null, consistent with the JAMA publication."
+    },
+    {
+      "source_id": "DOI:10.1186/s13569-020-00131-x",
+      "citation": "Gennatas S, et al. Real-world experience with doxorubicin and olaratumab in soft tissue sarcomas in England and Northern Ireland. Clin Sarcoma Res. 2020;10:9. PMID:32391141. DOI:10.1186/s13569-020-00131-x",
+      "design": "prospective cohort",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via Exa/PubMed (PMID 32391141). RETROSPECTIVE multi-centre real-world analysis (190 treated -> 177 eligible -> 172 evaluable, 8 UK sarcoma units, May 2017-Mar 2019). Schema lacks a retrospective-cohort enum; classified in the observational-cohort family. outcome_match=false because the CLAIMED outcome is OS, but OS was explicitly immature/pending in this paper (66.9% still alive); concordance with ANNOUNCE was shown on PFS/ORR, not mature OS.",
+      "n_int": 172,
+      "year": 2020,
+      "finding": "Retrospective real-world cohort (172 evaluable): median PFS 6.8 months (95% CI 5.9-7.7), ORR 20.9%. OS data not yet mature. Authors state results are 'in keeping with the phase III ANNOUNCE findings,' not the phase 2 \u2014 no dramatic benefit observed in practice."
+    },
+    {
+      "source_id": "DOI:10.1001/jama.2020.1707",
+      "citation": "FDA revocation of the biologics license for LARTRUVO (olaratumab), BLA 761038, effective 2/25/2020; Federal Register 85 FR 43587 (2020-07-17), Docket FDA-2020-N-1618, FR Doc 2020-15516. See also FDA Withdrawn Cancer Accelerated Approvals list.",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory action row, independently verified against the Federal Register notice and FDA 'Withdrawn Cancer Accelerated Approvals' page. Source_id points to the pivotal ANNOUNCE publication that triggered the action (DOI verifiable). Accelerated approval 10/19/2016; BLA 761038 revoked effective 2/25/2020 after ANNOUNCE failed to confirm OS. Corpus page citation corrected from 43571 to 43587.",
+      "n_int": 0,
+      "year": 2020,
+      "finding": "FDA revoked olaratumab's accelerated approval (granted 10/19/2016) effective 2/25/2020 because the confirmatory ANNOUNCE trial failed to demonstrate an OS improvement in the full population or the LMS subpopulation; Eli Lilly requested withdrawal and pulled the drug globally. Regulatory consensus: benefit not verified."
+    }
+  ]
+}

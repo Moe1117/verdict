@@ -1,0 +1,72 @@
+{
+  "claim_id": "Q38",
+  "claim": "Dexamethasone reduces mortality in patients with COVID-19 requiring oxygen or ventilation",
+  "domain": "critical-care",
+  "expected_verdict": "Supported",
+  "gold_rationale": "This is settled clinical and regulatory consensus. The RECOVERY trial (Horby et al., NEJM 2020, NCT04381936), a large multicenter open-label RCT with 28-day all-cause mortality as its pre-specified primary endpoint, showed dexamethasone 6 mg daily reduced 28-day mortality specifically in the two respiratory-support strata: invasive mechanical ventilation (rate ratio ~0.64) and oxygen without ventilation (RR ~0.82), with no benefit (and possible harm) in patients requiring no oxygen. The WHO Rapid Evidence Appraisal (REACT) prospective meta-analysis (Sterne et al., JAMA 2020) of 7 RCTs in critically ill COVID-19 patients confirmed lower 28-day mortality with systemic corticosteroids (summary OR 0.66; dexamethasone-specific OR 0.64), providing direct, outcome-matched, population-matched replication. Individual smaller corticosteroid RCTs (CoDEX, CAPE COVID) were underpowered and used surrogate/composite primary endpoints (ventilator-free days; day-21 treatment failure) and were individually non-significant for mortality, but their direction was concordant and they were pooled into the confirmatory meta-analysis. Dexamethasone for hypoxic COVID-19 is endorsed by WHO, NIH, and IDSA guidelines and became global standard of care. Consensus = Supported.",
+  "outcome": "28-day all-cause mortality",
+  "population": "hospitalized COVID-19 patients requiring supplemental oxygen or mechanical ventilation",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Dexamethasone reduces mortality in hospitalized COVID-19 patients who require supplemental oxygen or mechanical ventilation. The landmark RECOVERY trial (NEJM 2020) showed 6 mg daily dexamethasone for up to 10 days lowered 28-day mortality by about one-third in ventilated patients and by about one-fifth in those receiving oxygen without ventilation, with no benefit in patients not requiring oxygen. The WHO REACT prospective meta-analysis of seven RCTs confirmed lower 28-day mortality with systemic corticosteroids (summary OR ~0.66). Dexamethasone is standard of care for hypoxic COVID-19 under WHO, NIH, and IDSA guidelines. The benefit is restricted to patients on respiratory support and does not extend to (and may harm) those with milder disease."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:32678530",
+      "citation": "RECOVERY Collaborative Group (Horby P, et al.). Dexamethasone in Hospitalized Patients with Covid-19. N Engl J Med. 2020;384(8):693-704. DOI:10.1056/NEJMoa2021436. Trial NCT04381936.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Landmark pivotal RCT; open-label but large and pre-registered; primary endpoint 28-day mortality. No integrity concerns. Verified: PubMed types include Randomized Controlled Trial + Multicenter Study; NCT04381936 confirmed.",
+      "n_int": 2104,
+      "year": 2020,
+      "finding": "Open-label RCT (2104 dexamethasone vs 4321 usual care). Dexamethasone 6 mg/day up to 10 days reduced 28-day all-cause mortality overall (22.9% vs 25.7%; age-adjusted RR 0.83, 95% CI 0.75-0.93). Benefit was concentrated by respiratory support: invasive mechanical ventilation RR 0.64 (29.3% vs 41.4%) and oxygen-without-ventilation RR 0.82 (23.3% vs 26.2%); no benefit in patients receiving no respiratory support (17.8% vs 14.0%, RR 1.19). Directly matches claim and outcome."
+    },
+    {
+      "source_id": "PMID:32876694",
+      "citation": "WHO REACT Working Group (Sterne JAC, et al.). Association Between Administration of Systemic Corticosteroids and Mortality Among Critically Ill Patients With COVID-19: A Meta-analysis. JAMA. 2020;324(13):1330-1341. DOI:10.1001/jama.2020.17023.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prospective (protocol pre-specified) meta-analysis of 7 RCTs; low risk of bias for 6 of 7 mortality results. Highest-tier confirmatory evidence. Verified: PubMed type Meta-Analysis; figures match abstract exactly.",
+      "n_int": 678,
+      "year": 2020,
+      "finding": "Prospective meta-analysis of 7 RCTs, 1703 critically ill COVID-19 patients. Systemic corticosteroids vs usual care/placebo lowered 28-day all-cause mortality: summary OR 0.66 (95% CI 0.53-0.82), I2=15.6%. Dexamethasone-specific fixed-effect OR 0.64 (95% CI 0.50-0.82; 3 trials, 1282 patients, 527 deaths). 222 deaths/678 corticosteroid vs 425/1025 control. Independent, outcome-matched confirmation of the claim."
+    },
+    {
+      "source_id": "PMID:32876695",
+      "citation": "Tomazini BM, et al. (CoDEX). Effect of Dexamethasone on Days Alive and Ventilator-Free in Patients With Moderate or Severe ARDS and COVID-19: The CoDEX Randomized Clinical Trial. JAMA. 2020;324(13):1307-1316. DOI:10.1001/jama.2020.17021. Trial NCT04327401.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Sound multicenter open-label RCT but PRIMARY endpoint was a surrogate (ventilator-free days), not mortality. Trial stopped early after RECOVERY reported; underpowered for mortality. Verified via PubMed abstract + PMC/JAMA editorial.",
+      "n_int": 151,
+      "year": 2020,
+      "finding": "Open-label RCT in 299 patients with COVID-19 moderate-to-severe ARDS across 41 Brazilian ICUs (dexamethasone n=151 vs standard care n=148). PRIMARY outcome was ventilator-free days at 28 days (a surrogate) \u2014 significantly increased with dexamethasone (6.6 vs 4.0 days; difference 2.26, P=.04). SECONDARY 28-day all-cause mortality showed no significant difference (56.3% vs 61.5%, P=.83), as the trial was underpowered and terminated early. Concordant direction but not an outcome-matched mortality result."
+    },
+    {
+      "source_id": "PMID:32876689",
+      "citation": "Dequin PF, et al. (CAPE COVID / CoV-19 CAPE). Effect of Hydrocortisone on 21-Day Mortality or Respiratory Support Among Critically Ill Patients With COVID-19: A Randomized Clinical Trial. JAMA. 2020;324(13):1298-1306. DOI:10.1001/jama.2020.16761.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Double-blind RCT but tests hydrocortisone (not dexamethasone); PRIMARY endpoint was a day-21 composite of death OR persistent respiratory support, not 28-day mortality. Stopped early, underpowered. Verified via PubMed abstract + PMC table (42.1% vs 50.7%, P=.29).",
+      "n_int": 76,
+      "year": 2020,
+      "finding": "Multicenter double-blind sequential RCT, 149 critically ill COVID-19 patients in France (hydrocortisone n=76 vs placebo n=73). PRIMARY outcome was treatment failure (death or persistent respiratory support) at day 21 \u2014 32/76 (42.1%) vs 37/73 (50.7%), difference -8.6% (95.48% CI -24.9 to 7.7), P=.29, not statistically significant (trial stopped early after RECOVERY). Supports the corticosteroid-class direction but uses a different steroid and a composite surrogate rather than 28-day mortality."
+    }
+  ]
+}

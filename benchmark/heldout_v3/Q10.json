@@ -1,0 +1,101 @@
+{
+  "claim_id": "Q10",
+  "claim": "Catheter ablation reduces mortality in patients with atrial fibrillation",
+  "domain": "cardiology",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The claim is unqualified and spans the broad symptomatic-AF population, where the pivotal adequately powered RCT is NEGATIVE for mortality: CABANA (Packer, JAMA 2019, NCT00911508, n=2204) missed its primary ITT composite (HR 0.86, 95% CI 0.65-1.15, P=0.30) and showed no significant all-cause mortality reduction (5.2% vs 6.1%; HR 0.85, 95% CI 0.60-1.21, P=0.38); positive per-protocol/on-treatment analyses are confounded by 27.5% crossover of the drug arm to ablation. Guidelines therefore treat ablation in general AF as a rhythm/symptom/QoL and CV-hospitalization intervention, not a proven mortality-reducing therapy. In the SUBPOPULATION of AF with heart failure and reduced EF, a mortality benefit IS established: CASTLE-AF (NEJM 2018, EF<=35%, ICD) all-cause death HR 0.53 (0.32-0.86); AATAC (Circulation 2016) 8% vs 18% mortality (secondary endpoint); CASTLE-HTx (end-stage HF) reduced the death/LVAD/transplant composite; HF-restricted meta-analysis (Anatol J Cardiol 2022, 8 RCTs, 1693 pts) RR 0.60 (0.45-0.80). Broad meta-analyses reporting ~29% mortality reduction (Clin Cardiol 2023, RR 0.71) are weighted heavily by these HF-enriched trials and do not overturn the negative general-AF pivotal RCT. Because the claim is true in HFrEF but pivotal-trial-negative in AF broadly, documented consensus is Contested. All six sources independently re-verified against PubMed/ClinicalTrials.gov; no retractions; every PMID/NCT, N, effect size, and direction confirmed accurate.",
+  "outcome": "all-cause mortality (and primary composite including death)",
+  "population": "symptomatic atrial fibrillation (claim spans broad AF; key evidence split between general AF and AF with heart failure/reduced EF)",
+  "provenance": "PubMed/ClinicalTrials.gov independently re-verified: CABANA NCT00911508 / PMID 30874766 (JAMA 2019, RCT, no 'Retracted' flag); CASTLE-AF NCT00643188 / PMID 29385358 (NEJM 2018, RCT); AATAC NCT00729911 / PMID 27029350 (Circulation 2016, RCT, primary endpoint = AF recurrence); CASTLE-HTx NCT04649801 / PMID 39444312 (Eur J Heart Fail 2024, RCT substudy); meta-analyses PMID 35949135 (Anatol J Cardiol 2022, Meta-Analysis) and PMID 37937825 (Clin Cardiol 2023, Meta-Analysis).",
+  "baseline": {
+    "answer": "No",
+    "confidence": "medium",
+    "text": "Not as a blanket statement. In the general symptomatic AF population, catheter ablation has NOT been shown to reduce mortality: the landmark CABANA randomized trial missed its primary composite endpoint on intention-to-treat and showed no significant all-cause mortality reduction (HR 0.85, 95% CI 0.60-1.21). Ablation clearly reduces AF recurrence, symptoms, and cardiovascular hospitalization. However, in the specific subgroup of AF patients with heart failure and reduced ejection fraction, ablation DOES reduce mortality \u2014 CASTLE-AF showed a significant all-cause mortality benefit (HR 0.53), supported by AATAC and CASTLE-HTx and HF-restricted meta-analyses. So the honest answer is: yes in HFrEF, but not established (and pivotal-trial-negative) in atrial fibrillation broadly. The unqualified claim is contested."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:30874766",
+      "citation": "Packer DL, et al. Effect of Catheter Ablation vs Antiarrhythmic Drug Therapy on Mortality, Stroke, Bleeding, and Cardiac Arrest Among Patients With Atrial Fibrillation: The CABANA Randomized Clinical Trial. JAMA. 2019;321(13):1261-1274. NCT00911508. DOI:10.1001/jama.2019.0693",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified against PubMed abstract: investigator-initiated, open-label, 126 centers, 10 countries, n=2204 (ablation n=1108, drug n=1096). MISSED primary ITT composite (HR 0.86, 95% CI 0.65-1.15, P=0.30). All-cause mortality secondary endpoint NOT significant (5.2% vs 6.1%; HR 0.85, 95% CI 0.60-1.21, P=0.38). 27.5% of drug arm crossed to ablation; lower-than-expected event rates. Registered Phase NA (strategy RCT). Core reason the broad claim is contested.",
+      "n_int": 1108,
+      "year": 2019,
+      "finding": "In broad symptomatic AF, ablation did NOT significantly reduce all-cause mortality vs drug therapy on intention-to-treat (5.2% vs 6.1%; HR 0.85, 95% CI 0.60-1.21, P=0.38). Primary composite endpoint also negative (HR 0.86, 0.65-1.15)."
+    },
+    {
+      "source_id": "PMID:29385358",
+      "citation": "Marrouche NF, et al. Catheter Ablation for Atrial Fibrillation with Heart Failure (CASTLE-AF). N Engl J Med. 2018;378(5):417-427. NCT00643188. DOI:10.1056/NEJMoa1707855",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified against PubMed abstract: RCT restricted to AF WITH heart failure, NYHA II-IV, EF<=35%, implanted defibrillator \u2014 a subpopulation, not the broad symptomatic-AF population of the claim. Randomized 179 ablation / 184 medical; industry-funded (Biotronik). Correctly population_match=false.",
+      "n_int": 179,
+      "year": 2018,
+      "finding": "In AF + HFrEF (EF<=35%), ablation reduced all-cause death (13.4% vs 25.0%; HR 0.53, 95% CI 0.32-0.86, P=0.01) and the primary composite of death or HF hospitalization (28.5% vs 44.6%; HR 0.62, 95% CI 0.43-0.87, P=0.007)."
+    },
+    {
+      "source_id": "PMID:27029350",
+      "citation": "Di Biase L, et al. Ablation Versus Amiodarone for Treatment of Persistent Atrial Fibrillation in Patients With Congestive Heart Failure and an Implanted Device: Results From the AATAC Multicenter Randomized Trial. Circulation. 2016;133(17):1637-1644. NCT00729911. DOI:10.1161/CIRCULATIONAHA.115.019406",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified against PubMed + ClinicalTrials.gov: primary endpoint was AF recurrence, NOT mortality (mortality was secondary). Open-label RCT, n=203 (102 ablation / 101 amiodarone) in persistent AF + HFrEF (EF<40%) + ICD/CRT-D. HF subpopulation, so population_match=false; mortality reported so outcome_match=true.",
+      "n_int": 102,
+      "year": 2016,
+      "finding": "In persistent AF + HFrEF with device, ablation vs amiodarone showed lower all-cause mortality (8% vs 18%, P=0.037) as a secondary endpoint, plus less AF recurrence and fewer hospitalizations."
+    },
+    {
+      "source_id": "PMID:39444312",
+      "citation": "Sciacca V, Sohns C, et al. Effects of atrial fibrillation ablation on arrhythmia burden and ventricular function in end-stage heart failure: Lessons from CASTLE-HTx. Eur J Heart Fail. 2024. NCT04649801. DOI:10.1002/ejhf.3505",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified: CASTLE-HTx randomized n=194 end-stage HF patients eligible for transplant (EF<=35%, NYHA>=II, ICD). Primary composite = all-cause mortality, high-urgent transplantation, or LVAD implantation. Extreme-severity subpopulation, not broad symptomatic AF; population_match=false correct. This citation is the RCT substudy confirming the trial.",
+      "n_int": 97,
+      "year": 2024,
+      "finding": "In end-stage HF with AF, ablation reduced the primary composite of all-cause death, LVAD, or urgent transplantation vs medical therapy, with marked AF-burden reduction and LVEF improvement (29.2% to 39.1%)."
+    },
+    {
+      "source_id": "PMID:35949135",
+      "citation": "Yu Z, et al. Catheter Ablation Versus Medical Therapy for Atrial Fibrillation in Patients with Heart Failure: A Meta-Analysis of Randomized Controlled Trials. Anatol J Cardiol. 2022;26(9):685-695. DOI:10.5152/AnatolJCardiol.2022.1826",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified against PubMed abstract: restricted to AF WITH heart failure, 8 RCTs, 1693 patients. Confirms a mortality benefit specifically in the HF subpopulation, not in the general-AF population of the claim; population_match=false correct.",
+      "n_int": 0,
+      "year": 2022,
+      "finding": "In AF + heart failure, ablation reduced all-cause mortality vs medical therapy (RR 0.60, 95% CI 0.45-0.80, P<.001) and HF hospitalization (RR 0.58, 0.46-0.73), with improved LVEF (+5.25%) and exercise capacity."
+    },
+    {
+      "source_id": "PMID:37937825",
+      "citation": "Kheshti F, et al. Ablation versus medical therapy for patients with atrial fibrillation: An updated meta-analysis. Clin Cardiol. 2023;46(11):e24184. DOI:10.1002/clc.24184",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified against PubMed abstract: 31 studies / 27 RCTs, 6965 patients (ablation n=3643, medical n=3322); all-cause mortality RR 0.71 (0.57-0.88) = 29% reduction. Broad-AF pooled estimate, but the signal is driven substantially by HF-enriched trials (CASTLE-AF, AATAC) and heterogeneous populations; it does not overturn the negative pivotal general-AF RCT (CABANA). Illustrates why aggregate estimates look favorable while population-specific consensus stays contested.",
+      "n_int": 3643,
+      "year": 2023,
+      "finding": "Pooled across 27 RCTs (6965 pts), ablation was associated with a 29% reduction in all-cause mortality (RR 0.71, 95% CI 0.57-0.88), plus large reductions in hospitalization and AF recurrence; benefit heavily weighted by heart-failure trials."
+    }
+  ]
+}

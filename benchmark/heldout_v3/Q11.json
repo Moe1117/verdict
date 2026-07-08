@@ -1,0 +1,72 @@
+{
+  "claim_id": "Q11",
+  "claim": "Empagliflozin reduces cardiovascular death in patients with type 2 diabetes and cardiovascular disease",
+  "domain": "metabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The pivotal EMPA-REG OUTCOME trial (Zinman, NEJM 2015; N=7,020 T2D with established CVD) showed empagliflozin reduced death from cardiovascular causes by 38% versus placebo (HR 0.62, 95% CI 0.49-0.77), a prespecified component underlying the positive primary 3-point MACE (HR 0.86, 95.02% CI 0.74-0.99, P=0.04). This is a direct, statistically robust effect on the exact claimed outcome in the exact claimed population. The finding drove FDA approval (2016-12-02, sNDA 204629Orig1s008) of a cardiovascular death-reduction indication for empagliflozin (Jardiance) \u2014 the first oral antidiabetic to carry such a label \u2014 and is reflected in ADA/EASD and ESC guidelines recommending empagliflozin for T2D patients with established ASCVD to reduce CV death. Class-level meta-analysis (Zelniker, Lancet 2019, 3 CVOTs, N=34,322) confirms SGLT2 inhibitors reduce MACE only in patients with established ASCVD (HR 0.86) \u2014 precisely this population. CANVAS (canagliflozin) corroborates the class MACE benefit. The only nuance is that not every SGLT2i replicated the CV-death signal individually (DECLARE-TIMI 58 dapagliflozin did not reduce CV death), but this is drug- and population-specific (broader primary-prevention cohort) and does not undercut the empagliflozin-specific claim, which regulators and guidelines treat as established consensus.",
+  "outcome": "CV death / 3-point MACE",
+  "population": "T2D with established CVD",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. In the landmark EMPA-REG OUTCOME trial (Zinman et al., NEJM 2015), empagliflozin added to standard care reduced cardiovascular death by 38% (HR 0.62, 95% CI 0.49-0.77) versus placebo in 7,020 patients with type 2 diabetes and established cardiovascular disease, alongside significant reductions in all-cause mortality (32%) and heart-failure hospitalization (35%). This led the FDA in 2016 to approve empagliflozin (Jardiance) specifically to reduce the risk of cardiovascular death in adults with T2D and cardiovascular disease \u2014 the first diabetes drug with such an indication. The benefit is embedded in ADA and ESC guidelines. Class meta-analyses show the MACE/CV-death benefit of SGLT2 inhibitors is concentrated in patients with established atherosclerotic CVD, which matches this population exactly. The claim is strongly supported."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:26378978",
+      "citation": "Zinman B, et al. Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes (EMPA-REG OUTCOME). N Engl J Med. 2015;373(22):2117-2128. DOI:10.1056/NEJMoa1504720. NCT01131676.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind placebo-controlled CVOT, Boehringer Ingelheim/Lilly. No retraction (verified PubMed). Basis for FDA CV-death indication (FDA approval letter 2016-12-02).",
+      "n_int": 4687,
+      "year": 2015,
+      "finding": "In 7,020 T2D patients with established CVD, empagliflozin reduced death from cardiovascular causes by 38% vs placebo (HR 0.62, 95% CI 0.49-0.77) \u2014 a direct hit on the claimed outcome and population. Primary 3-point MACE positive (HR 0.86, 95.02% CI 0.74-0.99, P=0.04). All-cause death 32% RRR (HR ~0.68); HF hospitalization 35% RRR (HR ~0.65). Verified against PubMed abstract and FDA/sponsor sources."
+    },
+    {
+      "source_id": "PMID:28605608",
+      "citation": "Neal B, et al. Canagliflozin and Cardiovascular and Renal Events in Type 2 Diabetes (CANVAS Program). N Engl J Med. 2017;377(7):644-657. DOI:10.1056/NEJMoa1611925. NCT01032629/NCT01989754.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Confirmatory class RCT (different SGLT2i, canagliflozin). No retraction (verified PubMed). Amputation safety signal noted (HR 1.97).",
+      "n_int": 5795,
+      "year": 2017,
+      "finding": "In 10,142 T2D patients at high CV risk (65.6% with prior CVD), canagliflozin reduced 3-point MACE by 14% (HR 0.86, 95% CI 0.75-0.97). Supports the SGLT2-inhibitor class effect on MACE in the CVD population; CV-death component not individually significant but directionally consistent with empagliflozin."
+    },
+    {
+      "source_id": "PMID:30424892",
+      "citation": "Zelniker TA, et al. SGLT2 inhibitors for primary and secondary prevention of cardiovascular and renal outcomes in type 2 diabetes: a systematic review and meta-analysis of cardiovascular outcome trials. Lancet. 2019;393(10166):31-39. DOI:10.1016/S0140-6736(18)32590-X.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Meta-analysis of 3 CVOTs (EMPA-REG, CANVAS, DECLARE), 34,322 patients (60.2% established ASCVD). TIMI Study Group. No retraction (verified PubMed).",
+      "n_int": 17000,
+      "year": 2018,
+      "finding": "SGLT2 inhibitors reduced MACE by 11% (HR 0.89, 95% CI 0.83-0.96), with benefit CONFINED to patients with established atherosclerotic CVD (HR 0.86) and absent in those without (HR 1.00, p-interaction=0.0501). Directly confirms the claim's population restriction (T2D WITH CVD) is where CV/MACE benefit is real."
+    },
+    {
+      "source_id": "PMID:30415602",
+      "citation": "Wiviott SD, et al. Dapagliflozin and Cardiovascular Outcomes in Type 2 Diabetes (DECLARE-TIMI 58). N Engl J Med. 2019;380(4):347-357. DOI:10.1056/NEJMoa1812389. NCT01730534.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Different SGLT2i (dapagliflozin); 59% of enrollees (10,186/17,160) had multiple risk factors WITHOUT established ASCVD, unlike EMPA-REG's established-CVD-only cohort. No retraction (verified PubMed). population_match=false is honest \u2014 overall cohort does not match 'T2D with established CVD'.",
+      "n_int": 8582,
+      "year": 2018,
+      "finding": "Dapagliflozin did NOT significantly reduce MACE (HR 0.93, 95% CI 0.84-1.03) or cardiovascular death (HR 0.98, 95% CI 0.82-1.17) in a broader, lower-risk T2D population, though it reduced CV death/HF hospitalization (HR 0.83) driven by HF hospitalization. Contrasting null on CV death \u2014 but drug- and population-specific (broader primary-prevention cohort), so it does not contradict the empagliflozin-specific, CVD-population claim."
+    }
+  ]
+}

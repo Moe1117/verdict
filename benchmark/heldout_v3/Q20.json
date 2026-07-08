@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q20",
+  "claim": "Trastuzumab emtansine improves survival in HER2-positive advanced breast cancer previously treated with trastuzumab",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented oncology consensus is that T-DM1 improves overall survival in previously-treated HER2+ advanced breast cancer. The pivotal phase 3 EMILIA trial (Verma, NEJM 2012, N=991) crossed its prespecified OS efficacy stopping boundary at the second interim analysis (median OS 30.9 vs 25.1 mo; HR 0.68, p<0.001) in patients previously treated with trastuzumab and a taxane; the final descriptive analysis reaffirmed benefit (29.9 vs 25.9 mo; HR 0.75) despite 27% crossover. TH3RESA (final OS, Lancet Oncol 2017, N=602) independently confirmed an OS benefit in more heavily pretreated patients (>=2 prior HER2-directed regimens incl. trastuzumab and lapatinib): median OS 22.7 vs 15.8 mo, HR 0.68, p=0.0007, crossing its stopping boundary. FDA approved Kadcyla (Feb 22, 2013, BLA 125427) for this exact indication based on EMILIA. MARIANNE (JCO 2016) is in the first-line/untreated setting and showed noninferiority (not superiority) on PFS, which does not bear on the previously-treated OS claim. Two concordant positive phase 3 OS RCTs plus regulatory approval = Supported.",
+  "outcome": "overall survival",
+  "population": "HER2+ advanced breast cancer",
+  "provenance": "PubMed-verified PMIDs + FDA approval record",
+  "build_confidence": "high",
+  "notes": "All rows independently re-verified against PubMed metadata and the FDA press release/label; no defects found beyond a cosmetic source_id fix on the regulatory row.",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Trastuzumab emtansine (T-DM1, Kadcyla) improves overall survival in HER2-positive advanced/metastatic breast cancer previously treated with trastuzumab. The pivotal EMILIA phase 3 trial (Verma et al., NEJM 2012) randomized 991 patients previously treated with trastuzumab and a taxane to T-DM1 vs lapatinib plus capecitabine, and showed a significant OS benefit (median 30.9 vs 25.1 months; HR 0.68, p<0.001), crossing the prespecified efficacy stopping boundary. This led to FDA approval in February 2013. The TH3RESA trial confirmed an OS benefit in even more heavily pretreated patients (median 22.7 vs 15.8 months; HR 0.68). The claim is well supported by high-quality randomized evidence."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:23020162",
+      "citation": "Verma S, et al. Trastuzumab emtansine for HER2-positive advanced breast cancer (EMILIA). N Engl J Med. 2012;367(19):1783-91. NCT00829166. DOI:10.1056/NEJMoa1209124",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 RCT (PubMed article type 'Clinical Trial, Phase III'); no retraction. Second interim OS crossed the prespecified efficacy stopping boundary; industry-funded (Roche/Genentech) pivotal registration trial. Verified against PubMed.",
+      "n_int": 495,
+      "year": 2012,
+      "finding": "Pivotal phase 3 (N=991) in HER2+ advanced BC previously treated with trastuzumab + taxane. T-DM1 (n=495) vs lapatinib+capecitabine (n=496): median OS 30.9 vs 25.1 mo, HR 0.68 (95% CI 0.55-0.85), p<0.001, crossing the OS efficacy boundary. Co-primary PFS also improved (9.6 vs 6.4 mo, HR 0.65). Direct OS support in the exact claimed population."
+    },
+    {
+      "source_id": "PMID:28526536",
+      "citation": "Dieras V, et al. Trastuzumab emtansine vs capecitabine+lapatinib (EMILIA): final overall survival results. Lancet Oncol. 2017;18(6):732-742. NCT00829166. DOI:10.1016/S1470-2045(17)30312-1",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Descriptive final OS analysis of EMILIA; 27% (136/496) of control crossed over to T-DM1, biasing toward the null, yet benefit persisted. Verified against PubMed; no retraction.",
+      "n_int": 495,
+      "year": 2017,
+      "finding": "Final OS analysis of EMILIA: median OS 29.9 vs 25.9 mo, HR 0.75 (95% CI 0.64-0.88), with fewer grade >=3 AEs on T-DM1 (48% vs 60%). Confirms the interim OS benefit even after 27% crossover. Confirmatory OS support."
+    },
+    {
+      "source_id": "PMID:28526538",
+      "citation": "Krop IE, et al. Trastuzumab emtansine vs treatment of physician's choice (TH3RESA): final overall survival results. Lancet Oncol. 2017;18(6):743-754. NCT01419197. DOI:10.1016/S1470-2045(17)30313-3",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 RCT; no retraction. OS stopping boundary crossed, serving as the final confirmatory OS analysis; 47% (93/198) crossover from control biases toward the null yet significant benefit remained. Verified against PubMed.",
+      "n_int": 404,
+      "year": 2017,
+      "finding": "Independent confirmatory phase 3 (N=602) in more heavily pretreated HER2+ advanced BC (>=2 prior HER2 regimens incl. trastuzumab + lapatinib, plus a taxane in any setting). T-DM1 (n=404) vs treatment of physician's choice (n=198): median OS 22.7 vs 15.8 mo, HR 0.68 (95% CI 0.54-0.85), p=0.0007, crossing the OS boundary. Second independent RCT confirming OS benefit in previously-treated patients."
+    },
+    {
+      "source_id": "PMID:28056202",
+      "citation": "Perez EA, et al. Trastuzumab emtansine with or without pertuzumab vs trastuzumab plus taxane for HER2+ advanced breast cancer: primary results from MARIANNE. J Clin Oncol. 2016;35(2):141-148. NCT01120184. DOI:10.1200/JCO.2016.67.4887",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 RCT; no retraction. Population is FIRST-LINE / no prior therapy for advanced disease (does NOT match the 'previously treated' claim); primary endpoint was PFS (surrogate), not OS. Verified against PubMed.",
+      "n_int": 367,
+      "year": 2016,
+      "finding": "First-line phase 3 (N=1095, previously UNTREATED advanced disease). T-DM1 (+/- pertuzumab) was noninferior but NOT superior to trastuzumab+taxane on PFS (median 13.7 control vs 14.1 T-DM1 vs 15.2 T-DM1+pertuzumab). Boundary/context row: shows T-DM1's advantage is specific to the previously-treated setting; population mismatch (untreated) and surrogate primary endpoint (PFS) mean it neither supports nor contradicts the OS claim in the treated population."
+    },
+    {
+      "source_id": "NCT00829166",
+      "citation": "US FDA. Kadcyla (ado-trastuzumab emtansine) approval for HER2-positive metastatic breast cancer previously treated with trastuzumab and a taxane. Approved Feb 22, 2013 (based on EMILIA). BLA 125427.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "FDA priority-review full approval (Feb 22, 2013), BLA 125427; indication language matches the claim exactly (prior trastuzumab + taxane). Confirmed via FDA press release and label. Regulatory anchor (source_id references the underlying EMILIA NCT; actual approval id is BLA 125427).",
+      "n_int": 495,
+      "year": 2013,
+      "finding": "FDA granted full approval of Kadcyla (Feb 22, 2013, BLA 125427) as a single agent for HER2+ metastatic breast cancer previously treated with trastuzumab and a taxane, based on the EMILIA OS and PFS results. Regulatory consensus endorsing the OS claim in the exact population."
+    }
+  ]
+}

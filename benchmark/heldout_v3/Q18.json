@@ -1,0 +1,86 @@
+{
+  "claim_id": "Q18",
+  "claim": "Ipilimumab improves survival in metastatic melanoma",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Ipilimumab was the first agent to demonstrate a statistically significant overall-survival benefit in metastatic melanoma. Two independent phase 3 RCTs establish this and both used OS (not a surrogate) as the primary endpoint: MDX010-20 (Hodi et al., NEJM 2010, PMID 20525992, NCT00094653) showed ipilimumab monotherapy 10.1 vs 6.4 mo gp100 (HR 0.66, P=0.003) in previously treated patients; and Robert et al. (NEJM 2011, PMID 21639810, NCT00324155) showed ipilimumab+dacarbazine 11.2 vs 9.1 mo (HR 0.72, P<0.001) in previously untreated patients. These data supported FDA approval of ipilimumab (Yervoy) on 2011-03-25 (Drugs@FDA 125377Orig1s000) \u2014 the first drug FDA approved on a demonstrated OS benefit in metastatic melanoma (Pazdur: 'the first therapy approved by the FDA to clearly demonstrate that patients with metastatic melanoma live longer'). Later trials (CheckMate 067 nivolumab; KEYNOTE-006 pembrolizumab) show anti-PD-1 agents are superior to ipilimumab monotherapy and have displaced it as first-line, but they use ipilimumab as an ACTIVE comparator and do NOT contradict that ipilimumab confers an OS benefit over prior standards. All four PubMed records were re-verified \u2014 none is a Retracted Publication. The claim is supported by regulatory and clinical consensus.",
+  "outcome": "overall survival",
+  "population": "metastatic (unresectable stage III/IV) melanoma",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Ipilimumab, an anti-CTLA-4 monoclonal antibody, was the first therapy ever shown to improve overall survival in metastatic melanoma. In the pivotal phase 3 MDX010-20 trial (Hodi et al., NEJM 2010), ipilimumab improved median overall survival to roughly 10 months versus about 6.4 months with a gp100 vaccine (HR ~0.66). A second phase 3 trial (Robert et al., NEJM 2011) confirmed a survival benefit for ipilimumab plus dacarbazine versus dacarbazine alone (11.2 vs 9.1 months, HR 0.72). These results led to FDA approval of ipilimumab (Yervoy) in 2011. While anti-PD-1 agents (nivolumab, pembrolizumab) have since proven superior and displaced ipilimumab monotherapy as first-line, ipilimumab genuinely improves survival and remains part of combination regimens. The claim is supported."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:20525992",
+      "citation": "Hodi FS, et al. Improved survival with ipilimumab in patients with metastatic melanoma. N Engl J Med. 2010;363(8):711-723. DOI:10.1056/NEJMoa1003466. (MDX010-20; NCT00094653)",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via PubMed: Clinical Trial Phase III, RCT, no retraction (PMC3549297). Primary endpoint = overall survival. First-ever OS benefit in metastatic melanoma.",
+      "n_int": 137,
+      "year": 2010,
+      "finding": "Ipilimumab monotherapy (3 mg/kg) vs gp100 vaccine in previously treated metastatic melanoma (676 total, 3:1:1; ipilimumab-alone arm n=137). Median OS 10.1 vs 6.4 mo; HR for death 0.66, P=0.003. Primary endpoint = overall survival. First agent to improve OS in this disease."
+    },
+    {
+      "source_id": "PMID:21639810",
+      "citation": "Robert C, et al. Ipilimumab plus dacarbazine for previously untreated metastatic melanoma. N Engl J Med. 2011;364(26):2517-2526. DOI:10.1056/NEJMoa1104621. (NCT00324155)",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via PubMed: Clinical Trial Phase III, RCT, no retraction. NCT00324155 confirmed in abstract. Independent confirmatory first-line trial; primary endpoint = OS.",
+      "n_int": 250,
+      "year": 2011,
+      "finding": "Ipilimumab (10 mg/kg) + dacarbazine vs dacarbazine + placebo in 502 previously untreated patients (1:1, ~250 per arm). Median OS 11.2 vs 9.1 mo; HR 0.72, P<0.001; higher 1/2/3-yr survival. Primary endpoint = overall survival. Confirms ipilimumab OS benefit first-line."
+    },
+    {
+      "source_id": "PMID:26027431",
+      "citation": "Larkin J, Chiarion-Sileni V, Gonzalez R, et al. Combined Nivolumab and Ipilimumab or Monotherapy in Untreated Melanoma. N Engl J Med. 2015;373(1):23-34. DOI:10.1056/NEJMoa1504030. (CheckMate 067; NCT01844505)",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via PubMed (PMC5698905, no retraction). PFS and OS were COPRIMARY endpoints; this 2015 publication reports PFS (a surrogate) \u2014 hence outcome_match=false. Ipilimumab is the ACTIVE comparator arm; establishes anti-PD-1 superiority, does not contradict ipilimumab's own OS benefit.",
+      "n_int": 314,
+      "year": 2015,
+      "finding": "Three-arm phase 3 (945 pts, 1:1:1): nivolumab, nivolumab+ipilimumab, or ipilimumab alone (~315 per arm). Ipilimumab-alone PFS 2.9 mo vs 11.5 mo (combo) and 6.9 mo (nivo). Ipilimumab is the inferior control arm; endpoint reported here = PFS (surrogate)."
+    },
+    {
+      "source_id": "PMID:28822576",
+      "citation": "Schachter J, Ribas A, Long GV, et al. Pembrolizumab versus ipilimumab for advanced melanoma: final overall survival results (KEYNOTE-006). Lancet. 2017;390(10105):1853-1862. DOI:10.1016/S0140-6736(17)31601-X. (NCT01866319)",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via PubMed: Clinical Trial Phase III, RCT, no retraction. Ipilimumab is again the ACTIVE comparator; pembrolizumab superior (HR 0.68). Ipilimumab arm still reached median OS 16.0 mo \u2014 supersedes but does not refute the claim.",
+      "n_int": 278,
+      "year": 2017,
+      "finding": "Phase 3 (834 pts, 1:1:1): pembrolizumab (two schedules) vs ipilimumab (n=278). Median OS not reached (pembro) vs 16.0 mo (ipilimumab); HR ~0.68 favoring pembrolizumab; 24-mo OS 43% ipilimumab vs 55% pembro. Ipilimumab is the comparator, inferior to anti-PD-1 but an active OS-conferring agent."
+    },
+    {
+      "source_id": "NCT00094653",
+      "citation": "FDA approval of ipilimumab (Yervoy), Bristol-Myers Squibb, March 25, 2011, for unresectable/metastatic melanoma, based on the MDX010-20 (NCT00094653) overall-survival benefit. U.S. FDA (Drugs@FDA 125377Orig1s000) / YERVOY prescribing information.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified: FDA approval date 2011-03-25 confirmed via FDA approval letter (125377Orig1s000), NCI drug info, and FDA press release. Grounded in an OS endpoint (MDX010-20). First FDA approval on a demonstrated OS benefit in advanced melanoma. n_int=676 is the full pivotal-study N, not an arm count. source_id reuses the pivotal-trial NCT.",
+      "n_int": 676,
+      "year": 2011,
+      "finding": "FDA approved ipilimumab (Yervoy) on 2011-03-25 for unresectable or metastatic melanoma, based on the OS benefit in MDX010-20 (676 pts). FDA (Pazdur) characterized it as the first therapy to clearly demonstrate that metastatic melanoma patients live longer. Regulatory consensus that ipilimumab improves survival in this population."
+    }
+  ]
+}

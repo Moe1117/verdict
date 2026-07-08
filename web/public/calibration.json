@@ -1,48 +1,48 @@
 {
   "note": "Certainty calibration fit on the DEV benchmark; validated out-of-sample on the held-out sets. Buckets with n<5 report no number (measured reject option). No gate or threshold is tuned to these figures.",
   "dev_n": 32,
-  "heldout_n": 42,
-  "ece_out_of_sample": 0.1333,
+  "heldout_n": 82,
+  "ece_out_of_sample": 0.1683,
   "buckets": [
     {
       "level": "Very Low",
-      "n": 7,
-      "accuracy": 0.429,
+      "n": 9,
+      "accuracy": 0.444,
       "ci": [
-        0.158,
-        0.75
+        0.189,
+        0.733
       ],
-      "confidence": "43% (95% CI 16%-75%, n=7)"
+      "confidence": "44% (95% CI 19%-73%, n=9)"
     },
     {
       "level": "Low",
-      "n": 8,
-      "accuracy": 0.875,
+      "n": 16,
+      "accuracy": 0.562,
       "ci": [
-        0.529,
-        0.978
+        0.332,
+        0.769
       ],
-      "confidence": "88% (95% CI 53%-98%, n=8)"
+      "confidence": "56% (95% CI 33%-77%, n=16)"
     },
     {
       "level": "Moderate",
-      "n": 13,
-      "accuracy": 0.769,
+      "n": 16,
+      "accuracy": 0.812,
       "ci": [
-        0.497,
-        0.918
+        0.57,
+        0.934
       ],
-      "confidence": "77% (95% CI 50%-92%, n=13)"
+      "confidence": "81% (95% CI 57%-93%, n=16)"
     },
     {
       "level": "High",
-      "n": 46,
-      "accuracy": 0.891,
+      "n": 73,
+      "accuracy": 0.863,
       "ci": [
-        0.77,
-        0.953
+        0.766,
+        0.924
       ],
-      "confidence": "89% (95% CI 77%-95%, n=46)"
+      "confidence": "86% (95% CI 77%-92%, n=73)"
     }
   ],
   "reliability": [
@@ -50,55 +50,55 @@
       "level": "Very Low",
       "predicted": null,
       "dev_n": 4,
-      "observed_heldout": 0.333,
-      "heldout_n": 3
+      "observed_heldout": 0.4,
+      "heldout_n": 5
     },
     {
       "level": "Low",
       "predicted": 0.8,
       "dev_n": 5,
-      "observed_heldout": 1.0,
-      "heldout_n": 3
+      "observed_heldout": 0.455,
+      "heldout_n": 11
     },
     {
       "level": "Moderate",
       "predicted": null,
       "dev_n": 1,
-      "observed_heldout": 0.75,
-      "heldout_n": 12
+      "observed_heldout": 0.8,
+      "heldout_n": 15
     },
     {
       "level": "High",
       "predicted": 1.0,
       "dev_n": 22,
-      "observed_heldout": 0.792,
-      "heldout_n": 24
+      "observed_heldout": 0.804,
+      "heldout_n": 51
     }
   ],
   "risk_coverage": [
     {
       "min_certainty": "Very Low",
       "coverage": 1.0,
-      "accuracy": 0.824,
-      "n_answered": 74
+      "accuracy": 0.781,
+      "n_answered": 114
     },
     {
       "min_certainty": "Low",
-      "coverage": 0.905,
-      "accuracy": 0.866,
-      "n_answered": 67
+      "coverage": 0.921,
+      "accuracy": 0.81,
+      "n_answered": 105
     },
     {
       "min_certainty": "Moderate",
-      "coverage": 0.797,
-      "accuracy": 0.864,
-      "n_answered": 59
+      "coverage": 0.781,
+      "accuracy": 0.854,
+      "n_answered": 89
     },
     {
       "min_certainty": "High",
-      "coverage": 0.622,
-      "accuracy": 0.891,
-      "n_answered": 46
+      "coverage": 0.64,
+      "accuracy": 0.863,
+      "n_answered": 73
     }
   ]
 }

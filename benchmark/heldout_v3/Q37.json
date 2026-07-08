@@ -1,0 +1,103 @@
+{
+  "claim_id": "Q37",
+  "claim": "Lumasiran reduces urinary oxalate in primary hyperoxaluria type 1",
+  "domain": "rare/gene",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Lumasiran (Oxlumo) is an FDA (24 Nov 2020, NDA214103) and EMA-approved GalNAc-siRNA that silences hepatic glycolate oxidase (HAO1), reducing oxalate overproduction in PH1. The claimed outcome \u2014 urinary oxalate \u2014 IS the disease driver and the explicit regulatory basis of approval (FDA label: 'to lower urinary and plasma oxalate levels'). The pivotal double-blind placebo-controlled Phase 3 ILLUMINATE-A (Garrelfs, NEJM 2021; NCT03681184, N=39) met its primary endpoint: ~65% least-squares mean reduction in 24-h urinary oxalate corrected for BSA vs placebo (adjusted difference ~53 percentage points, p<0.001), with a large fraction normalizing. This was corroborated by the randomized Phase 1/2 study (Frishberg, CJASN 2021; up to ~75% UOx reduction), the ILLUMINATE-A final 60-month results (CJASN 2026; ~54% sustained UOx reduction), and single-arm Phase 3 trials where an RCT could not ethically be run: ILLUMINATE-B in infants/young children <6 yr (72% reduction in spot UOx:creatinine) and ILLUMINATE-C in advanced kidney disease/dialysis (which used PLASMA oxalate as primary because urinary oxalate is unreliable in renal failure). Consensus across the pivotal RCT, confirmatory trials, and regulatory action is unambiguous: Supported. ILLUMINATE-C's primary endpoint is a plasma (not urinary) surrogate in a CKD subset, so it partially matches; it does not contradict.",
+  "outcome": "urinary oxalate",
+  "population": "primary hyperoxaluria type 1",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Lumasiran (Oxlumo), an RNAi therapeutic that silences hepatic glycolate oxidase (HAO1) to cut oxalate overproduction, clearly reduces urinary oxalate in primary hyperoxaluria type 1. The pivotal Phase 3 placebo-controlled ILLUMINATE-A trial showed roughly a 65% reduction in 24-hour urinary oxalate from baseline (about a 53-percentage-point difference vs placebo), with most treated patients normalizing or near-normalizing urinary oxalate. This was confirmed in infants/young children (ILLUMINATE-B) and supported the FDA/EMA approval in 2020. This is one of the best-established efficacy claims in rare metabolic disease."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:33789010",
+      "citation": "Garrelfs SF, et al. Lumasiran, an RNAi Therapeutic for Primary Hyperoxaluria Type 1. N Engl J Med. 2021;384(13):1216-1226. DOI:10.1056/NEJMoa2021712 (ILLUMINATE-A, NCT03681184).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind placebo-controlled Phase 3; PubMed article types include 'Randomized Controlled Trial' and 'Clinical Trial, Phase III'. Basis of FDA/EMA approval. No retraction. Verified via PubMed get_article_metadata (title/journal/pages/DOI exact) and ClinicalTrials.gov (NCT03681184 primary endpoint = percent change in 24-h urinary oxalate corrected for BSA).",
+      "n_int": 26,
+      "year": 2021,
+      "finding": "Primary endpoint met: ~65.4% least-squares mean reduction in 24-h urinary oxalate (BSA-corrected) from baseline to month 6 with lumasiran vs ~11.8% with placebo (adjusted difference ~53.5 percentage points, p<0.001); 52% of lumasiran patients reached urinary oxalate at or below normal. Direct urinary-oxalate outcome in PH1. n_int=26 = lumasiran arm; N=39 total enrolled."
+    },
+    {
+      "source_id": "PMID:33985991",
+      "citation": "Frishberg Y, et al. Phase 1/2 Study of Lumasiran for Treatment of Primary Hyperoxaluria Type 1: A Placebo-Controlled Randomized Clinical Trial. Clin J Am Soc Nephrol. 2021;16(7):1025-1036. DOI:10.2215/CJN.14730920 (NCT02706886).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Randomized placebo-controlled Phase 1/2 dose-finding study; PubMed article types include 'Randomized Controlled Trial', 'Clinical Trial, Phase I', 'Clinical Trial, Phase II'. Primary endpoint was safety (AE incidence) with urinary oxalate as a pharmacodynamic outcome \u2014 outcome_match=true retained because the claimed outcome (urinary oxalate reduction) was directly measured and strongly positive. Verified via PubMed get_article_metadata.",
+      "n_int": 20,
+      "year": 2021,
+      "finding": "20 PH1 patients (+32 healthy in part A): lumasiran produced a mean maximal reduction of ~75% from baseline in 24-h urinary oxalate across dosing cohorts; ALL PH1 patients achieved urinary oxalate <=1.5x ULN (near-normalization). Same direction on the claimed outcome; supported the ILLUMINATE-A dose."
+    },
+    {
+      "source_id": "PMID:41343248",
+      "citation": "Frishberg Y, Saland JM, Lieske JC, et al. (incl. Sas DJ). Final Results of the ILLUMINATE-A Phase 3 Clinical Trial of Lumasiran for Primary Hyperoxaluria 1. Clin J Am Soc Nephrol. 2026;21(3):377-388. DOI:10.2215/CJN.0000000916 (NCT03681184, 60-month final analysis).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED: corpus originally dated this 2024 and led with Sas DJ; actual publication is CJASN 21(3):377-388, March 2026 (PMID:41343248), lead author Frishberg Y. Long-term/extension of the pivotal RCT \u2014 ILLUMINATE-A had a randomized double-blind placebo-controlled 6-month period followed by open-label extension; placebo group crossed to lumasiran. design=rct retained on the strength of the parent controlled design. Verified via Exa (Ovid/Mayo Clinic Elsevier Pure abstract, PubMed 41343248).",
+      "n_int": 39,
+      "year": 2026,
+      "finding": "Final 60-month ILLUMINATE-A analysis: sustained ~54% reduction in 24-h urinary oxalate at month 60 in both the lumasiran/lumasiran and placebo/lumasiran groups; plasma oxalate down ~35-38%; eGFR stable, reduced kidney stone event rates, improved nephrocalcinosis. Durable urinary-oxalate lowering."
+    },
+    {
+      "source_id": "PMID:35913563",
+      "citation": "Hayes W, Sas DJ, et al. Efficacy and safety of lumasiran for infants and young children with primary hyperoxaluria type 1: 12-month analysis of the phase 3 ILLUMINATE-B trial. Pediatr Nephrol. 2022;38(4):1075-1086. DOI:10.1007/s00467-022-05684-1 (NCT03905694).",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED design: open-label SINGLE-ARM Phase 3 (no placebo, ethically justified in infants <6 yr) \u2014 PubMed article types show 'Clinical Trial, Phase III' but NO 'Randomized Controlled Trial' tag, so reclassified from 'rct' to 'prospective cohort' (single-arm interventional). Primary endpoint IS spot urinary oxalate:creatinine (outcome_match=true). Verified via PubMed get_article_metadata + Exa (PMC9925547, Alnylam PR).",
+      "n_int": 18,
+      "year": 2022,
+      "finding": "Infants/young children <6 yr (N=18): ~72% least-squares-mean reduction in spot urinary oxalate:creatinine ratio at month 6 (95% CI 66.4-77.5%), maintained at 72% through month 12 (89%/68%/71% across <10/10-20/>=20 kg weight subgroups); plasma oxalate also fell (32%->47%). Confirms the urinary-oxalate effect in the youngest PH1 patients."
+    },
+    {
+      "source_id": "PMID:35843439",
+      "citation": "Michael M, et al. Lumasiran for Advanced Primary Hyperoxaluria Type 1: Phase 3 ILLUMINATE-C Trial. Am J Kidney Dis. 2022;81(2):145-155. DOI:10.1053/j.ajkd.2022.05.012 (NCT04152200).",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED design: open-label SINGLE-ARM Phase 3 in advanced CKD/dialysis \u2014 PubMed article types show 'Clinical Trial, Phase III' but NO 'Randomized Controlled Trial' tag, so reclassified from 'rct' to 'prospective cohort'. PRIMARY endpoint is PLASMA oxalate (surrogate substitution: urinary oxalate is unreliable in renal failure/dialysis); urinary oxalate measured only as secondary -> outcome_match=false (correct). Population is a severe CKD subset (population_match=true, still PH1). Verified via PubMed get_article_metadata + Exa.",
+      "n_int": 21,
+      "year": 2022,
+      "finding": "Advanced kidney disease incl. hemodialysis (N=21): plasma oxalate fell ~33% (cohort A, not on HD) and ~42% (cohort B, on HD) at month 6; secondary spot urinary oxalate:creatinine also improved. Consistent direction, but the CLAIMED outcome (urinary oxalate) is only a secondary endpoint here \u2014 primary is a plasma surrogate."
+    },
+    {
+      "source_id": "DOI:10.1007/s40265-023-01987-1",
+      "citation": "Kang C. Lumasiran: A Review in Primary Hyperoxaluria Type 1. Drugs. 2024;84(2):219-226. DOI:10.1007/s40265-023-01987-1 (PMC10981577).",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED CITATION: corpus fabricated the authorship/year as 'Scott LJ, Keam SJ. Drugs 2023;83(8):733-740'; the DOI is real but resolves to Kang C, Drugs 2024;84(2):219-226 (Adis Drug Evaluation, open access, PMC10981577). Secondary synthesis, not primary data (n_int=0). Verified via Exa (Springer Nature Link + PMC).",
+      "n_int": 0,
+      "year": 2024,
+      "finding": "Adis review of the full ILLUMINATE program: in double-blind placebo-controlled ILLUMINATE-A, lumasiran was significantly more effective than placebo in reducing 24-h urinary oxalate (aged >=6 yr), sustained through 36 months; single-arm ILLUMINATE-B reduced urinary oxalate:creatinine and plasma oxalate in <6 yr; single-arm ILLUMINATE-C reduced plasma oxalate in dialysis and non-dialysis patients. FDA/EMA approved. Reflects established consensus that lumasiran reduces urinary oxalate in PH1."
+    }
+  ],
+  "provenance": "Re-verified independently. PubMed get_article_metadata confirmed titles/journals/pages/DOIs/article-types for PMIDs 33789010, 33985991, 35913563, 35843439 (checked for 'Retracted Publication' \u2014 none). ClinicalTrials.gov get_trial_details NCT03681184 confirmed Phase 3 randomized double-blind placebo-controlled, N=39, primary endpoint = percent change in 24-h urinary oxalate corrected for BSA. Exa web_search verified the two DOI-only rows: DOI:10.2215/CJN.0000000916 = Frishberg et al., CJASN 21(3):377-388 (2026, PMID:41343248); DOI:10.1007/s40265-023-01987-1 = Kang C, Drugs 84(2):219-226 (2024, PMC10981577). FDA approval date confirmed 24 Nov 2020 (Alnylam PR + DailyMed NDA214103, label indicates lowering urinary and plasma oxalate). Per PubMed terms: based on articles retrieved from PubMed; DOIs included.",
+  "notes": "6 verified rows survive; defensible gold consensus -> status='revised'. Two citation errors fixed (Row 3 year 2024->2026 + lead author + PMID added; Row 6 fabricated Scott/Keam citation replaced with the real Kang C 2024 review that the DOI resolves to). Two single-arm Phase 3 trials (ILLUMINATE-B, -C) reclassified from 'rct' to 'prospective cohort' per PubMed article-type check (no RCT tag). No hallucinated PMIDs, no wrong effect directions, no fabricated retractions, no wrong N (n_int values checked: 26 lumasiran arm of 39, 20, 39, 18, 21, 0). No conflicting trial wrongly marked population_match=false \u2014 all rows are genuine PH1 and none contradict the claim. ILLUMINATE-C outcome_match=false correctly flags its plasma-oxalate surrogate primary endpoint. dramatic_effect=false correct throughout (pivotal evidence is a proper placebo-controlled RCT, not all-or-none).",
+  "build_confidence": "high"
+}

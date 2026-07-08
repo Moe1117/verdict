@@ -1,0 +1,75 @@
+{
+  "claim_id": "Q16",
+  "claim": "Oral semaglutide reduces cardiovascular events in patients with type 2 diabetes",
+  "domain": "metabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "SOUL (McGuire et al., NEJM 2025; NCT03914326), a dedicated, event-driven, double-blind superiority cardiovascular outcomes trial in 9,650 T2D patients aged >=50 with atherosclerotic CVD and/or CKD, met its primary endpoint: 3-point MACE (CV death, nonfatal MI, nonfatal stroke) HR 0.86 (95% CI 0.77-0.96, P=0.006) for oral semaglutide 14 mg vs placebo on top of standard care. This is a hard clinical endpoint (not a surrogate) in the exact claimed population. It is corroborated by a trial-level meta-analysis (Lee/Sattar, Diabetes Care 2025) of 10 long-acting GLP-1RA CVOTs (n=71,351) showing MACE HR 0.86 (0.81-0.90) with no significant heterogeneity by administration route (oral vs subcutaneous), and is mechanistically concordant with the injectable-semaglutide class effect seen in SUSTAIN-6 (MACE HR 0.74). The earlier oral-semaglutide trial PIONEER 6 was a non-inferiority CV-safety trial (HR 0.79, 95% CI 0.57-1.11) that established safety but was not powered for and did not demonstrate MACE superiority; SOUL was designed and adequately powered to answer the efficacy question and did so. Consensus (ADA Standards of Care, positive superiority CVOT with regulatory-grade evidence) is that oral semaglutide reduces MACE in high-CV-risk T2D. Verdict: Supported.",
+  "outcome": "3-point MACE (composite of cardiovascular death, nonfatal myocardial infarction, nonfatal stroke)",
+  "population": "Type 2 diabetes at high cardiovascular risk (established atherosclerotic CVD and/or CKD)",
+  "provenance": "PubMed (via bio-research MCP): SOUL primary results PMID 40162642 (DOI 10.1056/NEJMoa2501006); PIONEER 6 PMID 31185157 (DOI 10.1056/NEJMoa1901118); SUSTAIN-6 PMID 27633186 (DOI 10.1056/NEJMoa1607141); meta-analysis PMID 40156846 (DOI 10.2337/dc25-0241). ClinicalTrials.gov NCT03914326 (SOUL) confirmed (Phase 3, Novo Nordisk, enrollment 9651). All four PMIDs, DOIs, titles, Ns, and effect estimates independently re-verified against source abstracts.",
+  "notes": "Surrogate check: primary outcome is a hard 3-point MACE composite, NOT a surrogate \u2014 outcome_match TRUE for the two oral-semaglutide RCTs and the meta-analysis. SUSTAIN-6 uses the same molecule but subcutaneous route, so it informs the class effect but is a formulation mismatch to the 'oral' claim (population_match FALSE on route; it agrees directionally so is not a contradicting trial). PIONEER 6 was non-inferiority-only: MACE point estimate favorable but 95% CI crosses 1.0, so direction coded 0 (did not establish reduction). No contradicting RCT exists; no dramatic_effect (chronic disease, ordinary RCT effect sizes ~14% RRR). Verified: no hallucinated PMID, no wrong N, no wrong direction, no mislabeled design, no fabricated retraction.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Oral semaglutide reduces the risk of major adverse cardiovascular events in patients with type 2 diabetes at high cardiovascular risk. The SOUL trial (2025), a large randomized placebo-controlled cardiovascular outcomes trial in ~9,650 patients with T2D and established atherosclerotic cardiovascular disease and/or chronic kidney disease, showed that once-daily oral semaglutide 14 mg significantly lowered 3-point MACE (cardiovascular death, nonfatal MI, nonfatal stroke) versus placebo, with a hazard ratio of about 0.86 (roughly a 14% relative risk reduction). This is consistent with the earlier safety trial PIONEER 6 and with the cardiovascular benefit of injectable semaglutide (SUSTAIN-6). The benefit is a class effect of long-acting GLP-1 receptor agonists and extends to the oral formulation."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:40162642",
+      "citation": "McGuire DK, Marx N, Mulvagh SL, et al. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes (SOUL). N Engl J Med. 2025. DOI:10.1056/NEJMoa2501006. NCT03914326.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed NEJM primary-results paper; abstract confirms double-blind, event-driven, superiority CVOT; no retraction/expression-of-concern found. (PubMed article_types also lists 'Equivalence Trial' but abstract explicitly states 'superiority trial'.)",
+      "n_int": 4825,
+      "year": 2025,
+      "finding": "Pivotal superiority CVOT: 9,650 T2D pts aged >=50 with ASCVD and/or CKD; oral semaglutide 14 mg vs placebo. Primary 3-point MACE 579/4825 (12.0%) vs 668/4825 (13.8%), HR 0.86 (95% CI 0.77-0.96), P=0.006. No increase in serious adverse events (47.9% vs 50.3%). Directly supports the claim on the exact outcome and population."
+    },
+    {
+      "source_id": "PMID:31185157",
+      "citation": "Husain M, Birkenfeld AL, Donsmark M, et al. Oral Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes (PIONEER 6). N Engl J Med. 2019. DOI:10.1056/NEJMoa1901118. NCT02692716.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed NEJM Phase III equivalence/non-inferiority trial; no retraction found.",
+      "n_int": 1591,
+      "year": 2019,
+      "finding": "Non-inferiority CV-safety trial of oral semaglutide in 3,183 high-CV-risk T2D pts. 3-point MACE 61/1591 (3.8%) vs 76/1592 (4.8%), HR 0.79 (95% CI 0.57-1.11); non-inferiority to placebo met (P<0.001), but superiority NOT demonstrated (CI crosses 1.0). CV death lower (HR 0.49, 95% CI 0.27-0.92) but trial underpowered for efficacy. Established safety; did not by itself prove MACE reduction. Coded direction 0."
+    },
+    {
+      "source_id": "PMID:27633186",
+      "citation": "Marso SP, Bain SC, Consoli A, et al. Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes (SUSTAIN-6). N Engl J Med. 2016. DOI:10.1056/NEJMoa1607141. NCT01720446.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed NEJM RCT; this is subcutaneous (injectable) semaglutide, a formulation mismatch to the 'oral' claim \u2014 supports the molecule/class, not the oral route directly. Agrees directionally, so not a contradicting trial.",
+      "n_int": 1648,
+      "year": 2016,
+      "finding": "Subcutaneous once-weekly semaglutide in 3,297 high-CV-risk T2D pts. 3-point MACE 108/1648 (6.6%) vs 146/1649 (8.9%), HR 0.74 (95% CI 0.58-0.95), P<0.001 non-inferiority (nominally superior). Establishes CV benefit of the semaglutide molecule; supports biological plausibility for the oral formulation but tests injectable route (population_match FALSE on route)."
+    },
+    {
+      "source_id": "PMID:40156846",
+      "citation": "Lee MMY, Sattar N, et al. Cardiovascular and Kidney Outcomes and Mortality With Long-Acting Injectable and Oral Glucagon-Like Peptide 1 Receptor Agonists in Individuals With Type 2 Diabetes: A Systematic Review and Meta-analysis of Randomized Trials. Diabetes Care. 2025. DOI:10.2337/dc25-0241.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed systematic review/meta-analysis in Diabetes Care; includes SOUL; random-effects synthesis. Title in corpus was slightly abbreviated vs real title ('Glucagon-Like Peptide 1'/'Individuals'), DOI and figures correct.",
+      "n_int": 71351,
+      "year": 2025,
+      "finding": "Trial-level meta-analysis of 10 long-acting GLP-1RA CVOTs (n=71,351), including SOUL. MACE HR 0.86 (95% CI 0.81-0.90; I2=27.6%); consistent 14% reduction across all MACE components; all-cause mortality HR 0.88 (0.82-0.93). NO significant heterogeneity by administration route (subcutaneous vs oral), directly supporting that the MACE benefit extends to oral semaglutide. n_int reflects total pooled participants."
+    }
+  ]
+}

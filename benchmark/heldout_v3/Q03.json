@@ -1,0 +1,72 @@
+{
+  "claim_id": "Q03",
+  "claim": "Adding low-dose rivaroxaban to aspirin reduces cardiovascular events in stable atherosclerotic disease",
+  "domain": "cardiology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented regulatory and guideline consensus. Pivotal COMPASS RCT (Eikelboom, NEJM 2017; PMID 28844192; N=27,395; NCT01776424) randomized stable atherosclerotic vascular disease (chronic CAD and/or PAD) to rivaroxaban 2.5 mg BID + aspirin vs aspirin alone and was stopped early for superiority: primary composite of CV death, stroke, or MI 4.1% vs 5.4% (379 vs 496 patients; HR 0.76, 95% CI 0.66-0.86, P<0.001) \u2014 a 24% RRR on the exact claimed MACE outcome in the exact claimed population, with increased major (not fatal/intracranial) bleeding (3.1% vs 1.9%, HR 1.70). On the strength of COMPASS the FDA approved the rivaroxaban 2.5 mg + aspirin 'vascular dose' on Oct 11 2018 to reduce major CV events in chronic CAD/PAD (J&J/FDA press release verified), and it carries a Class I/IIa recommendation in ESC/ACC chronic coronary and PAD guidelines. VOYAGER PAD (Bonaca, NEJM 2020; PMID 32222135; N=6,564; NCT02504216) independently confirmed the same regimen in PAD-after-revascularization (primary composite HR 0.85, 95% CI 0.76-0.96, P=0.009). ATLAS ACS 2-TIMI 51 (Mega, NEJM 2012; PMID 22077192; N=15,526; NCT00809965) earlier established that low-dose rivaroxaban added to antiplatelet therapy reduces the CV death/MI/stroke composite (8.9% vs 10.7%, HR 0.84) \u2014 proof of concept for the dual-pathway mechanism, though in a post-ACS rather than strictly stable population. Evidence base is concordant and directionally positive on MACE; the only caveat is the bleeding trade-off, which affects net benefit but not the directional efficacy claim. Verdict: Supported.",
+  "outcome": "MACE composite (cardiovascular death, myocardial infarction, stroke)",
+  "population": "stable CAD/PAD (stable atherosclerotic vascular disease)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Adding low-dose rivaroxaban (2.5 mg twice daily) to aspirin reduces major cardiovascular events in patients with stable atherosclerotic disease. This is established by the landmark COMPASS trial (NEJM 2017, 27,395 patients with chronic CAD and/or PAD), which was stopped early for efficacy: the primary composite of cardiovascular death, stroke, or MI was reduced by 24% (4.1% vs 5.4% with aspirin alone; HR 0.76, 95% CI 0.66-0.86, P<0.001). The benefit came with an increase in major bleeding (though not fatal or intracranial bleeding), so the regimen is best reserved for patients at high thrombotic and low bleeding risk. On the basis of COMPASS, the FDA approved the rivaroxaban 2.5 mg + aspirin 'vascular dose' in 2018 for chronic CAD/PAD, and it is guideline-recommended. VOYAGER PAD (2020) confirmed the benefit in PAD patients after revascularization. Bottom line: yes, it reduces cardiovascular events, with a bleeding trade-off to weigh."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:28844192",
+      "citation": "Eikelboom JW, et al. Rivaroxaban with or without Aspirin in Stable Cardiovascular Disease (COMPASS). N Engl J Med. 2017. DOI:10.1056/NEJMoa1709118. NCT01776424.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind RCT (PubMed article_types include Randomized Controlled Trial, Multicenter Study), stopped early for superiority by independent DSMB; simultaneously published NEJM / presented ESC 2017. Title, DOI, N verified against PubMed and ClinicalTrials.gov.",
+      "n_int": 27395,
+      "year": 2017,
+      "finding": "In 27,395 patients with stable atherosclerotic vascular disease (chronic CAD and/or PAD), rivaroxaban 2.5 mg BID + aspirin vs aspirin alone reduced the primary CV death/stroke/MI composite: 379 (4.1%) vs 496 (5.4%) (HR 0.76, 95% CI 0.66-0.86, P<0.001), a 24% RRR. Major bleeding increased (3.1% vs 1.9%, HR 1.70) with no significant excess of fatal or intracranial bleeding. Direct hit on claimed population and claimed MACE outcome. Numbers verified verbatim against the NEJM/PubMed abstract."
+    },
+    {
+      "source_id": "PMID:32222135",
+      "citation": "Bonaca MP, et al. Rivaroxaban in Peripheral Artery Disease after Revascularization (VOYAGER PAD). N Engl J Med. 2020. DOI:10.1056/NEJMoa2000052. NCT02504216.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Independent confirmatory double-blind RCT in the PAD subset of the stable atherosclerotic population. Comparator was placebo+aspirin (both arms on aspirin). Title, DOI, PMID, N verified against PubMed and the published NEJM PDF.",
+      "n_int": 6564,
+      "year": 2020,
+      "finding": "In 6,564 PAD patients after lower-extremity revascularization, rivaroxaban 2.5 mg BID + aspirin vs aspirin alone reduced the composite of acute limb ischemia, major amputation, MI, ischemic stroke, or CV death: 508 vs 584 events, KM 3-yr incidence 17.3% vs 19.9% (HR 0.85, 95% CI 0.76-0.96, P=0.009). Confirms dual-pathway benefit on MACE-plus-limb outcomes in a stable atherosclerotic (PAD) population; ISTH major bleeding increased (HR 1.42), TIMI major bleeding not significantly different. Outcome overlaps claimed MACE (includes CV death/MI/stroke) plus limb events. Numbers verified verbatim."
+    },
+    {
+      "source_id": "PMID:22077192",
+      "citation": "Mega JL, et al. Rivaroxaban in Patients with a Recent Acute Coronary Syndrome (ATLAS ACS 2-TIMI 51). N Engl J Med. 2012. DOI:10.1056/NEJMoa1112277. NCT00809965.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Large pivotal Phase III RCT (PubMed article_types include Clinical Trial, Phase III; Randomized Controlled Trial) establishing the dual-pathway concept; population is recent-ACS (not strictly 'stable'), so population_match=false is honest \u2014 this is a SUPPORTIVE trial (direction +1) in a different population, not a conflicting trial being hidden. Title, DOI, N verified against PubMed.",
+      "n_int": 15526,
+      "year": 2012,
+      "finding": "In 15,526 patients with a recent ACS on antiplatelet therapy, low-dose rivaroxaban (2.5 or 5 mg BID) vs placebo reduced the CV death/MI/stroke composite: 8.9% vs 10.7% (HR 0.84, 95% CI 0.74-0.96, P=0.008); the 2.5 mg dose reduced CV mortality (2.7% vs 4.1%) and all-cause mortality (2.9% vs 4.5%). Mechanistic proof-of-concept for adding low-dose rivaroxaban to antiplatelet therapy on the claimed MACE outcome; population is post-ACS rather than stable atherosclerotic disease. Numbers verified verbatim against the NEJM/PubMed abstract."
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMoa1709118",
+      "citation": "U.S. FDA / Janssen. XARELTO (rivaroxaban) approved to reduce risk of major CV events in chronic CAD or PAD, based on COMPASS. FDA label update / Janssen press release, Oct 11 2018.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "FDA regulatory action codifying the indication; J&J/Janssen and FDA press releases (Oct 11 2018) independently verified via web. source_id references the underlying pivotal-trial DOI as the checkable anchor since FDA labels lack a PMID \u2014 disclosed, and the regulatory action itself is confirmed.",
+      "n_int": 27395,
+      "year": 2018,
+      "finding": "On Oct 11 2018 the FDA approved rivaroxaban 2.5 mg BID + aspirin (100 mg) to reduce the risk of major CV events (CV death, MI, stroke) in adults with chronic CAD or PAD, explicitly on the basis of the COMPASS 24% MACE reduction. Establishes regulatory consensus that the regimen reduces CV events in stable atherosclerotic disease; also reflected in ESC/ACC chronic coronary and PAD guidelines. Approval date, indication wording, and 24% figure verified against the J&J/Janssen and Medscape/TCTMD reports."
+    }
+  ]
+}

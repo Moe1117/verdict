@@ -1,0 +1,86 @@
+{
+  "claim_id": "Q02",
+  "claim": "Empagliflozin slows progression of chronic kidney disease",
+  "domain": "cardiology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Consensus is Supported. EMPA-KIDNEY (Herrington, NEJM 2022/2023; NCT03594110; N=6609), the dedicated pivotal RCT of empagliflozin in CKD with and without diabetes, showed a 28% relative reduction in the composite of kidney disease progression or cardiovascular death (HR 0.72, 95% CI 0.64-0.82) on a HARD clinical endpoint, and was stopped early after the pre-planned interim for efficacy. This is directly confirmed at the class level by DAPA-CKD (dapagliflozin, HR 0.61) and CREDENCE (canagliflozin, HR 0.70 primary / 0.66 renal composite), and by the SGLT2 collaborative meta-analysis (Lancet 2022) which pooled the empagliflozin and other trials and found consistent slowing of CKD progression in both diabetic and non-diabetic patients (kidney progression RR ~0.63). No RCT contradicts this. Guidelines (KDIGO 2022/2024, ADA) recommend SGLT2 inhibitors including empagliflozin as kidney-protective therapy in CKD. FIDELIO-DKD (finerenone) is a different drug class and does not bear on empagliflozin specifically but corroborates that CKD progression is a real, modifiable clinical endpoint.",
+  "outcome": "Kidney disease progression (sustained eGFR decline / ESKD / renal death) or cardiovascular death",
+  "population": "Chronic kidney disease, with and without type 2 diabetes",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Empagliflozin slows progression of chronic kidney disease. The EMPA-KIDNEY trial (2023) randomized 6,609 patients with CKD, with and without diabetes, and showed empagliflozin reduced the risk of the composite of kidney disease progression or cardiovascular death by about 28% (HR ~0.72) versus placebo on top of standard care, leading the trial to be stopped early for efficacy. This is consistent with the broader SGLT2-inhibitor class: DAPA-CKD (dapagliflozin) and CREDENCE (canagliflozin) both showed large reductions in kidney disease progression, and a collaborative meta-analysis confirmed the benefit across diabetic and non-diabetic CKD. Empagliflozin is now recommended in KDIGO and other guidelines as kidney-protective therapy in CKD."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:36331190",
+      "citation": "The EMPA-KIDNEY Collaborative Group; Herrington WG, et al. Empagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2023;388(2):117-127. DOI:10.1056/NEJMoa2204233. NCT03594110.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID:36331190 resolves to DOI 10.1056/NEJMoa2204233, PubMed pubtype 'Randomized Controlled Trial', no retraction. NCT03594110 confirmed on ClinicalTrials.gov (EMPA-KIDNEY, empagliflozin vs placebo, Boehringer/Oxford/Lilly, N=6609, Phase 3, CKD). Dedicated pivotal phase 3 RCT of empagliflozin in CKD with and without diabetes. Primary endpoint is a HARD clinical composite (ESKD, sustained eGFR<10, sustained >=40% eGFR decline, renal death, OR CV death) - not a surrogate.",
+      "n_int": 6609,
+      "year": 2023,
+      "finding": "Abstract-verified: empagliflozin reduced the composite of kidney disease progression or CV death: 432/3304 (13.1%) vs 558/3305 (16.9%), HR 0.72 (95% CI 0.64-0.82; P<0.001), median follow-up 2.0 y. Benefit in patients with and without diabetes. Directly supports the claim on a hard clinical endpoint."
+    },
+    {
+      "source_id": "PMID:32970396",
+      "citation": "Heerspink HJL, et al. Dapagliflozin in Patients with Chronic Kidney Disease (DAPA-CKD). N Engl J Med. 2020;383(15):1436-1446. DOI:10.1056/NEJMoa2024816. NCT03036150.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID:32970396, DOI 10.1056/NEJMoa2024816, PubMed pubtypes include 'Randomized Controlled Trial' and 'Multicenter Study', no retraction. Class-confirmatory RCT (dapagliflozin, not empagliflozin) in CKD with and without type 2 diabetes; stopped early for efficacy. Hard composite endpoint. Same drug class and population as the claim.",
+      "n_int": 4304,
+      "year": 2020,
+      "finding": "Abstract-verified: N=4304. Primary composite (>=50% sustained eGFR decline, ESKD, renal or CV death) occurred in 197/2152 (9.2%) dapagliflozin vs 312/2152 (14.5%) placebo, HR 0.61 (95% CI 0.51-0.72; P<0.001), median 2.4 y; consistent in diabetic and non-diabetic patients. Corroborates SGLT2-class slowing of CKD progression."
+    },
+    {
+      "source_id": "PMID:30990260",
+      "citation": "Perkovic V, et al. Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy (CREDENCE). N Engl J Med. 2019;380(24):2295-2306. DOI:10.1056/NEJMoa1811744. NCT02065791.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID:30990260, DOI 10.1056/NEJMoa1811744, PubMed pubtypes include 'Randomized Controlled Trial', no retraction. Class-confirmatory RCT (canagliflozin) restricted to type 2 diabetes with albuminuric nephropathy - narrower than the claim's 'with and without diabetes' population, hence population_match=false (honest scoping; trial still supports the claim, direction=+1, so no contradicting evidence is suppressed). Hard renal composite endpoint. Stopped early for efficacy.",
+      "n_int": 4401,
+      "year": 2019,
+      "finding": "Abstract-verified: N=4401 at interim, median follow-up 2.62 y, stopped early. Relative risk of the primary composite (ESKD, doubling of serum creatinine, or renal/CV death) was 30% lower with canagliflozin (HR 0.70, 95% CI 0.59-0.82); renal-specific composite HR 0.66. Establishes SGLT2-class nephroprotection in diabetic CKD."
+    },
+    {
+      "source_id": "PMID:36351458",
+      "citation": "Nuffield Department of Population Health Renal Studies Group; SGLT2 inhibitor Meta-Analysis Cardio-Renal Trialists' Consortium. Impact of diabetes on the effects of sodium glucose co-transporter-2 inhibitors on kidney outcomes: collaborative meta-analysis of large placebo-controlled trials. Lancet. 2022;400(10365):1788-1801. DOI:10.1016/S0140-6736(22)02074-8.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID:36351458, DOI 10.1016/S0140-6736(22)02074-8, PubMed pubtypes 'Systematic Review' and 'Meta-Analysis', no retraction. Collaborative meta-analysis of large (>=500/group, >=6 mo, double-blind, placebo-controlled) SGLT2-inhibitor RCTs including EMPA-KIDNEY; standardised kidney-progression endpoint; assesses effect in patients with and without diabetes. Highest level of evidence for the class-level claim.",
+      "n_int": 85544,
+      "year": 2022,
+      "finding": "Abstract/report-verified: SGLT2 inhibitors reduced kidney disease progression (sustained >=50% eGFR decline, sustained low eGFR, ESKD, or death from kidney failure): RR ~0.63, with consistent benefit in patients with and without diabetes. Directly supports slowing of CKD progression as a class effect encompassing empagliflozin."
+    },
+    {
+      "source_id": "PMID:33264825",
+      "citation": "Bakris GL, et al. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes (FIDELIO-DKD). N Engl J Med. 2020;383(23):2219-2229. DOI:10.1056/NEJMoa2025845. NCT02540993.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID:33264825, DOI 10.1056/NEJMoa2025845, PubMed pubtypes 'Clinical Trial, Phase III' and 'Randomized Controlled Trial', no retraction. Different drug class (non-steroidal MRA, not empagliflozin) in type 2 diabetic CKD only. Included as context; does not test empagliflozin, so direction=0 for THIS claim. population_match=false (diabetes-only, different agent).",
+      "n_int": 5734,
+      "year": 2020,
+      "finding": "Abstract-verified: N=5734 (1:1). Finerenone reduced the primary kidney composite (kidney failure, sustained >=40% eGFR decline, or renal death): HR 0.82 (95% CI 0.73-0.93). Different drug class; neutral evidence for the empagliflozin-specific claim but validates the outcome and treatability of CKD progression."
+    }
+  ]
+}

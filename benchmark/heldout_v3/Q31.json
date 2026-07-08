@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q31",
+  "claim": "Deep brain stimulation improves motor function in advanced Parkinson's disease",
+  "domain": "neuro",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Multiple large multicenter RCTs and meta-analyses of RCTs directly demonstrate that subthalamic-nucleus (and pallidal) deep brain stimulation added to medical therapy improves motor function and quality of life in advanced Parkinson's disease with motor fluctuations. Deuschl 2006 (NEJM, n=156) showed STN-DBS improved UPDRS-III by ~19.6 points and PDQ-39 quality of life vs medication alone. Weaver 2009 (JAMA, n=255) showed DBS gained 4.6 h/d of on-time without troubling dyskinesia (vs 0 for medical therapy) and clinically meaningful motor improvement in 71% vs 32%. EARLYSTIM (Schuepbach 2013, NEJM, n=251) confirmed superiority even at an earlier motor-complication stage. PD SURG (Williams 2010, Lancet Neurology, n=366) confirmed quality-of-life benefit. Multiple-treatments meta-analyses of RCTs (Xie 2016) confirm DBS superior to medical therapy on UPDRS motor scores and PDQ-39. Outcomes measured (UPDRS-III motor score, on-time diaries, PDQ-39) are direct clinical/patient-reported endpoints, not surrogates. DBS is an established, guideline-endorsed, FDA-approved therapy for advanced PD. The only nuance is increased serious adverse events (surgical/device-related), but efficacy on the claimed motor/QoL outcome is not in dispute. Verdict: Supported.",
+  "outcome": "motor function (UPDRS-III, on-time without troubling dyskinesia) and quality of life (PDQ-39)",
+  "population": "advanced Parkinson's disease with levodopa-related motor fluctuations/complications",
+  "provenance": "PubMed (verified PMIDs + DOIs); all rows re-verified via PubMed get_article_metadata by title/abstract/design/N. EARLYSTIM arm N cross-checked against NEJM full text.",
+  "notes": "All five sources independently re-verified real via PubMed with checkable PMIDs/DOIs; none retracted. Outcomes are direct clinical (UPDRS-III motor, on-time diaries) and patient-reported (PDQ-39 QoL), not surrogates \u2014 outcome_match true. No contradicting RCT exists; GPi-vs-STN trials debate target choice, not whether DBS beats medical therapy \u2014 no row mislabels a conflicting trial's population_match. PD SURG carries a spurious 'Meta-Analysis' PubMed type tag but is a genuine open-label RCT (design=rct honest). dramatic_effect left false: PD is not fatal and benefit comes from ordinary RCT-scale effects, not all-or-none.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Deep brain stimulation, most commonly of the subthalamic nucleus (STN) and alternatively the globus pallidus internus (GPi), reliably improves motor function in advanced Parkinson's disease with medically refractory motor fluctuations. Landmark randomized controlled trials \u2014 Deuschl et al. (NEJM 2006) and Weaver et al. (JAMA 2009) \u2014 showed large improvements in UPDRS-III motor scores, substantial increases in daily 'on' time without troubling dyskinesia, and improved quality of life (PDQ-39) versus best medical therapy. EARLYSTIM (2013) extended the benefit to patients with earlier motor complications. DBS is an FDA-approved, guideline-recommended therapy. The main tradeoff is a higher rate of serious surgical/device-related adverse events, but the motor and quality-of-life benefit is well established."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:16943402",
+      "citation": "Deuschl G, et al. A randomized trial of deep-brain stimulation for Parkinson's disease. N Engl J Med. 2006;355(9):896-908. DOI:10.1056/NEJMoa060281",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Landmark pivotal randomized-pairs RCT; verified via PubMed, not retracted.",
+      "n_int": 156,
+      "year": 2006,
+      "finding": "STN-DBS plus medication vs medication alone in advanced PD (n=156): greater 6-month improvement in UPDRS-III (mean +19.6 pts) and PDQ-39 quality of life (+9.5); more serious adverse events with DBS (13% vs 4%) incl one fatal intracerebral hemorrhage."
+    },
+    {
+      "source_id": "PMID:19126811",
+      "citation": "Weaver FM, et al. Bilateral deep brain stimulation vs best medical therapy for patients with advanced Parkinson disease: a randomized controlled trial. JAMA. 2009;301(1):63-73. DOI:10.1001/jama.2008.929",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VA/CSP multicenter RCT (STN or GPi); verified via PubMed, not retracted.",
+      "n_int": 121,
+      "year": 2009,
+      "finding": "DBS (STN n=60 or GPi n=61 = 121 DBS) vs best medical therapy (n=134); total N=255: DBS gained +4.6 h/d on-time without troubling dyskinesia (vs 0); 71% vs 32% had clinically meaningful (>=5 pt) motor improvement; QoL improved on 7 of 8 subscales; more serious adverse events with DBS (49 vs 15 patients, incl 1 death)."
+    },
+    {
+      "source_id": "PMID:23406026",
+      "citation": "Schuepbach WMM, et al. Neurostimulation for Parkinson's disease with early motor complications (EARLYSTIM). N Engl J Med. 2013;368(7):610-22. DOI:10.1056/NEJMoa1205158",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Multicenter parallel-group RCT extending benefit to earlier-stage motor complications; ITT neurostimulation arm N=124 confirmed against NEJM Table 1; not retracted.",
+      "n_int": 124,
+      "year": 2013,
+      "finding": "STN-DBS + medical therapy (ITT n=124) vs medical therapy alone (n=127), total n=251, at 2 years: PDQ-39 QoL improved +7.8 vs -0.2 (between-group 8.0 pts, P=0.002); superior on motor disability, ADL, levodopa-induced motor complications, and good-mobility time; serious AEs 54.8% vs 44.1%."
+    },
+    {
+      "source_id": "PMID:20434403",
+      "citation": "Williams A, et al. Deep brain stimulation plus best medical therapy versus best medical therapy alone for advanced Parkinson's disease (PD SURG trial): a randomised, open-label trial. Lancet Neurol. 2010;9(6):581-91. DOI:10.1016/S1474-4422(10)70093-4",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "UK multicenter open-label RCT (all surgery patients received DBS); primary endpoint patient-reported QoL (PDQ-39), a direct outcome not surrogate; PubMed carries a spurious 'Meta-Analysis' type tag but the study is an RCT; not retracted.",
+      "n_int": 183,
+      "year": 2010,
+      "finding": "Surgery (all DBS) + best medical therapy (n=183) vs best medical therapy alone (n=183), total n=366: 1-yr PDQ-39 summary improved 5.0 vs 0.3 (diff -4.7, P=0.001), with significant mobility and ADL domain gains; 19% had serious surgery-related AEs incl one procedure-related death."
+    },
+    {
+      "source_id": "PMID:27142183",
+      "citation": "Xie CL, et al. Effects of neurostimulation for advanced Parkinson's disease patients on motor symptoms: a multiple-treatments meta-analysis of randomized controlled trials. Sci Rep. 2016;6:25285. DOI:10.1038/srep25285",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Systematic review + network (multiple-treatments) meta-analysis of 16 RCTs comparing STN/GPi-DBS vs medical therapy; verified via PubMed, not retracted.",
+      "n_int": 0,
+      "year": 2016,
+      "finding": "Network meta-analysis of 16 RCTs: both GPi-DBS and STN-DBS significantly superior to medical therapy on UPDRS motor scores and PDQ-39 quality of life; STN more effective at medication reduction, GPi slightly better on PDQ-39 \u2014 but both beat medical therapy on the motor outcome."
+    }
+  ]
+}

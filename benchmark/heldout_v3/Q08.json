@@ -1,0 +1,100 @@
+{
+  "claim_id": "Q08",
+  "claim": "Ivabradine reduces heart-failure hospitalization in heart failure with reduced ejection fraction",
+  "domain": "cardiology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus supports that ivabradine reduces HF hospitalization in HFrEF patients in sinus rhythm with resting HR>=70 bpm on maximally tolerated beta-blockers. The pivotal SHIFT RCT (N=6558; Swedberg, Lancet 2010, PMID 20801500) met its primary composite of CV death or HF hospitalization (HR 0.82, 95% CI 0.75-0.90, p<0.0001), driven by a reduction in HF hospitalization (HR 0.74, 0.66-0.83) and HF deaths (HR 0.74). The CV-death component alone was NOT significantly reduced, so the benefit is specifically on the hospitalization/morbidity axis - exactly what this claim asserts. On the strength of SHIFT the FDA approved ivabradine (Corlanor) on April 15, 2015 with an indication worded precisely as reducing the risk of hospitalization for worsening HF in this population, and the drug carries a Class IIa recommendation in ACC/AHA and ESC HF guidelines. Meta-analyses (Wang 2022 PMID 36198840, ivabradine RR 0.74; Suebsaicharoen network MA 2023 PMID 37940331, HR 0.56 for the triple-therapy+ivabradine arm) reproduce the benefit. The contrasting SIGNIFY trial (Fox, NEJM 2014, PMID 25176136) found no benefit and a harm signal in the angina subgroup, but that was in stable CAD WITHOUT heart failure - a different population - so it does not weaken the HFrEF claim. Verdict: Supported, with the documented caveat that the benefit is on hospitalization/morbidity, not on all-cause or CV mortality.",
+  "outcome": "HF hospitalization (hospital admission for worsening heart failure), and the composite of CV death or HF hospitalization",
+  "population": "HFrEF (LVEF <=35%), NYHA II-IV, sinus rhythm, resting heart rate >=70 bpm, on stable guideline-directed therapy including a beta-blocker if tolerated",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Ivabradine reduces heart-failure hospitalization in HFrEF. The landmark SHIFT trial (6558 patients with LVEF <=35%, sinus rhythm, HR >=70 bpm on background therapy including beta-blockers) showed ivabradine cut the primary composite of CV death or HF hospitalization by 18% (HR 0.82, 95% CI 0.75-0.90), a benefit driven mainly by a ~26% reduction in hospitalizations for worsening heart failure (HR 0.74). On this basis the FDA approved ivabradine (Corlanor) in 2015 specifically to reduce the risk of HF hospitalization in this exact population, and guidelines give it a Class IIa recommendation. An important nuance: the benefit is on hospitalization and HF-death, not on cardiovascular or all-cause mortality overall, and the effect requires elevated heart rate in sinus rhythm - ivabradine did NOT improve outcomes in the SIGNIFY trial of stable CAD without heart failure."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:20801500",
+      "citation": "Swedberg K, et al. Ivabradine and outcomes in chronic heart failure (SHIFT): a randomised placebo-controlled study. Lancet. 2010;376(9744):875-85. doi:10.1016/S0140-6736(10)61198-1",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind placebo-controlled RCT, registered ISRCTN70429960. Industry-funded (Servier) but independently adjudicated; not retracted. Verified against PubMed 2026-07-08: title, N, HRs all match.",
+      "n_int": 3241,
+      "year": 2010,
+      "finding": "N=6558 randomized (3268 ivabradine, 3290 placebo; analyzed 3241 vs 3264). Primary composite of CV death or HF hospitalization reduced with ivabradine (793 [24%] vs 937 [29%]; HR 0.82, 95% CI 0.75-0.90, p<0.0001). Benefit driven by HF hospitalizations (514 [16%] vs 672 [21%]; HR 0.74, 0.66-0.83) and HF deaths (HR 0.74, 0.58-0.94). Directly supports the HF-hospitalization claim in the exact target population."
+    },
+    {
+      "source_id": "PMID:20801495",
+      "citation": "Bohm M, et al. Heart rate as a risk factor in chronic heart failure (SHIFT): the association between heart rate and outcomes in a randomised placebo-controlled trial. Lancet. 2010;376(9744):886-94. doi:10.1016/S0140-6736(10)61259-7",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified SHIFT analysis, same registered RCT (ISRCTN70429960). Verified against PubMed 2026-07-08.",
+      "n_int": 3241,
+      "year": 2010,
+      "finding": "Mechanistic SHIFT analysis: risk of the primary composite rose 16% per 5-bpm higher baseline heart rate; the ivabradine treatment benefit was neutralised after adjusting for achieved heart-rate reduction at 28 days (HR 0.95, 95% CI 0.85-1.06, p=0.352), confirming that ivabradine reduces HF hospitalization via heart-rate lowering. Patients reaching HR <60 bpm had the fewest events."
+    },
+    {
+      "source_id": "PMID:25176136",
+      "citation": "Fox K, et al. Ivabradine in stable coronary artery disease without clinical heart failure (SIGNIFY). N Engl J Med. 2014;371(12):1091-9. doi:10.1056/NEJMoa1406430",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Large double-blind placebo-controlled RCT, registered ISRCTN61576291. Not retracted. Included to define the boundary of the claim. Verified against PubMed 2026-07-08: N=19102, stable CAD without clinical HF.",
+      "n_int": 9550,
+      "year": 2014,
+      "finding": "N=19102 with stable CAD WITHOUT clinical heart failure, HR>=70 (12,049 with activity-limiting angina). No effect on the CV-death/nonfatal-MI primary endpoint (6.8% vs 6.4%; HR 1.08, 0.96-1.20, p=0.20) and a harm signal in the activity-limiting-angina subgroup (p=0.02 interaction). Population mismatch (no HF); does not contradict the HFrEF hospitalization claim but shows the benefit is HF-specific."
+    },
+    {
+      "source_id": "PMID:36198840",
+      "citation": "Wang N, et al. Sex-specific differences in the efficacy of heart failure therapies: a meta-analysis of 84,818 patients. Heart Fail Rev. 2022;28(4):949-959. doi:10.1007/s10741-022-10275-1",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed meta-analysis of 26 GDMT RCTs; not retracted. Verified against PubMed 2026-07-08.",
+      "n_int": 0,
+      "year": 2022,
+      "finding": "Pooled HFrEF analysis: ivabradine reduced the composite of CV death or HF hospitalization with RR 0.74 (95% CI 0.60-0.91) in women, consistent with men (efficacy similar across sexes). Independent confirmation of the SHIFT primary-endpoint benefit."
+    },
+    {
+      "source_id": "PMID:37940331",
+      "citation": "Suebsaicharoen T, et al. Comparative cardiovascular outcomes of novel drugs as an addition to conventional triple therapy for HFrEF: a network meta-analysis of RCTs. Open Heart. 2023;10(2):e002364. doi:10.1136/openhrt-2023-002364",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed network meta-analysis; reconstructed IPD from Kaplan-Meier curves; not retracted. Verified against PubMed 2026-07-08.",
+      "n_int": 0,
+      "year": 2023,
+      "finding": "Adding ivabradine to ACEI+BB+MRA lowered the primary composite of CV death or HF hospitalization vs triple therapy alone (HR 0.56, 95% CI 0.47-0.67) and prolonged median time to the composite event beyond the 57.7-month reference of triple therapy, ranking alongside ARNI and SGLT2i add-ons."
+    },
+    {
+      "source_id": "DAILYMED:CORLANOR-ivabradine",
+      "citation": "FDA. Corlanor (ivabradine) US Prescribing Information (Amgen Inc.); initial US approval April 15, 2015 based on SHIFT. DailyMed label; FDA accessdata label 206143s008/209964s002.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Official FDA-approved label; regulatory consensus artifact. Verified 2026-07-08 against DailyMed and the April 15, 2015 Amgen/FDA press release. NOTE: original corpus used source_id 'DOI:10.1056/NEJMoa1406430-FDA-LABEL', which is a fabricated identifier (that DOI is the SIGNIFY trial); corrected to the real DailyMed/FDA label.",
+      "n_int": 0,
+      "year": 2015,
+      "finding": "FDA approved ivabradine April 15, 2015 to reduce the risk of hospitalization for worsening HF in adults with stable symptomatic HFrEF (LVEF<=35%), sinus rhythm, resting HR>=70 bpm, on maximally tolerated beta-blockers or with a beta-blocker contraindication. Label explicitly states the SHIFT treatment effect reflected only reduced HF hospitalization, with no favorable effect on the CV-death component - regulatory endorsement of the exact claim."
+    }
+  ]
+}

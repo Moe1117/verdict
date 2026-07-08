@@ -1,0 +1,100 @@
+{
+  "claim_id": "Q25",
+  "claim": "Adding bevacizumab to chemotherapy improves overall survival in advanced ovarian cancer",
+  "domain": "oncology",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The two pivotal first-line phase III trials both showed a robust progression-free survival benefit but NO overall survival benefit in the intention-to-treat population. GOG-0218 (Burger, NEJM 2011, N=1873) met its PFS primary endpoint (HR 0.717 for bevacizumab-throughout) but reported no significant OS difference among the three groups; the mature GOG-0218 analyses (e.g., KELIM validation, You JCO 2022) put overall OS HR at ~0.87 with CI crossing 1, with benefit confined to high-risk/poorly chemosensitive subgroups. ICON7 (Oza, Lancet Oncol 2015, N=1528) found no OS benefit in the whole ITT population (restricted-mean-survival p=0.85), with an OS signal only in a predefined poor-prognosis subgroup. A first-line meta-analysis (Liu, Gynecol Oncol 2021) pooled OS HR 0.88 (95% CI 0.72-1.06) \u2014 not significant first-line \u2014 whereas the recurrent setting reached significance (OS HR 0.88, 95% CI 0.79-0.99; consistent with GOG-0213, Coleman Lancet Oncol 2017). Regulatory approvals (FDA/EMA) rest on the PFS surrogate, not an OS win. Because the claimed outcome is OS and the two landmark RCTs are ITT-negative for OS while PFS (a surrogate) is consistently positive and subgroups/recurrent-setting show benefit, the consensus is genuinely Contested rather than Supported.",
+  "outcome": "overall survival",
+  "population": "advanced ovarian cancer",
+  "baseline": {
+    "answer": "No",
+    "confidence": "medium",
+    "text": "On balance, no \u2014 adding bevacizumab to chemotherapy does not reliably improve overall survival in advanced ovarian cancer. The two landmark first-line phase III trials, GOG-0218 and ICON7, both demonstrated a significant progression-free survival benefit but failed to show an overall survival benefit in their overall (intention-to-treat) populations. An OS advantage was seen only in predefined high-risk/poor-prognosis subgroups and in the recurrent-disease setting. Bevacizumab's regulatory approvals in ovarian cancer are based primarily on the PFS endpoint. So while bevacizumab clearly delays progression and benefits certain subgroups, the claim that it improves overall survival across advanced ovarian cancer is not supported by the primary trial endpoints and is best described as contested."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:22204724",
+      "citation": "Burger RA, et al. Incorporation of bevacizumab in the primary treatment of ovarian cancer (GOG-0218). N Engl J Med. 2011;365(26):2473-83. DOI:10.1056/NEJMoa1104390",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Landmark double-blind placebo-controlled pivotal trial; no retraction (verified PubMed). Primary endpoint PFS (surrogate), not OS.",
+      "n_int": 1873,
+      "year": 2011,
+      "finding": "PFS improved with bevacizumab-throughout (HR 0.717, p<0.001) but NO significant overall survival difference among the three groups; primary endpoint was the PFS surrogate, not OS."
+    },
+    {
+      "source_id": "PMID:26115797",
+      "citation": "Oza AM, et al. Standard chemotherapy with or without bevacizumab for newly diagnosed ovarian cancer (ICON7): overall survival results of a phase 3 randomised trial. Lancet Oncol. 2015;16(8):928-36. DOI:10.1016/S1470-2045(15)00086-8",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Final OS analysis of a large pivotal phase III trial (N=1528, 764/arm); directly reports the claimed OS endpoint in ITT; no retraction (verified PubMed).",
+      "n_int": 764,
+      "year": 2015,
+      "finding": "NO overall survival benefit in the ITT population (RMST 44.6 vs 45.5 months, log-rank p=0.85); OS benefit seen ONLY in a predefined poor-prognosis subgroup \u2014 contradicts the OS claim in the overall population."
+    },
+    {
+      "source_id": "PMID:36252167",
+      "citation": "You B, et al. Identification of patients with ovarian cancer experiencing the highest benefit from bevacizumab on the basis of tumor-intrinsic chemosensitivity (KELIM): GOG-0218 validation study. J Clin Oncol. 2022;40(34):3965-74. DOI:10.1200/JCO.22.01207",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified biomarker validation within randomized GOG-0218 (n=1662 assessable); reports OS by subgroup; no retraction (verified PubMed).",
+      "n_int": 1662,
+      "year": 2022,
+      "finding": "Overall bevacizumab OS effect not significant (subgroup OS HRs 0.87 unfavorable-KELIM, 1.11 favorable-KELIM); OS benefit confined to high-risk, poorly chemosensitive subgroup (HR 0.79) \u2014 supports a subgroup-only, contested OS picture."
+    },
+    {
+      "source_id": "PMID:38872480",
+      "citation": "Wu X, et al. First-line bevacizumab plus chemotherapy in Chinese patients with stage III/IV epithelial ovarian, fallopian tube or primary peritoneal cancer: a phase III RCT. J Gynecol Oncol. 2024;35(5):e99. DOI:10.3802/jgo.2024.35.e99",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Regional confirmatory phase III RCT (NCT03635489, 51 bev + 49 placebo); primary endpoint PFS (surrogate), not powered for OS; no retraction (verified PubMed).",
+      "n_int": 51,
+      "year": 2024,
+      "finding": "Large PFS benefit (median 22.6 vs 12.3 months, HR 0.30) consistent with GOG-0218, but endpoint is the PFS surrogate \u2014 does not demonstrate the claimed OS improvement."
+    },
+    {
+      "source_id": "PMID:33546867",
+      "citation": "Liu S, et al. The use of bevacizumab in the modern era of targeted therapy for ovarian cancer: a systematic review and meta-analysis. Gynecol Oncol. 2021;161(2):601-12. DOI:10.1016/j.ygyno.2021.01.028",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Systematic review + meta-analysis of phase 2/3 trials with ROB1 assessment; pools OS separately for first-line and recurrent; no retraction (verified PubMed).",
+      "n_int": 0,
+      "year": 2021,
+      "finding": "First-line pooled OS HR 0.88 (95% CI 0.72-1.06) \u2014 NOT significant; recurrent-setting pooled OS HR 0.88 (95% CI 0.79-0.99) \u2014 significant. First-line OS unproven while PFS is consistently improved (first-line PFS HR 0.72)."
+    },
+    {
+      "source_id": "PMID:26216729",
+      "citation": "Ferriss JS, et al. Ascites predicts treatment benefit of bevacizumab in front-line therapy of advanced epithelial ovarian cancer: an NRG Oncology/GOG (GOG-0218) study. Gynecol Oncol. 2015;139(1):17-22. DOI:10.1016/j.ygyno.2015.07.103",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified subgroup/predictive analysis of the randomized GOG-0218 trial; reports OS by ascites subgroup; no retraction (verified PubMed).",
+      "n_int": 886,
+      "year": 2015,
+      "finding": "OS benefit from bevacizumab only in the ascites subgroup (adjusted HR 0.82, p=0.014); no OS benefit without ascites (HR 0.94, p=0.76) \u2014 reinforces subgroup-dependent, contested OS effect."
+    }
+  ]
+}

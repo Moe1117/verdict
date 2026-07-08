@@ -1,0 +1,86 @@
+{
+  "claim_id": "Q39",
+  "claim": "Vitamin C, hydrocortisone, and thiamine improve outcomes in sepsis",
+  "domain": "critical-care",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The clinical consensus is that the HAT (hydrocortisone\u2013ascorbic acid\u2013thiamine) cocktail does NOT improve patient-centered outcomes (mortality, vasopressor-free or ventilator-free days) in sepsis/septic shock. The original enthusiasm from Marik's 2017 single-center before-after study was not replicated. Two direct RCTs of the triple therapy on the claimed outcomes are null: VITAMINS (Fujii, JAMA 2020, n=216) found no difference in time alive/vasopressor-free vs hydrocortisone alone (median paired difference -0.6 h) and numerically higher 90-day mortality (28.6% vs 24.5%); VICTAS (Sevransky, JAMA 2021, n=501) found no difference in ventilator-/vasopressor-free days (median -1 day) with 30-day mortality 22% vs 24%. Vitamin C component trials reinforce the null-to-harm picture: CITRIS-ALI (Fowler, JAMA 2019) showed no change in its primary modified-SOFA surrogate; and the large, rigorous LOVIT trial (Lamontagne, NEJM 2022, n=872) found INCREASED risk of death or persistent organ dysfunction with IV vitamin C (RR 1.21, 95% CI 1.04-1.40). Meta-analysis of the HAT combination (Zayed 2021) confirms no mortality benefit, with only a transient day-3 SOFA (surrogate) improvement. Surviving Sepsis Campaign guidelines do not recommend the cocktail. This is evidence of absence, not merely absence of evidence.",
+  "outcome": "28/90-day mortality and organ dysfunction (vasopressor-free days, ventilator-free days); SOFA score is a surrogate",
+  "population": "Adults with sepsis / septic shock in the ICU or ED",
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "The evidence does not support that the vitamin C + hydrocortisone + thiamine 'metabolic cocktail' improves outcomes in sepsis. The initial signal came from Marik's 2017 single-center retrospective before-after study, but multiple well-conducted randomized controlled trials failed to replicate any benefit. The VITAMINS trial (JAMA 2020) found no improvement in time alive and vasopressor-free versus hydrocortisone alone. The VICTAS trial (JAMA 2021) found no increase in ventilator- and vasopressor-free days versus placebo. The ACTS, ORANGES, and other RCTs were similarly negative. For the vitamin C component specifically, the large LOVIT trial (NEJM 2022) actually found a higher risk of death or persistent organ dysfunction with IV vitamin C. Meta-analyses show no mortality benefit. Surviving Sepsis Campaign guidelines do not recommend this therapy. The answer is a confident No \u2014 this is a well-characterized case of a promising early signal being overturned by rigorous randomized evidence."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:31950979",
+      "citation": "Fujii T, et al. Effect of Vitamin C, Hydrocortisone, and Thiamine vs Hydrocortisone Alone on Time Alive and Free of Vasopressor Support Among Patients With Septic Shock: The VITAMINS Randomized Clinical Trial. JAMA. 2020;323(5):423-431. DOI:10.1001/jama.2019.22176. NCT03333278.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed multicenter open-label RCT (MeSH: Randomized Controlled Trial, Multicenter Study); no retraction; prespecified primary + 10 secondary outcomes. Confirmed via PubMed metadata + ClinicalTrials.gov NCT03333278 (n=216, COMPLETED).",
+      "n_int": 109,
+      "year": 2020,
+      "finding": "Triple therapy vs hydrocortisone alone: no difference in time alive and vasopressor-free to day 7 (median paired difference -0.6 h, 95% CI -8.3 to 7.2; P=.83); 9/10 secondary outcomes null; 90-day mortality numerically worse (28.6% vs 24.5%, HR 1.18, 95% CI 0.69-2.00). Direct RCT of the claimed triple therapy on the claimed outcome \u2014 null."
+    },
+    {
+      "source_id": "PMID:33620405",
+      "citation": "Sevransky JE, et al. Effect of Vitamin C, Thiamine, and Hydrocortisone on Ventilator- and Vasopressor-Free Days in Patients With Sepsis: The VICTAS Randomized Clinical Trial. JAMA. 2021;325(8):742-750. DOI:10.1001/jama.2020.24505. NCT03509350.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Double-blind placebo-controlled multicenter RCT (MeSH-confirmed); terminated early after 501 enrolled for administrative/funding withdrawal (not futility/harm), may be underpowered; not retracted. Abstract explicitly states early administrative termination.",
+      "n_int": 252,
+      "year": 2021,
+      "finding": "Triple therapy vs placebo: ventilator- and vasopressor-free days median 25 vs 26 (median difference -1 day, 95% CI -4 to 2; P=.85); 30-day mortality 22% vs 24% (NS). Largest double-blind RCT of the triple therapy \u2014 null on patient-centered outcomes."
+    },
+    {
+      "source_id": "PMID:31573637",
+      "citation": "Fowler AA, et al. Effect of Vitamin C Infusion on Organ Failure and Biomarkers of Inflammation and Vascular Injury in Patients With Sepsis and Severe Acute Respiratory Failure: The CITRIS-ALI Randomized Clinical Trial. JAMA. 2019;322(13):1261-1270. DOI:10.1001/jama.2019.11825. NCT02106975.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Double-blind placebo-controlled RCT (n=167 total; MeSH-confirmed). Primary endpoints were a SURROGATE (modified SOFA change 0-96h) plus inflammation/vascular biomarkers (CRP, thrombomodulin), not mortality. The widely-cited 28-day mortality difference was a secondary/exploratory outcome, not primary. outcome_match=false correctly reflects surrogate primary endpoint.",
+      "n_int": 84,
+      "year": 2019,
+      "finding": "IV vitamin C (component of the cocktail) vs placebo in sepsis+ARDS: no difference in primary modified-SOFA surrogate (change -0.10, 95% CI -1.23 to 1.03; P=.86) nor CRP/thrombomodulin. Primary outcome is a surrogate \u2014 outcome_match false."
+    },
+    {
+      "source_id": "PMID:35704292",
+      "citation": "Lamontagne F, et al. Intravenous Vitamin C in Adults with Sepsis in the Intensive Care Unit (LOVIT). N Engl J Med. 2022;386(25):2387-2398. DOI:10.1056/NEJMoa2200644. NCT03680274.",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Large rigorous double-blind placebo-controlled phase-3 RCT (n=872; confirmed via PubMed + ClinicalTrials.gov NCT03680274, COMPLETED); not retracted. Tests the vitamin C component (not full HAT) in adults with sepsis on vasopressors \u2014 same claimed population \u2014 so population_match=true (NOT a false-negative). Primary endpoint (composite death or persistent organ dysfunction at day 28) is patient-centered, not a surrogate \u2192 outcome_match=true. Modest RR, not all-or-none \u2192 dramatic_effect=false.",
+      "n_int": 435,
+      "year": 2022,
+      "finding": "IV vitamin C vs placebo in ICU sepsis on vasopressors: HIGHER risk of composite death or persistent organ dysfunction at day 28 (44.5% vs 38.5%; RR 1.21, 95% CI 1.04-1.40; P=.01); 28-day death 35.4% vs 31.6% (RR 1.17, 95% CI 0.98-1.40). Contradicts benefit \u2014 the vitamin C component signals harm."
+    },
+    {
+      "source_id": "PMID:33511898",
+      "citation": "Zayed Y, et al. Vitamin C, Thiamine, and Hydrocortisone in the Treatment of Sepsis: A Meta-Analysis and Trial Sequential Analysis of Randomized Controlled Trials. J Intensive Care Med. 2021;37(3):327-336. DOI:10.1177/0885066620987809.",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Meta-analysis of 6 RCTs (839 patients) of the HAT triple therapy; peer-reviewed (MeSH: Meta-Analysis), not retracted. Trial sequential analysis inconclusive for definitively excluding benefit but no significant mortality effect found. n_int=419 is a defensible ~half of the 839 pooled patients.",
+      "n_int": 419,
+      "year": 2021,
+      "finding": "HAT triple therapy vs control: no difference in long-term mortality (RR 1.05, 95% CI 0.85-1.30), ICU mortality (RR 1.03, 95% CI 0.73-1.44), AKI (RR 1.05), or ICU/hospital length of stay. Only a transient day-3 SOFA reduction (surrogate; MD -0.92, 95% CI -1.43 to -0.41). Pooled RCT evidence \u2014 null on mortality."
+    }
+  ]
+}

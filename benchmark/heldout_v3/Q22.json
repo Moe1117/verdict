@@ -1,0 +1,100 @@
+{
+  "claim_id": "Q22",
+  "claim": "Sipuleucel-T improves survival in metastatic castration-resistant prostate cancer",
+  "domain": "oncology",
+  "expected_verdict": "Contested",
+  "gold_rationale": "Sipuleucel-T received FDA approval (Apr 29, 2010; BLA125197) and NCCN endorsement for asymptomatic/minimally symptomatic mCRPC on the strength of the pivotal IMPACT phase 3 RCT (Kantoff, NEJM 2010, N=512), which met its primary endpoint of overall survival (HR 0.78, 95% CI 0.61-0.98, p=0.03; median 25.8 vs 21.7 mo; +4.1 mo). An integrated analysis of the earlier identically-designed D9901/D9902A trials (Higano, Cancer 2009, N=225) reproduced a significant OS signal (HR 1.50, 95% CI 1.10-2.05, p=0.011). So a genuine, replicated, statistically significant OS benefit exists in randomized data, and the drug is regulatorily approved and guideline-endorsed for exactly this population. HOWEVER, the OS claim is genuinely contested on causal grounds: (1) sipuleucel-T produced NO effect on time to objective disease progression in IMPACT and no measurable antitumor (PSA/radiographic) response \u2014 an unusual dissociation for a survival-prolonging agent; (2) the pivotal D9901 trial FAILED its primary endpoint (time to progression, p=0.052), with OS a secondary finding; and (3) a prominent JNCI critique (Huber 2012) argued the 4.1-month 'benefit' could instead reflect HARM to the placebo arm \u2014 placebo patients had ~two-thirds of harvested mononuclear cells frozen and never reinfused, and showed an unexplained age-dependent OS decrement (placebo <65y median 28.2 mo vs >=65y 17.3 mo) not seen with other mCRPC agents, suggesting the 'placebo' was a biologically active, potentially harmful intervention rather than an inert control. This confound was never resolved by a best-standard-of-care controlled trial. Because the effect is FDA-approved and replicated in RCTs yet the causal survival benefit remains unresolved due to an unproven mechanism, absent PFS effect, and a credible unaddressed control-arm-harm alternative, documented clinical/regulatory consensus lands on Contested \u2014 not clean Support.",
+  "outcome": "overall survival",
+  "population": "asymptomatic / minimally symptomatic metastatic castration-resistant prostate cancer (mCRPC)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Sipuleucel-T (Provenge) improves overall survival in asymptomatic/minimally symptomatic metastatic castration-resistant prostate cancer. The pivotal phase 3 IMPACT trial (Kantoff et al., NEJM 2010, N=512) met its primary endpoint, showing a 4.1-month improvement in median OS (25.8 vs 21.7 months; HR 0.78, p=0.03), and this supported FDA approval in 2010. Notably, it prolongs survival without slowing disease progression (no PFS/time-to-progression benefit), and a well-known critique has questioned whether part of the apparent benefit reflects harm to the control arm, so the survival benefit\u2014while real and approved\u2014is modest and somewhat debated mechanistically."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:20818862",
+      "citation": "Kantoff PW, Higano CS, Shore ND, et al. Sipuleucel-T immunotherapy for castration-resistant prostate cancer (IMPACT). N Engl J Med. 2010;363(5):411-422. DOI:10.1056/NEJMoa1001294. NCT00065442.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind placebo-controlled phase 3; Dendreon-funded. Primary endpoint OS met (HR 0.78, 95% CI 0.61-0.98; 25.8 vs 21.7 mo, p=0.03). Basis of FDA approval. Verified against PubMed abstract + NCT00065442 (primary outcome = OS). Caveat: time to objective disease progression similar between arms \u2014 survival benefit without measurable antitumor/progression effect.",
+      "n_int": 341,
+      "year": 2010,
+      "finding": "N=512 (2:1; 341 sipuleucel-T / 171 placebo). OS primary endpoint met: 22% relative reduction in risk of death, median 25.8 vs 21.7 mo (HR 0.78, 95% CI 0.61-0.98, p=0.03). Time to objective disease progression similar between arms."
+    },
+    {
+      "source_id": "PMID:16809734",
+      "citation": "Small EJ, Schellhammer PF, Higano CS, et al. Placebo-controlled phase III trial of immunologic therapy with sipuleucel-T (APC8015) in metastatic asymptomatic hormone refractory prostate cancer (D9901). J Clin Oncol. 2006;24(19):3089-3094. DOI:10.1200/JCO.2005.04.5252.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "PRIMARY endpoint (time to progression) FAILED: 11.7 vs 10.0 wk, p=0.052 (HR 1.45, 95% CI 0.99-2.11). OS a secondary/supportive finding that was significant: 25.9 vs 21.4 mo, p=0.01 (HR 1.70, 95% CI 1.13-2.56, coded >1 = favors treatment). Verified against PubMed abstract. Classic endpoint-switching flag: the survival claim rests on a secondary endpoint after the primary failed.",
+      "n_int": 82,
+      "year": 2006,
+      "finding": "N=127 (82 sipuleucel-T / 45 placebo). Primary endpoint TTP not met (11.7 vs 10.0 wk, p=0.052). Secondary OS significant: median 25.9 vs 21.4 mo (p=0.01)."
+    },
+    {
+      "source_id": "PMID:19536890",
+      "citation": "Higano CS, Schellhammer PF, Small EJ, et al. Integrated data from 2 randomized, double-blind, placebo-controlled phase 3 trials (D9901 and D9902A) of sipuleucel-T in advanced prostate cancer. Cancer. 2009;115(16):3670-3679. DOI:10.1002/cncr.24429.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pooled analysis of two identically-designed RCTs (D9901+D9902A); replicates the OS signal seen later in IMPACT. Verified against PubMed abstract (N=225, 147/78; HR 1.50). Same control-arm design (cells frozen, not reinfused) later criticized by Huber 2012.",
+      "n_int": 147,
+      "year": 2009,
+      "finding": "N=225 pooled (147 sipuleucel-T / 78 placebo). 33% reduction in risk of death favoring sipuleucel-T (HR 1.50, 95% CI 1.10-2.05, p=0.011, log-rank); robust to adjustment for baseline imbalances and post-study chemotherapy."
+    },
+    {
+      "source_id": "PMID:22232132",
+      "citation": "Huber ML, Haynes L, Parker C, Iversen P. Interdisciplinary critique of sipuleucel-T as immunotherapy in castration-resistant prostate cancer. J Natl Cancer Inst. 2012;104(4):273-279. DOI:10.1093/jnci/djr514.",
+      "design": "systematic review",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "PubMed article_types=['Journal Article']: this is an interdisciplinary CRITIQUE / cross-trial methodological analysis, NOT a protocol-driven systematic review \u2014 the provided design enum lacks a 'commentary/narrative-review' option, so 'systematic review' is used only as the nearest evidence-synthesis label and should NOT be weighted as a high-tier systematic review. Content verified against JNCI/PMC full text: age-subgroup OS table (placebo <65y 28.2 mo vs >=65y 17.3 mo) confirmed verbatim. This is the core CONTESTING evidence; never resolved by a best-standard-of-care controlled trial.",
+      "n_int": 0,
+      "year": 2012,
+      "finding": "Argues the 4.1-mo OS difference could reflect HARM to placebo patients: ~two-thirds of their harvested mononuclear cells were frozen and never reinfused, and placebo OS showed an age-dependent decrement (<65y median 28.2 mo vs >=65y 17.3 mo) not seen with other mCRPC agents. Lack of measurable antitumor response undermines a mechanistic survival benefit."
+    },
+    {
+      "source_id": "PMID:31483485",
+      "citation": "Higano CS, Armstrong AJ, Sartor AO, et al. Real-world outcomes of sipuleucel-T treatment in PROCEED, a prospective registry of men with mCRPC. Cancer. 2019;125(23):4172-4180. DOI:10.1002/cncr.32445. NCT01306890.",
+      "design": "prospective cohort",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Large single-arm registry (Dendreon-sponsored). Verified against PubMed abstract (N=1976, median FU 46.6 mo, median OS 30.7 mo, 95% CI 28.6-32.2). No concurrent control arm, so it cannot establish a survival BENEFIT vs no-treatment \u2014 direction 0.",
+      "n_int": 1976,
+      "year": 2019,
+      "finding": "N=1976, median follow-up 46.6 mo, median OS 30.7 mo (95% CI 28.6-32.2). Confirms tolerability and known prognostic factors; single-arm, no comparator, so does not adjudicate the causal OS-benefit question."
+    },
+    {
+      "source_id": "NCT00065442",
+      "citation": "US FDA approval of PROVENGE (sipuleucel-T), Apr 29, 2010 (BLA125197), for asymptomatic/minimally symptomatic mCRPC; approval based on IMPACT (NCT00065442) OS endpoint. NCCN Prostate Cancer Guidelines list sipuleucel-T as an option for this population.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory endorsement of the OS claim: FDA approval verified against FDA approval letter (Apr 29, 2010) + DailyMed/PROVENGE PI (Initial U.S. Approval 2010, BLA125197); indication exactly matches population. NCT00065442 verified: phase 3, N=512, Dendreon, primary outcome = Overall Survival. FDA reviewers/NEJM editorial noted absence of mechanistic/antitumor supportive data, which is why the causal claim remains debated despite approval.",
+      "n_int": 341,
+      "year": 2010,
+      "finding": "FDA-approved (Apr 29, 2010, BLA125197) and guideline-endorsed for OS benefit in asymptomatic/minimally symptomatic mCRPC on the basis of the IMPACT OS result; approval acknowledged the lack of a measurable antitumor effect."
+    }
+  ]
+}

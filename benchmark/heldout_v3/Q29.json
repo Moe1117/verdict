@@ -1,0 +1,86 @@
+{
+  "claim_id": "Q29",
+  "claim": "Erenumab reduces monthly migraine days in episodic migraine",
+  "domain": "neuro",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Two pivotal phase 3 double-blind placebo-controlled RCTs directly established that erenumab reduces monthly migraine days (MMD) in episodic migraine on the exact claimed endpoint. STRIVE (Goadsby, NEJM 2017, N=955) showed MMD reduced by 3.2 (70 mg) and 3.7 (140 mg) vs 1.8 for placebo (P<0.001 each dose); ARISE (Dodick, Cephalalgia 2018, N=577) showed -2.9 vs -1.8 days, treatment difference -1.0 (P<0.001). LIBERTY (Reuter, Lancet 2018) confirmed benefit in a difficult-to-treat episodic population (2-4 prior preventive failures). Two independent systematic reviews/meta-analyses (Lattanzi 2019; Deng 2020, 11 RCTs / 4402 patients) pooled a consistent MMD reduction of ~1.3-1.9 days vs placebo. The primary endpoint IS monthly migraine days (no surrogate). Erenumab (Aimovig) received FDA approval May 2018 and EMA approval for migraine prevention on this evidence base. There is no contradicting RCT on the MMD endpoint. This is settled regulatory and clinical consensus: Supported.",
+  "outcome": "monthly migraine days",
+  "population": "episodic migraine",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Erenumab (a monoclonal antibody against the CGRP receptor) reduces monthly migraine days in episodic migraine. This was established by the pivotal phase 3 STRIVE trial (Goadsby et al., NEJM 2017), where erenumab 70 mg and 140 mg reduced monthly migraine days by 3.2 and 3.7 days respectively versus 1.8 days for placebo, and confirmed by the ARISE trial and multiple meta-analyses. Erenumab (Aimovig) was FDA-approved in May 2018 for migraine prevention on this basis."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:29171821",
+      "citation": "Goadsby PJ, et al. A Controlled Trial of Erenumab for Episodic Migraine (STRIVE). N Engl J Med. 2017;377(22):2123-2132. NCT02456740. DOI:10.1056/NEJMoa1705848",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal phase 3 double-blind placebo-controlled RCT; primary endpoint met at P<0.001 for both doses. Amgen/Novartis funded. Verified against PubMed metadata.",
+      "n_int": 636,
+      "year": 2017,
+      "finding": "STRIVE (N=955): mean monthly migraine days reduced by 3.2 (70 mg) and 3.7 (140 mg) vs 1.8 for placebo over months 4-6 (P<0.001 each dose). Primary endpoint = change in monthly migraine days. 50% responder rate 43.3%/50.0% vs 26.6%."
+    },
+    {
+      "source_id": "PMID:29471679",
+      "citation": "Dodick DW, et al. ARISE: A Phase 3 randomized trial of erenumab for episodic migraine. Cephalalgia. 2018;38(6):1026-1037. NCT02483585. DOI:10.1177/0333102418759786",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Confirmatory pivotal phase 3 RCT; primary MMD endpoint met (P<0.001). Amgen funded. Verified against PubMed metadata.",
+      "n_int": 286,
+      "year": 2018,
+      "finding": "ARISE (N=577): erenumab 70 mg reduced monthly migraine days by 2.9 days vs 1.8 for placebo, treatment difference -1.0 (95% CI -1.6 to -0.5), P<0.001. Primary endpoint = change in monthly migraine days. 50% responder 39.7% vs 29.5%."
+    },
+    {
+      "source_id": "PMID:30360965",
+      "citation": "Reuter U, et al. Efficacy and tolerability of erenumab in episodic migraine after 2-4 unsuccessful preventives (LIBERTY): phase 3b RCT. Lancet. 2018;392(10161):2280-2287. NCT03096834. DOI:10.1016/S0140-6736(18)32534-0",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3b RCT in difficult-to-treat EPISODIC migraine (still the claimed population); primary endpoint was 50% responder rate (an MMD-based responder metric), met at P=0.002. Novartis funded. Verified against PubMed metadata.",
+      "n_int": 121,
+      "year": 2018,
+      "finding": "LIBERTY (N=246, 2-4 prior preventive failures): 30% of erenumab 140 mg patients achieved >=50% reduction in monthly migraine days vs 14% placebo (OR 2.7, 95% CI 1.4-5.2, P=0.002). Confirms MMD-based benefit in refractory episodic migraine."
+    },
+    {
+      "source_id": "PMID:30793254",
+      "citation": "Lattanzi S, et al. Erenumab for Preventive Treatment of Migraine: A Systematic Review and Meta-Analysis of Efficacy and Safety. Drugs. 2019;79(4):417-431. DOI:10.1007/s40265-019-01069-1",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Systematic review + meta-analysis of 5 RCTs of erenumab (episodic and chronic migraine). Verified against PubMed metadata.",
+      "n_int": 0,
+      "year": 2019,
+      "finding": "Pooled across 5 RCTs: erenumab reduced monthly migraine days vs placebo by 1.3 days (70 mg; 95% CI -1.7 to -1.0) and 1.9 days (140 mg; 95% CI -2.3 to -1.4), both P<0.001. Also reduced acute medication days."
+    },
+    {
+      "source_id": "PMID:32061264",
+      "citation": "Deng H, et al. Efficacy and safety of CGRP-binding monoclonal antibodies for preventive treatment of episodic migraine: updated systematic review and meta-analysis. BMC Neurol. 2020;20(1):57. DOI:10.1186/s12883-020-01633-3",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "11 high-quality RCTs, 4402 patients, episodic migraine; erenumab-specific subgroup consistent with class effect. Verified against PubMed metadata.",
+      "n_int": 0,
+      "year": 2020,
+      "finding": "CGRP mAb class (incl. erenumab) reduced monthly migraine days by WMD -1.44 (95% CI -1.68 to -1.19) vs placebo and improved 50% responder rate (RR 1.51). Erenumab subgroup consistent. Confirms MMD reduction in episodic migraine."
+    }
+  ]
+}

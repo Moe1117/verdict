@@ -38,7 +38,7 @@ def _dev_items():
 
 
 def _heldout_items():
-    for sub in ("heldout", "heldout_v2"):
+    for sub in ("heldout", "heldout_v2", "heldout_v3"):
         d = os.path.join(ROOT, "benchmark", sub)
         if not os.path.isdir(d):
             continue

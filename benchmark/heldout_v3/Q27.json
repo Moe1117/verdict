@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q27",
+  "claim": "Ocrelizumab slows disability progression in primary progressive multiple sclerosis",
+  "domain": "neuro",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Consensus is Supported, anchored on a single adequately powered positive pivotal RCT. ORATORIO (Montalban NEJM 2017, NCT01194570; N=732, 2:1 ocrelizumab vs placebo) met its primary endpoint: 12-week confirmed disability progression 32.9% vs 39.3%, HR 0.76 (95% CI 0.59-0.98, p=0.03), with concordant 24-week CDP (HR 0.75, p=0.04), timed 25-foot walk, T2 lesion volume and brain-volume-loss secondary endpoints. First positive PPMS trial; led to FDA approval (28 Mar 2017) of Ocrevus as the first and only DMT for PPMS, plus EMA approval (Jan 2018); guideline- and label-endorsed. The claimed outcome (confirmed disability progression by EDSS) is a direct clinical endpoint, not a surrogate. Caveats keeping this 'Supported' rather than overwhelming: modest effect (~24% relative risk reduction, absolute CDP difference ~6%), single pivotal trial, and same-class predecessor OLYMPUS (rituximab, Hawker 2009) formally missed its primary CDP endpoint in overall PPMS (30.2% vs 38.5%, p=0.14) with benefit only in younger/gadolinium-enhancing subgroups \u2014 consistent with an inflammatory-activity-dependent effect rather than class-wide certainty.",
+  "outcome": "confirmed disability progression (12-week and 24-week CDP by EDSS)",
+  "population": "primary progressive multiple sclerosis (adults, EDSS 3.0-6.5)",
+  "provenance": "PubMed (NEJM, Ann Neurol, Ther Adv Neurol Disord, Mult Scler Relat Disord); ClinicalTrials.gov (NCT01194570); FDA approval letter 761053 + Genentech/Roche releases (28 Mar 2017)",
+  "build_confidence": "high",
+  "notes": "All five rows independently re-verified against primary sources. ORATORIO primary publication PMID 28002688 (NEJM 2017;376:209-220, DOI 10.1056/NEJMoa1606468) abstract confirms N=732, 2:1, 12-wk CDP 32.9% vs 39.3%, HR 0.76 (0.59-0.98) p=0.03, 24-wk CDP HR 0.75 (0.58-0.98) p=0.04. Trial record NCT01194570 confirmed (enrollment 735, 2:1, primary = time to 12-wk CDP, has_results=true, Hoffmann-La Roche). OLYMPUS (rituximab) PMID 19847908 confirmed negative overall on primary CDP (30.2% vs 38.5%, p=0.14; 439 randomized 2:1 \u2192 ~292 rituximab); direction coded 0 (null on claimed outcome; is rituximab, not ocrelizumab); correctly population_match=true (this IS a PPMS trial \u2014 no false flag). FDA approval 28 Mar 2017 confirmed via FDA letter 761053 + Genentech/Roche press releases (first drug for PPMS). Network meta-analysis PMID 30677733 is RMS-framed (population_match=false) but incorporates ocrelizumab 12-wk CDP data. Mulero review PMID 29774057 corroborates ORATORIO numbers and regulatory status (labeled systematic review; PubMed type is narrative Review \u2014 disclosed, non-material). No retractions detected. dramatic_effect FALSE across all rows: PPMS not uniformly fatal, effect modest, same-class RCT null overall.",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Ocrelizumab (Ocrevus), an anti-CD20 B-cell-depleting monoclonal antibody, slows disability progression in primary progressive MS. This is established by the phase 3 ORATORIO trial (Montalban et al., NEJM 2017), which randomized 732 PPMS patients 2:1 to ocrelizumab or placebo and met its primary endpoint: the proportion with 12-week confirmed disability progression was 32.9% with ocrelizumab versus 39.3% with placebo (HR 0.76, ~24% relative risk reduction, p=0.03), with consistent effects on 24-week confirmed progression, timed 25-foot walk, and MRI measures. On the strength of this trial, ocrelizumab became the first and only FDA-approved disease-modifying therapy for PPMS in March 2017. The effect is real but modest, and appears strongest in patients with ongoing inflammatory (gadolinium-enhancing) activity."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:28002688",
+      "citation": "Montalban X, et al. Ocrelizumab versus Placebo in Primary Progressive Multiple Sclerosis. N Engl J Med. 2017;376(3):209-220. DOI:10.1056/NEJMoa1606468 (ORATORIO, NCT01194570).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal phase 3, double-blind, placebo-controlled; industry-funded (Roche) but pre-registered with prespecified primary endpoint and independent NEJM publication. Verified against PubMed abstract; no retraction (article_types: Clinical Trial Phase III, RCT).",
+      "n_int": 488,
+      "year": 2017,
+      "finding": "Primary endpoint met: 12-week confirmed disability progression 32.9% (ocrelizumab) vs 39.3% (placebo), HR 0.76 (95% CI 0.59-0.98, p=0.03); 24-week CDP 29.6% vs 35.7%, HR 0.75 (95% CI 0.58-0.98, p=0.04); timed 25-foot walk, T2 lesion volume and brain-volume loss also favored ocrelizumab. First positive PPMS trial."
+    },
+    {
+      "source_id": "NCT01194570",
+      "citation": "A Study of Ocrelizumab in Participants With Primary Progressive Multiple Sclerosis (ORATORIO). ClinicalTrials.gov NCT01194570. Sponsor: Hoffmann-La Roche. Phase 3, completed; has results.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Registry record corroborates design (735 enrolled, randomized 2:1), primary outcome = time to 12-week CDP over ~217 weeks, and posted results (has_results=true). Matches publication.",
+      "n_int": 488,
+      "year": 2015,
+      "finding": "Registry confirms trial design and primary endpoint (time to onset of 12-week confirmed disability progression, EDSS-based, max follow-up ~217 weeks). Results posted; supports the published positive CDP outcome. Primary completion 2015-07-23."
+    },
+    {
+      "source_id": "PMID:19847908",
+      "citation": "Hawker K, et al. Rituximab in patients with primary progressive multiple sclerosis: results of a randomized double-blind placebo-controlled multicenter trial (OLYMPUS). Ann Neurol. 2009;66(4):460-471. DOI:10.1002/ana.21867.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Rigorous same-class (anti-CD20, rituximab) predecessor RCT in PPMS; this is rituximab, not ocrelizumab. Formally negative on the claimed outcome overall. 439 randomized 2:1 (~292 rituximab). No retraction. Correctly marked population_match=true (is a PPMS trial).",
+      "n_int": 292,
+      "year": 2009,
+      "finding": "Primary endpoint NOT met: time to 12-week confirmed disease progression did not differ (96-wk rates 30.2% rituximab vs 38.5% placebo, p=0.14). Prespecified subgroups (age <51, gadolinium-enhancing lesions) showed delayed progression, suggesting an inflammatory-activity-dependent class effect."
+    },
+    {
+      "source_id": "PMID:29774057",
+      "citation": "Mulero P, Midaglia L, Montalban X. Ocrelizumab: a new milestone in multiple sclerosis therapy. Ther Adv Neurol Disord. 2018;11:1756286418773025. DOI:10.1177/1756286418773025.",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Review (PubMed article_type 'Review'; coded here as systematic/narrative review) by ORATORIO senior author; secondary source corroborating primary-trial numbers and regulatory status. n_int=0.",
+      "n_int": 0,
+      "year": 2018,
+      "finding": "Confirms ORATORIO met primary endpoint (12-wk CDP 32.9% ocrelizumab vs 39.3% placebo) and that ocrelizumab is the first drug to lower clinical and MRI progression in PPMS, leading to FDA approval March 2017 as the first PPMS therapy."
+    },
+    {
+      "source_id": "PMID:30677733",
+      "citation": "McCool R, et al. Systematic review and network meta-analysis comparing ocrelizumab with other treatments for relapsing multiple sclerosis. Mult Scler Relat Disord. 2019;29:55-61. DOI:10.1016/j.msard.2018.12.040.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Roche-funded network meta-analysis; RMS-focused network (>75% relapsing \u2192 population_match=false for PPMS) but incorporates ocrelizumab 12-week confirmed-disability-progression data and confirms superiority vs placebo on that outcome.",
+      "n_int": 0,
+      "year": 2019,
+      "finding": "In the 12-week confirmed disability progression network (including placebo), ocrelizumab was superior to 10 of 17 comparators and comparable to the rest; consistently ranked among the most effective DMTs on disability progression. Population is relapsing MS, not PPMS."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "claim_id": "Q06",
+  "claim": "Spironolactone reduces cardiovascular events in heart failure with preserved ejection fraction",
+  "domain": "cardiology",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The single pivotal trial of spironolactone specifically in HFpEF, TOPCAT (Pitt, NEJM 2014; NCT00094302; N=3445), MISSED its primary composite endpoint of CV death, aborted cardiac arrest, or HF hospitalization overall (HR 0.89, 95% CI 0.77-1.04, P=0.14); only the HF-hospitalization component was significant (HR 0.83, 0.69-0.99, P=0.04). The apparent benefit is confined to a post hoc regional subgroup: TOPCAT showed an ~4-fold event-rate difference between Russia/Georgia and the Americas, with significant reductions in the primary outcome, CV death, and HF hospitalization ONLY in the Americas (Pfeffer, Circulation 2015) \u2014 hypothesis-generating, not confirmatory, and confounded by concerns about drug non-adherence/canrenone non-detection in Russia. The broader MRA class does reduce the composite outcome in HFmrEF/HFpEF (FINEARTS-HF, Solomon NEJM 2024, N=6001: finerenone rate ratio 0.84, 0.74-0.95), and MRA meta-analyses show a significant reduction in the composite CV-event endpoint (HR ~0.85) driven by HF hospitalization \u2014 but CV mortality alone is NOT significantly reduced (HR 0.92, 0.82-1.02, P=0.13), and FINEARTS-HF tested finerenone, a different (nonsteroidal) agent, not spironolactone. Guidelines reflect this: 2022 AHA/ACC/HFSA gives MRA in HFpEF only a weak COR 2b (LOE B-R) 'may be considered' recommendation to reduce hospitalizations, while the 2023 ESC guideline makes NO recommendation for MRA in HFpEF because the trials failed their primary endpoints. Thus the claim is genuinely Contested: a positive composite signal (largely HF-hospitalization and largely class-/finerenone-driven) against a negative spironolactone-specific pivotal trial and only weak/absent guideline endorsement.",
+  "outcome": "CV death or HF hospitalization (composite cardiovascular events)",
+  "population": "HFpEF (heart failure with preserved ejection fraction, LVEF >=45-50%)",
+  "provenance": "PubMed (PMIDs 24716680, 25406305, 39225278, 40959489) with DOIs \u2014 all four independently re-verified against PubMed metadata (exact-matching titles/DOIs, no retractions); ClinicalTrials.gov NCT00094302 (TOPCAT, N=3445, spironolactone) and NCT04435626 (FINEARTS-HF, N=6016, finerenone) confirmed via get_trial_details; 2022 AHA/ACC/HFSA and 2023 ESC HF guideline recommendation tables via web knowledge.",
+  "notes": "Critical distinctions (all re-verified): (1) TOPCAT is the ONLY pivotal RCT of spironolactone specifically in HFpEF and it was NEGATIVE on its primary endpoint \u2014 this exact-agent-exact-outcome-exact-population row is null (direction=0, population_match=true, honestly represented). (2) The positive composite signal is substantially driven by finerenone (a different, nonsteroidal MRA) and by the HF-hospitalization component; CV mortality is NOT reduced. (3) The Pfeffer Americas subgroup benefit is post hoc. Baseline plain-LLM answer over-affirms 'Yes' based on the Americas-subgroup narrative and class-level data, whereas documented consensus is Contested.",
+  "rows": [
+    {
+      "source_id": "PMID:24716680",
+      "citation": "Pitt B, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-92. DOI:10.1056/NEJMoa1313731. NCT00094302.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified PubMed: title/DOI exact match, article_types = Randomized Controlled Trial/Multicenter Study, NOT retracted. Landmark pivotal RCT of spironolactone specifically in HFpEF (LVEF>=45%); primary composite of CV death, aborted cardiac arrest, or HF hospitalization NOT significantly reduced (HR 0.89, 95% CI 0.77-1.04, P=0.14). Only HF-hospitalization component significant (HR 0.83, 0.69-0.99, P=0.04). This agent-matched negative trial is correctly marked population_match=true / direction=0 \u2014 not hidden or mismarked.",
+      "n_int": 1722,
+      "year": 2014,
+      "finding": "Negative on the exact claimed outcome: spironolactone did NOT significantly reduce the primary composite (CV death/aborted arrest/HF hospitalization) in HFpEF (HR 0.89, P=0.14); N=3445 total (1722 spiro / 1723 placebo). Single agent-, population-, and outcome-matched pivotal trial, and it missed."
+    },
+    {
+      "source_id": "PMID:25406305",
+      "citation": "Pfeffer MA, et al. Regional variation in patients and outcomes in TOPCAT. Circulation. 2015;131(1):34-42. DOI:10.1161/CIRCULATIONAHA.114.013255. NCT00094302.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified PubMed: title/DOI exact match, article_types = Randomized Controlled Trial. Post hoc regional subgroup analysis of TOPCAT \u2014 hypothesis-generating, not pre-specified confirmatory. ~4-fold event-rate difference Russia/Georgia (n=1678) vs Americas (n=1767). Print-issue year 2015 (online 2014-11-18).",
+      "n_int": 886,
+      "year": 2015,
+      "finding": "In the Americas subgroup (US/Canada/Brazil/Argentina), spironolactone significantly reduced the primary composite, CV death, and HF hospitalization; no detectable effect in Russia/Georgia (where event rates and potassium/creatinine drug-response markers were anomalously low). Supports the claim only within a post hoc subgroup."
+    },
+    {
+      "source_id": "PMID:39225278",
+      "citation": "Solomon SD, et al. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction (FINEARTS-HF). N Engl J Med. 2024;391(16):1475-1485. DOI:10.1056/NEJMoa2407107. NCT04435626.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified PubMed + ClinicalTrials.gov: title/DOI exact match, article_types = Clinical Trial Phase III/RCT; NCT04435626 interventions = Finerenone (BAY94-8862)/Placebo, enrollment 6016. Tests FINERENONE (nonsteroidal MRA), NOT spironolactone \u2014 agent mismatch to the claim, correctly flagged. Population LVEF>=40% covers HFpEF/HFmrEF.",
+      "n_int": 3003,
+      "year": 2024,
+      "finding": "Finerenone significantly reduced the composite of total worsening HF events + CV death (rate ratio 0.84, 95% CI 0.74-0.95, P=0.007); N=6001 analyzed (3003 finerenone / 2998 placebo). CV death alone NOT reduced (HR 0.93, 0.78-1.11). Supports the MRA class but NOT spironolactone specifically."
+    },
+    {
+      "source_id": "PMID:40959489",
+      "citation": "Zhang Y, et al. Mineralocorticoid receptor antagonists in heart failure: a systematic review and meta-analysis. Front Cardiovasc Med. 2025;12:1667236. DOI:10.3389/fcvm.2025.1667236. PROSPERO CRD42022304966.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified PubMed: title/DOI exact match, article_types = Systematic Review. Nine RCTs pooling spironolactone, eplerenone, and finerenone; HFmrEF/HFpEF estimate largely finerenone-driven.",
+      "n_int": 0,
+      "year": 2025,
+      "finding": "In HFmrEF/HFpEF, MRAs reduced the composite CV outcome (HR 0.85, 95% CI 0.78-0.93, P=0.0004) and HF hospitalization (HR 0.80, 0.73-0.89), but CV MORTALITY was NOT significantly reduced (HR 0.92, 0.82-1.02, P=0.13). Benefit on the composite is real but modest, driven by HF hospitalization; hyperkalemia elevated (RR 2.19, 1.97-2.43)."
+    },
+    {
+      "source_id": "DOI:10.1161/CIR.0000000000001063",
+      "citation": "Heidenreich PA, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI:10.1161/CIR.0000000000001063. (Cross-ref 2023 ESC Focused Update, DOI:10.1093/eurheartj/ehad195.)",
+      "design": "guideline / regulatory",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Consensus guideline synthesis reflecting weak/absent endorsement for MRA (including spironolactone) in HFpEF.",
+      "n_int": 0,
+      "year": 2022,
+      "finding": "2022 AHA/ACC/HFSA gives MRA in HFpEF only COR 2b, LOE B-R ('may be considered to decrease hospitalizations,' favored at lower-end LVEF), based on TOPCAT subgroup analyses; the 2023 ESC guideline makes NO recommendation for MRA in HFpEF because trials failed their primary endpoints. Weak-to-absent guideline support = Contested."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes, at least modestly. The main trial, TOPCAT, technically missed its overall primary endpoint, but this was heavily driven by the Russia/Georgia sites where there were serious concerns that patients weren't actually taking the drug (undetectable canrenone metabolite). In the pre-specified Americas cohort, spironolactone significantly reduced the primary composite of cardiovascular death and heart failure hospitalization, and it significantly reduced HF hospitalizations even in the overall trial. More recent MRA data in HFpEF (e.g., FINEARTS-HF with finerenone) and meta-analyses reinforce that mineralocorticoid receptor antagonists reduce heart-failure events in this population. So spironolactone is widely used and guideline-endorsed (as a IIb 'may be considered' option) to reduce hospitalizations in HFpEF, particularly at the lower end of the ejection-fraction range."
+  },
+  "build_confidence": "high"
+}

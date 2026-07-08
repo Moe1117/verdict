@@ -1,0 +1,103 @@
+{
+  "claim_id": "Q09",
+  "claim": "Vericiguat reduces cardiovascular death or heart-failure hospitalization in heart failure with reduced ejection fraction",
+  "domain": "cardiology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The claim as worded \u2014 a reduction in the COMPOSITE of CV death or HF hospitalization in high-risk HFrEF \u2014 is established by a single pivotal Phase 3 event-driven RCT (VICTORIA, N=5050) that met its primary endpoint (HR 0.90, 95% CI 0.82-0.98, P=0.02) and directly underpinned FDA approval (Verquvo, NDA 214377, 19-Jan-2021) for exactly this indication and outcome. On the composite endpoint the direction and statistical significance are not in dispute, so documented regulatory/clinical consensus = Supported. Major guidelines (ACC/AHA/HFSA 2022, ESC 2021) give only a weak/Class 2b recommendation because the effect is MODEST and driven mainly by the HF-hospitalization component: CV death alone was non-significant (HR 0.93, 0.81-1.06), the annualized absolute risk reduction was ~4.2%/yr over a 10.8-month median, and the primary analysis used a one-sided test. The Phase 2 predecessor SOCRATES-REDUCED missed its NT-proBNP surrogate endpoint, and vericiguat failed in HFpEF (VITALITY-HFpEF, wrong population + QoL surrogate). The honest reading is 'Supported but of modest/debated clinical magnitude' \u2014 the debate is about size and value, not about whether the composite is reduced. GOLD = Supported (with a modest-effect caveat), not Contested.",
+  "outcome": "CV death or HF hospitalization (composite)",
+  "population": "High-risk HFrEF (LVEF <45%) after a recent worsening-HF event (HF hospitalization within 6 months or outpatient IV diuretics within 3 months)",
+  "provenance": "PubMed (NEJM, JAMA, JAMA Cardiology, Front Endocrinol), ClinicalTrials.gov, FDA Drugs@FDA / Orange Book / DailyMed label. All 5 PMIDs, 3 NCT IDs and NDA 214377 independently re-verified against source records this session; no retractions found.",
+  "notes": "Attribution: evidence retrieved via PubMed. Key DOIs: VICTORIA 10.1056/NEJMoa1915928; SOCRATES-REDUCED 10.1001/jama.2015.15734; VITALITY-HFpEF 10.1001/jama.2020.15922; VICTORIA index-event 10.1001/jamacardio.2020.6455; pooled meta-analysis 10.3389/fendo.2024.1335531. FDA NDA 214377 approval 19-Jan-2021 (Drugs@FDA approval letter + Orange Book + DailyMed all confirm). The 'Contested' hint = contested MAGNITUDE/clinical value, not contested direction on the composite \u2014 hence GOLD Supported with modest-effect caveat.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Vericiguat reduces the composite of cardiovascular death or heart-failure hospitalization in high-risk HFrEF. In the pivotal Phase 3 VICTORIA trial (5,050 patients with worsening HFrEF, EF <45%), vericiguat lowered the primary composite of CV death or first HF hospitalization versus placebo (35.5% vs 38.5%; HR 0.90, 95% CI 0.82-0.98, P=0.02) on top of guideline-directed therapy. The benefit was driven mainly by fewer HF hospitalizations; CV death alone was not significantly reduced (HR 0.93, 0.81-1.06), and the absolute benefit was modest (NNT ~24 over ~11 months). On the strength of VICTORIA, the FDA approved vericiguat (Verquvo) in January 2021 for exactly this indication. Guidelines therefore endorse it as an add-on option after a worsening-HF event, but with a relatively weak (Class 2b) recommendation reflecting the modest effect size."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:32222134",
+      "citation": "Armstrong PW, et al. Vericiguat in Patients with Heart Failure and Reduced Ejection Fraction (VICTORIA). N Engl J Med. 2020;382(20):1883-1893. DOI:10.1056/NEJMoa1915928. NCT02861534.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified in PubMed: pivotal Phase 3, event-driven, double-blind, placebo-controlled, N=5050 (vericiguat 2526 / placebo 2524); CEC-adjudicated; article types include 'Clinical Trial, Phase III','Randomized Controlled Trial'. No retraction. Primary endpoint = exact claimed composite. Positive but modest: HR 0.90 (0.82-0.98), P=0.02, one-sided stratified log-rank; CV death alone NS (HR 0.93, 0.81-1.06).",
+      "n_int": 2526,
+      "year": 2020,
+      "finding": "Primary composite of CV death or first HF hospitalization occurred in 35.5% (897/2526 vericiguat) vs 38.5% (972/2524 placebo); HR 0.90 (95% CI 0.82-0.98), P=0.02 over median 10.8 months. Directly supports the claimed composite outcome in the claimed population; effect modest and hospitalization-driven."
+    },
+    {
+      "source_id": "PMID:33185650",
+      "citation": "Lam CSP, et al. Clinical Outcomes and Response to Vericiguat According to Index Heart Failure Event: Insights From the VICTORIA Trial. JAMA Cardiol. 2021;6(6):706-712. DOI:10.1001/jamacardio.2020.6455. NCT02861534.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified in PubMed: prespecified index-event subgroup analysis of the same VICTORIA population (N=5050), not an independent trial. No retraction. No treatment heterogeneity across subgroups.",
+      "n_int": 2526,
+      "year": 2021,
+      "finding": "Vericiguat reduced the primary composite (CV death or HFH) consistently across index-event subgroups (HFH <3mo, HFH 3-6mo, outpatient IV diuretic) with no treatment heterogeneity; patients closest to index HFH had highest event rates (up to 40.9/100 pt-yr). Confirms robustness of the VICTORIA composite benefit but adds no independent trial."
+    },
+    {
+      "source_id": "PMID:26547357",
+      "citation": "Gheorghiade M, et al. Effect of Vericiguat on Natriuretic Peptide Levels in Worsening Chronic HFrEF: SOCRATES-REDUCED Randomized Trial. JAMA. 2015;314(21):2251-2262. DOI:10.1001/jama.2015.15734. NCT01951625.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified in PubMed + ClinicalTrials.gov: Phase 2 dose-finding RCT, N=456 (placebo 92; four vericiguat dose arms). No retraction. Primary endpoint = change in log NT-proBNP at 12 wk (SURROGATE), NOT the claimed clinical composite. Pooled higher-dose vs placebo NEGATIVE (P=0.15); exploratory dose-response only (P<0.02). n_int=364 = three highest-dose arms pooled (456-92).",
+      "n_int": 364,
+      "year": 2015,
+      "finding": "Pooled vericiguat vs placebo showed NO significant difference in 12-week log NT-proBNP (difference of means -0.122; 90% CI -0.32 to 0.07; P=0.15); exploratory dose-response only. Surrogate endpoint; does not directly test the claimed clinical outcome; shows the earlier surrogate signal was weak/negative before the pivotal trial."
+    },
+    {
+      "source_id": "PMID:33079152",
+      "citation": "Armstrong PW, et al. Effect of Vericiguat vs Placebo on Quality of Life in HFpEF: VITALITY-HFpEF Randomized Clinical Trial. JAMA. 2020;324(15):1512-1521. DOI:10.1001/jama.2020.15922. NCT03547583.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified in PubMed: Phase 2b RCT, N=789, HFpEF (LVEF>=45%, mean EF 56%) = WRONG population for a HFrEF claim; population_match=false is an honest off-population label, not a HFrEF trial mislabeled. No retraction. Primary endpoint = KCCQ physical-limitation score (QoL surrogate). NEGATIVE for both 10-mg and 15-mg doses.",
+      "n_int": 527,
+      "year": 2020,
+      "finding": "In HFpEF, vericiguat (10 or 15 mg) did not improve KCCQ physical-limitation score vs placebo (LS-mean differences -0.5 [P=0.80] and -1.5 [P=0.47], both NS) nor 6-min walk distance. Off-population and surrogate outcome; bounds the claim to HFrEF."
+    },
+    {
+      "source_id": "PMID:38524633",
+      "citation": "Chen C, Lv J, Liu C. Vericiguat across the spectrum of LVEF: patient-level pooled meta-analysis of VITALITY-HFpEF and VICTORIA. Front Endocrinol (Lausanne). 2024;15:1335531. DOI:10.3389/fendo.2024.1335531.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified in PubMed: pooled analysis of the two vericiguat RCTs (article type 'Meta-Analysis'); HFrEF benefit attributable to VICTORIA. No retraction. HFrEF composite RR 0.93 (0.87-1.00) \u2014 upper CI touches unity (borderline; disclosed in finding). CV-death-alone NS across full LVEF range (RR 0.97, 0.86-1.09). n_int=3053 = VICTORIA (2526) + VITALITY (527) vericiguat arms.",
+      "n_int": 3053,
+      "year": 2024,
+      "finding": "Significant benefit on the primary composite in LVEF <45% (RR 0.93, 95% CI 0.87-1.00) but no significant effect on CV mortality alone across the full LVEF range (RR 0.97, 0.86-1.09), and no benefit at EF >=45% (P=0.45). Reinforces a modest, hospitalization-weighted, HFrEF-confined effect; upper CI borderline at 1.00."
+    },
+    {
+      "source_id": "NDA:214377",
+      "citation": "US FDA. Verquvo (vericiguat) tablets \u2014 Approval letter and Prescribing Information, NDA 214377. CDER; approved 19 Jan 2021. Drugs@FDA / Orange Book / DailyMed.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via Drugs@FDA approval letter (214377Orig1s000), Orange Book (N214377, 3 strengths approved 19-Jan-2021, Merck Sharp & Dohme LLC) and DailyMed label. Approval based on the single pivotal VICTORIA trial; indication language mirrors the claimed composite outcome and HFrEF population exactly. Label reports HR 0.90 (0.82-0.98), p=0.019, ARR 4.2%/yr.",
+      "n_int": 5050,
+      "year": 2021,
+      "finding": "FDA approved vericiguat to reduce the risk of cardiovascular death and HF hospitalization following a HF hospitalization or need for outpatient IV diuretics, in adults with symptomatic chronic HF and EF <45%. Regulatory endorsement of the exact claimed composite outcome in the claimed population."
+    }
+  ]
+}

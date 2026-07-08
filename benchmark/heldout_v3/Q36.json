@@ -1,0 +1,103 @@
+{
+  "claim_id": "Q36",
+  "claim": "Crizanlizumab reduces vaso-occlusive crises in sickle cell disease",
+  "domain": "rare/gene",
+  "expected_verdict": "Contested",
+  "gold_rationale": "Genuinely contested at the level of the highest-quality evidence. The phase 2 SUSTAIN RCT (Ataga, NEJM 2017; NCT01895361, N=198) showed a 45.3% reduction in the annual rate of vaso-occlusive crises with high-dose (5 mg/kg) crizanlizumab vs placebo (median 1.63 vs 2.98/yr, p=0.01), and this single trial was the basis for FDA accelerated approval (Nov 2019, BLA761128) and EMA conditional authorisation (Oct 2020). However, the EMA-mandated confirmatory phase 3 STAND RCT (Abboud, Lancet Haematol 2025; NCT03814746, N=252), the larger and methodologically superior trial, FAILED to confirm benefit: adjusted annualised VOC rate 2.49 for crizanlizumab 5 mg/kg vs 2.30 for placebo, rate ratio 1.08 (95% CI 0.76-1.55, p>0.999), with neither primary nor key secondary endpoint met and higher grade >=3 treatment-related AEs (56% at 5 mg/kg vs 32% placebo). On the STAND results the EMA CHMP recommended revocation (26 May 2023) and the European Commission revoked the marketing authorisation on 3 August 2023 for lack of therapeutic efficacy. The FDA has NOT withdrawn approval \u2014 crizanlizumab remains on the US market (label revised 6/2024) although the STAND label explicitly states efficacy was 'evaluated, but not established.' A pre-STAND network meta-analysis (Thom, BMJ Open 2020) favoured crizanlizumab (VOC HR 0.55) but was built entirely on the now-contradicted SUSTAIN data. When a small positive pivotal trial is directly contradicted by a larger, purpose-built confirmatory RCT and regulators split (EMA revoked, FDA retained), the consensus verdict is Contested, not Supported. Independently re-verified against PubMed, ClinicalTrials.gov, the EMA revocation referral, and the FDA/DailyMed label.",
+  "outcome": "vaso-occlusive crisis rate (annualised rate of VOCs, primarily those leading to a healthcare visit)",
+  "population": "sickle cell disease patients (adolescents/adults with a history of vaso-occlusive crises)",
+  "provenance": "PubMed (PMIDs 27959701, 40088922, 32948541, 37664256) + ClinicalTrials.gov (NCT01895361 SUSTAIN, NCT03814746 STAND) + EMA Article-20 revocation referral (EMA/359200/2023, 3 Aug 2023) + CHMP assessment report (EMA/267688/2023) + DHPC + FDA DailyMed/accessdata ADAKVEO label (BLA761128, rev 6/2024). All independently re-verified.",
+  "rows": [
+    {
+      "source_id": "PMID:27959701",
+      "citation": "Ataga KI, et al. Crizanlizumab for the Prevention of Pain Crises in Sickle Cell Disease. N Engl J Med. 2017;376(5):429-439. DOI:10.1056/NEJMoa1611770 (SUSTAIN, NCT01895361).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 2 pivotal RCT; industry-funded (Selexys/Novartis). Basis of FDA/EMA approval. Verified via PubMed: N=198 randomized, phase 2, not retracted.",
+      "n_int": 67,
+      "year": 2017,
+      "finding": "High-dose crizanlizumab (5 mg/kg) reduced median annual rate of sickle-cell pain crises by 45.3% vs placebo (1.63 vs 2.98/yr, p=0.01); longer time to first crisis (4.07 vs 1.38 mo, p=0.001) and second crisis. Positive on the claimed VOC outcome."
+    },
+    {
+      "source_id": "PMID:40088922",
+      "citation": "Abboud MR, et al. Crizanlizumab with or without hydroxyurea in patients with sickle cell disease (STAND): primary analyses from a placebo-controlled, randomised, double-blind, phase 3 trial. Lancet Haematol. 2025;12(4):e248-e257. DOI:10.1016/S2352-3026(24)00384-3 (NCT03814746).",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Larger EMA-mandated confirmatory phase 3 RCT; Novartis-funded. Directly contradicts SUSTAIN. Verified via PubMed: N=252, phase 3, not retracted.",
+      "n_int": 84,
+      "year": 2025,
+      "finding": "Confirmatory phase 3 FAILED: adjusted annualised VOC rate 2.49 (crizanlizumab 5 mg/kg) vs 2.30 (placebo); rate ratio 1.08 (95% CI 0.76-1.55, p>0.999); 7.5 mg/kg RR 0.89 (0.62-1.27, p>0.999). Neither primary nor key secondary endpoint met; grade >=3 treatment-related AEs more frequent at 5 mg/kg (56%) than placebo (32%). Contradicts the claimed VOC benefit."
+    },
+    {
+      "source_id": "EMA/359200/2023",
+      "citation": "European Medicines Agency. Revocation of authorisation for sickle cell disease medicine Adakveo (crizanlizumab). EMA/359200/2023, European Commission legally binding decision 3 Aug 2023 (CHMP Article-20 assessment report EMA/267688/2023, 25 May 2023; DHPC).",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "EU marketing authorisation REVOKED for lack of therapeutic efficacy after STAND; higher rate of grade >=3 and serious treatment-related AEs noted. Single-arm/real-world/managed-access data judged insufficient to overcome STAND null. Verified verbatim against EMA revocation referral, CHMP assessment report, and DHPC.",
+      "n_int": 252,
+      "year": 2023,
+      "finding": "CHMP concluded (26 May 2023) Adakveo lacks therapeutic efficacy in its authorised indication based on STAND; EU conditional marketing authorisation revoked by European Commission on 3 Aug 2023. STAND showed no VOC reduction (2.49 vs 2.30, RR 1.08)."
+    },
+    {
+      "source_id": "BLA761128",
+      "citation": "US FDA. ADAKVEO (crizanlizumab-tmca) Prescribing Information, BLA 761128; initial approval 2019, label revised 6/2024 (accessdata.fda.gov 761128s006lbl.pdf / DailyMed).",
+      "design": "guideline / regulatory",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "US approval RETAINED (unlike EMA). Label indicates VOC-reduction indication (>=16 yr) but explicitly states STAND efficacy was 'evaluated, but not established' (verbatim verified). 7.5 mg/kg dose not approved. Regulatory divergence (EMA revoked vs FDA retained) is the core of the contested status.",
+      "n_int": 84,
+      "year": 2024,
+      "finding": "FDA keeps crizanlizumab approved to reduce VOC frequency (>=16 yr), but the 6/2024 label incorporates the null STAND result, stating efficacy 'evaluated, but not established' and that results 'did not confirm the statistical superiority of ADAKVEO over placebo.' Status-quo/ambiguous signal on the claimed outcome."
+    },
+    {
+      "source_id": "PMID:32948541",
+      "citation": "Thom H, et al. Crizanlizumab and comparators for adults with sickle cell disease: a systematic review and network meta-analysis. BMJ Open. 2020;10(9):e034147. DOI:10.1136/bmjopen-2019-034147.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Network meta-analysis; Novartis co-authors. PRE-STAND \u2014 the crizanlizumab estimate rests entirely on SUSTAIN and is now superseded/contradicted by STAND. Verified via PubMed: Network Meta-Analysis / Systematic Review, not retracted.",
+      "n_int": 67,
+      "year": 2020,
+      "finding": "Bayesian NMA: crizanlizumab 5 mg/kg reduced VOC vs placebo (HR 0.55, 95% CrI 0.43-0.69, P(superiority)>0.99) and vs L-glutamine (HR 0.67, 0.50-0.88). Positive, but driven solely by the SUSTAIN data later contradicted by STAND."
+    },
+    {
+      "source_id": "PMID:37664256",
+      "citation": "Pingili S, et al. The Role of Non-genetic Therapies to Reduce the Incidence of Sickle Cell Crisis: A Systematic Review. Cureus. 2023;15(8):e42785. DOI:10.7759/cureus.42785.",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Independent systematic review; narrative synthesis. Reflects pre/peri-STAND consensus that crizanlizumab reduced VOC number/severity; predates full appreciation of STAND null. Verified via PubMed: Review, not retracted.",
+      "n_int": 67,
+      "year": 2023,
+      "finding": "Systematic review lists crizanlizumab (with voxelotor, L-glutamine, transfusion, Zn, Niprisan) among interventions found to reduce the number and severity of VOCs, reflecting the SUSTAIN-era view of a VOC benefit."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Crizanlizumab (Adakveo), a monoclonal antibody against P-selectin, reduces the frequency of vaso-occlusive crises in sickle cell disease. In the pivotal SUSTAIN trial (Ataga et al., NEJM 2017), high-dose crizanlizumab (5 mg/kg) cut the median annual rate of pain crises by about 45% versus placebo (1.63 vs 2.98 per year, p=0.01) and significantly lengthened the time to first crisis. On this basis it received FDA approval in 2019 and EMA authorisation in 2020 for preventing VOCs. It works by blocking P-selectin-mediated cell adhesion that drives vaso-occlusion."
+  },
+  "build_confidence": "high",
+  "notes": "Surrogate detection: the claimed outcome (VOC rate) is a clinical endpoint, not a surrogate, so outcome_match is true for all rows. The key tension is trial-level replication failure (SUSTAIN positive -> STAND null), not surrogate substitution. The 7.5 mg/kg STAND arm (RR 0.89, still non-significant p>0.999) is not the approved dose. FDA vs EMA regulatory divergence is the reason this is Contested rather than Not Supported. Real-world/single-arm data (managed access program) were judged by CHMP insufficient to overcome the STAND null. All rows independently re-verified 2026-07; no hallucinated PMIDs, wrong Ns, wrong directions, mislabeled designs, or fabricated retractions found. Adversarial check: the conflicting STAND trial is correctly population_match=true."
+}

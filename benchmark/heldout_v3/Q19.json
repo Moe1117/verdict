@@ -1,0 +1,86 @@
+{
+  "claim_id": "Q19",
+  "claim": "Adding rituximab to CHOP chemotherapy improves survival in diffuse large B-cell lymphoma",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "This is one of the most firmly established results in medical oncology and the foundational proof-of-concept for immunochemotherapy in lymphoma. The pivotal GELA LNH-98.5 RCT (Coiffier, NEJM 2002; n=399 elderly DLBCL) showed R-CHOP significantly prolonged overall survival vs CHOP alone (death HR 0.64, 95% CI 0.45-0.89, P=0.007) with no clinically significant added toxicity. The 10-year follow-up (Coiffier, Blood 2010) confirmed a durable and large OS benefit (10-yr OS 43.5% vs 27.6%). The result was independently confirmed by the US/Canada Intergroup ECOG 4494 RCT (Habermann, JCO 2006; n=632 older DLBCL), where R-CHOP reduced the risk of death vs CHOP (P=0.05 in the induction-only analysis), and extended to young good-prognosis patients by the MInT trial (Pfreundschuh, Lancet Oncol 2006; n=824), which showed 3-yr OS 93% vs 84% (P=0.0001). On the strength of GELA LNH-98.5, rituximab plus CHOP became the global standard of care and is enshrined as first-line therapy in NCCN, ESMO, and every major DLBCL guideline; subsequent decades of R-CHOP-plus-X trials have been unable to beat R-CHOP on OS, cementing it as the OS-defining backbone. Consensus is unequivocally Supported for the claimed OS outcome in elderly DLBCL.",
+  "outcome": "overall survival",
+  "population": "elderly DLBCL",
+  "rows": [
+    {
+      "source_id": "PMID:11807147",
+      "citation": "Coiffier B, et al. CHOP chemotherapy plus rituximab compared with CHOP alone in elderly patients with diffuse large-B-cell lymphoma. N Engl J Med. 2002;346(4):235-42. DOI:10.1056/NEJMoa011795",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified in PubMed: landmark GELA LNH-98.5 multicenter RCT; article_types include Randomized Controlled Trial / Multicenter Study; no retraction. N and effect sizes match abstract exactly.",
+      "n_int": 202,
+      "year": 2002,
+      "finding": "Pivotal RCT in 399 previously untreated DLBCL patients aged 60-80 (R-CHOP n=202, CHOP n=197). Adding rituximab to CHOP significantly improved overall survival (death risk ratio 0.64, 95% CI 0.45-0.89, P=0.007) and event-free survival (P<0.001), and raised complete-response rate (76% vs 63%, P=0.005), without a clinically significant increase in toxicity. Directly supports the claimed OS benefit in the exact population."
+    },
+    {
+      "source_id": "PMID:20548096",
+      "citation": "Coiffier B, et al. Long-term outcome of patients in the LNH-98.5 trial (GELA): rituximab-CHOP vs CHOP in DLBCL. Blood. 2010;116(12):2040-5. DOI:10.1182/blood-2010-03-276246",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified in PubMed (PMC2951853): 10-year follow-up of the pivotal LNH-98.5 RCT; article_types include Randomized Controlled Trial; no retraction. 10-yr OS/PFS figures match abstract.",
+      "n_int": 202,
+      "year": 2010,
+      "finding": "Ten-year follow-up of the same 399-patient elderly DLBCL RCT confirmed a large, durable OS benefit: 10-year overall survival 43.5% with R-CHOP vs 27.6% with CHOP, and 10-year PFS 36.5% vs 20%. Same risk of death from other diseases, secondary cancers, and late relapses in both arms, confirming benefit is durable and not offset by late harm."
+    },
+    {
+      "source_id": "PMID:16754935",
+      "citation": "Habermann TM, et al. Rituximab-CHOP versus CHOP alone or with maintenance rituximab in older patients with diffuse large B-cell lymphoma (Intergroup ECOG 4494). J Clin Oncol. 2006;24(19):3121-7. DOI:10.1200/JCO.2005.05.1003",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified in PubMed: Phase III US/Canada Intergroup RCT (article_types: Clinical Trial Phase III, Randomized Controlled Trial); Research Support N.I.H. Extramural; no retraction. Primary endpoint was failure-free survival; OS reported in prespecified induction-only secondary analysis.",
+      "n_int": 318,
+      "year": 2006,
+      "finding": "Independent confirmatory phase III RCT in 632 older (>=60y) DLBCL patients (R-CHOP n=318, CHOP n=314). In the secondary analysis excluding maintenance-rituximab patients, R-CHOP significantly reduced both treatment failure (P=0.003) and death (P=0.05) vs CHOP, consistent with an additive rituximab effect. Confirms the GELA OS finding in an independent population."
+    },
+    {
+      "source_id": "PMID:16648042",
+      "citation": "Pfreundschuh M, et al. CHOP-like chemotherapy plus rituximab vs CHOP-like alone in young good-prognosis DLBCL: MInT trial. Lancet Oncol. 2006;7(5):379-91. DOI:10.1016/S1470-2045(06)70664-7",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified in PubMed: international MInT RCT, NCT00064116 confirmed in abstract; article_types include Randomized Controlled Trial; no retraction. Population is YOUNG (18-60y) good-prognosis, not elderly, so population_match=false is honest; it corroborates (does not contradict) the OS benefit.",
+      "n_int": 413,
+      "year": 2006,
+      "finding": "RCT in 824 young (18-60y) good-prognosis DLBCL patients (R-CHOP-like n=413, CHOP-like n=411): adding rituximab improved 3-year overall survival to 93% vs 84% (P=0.0001) and 3-year EFS to 79% vs 59% (P<0.0001), with no difference in adverse events. Population differs (young, not elderly) but corroborates that the OS benefit generalizes beyond the elderly."
+    },
+    {
+      "source_id": "PMID:33734921",
+      "citation": "Pasvolsky O, et al. R-CHOP compared to R-CHOP + X for newly diagnosed DLBCL: a systematic review and meta-analysis. Acta Oncol. 2021;60(6):744-749. DOI:10.1080/0284186X.2021.1898048",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified in PubMed: article_types Meta-Analysis / Systematic Review; no retraction. Tests R-CHOP vs R-CHOP+X (not a rituximab-vs-CHOP re-randomization), so it is indirect/supportive context establishing R-CHOP as the OS-defining backbone. OS HR 0.87 (0.75-1.00) NS; point estimate marginally favors R-CHOP+X but non-significant.",
+      "n_int": 4206,
+      "year": 2021,
+      "finding": "Across 10 modern RCTs (4206 pts), adding any agent to R-CHOP did not significantly improve overall survival (OS HR 0.87, 95% CI 0.75-1.00, not significant) and increased serious and hematologic toxicity. Establishes that R-CHOP is the entrenched OS-defining standard of care that newer regimens have not surpassed \u2014 an indirect but strong confirmation that rituximab-plus-CHOP is the survival benchmark."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Adding rituximab to CHOP (R-CHOP) improves overall survival in diffuse large B-cell lymphoma, and this is one of the best-established results in oncology. The pivotal GELA LNH-98.5 randomized trial (Coiffier, NEJM 2002) in elderly DLBCL patients showed R-CHOP significantly prolonged overall survival versus CHOP alone (death hazard ratio ~0.64), with the benefit durable at 10 years (10-year OS 43.5% vs 27.6%). It was confirmed by the US Intergroup ECOG 4494 trial (Habermann, JCO 2006) and extended to younger patients by the MInT trial (Pfreundschuh, Lancet Oncol 2006, 3-year OS 93% vs 84%). R-CHOP has been the global first-line standard of care for DLBCL for over two decades, and no subsequent regimen has beaten it on overall survival."
+  }
+}
