@@ -116,6 +116,17 @@ def resolve(rows: list[EvidenceRow]) -> tuple[Verdict, list[GateTrace]]:
     trace.append(GateTrace("direct-evidence", True,
                            f"{len(trials)} trial-grade on-population study(ies)"))
 
+    # Gate 1b — sufficiency: a single small trial (no meta, no target-trial, no
+    # large or replicated RCT) is too thin to conclude. Abstain rather than decide.
+    strong = [r for r in trials if r.is_meta or r.design.strip().lower() == "target-trial emulation"]
+    rcts = [r for r in trials if r.is_rct]
+    largest_rct = max((r.n_int for r in rcts), default=0)
+    if not strong and len(rcts) < 2 and largest_rct < 300:
+        trace.append(GateTrace("sufficiency", False,
+                               "only a single small trial on-population — too thin to conclude"))
+        return Verdict.INSUFFICIENT, trace
+    trace.append(GateTrace("sufficiency", True, "trial evidence adequate to assess"))
+
     pros = [r for r in trials if r.supports]
     cons = [r for r in trials if r.against]
 

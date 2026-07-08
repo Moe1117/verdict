@@ -12,6 +12,11 @@
         "detail": "5 trial-grade on-population study(ies)"
       },
       {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
         "gate": "consistency",
         "passed": true,
         "detail": "trial evidence agrees: effect present"
@@ -116,6 +121,11 @@
         "gate": "direct-evidence",
         "passed": true,
         "detail": "1 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
       },
       {
         "gate": "consistency",
@@ -227,6 +237,11 @@
         "gate": "direct-evidence",
         "passed": true,
         "detail": "6 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
       },
       {
         "gate": "definitive-evidence",
@@ -347,6 +362,11 @@
         "gate": "direct-evidence",
         "passed": true,
         "detail": "2 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
       },
       {
         "gate": "definitive-evidence",

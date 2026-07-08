@@ -1,0 +1,298 @@
+{
+  "summary": {
+    "n": 31,
+    "accuracy": {
+      "verdict": 0.806,
+      "naive_vote": 0.774,
+      "plain_llm": 0.742
+    },
+    "verdict_accuracy_when_answered": 0.806,
+    "verdict_abstention_rate": 0.0,
+    "confidently_wrong": {
+      "verdict": 0,
+      "naive_vote": 0,
+      "plain_llm": 2
+    }
+  },
+  "claims": [
+    {
+      "id": "E01",
+      "claim": "Lisinopril reduces the risk of hospitalization for heart failure and all-cause mortality in patients with reduced ejection fraction.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E02",
+      "claim": "Warfarin, dose-adjusted to INR 2\u20133, reduces stroke risk compared with placebo in atrial fibrillation.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E03",
+      "claim": "Basal-bolus insulin therapy lowers HbA1c and prevents diabetic ketoacidosis in type 1 diabetes.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E04",
+      "claim": "Atorvastatin reduces major cardiovascular events in patients with established coronary artery disease.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E05",
+      "claim": "Metformin lowers HbA1c as first-line therapy in newly diagnosed type 2 diabetes.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E06",
+      "claim": "Semaglutide 2.4 mg weekly produces clinically significant weight loss in adults with obesity.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E07",
+      "claim": "Sacubitril/valsartan reduces cardiovascular death versus enalapril in heart failure with reduced ejection fraction.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E08",
+      "claim": "Dexamethasone reduces 28-day mortality in patients hospitalized with COVID-19 requiring oxygen or ventilation.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E09",
+      "claim": "Tirzepatide improves glycemic control and body weight more than semaglutide in type 2 diabetes.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E10",
+      "claim": "Ondansetron prevents chemotherapy-induced nausea and vomiting.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E11",
+      "claim": "High-dose vitamin C shortens the duration and severity of the common cold in the general population.",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "E12",
+      "claim": "Hydroxychloroquine reduces mortality in hospitalized patients with COVID-19.",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E13",
+      "claim": "Ivermectin reduces mortality and time to recovery in outpatients with COVID-19.",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E14",
+      "claim": "Oseltamivir reduces influenza-related hospitalizations and complications in otherwise healthy adults.",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Contested",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "E15",
+      "claim": "Ginkgo biloba prevents cognitive decline and dementia in older adults.",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E16",
+      "claim": "Echinacea prevents the common cold in healthy adults.",
+      "gold": "Contested",
+      "verdict": "Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "E17",
+      "claim": "Vitamin D supplementation reduces the incidence of acute respiratory tract infections in deficient individuals.",
+      "gold": "Contested",
+      "verdict": "Not Supported",
+      "naive": "Contested",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E18",
+      "claim": "Omega-3 fatty acid supplementation reduces major cardiovascular events in primary prevention.",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "E19",
+      "claim": "Icosapent ethyl (high-dose purified EPA) reduces cardiovascular events in statin-treated patients with elevated triglycerides.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E20",
+      "claim": "Melatonin reduces sleep-onset latency in adults with primary insomnia.",
+      "gold": "Contested",
+      "verdict": "Contested",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E21",
+      "claim": "Ashwagandha (Withania somnifera) reduces perceived stress and serum cortisol in chronically stressed adults.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E22",
+      "claim": "Curcumin improves symptoms and reduces disease activity in knee osteoarthritis.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "E23",
+      "claim": "Creatine monohydrate supplementation increases lean muscle mass and strength gains during resistance training.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E24",
+      "claim": "Low-dose colchicine reduces recurrent cardiovascular events in patients with chronic coronary disease.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E26",
+      "claim": "Low-dose naltrexone reduces pain and improves quality of life in fibromyalgia.",
+      "gold": "Contested",
+      "verdict": "Supported",
+      "naive": "Not Supported",
+      "baseline": "Supported",
+      "base_conf": "low"
+    },
+    {
+      "id": "E28",
+      "claim": "Ketamine (single or repeated IV infusion) produces rapid reduction of symptoms in treatment-resistant depression.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E29",
+      "claim": "Psilocybin-assisted therapy reduces depressive symptoms in major depressive disorder.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "E30",
+      "claim": "Fecal-derived or oral spore probiotics prevent antibiotic-associated diarrhea in hospitalized adults.",
+      "gold": "Contested",
+      "verdict": "Not Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "E31",
+      "claim": "Fisetin, a senolytic flavonoid, reduces senescent-cell burden and improves physical function in older adults.",
+      "gold": "Insufficient",
+      "verdict": "Not Supported",
+      "naive": "Contested",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    },
+    {
+      "id": "E34",
+      "claim": "Sodium-glucose cotransporter-2 inhibitors (SGLT2i) reduce heart-failure hospitalization in patients with preserved ejection fraction.",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "high"
+    },
+    {
+      "id": "E35",
+      "claim": "Zinc lozenges shorten the duration of the common cold when started within 24 hours of symptom onset.",
+      "gold": "Contested",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "medium"
+    }
+  ]
+}
