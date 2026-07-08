@@ -26,6 +26,38 @@ class Source:
     journal: str
     year: str
     url: str
+    # Deterministic integrity signal read from the source database's own metadata (e.g. PubMed
+    # publication type). "" = not flagged; "retracted" / "expression_of_concern" otherwise.
+    integrity_severity: str = ""
+
+
+# PubMed publication types that mark a compromised record, mapped to our severity vocabulary.
+# These are catalogued by NLM on the article itself — a deterministic, citable fact, not a guess.
+RETRACTION_PUBTYPES = {
+    "Retracted Publication": "retracted",
+    "Expression of Concern": "expression_of_concern",
+}
+
+
+def retraction_severity(pubtypes: list[str] | None) -> str:
+    """Highest-severity integrity flag among a PubMed record's publication types, or ""."""
+    for pt in pubtypes or []:
+        sev = RETRACTION_PUBTYPES.get(pt)
+        if sev == "retracted":
+            return sev  # retraction outranks an expression of concern
+    for pt in pubtypes or []:
+        if RETRACTION_PUBTYPES.get(pt) == "expression_of_concern":
+            return "expression_of_concern"
+    return ""
+
+
+def retraction_note(source: Source) -> str:
+    """Citable integrity note for a database-flagged source (empty if not flagged)."""
+    label = {"retracted": "RETRACTED", "expression_of_concern": "EXPRESSION OF CONCERN"}.get(
+        source.integrity_severity, "")
+    if not label:
+        return ""
+    return f"{label} — flagged by PubMed publication type (deterministic, not LLM-judged): {source.url}"
 
 
 def _ncbi_params() -> dict:
@@ -64,6 +96,9 @@ def search_pubmed(query: str, retmax: int = 20, timeout: float = 20.0) -> list[S
             authors=authors, journal=d.get("fulljournalname") or d.get("source", ""),
             year=(d.get("pubdate", "") or "")[:4],
             url=f"https://pubmed.ncbi.nlm.nih.gov/{pid}/",
+            # Deterministic retraction / expression-of-concern flag from NLM's own publication
+            # type — populated here in the SAME esummary call, so it costs no extra request.
+            integrity_severity=retraction_severity(d.get("pubtype")),
         ))
     return out
 

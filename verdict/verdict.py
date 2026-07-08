@@ -52,7 +52,7 @@ def run_live(claim: str, k: int = 8) -> VerdictCard:
     function of the extracted rows."""
     from .extract import extract_row
     from .parse import parse_claim
-    from .retrieve import fetch_abstract, search_pubmed
+    from .retrieve import fetch_abstract, retraction_note, search_pubmed
 
     ct, query = parse_claim(claim)
     if not ct.measurable:
@@ -68,7 +68,14 @@ def run_live(claim: str, k: int = 8) -> VerdictCard:
             continue
         seen.add(s.id)
         try:
-            rows.append(extract_row(s, fetch_abstract(s.id), ct))
+            row = extract_row(s, fetch_abstract(s.id), ct)
         except Exception:  # noqa: BLE001 — one bad study never sinks the run
             continue
+        # Deterministic integrity override: if the source database itself flags the study as
+        # retracted / under an expression of concern, it is inert regardless of what the LLM
+        # extractor concluded. Retraction is a citable fact, never an LLM judgement.
+        if s.integrity_severity:
+            row.integrity_ok = False
+            row.integrity_note = retraction_note(s)
+        rows.append(row)
     return evaluate(claim, rows)
