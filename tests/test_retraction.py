@@ -33,6 +33,14 @@ def test_retraction_severity_reads_pubmed_pubtypes():
     assert retraction_severity(None) == ""
 
 
+def test_retraction_severity_tolerates_string_input():
+    """Defensive: if the source ever yields a bare string instead of a list, we must NOT
+    iterate it character-by-character and silently miss the retraction."""
+    assert retraction_severity("Retracted Publication") == "retracted"
+    assert retraction_severity("Expression of Concern") == "expression_of_concern"
+    assert retraction_severity("Journal Article") == ""
+
+
 def test_search_pubmed_flags_retracted_source(monkeypatch):
     def fake_get(url, params=None, timeout=None):
         if "esearch" in url:

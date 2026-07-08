@@ -33,5 +33,22 @@ def test_load_dotenv_sets_missing_and_respects_precedence(tmp_path, monkeypatch)
     assert os.environ["ALREADY"] == "from_real_env"     # real env wins; file never overrides
 
 
+def test_load_dotenv_strips_only_matched_quote_pairs(tmp_path, monkeypatch):
+    env = tmp_path / ".env"
+    env.write_text(
+        'QUOTED="claude-opus-4-8"\n'
+        'MISMATCHED="value"garbage\n'
+        "APOSTROPHE=it's\n"
+    )
+    for k in ("QUOTED", "MISMATCHED", "APOSTROPHE"):
+        monkeypatch.delenv(k, raising=False)
+
+    load_dotenv(str(env))
+
+    assert os.environ["QUOTED"] == "claude-opus-4-8"     # matched surrounding pair stripped
+    assert os.environ["MISMATCHED"] == '"value"garbage'   # unbalanced -> left intact, not half-stripped
+    assert os.environ["APOSTROPHE"] == "it's"             # inner apostrophe preserved
+
+
 def test_load_dotenv_missing_file_is_a_noop(tmp_path):
     load_dotenv(str(tmp_path / "does-not-exist.env"))  # must not raise

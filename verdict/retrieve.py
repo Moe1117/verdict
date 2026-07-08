@@ -33,14 +33,24 @@ class Source:
 
 # PubMed publication types that mark a compromised record, mapped to our severity vocabulary.
 # These are catalogued by NLM on the article itself — a deterministic, citable fact, not a guess.
+# These two are the ONLY integrity-relevant PubMed publication types with real records:
+# "Retracted Publication" (~33k records) and "Expression of Concern" (~3.7k). PubMed has NO
+# "Withdrawn Publication" type (0 records) — a withdrawn article is indexed as retracted; and
+# "Retraction of Publication" is the retraction NOTICE (a separate article), not the study, so
+# it is deliberately NOT flagged here.
 RETRACTION_PUBTYPES = {
     "Retracted Publication": "retracted",
     "Expression of Concern": "expression_of_concern",
 }
 
 
-def retraction_severity(pubtypes: list[str] | None) -> str:
-    """Highest-severity integrity flag among a PubMed record's publication types, or ""."""
+def retraction_severity(pubtypes: list[str] | str | None) -> str:
+    """Highest-severity integrity flag among a PubMed record's publication types, or "".
+
+    Tolerates a bare string (some esummary shapes) so a retraction is never missed by
+    iterating a string character-by-character."""
+    if isinstance(pubtypes, str):
+        pubtypes = [pubtypes]
     for pt in pubtypes or []:
         sev = RETRACTION_PUBTYPES.get(pt)
         if sev == "retracted":

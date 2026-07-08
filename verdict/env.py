@@ -22,7 +22,11 @@ def load_dotenv(path: str = ".env") -> None:
                 line = line[len("export "):]
             key, _, value = line.partition("=")
             key = key.strip()
-            value = value.strip().strip('"').strip("'")
+            value = value.strip()
+            # Strip only a genuine matched surrounding quote pair — never half-strip an
+            # unbalanced value like "x"garbage (which .strip('"') would mangle).
+            if len(value) >= 2 and value[0] == value[-1] and value[0] in ('"', "'"):
+                value = value[1:-1]
             if not key or not value or key in os.environ:
                 continue
             os.environ[key] = value
