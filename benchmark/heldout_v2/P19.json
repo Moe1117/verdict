@@ -1,0 +1,101 @@
+{
+  "claim_id": "P19",
+  "claim": "Elamipretide improves clinical outcomes in Barth syndrome",
+  "domain": "rare",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The pivotal randomized, double-blind, placebo-controlled crossover trial (TAZPOWER, NCT03098797; Reid Thompson et al. 2020/2021, PMID 33077895) MISSED BOTH pre-specified co-primary functional/clinical endpoints in the blinded phase: 6-minute walk test (-0.8 m, p=0.97) and BTHS-SA total fatigue score (+0.06, p=0.89), and no secondary endpoint (incl. muscle strength +6.7 N, p=0.65) was significant either. The apparent improvements (6MWT +95.9 m at 36 wk; +96.1 m at 168 wk, p=0.003; muscle strength) emerged only in the UNBLINDED, uncontrolled open-label extension (PMID 38602181, DOI 10.1016/j.gim.2024.101138), and FDA reviewers/AdComm attributed these gains to unblinding, the effort-dependent nature of the 6MWT, and an uninterpretable natural-history/phase-3 control \u2014 i.e., the highest-quality controlled evidence on the claimed clinical outcome is NULL. FDA issued a Complete Response Letter (15 May 2025) declining approval on this basis. However, elamipretide (Forzinity) subsequently received FDA ACCELERATED approval in September 2025 (PMID 41335372; FDA approval letter 215244Orig1s000ltr, 19-Sep-2025) \u2014 but only 'to improve muscle strength,' an INTERMEDIATE/SURROGATE endpoint, NOT confirmed clinical benefit, and accelerated approval legally requires a post-marketing confirmatory RCT (NCT07531251, 4TAZPower/SPIBA-401) precisely because clinical benefit is unproven. A 10-6 AdComm vote (that there was 'at least some evidence of efficacy,' 10-Oct-2024, confirmed in FDA Risk Review) and reliance on anecdotal/patient-testimony evidence further mark this as genuinely contested. Because a randomized controlled trial directly contradicts benefit on the claimed functional outcome, while a regulator approved on a surrogate under a confirm-later pathway, the honest consensus is Contested \u2014 not Supported (RCT negative, benefit unconfirmed) and not Not Supported (a first-in-disease accelerated approval now exists, plus a supportive AdComm majority and case reports).",
+  "outcome": "functional / clinical outcome (exercise capacity by 6MWT, disease-specific fatigue, muscle strength)",
+  "population": "Barth syndrome (genetically confirmed TAFAZZIN/TAZ variant, X-linked, predominantly male, >=12 y in the pivotal trial)",
+  "baseline": {
+    "answer": "No",
+    "confidence": "medium",
+    "text": "On the best controlled evidence, elamipretide does NOT convincingly improve clinical outcomes in Barth syndrome. The single pivotal randomized, double-blind, placebo-controlled crossover trial (TAZPOWER) missed both of its primary functional endpoints \u2014 the 6-minute walk test and the BTHS-SA fatigue score \u2014 with essentially null differences versus placebo (6MWT -0.8 m, p=0.97; BTHS-SA +0.06, p=0.89), and no secondary endpoint reached significance. The frequently cited improvements (a ~96 m gain in 6MWT, muscle-strength gains) came only from the unblinded open-label extension, where effort-dependent endpoints are highly susceptible to bias, and FDA reviewers explicitly attributed the jump to unblinding/uninterpretable natural-history control. FDA initially rejected the drug (CRL, May 2025). It was ultimately granted accelerated approval in September 2025 \u2014 but on a surrogate muscle-strength endpoint with a mandated confirmatory trial, meaning clinical benefit is regulatorily presumed, not proven. So a plain reading is: randomized evidence does not support functional benefit; the claim is at best unconfirmed."
+  },
+  "provenance": "PubMed (PMIDs 33077895, 38602181, 41335372, 40816230); ClinicalTrials.gov (NCT03098797 TAZPOWER, NCT07531251 4TAZPower/SPIBA-401 confirmatory Phase 3b/4); FDA Cardiovascular & Renal Drugs Advisory Committee 10-Oct-2024 (10-6 vote, per FDA Risk Review 215244Orig1s000RiskR), CRL 15-May-2025, and accelerated approval letter 215244Orig1s000ltr (19-Sep-2025); Genetics in Medicine 168-week OLE (DOI 10.1016/j.gim.2024.101138).",
+  "rows": [
+    {
+      "source_id": "PMID:33077895",
+      "citation": "Reid Thompson W, Hornby B, Manuel R, et al. A phase 2/3 randomized clinical trial followed by an open-label extension to evaluate the effectiveness of elamipretide in Barth syndrome. Genet Med. 2021;23(3):471-478. DOI:10.1038/s41436-020-01006-8",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed; NOT retracted (PubMed article types: Clinical Trial Phase II/III, RCT). Sponsor (Stealth) co-authored; single-site (Johns Hopkins), n=12 crossover \u2014 pivotal TAZPOWER blinded phase. Blinded-phase numbers verified verbatim against PMC full text.",
+      "n_int": 12,
+      "year": 2020,
+      "finding": "BLINDED phase (the adequate-and-well-controlled portion): BOTH co-primary functional endpoints MISSED \u2014 6MWT -0.8 m vs placebo (p=0.97) and BTHS-SA total fatigue +0.06 (p=0.89); no secondary endpoint significant (muscle strength by HHD +6.7 N, p=0.65). Direction=0 (null) on the claimed clinical outcome under randomized control."
+    },
+    {
+      "source_id": "NCT03098797",
+      "citation": "Stealth BioTherapeutics. TAZPOWER: A Phase 2/3 randomized, double-blind, placebo-controlled crossover trial of subcutaneous elamipretide in genetically confirmed Barth syndrome followed by open-label extension. ClinicalTrials.gov NCT03098797 (Completed 2021; has results).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Registry record for the pivotal trial; quadruple-masked randomized Part 1 (PHASE2/PHASE3), n=12, male >=12 y. Part 2 = open-label extension up to 192 weeks. Results posted (has_results=true).",
+      "n_int": 12,
+      "year": 2021,
+      "finding": "Registry confirms the pivotal design: randomized blinded Part 1 carried the primary 6MWT and BTHS-SA endpoints; the OLE 6MWT/muscle-strength are listed only as SECONDARY measures \u2014 reinforcing that controlled functional benefit was not demonstrated in the blinded phase."
+    },
+    {
+      "source_id": "DOI:10.1016/j.gim.2024.101138",
+      "citation": "Thompson WR, Manuel R, Abbruscato A, et al. Long-term efficacy and safety of elamipretide in patients with Barth syndrome: 168-week open-label extension results of TAZPOWER. Genet Med. 2024;26(7):101138 (PMID 38602181). DOI:10.1016/j.gim.2024.101138",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "UNCONTROLLED, unblinded open-label extension (n=10 entering, 8 at wk168). No placebo comparator; effort-dependent endpoints. PubMed indexes it as 'RCT' only because it is the OLE arm of TAZPOWER; the OLE itself is single-arm, so 'prospective cohort' is the honest design bucket. FDA reviewers attributed gains to unblinding/natural-history control \u2014 key interpretability caveat.",
+      "n_int": 10,
+      "year": 2024,
+      "finding": "OLE reported significant within-patient improvements: cumulative +96.1 m on 6MWT at wk168 (p=0.003; +122.7 m at wk192, p=0.009) and muscle-strength gains by HHD (p<0.05 at all OLE visits). Direction=+1 but from an uncontrolled design that cannot establish causal clinical benefit; the entire positive signal for the claim lives here, not in the RCT."
+    },
+    {
+      "source_id": "PMID:41335372",
+      "citation": "Shirley M. Elamipretide: First Approval. Drugs. 2025;86(3):377-383. DOI:10.1007/s40265-025-02269-8",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory milestone review. Approval is ACCELERATED (surrogate-based) with a legally required post-marketing confirmatory trial \u2014 clinical benefit presumed, not confirmed. Corroborated by FDA approval letter 215244Orig1s000ltr (19-Sep-2025).",
+      "n_int": 12,
+      "year": 2025,
+      "finding": "FDA granted ACCELERATED approval (Sept 2025; Forzinity) for patients >=30 kg \u2014 first Barth-syndrome therapy \u2014 but the indication is 'to improve MUSCLE STRENGTH' (an intermediate/SURROGATE endpoint), NOT a confirmed functional/clinical outcome. outcome_match=false: approval basis is a surrogate, and accelerated approval explicitly does not establish the claimed clinical benefit."
+    },
+    {
+      "source_id": "NCT07531251",
+      "citation": "Stealth BioTherapeutics. 4TAZPower (SPIBA-401): Phase 3b/4 randomized, double-blind, parallel-group, placebo-controlled trial to confirm efficacy and safety of subcutaneous elamipretide in genetically confirmed Barth syndrome. ClinicalTrials.gov NCT07531251 (Not yet recruiting; start 2026, primary completion 2029).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Post-marketing CONFIRMATORY randomized trial required as a condition of accelerated approval. Registry text states the primary objective is 'to confirm the efficacy of elamipretide ... approved ... based on an improvement in knee extensor muscle strength, an intermediate clinical endpoint' \u2014 its existence signals clinical benefit is not yet established. n=48, 72-week composite functional primary.",
+      "n_int": 48,
+      "year": 2026,
+      "finding": "A new randomized, placebo-controlled confirmatory Phase 3b/4 (n=48; primary = composite of 6MWT/3TUG/5XSST at 72 wk) is required to confirm clinical benefit, not completing until ~2029. Direction=0: no outcome data yet; its mandated existence is itself evidence the claim is currently unconfirmed/contested."
+    },
+    {
+      "source_id": "PMID:40816230",
+      "citation": "Jacob N, Schecter D, Marshall M, et al. Elamipretide in the Management of Barth Syndrome: Current Evidence and a Case Report. Mol Genet Metab. 2025;146(1-2):109220. DOI:10.1016/j.ymgme.2025.109220",
+      "design": "case report",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Single neonatal case report (lowest evidence tier); anecdotal, no control. Illustrative of the subjective/patient-experience evidence the AdComm weighed. Verified as a Case Reports/Review article, not retracted.",
+      "n_int": 1,
+      "year": 2025,
+      "finding": "Case of prenatally identified Barth-related severe LV non-compaction cardiomyopathy: elamipretide started at birth for heart failure was associated with sustained clinical improvement and inactivation on the transplant list. Direction=+1 but anecdotal (n=1); consistent with supportive-but-uncontrolled evidence that fuels the contested picture."
+    }
+  ]
+}

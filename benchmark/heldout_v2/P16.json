@@ -1,0 +1,97 @@
+{
+  "claim_id": "P16",
+  "claim": "Risdiplam improves motor function in spinal muscular atrophy",
+  "domain": "rare",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Regulatory and clinical consensus is that risdiplam (Evrysdi) improves/preserves motor function across SMA types. The pivotal SUNFISH Part 2 randomised, double-blind, placebo-controlled trial (NCT02908685) in non-ambulant type 2 and type 3 SMA (n=180; 120 risdiplam / 60 placebo, 2:1) met its PRIMARY endpoint \u2014 change from baseline in MFM-32 total score at month 12 \u2014 with LS mean +1.36 (risdiplam) vs -0.19 (placebo), treatment difference +1.55 (95% CI 0.30-2.81; p=0.016, FDA-reported p=0.0156). This is a direct, randomised, placebo-controlled demonstration on the claimed motor-function outcome (a non-surrogate endpoint). FIREFISH Part 2 (NCT02913482) in type 1 infants showed motor-function gains far outside natural history (>=4-point CHOP-INTEND increase 90% vs 17%; HINE-2 response 78% vs 12%; 29% achieving independent sitting >=5s at 12 months and 44% sitting >=30s at 24 months \u2014 milestones essentially never attained in untreated type 1). On this basis the FDA (Aug 2020; expanded May 2022 to under 2 months) and EMA approved risdiplam for SMA types 1-3 / 1-4 SMN2 copies. A confirmatory placebo-controlled RCT (SUNFISH) plus a dramatic natural-history-controlled all-or-none effect in a fatal infantile disease (FIREFISH), uncontradicted by any RCT, place this at the highest evidence tier for a rare disease. Verdict: Supported.",
+  "outcome": "Motor function (MFM-32 total score in type 2/3; CHOP-INTEND, HINE-2 motor milestones, and independent sitting in type 1 infants)",
+  "population": "5q autosomal-recessive spinal muscular atrophy, types 1-3 (infants through age 25); pivotal RCT population = non-ambulant type 2 and type 3 aged 2-25",
+  "rows": [
+    {
+      "source_id": "NCT02908685",
+      "citation": "Mercuri E, et al. Safety and efficacy of once-daily risdiplam in type 2 and non-ambulant type 3 spinal muscular atrophy (SUNFISH part 2): a phase 3, double-blind, randomised, placebo-controlled trial. Lancet Neurol. 2022;21(1):42-52. DOI:10.1016/S1474-4422(21)00367-7",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 120,
+      "year": 2022,
+      "finding": "Pivotal randomised placebo-controlled part (n=180; 120 risdiplam / 60 placebo, 2:1). PRIMARY endpoint change from baseline in MFM-32 total score at month 12 met: LS mean +1.36 (risdiplam) vs -0.19 (placebo), treatment difference +1.55 (95% CI 0.30-2.81; p=0.016; FDA-reported p=0.0156). Non-surrogate motor-function endpoint, population-matched (non-ambulant type 2/3, ages 2-25). Confirmed against ClinicalTrials.gov registration (SUNFISH, COMPLETED, primary outcome = MFM-32 change at Month 12) and FDA press release numbers."
+    },
+    {
+      "source_id": "PMID:34320287",
+      "citation": "Darras BT, Masson R, Mazurkiewicz-Beldzinska M, et al. Risdiplam-Treated Infants with Type 1 Spinal Muscular Atrophy versus Historical Controls (FIREFISH part 2). N Engl J Med. 2021;385(5):427-435. DOI:10.1056/NEJMoa2102047",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "n_int": 41,
+      "year": 2021,
+      "finding": "Open-label pivotal part in type 1 infants (n=41) vs natural-history/historical controls. 12/41 (29%) sat unsupported >=5s, a milestone essentially never attained in untreated type 1. Key secondaries vs upper 90% CI of historical controls: >=4-point CHOP-INTEND increase 90% vs 17%; CHOP-INTEND >=40 56% vs 17%; HINE-2 motor-milestone response 78% vs 12%; survival without permanent ventilation 85% vs 42% (all p<0.001). Abstract numbers verified verbatim on PubMed; no retraction. All-or-none milestone gain in a fatal infantile disease."
+    },
+    {
+      "source_id": "PMID:36244364",
+      "citation": "Masson R, Mazurkiewicz-Beldzinska M, Rose K, et al. Safety and efficacy of risdiplam in patients with type 1 spinal muscular atrophy (FIREFISH part 2): secondary analyses from an open-label trial. Lancet Neurol. 2022;21(12):1110-1119. DOI:10.1016/S1474-4422(22)00339-8",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "n_int": 41,
+      "year": 2022,
+      "finding": "24-month follow-up of FIREFISH part 2 type 1 infants (n=41; 38 ongoing at 24 months). 18/41 (44%; 90% CI 31-58) able to sit without support for >=30s (p<0.0001 vs natural-history-derived 5% performance criterion); 0 could stand or walk alone. Confirms durable achievement of motor milestones never seen in untreated type 1. Note: PubMed carries an RCT type-tag (MeSH artifact); the trial is open-label vs historical controls, correctly labeled 'prospective cohort' here."
+    },
+    {
+      "source_id": "PMID:33626251",
+      "citation": "Baranello G, Darras BT, Day JW, et al. Risdiplam in Type 1 Spinal Muscular Atrophy (FIREFISH part 1). N Engl J Med. 2021;384(10):915-923. DOI:10.1056/NEJMoa2009965",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 21,
+      "year": 2021,
+      "finding": "Open-label phase 2/3 dose-finding part in type 1 infants (n=21; 4 low-dose, 17 high-dose). PRIMARY outcomes were safety, PK/PD and dose selection, with blood SMN protein (a SURROGATE) as pharmacodynamic readout (rose to a median 3.0x baseline low-dose and 1.9x high-dose). Motor function (sitting) exploratory: 7/17 high-dose sat unsupported >=5s, none in low-dose. Supportive but primary endpoint was a surrogate, not motor function (outcome_match=false). Verified on PubMed; no retraction."
+    },
+    {
+      "source_id": "PMID:35284988",
+      "citation": "Dhillon S. Risdiplam: A Review in Spinal Muscular Atrophy. CNS Drugs. 2022;36(4):401-410. DOI:10.1007/s40263-022-00910-8",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 0,
+      "year": 2022,
+      "finding": "Independent Adis drug review (PubMed type = Review; narrative rather than systematic) synthesising FIREFISH and SUNFISH: risdiplam significantly improved motor function in type 1 infants and in patients aged 2-25 with type 2 or 3 SMA, maintained up to 2 years, favourable benefit-risk. Corroborative of cross-type consensus; not a meta-analysis."
+    },
+    {
+      "source_id": "https://www.fda.gov/news-events/press-announcements/fda-approves-oral-treatment-spinal-muscular-atrophy",
+      "citation": "US FDA. FDA Approves Oral Treatment for Spinal Muscular Atrophy (Evrysdi/risdiplam press announcement, 7 Aug 2020); label extension to babies <2 months, 31 May 2022 (Genentech/Roche). Basis: FIREFISH + SUNFISH.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 0,
+      "year": 2020,
+      "finding": "FDA-approved oral SMN2 splicing modifier for SMA. Approval established on motor-function efficacy: infantile-onset (type 1) 41% sat independently >=5s after 12 months and 81% survived without permanent ventilation at >=23 months; later-onset (type 2/3) SUNFISH RCT showed MFM-32 mean +1.36 vs -0.19 placebo (1.55 difference; p=0.0156). Approved 2 months and older (Aug 2020), expanded to under 2 months (May 2022); EMA approval mirrors for SMA types 1-3 / 1-4 SMN2 copies. Corrected source_id from the previously mislabeled DOI:10.1056/NEJMoa2102047 (a journal paper) to the actual FDA press announcement."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Risdiplam (Evrysdi) improves motor function in spinal muscular atrophy. This is well established: the SUNFISH Part 2 phase 3 randomised, double-blind, placebo-controlled trial in type 2 and non-ambulant type 3 SMA met its primary endpoint, showing a significant improvement in MFM-32 motor-function score at 12 months versus placebo (treatment difference ~1.55 points, p=0.016). In type 1 infants, the FIREFISH trial showed dramatic motor-function gains versus natural history, including CHOP-INTEND improvements and infants achieving independent sitting \u2014 a milestone essentially never reached in untreated type 1. On this evidence the FDA and EMA approved risdiplam for SMA types 1-3. Effects are largest in younger patients and tend toward stabilisation in older patients, but the direction of benefit is clear and consistent."
+  },
+  "provenance": "PubMed (NEJM, Lancet Neurology, CNS Drugs) via bio-research MCP \u2014 PMIDs 34320287, 36244364, 33626251, 35284988 all confirmed (titles/DOIs/years verified, no retractions); ClinicalTrials.gov NCT02908685 (SUNFISH) full record confirming MFM-32 change at Month 12 as PRIMARY endpoint and NCT02913482 (FIREFISH); FDA press announcement (7 Aug 2020) + Roche/Genentech releases (31 May 2022) confirming 41% sitting >=5s, 81% ventilation-free survival, and SUNFISH MFM-32 numbers (1.36 vs -0.19; p=0.0156).",
+  "build_confidence": "high",
+  "notes": "SUNFISH Part 2 (NCT02908685) is the key row: placebo-controlled RCT with MFM-32 (non-surrogate) as PRIMARY endpoint, population-matched, positive; registration is PHASE2 seamless 2/3 with the analyzed Part 2 the confirmatory phase-3 portion, n_int=120 correct. FIREFISH type-1 rows are open-label vs historical/natural-history controls with genuine all-or-none milestone gains in a fatal infantile disease (dramatic_effect=true), uncontradicted by any RCT. FIREFISH Part 1 primary endpoint was PK/PD/dose-selection with blood SMN protein surrogate (outcome_match=false). One regulatory-row source_id was corrected from a mislabeled journal DOI to the FDA press announcement; a review-row design descriptor noted as narrative rather than systematic. build_confidence high."
+}

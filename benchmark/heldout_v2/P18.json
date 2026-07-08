@@ -1,0 +1,102 @@
+{
+  "claim_id": "P18",
+  "claim": "Migalastat improves clinical outcomes in Fabry disease",
+  "domain": "rare",
+  "expected_verdict": "Contested",
+  "gold_rationale": "Regulatory/clinical consensus is that migalastat (Galafold) improvement in HARD clinical outcomes (renal function decline, cardiac events, cerebrovascular events, mortality) in amenable-variant Fabry disease is NOT established \u2014 it is Contested. The pivotal placebo-controlled trial FACETS (Germain, NEJM 2016; PMID 27509102; NCT00925301) FAILED its primary endpoint: the >=50% GL-3-inclusion responder analysis did not differ from placebo at 6 months (41% vs 28%, P=0.30; FDA-reported ITT 38% vs 27%, p=0.3). Positive signals came only from post hoc/prespecified subgroup analyses on a surrogate (kidney interstitial-capillary GL-3, P=0.008) and from single-arm open-label eGFR/LVMi stability with no concurrent control. The FDA (2018, verified from the NDA 208623 multidiscipline review and Galafold PI) granted only ACCELERATED APPROVAL under 21 CFR 314.510 subpart H based on the KIC GL-3 SURROGATE 'reasonably likely to predict clinical benefit,' explicitly requiring a confirmatory post-marketing trial to verify clinical benefit \u2014 i.e., clinical-outcome benefit was NOT demonstrated at approval. The active-controlled ATTRACT trial (Hughes, J Med Genet 2016; PMID 27834756; NCT01218659; n=57) showed migalastat comparable to ERT on renal function and a significant within-arm LVMi decrease (-6.6 g/m2), but the composite renal/cardiac/cerebrovascular event difference vs ERT was not significant (29% vs 44%) and it was open-label, not placebo-controlled. Long-term OLE data (PMID 33012654, single-arm n=46) are uncontrolled. Independent real-world data (PMID 42181773, n=87) show stable renal/cardiac parameters and lyso-Gb3 improvement but a subset progressing and one Fabry-related death, with authors concluding amenability alone may not predict clinical benefit. Net: substrate/surrogate improvement is well supported; hard clinical-outcome improvement is genuinely contested.",
+  "outcome": "renal/cardiac clinical outcomes (eGFR/mGFR decline, LVMi/LVH, composite renal-cardiac-cerebrovascular events)",
+  "population": "Adults with Fabry disease carrying migalastat-amenable GLA variants (both treatment-naive and ERT-switch)",
+  "provenance": "PubMed (PMIDs 27509102, 27834756, 33012654, 30723321, 42181773) via bio-research MCP \u2014 all four trial PMIDs independently re-verified for title/journal/DOI with NO retraction flag; PMID 42181773 confirmed REAL (PMC13191641, DOI 10.1016/j.ymgmr.2026.101316). ClinicalTrials.gov NCT00925301 (FACETS; Phase 3 double-blind placebo-controlled; primary = KIC GL-3 surrogate) and NCT01218659 (ATTRACT; Phase 3 randomized OPEN-LABEL active-controlled vs ERT; primary = annualized mGFR/eGFR change) re-verified via c-trials MCP. FDA 2018 multidiscipline review (NDA 208623) and Galafold PI verified via Exa web search (accelerated approval, subpart H, confirmatory-trial requirement). Retrieved 2026-07-08.",
+  "baseline": {
+    "answer": "No",
+    "confidence": "medium",
+    "text": "Migalastat (Galafold) is an FDA/EMA-approved oral pharmacologic chaperone for Fabry disease patients with amenable GLA variants, and it reliably reduces disease substrate (plasma lyso-Gb3 and kidney GL-3 inclusions) and reduces left ventricular mass index. However, whether it IMPROVES hard clinical outcomes is not clearly established: the pivotal placebo-controlled FACETS trial missed its primary GL-3 endpoint (P=0.30), the FDA granted only accelerated approval on a surrogate with a required confirmatory trial, and the ATTRACT trial showed migalastat merely comparable to enzyme replacement therapy (not superior to placebo) on renal function with a non-significant clinical-event difference. So on the strict claim of improving clinical outcomes, the honest answer is that it stabilizes disease and matches ERT but has not been shown to improve hard renal/cardiac clinical outcomes versus placebo \u2014 the claim is contested rather than clearly supported."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:27509102",
+      "citation": "Germain DP, Hughes DA, Nicholls K, et al. Treatment of Fabry's Disease with the Pharmacologic Chaperone Migalastat (FACETS). N Engl J Med. 2016;375(6):545-555. DOI:10.1056/NEJMoa1510198. NCT00925301.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Industry-sponsored (Amicus). Amenability assay revalidated mid-trial, cutting efficacy population from 67 to 50; positive GL-3 result is post hoc/prespecified subgroup, not the ITT primary analysis. Primary endpoint is a histologic SURROGATE (kidney interstitial-capillary GL-3), not a hard clinical outcome. Re-verified against NEJM full text and FDA review.",
+      "n_int": 34,
+      "year": 2016,
+      "finding": "Pivotal placebo-controlled phase 3: primary endpoint (>=50% reduction in kidney interstitial-capillary GL-3 at 6 mo) NOT significant vs placebo (13/32 [41%] migalastat vs 9/32 [28%] placebo, P=0.30; FDA ITT 13/34 [38%] vs 9/33 [27%], p=0.3). Only post hoc/prespecified amenable-subgroup GL-3 (P=0.008), a within-arm LVMi decrease, and GI symptom scores favored migalastat. No hard clinical-outcome superiority over placebo demonstrated."
+    },
+    {
+      "source_id": "PMID:27834756",
+      "citation": "Hughes DA, Nicholls K, Shankar SP, et al. Oral pharmacological chaperone migalastat compared with ERT in Fabry disease: 18-month results from the randomised phase III ATTRACT study. J Med Genet. 2017;54(4):288-296. DOI:10.1136/jmedgenet-2016-104178. NCT01218659.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Industry-sponsored (Amicus), OPEN-LABEL, active-controlled vs ERT (no placebo arm); small (57 adults analysed), 1.5:1 randomisation. Comparator is ERT, not natural history, so 'improvement' is relative to an active treatment. Re-verified: abstract states 'Fifty-seven adults... randomised (1.5:1)'.",
+      "n_int": 36,
+      "year": 2016,
+      "finding": "Randomised active-controlled vs ERT (57 adults): migalastat had similar effects on renal function to ERT and a significant within-arm LVMi decrease (-6.6 g/m2, 95% CI -11.0 to -2.2) where ERT showed none. Composite renal/cardiac/cerebrovascular events 29% (migalastat) vs 44% (ERT), not statistically significant (corpus P=0.36; no P printed in abstract but underpowered open-label). Supports clinical-outcome stability comparable to ERT, not superiority to placebo."
+    },
+    {
+      "source_id": "PMID:33012654",
+      "citation": "Feldt-Rasmussen U, Hughes D, Sunder-Plassmann G, et al. Long-term efficacy and safety of migalastat: 30-month results from the open-label extension of the phase 3 ATTRACT study. Mol Genet Metab. 2020;131(1-2):219-228. DOI:10.1016/j.ymgme.2020.07.007. NCT01218659.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Industry-sponsored. This is the UNCONTROLLED single-arm, migalastat-only 12-month open-label extension (all patients on migalastat; no comparator), so causal attribution of stability to drug is weak. Labeled 'rct' as the parent-study design but is functionally single-arm \u2014 direction discounted accordingly.",
+      "n_int": 46,
+      "year": 2020,
+      "finding": "During the migalastat-only OLE (n=46; MM n=31, EM n=15), eGFR remained stable in both groups and LVMi decreased in patients with baseline LVH; only 10% experienced a new composite clinical event. Supports durable stability of renal/cardiac measures but as a single-arm extension it cannot establish outcome IMPROVEMENT vs untreated course."
+    },
+    {
+      "source_id": "PMID:30723321",
+      "citation": "Germain DP, Nicholls K, Giugliani R, et al. Efficacy of migalastat in a subset of male patients with the classic phenotype of Fabry disease and amenable variants: phase 3 FACETS trial and extension. Genet Med. 2019;21(9):1987-1997. DOI:10.1038/s41436-019-0451-z. NCT00925301.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Industry-sponsored, small post hoc phenotype SUBGROUP (classic n=14) of FACETS; single-arm long-term outcomes reported without placebo comparator; high risk of subgroup/selective-reporting bias. Benefit claim rests largely on surrogate measures (PTC GL-3, plasma lyso-Gb3) and tiny N.",
+      "n_int": 14,
+      "year": 2019,
+      "finding": "Post hoc phenotype subgroup: in 14 classic-phenotype males, 24-mo annualized eGFR change -0.3 mL/min/1.73m2, LVMi -16.7 g/m2, and reductions in PTC GL-3 and lyso-Gb3. Authors claim clinical benefit 'regardless of severity,' but conclusion rests on small uncontrolled subgroup and surrogate endpoints."
+    },
+    {
+      "source_id": "NCT00925301",
+      "citation": "FDA Center for Drug Evaluation and Research. Galafold (migalastat) Multi-Discipline Review, NDA 208623, Aug 10 2018; and Galafold Prescribing Information (Initial U.S. Approval 2018), Amicus Therapeutics.",
+      "design": "guideline / regulatory",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Primary regulatory source; re-verified via FDA accessdata multidiscipline review PDF and DailyMed/Amicus PI: explicitly documents accelerated approval on a surrogate (KIC GL-3) and the unmet requirement to verify hard clinical benefit in a confirmatory trial.",
+      "n_int": 45,
+      "year": 2018,
+      "finding": "FDA granted ACCELERATED approval (21 CFR 314.510 subpart H) based on reduction in kidney interstitial-capillary GL-3, a surrogate 'reasonably likely to predict clinical benefit.' Continued approval contingent on confirmatory trials verifying clinical benefit; a post-approval controlled trial was REQUIRED. Establishes that hard clinical-outcome benefit was not demonstrated at approval \u2014 core of the 'Contested' verdict."
+    },
+    {
+      "source_id": "PMID:42181773",
+      "citation": "McCarron EP, Chinnadurai R, Stepien KM, et al. Effectiveness and tolerability of migalastat in adult Fabry disease: a single regional centre experience. Mol Genet Metab Rep. 2026;47:101316. DOI:10.1016/j.ymgmr.2026.101316. PMC13191641.",
+      "design": "prospective cohort",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Independent (non-industry, NHS/Salford), retrospective single-centre real-world cohort (n=87; 48 treatment-naive + 39 ERT-switch); uncontrolled, so no causal comparison, but a valuable independent counterweight to the sponsor trials. PMID re-verified REAL despite high number.",
+      "n_int": 87,
+      "year": 2026,
+      "finding": "Independent real-world cohort (87 adults, 55 male/32 female; TN n=48 + TS n=39): plasma lyso-Gb3 fell in both groups and renal/cardiac parameters were largely stable; significant LVMi reduction (P=0.009) only in ERT-switch amenable patients. BUT a subset showed renal/cardiac progression, one Fabry-related death (TN group), and authors conclude 'variant amenability alone may not predict clinical benefit' \u2014 supporting a mixed/Contested picture."
+    }
+  ],
+  "build_confidence": "high"
+}

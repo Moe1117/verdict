@@ -1,0 +1,100 @@
+{
+  "claim_id": "P10",
+  "claim": "Canakinumab reduces cardiovascular events in patients with prior myocardial infarction",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The single pivotal RCT, CANTOS (Ridker, NEJM 2017; NCT01327846; N=10,061 post-MI with hsCRP >=2 mg/L), DID meet its primary MACE endpoint at the 150 mg dose (HR 0.85, 95% CI 0.74-0.98, P=0.021), establishing proof-of-concept that IL-1beta inhibition lowers recurrent atherothrombotic events independent of lipid lowering. This is the specific claimed outcome, population, and drug, so the effect is real and directionally supportive. BUT the claim is genuinely contested, not settled, for four documented reasons: (1) NO all-cause mortality benefit (HR 0.94, 95% CI 0.83-1.06, P=0.31) and no significant CV-death reduction; (2) a significant increase in FATAL infection/sepsis (0.31 vs 0.18 per 100 person-yrs, P=0.02), materially degrading the benefit-risk profile; (3) only ONE positive pivotal trial with a borderline p-value (0.021), which the FDA judged insufficient \u2014 in Oct 2018 the FDA issued a Complete Response Letter declining the cardiovascular indication and canakinumab was never approved for CV prevention; (4) the parallel CIRT trial (Ridker, NEJM 2019; NCT01594333; N=4,786) testing a different anti-inflammatory (low-dose methotrexate) in an overlapping post-MI/CAD population was fully NULL (HR 0.96, 95% CI 0.79-1.16), showing the anti-inflammatory strategy does not generalize and that benefit is confined to the IL-1beta->IL-6->CRP axis in responders. Consensus (guidelines, regulators, cost-effectiveness commentary) treats canakinumab CV benefit as biologically demonstrated but clinically unadopted and debated \u2014 the textbook Contested verdict.",
+  "outcome": "MACE composite (nonfatal MI, nonfatal stroke, or CV death)",
+  "population": "Patients with prior myocardial infarction and residual inflammatory risk (hsCRP >=2 mg/L)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. In the CANTOS randomized trial (Ridker et al., NEJM 2017; ~10,000 post-MI patients with elevated hsCRP), canakinumab 150 mg every 3 months significantly reduced the primary composite of nonfatal MI, nonfatal stroke, and cardiovascular death versus placebo (HR ~0.85), independent of LDL lowering \u2014 the first proof that targeting inflammation (IL-1beta) reduces cardiovascular events. However, it did not reduce all-cause mortality, increased fatal infections, and the FDA declined the cardiovascular indication, so it is not used clinically for this purpose."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:28845751",
+      "citation": "Ridker PM, et al. Antiinflammatory Therapy with Canakinumab for Atherosclerotic Disease. N Engl J Med 2017;377:1119-1131. DOI:10.1056/NEJMoa1707914 (CANTOS, NCT01327846).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "PubMed-verified title and abstract; not retracted. Pivotal, pre-registered, blinded, CEC-adjudicated. p=0.021 for 150mg barely cleared the prespecified multiplicity threshold \u2014 statistically fragile.",
+      "n_int": 10061,
+      "year": 2017,
+      "finding": "Canakinumab 150 mg q3mo reduced primary MACE (nonfatal MI, nonfatal stroke, CV death) vs placebo: HR 0.85 (95% CI 0.74-0.98, P=0.021), independent of lipid lowering. 50mg non-significant (HR 0.93, 95% CI 0.80-1.07, P=0.30); 300mg HR 0.86 (0.75-0.99, P=0.031) did not meet the multiplicity threshold. Directly supports the claimed outcome in the claimed population."
+    },
+    {
+      "source_id": "NCT01327846",
+      "citation": "Novartis Pharmaceuticals. Cardiovascular Risk Reduction Study (CANTOS). ClinicalTrials.gov NCT01327846. Phase 3, N=10,066, COMPLETED. Primary: CEC-confirmed MACE.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Registry re-verified: Phase 3, INTERVENTIONAL, COMPLETED, enrollment 10,066, primary endpoint = time to CEC-confirmed MACE. Matches the published paper (10,061 analyzed vs 10,066 enrolled).",
+      "n_int": 10066,
+      "year": 2017,
+      "finding": "Registry confirmation: Phase 3 RCT, 10,066 enrolled, prior-MI + hsCRP>=2 population, primary endpoint = time-to-CEC-confirmed MACE composite (CV death, nonfatal MI, nonfatal stroke). Corroborates the CANTOS publication's design and population."
+    },
+    {
+      "source_id": "PMID:28845751",
+      "citation": "Ridker PM, et al. CANTOS all-cause mortality and safety analysis. N Engl J Med 2017;377:1119-1131. DOI:10.1056/NEJMoa1707914.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Same trial; this row isolates the mortality/safety endpoint, which is NOT the claimed MACE outcome (outcome_match=false, correctly). Abstract confirms mortality HR and fatal-infection signal. Central to why the claim is contested.",
+      "n_int": 10061,
+      "year": 2017,
+      "finding": "Within CANTOS, canakinumab did NOT reduce all-cause mortality (HR for all doses vs placebo 0.94, 95% CI 0.83-1.06, P=0.31) and did not significantly reduce CV death; it significantly increased fatal infection/sepsis (0.31 vs 0.18 events/100 person-yrs, P=0.02). Neutral on survival \u2014 undercuts a clean 'reduces events' narrative."
+    },
+    {
+      "source_id": "PMID:30415610",
+      "citation": "Ridker PM, et al. Low-Dose Methotrexate for the Prevention of Atherosclerotic Events. N Engl J Med 2019;380:752-762. DOI:10.1056/NEJMoa1809798 (CIRT, NCT01594333).",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "PubMed-verified title/abstract; registry (NCT01594333) confirms Phase 3 RCT, N=4,786, methotrexate vs placebo, eligibility = prior MI OR multivessel CAD + T2D/metabolic syndrome. Overlapping post-MI/CAD population -> population_match=true correctly retained; the disconfirming null trial is NOT wrongly excluded. Not retracted.",
+      "n_int": 4786,
+      "year": 2019,
+      "finding": "Parallel trial of low-dose methotrexate (15-20 mg/wk) in post-MI/multivessel-CAD patients with T2D/metabolic syndrome: NULL for MACE (HR ~0.96, 95% CI 0.79-1.16). Methotrexate did not lower IL-1beta/IL-6/CRP. Shows benefit is specific to the IL-1beta->IL-6->CRP axis, not anti-inflammatory therapy broadly \u2014 a key reason the field remains cautious/contested."
+    },
+    {
+      "source_id": "DOI:10.1093/eurheartj/ehy310",
+      "citation": "Ridker PM, et al. Modulation of the IL-6 signalling pathway and incidence of atherosclerotic events and all-cause mortality: analyses from CANTOS. Eur Heart J 2018;39(38):3499-3507. DOI:10.1093/eurheartj/ehy310 (PMID 30165610).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified: EHJ 2018;39(38):3499-3507, PMID 30165610, Ridker et al. Prespecified/secondary responder analysis of CANTOS \u2014 hypothesis-refining, not independent confirmation. Benefit concentrated in on-treatment IL-6 responders (below-median 1.65 ng/L).",
+      "n_int": 4833,
+      "year": 2018,
+      "finding": "Secondary CANTOS analysis: patients achieving on-treatment IL-6 below the study median (1.65 ng/L) had a 32% MACE reduction (HRadj 0.68, 95% CI 0.56-0.82) and a 48% all-cause-mortality reduction; those with IL-6 at/above median derived no significant benefit. Explains the modest overall effect and why a fixed-dose 'reduces events for all post-MI patients' claim is only partially true."
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMoa1707914",
+      "citation": "US FDA Complete Response Letter to Novartis re: canakinumab (Ilaris) cardiovascular indication, Oct 2018 (Novartis public statement; Reuters/BioPharma Dive/Endpoints/BioSpace coverage; contextualized by CANTOS DOI:10.1056/NEJMoa1707914).",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory action, not a study; source_id is the CANTOS DOI as a proxy since the CRL has no PMID/NCT/DOI. Fact re-verified across multiple Oct-2018 news sources with matching 'would not support labeling below 2 mg/L' wording from Novartis. FDA judged single-trial CANTOS data insufficient; canakinumab remains unapproved for CV prevention.",
+      "n_int": 0,
+      "year": 2018,
+      "finding": "In Oct 2018 the FDA issued a Complete Response Letter declining the cardiovascular-risk-reduction indication for canakinumab, stating the CANTOS data would not support labeling even in the hsCRP-lowering subgroup. Canakinumab is not approved for CV prevention. Regulatory consensus = benefit not established to a licensing standard -> Contested/not adopted."
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "claim_id": "P11",
+  "claim": "Inclisiran reduces cardiovascular events in patients with atherosclerotic cardiovascular disease",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Insufficient",
+  "gold_rationale": "As of the knowledge cutoff, no completed randomized trial has tested inclisiran against a hard cardiovascular-outcome (MACE) endpoint. Inclisiran's regulatory approvals (FDA/EMA, Leqvio) rest entirely on LDL-C lowering \u2014 a SURROGATE \u2014 demonstrated in ORION-9/-10/-11 (Ray NEJM 2020, DOI 10.1056/NEJMoa1912387; Raal NEJM 2020, DOI 10.1056/NEJMoa1913805), whose primary endpoints were LDL-C % change, not events. The only MACE signal is a post-hoc patient-level pooled analysis of ORION-9/-10/-11 (Ray, Eur Heart J 2023, DOI 10.1093/eurheartj/ehac594): MACE OR 0.74 (95% CI 0.58-0.94), but these were NON-ADJUDICATED, exploratory safety-basket events over only 18 months, and the authors explicitly state findings 'await confirmation in the larger CV outcomes trials.' The two adequately powered, adjudicated hard-outcome RCTs \u2014 ORION-4 (NCT03705234, n=16,124, primary completion Oct 2026) and VICTORION-2-PREVENT (NCT05030428, n=17,004, completion Oct 2027) \u2014 remain ongoing with no results reported. Therefore the direct evidence that inclisiran reduces cardiovascular EVENTS in ASCVD is INSUFFICIENT: the surrogate (LDL-C) is robustly established, but the claimed clinical outcome is not yet proven by any completed hard-endpoint trial.",
+  "outcome": "MACE composite (CV death, MI, ischemic stroke, +/- urgent revascularization)",
+  "population": "Patients with established atherosclerotic cardiovascular disease (ASCVD) on maximally tolerated / high-intensity statin therapy",
+  "baseline": {
+    "answer": "No",
+    "confidence": "medium",
+    "text": "Inclisiran is a twice-yearly siRNA that inhibits hepatic PCSK9 synthesis and lowers LDL-C by roughly 50%, and because LDL-C lowering is causally tied to reduced cardiovascular risk, it is expected to reduce cardiovascular events. However, as of now this benefit has NOT been demonstrated on a hard clinical endpoint: inclisiran's approvals rest on LDL-C (a surrogate) from the ORION program, and the dedicated cardiovascular-outcomes trials that would actually prove event reduction in ASCVD \u2014 ORION-4 and VICTORION-2-PREVENT \u2014 are still ongoing and unreported. A pooled post-hoc analysis of the ORION phase 3 trials showed a nominal reduction in non-adjudicated MACE (OR ~0.74), but this is exploratory and its own authors say it needs confirmation. So the claim as stated is not yet supported by direct outcome evidence \u2014 the answer is No, the event-reduction benefit is unproven pending the outcome trials."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:32187462",
+      "citation": "Ray KK, Wright RS, Kallend D, et al. Two Phase 3 Trials of Inclisiran in Patients with Elevated LDL Cholesterol (ORION-10 and ORION-11). N Engl J Med. 2020;382(16):1507-1519. DOI:10.1056/NEJMoa1912387",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal registration RCTs; sponsor-funded (The Medicines Company). Verified via PubMed: article types Clinical Trial Phase III / RCT; not retracted.",
+      "n_int": 1561,
+      "year": 2020,
+      "finding": "In ASCVD/ASCVD-risk-equivalent patients on max-tolerated statins, inclisiran cut LDL-C ~52% (ORION-10) / ~50% (ORION-11) at day 510 (coprimary SURROGATE endpoint). Trials were NOT powered for and did NOT report adjudicated MACE. Establishes the surrogate only; direction on the CLAIMED event outcome is null/uninformative."
+    },
+    {
+      "source_id": "PMID:36331326",
+      "citation": "Ray KK, Raal FJ, Kallend DG, et al. Inclisiran and cardiovascular events: a patient-level analysis of phase III trials (pooled ORION-9/-10/-11). Eur Heart J. 2023;44(2):129-138. DOI:10.1093/eurheartj/ehac594",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Post-hoc pooled analysis; MACE was a NON-adjudicated, non-prespecified exploratory safety-basket endpoint (MedDRA). Authors explicitly state results await confirmation in dedicated CV-outcomes trials. Verified verbatim via PubMed abstract; not retracted.",
+      "n_int": 1830,
+      "year": 2023,
+      "finding": "Pooled n=3655 over 18 months: composite MACE OR 0.74 (95% CI 0.58-0.94) favoring inclisiran, but NO significant effect on MI (OR 0.80, 0.50-1.27) or stroke (OR 0.86, 0.41-1.81). Signal only, on non-adjudicated exploratory events; underpowered short-duration surrogate for true hard-outcome evidence."
+    },
+    {
+      "source_id": "NCT03705234",
+      "citation": "HPS-4/TIMI 65/ORION-4: A Double-blind Randomized Placebo-controlled Trial Assessing the Effects of Inclisiran on Clinical Outcomes Among People With ASCVD. Univ of Oxford / TIMI / Novartis. NCT03705234 (ACTIVE_NOT_RECRUITING; primary completion Oct 2026; no results).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Adequately powered, adjudicated MACE primary endpoint (n=16,124). ClinicalTrials.gov confirms status ACTIVE_NOT_RECRUITING, primary completion 2026-10, has_results=false \u2014 cannot yet inform direction.",
+      "n_int": 8062,
+      "year": 2026,
+      "finding": "The dedicated hard-outcome RCT in ASCVD (prior MI/ischemic stroke/PAD): primary endpoint = MACE (CHD death, MI, fatal/non-fatal ischemic stroke, urgent coronary revascularization) over ~5-year median follow-up. Ongoing, unreported \u2014 this is the trial that would decide the claim, and it has not read out."
+    },
+    {
+      "source_id": "NCT05030428",
+      "citation": "VICTORION-2-PREVENT: Randomized, Double-blind, Placebo-controlled Trial Assessing the Impact of Inclisiran on Major Adverse Cardiovascular Events in Participants With Established Cardiovascular Disease (CKJX839B12302). Novartis. NCT05030428 (ACTIVE_NOT_RECRUITING; primary completion Oct 2027; no results).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Event-driven, adjudicated 3P-MACE primary endpoint, n=17,004. ClinicalTrials.gov confirms status ACTIVE_NOT_RECRUITING, primary completion 2027-10-13, no results as of cutoff.",
+      "n_int": 8502,
+      "year": 2027,
+      "finding": "Second pivotal hard-outcome RCT: established ASCVD on high-intensity statin, LDL-C >=70 mg/dL; primary = 3P-MACE (CV death, non-fatal MI, non-fatal ischemic stroke). Ongoing/unreported."
+    },
+    {
+      "source_id": "PMID:32197277",
+      "citation": "Raal FJ, Kallend D, Ray KK, et al. Inclisiran for the Treatment of Heterozygous Familial Hypercholesterolemia (ORION-9). N Engl J Med. 2020;382(16):1520-1530. DOI:10.1056/NEJMoa1913805",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "HeFH population (not the claimed established-ASCVD population); LDL-C surrogate primary endpoint. PubMed confirms n=482, Phase III RCT; not retracted.",
+      "n_int": 242,
+      "year": 2020,
+      "finding": "In heterozygous FH (n=482), inclisiran lowered LDL-C ~48% (between-group -47.9 pts) vs placebo (SURROGATE). No CV event endpoint. Population is FH, not established ASCVD, and outcome is a surrogate \u2014 supports LDL-C efficacy only, not event reduction in the claimed population."
+    },
+    {
+      "source_id": "PMID:38753448",
+      "citation": "Wright RS, Raal FJ, Koenig W, et al. Inclisiran administration potently and durably lowers LDL-C over extended follow-up: the ORION-8 trial. Cardiovasc Res. 2024;120(12):1400-1410. DOI:10.1093/cvr/cvae109",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Open-label extension; endpoint is LDL-C goal attainment/safety (surrogate), no controlled MACE comparison. PubMed confirms n=3274, >12,000 patient-years, not retracted.",
+      "n_int": 3274,
+      "year": 2024,
+      "finding": "Longest/largest follow-up (>12,000 patient-years, up to 6.8 yr): sustained ~49% LDL-C reduction with favorable long-term safety. Confirms durable surrogate efficacy and tolerability but provides NO adjudicated cardiovascular-event evidence for the claim."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "claim_id": "P08",
+  "claim": "Dupilumab reduces severe exacerbations in moderate-to-severe asthma",
+  "domain": "immunology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented regulatory and clinical consensus. The pivotal Phase 3 LIBERTY ASTHMA QUEST trial (Castro, NEJM 2018; NCT02414854; N=1902) had annualized severe exacerbation rate as a co-primary endpoint (verified in the ClinicalTrials.gov record and the NEJM abstract) and showed a 47.7% lower rate vs placebo (0.46 vs 0.87, P<0.001), with a larger reduction in the high-eosinophil subgroup. This is corroborated by the OCS-dependent LIBERTY ASTHMA VENTURE trial (Rabe, NEJM 2018; NCT02528214; N=210), where the primary endpoint was OCS-dose reduction and severe exacerbation rate was a pre-specified assessed (registry 'other') outcome cut by ~59% even while oral steroids were tapered, and by the pivotal Phase 2b dose-ranging trial (Wenzel/Castro, Lancet 2016; PMID 27130691) which established the exacerbation signal. The effect replicates in children 6-11 in the Phase 3 VOYAGE trial (Bacharier, NEJM 2021; NCT02948959; N=408), whose primary endpoint is the annualized severe exacerbation rate, with a 59.3% relative reduction (P<0.001). On this evidence the FDA approved dupilumab (Dupixent) as add-on maintenance for patients aged 6+ with moderate-to-severe asthma of an eosinophilic phenotype or with OCS-dependent asthma, and an independent 2024 network meta-analysis (PMID 39709955, N=2672) ranks dupilumab highest for reducing exacerbations (SUCRA 0.956). Multiple large randomized trials plus regulatory approval on the exact claimed outcome make this a clear Supported claim. No contradicting RCT exists (effect is population-dependent \u2014 strongest in type-2/eosinophilic phenotype \u2014 but never reversed), so this is not a dramatic all-or-none effect but a robust, replicated RCT-grade one.",
+  "outcome": "annualized severe exacerbation rate",
+  "population": "moderate-to-severe (type-2 / eosinophilic or OCS-dependent) asthma, ages 6 and older",
+  "provenance": "PubMed (NEJM, Lancet, Int Arch Allergy Immunol), ClinicalTrials.gov, FDA/DailyMed prescribing information \u2014 all independently re-retrieved and verified in this fact-check session.",
+  "notes": "Adversarially re-verified: all 3 NCT IDs confirmed via ClinicalTrials.gov get_trial_details and all 5 PubMed records confirmed via search + get_article_metadata. Titles, DOIs, journals, N, and publication_types all match. QUEST co-primary endpoint is the exact claimed outcome (annualized severe exacerbation rate) \u2014 direct, not a surrogate \u2014 confirmed in both the registry and the NEJM abstract. VENTURE's exacerbation rate is a pre-specified 'other' outcome (primary = OCS reduction); the integrity_note reflects this accurately. No 'Retracted Publication' flag on any row. No randomized evidence contradicts the claim; the only nuance is effect-size dependence on type-2/eosinophilic biomarkers, reflected in the FDA label's phenotype restriction (effect modification, not contradiction). dramatic_effect=false throughout: large but ordinary RCT effects in a non-fatal, treatable disease with established multi-arm RCT standards.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Dupilumab (Dupixent), an anti-IL-4Ra monoclonal antibody blocking IL-4 and IL-13 signaling, reduces severe exacerbations in moderate-to-severe asthma. In the pivotal Phase 3 QUEST trial (Castro et al., NEJM 2018, N=1902), add-on dupilumab lowered the annualized rate of severe asthma exacerbations by roughly 48% versus placebo (about 66% in patients with blood eosinophils >=300/mm3). The glucocorticoid-sparing VENTURE trial (Rabe et al., NEJM 2018) showed a ~59% reduction in exacerbations even while oral corticosteroids were tapered, and the pediatric VOYAGE trial (Bacharier et al., NEJM 2021) reproduced a ~59% relative reduction in children 6-11. The benefit is greatest in the type-2/eosinophilic phenotype (and in patients with elevated FeNO), which is why the FDA-approved indication is limited to moderate-to-severe asthma of an eosinophilic phenotype or oral-corticosteroid-dependent asthma in patients aged 6 and older. The consistency across multiple large randomized trials and regulatory approval make this a well-established finding."
+  },
+  "rows": [
+    {
+      "source_id": "NCT02414854",
+      "citation": "Castro M, et al. Dupilumab Efficacy and Safety in Moderate-to-Severe Uncontrolled Asthma (LIBERTY ASTHMA QUEST). N Engl J Med. 2018;378(26):2486-2496. PMID:29782217. DOI:10.1056/NEJMoa1804092",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via ClinicalTrials.gov (Phase 3, N=1902, Sanofi/Regeneron) and PubMed (PMID 29782217, article_types include 'Randomized Controlled Trial'). No retraction/correction affecting result. Annualized severe exacerbation rate is a pre-specified co-primary endpoint, confirmed in registry and NEJM abstract.",
+      "n_int": 1902,
+      "year": 2018,
+      "finding": "Pivotal Phase 3, N=1902 (>=12y, uncontrolled moderate-to-severe asthma). Co-primary endpoint = annualized severe exacerbation rate: 0.46 (dupilumab 200mg q2w) vs 0.87 (placebo), 47.7% lower rate, P<0.001 (verbatim from NEJM abstract); larger reduction in patients with blood eosinophils >=300/mm3. Direct outcome match, +1."
+    },
+    {
+      "source_id": "NCT02528214",
+      "citation": "Rabe KF, et al. Efficacy and Safety of Dupilumab in Glucocorticoid-Dependent Severe Asthma (LIBERTY ASTHMA VENTURE). N Engl J Med. 2018;378(26):2475-2485. PMID:29782224. DOI:10.1056/NEJMoa1804093",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via ClinicalTrials.gov (Phase 3, N=210, Sanofi/Regeneron) and PubMed (PMID 29782224, 'Randomized Controlled Trial'). No retraction. PRIMARY endpoint was OCS-dose reduction; annualized severe exacerbation rate is a pre-specified 'other' outcome measure in the registry \u2014 assessed, supportive, not the primary. Industry-funded, disclosed.",
+      "n_int": 210,
+      "year": 2018,
+      "finding": "Phase 3, N=210 oral-glucocorticoid-dependent severe asthma. Despite protocol-driven steroid tapering, dupilumab gave a severe exacerbation rate ~59% lower than placebo plus a 70.1% OCS-dose reduction. Confirms exacerbation benefit in the hardest-to-treat OCS-dependent population, +1."
+    },
+    {
+      "source_id": "PMID:27130691",
+      "citation": "Wenzel S, Castro M, et al. Dupilumab efficacy and safety in adults with uncontrolled persistent asthma despite medium-to-high-dose ICS plus a LABA: a randomised double-blind placebo-controlled pivotal phase 2b dose-ranging trial. Lancet. 2016;388(10039):31-44. PMID:27130691. DOI:10.1016/S0140-6736(16)30307-5",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed (PMID 27130691, article_types 'Clinical Trial, Phase II' + 'Randomized Controlled Trial'). No retraction. Industry-funded, disclosed. Pivotal Phase 2b dose-ranging trial establishing the exacerbation-reduction signal QUEST/VENTURE later confirmed.",
+      "n_int": 769,
+      "year": 2016,
+      "finding": "Phase 2b dose-ranging RCT (multi-site, multi-country) in uncontrolled persistent asthma on medium-to-high ICS+LABA, irrespective of baseline eosinophils. Dupilumab reduced severe exacerbations vs placebo across dose arms and improved FEV1, establishing the pivotal signal, +1."
+    },
+    {
+      "source_id": "NCT02948959",
+      "citation": "Bacharier LB, et al. Dupilumab in Children with Uncontrolled Moderate-to-Severe Asthma (LIBERTY ASTHMA VOYAGE). N Engl J Med. 2021;385(24):2230-2240. PMID:34879449. DOI:10.1056/NEJMoa2106567",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via ClinicalTrials.gov (Phase 3, N=408, ages 6-11, Sanofi/Regeneron) and PubMed (PMID 34879449, 'Randomized Controlled Trial'). No retraction. Annualized severe exacerbation rate is the pre-specified PRIMARY endpoint (eos>=300 and type-2 populations).",
+      "n_int": 408,
+      "year": 2021,
+      "finding": "Phase 3, N=408 children aged 6-11 with uncontrolled moderate-to-severe asthma. Primary endpoint annualized severe exacerbation rate in type-2 phenotype: 0.31 (dupilumab) vs 0.75 (placebo), relative reduction 59.3% (95% CI 39.5-72.6), P<0.001. Replicates effect in a distinct pediatric population, +1."
+    },
+    {
+      "source_id": "DailyMed:595f437d-2729-40bb-9c62-c8ece1f82780",
+      "citation": "FDA Prescribing Information, DUPIXENT (dupilumab) injection \u2014 Indication 1.2 Asthma; DailyMed / accessdata.fda.gov BLA 761055. Add-on maintenance, moderate-to-severe asthma, eosinophilic phenotype or OCS-dependent, ages 6+.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Current FDA-approved label; asthma indication granted on the QUEST/VENTURE/VOYAGE exacerbation and lung-function data. Phenotype restriction reflects effect modification, not a contradiction. Regulatory row, no N.",
+      "n_int": 0,
+      "year": 2024,
+      "finding": "FDA approves dupilumab as add-on maintenance treatment for patients aged 6+ with moderate-to-severe asthma of an eosinophilic phenotype or with OCS-dependent asthma. Regulatory consensus endorsing the exacerbation-reduction benefit, +1."
+    },
+    {
+      "source_id": "PMID:39709955",
+      "citation": "Lin J, et al. Advanced Biologic Therapies in the Management of Asthma in Children and Adolescents: A Comprehensive Network Meta-Analysis. Int Arch Allergy Immunol. 2024;186(8):733-746. PMID:39709955. DOI:10.1159/000542797",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed (PMID 39709955, article_types 'Network Meta-Analysis' + 'Systematic Review'). RCT-only NMA, 2672 patients, 4 biologics vs placebo; independent Sun Yat-sen University authorship. Abstract confirms N=2672 and dupilumab exacerbation SUCRA 0.956.",
+      "n_int": 2672,
+      "year": 2024,
+      "finding": "NMA of biologics in pediatric/adolescent asthma: dupilumab ranked highest for reducing asthmatic exacerbations (SUCRA 0.956) and improving lung function (SUCRA 0.999). Independent quantitative synthesis confirming the exacerbation benefit, +1."
+    }
+  ]
+}

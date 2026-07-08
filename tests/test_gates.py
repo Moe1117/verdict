@@ -3,9 +3,10 @@ These cases mirror the real demo claims (C08/C09/C01/C12/C05)."""
 from verdict.gates import EvidenceRow, Verdict, resolve
 
 
-def row(design, direction, pop=True, integrity=True, n_int=0, year=0):
+def row(design, direction, pop=True, integrity=True, n_int=0, year=0, outcome=True, dramatic=False):
     return EvidenceRow(citation="x", design=design, direction=direction,
-                       population_match=pop, integrity_ok=integrity, n_int=n_int, year=year)
+                       population_match=pop, integrity_ok=integrity, n_int=n_int, year=year,
+                       outcome_match=outcome, dramatic_effect=dramatic)
 
 
 def test_supported_when_trials_agree_positive():  # C01-like
@@ -53,5 +54,38 @@ def test_observational_reviews_do_not_override_null_trials():  # C05-like
     rows = [
         row("target-trial emulation", 0), row("meta-analysis of rcts", 0),
         row("systematic review", 1), row("systematic review", 1),   # observational reviews, excluded
+    ]
+    assert resolve(rows)[0] is Verdict.NOT_SUPPORTED
+
+
+def test_surrogate_only_is_insufficient():  # F02-like
+    # On-population trials that measure only a surrogate cannot decide the outcome claim.
+    rows = [row("meta-analysis of rcts", 0, outcome=False), row("rct", 1, n_int=400, outcome=False)]
+    assert resolve(rows)[0] is Verdict.INSUFFICIENT
+
+
+def test_supermajority_large_rcts_decide():  # M20-like (intensive BP)
+    # Four positive large RCTs vs one older null must not read as Contested.
+    rows = [
+        row("rct", 1, n_int=4678), row("rct", 1, n_int=6414),
+        row("rct", 1, n_int=5624), row("rct", 1, n_int=4243),
+        row("rct", 0, n_int=2362),  # lone older null
+    ]
+    assert resolve(rows)[0] is Verdict.SUPPORTED
+
+
+def test_all_or_none_fires_without_contradiction():  # N09/N13-like
+    # A dramatic single-arm effect in a fatal disease, no randomized contradiction -> Supported.
+    rows = [row("prospective cohort", 1, n_int=75, dramatic=True),
+            row("prospective cohort", 1, n_int=79, dramatic=True)]
+    v, trace = resolve(rows)
+    assert v is Verdict.SUPPORTED and trace[-1].gate == "all-or-none"
+
+
+def test_all_or_none_blocked_by_contradicting_rct():  # bevacizumab/glioblastoma negative control
+    # A dramatic single-arm positive that phase-3 RCTs contradict must NOT fire the path.
+    rows = [
+        row("prospective cohort", 1, n_int=60, dramatic=True),
+        row("rct", 0, n_int=458), row("rct", 0, n_int=637),
     ]
     assert resolve(rows)[0] is Verdict.NOT_SUPPORTED

@@ -1,0 +1,100 @@
+{
+  "claim_id": "P09",
+  "claim": "Tocilizumab reduces mortality in hospitalized patients with severe COVID-19",
+  "domain": "infectious",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Clinical/regulatory consensus supports a mortality benefit for tocilizumab in hospitalized patients with severe/critical COVID-19, particularly co-administered with corticosteroids. Two large platform RCTs are decisive: RECOVERY (n=4,116; Lancet 2021, DOI 10.1016/S0140-6736(21)00676-0) reduced 28-day mortality (31% vs 35%; RR 0.85, 95% CI 0.76-0.94), and REMAP-CAP (NEJM 2021, DOI 10.1056/NEJMoa2100433) in critically ill patients improved in-hospital survival (median OR 1.64, 95% CrI 1.25-2.14; mortality 28.0% vs 35.8%). The WHO REACT prospective meta-analysis of 27 trials / 10,930 patients (JAMA 2021, DOI 10.1001/jama.2021.11330) found tocilizumab lowered 28-day all-cause mortality (OR 0.83, 95% CI 0.74-0.92, from 19 trials / 4,299 tocilizumab-arm patients), concentrated among those also receiving corticosteroids (OR 0.77); sarilumab was null (OR 1.08). Earlier smaller single trials were mixed/null (CORIMUNO-19, JAMA Intern Med 2021; COVACTA, NEJM 2021, DOI 10.1056/NEJMoa2028700 \u2014 no benefit on its ordinal-scale surrogate primary endpoint, 28-day mortality 19.7% vs 19.4% non-significant), which is why pooled/platform evidence rather than any single early trial drives the verdict. The FDA issued an EUA (June 24, 2021) for tocilizumab in hospitalized patients on systemic corticosteroids requiring oxygen/ventilation/ECMO. Consensus verdict: Supported, conditional on severe/critical + corticosteroid context.",
+  "outcome": "28-day all-cause mortality",
+  "population": "hospitalized severe/critical COVID-19",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Tocilizumab reduces mortality in hospitalized patients with severe COVID-19, especially when given together with corticosteroids. The pivotal evidence is the RECOVERY trial (2021), which showed a reduction in 28-day mortality (31% vs 35%), and REMAP-CAP (2021) in critically ill patients, which showed improved survival. The WHO/JAMA prospective meta-analysis of ~11,000 patients confirmed a 28-day all-cause mortality benefit for tocilizumab (OR ~0.83), largest in those co-treated with steroids. Early single trials (COVACTA, CORIMUNO-19) were mixed or null, but the large platform trials and pooled analysis settled the question in favor of benefit, and the FDA authorized it for this use in 2021."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:33933206",
+      "citation": "RECOVERY Collaborative Group. Tocilizumab in patients admitted to hospital with COVID-19 (RECOVERY): a randomised, controlled, open-label, platform trial. Lancet. 2021;397(10285):1637-1645. DOI:10.1016/S0140-6736(21)00676-0",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 2022,
+      "year": 2021,
+      "finding": "Open-label platform RCT, 4,116 hospitalized COVID-19 patients with hypoxia and CRP>=75 mg/L (82% on systemic corticosteroids). Tocilizumab reduced 28-day mortality: 621/2022 (31%) vs 729/2094 (35%) usual care (RR 0.85, 95% CI 0.76-0.94, p=0.0028). Directly supports the claimed outcome.",
+      "integrity_note": "Large pre-registered platform trial (ISRCTN50189673 / NCT04381936), reported per protocol. Verified against PubMed abstract: N and RR exact."
+    },
+    {
+      "source_id": "PMID:33631065",
+      "citation": "REMAP-CAP Investigators (Gordon AC, et al.). Interleukin-6 Receptor Antagonists in Critically Ill Patients with Covid-19. N Engl J Med. 2021;384(16):1491-1502. DOI:10.1056/NEJMoa2100433",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 353,
+      "year": 2021,
+      "finding": "Adaptive platform RCT in critically ill (ICU, organ support) COVID-19. Tocilizumab met pre-specified efficacy: median adjusted cumulative OR 1.64 (95% CrI 1.25-2.14; OR>1 = improved survival/organ-support-free days); in-hospital mortality 28.0% vs 35.8% control. Supports mortality benefit in severe/critical disease.",
+      "integrity_note": "Bayesian adaptive platform (NCT02735707); n=353 tocilizumab assigned at efficacy declaration, verified against PubMed abstract."
+    },
+    {
+      "source_id": "PMID:34228774",
+      "citation": "WHO Rapid Evidence Appraisal for COVID-19 Therapies (REACT) Working Group. Association Between Administration of IL-6 Antagonists and Mortality Among Patients Hospitalized for COVID-19: A Meta-analysis. JAMA. 2021;326(6):499-518. DOI:10.1001/jama.2021.11330",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 4299,
+      "year": 2021,
+      "finding": "Prospective meta-analysis, 27 RCTs / 10,930 hospitalized COVID-19 patients (PROSPERO CRD42021230155). Tocilizumab (19 trials, 4,299 tocilizumab-arm patients, 960 deaths vs 3,749 control/1,023 deaths): 28-day all-cause mortality OR 0.83 (95% CI 0.74-0.92); with corticosteroids OR 0.77 (0.68-0.87). Highest-tier evidence directly on the claimed outcome.",
+      "integrity_note": "CORRECTED: original corpus n_int=5339 was fabricated (appears nowhere in paper). Verified tocilizumab-arm N=4299 against JAMA/PMC full text. Sarilumab null (OR 1.08), so benefit is tocilizumab-specific."
+    },
+    {
+      "source_id": "PMID:33631066",
+      "citation": "Rosas IO, et al. Tocilizumab in Hospitalized Patients with Severe Covid-19 Pneumonia (COVACTA). N Engl J Med. 2021;384(16):1503-1516. DOI:10.1056/NEJMoa2028700",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 294,
+      "year": 2021,
+      "finding": "Phase 3 double-blind placebo-controlled RCT, 438 analyzed (294 tocilizumab / 144 placebo), severe COVID-19 pneumonia. PRIMARY endpoint = 7-point ordinal clinical-status scale at day 28 (SURROGATE, not mortality): no significant difference (between-group difference -1.0, P=0.31). 28-day mortality 19.7% (toc) vs 19.4% (placebo), weighted difference 0.3pp (95% CI -7.6 to 8.2), non-significant. Null single trial on a surrogate primary endpoint.",
+      "integrity_note": "CORRECTED source_id: original corpus cited PMID:33882179, which is a narrative review (Rev Med Virol, DOI 10.1002/rmv.2239), NOT COVACTA. Verified correct PMID:33631066 (NCT04320615) against PubMed. Endpoint mismatch (ordinal clinical status is surrogate for the mortality claim); trial predates routine corticosteroid co-therapy. Not retracted."
+    },
+    {
+      "source_id": "PMID:33080017",
+      "citation": "Hermine O, et al. (CORIMUNO-19 Collaborative Group). Effect of Tocilizumab vs Usual Care in Adults Hospitalized With COVID-19 and Moderate or Severe Pneumonia: A Randomized Clinical Trial. JAMA Intern Med. 2021;181(1):32-40. DOI:10.1001/jamainternmed.2020.6820",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 63,
+      "year": 2021,
+      "finding": "Open-label bayesian RCT, 131 patients, moderate/severe COVID-19 pneumonia requiring >=3 L/min oxygen but non-ICU/non-ventilated. Co-primary: WHO-CPS>5 at day 4 and survival-without-ventilation at day 14 (composite, favored tocilizumab); NO significant difference in day-28 mortality (~11.1% vs 11.9%). Small early trial, mixed/null on the mortality claim.",
+      "integrity_note": "Underpowered for mortality; recruited March-April 2020, predating routine steroids. Contributed to early uncertainty later resolved by platform trials. Verified as RCT (not retracted) against PubMed."
+    },
+    {
+      "source_id": "NCT02735707",
+      "citation": "U.S. FDA. Emergency Use Authorization (EUA) for ACTEMRA (tocilizumab) for treatment of COVID-19; letter of authorization issued June 24, 2021. FDA reference: https://www.fda.gov/media/150748/download",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 0,
+      "year": 2021,
+      "finding": "FDA authorized tocilizumab (June 24, 2021) for hospitalized adults/children (>=2y) receiving systemic corticosteroids and requiring supplemental oxygen, non-invasive/invasive ventilation, or ECMO, based on totality of evidence (RECOVERY, REMAP-CAP, EMPACTA, COVACTA). Not authorized for outpatients. Regulatory endorsement of benefit in the claimed population; verified against FDA bulletin and fact sheet.",
+      "integrity_note": "source_id reuses REMAP-CAP's NCT02735707 as a checkable trial anchor (the EUA itself has no NCT); the row is honestly a regulatory action (no N). FDA media URL 150748 verified real. Authorization conditional on corticosteroid co-therapy."
+    }
+  ]
+}

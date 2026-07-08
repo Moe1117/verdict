@@ -1,0 +1,103 @@
+{
+  "claim_id": "P13",
+  "claim": "Teplizumab delays the onset of clinical type 1 diabetes in at-risk relatives",
+  "domain": "immunology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Regulatory and clinical consensus supports the claim. The pivotal randomized, double-blind, placebo-controlled TrialNet TN-10 trial (Herold et al., NEJM 2019; NCT01030861) in stage 2 (autoantibody-positive, dysglycemic) at-risk relatives showed teplizumab delayed progression to clinical (stage 3) T1D with a hazard ratio of 0.41 (95% CI 0.22-0.78, p=0.006) and a median time-to-diagnosis of 48.4 vs 24.4 months. Extended follow-up (Sims et al., Sci Transl Med 2021, 923-day median) confirmed durability: median 59.6 vs 27.1 months, HR 0.457, p=0.01, with 50% vs 22% remaining diabetes-free. On this single pivotal trial the FDA approved Tzield (teplizumab-mzwv) on 17 Nov 2022 as the first therapy indicated to delay onset of stage 3 T1D in stage 2 patients aged 8+ (expanded to age 1+ on 20 Apr 2026) \u2014 a direct regulatory endorsement of the exact claimed effect and population. The claimed outcome (time-to-clinical-diagnosis) is precisely the TN-10 primary endpoint, not a surrogate. The one caveat is that the trial is small (n=76) and single-pivotal, but the effect is statistically robust, replicated in extended follow-up, and regulatorily accepted. The separate PROTECT Phase 3 trial (Ramos, NEJM 2023) addresses a different population/endpoint (C-peptide preservation in already-diagnosed stage 3) and does not bear on the delay-of-onset claim.",
+  "outcome": "time to clinical (stage 3) type 1 diabetes diagnosis",
+  "population": "stage 2 T1D (autoantibody-positive, dysglycemic) at-risk relatives of patients with T1D",
+  "provenance": "Re-verified against PubMed (PMIDs 31180194, 33658358, 37861217, 39608963, 35316839), ClinicalTrials.gov (NCT01030861, NCT03875729), and FDA sources (BLA 761183 approval letter, DailyMed TZIELD label, OOPD orphan listing).",
+  "notes": "All 6 rows verified with no hallucinations. Only edit: replaced fake DOI placeholder in FDA row source_id with the real NCT/BLA identifier. dramatic_effect=false correct throughout (robust RCT effect, not all-or-none in a fatal disease). PROTECT correctly flagged non-matching population/surrogate outcome.",
+  "build_confidence": "high",
+  "rows": [
+    {
+      "source_id": "PMID:31180194",
+      "citation": "Herold KC, Bundy BN, Long SA, et al. An Anti-CD3 Antibody, Teplizumab, in Relatives at Risk for Type 1 Diabetes. N Engl J Med. 2019;381(7):603-613. DOI:10.1056/NEJMoa1902226 (TrialNet TN-10, NCT01030861).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: article types = Randomized Controlled Trial, Clinical Trial Phase II, Multicenter Study, Research Support NIH. Not retracted. NIH/TrialNet funded; basis for FDA approval.",
+      "n_int": 44,
+      "year": 2019,
+      "finding": "Pivotal Phase 2 double-blind RCT in 76 stage 2 at-risk relatives (44 teplizumab, 32 placebo). Median time to clinical (stage 3) T1D 48.4 vs 24.4 months; HR 0.41 (95% CI 0.22-0.78, p=0.006). Annualized diagnosis rate 14.9% vs 35.9%/yr. Diagnosed in 19/44 (43%) teplizumab vs 23/32 (72%) placebo. Directly supports delay-of-onset on the exact population and clinical endpoint. (Note: FDA label restates the teplizumab-arm count as 20/45%.)"
+    },
+    {
+      "source_id": "PMID:33658358",
+      "citation": "Sims EK, Bundy BN, Stier K, et al. Teplizumab improves and stabilizes beta cell function in antibody-positive high-risk individuals. Sci Transl Med. 2021;13(583):eabc8980. DOI:10.1126/scitranslmed.abc8980.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: article types = Randomized Controlled Trial, Research Support NIH. Extended follow-up (923-day median) of the same TN-10 RCT cohort. Not retracted.",
+      "n_int": 44,
+      "year": 2021,
+      "finding": "Extended follow-up of TN-10 (923-day median). Median time to T1D diagnosis 59.6 vs 27.1 months; HR 0.457 (p=0.01); 50% teplizumab vs 22% placebo remained diabetes-free; also improved on-study C-peptide AUC (1.94 vs 1.72 pmol/ml, p=0.006). Confirms the delay is durable on the clinical endpoint in the claimed population."
+    },
+    {
+      "source_id": "PMID:37861217",
+      "citation": "Ramos EL, Dayan CM, Chatenoud L, et al. Teplizumab and Beta-Cell Function in Newly Diagnosed Type 1 Diabetes (PROTECT). N Engl J Med. 2023;389(23):2151-2161. DOI:10.1056/NEJMoa2308743 (NCT03875729).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: article types = Randomized Controlled Trial, Clinical Trial Phase III. Provention Bio/Sanofi funded. Not retracted. Different population and endpoint from the claim.",
+      "n_int": 217,
+      "year": 2023,
+      "finding": "Phase 3 RCT in 328 children/adolescents (217 teplizumab, 111 placebo) with NEWLY DIAGNOSED (stage 3) T1D. Primary endpoint was stimulated C-peptide at week 78 (a surrogate for beta-cell function), NOT time to clinical onset. Teplizumab preserved C-peptide (LS-mean diff 0.13 pmol/mL, 95% CI 0.09-0.17, p<0.001); key secondary endpoints not significant. Different population (already diagnosed) and surrogate outcome, so it neither confirms nor refutes the delay-of-onset claim; direction 0 on the claimed outcome."
+    },
+    {
+      "source_id": "NCT01030861",
+      "citation": "U.S. FDA. TZIELD (teplizumab-mzwv) Prescribing Information / BLA 761183. Approved 17 Nov 2022; indication expanded to age 1+ on 20 Apr 2026. FDA approval letter 761183Orig1s000ltr; DailyMed label; OOPD orphan designation listing. Pivotal evidence: Study TN-10, NCT01030861.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Primary FDA regulatory action based on TN-10; indication wording, HR, and approval dates verified against FDA approval letter, DailyMed label, and OOPD listing. Real checkable identifiers: BLA 761183 and NCT01030861 (original corpus used a non-real DOI placeholder, now corrected).",
+      "n_int": 44,
+      "year": 2022,
+      "finding": "FDA approved teplizumab (Tzield) on 17 Nov 2022 'to delay the onset of Stage 3 type 1 diabetes in adults and pediatric patients 8 years of age and older with Stage 2 T1D,' citing TN-10 (median delay 25 months, 50 vs 25 mo; HR 0.41, 95% CI 0.22-0.78, p=0.0066; median follow-up 51 mo). Indication expanded to age 1+ on 20 Apr 2026 (OOPD marketing approval). Direct regulatory endorsement of the exact claimed effect, population, and clinical outcome."
+    },
+    {
+      "source_id": "PMID:39608963",
+      "citation": "Jacobsen LM, Atkinson MA, Sosenko JM, Gitelman SE. Time to reframe the disease staging system for type 1 diabetes. Lancet Diabetes Endocrinol. 2024;12(12):924-933. DOI:10.1016/S2213-8587(24)00239-0.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Review, Research Support NIH. Not retracted. Expert consensus by field leaders (Jacobsen, Atkinson, Sosenko, Gitelman).",
+      "n_int": 0,
+      "year": 2024,
+      "finding": "Consensus review states teplizumab was FDA-approved in 2022 to delay type 1 diabetes in people at stage 2, and calls for refining staging precisely because a disease-delaying therapy now exists for stage 2. Independent expert-consensus corroboration of the claim."
+    },
+    {
+      "source_id": "PMID:35316839",
+      "citation": "Sims EK, Besser REJ, Dayan C, et al. Screening for Type 1 Diabetes in the General Population: A Status Report and Perspective. Diabetes. 2022;71(4):610-623. DOI:10.2337/dbi20-0054.",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Review, TrialNet Steering Committee status report. Not retracted.",
+      "n_int": 0,
+      "year": 2022,
+      "finding": "TrialNet consensus status report framing screening-to-intervention: cites successes in disease-modifying therapy to impact early-stage disease as rationale for expanded autoantibody screening. Contextual support that delaying clinical onset in at-risk individuals is now established practice."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Teplizumab (Tzield) delays the onset of clinical, stage 3 type 1 diabetes in at-risk relatives who are at the pre-symptomatic stage 2 (two or more islet autoantibodies plus dysglycemia). The pivotal evidence is the TrialNet TN-10 randomized, placebo-controlled trial (Herold et al., NEJM 2019), in which a single 14-day IV course delayed the median time to clinical T1D from about 24 months on placebo to about 48-50 months on teplizumab, a hazard ratio of ~0.41. Extended follow-up (Sims et al. 2021) showed the effect persisted, with median times to diagnosis of ~60 vs ~27 months. On the strength of this trial the FDA approved teplizumab in November 2022 as the first disease-modifying therapy indicated specifically to delay the onset of stage 3 T1D in stage 2 patients aged 8 and older (later extended to age 1+). So the claim is well supported, though based on a single, relatively small pivotal trial."
+  }
+}

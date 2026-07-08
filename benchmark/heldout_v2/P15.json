@@ -1,0 +1,103 @@
+{
+  "claim_id": "P15",
+  "claim": "Patisiran improves polyneuropathy in hereditary transthyretin-mediated amyloidosis",
+  "domain": "rare",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Strong regulatory and clinical consensus, independently re-verified. The pivotal phase 3 APOLLO RCT (Adams, NEJM 2018; PMID 29972753; NCT01960348; n=225, 148 patisiran / 77 placebo) met its primary endpoint: change from baseline in mNIS+7 at 18 months was LS-mean -6.0 for patisiran vs +28.0 for placebo (difference -34.0 points, P<0.001; note mNIS+7 scale runs 0-304 with higher = worse, so a negative change is improvement), with concordant benefit on Norfolk QOL-DN (-21.1, P<0.001), gait speed and modified BMI. On this basis the FDA approved patisiran (Onpattro, NDA210922) on 10 Aug 2018 \u2014 the first-ever RNAi/siRNA therapeutic and the first treatment for the polyneuropathy of hATTR amyloidosis (Fast Track/Priority/Breakthrough/Orphan). Durability is shown by the Global open-label extension (12-month, Lancet Neurol 2020, PMID 33212063; and 24-month, Amyloid 2023, PMID 37469249) with sustained mNIS+7 benefit, and a 2024 systematic review/meta-analysis (11 studies, 503 patients; Ther Adv Neurol Disord, PMID 39282636) reporting ~88% pooled responsiveness. The claimed outcome (mNIS+7) is the exact validated primary neuropathy endpoint, not a surrogate. No randomized evidence contradicts the claim. Verdict: Supported.",
+  "outcome": "mNIS+7 neuropathy score (change from baseline at 18 months)",
+  "population": "Adults with hereditary transthyretin-mediated (ATTRv) amyloidosis with polyneuropathy",
+  "provenance": "Independently re-verified: PMIDs 29972753/33212063/37469249/39282636 via PubMed metadata (titles/journals/years/DOIs exact, no retraction flags; NEJM & meta-analysis abstracts read verbatim); NCT01960348 via ClinicalTrials.gov (Phase 3, n=225, primary=mNIS+7 at 18mo, COMPLETED, has_results); FDA NDA210922 approval 10 Aug 2018 via FDA press release + DailyMed + Alnylam.",
+  "notes": "Only correction applied: row 5 design 'meta-analysis of rcts'\u2192'systematic review' (mixed-design pool incl. single-arm OLEs). All numeric claims (-34.0 pts; n 148/77; 11 studies/503 pts/88%) verified exact. dramatic_effect=false is correct on all rows (ordinary large RCT effect / pivotal RCT itself, not all-or-none single-arm in a fatal disease).",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Patisiran improves polyneuropathy in hereditary transthyretin-mediated (hATTR) amyloidosis. In the pivotal phase 3 APOLLO trial (Adams et al., NEJM 2018), 225 patients were randomized 2:1 to patisiran or placebo, and the primary endpoint \u2014 change from baseline in the modified Neuropathy Impairment Score +7 (mNIS+7) at 18 months \u2014 significantly favored patisiran, with a least-squares mean difference of roughly 34 points versus placebo (p<0.001). Patisiran-treated patients on average improved or remained stable while placebo patients progressed. Secondary measures (Norfolk QOL-DN quality of life, gait speed, modified BMI) also favored patisiran. On this evidence the FDA approved patisiran (Onpattro) in August 2018 as the first RNAi therapeutic and the first approved treatment for hATTR polyneuropathy. Open-label extension studies show the neuropathy benefit is durable out to 2+ years. So the claim is well supported by a positive randomized controlled trial and regulatory approval."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:29972753",
+      "citation": "Adams D, et al. Patisiran, an RNAi Therapeutic, for Hereditary Transthyretin Amyloidosis. N Engl J Med. 2018. DOI:10.1056/NEJMoa1716153",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: title/journal/year/DOI exact; no retraction flag. Abstract read verbatim; primary endpoint met.",
+      "n_int": 148,
+      "year": 2018,
+      "finding": "APOLLO phase 3 RCT (n=225, 148 patisiran/77 placebo): mNIS+7 LS-mean change at 18mo -6.0 (patisiran) vs +28.0 (placebo), difference -34.0 points, P<0.001 (scale 0-304, higher=worse, so patisiran improved while placebo worsened). Norfolk QOL-DN diff -21.1 (P<0.001), gait speed +0.31 m/s (P<0.001), mBMI diff +115.7 (P<0.001) also favored patisiran."
+    },
+    {
+      "source_id": "NCT01960348",
+      "citation": "APOLLO: Phase 3 randomized double-blind placebo-controlled study of patisiran in TTR-mediated polyneuropathy. Alnylam. ClinicalTrials.gov NCT01960348 (has_results).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via ClinicalTrials.gov: Phase 3 interventional, COMPLETED, has_results=true; enrollment 225; primary outcome = change in mNIS+7 at 18mo.",
+      "n_int": 148,
+      "year": 2018,
+      "finding": "Registered protocol/results for APOLLO: primary outcome prospectively defined as change from baseline in mNIS+7 at 18 months; n=225 randomized 2:1 patisiran vs sterile saline placebo; COMPLETED (primary completion 2017-08) with results posted."
+    },
+    {
+      "source_id": "DOI:10.1016/S1474-4422(20)30368-9",
+      "citation": "Adams D, et al. Long-term safety and efficacy of patisiran for hereditary transthyretin-mediated amyloidosis with polyneuropathy: 12-month results of an open-label extension study. Lancet Neurol. 2020. PMID:33212063",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: title/journal/year/DOI exact; no retraction flag. Single-arm Global OLE of APOLLO/phase2-OLE completers.",
+      "n_int": 211,
+      "year": 2020,
+      "finding": "Global open-label extension: 12-month data show sustained mNIS+7 benefit with continued patisiran; APOLLO-placebo patients who crossed to patisiran halted/reversed progression. Durability of neuropathy improvement confirmed."
+    },
+    {
+      "source_id": "DOI:10.1080/13506129.2023.2232520",
+      "citation": "Adams D, et al. Treatment response and neurofilament light chain levels with long-term patisiran: 24-month OLE results. Amyloid. 2023. PMID:37469249",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: title/journal/year/DOI exact; no retraction flag. Single-arm 24-month Global OLE.",
+      "n_int": 162,
+      "year": 2023,
+      "finding": "At 24 months of the Global OLE, APOLLO-patisiran and phase-2-OLE-patisiran groups sustained mNIS+7 improvement from parent-study baseline, accompanied by reduced neurofilament light chain (biomarker of nerve damage)."
+    },
+    {
+      "source_id": "PMID:39282636",
+      "citation": "Efficacy and safety of patisiran for ATTRv-PN: a systematic review and meta-analysis. Ther Adv Neurol Disord. 2024. DOI:10.1177/17562864241273079",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed; abstract read verbatim. Corrected design label from 'meta-analysis of rcts' to 'systematic review': pool of 11 mixed-design studies (incl. single-arm OLEs), reports pooled responsiveness rate not a pooled RCT effect. PROSPERO CRD42023428838.",
+      "n_int": 503,
+      "year": 2024,
+      "finding": "Systematic review/meta-analysis (11 studies, 503 patients) reports 88% (95% CI 81-94%) pooled responsiveness on neuropathy measures; pooled mNIS+7 SMD -0.18 (95% CI -0.32 to -0.03, p=0.018) and Norfolk QOL-DN SMD -0.21 (p=0.002) favoring patisiran; no deaths attributed to patisiran. (Caveat: unadjusted NIS did not reach significance.)"
+    },
+    {
+      "source_id": "NDA210922",
+      "citation": "FDA. Onpattro (patisiran) \u2014 approval for polyneuropathy of hATTR amyloidosis. NDA210922, approved 10 Aug 2018. FDA press announcement + DailyMed label.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via FDA press release (10 Aug 2018), DailyMed (NDA210922, N=148/77, NCT01960348), and Alnylam. First FDA-approved siRNA therapeutic; Fast Track/Priority/Breakthrough/Orphan.",
+      "n_int": 148,
+      "year": 2018,
+      "finding": "FDA approved patisiran (Onpattro) as the first treatment for the polyneuropathy of hATTR amyloidosis in adults, based on APOLLO's mNIS+7 result \u2014 first-ever approved RNAi/siRNA therapeutic. Regulatory consensus that patisiran improves hATTR polyneuropathy."
+    }
+  ]
+}

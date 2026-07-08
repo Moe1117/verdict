@@ -1,0 +1,84 @@
+{
+  "claim_id": "P04",
+  "claim": "Eculizumab reduces intravascular hemolysis in paroxysmal nocturnal hemoglobinuria",
+  "domain": "rare",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Overwhelming, consistent, high-quality evidence with regulatory consensus. The pivotal double-blind placebo-controlled TRIUMPH trial (Hillmen NEJM 2006, N=87, NCT00122330) showed eculizumab reduced intravascular hemolysis by an 85.8% lower LDH AUC vs placebo and produced transfusion independence (median 0 vs 10 units, P<0.001) - this was the basis for FDA (2007) and EMA approval. It was preceded by a single-arm open-label proof-of-concept pilot (Hillmen NEJM 2004, N=11, LDH 3111->594 IU/L, P=0.002) and corroborated by the open-label SHEPHERD study and pooled anaemia analyses (Schubert 2008). Two subsequent phase 3 RCTs (ravulizumab Study 301 in inhibitor-naive patients and Study 302 in eculizumab-experienced patients) confirmed eculizumab drives ~76% LDH reduction and normalization, establishing terminal C5 inhibition as standard of care. LDH is the direct biochemical marker of intravascular hemolysis (the claimed outcome), and transfusion independence is a hard clinical endpoint. No credible contradicting randomized evidence exists.",
+  "outcome": "intravascular hemolysis (LDH) / transfusion independence",
+  "population": "Paroxysmal nocturnal hemoglobinuria (PNH)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Eculizumab, a humanized monoclonal antibody against complement C5, blocks the terminal complement pathway (formation of the membrane attack complex) that destroys PNH red cells, thereby directly reducing intravascular hemolysis. In the pivotal double-blind placebo-controlled TRIUMPH trial, it lowered LDH (a marker of intravascular hemolysis) by roughly 86% versus placebo and made most patients transfusion-independent. This is a well-established, FDA/EMA-approved standard-of-care effect in PNH."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:16990386",
+      "citation": "Hillmen P, et al. The complement inhibitor eculizumab in paroxysmal nocturnal hemoglobinuria (TRIUMPH). N Engl J Med. 2006;355(12):1233-43. NCT00122330. DOI:10.1056/NEJMoa061648",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "n_int": 43,
+      "year": 2006,
+      "finding": "Pivotal double-blind placebo-controlled phase 3 (N=87). Eculizumab reduced intravascular hemolysis with an 85.8% lower LDH AUC vs placebo (58,587 vs 411,822 U/L); hemoglobin stabilized in 49% (21/43) vs 0%; median transfusion 0 vs 10 units (all P<0.001). Basis for FDA/EMA approval. Verified against live PubMed metadata."
+    },
+    {
+      "source_id": "PMID:14762182",
+      "citation": "Hillmen P, et al. Effect of eculizumab on hemolysis and transfusion requirements in patients with paroxysmal nocturnal hemoglobinuria. N Engl J Med. 2004;350(6):552-9. DOI:10.1056/NEJMoa031688",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 11,
+      "year": 2004,
+      "finding": "Single-arm open-label proof-of-concept pilot in 11 transfusion-dependent PNH patients (NO comparator arm; PubMed article type 'Clinical Trial', not RCT). Mean LDH fell from 3111 to 594 IU/L (P=0.002), hemoglobinuria episodes fell 96% (P<0.001), median transfusion rate fell from 1.8 to 0 units/patient/month. Design corrected from 'rct' to single-arm interventional; dramatic_effect downgraded to false (no comparator)."
+    },
+    {
+      "source_id": "PMID:30510080",
+      "citation": "Lee JW, et al. Ravulizumab (ALXN1210) vs eculizumab in adult PNH patients naive to complement inhibitors: the 301 study. Blood. 2019;133(6):530-539. NCT02946463. DOI:10.1182/blood-2018-09-876136",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 125,
+      "year": 2019,
+      "finding": "Phase 3 randomized active-comparator trial (N=246). The eculizumab reference arm achieved a 76.0% reduction in LDH from baseline, LDH normalization in 49.4%, and transfusion avoidance in 66.1% - reconfirming eculizumab's large effect on intravascular hemolysis in inhibitor-naive PNH. Verified against live PubMed metadata."
+    },
+    {
+      "source_id": "PMID:30510079",
+      "citation": "Kulasekararaj AG, et al. Ravulizumab (ALXN1210) vs eculizumab in C5-inhibitor-experienced adult patients with PNH: the 302 study. Blood. 2019;133(6):540-549. NCT03056040. DOI:10.1182/blood-2018-09-876805",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 98,
+      "year": 2019,
+      "finding": "Phase 3 randomized trial in patients stable on labeled-dose eculizumab (N=195; continued-eculizumab arm n=98). The continued-eculizumab arm maintained LDH near normal (percentage change from baseline; ravulizumab difference only 9.21%), demonstrating durable suppression of intravascular hemolysis with eculizumab over 183 days. Verified against live PubMed metadata."
+    },
+    {
+      "source_id": "PMID:18503589",
+      "citation": "Schubert J, et al. Eculizumab, a terminal complement inhibitor, improves anaemia in patients with paroxysmal nocturnal haemoglobinuria (pooled TRIUMPH + SHEPHERD analysis). Br J Haematol. 2008;142(2):263-72. DOI:10.1111/j.1365-2141.2008.07183.x",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 43,
+      "year": 2008,
+      "finding": "Pooled analysis of the double-blind TRIUMPH RCT and open-label SHEPHERD study (PubMed tags RCT via embedded TRIUMPH data). Eculizumab reduced hemolysis regardless of pretreatment transfusion stratum (P<0.001), raised hemoglobin vs placebo (P<0.001), and eliminated transfusion support in a majority of patients. Design retained as 'rct' but noted as a pooled/combined analysis."
+    }
+  ],
+  "provenance": "All 5 rows independently re-verified via live PubMed metadata (titles, PMIDs, DOIs, journals, years, effect sizes, article_types) and ClinicalTrials.gov (NCT00122330 confirmed as the Phase 3 randomized double-blind placebo-controlled TRIUMPH trial, Alexion, transfusion-dependent PNH, enrollment target 75 / 87 randomized). No 'Retracted Publication' article type on any row. Two design labels corrected for honesty: PMID 14762182 is a single-arm open-label pilot (not RCT), and PMID 18503589 is a pooled TRIUMPH+SHEPHERD analysis. Effect sizes match source abstracts exactly.",
+  "build_confidence": "high",
+  "notes": "LDH is treated as outcome_match=true because it is the direct biochemical readout of intravascular hemolysis (the claimed outcome), not a distal surrogate; transfusion independence is an additional hard clinical endpoint (TRIUMPH co-primary). dramatic_effect=true is retained ONLY on the pivotal placebo-controlled TRIUMPH RCT, where a very large effect in a life-threatening disease is CONFIRMED (never contradicted) by randomization; the 2004 single-arm pilot's dramatic_effect was downgraded to false (no comparator), and the active-comparator ravulizumab RCTs remain false as ordinary RCT rows. n_int values reflect the eculizumab-arm sample where separable. Consensus verdict Supported rests on FDA (2007)/EMA approval plus consistent RCT evidence, independent of gate logic."
+}

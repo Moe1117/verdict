@@ -1,0 +1,100 @@
+{
+  "claim_id": "P05",
+  "claim": "Ivacaftor improves lung function in cystic fibrosis patients with a G551D mutation",
+  "domain": "rare",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus. The pivotal Phase 3 placebo-controlled RCT STRIVE (Ramsey NEJM 2011, NCT00909532, n=167, ages \u226512) showed a 10.6 percentage-point treatment effect on absolute change in percent-predicted FEV1 through week 24, sustained to 48 weeks (P<0.001), plus reduced pulmonary exacerbations, improved CFQ-R, weight gain, and \u221248 mmol/L sweat chloride. The parallel pediatric Phase 3 RCT ENVISION (NCT00909727, n=52, ages 6\u201311) reproduced the effect with a 12.5pp primary-endpoint ppFEV1 treatment effect (P<0.001; ~10pp at 48 weeks). The NIHR HTA systematic review (Whiting 2014) pooled both RCTs plus the open-label extension, confirming ~10.5pp (adults) and 10.0pp (children) ppFEV1 improvement across all subgroups. Real-world G551D cohorts (severe-disease named-patient series; Scottish paediatric review) reproduced significant FEV1 gains. On this evidence FDA approved KALYDECO (ivacaftor) on 31 Jan 2012 for CF patients \u22656 years with the G551D mutation \u2014 the first drug targeting the underlying CFTR defect. Directly on the claimed ppFEV1 outcome (no surrogate substitution) with concordant RCT + regulatory + real-world evidence, the verdict is Supported.",
+  "outcome": "ppFEV1 lung function (absolute change in percent-predicted FEV1)",
+  "population": "Cystic fibrosis patients with a G551D-CFTR gating mutation (on \u22651 allele)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Ivacaftor (Kalydeco) markedly improves lung function in CF patients with a G551D gating mutation. The pivotal STRIVE trial (Ramsey et al., NEJM 2011) in patients aged 12 and older showed a 10.6 percentage-point improvement in percent-predicted FEV1 versus placebo through 24 weeks, sustained to 48 weeks, along with fewer pulmonary exacerbations, better quality of life, and weight gain. The pediatric ENVISION trial (ages 6-11) showed a comparable ~10-12 percentage-point FEV1 benefit. These results led to FDA approval of ivacaftor in 2012 specifically for the G551D mutation, and it is the standard of care and regulatory/clinical consensus for this population."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:22047557",
+      "citation": "Ramsey BW, Davies J, McElvaney NG, et al. A CFTR potentiator in patients with cystic fibrosis and the G551D mutation (STRIVE). N Engl J Med. 2011;365(18):1663-72. DOI:10.1056/NEJMoa1105185. NCT00909532.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal Phase 3 double-blind placebo-controlled RCT; primary endpoint met with P<0.001; industry-funded (Vertex) with Cystic Fibrosis Foundation collaborator. Verified against PubMed metadata and ClinicalTrials.gov NCT00909532.",
+      "n_int": 83,
+      "year": 2011,
+      "finding": "Absolute change in ppFEV1 through week 24 was 10.6 percentage points greater with ivacaftor than placebo (P<0.001); effect noted by 2 weeks and sustained through week 48; also 55% fewer pulmonary exacerbations, +2.7 kg weight, -48.1 mmol/L sweat chloride."
+    },
+    {
+      "source_id": "NCT00909727",
+      "citation": "ENVISION: Phase 3 RCT of ivacaftor in CF subjects aged 6-11 with G551D mutation (n=52). Davies J, et al. Am J Respir Crit Care Med 2013;187(11):1219-25 (PMID:23590265). ClinicalTrials.gov NCT00909727.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Registered Phase 3 double-blind placebo-controlled pediatric RCT with posted results; primary endpoint ppFEV1 through Week 24. Verified via ClinicalTrials.gov and PubMed (PMID:23590265).",
+      "n_int": 26,
+      "year": 2013,
+      "finding": "Pediatric (6-11y) G551D RCT: primary endpoint treatment effect on ppFEV1 through Week 24 was 12.5 percentage points vs placebo (P<0.001), evident by 2 weeks and sustained to Week 48 (~10pp at 48wk in HTA pooling); +2.8 kg weight, -53.5 mmol/L sweat chloride."
+    },
+    {
+      "source_id": "PMID:24656117",
+      "citation": "Whiting P, Al M, Burgers L, et al. Ivacaftor for CF and the G551D mutation: a systematic review and cost-effectiveness analysis (NIHR HTA). Health Technol Assess. 2014;18(18):1-106. DOI:10.3310/hta18180. PROSPERO CRD42012002516.",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Independent NIHR-funded systematic review synthesizing both pivotal RCTs plus the open-label extension; no formal meta-analysis due to sparse trials but consistent effect. Verified via PubMed (PMID:24656117).",
+      "n_int": 193,
+      "year": 2014,
+      "finding": "Pooled RCT evidence: mean ppFEV1 difference 10.5pp (95% CI 8.5-12.5) in adults and 10.0pp (95% CI 4.5-15.5) in children at 48 weeks; improvements across all subgroups (age, sex, region, lung function), maintained in the open-label extension."
+    },
+    {
+      "source_id": "PMID:23757359",
+      "citation": "Hebestreit H, Sauer-Heilborn A, Fischer R, et al. Effects of ivacaftor on severely ill patients with CF carrying a G551D mutation. J Cyst Fibros. 2013;12(6):599-603. DOI:10.1016/j.jcf.2013.05.006.",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTION: this is a RETROSPECTIVE named-patient cohort (abstract and MeSH 'Retrospective Studies'), not prospective; schema enum lacks a retrospective-cohort option. Severe patients (ppFEV1<40%) excluded from pivotal trials; response variable but net positive. Verified via PubMed (PMID:23757359).",
+      "n_int": 14,
+      "year": 2013,
+      "finding": "In severe G551D CF (ppFEV1<40%, n=14 named-patient program, Germany), ppFEV1 rose significantly by mean 5.2\u00b15.6 points (relative +19.7\u00b122.1%) after ivacaftor (P<0.01); extends benefit beyond the trial-eligible population, though response was variable."
+    },
+    {
+      "source_id": "PMID:27288428",
+      "citation": "Dryden C, Wilkinson J, Young D, Brooker RJ (on behalf of SPCFMCN). Impact of 12 months treatment with ivacaftor on Scottish paediatric CF patients with the G551D mutation: a review. Arch Dis Child. 2016;103(1):68-70. DOI:10.1136/archdischild-2015-310420.",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Real-world national Scottish paediatric review (SPCFMCN); small cohort, statistically significant results comparable to RCTs. NOTE: exact N not stated in abstract \u2014 n_int is approximate/unconfirmed. Verified paper exists via PubMed (PMID:27288428) and BMJ/ADC.",
+      "n_int": 19,
+      "year": 2016,
+      "finding": "Real-world Scottish paediatric G551D cohort: statistically significant improvements in FEV1 and BMI and reduced sweat chloride over 12 months, comparable to published RCT data; suggested reduced IV/oral antibiotic use."
+    },
+    {
+      "source_id": "NCT00909532",
+      "citation": "FDA. KALYDECO (ivacaftor) approval, NDA 203188, initial U.S. approval 31 Jan 2012 (accessdata.fda.gov 203188Orig1s000). Indicated for CF patients age 6+ with a G551D mutation in CFTR; approval based on STRIVE (NCT00909532) + ENVISION (NCT00909727). Vertex press release 2012-01-31.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTION: source_id changed from the duplicated STRIVE trial DOI to the real regulatory anchor (NDA 203188 / STRIVE NCT). FDA marketing approval based on STRIVE+ENVISION; ppFEV1 improvement is the pivotal efficacy basis. Approval date 31 Jan 2012 and age-6+ G551D indication independently verified via FDA accessdata NDA 203188 and Vertex/PRNewswire release.",
+      "n_int": 193,
+      "year": 2012,
+      "finding": "FDA approved ivacaftor (Kalydeco) on 31 Jan 2012 for CF patients aged 6+ with the G551D mutation \u2014 the first drug targeting the underlying CFTR defect; approval driven by the ~10-12.5pp ppFEV1 improvement in the two pivotal RCTs (approx. 3 months after NDA submission)."
+    }
+  ]
+}

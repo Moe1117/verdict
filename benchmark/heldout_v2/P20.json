@@ -1,0 +1,89 @@
+{
+  "claim_id": "P20",
+  "claim": "Semaglutide improves liver fibrosis or resolves steatohepatitis in metabolic-dysfunction-associated steatohepatitis (MASH)",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The claim is disjunctive (\"improves fibrosis OR resolves steatohepatitis\") and both limbs are now met at the highest evidence level in the correct population (non-cirrhotic MASH, F2-F3). The pivotal phase 3 ESSENCE trial (NCT04822181; Sanyal et al., NEJM 2025, PMID 40305708), a 1,197-patient double-blind placebo-controlled RCT with a biopsy-anchored week-72 interim on the first 800 patients, hit BOTH co-primary histologic endpoints: MASH resolution without worsening fibrosis (62.9% vs 34.3%, +28.7pp, P<0.001) AND >=1-stage fibrosis improvement without worsening MASH (36.8% vs 22.4%, +14.4pp, P<0.001), plus the combined endpoint (32.7% vs 16.1%). The earlier phase 2 (NCT02970942; Newsome et al., NEJM 2021, PMID 33185364) established the resolution limb (59% vs 17% at 0.4mg, P<0.001) but was NOT significant on fibrosis (43% vs 33%, P=0.48) \u2014 so at phase 2, only the resolution limb of the disjunctive claim held; ESSENCE closed the fibrosis gap. Regulatory/guideline consensus confirms Supported: FDA granted accelerated approval to semaglutide (Wegovy) for noncirrhotic MASH with F2-F3 fibrosis on 15 August 2025 (confirmed via FDA.gov and the Wegovy label), and the November 2025 AASLD Practice Guidance update (PMID 41201884) formally recommends it based on ESSENCE. A biopsy-anchored GRADE systematic review (PMID 42051839) concurs. The lone contradicting RCT (NASH-related COMPENSATED CIRRHOSIS, F4; NCT03987451, Loomba et al., Lancet Gastro Hep 2023, PMID 36934740) was negative on both fibrosis and resolution \u2014 but that is a DIFFERENT, more advanced population (cirrhosis) outside the claim's F2-F3 target and outside the approved indication, so it does not contradict the claim as scoped. Net: documented clinical and regulatory consensus = Supported.",
+  "outcome": "MASH (NASH) resolution and/or >=1-stage liver fibrosis improvement on biopsy, without worsening of the other",
+  "population": "Adults with biopsy-confirmed MASH (NASH) and clinically significant fibrosis (stage F2-F3; non-cirrhotic)",
+  "rows": [
+    {
+      "source_id": "PMID:40305708",
+      "citation": "Sanyal AJ, Newsome PN, et al. Phase 3 Trial of Semaglutide in Metabolic Dysfunction-Associated Steatohepatitis. N Engl J Med. 2025;392(21):2089-2099. NCT04822181. DOI:10.1056/NEJMoa2413258",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: article types include Randomized Controlled Trial, Clinical Trial Phase III, Multicenter. Not retracted. Novo Nordisk funded (disclosed).",
+      "n_int": 534,
+      "year": 2025,
+      "finding": "ESSENCE Part 1 pivotal phase 3 (week-72 interim, first 800 of 1,197). Semaglutide 2.4mg met BOTH co-primary biopsy endpoints: MASH resolution w/o worsening fibrosis 62.9% vs 34.3% placebo (+28.7pp, P<0.001) and >=1-stage fibrosis improvement w/o worsening MASH 36.8% vs 22.4% (+14.4pp, P<0.001); combined 32.7% vs 16.1%. Semaglutide arm n=534 confirmed. Biopsy histology = true outcome, correct F2-F3 population. Basis for FDA accelerated approval (15 Aug 2025, confirmed via FDA label)."
+    },
+    {
+      "source_id": "PMID:33185364",
+      "citation": "Newsome PN, Buchholtz K, Cusi K, et al. A Placebo-Controlled Trial of Subcutaneous Semaglutide in Nonalcoholic Steatohepatitis. N Engl J Med. 2021;384(12):1113-1124. NCT02970942. DOI:10.1056/NEJMoa2028395",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Clinical Trial Phase II, Randomized Controlled Trial, Multicenter. Not retracted.",
+      "n_int": 82,
+      "year": 2021,
+      "finding": "Phase 2, 72wk, biopsy-confirmed NASH F1-F3 (co-primary analyses in F2-F3). NASH resolution w/o worsening fibrosis 59% (0.4mg, n=82) vs 17% placebo, P<0.001 \u2014 resolution limb of the claim MET. But fibrosis improvement 43% vs 33%, P=0.48 \u2014 fibrosis limb NOT significant at phase 2. Supports the resolution half; the fibrosis half was later established by ESSENCE. Net direction +1 on the disjunctive claimed outcome."
+    },
+    {
+      "source_id": "PMID:41201884",
+      "citation": "Bansal MB, Patton H, Morgan TR, et al. Semaglutide therapy for MASH: November 2025 updates to AASLD Practice Guidance. Hepatology. 2025;83(5):1326-1340. DOI:10.1097/HEP.0000000000001608",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: article type Practice Guideline / Review. Not retracted.",
+      "n_int": 0,
+      "year": 2025,
+      "finding": "AASLD Practice Guidance update documents FDA accelerated approval (Aug 2025) of semaglutide 2.4mg (Wegovy) for noncirrhotic MASH with moderate-to-advanced (F2-F3) fibrosis, based on ESSENCE dual-primary-endpoint success, and recommends patient selection via non-invasive tests. Explicitly excludes MASH cirrhosis from the indication. Represents US regulatory + specialty-society consensus that the claim is Supported for non-cirrhotic MASH."
+    },
+    {
+      "source_id": "PMID:42051839",
+      "citation": "Alzaki AA, et al. THR-beta Agonists vs Incretin Therapies for Noncirrhotic MASH: A Biopsy-Anchored Systematic Review With GRADE. Cureus. 2026;18(3):e106038. PROSPERO CRD420251230032. DOI:10.7759/cureus.106038",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Review article, PROSPERO-preregistered, PRISMA 2020, RoB2 + GRADE. Not retracted.",
+      "n_int": 3796,
+      "year": 2026,
+      "finding": "PRISMA/GRADE systematic review of 7 RCTs (3,796 pts) in biopsy-confirmed non-cirrhotic MASH (F2-F3). Concludes semaglutide achieved dose-dependent histologic benefit culminating in dual-endpoint improvement in phase 3 ESSENCE; all active agents beat placebo on >=1 biopsy endpoint. Independent evidence synthesis corroborating the claim."
+    },
+    {
+      "source_id": "PMID:36934740",
+      "citation": "Loomba R, Abdelmalek MF, Armstrong MJ, et al. Semaglutide 2.4 mg once weekly in patients with NASH-related cirrhosis: a randomised, placebo-controlled phase 2 trial. Lancet Gastroenterol Hepatol. 2023;8(6):511-522. NCT03987451. DOI:10.1016/S2468-1253(23)00068-7",
+      "design": "rct",
+      "direction": -1,
+      "population_match": false,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Randomized Controlled Trial, Phase II. Not retracted. n=71 total (47 sema / 24 placebo); n_int=47 confirmed.",
+      "n_int": 47,
+      "year": 2023,
+      "finding": "Phase 2 in NASH-related COMPENSATED CIRRHOSIS (F4) \u2014 a MORE ADVANCED population OUTSIDE the F2-F3 claim and outside the FDA indication. No significant fibrosis improvement (11% sema vs 29% placebo, OR 0.28, P=0.087) and no significant NASH resolution (P=0.29). Contradicts efficacy at the cirrhotic stage but does NOT contradict the claim as scoped to non-cirrhotic F2-F3 MASH; marks the boundary of benefit. population_match=false is correct \u2014 genuinely a different, more advanced population."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Semaglutide improves MASH histology in biopsy-confirmed patients with F2-F3 fibrosis. The pivotal phase 3 ESSENCE trial (NEJM 2025, NCT04822181) met both co-primary endpoints at 72 weeks: MASH resolution without worsening fibrosis (62.9% vs 34.3% placebo) and >=1-stage fibrosis improvement without worsening MASH (36.8% vs 22.4%). The earlier phase 2 (NEJM 2021) showed strong NASH resolution (59% vs 17%) but did not reach significance on fibrosis; ESSENCE resolved that. On the strength of ESSENCE, the FDA granted accelerated approval to semaglutide (Wegovy) for MASH with F2-F3 fibrosis in August 2025, and AASLD now recommends it. Note semaglutide was NOT effective in NASH-related cirrhosis (F4) in a separate phase 2 trial, so benefit is established for non-cirrhotic MASH."
+  },
+  "build_confidence": "high",
+  "provenance": "Fact-checked P20: 5/5 rows independently verified against PubMed (PMIDs 40305708, 33185364, 41201884, 42051839, 36934740), ClinicalTrials.gov (NCT04822181), and FDA.gov/Wegovy label (Aug 2025 accelerated approval). No defects found.",
+  "notes": "All rows verified; no hallucinated PMIDs, wrong Ns, flipped directions, mislabeled designs, surrogate-outcome errors, unjustified dramatic_effect, or fabricated retractions. The F4 cirrhosis trial (36934740) is correctly scoped out as population_match=false rather than wrongly excluded. dramatic_effect=false is correct throughout (ordinary RCT magnitudes, contradicting F4 trial rules out all-or-none)."
+}

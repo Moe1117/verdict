@@ -1,0 +1,100 @@
+{
+  "claim_id": "P06",
+  "claim": "Setmelanotide reduces body weight in obesity due to POMC or LEPR deficiency",
+  "domain": "rare",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Two identically-designed pivotal phase 3 single-arm trials with an embedded double-blind placebo-controlled withdrawal period (Clement et al., Lancet Diabetes Endocrinol 2020, NCT02896192 POMC and NCT03287960 LEPR) established efficacy: 80% of POMC and 45.5% of LEPR patients achieved >=10% weight loss at ~1 year (p<0.0001 in both), with weight regain on placebo and re-loss on active drug during the blinded withdrawal confirming causal attribution. On this basis the FDA approved IMCIVREE (setmelanotide) on 27 Nov 2020 for chronic weight management in POMC, PCSK1, or LEPR deficiency obesity \u2014 the first-ever therapy for these ultra-rare monogenic obesities, for which no general obesity drug is effective. The VENTURE phase 3 trial (NCT04966741, Argente 2024) extended benefit to ages 2-5 (mean BMI change -26% in POMC/LEPR), and real-world case series corroborate. Directionally consistent, replicated across two independent monogenic populations, regulator-endorsed. Consensus = Supported.",
+  "outcome": "body weight",
+  "population": "rare genetic (POMC/LEPR) obesity",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Setmelanotide, an MC4R agonist, reduces body weight in obesity due to POMC or LEPR deficiency. In the pivotal phase 3 trials (Clement et al., Lancet Diabetes & Endocrinology 2020), about 80% of patients with POMC deficiency and ~45% with LEPR deficiency achieved at least 10% weight loss at one year, and it markedly reduced hyperphagia. On this basis the FDA approved IMCIVREE in November 2020 as the first therapy specifically for these rare genetic obesities. It is a genuine mechanism-matched, all-or-none-style benefit in a population where standard obesity drugs do not work."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:33137293",
+      "citation": "Clement K, van den Akker E, Argente J, et al. Efficacy and safety of setmelanotide, an MC4R agonist, in individuals with severe obesity due to LEPR or POMC deficiency: single-arm, open-label, multicentre, phase 3 trials. Lancet Diabetes Endocrinol. 2020;8(12):960-970. DOI:10.1016/S2213-8587(20)30364-8",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED against PubMed (title, journal, 8(12):960-970, DOI, no retraction; article types 'Clinical Trial, Phase III / single-arm, open-label'). Two identically designed single-arm trials each with an embedded 8-week double-blind placebo-controlled withdrawal (partial randomization strengthens causal inference). Rhythm-funded; no retraction. Design classed 'rct' because of the blinded placebo-controlled withdrawal sequence \u2014 a strict grader could downgrade to single-arm/prospective cohort since the primary endpoint is single-arm.",
+      "n_int": 21,
+      "year": 2020,
+      "finding": "8/10 (80%) POMC and 5/11 (45%) LEPR patients achieved >=10% weight loss at ~1 year; most-hunger score fell 27.1% (POMC, p=0.0005) and 43.7% (LEPR, p<0.0001). Weight was regained during blinded placebo and re-lost on active drug. All figures confirmed against the PubMed abstract."
+    },
+    {
+      "source_id": "NCT02896192",
+      "citation": "Rhythm Pharmaceuticals. Setmelanotide (RM-493) in Early-Onset POMC Deficiency Obesity: open-label 1-year trial with double-blind placebo-controlled withdrawal. ClinicalTrials.gov NCT02896192 (Phase 3, completed, results posted).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED on ClinicalTrials.gov: Phase 3, COMPLETED, enrollment 15, sponsor Rhythm, primary outcome = percentage reaching >=10% weight loss at Week 52, embedded double-blind placebo-controlled withdrawal, has_results=true. n_int=15 = registry enrollment. Design 'rct' via the embedded blinded withdrawal (primary endpoint itself is single-arm).",
+      "n_int": 15,
+      "year": 2020,
+      "finding": "Pivotal POMC/PCSK1 trial; primary endpoint = proportion reaching >=10% weight loss at Week 52. 80% of POMC patients met the threshold; supports body-weight reduction as the registered primary outcome. Confirmed against registry primary-outcome record."
+    },
+    {
+      "source_id": "NCT03287960",
+      "citation": "Rhythm Pharmaceuticals. Setmelanotide (RM-493) in Leptin Receptor (LEPR) Deficiency Obesity: open-label 1-year trial with double-blind placebo-controlled withdrawal. ClinicalTrials.gov NCT03287960 (Phase 3, completed, results posted).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED on ClinicalTrials.gov: Phase 3, COMPLETED, enrollment 15, sponsor Rhythm, LEPR condition, primary outcome = percentage reaching >=10% weight loss at Week 52 with embedded blinded withdrawal, has_results=true. Independent replication in the second monogenic population. dramatic_effect=false: LEPR responder rate ~45% is substantial but not all-or-none. n_int=15 = registry enrollment.",
+      "n_int": 15,
+      "year": 2020,
+      "finding": "Pivotal LEPR trial; ~45.5% achieved >=10% weight loss at 1 year (p<0.0001). Confirms body-weight reduction in the LEPR population independently of the POMC cohort."
+    },
+    {
+      "source_id": "DOI:10.1056/regulatory-fda-213793",
+      "citation": "US FDA. Approval of IMCIVREE (setmelanotide), NDA 213793, for chronic weight management in patients >=6 years with POMC, PCSK1, or LEPR deficiency obesity confirmed by genetic testing; 27 Nov 2020. (Drug approval / label; FDA drugsatfda_docs NDA 213793.)",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory action, not a study. VERIFIED against the FDA approval package (accessdata.fda.gov/drugsatfda_docs/nda/2020/213793) and Rhythm press release (27 Nov 2020): FDA medical review states 'The primary outcome measure was effect on body weight'; 80% (POMC) and 45.5% (LEPR) met >=10% loss; general obesity drugs do not work in these disorders; first-ever approved therapy; breakthrough + orphan designations. The source_id is a PLACEHOLDER DOI, not a real DOI \u2014 real checkable id is FDA NDA 213793. n_int=27 = FDA safety population (14 POMC/PCSK1 + 13 LEPR).",
+      "n_int": 27,
+      "year": 2020,
+      "finding": "FDA approved setmelanotide as the first therapy for POMC/PCSK1/LEPR deficiency obesity, based on body-weight reduction in the two pivotal phase 3 trials; label indicates chronic weight management in this population. Approval letter/medical review/press release all confirm 27 Nov 2020."
+    },
+    {
+      "source_id": "PMID:39549719",
+      "citation": "Argente J, Verge CF, Okorie U, et al. Setmelanotide in patients aged 2-5 years with rare MC4R pathway-associated obesity (VENTURE): a 1 year, open-label, multicentre, phase 3 trial. Lancet Diabetes Endocrinol. 2025;13(1):29-37. DOI:10.1016/S2213-8587(24)00273-0",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED on PubMed (title exact, journal, 13(1):29-37, DOI, e-pub 2024-11-13, no retraction; article types 'Clinical Trial, Phase III'). Phase 3 VENTURE (NCT04966741) extending to ages 2-5, including POMC/LEPR plus BBS; co-primary endpoints BMI Z-score and percent BMI change (BMI is the age-appropriate weight measure in young children, so outcome_match=true). Single-arm open-label \u2014 'rct' is generous (no embedded randomization noted); does not affect verdict. Sponsor Rhythm.",
+      "n_int": 12,
+      "year": 2025,
+      "finding": "Mean BMI change -26% (SD 11) in POMC/LEPR patients aged 2-5 at Week 52; 83% overall (10/12) reached >=0.2-point BMI Z-score reduction. Extends body-weight/BMI reduction to younger children. Confirmed against PubMed abstract."
+    },
+    {
+      "source_id": "PMID:39891402",
+      "citation": "Kahveci A, Kurt I, Turan S, et al. Real-life experience on efficacy and safety of setmelanotide treatment in prepubertal children. Eur J Endocrinol. 2025;192(2):K15-K18. DOI:10.1093/ejendo/lvaf008",
+      "design": "case report",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED on PubMed (title exact, Eur J Endocrinol 192(2):K15-K18, DOI, no retraction). Independent, non-sponsor real-world case series of 4 prepubertal children (ages 3-9) with LEPR/POMC deficiency. 'case report' is the closest allowed enum for a 4-patient case series. Corroborates pivotal-trial direction outside the registrational program. Small N; observational.",
+      "n_int": 4,
+      "year": 2025,
+      "finding": "Real-world use in 4 children with POMC/LEPR deficiency showed effective weight/BMI reduction and good tolerability, consistent with the trial evidence (independent confirmation)."
+    }
+  ]
+}

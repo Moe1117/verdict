@@ -1,0 +1,86 @@
+{
+  "claim_id": "P03",
+  "claim": "Imatinib induces durable remission in chronic myeloid leukemia in chronic phase",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Imatinib is the canonical transformative targeted cancer therapy and its efficacy in chronic-phase CML is settled clinical/regulatory consensus. The pivotal IRIS randomized Phase 3 trial (NCT00006343) established superiority over interferon-alfa + cytarabine: at 18 months complete cytogenetic response 76.2% vs 14.5% and major cytogenetic response 87.1% vs 34.7% (O'Brien, NEJM 2003, PMID 12637609). Five-year IRIS follow-up showed durable responses with 89% overall survival and ~7% progression to accelerated phase/blast crisis (Druker, NEJM 2006, PMID 17151364), and >10-year follow-up confirmed persistence with 83.3% OS and 82.8% CCyR (Hochhaus, NEJM 2017, PMID 28273028). Population-based registry data show CML life expectancy in the TKI era approaching the general population (Bower, JCO 2016, PMID 27325849). Note: imatinib's benefit was established by a RANDOMIZED trial against an active comparator, so the accepted evidence standard is an RCT, not single-arm all-or-none data (hence dramatic_effect=false on all rows). The interferon-arm survival is confounded because 65.6% of interferon patients crossed over TO imatinib because it was superior, which reinforces rather than undermines the claim. No randomized trial contradicts imatinib's efficacy; NCCN/ELN guidelines and FDA approval codify imatinib/TKIs as standard first-line therapy.",
+  "outcome": "cytogenetic/molecular response and survival (durable remission)",
+  "population": "chronic-phase CML (Philadelphia-chromosome/BCR-ABL positive), newly diagnosed",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Imatinib (Gleevec/Glivec) induces durable remission in chronic-phase CML and is the textbook example of a transformative targeted therapy. The pivotal IRIS trial showed dramatically higher cytogenetic response rates than the prior standard (interferon + cytarabine): ~76% complete cytogenetic response vs ~15%, with continued deepening of molecular responses over time. Long-term follow-up (5-year OS ~89%, >10-year OS ~83%) confirmed these remissions are durable, and progression to fatal blast crisis dropped to a low single-digit percentage. Before imatinib, chronic-phase CML reliably progressed to a fatal blast crisis within a few years; imatinib converted it into a chronic, manageable disease, and population data now show CML patients' life expectancy approaching that of the general population. Consensus is unequivocally Supported."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:12637609",
+      "citation": "O'Brien SG, et al. Imatinib compared with interferon and low-dose cytarabine for newly diagnosed chronic-phase chronic myeloid leukemia (IRIS 18-month analysis). N Engl J Med. 2003;348(11):994-1004. DOI:10.1056/NEJMoa022457",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal IRIS Phase 3 RCT, n=1106 (553 imatinib vs 553 IFN+araC). Verified against PubMed: title, journal, year, arm sizes, and effect sizes all match. Primary readout at this timepoint is cytogenetic response (a surrogate), not survival -> outcome_match=false. Not retracted.",
+      "n_int": 553,
+      "year": 2003,
+      "finding": "Major cytogenetic response at 18 mo 87.1% vs 34.7% and complete cytogenetic response 76.2% vs 14.5% favoring imatinib (P<0.001); freedom from progression 96.7% vs 91.5%. Established imatinib superiority as first-line therapy."
+    },
+    {
+      "source_id": "PMID:17151364",
+      "citation": "Druker BJ, et al. Five-year follow-up of patients receiving imatinib for chronic myeloid leukemia (IRIS). N Engl J Med. 2006;355(23):2408-17. DOI:10.1056/NEJMoa062867",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "5-year follow-up of the IRIS RCT (NCT00006343). Verified against PubMed abstract: CCyR 87% by 60mo, OS 89%, ~7% progression. Reports durable remission plus overall survival, directly on the claimed outcome. Not retracted.",
+      "n_int": 553,
+      "year": 2006,
+      "finding": "At 60-month median follow-up, best complete cytogenetic response 87%; estimated overall survival 89%; only ~7% progressed to accelerated phase/blast crisis. Demonstrated remissions are durable over 5 years."
+    },
+    {
+      "source_id": "PMID:28273028",
+      "citation": "Hochhaus A, et al. Long-Term Outcomes of Imatinib Treatment for Chronic Myeloid Leukemia (IRIS, >10-year follow-up). N Engl J Med. 2017;376(10):917-927. DOI:10.1056/NEJMoa1609324",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Final long-term (median 10.9 yr) analysis of IRIS RCT (NCT00006343, NCT00333840). Verified against PubMed: 10yr OS 83.3%, 82.8% CCyR, 65.6% crossover to imatinib. Crossover was because imatinib was superior, so it supports rather than undermines the claim. Not retracted.",
+      "n_int": 553,
+      "year": 2017,
+      "finding": "Estimated 10-year overall survival 83.3% in the imatinib arm; 82.8% achieved complete cytogenetic response; no unacceptable cumulative/late toxicity. Confirms durable, long-lasting remission and survival benefit."
+    },
+    {
+      "source_id": "PMID:27325849",
+      "citation": "Bower H, et al. Life Expectancy of Patients With Chronic Myeloid Leukemia Approaches the Life Expectancy of the General Population. J Clin Oncol. 2016;34(24):2851-7. DOI:10.1200/JCO.2015.66.2866",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Population-based Swedish Cancer Registry cohort, 2,662 CML patients 1973-2013. Verified against PubMed abstract. Real-world survival evidence corroborating the RCTs on the claimed outcome. Not retracted.",
+      "n_int": 2662,
+      "year": 2016,
+      "finding": "After imatinib/TKI introduction, life expectancy of CML patients rose dramatically; patients diagnosed in 2013 lose <3 life-years on average, with life expectancy approaching that of the general population - real-world confirmation of durable disease control."
+    },
+    {
+      "source_id": "NCT00006343",
+      "citation": "A Phase III Study of STI571 (imatinib) Versus Interferon-alfa Combined With Cytarabine in Newly Diagnosed Ph+ Chronic-Phase CML (IRIS). ClinicalTrials.gov NCT00006343. Sponsor: Novartis / NCI. Status: Completed (Mar 2007).",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "integrity_note": "Trial registration for the pivotal IRIS study underpinning FDA/regulatory first-line approval of imatinib in chronic-phase CML. Verified on ClinicalTrials.gov: Phase 3, Novartis/NCI, imatinib vs IFN+cytarabine, Ph+ chronic-phase CML, open-label crossover, completed 2007-03. n_int=553 reflects actual per-arm randomization (projected accrual was 850).",
+      "n_int": 553,
+      "year": 2007,
+      "finding": "Registered pivotal Phase 3 RCT comparing imatinib to interferon+cytarabine in newly diagnosed chronic-phase CML; basis for regulatory approval and guideline (NCCN/ELN) designation of imatinib as standard first-line therapy."
+    }
+  ]
+}

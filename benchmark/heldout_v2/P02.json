@@ -1,0 +1,81 @@
+{
+  "claim_id": "P02",
+  "claim": "Voretigene neparvovec improves functional vision in RPE65-mediated inherited retinal dystrophy",
+  "domain": "rare/gene",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Consensus is Supported and rests on a positive pivotal RCT plus regulatory approval on the exact claimed outcome. The phase 3 randomized, controlled trial (Russell 2017, Lancet, NCT00999609) met its primary endpoint of 1-year change in multi-luminance mobility test (MLMT) \u2014 the pre-specified functional-vision measure \u2014 with a mean bilateral change of 1.8 vs 0.2 light levels (difference 1.6, 95% CI 0.72-2.41, p=0.0013), and 13/20 treated but 0/9 control participants reached maximum improvement (passing at 1 lux). The effect was durable to 2 years (phase 3) and 4 years (phase 1 follow-on) in Maguire 2019 (Ophthalmology). FDA approved voretigene neparvovec (Luxturna) on Dec 19, 2017 specifically for biallelic RPE65 mutation-associated retinal dystrophy, citing the MLMT functional-vision benefit; EMA followed. Independent real-world data (LIGHT study, Audo 2025, Eye) reproduce rapid, sustained mobility-course improvements outside the sponsor sites. The disease is otherwise progressive to complete blindness with no alternative pharmacologic treatment, and the pivotal endpoint was the claimed functional-vision outcome itself (not a surrogate) \u2014 so this qualifies as an all-or-none / very-large effect in an untreatable blinding disease, with a randomized trial confirming (not contradicting) the claim.",
+  "outcome": "multi-luminance mobility test (MLMT) performance / functional vision",
+  "population": "biallelic RPE65-mutation inherited retinal dystrophy (incl. Leber congenital amaurosis)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Voretigene neparvovec (Luxturna) improves functional vision in patients with biallelic RPE65-mediated inherited retinal dystrophy. The pivotal phase 3 randomized controlled trial (Russell et al., Lancet 2017) showed a significant improvement in the multi-luminance mobility test \u2014 the primary functional-vision endpoint \u2014 versus controls, with 65% of treated patients reaching the maximum improvement (passing at 1 lux) and no control patients doing so. Benefits were durable to 3-4 years, and the FDA approved it in 2017 as the first directly administered gene therapy, specifically for this indication. It is the accepted standard of care and the evidence is considered definitive for a previously untreatable, blinding disease."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:28712537",
+      "citation": "Russell S, Bennett J, Wellman JA, et al. Efficacy and safety of voretigene neparvovec (AAV2-hRPE65v2) in patients with RPE65-mediated inherited retinal dystrophy: a randomised, controlled, open-label, phase 3 trial. Lancet. 2017;390(10097):849-860.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": true,
+      "integrity_ok": true,
+      "n_int": 20,
+      "year": 2017,
+      "finding": "VERIFIED via PubMed (DOI:10.1016/S0140-6736(17)31868-8). Pivotal phase 3 RCT (NCT00999609), 2 US sites, masked independent graders. Primary endpoint 1-year change in multi-luminance mobility test: 1.8 (SD 1.1) vs 0.2 (SD 1.0) light levels (difference 1.6, 95% CI 0.72-2.41, p=0.0013); 13/20 (65%) treated vs 0/9 control passed at 1 lux = maximum possible improvement. No product-related SAEs. Directly confirms the claimed functional-vision outcome. All-or-none effect in an otherwise-untreatable blinding disease justifies dramatic_effect."
+    },
+    {
+      "source_id": "PMID:31443789",
+      "citation": "Maguire AM, Russell S, Wellman JA, et al. Efficacy, Safety, and Durability of Voretigene Neparvovec-rzyl in RPE65 Mutation-Associated Inherited Retinal Dystrophy: Results of Phase 1 and 3 Trials. Ophthalmology. 2019;126(9):1273-1285.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 40,
+      "year": 2019,
+      "finding": "VERIFIED via PubMed (DOI:10.1016/j.ophtha.2019.06.017). Durability analysis of 40 subjects who received VN: 11 phase 1 follow-on + 29 phase 3 (20 original-intervention, 9 control/intervention). Mean MLMT lux-score change: 1.9 at 2 years (OI, n=20) vs 1.9 at 1 year; 2.4 at 4 years (phase 1 follow-on, n=8) vs 2.6 at 1 year. >2 log FST improvement maintained. Effect near-maximal by day 30, durable to 4 years. Confirms durability of the functional-vision benefit."
+    },
+    {
+      "source_id": "PMID:40087508",
+      "citation": "Audo I, Barale PO, Devisme C, et al. Voretigene neparvovec in RPE65-related inherited retinal dystrophy: the 1-year real-world study LIGHT. Eye (Lond). 2025;39(9):1758-1764.",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 12,
+      "year": 2025,
+      "finding": "VERIFIED via PubMed (DOI:10.1038/s41433-025-03691-8). NOTE: abstract explicitly labels this a RETROSPECTIVE real-world study (schema enum lacks 'retrospective cohort'; nearest option used). Independent French cohort (6 children, 6 adults). Streetlab mobility course: PPWS median relative improvement 63.9% (IQR 47.8-88.5) at month 1 at 2 lux, sustained to month 6, comparable in children and adults; FST improved and sustained to month 24. Reproduces the mobility/functional-vision benefit outside sponsor trial sites."
+    },
+    {
+      "source_id": "NCT00999609",
+      "citation": "Spark Therapeutics. A Safety and Efficacy Study in Subjects With Leber Congenital Amaurosis (LCA) Using AAV2-hRPE65v2 to Deliver the Gene for Human RPE65 to the RPE [AAV2-hRPE65v2-301]. ClinicalTrials.gov NCT00999609.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 21,
+      "year": 2017,
+      "finding": "VERIFIED via ClinicalTrials.gov (has_results=true). Phase 3, interventional, enrollment 31, randomized 2:1 (21 intervention / 10 control). Pre-specified primary outcome = bilateral MLMT change from baseline at 1 year, the functional-vision endpoint (7 light levels, 400 lux to 1 lux), assessed by independent masked graders. Confirms design integrity and that the endpoint matches the claim."
+    },
+    {
+      "source_id": "https://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/luxturna",
+      "citation": "U.S. FDA. FDA approves novel gene therapy to treat patients with a rare form of inherited vision loss (Luxturna / voretigene neparvovec-rzyl). Dec 19, 2017.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "dramatic_effect": false,
+      "integrity_ok": true,
+      "n_int": 41,
+      "year": 2017,
+      "finding": "VERIFIED via FDA press announcement, FDA Luxturna page, and Spark SEC 8-K. Approved Dec 19, 2017 for confirmed biallelic RPE65 mutation-associated retinal dystrophy (Priority Review, Breakthrough Therapy, Orphan Drug). Efficacy from a 41-patient program; primary evidence from the 31-patient phase 3 RCT; regulators cited significant improvement in completing a low-light obstacle course vs control. First directly administered gene therapy approved in the U.S. CORRECTION: original source_id 'DOI:10.31525/fda1-ucm589467.htm' was a fabricated DOI (no such registered DOI) \u2014 replaced with the real FDA URL."
+    }
+  ]
+}
