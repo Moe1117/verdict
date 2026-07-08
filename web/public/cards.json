@@ -1,0 +1,546 @@
+[
+  {
+    "id": "C01",
+    "claim": "Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia",
+    "verdict": "Supported",
+    "expected": "Supported",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "5 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: effect present"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Edwards & Moore 2003, BMC Family Practice",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:14969594",
+        "integrity_ok": true,
+        "n": "pooled double-blind RCTs of statins in hypercholesterolaemia (>=12 weeks)",
+        "n_int": 12,
+        "year": 2003,
+        "finding": "Dose-specific meta-analysis of double-blind RCTs: fixed-dose atorvastatin 10 mg lowered LDL-C by >30% from baseline (statins overall 24-49%), directly supporting atorvastatin's LDL-lowering effect in hypercholesterolaemia.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      },
+      {
+        "citation": "Rogers 2007, Clinical Therapeutics",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:17472817",
+        "integrity_ok": true,
+        "n": "18 head-to-head trials (17 published + 1 unpublished; adults >=18 with elevated TC/LDL-C)",
+        "n_int": 18,
+        "year": 2007,
+        "finding": "Dose-specific meta-analysis of atorvastatin-vs-simvastatin head-to-head RCTs found atorvastatin produced significantly greater LDL-C reductions in the majority of dose comparisons (2-4x the potency of simvastatin) in hyperlipidemic adults.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      },
+      {
+        "citation": "Nicholls 2010 (VOYAGER), American Journal of Cardiology",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:20102893",
+        "integrity_ok": true,
+        "n": "32,258 individual patients",
+        "n_int": 32258,
+        "year": 2010,
+        "finding": "Individual-patient-data pooled meta-analysis found atorvastatin 10-80 mg lowered LDL-C dose-dependently, with each doubling of dose giving ~4-6% further LDL-C reduction.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      },
+      {
+        "citation": "Baigent 2005 (CTT), Lancet",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:16214597",
+        "integrity_ok": true,
+        "n": "90,056 participants, 14 statin RCTs",
+        "n_int": 90056,
+        "year": 2005,
+        "finding": "Prospective meta-analysis of 14 statin RCTs (including atorvastatin trials) achieved mean 1-year LDL-C differences up to 1.77 mmol/L, confirming statins robustly lower LDL-C; class-level anchor for atorvastatin's mechanism.",
+        "integrity_note": "No retraction or expression of concern; only a standard 2005 erratum (Lancet 366(9494):1358).",
+        "note": ""
+      },
+      {
+        "citation": "Colhoun 2004 (CARDS), Lancet",
+        "design": "rct",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:15325833",
+        "integrity_ok": true,
+        "n": "2,838 (type 2 diabetes, primary prevention, LDL-C <=4.14 mmol/L at entry)",
+        "n_int": 2838,
+        "year": 2004,
+        "finding": "Placebo-controlled RCT of atorvastatin 10 mg/day lowered LDL-C and reduced major cardiovascular events by 37%; direct atorvastatin trial evidence, but the population is type 2 diabetics enrolled at non-elevated LDL-C rather than a hyperlipidemia cohort.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      },
+      {
+        "citation": "Karlson 2015 (VOYAGER), European Journal of Preventive Cardiology",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:26246463",
+        "integrity_ok": true,
+        "n": "38,052 patient exposures",
+        "n_int": 38052,
+        "year": 2015,
+        "finding": "VOYAGER pooled RCT analysis quantified dose-dependent atorvastatin LDL-C lowering (e.g. atorvastatin ~15 mg is equipotent to the ~39% LDL-C reduction of rosuvastatin 5 mg; higher atorvastatin doses give larger reductions), confirming dose-dependent LDL-C lowering.",
+        "integrity_note": "No retraction or expression of concern found.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "C05",
+    "claim": "Metformin reduces cancer incidence in adults without diabetes",
+    "verdict": "Not Supported",
+    "expected": "Not Supported",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "1 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: no effect (evidence of absence)"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Heckman-Stoddard 2025 Cancer Prev Res (Phila)",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:40243198",
+        "integrity_ok": true,
+        "n": "3234",
+        "n_int": 3234,
+        "year": 2025,
+        "finding": "In the Diabetes Prevention Program RCT of adults at high diabetes risk (non-diabetic, impaired glucose tolerance at randomization), metformin 850 mg BID did not reduce total cancer incidence vs placebo over a median 21 years (546 first cancers; HR 0.90, 95% CI 0.73-1.10).",
+        "integrity_note": "No retraction or expression of concern (verified). Trial = NCT00004992 (DPP/DPPOS), enrollment 3,234, confirmed on ClinicalTrials.gov. Only bundle row with a true non-diabetic population and RCT-tier design \u2014 load-bearing for the verdict.",
+        "note": ""
+      },
+      {
+        "citation": "Stevens 2012 Diabetologia",
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:22875195",
+        "integrity_ok": true,
+        "n": "51681 person-years (11 RCTs, 398 cancers)",
+        "n_int": 51681,
+        "year": 2012,
+        "finding": "Collaborative meta-analysis of randomized trials found no reduction in cancer with metformin (summary RR 1.02, 95% CI 0.82-1.26), directly refuting the ~one-third reduction seen in observational studies.",
+        "integrity_note": "No retraction/EoC (verified). Trials mostly enrolled diabetic patients, so population match to non-diabetic adults is only partial \u2014 honestly flagged false.",
+        "note": ""
+      },
+      {
+        "citation": "Dickerman 2023 Epidemiology",
+        "design": "target-trial emulation",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:37227368",
+        "integrity_ok": true,
+        "n": "population-based UK EHR (2009-2016)",
+        "n_int": 2009,
+        "year": 2023,
+        "finding": "Emulating a target trial removed the apparent protective signal: primary 6-year cancer risk difference (metformin vs no metformin, in individuals WITH diabetes) was ~0 (ITT -0.2%, 95% CI -1.6% to 1.3%); a secondary emulation regardless of diabetes status was also near-zero, whereas naive observational methods appeared strongly protective.",
+        "integrity_note": "No retraction/EoC (verified). CORRECTED population_match true->false: the headline emulation is restricted to individuals with diabetes; only a secondary analysis is diabetes-agnostic. Explicitly shows the observational protective signal is an analytic artifact.",
+        "note": ""
+      },
+      {
+        "citation": "Chang 2020 Cancer Prev Res (Phila)",
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:32958585",
+        "integrity_ok": true,
+        "n": "8541 (6 RCTs)",
+        "n_int": 8541,
+        "year": 2020,
+        "finding": "Meta-analysis of 6 RCTs found no significant association between metformin and skin cancer (melanoma OR 0.82, 0.27-2.43; total skin cancer OR 0.71, 0.42-1.20); parallel cohort meta-analysis also null.",
+        "integrity_note": "No retraction/EoC (verified). Diabetes/prediabetes populations; site-specific (skin), so population_match false.",
+        "note": ""
+      },
+      {
+        "citation": "Noto 2012 PLoS One",
+        "design": "systematic review",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:22448244",
+        "integrity_ok": true,
+        "n": "210892 (10 studies, mostly observational)",
+        "n_int": 210892,
+        "year": 2012,
+        "finding": "The naive observational signal: pooled all-cancer incidence RR 0.67 (95% CI 0.53-0.85) favoring metformin, but derived mainly from cohort/case-control studies in diabetic patients; authors themselves flag need for RCTs.",
+        "integrity_note": "No retraction/EoC (verified). Represents the confounded observational signal later refuted by RCTs/TTE; diabetic population only, so population_match false. Normalized to 'systematic review' (pools observational data, not RCTs).",
+        "note": ""
+      },
+      {
+        "citation": "Wang 2014 Diabetes Res Clin Pract",
+        "design": "systematic review",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:24837144",
+        "integrity_ok": true,
+        "n": "13 studies (10 cohort, 3 case-control)",
+        "n_int": 13,
+        "year": 2014,
+        "finding": "Observational meta-analysis reporting reduced pancreatic cancer risk with metformin (RR 0.63, 95% CI 0.46-0.86) in type 2 diabetes \u2014 a site-specific instance of the same confounded observational signal, from cohort/case-control data only.",
+        "integrity_note": "No retraction/EoC (verified). Purely observational; diabetic population; susceptible to time-related/immortal-time bias. Normalized to 'systematic review' (pools observational data, not RCTs).",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "C08",
+    "claim": "Ivermectin improves clinical outcomes in COVID-19",
+    "verdict": "Not Supported",
+    "expected": "Not Supported",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "integrity-screen",
+        "passed": true,
+        "detail": "excluded 1 study(ies) with documented integrity concerns"
+      },
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "6 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "definitive-evidence",
+        "passed": true,
+        "detail": "2 large RCT(s) show no effect; positive signal is smaller/older"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Reis 2022 New England Journal of Medicine",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:35353979",
+        "integrity_ok": true,
+        "n": "3515 (1358 ivermectin vs 1355 placebo, mITT)",
+        "n_int": 3515,
+        "year": 2022,
+        "finding": "TOGETHER platform RCT: early ivermectin in ~3,500 symptomatic high-risk outpatients did not reduce hospitalization/prolonged ED observation vs placebo; no benefit.",
+        "integrity_note": "Large double-blind placebo-controlled adaptive platform trial; no integrity concerns.",
+        "note": ""
+      },
+      {
+        "citation": "Hayward 2024 Journal of Infection",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:38431155",
+        "integrity_ok": true,
+        "n": "8811 (2157 ivermectin vs 3256 usual care)",
+        "n_int": 8811,
+        "year": 2024,
+        "finding": "PRINCIPLE platform RCT (8,811 community adults): ivermectin gave no clinically meaningful faster recovery (HR ~1.15, below pre-specified 1.2 threshold) and no difference in hospitalization/death or 6-month recovery.",
+        "integrity_note": "Large NIHR-funded open-label adaptive platform trial; no integrity concerns.",
+        "note": ""
+      },
+      {
+        "citation": "Lim 2022 JAMA Internal Medicine",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:35179551",
+        "integrity_ok": true,
+        "n": "490 (241 ivermectin vs 249 control)",
+        "n_int": 490,
+        "year": 2022,
+        "finding": "I-TECH RCT (490 high-risk mild-to-moderate patients, Malaysia): ivermectin did not prevent progression to severe disease (21.6% vs 17.3%) and showed no secondary-outcome benefit.",
+        "integrity_note": "Investigator-initiated multicenter RCT; no integrity concerns.",
+        "note": ""
+      },
+      {
+        "citation": "Marcolino 2022 BMC Infectious Diseases",
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:35870876",
+        "integrity_ok": true,
+        "n": "14 RCTs synthesized",
+        "n_int": 14,
+        "year": 2022,
+        "finding": "Systematic review/meta-analysis of RCTs: ivermectin showed no significant effect on mortality, mechanical ventilation, or clinical improvement ('evidence beyond the hype' is null).",
+        "integrity_note": "Post-hype synthesis; no integrity concerns.",
+        "note": ""
+      },
+      {
+        "citation": "Zein 2021 Diabetes & Metabolic Syndrome",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:34237554",
+        "integrity_ok": true,
+        "n": "RCTs / ~1788 patients",
+        "n_int": 1788,
+        "year": 2021,
+        "finding": "Early meta-analysis (RCTs, ~1,788 patients) reported ivermectin associated with reduced mortality; this pooled benefit was driven by trials later withdrawn/flagged (Elgazzar, Niaee) and does not survive clean re-analysis.",
+        "integrity_note": "The meta-analysis itself is not retracted, but its positive signal depended on primary studies later withdrawn/questioned; illustrates fragility of the early pro-ivermectin evidence.",
+        "note": ""
+      },
+      {
+        "citation": "Elgazzar 2020 Research Square (preprint)",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "DOI:10.21203/rs.3.rs-100956/v3",
+        "integrity_ok": false,
+        "n": "~600 claimed (data integrity compromised)",
+        "n_int": 600,
+        "year": 2020,
+        "finding": "Widely-cited preprint RCT claimed a large ivermectin mortality reduction and underpinned early positive meta-analyses. WITHDRAWN by Research Square (14 Jul 2021) for data-integrity/ethical concerns: duplicated patient records, deaths recorded before enrollment, and plagiarism.",
+        "integrity_note": "Preprint withdrawn by Research Square for data-integrity/ethical concerns; never peer-reviewed yet drove early positive meta-analyses. Corroborated by Nature (d41586-021-02081-w) and multiple outlets.",
+        "note": ""
+      },
+      {
+        "citation": "Shakhsi Niaee 2021 Asian Pacific Journal of Tropical Medicine",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "DOI:10.4103/1995-7645.318304",
+        "integrity_ok": true,
+        "n": "180 (six arms)",
+        "n_int": 180,
+        "year": 2021,
+        "finding": "Multicenter RCT (180 hospitalized adults) reported ivermectin sharply cut mortality vs controls; a positive study that fed pro-ivermectin meta-analyses. Data sleuths and an editorial note raised concerns over implausible baseline stratification/randomization; it is excluded from post-scrutiny meta-analyses.",
+        "integrity_note": "Concerns raised informally (data sleuths, editorial note) over implausible baseline stratification; NOT a formal Expression of Concern \u2014 the journal stated the paper was not retracted and no retraction was pending. The formal EoCs were issued on downstream reviews (Kory; Bryant/Lawrie, Am J Ther), not on this primary study.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "C14",
+    "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
+    "verdict": "Contested",
+    "expected": "Contested",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "2 trial-grade on-population study(ies)"
+      },
+      {
+        "gate": "definitive-evidence",
+        "passed": false,
+        "detail": "large RCTs themselves conflict"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Bhatt DL, et al. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (REDUCE-IT). N Engl J Med. 2019;380(1):11-22.",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:30415628",
+        "integrity_ok": true,
+        "n": "8179",
+        "n_int": 8179,
+        "year": 2019,
+        "finding": "In statin-treated patients with elevated triglycerides (135-499 mg/dL) and high CV risk (established CVD or diabetes + risk factors), 4 g/day icosapent ethyl (purified EPA) lowered the primary composite of CV death/MI/stroke/coronary revascularization/unstable angina vs placebo (17.2% vs 22.0%; HR 0.75, 95% CI 0.68-0.83; P<0.001); key secondary composite HR 0.74 (0.65-0.83); CV death also reduced (4.3% vs 5.2%; HR 0.80, 95% CI 0.66-0.98). Median follow-up 4.9 y. POSITIVE. Note: mineral-oil placebo and high-risk/hypertriglyceridemic population limit generalizability to general adults. NCT01492361.",
+        "integrity_note": "Amarin-funded pivotal RCT (NEJMoa1812792); mineral-oil placebo controversy noted in later literature but trial itself is peer-reviewed NEJM, no retraction/misconduct. VERIFIED: PMID, n, HR, CIs, NCT all match PubMed record (published online Nov 2018; print 2019;380(1):11-22).",
+        "note": ""
+      },
+      {
+        "citation": "Nicholls SJ, et al. Effect of High-Dose Omega-3 Fatty Acids vs Corn Oil on Major Adverse Cardiovascular Events (STRENGTH). JAMA. 2020;324(22):2268-2280.",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:33190147",
+        "integrity_ok": true,
+        "n": "13078",
+        "n_int": 13078,
+        "year": 2020,
+        "finding": "In statin-treated high-CV-risk patients with hypertriglyceridemia and low HDL-C, 4 g/day omega-3 carboxylic acid (EPA+DHA) vs corn oil showed NO difference in the primary MACE composite (12.0% vs 12.2%; HR 0.99, 95% CI 0.90-1.09; P=0.84); trial halted early for futility per prespecified interim. NULL. NCT02104817.",
+        "integrity_note": "AstraZeneca-funded (JAMA 2020.22258, PMC7667577); peer-reviewed, prematurely stopped for futility; no integrity concerns. VERIFIED: PMID, n=13078, HR 0.99 (0.90-1.09), P=0.84, corn-oil comparator, NCT all match PubMed.",
+        "note": ""
+      },
+      {
+        "citation": "Manson JE, et al. Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer (VITAL). N Engl J Med. 2019;380(1):23-32.",
+        "design": "rct",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:30415637",
+        "integrity_ok": true,
+        "n": "25871",
+        "n_int": 25871,
+        "year": 2019,
+        "finding": "Primary-prevention trial in general US adults (men >=50, women >=55) at usual risk; 1 g/day marine n-3 vs placebo showed NO reduction in major CV events (HR 0.92, 95% CI 0.80-1.06; P=0.24) over median 5.3 y. Secondary total-MI signal (HR 0.72, 95% CI 0.59-0.90) but null primary. NULL. Best population match to 'general adults'. NCT01169259.",
+        "integrity_note": "NIH-funded (NEJMoa1811403, PMC6392053); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=25871, HR 0.92 (0.80-1.06), P=0.24, median 5.3 y, total-MI HR 0.72, NCT all match PubMed.",
+        "note": ""
+      },
+      {
+        "citation": "ASCEND Study Collaborative Group (Bowman L, et al.). Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. N Engl J Med. 2018;379(16):1540-1550.",
+        "design": "rct",
+        "direction": 0,
+        "population_match": false,
+        "source_id": "PMID:30146932",
+        "integrity_ok": true,
+        "n": "15480",
+        "n_int": 15480,
+        "year": 2018,
+        "finding": "In patients with diabetes and no baseline atherosclerotic CVD, 1 g/day n-3 fatty acids vs olive-oil placebo showed NO difference in first serious vascular event (8.9% vs 9.2%; rate ratio 0.97, 95% CI 0.87-1.08; P=0.55) over mean 7.4 y. NULL. Diabetic (not general-adult) population. NCT00135226.",
+        "integrity_note": "British Heart Foundation-funded (NEJMoa1804989); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=15480, RR 0.97 (0.87-1.08), P=0.55, mean 7.4 y, olive-oil placebo, NCT00135226 (also ISRCTN60635500) all match PubMed.",
+        "note": ""
+      },
+      {
+        "citation": "Hu Y, Hu FB, Manson JE. Marine Omega-3 Supplementation and Cardiovascular Disease: An Updated Meta-Analysis of 13 Randomized Controlled Trials Involving 127477 Participants. J Am Heart Assoc. 2019;8(19):e013543.",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:31567003",
+        "integrity_ok": true,
+        "n": "127477",
+        "n_int": 127477,
+        "year": 2019,
+        "finding": "Pooled 13 RCTs (127,477 participants; mean treatment 5.0 y). Excluding REDUCE-IT, marine omega-3 was associated with significant reductions in MI (RR 0.92, 0.86-0.99), CHD death (RR 0.92, 0.86-0.98), total CHD (RR 0.95, 0.91-0.99), CVD death (RR 0.93, 0.88-0.99), and total CVD (RR 0.97, 0.94-0.99); associations strengthened with REDUCE-IT included but introduced statistically significant heterogeneity. Linear dose-response for total CVD/major vascular events. Weakly POSITIVE overall; heterogeneity underscores the contested picture.",
+        "integrity_note": "NIH-funded (JAHA.119.013543, PMC6806028); peer-reviewed JAHA systematic review/meta-analysis; explicitly flags REDUCE-IT-driven heterogeneity; no integrity concerns. VERIFIED: PMID, n=127477, 13 RCTs, all RRs and CIs match PubMed abstract.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "C09",
+    "claim": "Fenbendazole treats cancer in humans",
+    "verdict": "Insufficient",
+    "expected": "Insufficient",
+    "confidence": "high",
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": false,
+        "detail": "no on-population randomized/meta evidence \u2014 absence of evidence"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Nguyen J et al. 2024, Anticancer Research",
+        "design": "systematic review",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:39197912",
+        "integrity_ok": true,
+        "n": "narrative review (no human efficacy studies to pool)",
+        "n_int": 0,
+        "year": 2024,
+        "finding": "Review of oral fenbendazole for cancer concludes all anticancer evidence is preclinical (in vitro / animal) and explicitly states clinical trials are still needed to assess anticancer effect, dose and safety in humans \u2014 no human efficacy demonstrated.",
+        "integrity_note": "Verified PMID:39197912, DOI 10.21873/anticanres.17197; abstract confirms preclinical-only and explicit call for trials. Design note: this is a narrative review; mapped to nearest allowed vocabulary term 'systematic review'.",
+        "note": ""
+      },
+      {
+        "citation": "Yamaguchi T et al. 2021, Case Reports in Oncology",
+        "design": "case report",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:34248555",
+        "integrity_ok": true,
+        "n": "1 (80F, advanced NSCLC)",
+        "n_int": 1,
+        "year": 2021,
+        "finding": "First human report of self-administered fenbendazole for cancer: patient developed severe drug-induced liver injury and had NO tumor shrinkage \u2014 anticancer claim not supported, net harm observed.",
+        "integrity_note": "Verified PMID:34248555, DOI 10.1159/000516276; abstract confirms DILI and explicitly 'she did not experience tumor shrinkage'.",
+        "note": ""
+      },
+      {
+        "citation": "Skaara TR et al. 2025, Tidsskrift for den Norske Laegeforening",
+        "design": "case report",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:41097960",
+        "integrity_ok": true,
+        "n": "1 (male cancer patient)",
+        "n_int": 1,
+        "year": 2025,
+        "finding": "Cancer patient taking 2 g/day fenbendazole as alternative therapy developed cholestasis with biopsy-confirmed lobular/portal liver inflammation; framed as unproven alternative treatment causing toxicity, no efficacy benefit.",
+        "integrity_note": "Verified PMID:41097960, DOI 10.4045/tidsskr.25.0229; Norwegian-language case report, abstract confirms 2 g/day fenbendazole, cholestasis and biopsy-confirmed inflammation.",
+        "note": ""
+      },
+      {
+        "citation": "Duan Q et al. 2012, JAALAS",
+        "design": "preclinical",
+        "direction": -1,
+        "population_match": false,
+        "source_id": "PMID:22776123",
+        "integrity_ok": true,
+        "n": "BALB/c mice, EMT6 mammary tumors",
+        "n_int": 6,
+        "year": 2012,
+        "finding": "In vivo mouse study: therapeutic fenbendazole diet (150 ppm) did NOT alter tumor growth, invasion or metastasis and did not enhance radiation response \u2014 a direct in-vivo null for antitumor efficacy.",
+        "integrity_note": "Verified PMID:22776123 (PMC3314526); abstract confirms 'medicated diet did not alter tumor growth, invasion, or metastasis'. Mouse study \u2014 population_match false, correct.",
+        "note": ""
+      },
+      {
+        "citation": "Dogra N et al. 2018, Scientific Reports",
+        "design": "preclinical",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:30093705",
+        "integrity_ok": true,
+        "n": "A549 human cell lines + nu/nu mouse xenografts",
+        "n_int": 549,
+        "year": 2018,
+        "finding": "Fenbendazole acts as a moderate microtubule destabilizer, inhibits glucose uptake/GLUT-HKII, and slowed human tumor xenograft growth in nude mice fed the drug orally \u2014 supportive but strictly preclinical (cells + mice).",
+        "integrity_note": "Verified PMID:30093705, DOI 10.1038/s41598-018-30158-6; no retraction or expression-of-concern found on PubMed record or web search as of 2026-07.",
+        "note": ""
+      },
+      {
+        "citation": "Chang CS et al. 2023, Journal of Gynecologic Oncology",
+        "design": "preclinical",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:37170725",
+        "integrity_ok": true,
+        "n": "ovarian cancer cell lines + PDX/xenograft mice",
+        "n_int": 0,
+        "year": 2023,
+        "finding": "Plain oral fenbendazole showed NO tumor reduction in ovarian-cancer xenografts (poor solubility); only IV-administered PLGA-nanoparticle reformulation reduced tumor weight \u2014 highlighting that the oral route humans self-dose failed even in mice.",
+        "integrity_note": "Verified PMID:37170725, DOI 10.3802/jgo.2023.34.e58. Note: direction=+1 reflects net positive anticancer signal for reformulated FZ, but the abstract explicitly states oral FZ had 'no effect on tumor reduction' \u2014 supportive only for a non-human, non-oral formulation.",
+        "note": ""
+      },
+      {
+        "citation": "Park D et al. 2022, Korean Journal of Physiology & Pharmacology",
+        "design": "preclinical",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:36039738",
+        "integrity_ok": true,
+        "n": "SNU-C5 colorectal cancer cell lines (in vitro)",
+        "n_int": 5,
+        "year": 2022,
+        "finding": "Fenbendazole induced apoptosis and G2/M arrest in 5-FU-resistant colorectal cancer cells in vitro \u2014 mechanistic cell-culture support only, no in-vivo or human evidence.",
+        "integrity_note": "Verified PMID:36039738, DOI 10.4196/kjpp.2022.26.5.377; in vitro only, population_match false correct.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  }
+]

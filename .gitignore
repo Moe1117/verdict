@@ -20,3 +20,10 @@ dist/
 
 # OS
 .DS_Store
+
+# Node
+node_modules/
+*.tsbuildinfo
+
+# Local preview config
+.claude/
