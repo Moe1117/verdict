@@ -6,7 +6,39 @@
     "expected": "Contested",
     "certainty": "Low",
     "certainty_signals": [
-      "decision-grade evidence genuinely conflicts"
+      "start: High certainty from study design",
+      "inconsistency: decision-grade evidence genuinely conflicts and the definitive tier does not resolve it \u2014 the reason this claim is Contested (-2)"
+    ],
+    "certainty_start": {
+      "score": 3,
+      "label": "High"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "decision-grade (randomized / meta-analytic) evidence on both sides"
+      },
+      {
+        "name": "inconsistency",
+        "delta": -2,
+        "rationale": "decision-grade evidence genuinely conflicts and the definitive tier does not resolve it \u2014 the reason this claim is Contested"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "the conflicting evidence is on-population and on the claimed outcome"
+      },
+      {
+        "name": "imprecision",
+        "delta": 0,
+        "rationale": "the conflict is directional, not a precision artefact"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not separately assessed"
+      }
     ],
     "confidence": "56% (95% CI 33%-77%, n=16)",
     "robustness": {
@@ -179,7 +211,39 @@
     "expected": "Supported",
     "certainty": "Moderate",
     "certainty_signals": [
-      "base: a single sub-large RCT"
+      "start: High certainty from study design",
+      "imprecision: rests on a single sub-large, unreplicated RCT (-1)"
+    ],
+    "certainty_start": {
+      "score": 3,
+      "label": "High"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "randomized evidence (1 RCT(s)) \u2014 starts at High; per-study risk-of-bias appraisal requires human judgement and is not automated"
+      },
+      {
+        "name": "inconsistency",
+        "delta": 0,
+        "rationale": "the deciding trial evidence is directionally consistent"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "all deciding evidence is on the claimed population and measures the claimed (non-surrogate) outcome"
+      },
+      {
+        "name": "imprecision",
+        "delta": -1,
+        "rationale": "rests on a single sub-large, unreplicated RCT"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
+      }
     ],
     "confidence": "81% (95% CI 57%-93%, n=16)",
     "robustness": {
@@ -308,7 +372,39 @@
     "expected": "Not Supported",
     "certainty": "High",
     "certainty_signals": [
-      "base: 1 meta-analysis(es) of RCTs"
+      "start: High certainty from study design",
+      "no per-domain adjustments applied"
+    ],
+    "certainty_start": {
+      "score": 3,
+      "label": "High"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "randomized evidence (1 meta-analysis(es) of RCTs, 2 large RCT(s)) \u2014 starts at High; per-study risk-of-bias appraisal requires human judgement and is not automated"
+      },
+      {
+        "name": "inconsistency",
+        "delta": 0,
+        "rationale": "the deciding trial evidence is directionally consistent"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "all deciding evidence is on the claimed population and measures the claimed (non-surrogate) outcome"
+      },
+      {
+        "name": "imprecision",
+        "delta": 0,
+        "rationale": "adequately precise \u2014 meta-analytic and/or large or replicated randomized evidence"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
+      }
     ],
     "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
@@ -437,7 +533,39 @@
     "expected": "Insufficient",
     "certainty": "Very Low",
     "certainty_signals": [
-      "no decision-grade on-outcome evidence (absence / indirectness)"
+      "start: Very Low certainty from study design",
+      "no per-domain adjustments applied"
+    ],
+    "certainty_start": {
+      "score": 0,
+      "label": "Very Low"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "no decision-grade trial evidence to appraise"
+      },
+      {
+        "name": "inconsistency",
+        "delta": 0,
+        "rationale": "no decision-grade trial evidence to compare"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "the available evidence is absent, off-population, or measures only a surrogate \u2014 it cannot directly address the claim"
+      },
+      {
+        "name": "imprecision",
+        "delta": 0,
+        "rationale": "no decision-grade trial evidence to weigh for precision"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not assessable without a body of studies"
+      }
     ],
     "confidence": "44% (95% CI 19%-73%, n=9)",
     "robustness": {
@@ -578,7 +706,39 @@
     "expected": "Supported",
     "certainty": "High",
     "certainty_signals": [
-      "base: 1 meta-analysis(es) of RCTs"
+      "start: High certainty from study design",
+      "no per-domain adjustments applied"
+    ],
+    "certainty_start": {
+      "score": 3,
+      "label": "High"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "randomized evidence (1 meta-analysis(es) of RCTs, 1 large RCT(s)) \u2014 starts at High; per-study risk-of-bias appraisal requires human judgement and is not automated"
+      },
+      {
+        "name": "inconsistency",
+        "delta": 0,
+        "rationale": "the deciding trial evidence is directionally consistent"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "all deciding evidence is on the claimed population and measures the claimed (non-surrogate) outcome"
+      },
+      {
+        "name": "imprecision",
+        "delta": 0,
+        "rationale": "adequately precise \u2014 meta-analytic and/or large or replicated randomized evidence"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
+      }
     ],
     "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
@@ -707,7 +867,39 @@
     "expected": "Not Supported",
     "certainty": "High",
     "certainty_signals": [
-      "base: 2 meta-analysis(es) of RCTs"
+      "start: High certainty from study design",
+      "no per-domain adjustments applied"
+    ],
+    "certainty_start": {
+      "score": 3,
+      "label": "High"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "randomized evidence (2 meta-analysis(es) of RCTs) \u2014 starts at High; per-study risk-of-bias appraisal requires human judgement and is not automated"
+      },
+      {
+        "name": "inconsistency",
+        "delta": 0,
+        "rationale": "the deciding trial evidence is directionally consistent"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "all deciding evidence is on the claimed population and measures the claimed (non-surrogate) outcome"
+      },
+      {
+        "name": "imprecision",
+        "delta": 0,
+        "rationale": "adequately precise \u2014 meta-analytic and/or large or replicated randomized evidence"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
+      }
     ],
     "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
@@ -902,7 +1094,39 @@
     "expected": "Supported",
     "certainty": "High",
     "certainty_signals": [
-      "base: 2 meta-analysis(es) of RCTs"
+      "start: High certainty from study design",
+      "no per-domain adjustments applied"
+    ],
+    "certainty_start": {
+      "score": 3,
+      "label": "High"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "randomized evidence (2 meta-analysis(es) of RCTs, 4 large RCT(s)) \u2014 starts at High; per-study risk-of-bias appraisal requires human judgement and is not automated"
+      },
+      {
+        "name": "inconsistency",
+        "delta": 0,
+        "rationale": "the deciding trial evidence is directionally consistent"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "all deciding evidence is on the claimed population and measures the claimed (non-surrogate) outcome"
+      },
+      {
+        "name": "imprecision",
+        "delta": 0,
+        "rationale": "adequately precise \u2014 meta-analytic and/or large or replicated randomized evidence"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
+      }
     ],
     "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {
@@ -1097,7 +1321,39 @@
     "expected": "Contested",
     "certainty": "Low",
     "certainty_signals": [
-      "decision-grade evidence genuinely conflicts"
+      "start: High certainty from study design",
+      "inconsistency: decision-grade evidence genuinely conflicts and the definitive tier does not resolve it \u2014 the reason this claim is Contested (-2)"
+    ],
+    "certainty_start": {
+      "score": 3,
+      "label": "High"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "decision-grade (randomized / meta-analytic) evidence on both sides"
+      },
+      {
+        "name": "inconsistency",
+        "delta": -2,
+        "rationale": "decision-grade evidence genuinely conflicts and the definitive tier does not resolve it \u2014 the reason this claim is Contested"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "the conflicting evidence is on-population and on the claimed outcome"
+      },
+      {
+        "name": "imprecision",
+        "delta": 0,
+        "rationale": "the conflict is directional, not a precision artefact"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not separately assessed"
+      }
     ],
     "confidence": "56% (95% CI 33%-77%, n=16)",
     "robustness": {
@@ -1270,7 +1526,39 @@
     "expected": "Not Supported",
     "certainty": "High",
     "certainty_signals": [
-      "base: 2 meta-analysis(es) of RCTs"
+      "start: High certainty from study design",
+      "no per-domain adjustments applied"
+    ],
+    "certainty_start": {
+      "score": 3,
+      "label": "High"
+    },
+    "certainty_domains": [
+      {
+        "name": "risk of bias",
+        "delta": 0,
+        "rationale": "randomized evidence (2 meta-analysis(es) of RCTs, 2 large RCT(s)) \u2014 starts at High; per-study risk-of-bias appraisal requires human judgement and is not automated"
+      },
+      {
+        "name": "inconsistency",
+        "delta": 0,
+        "rationale": "the deciding trial evidence is directionally consistent"
+      },
+      {
+        "name": "indirectness",
+        "delta": 0,
+        "rationale": "all deciding evidence is on the claimed population and measures the claimed (non-surrogate) outcome"
+      },
+      {
+        "name": "imprecision",
+        "delta": 0,
+        "rationale": "adequately precise \u2014 meta-analytic and/or large or replicated randomized evidence"
+      },
+      {
+        "name": "publication bias",
+        "delta": 0,
+        "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
+      }
     ],
     "confidence": "86% (95% CI 77%-92%, n=73)",
     "robustness": {

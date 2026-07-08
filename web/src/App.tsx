@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { Card, EvidenceRow } from './types'
+import type { Card, EvidenceRow, GradeDomain } from './types'
 
 interface EvalSummary {
   n: number
@@ -36,6 +36,38 @@ function DirCell({ d }: { d: number }) {
   if (d === 1) return <div className="dir pos" title="supports">+</div>
   if (d === -1) return <div className="dir neg" title="contradicts">−</div>
   return <div className="dir null" title="no effect / null">0</div>
+}
+
+// The deterministic GRADE certainty profile: a starting tier from study design, then a
+// signed up/down-grade per GRADE domain, summing to the final certainty. No LLM.
+function GradeProfile({ card }: { card: Card }) {
+  const domains = card.certainty_domains
+  if (!domains || !domains.length) return null
+  const start = card.certainty_start
+  const deltaStr = (d: number) => (d > 0 ? `+${d}` : `${d}`)
+  return (
+    <div className="grade">
+      <div className="grade-sum">
+        {start && <span className="tier">{start.label}</span>}
+        {domains.filter((d) => d.delta !== 0).map((d, i) => (
+          <span key={i} className={'step ' + (d.delta > 0 ? 'up' : 'down')}>{deltaStr(d.delta)}</span>
+        ))}
+        <span className="arrow">→</span>
+        <span className={'tier final b-' + card.verdict.replace(/\s/g, '')}>{card.certainty}</span>
+      </div>
+      {domains.map((d: GradeDomain, i) => (
+        <div key={i} className={'gd' + (d.delta !== 0 ? ' active' : '')}>
+          <div className={'gd-delta' + (d.delta < 0 ? ' neg' : d.delta > 0 ? ' pos' : '')}>
+            {d.delta === 0 ? '0' : deltaStr(d.delta)}
+          </div>
+          <div className="gd-body">
+            <div className="gd-name">{d.name}</div>
+            <div className="gd-why">{d.rationale}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
 }
 
 function Row({ r, i }: { r: EvidenceRow; i: number }) {
@@ -125,6 +157,9 @@ export default function App() {
               <span className="conf">confidence: {card.confidence}</span>
             </div>
             <div className="claim">{card.claim}</div>
+
+            <div className="section-label">certainty — per-domain GRADE profile, no LLM</div>
+            <GradeProfile card={card} />
 
             <div className="section-label">gate trace — deterministic, no LLM</div>
             {card.gate_trace.map((g, i) => (

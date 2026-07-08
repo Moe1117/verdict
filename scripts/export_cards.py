@@ -52,6 +52,12 @@ def main() -> None:
             "expected": meta.get("expected_verdict"),
             "certainty": cert.level,
             "certainty_signals": cert.signals,
+            # Full per-domain GRADE profile: start tier + a signed delta per GRADE domain,
+            # summing to the certainty score. Deterministic, auditable, no LLM.
+            "certainty_start": {"score": cert.start, "label": cert.start_label},
+            "certainty_domains": [
+                {"name": d.name, "delta": d.delta, "rationale": d.rationale} for d in cert.domains
+            ],
             # calibrated: the EMPIRICAL accuracy of this certainty level across the labeled set
             "confidence": conf_map.get(cert.level, cert.level),
             "robustness": {"stability": rob.stability, "survives_drop_largest": rob.survives_drop_largest,

@@ -6,6 +6,12 @@ export interface GateStep {
   detail: string
 }
 
+export interface GradeDomain {
+  name: string
+  delta: number
+  rationale: string
+}
+
 export interface EvidenceRow {
   citation: string
   design: string
@@ -33,6 +39,10 @@ export interface Card {
   verdict: VerdictState
   expected: string
   confidence: string
+  certainty: string
+  certainty_start?: { score: number; label: string }
+  certainty_domains?: GradeDomain[]
+  certainty_signals?: string[]
   baseline?: Baseline | null
   gate_trace: GateStep[]
   ledger: EvidenceRow[]
