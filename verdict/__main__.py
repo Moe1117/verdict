@@ -9,23 +9,25 @@ from __future__ import annotations
 import sys
 
 from . import DISCLAIMER, __version__
+from .certainty import grade_certainty
 from .corpora import available, load_rows
-from .verdict import VerdictCard, run_frozen
+from .verdict import VerdictCard, run_frozen, run_live
 
 _SIGN = {1: "+", -1: "-", 0: "0"}
 
 
 def render_card(card: VerdictCard) -> str:
     out = [f"CLAIM: {card.claim}"]
-    conf = f"   ·   confidence {card.confidence:.2f}" if card.confidence is not None else ""
-    out += [f"VERDICT: {card.verdict.value}{conf}", "", "gate trace:"]
+    cert = grade_certainty(card.ledger, card.verdict)
+    out += [f"VERDICT: {card.verdict.value}   ·   certainty {cert.level}", "", "gate trace:"]
     for g in card.gate_trace:
         out.append(f"  [{'ok' if g.passed else '--'}] {g.gate}: {g.detail}")
     out += ["", "evidence ledger:"]
     for r in card.ledger:
         flag = "EXCLUDED " if not r.integrity_ok else ""
-        n = f"n={r.n}" if r.n else ""
-        out.append(f"  {flag}[{_SIGN.get(r.direction, '?')}] {r.source_id:16} {r.design:22} {n:9} {r.finding}")
+        n = f"n={r.n_int}" if r.n_int else ""
+        surr = " [surrogate]" if not r.outcome_match else ""
+        out.append(f"  {flag}[{_SIGN.get(r.direction, '?')}] {r.source_id:16} {r.design:22} {n:9} {r.finding}{surr}")
         if not r.integrity_ok and r.integrity_note:
             out.append(f"        -> {r.integrity_note}")
     out += ["", DISCLAIMER]
@@ -61,6 +63,18 @@ def main() -> int:
             print("usage: python -m verdict --id C08")
             return 2
         print(render_card(run_frozen(args[1])))
+        return 0
+
+    if args[0] == "--live":
+        if len(args) < 2:
+            print('usage: python -m verdict --live "drug improves outcome in population"')
+            return 2
+        import os
+        if not os.getenv("ANTHROPIC_API_KEY"):
+            print("live path needs ANTHROPIC_API_KEY (Claude parses the claim + extracts each study).")
+            return 2
+        print("running live: parse -> PubMed retrieval -> Claude extraction -> deterministic gates ...\n")
+        print(render_card(run_live(" ".join(args[1:]))))
         return 0
 
     claim = " ".join(args)

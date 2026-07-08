@@ -43,3 +43,32 @@ def run_frozen(claim_id: str) -> VerdictCard:
 
     meta, rows = load_rows(claim_id)
     return evaluate(meta.get("claim", claim_id), rows)
+
+
+def run_live(claim: str, k: int = 8) -> VerdictCard:
+    """The full live path: claim -> Claude parse -> PubMed retrieval -> Claude extraction
+    -> deterministic gates. Requires ANTHROPIC_API_KEY (+ NCBI_EMAIL per NCBI policy).
+    The LLM only parses the claim and extracts each study; the verdict is still a pure
+    function of the extracted rows."""
+    from .extract import extract_row
+    from .parse import parse_claim
+    from .retrieve import fetch_abstract, search_pubmed
+
+    ct, query = parse_claim(claim)
+    if not ct.measurable:
+        return VerdictCard(
+            claim=claim, verdict=Verdict.UNDECIDABLE, confidence=None, ledger=[],
+            gate_trace=[GateTrace("input-guard", False,
+                                  "claim is ill-posed or its outcome is not objectively measurable")],
+        )
+    rows: list[EvidenceRow] = []
+    seen: set[str] = set()
+    for s in search_pubmed(query, retmax=k):
+        if s.id in seen:
+            continue
+        seen.add(s.id)
+        try:
+            rows.append(extract_row(s, fetch_abstract(s.id), ct))
+        except Exception:  # noqa: BLE001 — one bad study never sinks the run
+            continue
+    return evaluate(claim, rows)
