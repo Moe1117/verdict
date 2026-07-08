@@ -1,0 +1,97 @@
+{
+  "claim_id": "N15",
+  "claim": "Tofersen slows clinical decline in SOD1-mutated amyotrophic lateral sclerosis",
+  "domain": "neuro",
+  "expected_verdict": "Insufficient",
+  "gold_rationale": "The only completed pivotal RCT of the claimed clinical outcome \u2014 VALOR Part C (Miller, NEJM 2022; NCT02623699; Part C n=108) \u2014 MISSED its primary endpoint: change in ALSFRS-R at week 28 was -6.98 with tofersen vs -8.14 with placebo (difference 1.2 points, 95% CI -3.2 to 5.5, P=0.97), and no secondary clinical endpoint (SVC, HHD strength, survival) reached significance. Tofersen robustly lowered the plasma neurofilament light chain (NfL) SURROGATE (~60% difference vs placebo, nominal p<0.0001; FDA cites 60% ITT / 67% mITT) and CSF SOD1 (~34%). FDA granted ACCELERATED approval (Qalsody, Apr 2023) explicitly and solely on the NfL surrogate as 'reasonably likely to predict' \u2014 not demonstrate \u2014 clinical benefit; the FDA Integrated Review (NDA 215887) states the single pivotal study 'failed to demonstrate a statistically significant treatment difference on the prespecified primary clinical endpoint' and that clinical benefit must be VERIFIED in the confirmatory ATLAS trial (PMR, Study 233AS303). EMA authorized only under 'exceptional circumstances' (29 May 2024; CHMP positive opinion 22 Feb 2024, EMA/CHMP/50520/2024), citing that comprehensive efficacy data could not be provided and a merely 'numerically favourable' ALSFRS-R effect. The confirmatory clinical-outcome trial (ATLAS, NCT04856982, presymptomatic carriers, primary endpoint = emergence of clinically manifest ALS) remains ongoing (active/not recruiting; primary completion Aug 2027, study completion Apr 2028). OLE 52-week early-vs-delayed-start data are hypothesis-generating and non-multiplicity-adjusted. Consensus: a real, prespecified test of the CLAIMED outcome (slowing ALSFRS-R decline) was negative; the drug is approved on an unvalidated surrogate; confirmatory clinical evidence does not yet exist. Verdict = Insufficient.",
+  "outcome": "ALSFRS-R clinical decline (change from baseline to week 28)",
+  "population": "SOD1-ALS",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Tofersen (Qalsody) is an FDA- and EMA-approved antisense oligonucleotide that reduces production of the toxic SOD1 protein and slows clinical decline in patients with SOD1-mutated ALS. In the VALOR phase 3 trial and its open-label extension, tofersen lowered plasma neurofilament light chain (a marker of neurodegeneration) and, particularly with earlier initiation, was associated with slower decline on the ALSFRS-R functional scale and better preservation of respiratory function and muscle strength, supporting a disease-modifying clinical benefit in SOD1-ALS."
+  },
+  "provenance": "PubMed (VALOR NEJM 2022 PMID:36129998; Oliveira Santos review DOI:10.1080/14737175.2024.2355983), ClinicalTrials.gov (NCT02623699 VALOR Part C, NCT04856982 ATLAS), FDA Integrated Review NDA 215887 + FDA/Biogen news release (25 Apr 2023) + Qalsody label, EMA EPAR + CHMP summary of positive opinion (EMA/CHMP/50520/2024)",
+  "build_confidence": "high",
+  "notes": "Critical outcome_match issue: the CLAIMED outcome is ALSFRS-R clinical decline. VALOR's primary endpoint DID measure exactly this (outcome_match=true) and was NEGATIVE (direction -1, does not support the claim). Both regulatory approvals rest on the NfL SURROGATE, not the clinical outcome (outcome_match=false for those rows). ATLAS's primary endpoint is emergence of clinically manifest ALS in presymptomatic carriers (a prevention/time-to-event outcome, not ALSFRS-R slowing in established disease); it is unreported (has_results=false confirmed on registry). No completed trial demonstrates the claimed clinical benefit. Baseline plain-LLM 'Yes' overstates: it treats OLE post-hoc/surrogate data as established clinical benefit \u2014 not supported by the primary clinical endpoint. Verification (adversarial re-check): PMID 36129998 confirmed via PubMed metadata (title, NEJM 2022;387(12):1099-1110, DOI 10.1056/NEJMoa2204705, Phase III RCT, NOT retracted, all numbers match); NCT02623699 and NCT04856982 confirmed via ClinicalTrials.gov (design, N, endpoints, dates); FDA facts confirmed via accessdata.fda.gov Integrated Review + Biogen release; EMA facts via ema.europa.eu EPAR/CHMP; review DOI confirmed via crossref (correct authors/journal/year, abstract confirms failed primary + 60% NfL). Row 3 design is more precisely a narrative/expert review than a systematic review (immaterial, direction=0). Rows 4 & 6 source_ids are transparently-disclosed proxies for regulatory documents that lack DOIs; both proxy ids resolve to real articles.",
+  "rows": [
+    {
+      "source_id": "PMID:36129998",
+      "citation": "Miller TM, et al. Trial of Antisense Oligonucleotide Tofersen for ALS (VALOR). N Engl J Med. 2022;387(12):1099-1110. DOI:10.1056/NEJMoa2204705",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal phase 3 double-blind placebo-controlled RCT, industry-funded (Biogen/Ionis). Prespecified primary endpoint reported transparently as negative. Confirmed NOT retracted (PubMed article_types: Clinical Trial Phase III, RCT; no Retracted Publication tag).",
+      "n_int": 72,
+      "year": 2022,
+      "finding": "Primary endpoint MISSED: change in ALSFRS-R to week 28 in the faster-progression primary population was -6.98 (tofersen) vs -8.14 (placebo); difference 1.2 points (95% CI -3.2 to 5.5), P=0.97. No secondary clinical endpoint (SVC, handheld dynamometry, survival) was significant. Tofersen did lower the NfL surrogate and CSF SOD1. Directly tests and does NOT support the claim of slowing ALSFRS-R decline."
+    },
+    {
+      "source_id": "NCT02623699",
+      "citation": "VALOR (Part C): Efficacy/Safety of BIIB067 (Tofersen) in SOD1-ALS. ClinicalTrials.gov NCT02623699 (Biogen/Ionis), completed 16 Jul 2021, has_results=true.",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Registry record with posted results (confirmed has_results=true). Part C primary outcome = 'Change From Baseline in ALSFRS-R Total Score at Week 28' (the claimed clinical outcome). NfL and CSF SOD1 are Part C secondary outcomes. Overall study enrolled 176; Part C enrolled 108.",
+      "n_int": 72,
+      "year": 2021,
+      "finding": "Registered Part C primary outcome is ALSFRS-R total-score change at week 28. Part C n=108 (72 tofersen / 36 placebo). Confirms the claimed clinical outcome was the prespecified primary endpoint and was not met; NfL and CSF SOD1 were secondary."
+    },
+    {
+      "source_id": "DOI:10.1080/14737175.2024.2355983",
+      "citation": "Oliveira Santos M, de Carvalho M. Profiling tofersen as a treatment of SOD1 amyotrophic lateral sclerosis. Expert Rev Neurother. 2024;24(6):549-553. DOI:10.1080/14737175.2024.2355983",
+      "design": "systematic review",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent (University of Lisbon, non-industry) NARRATIVE/expert review \u2014 labeled 'systematic review' as the closest available design bucket, but it is a narrative review (immaterial as direction=0). Confirmed real via crossref: correct authors, journal, published 2024-05-17. No efficacy claim beyond trial data; frames NfL as biomarker and clinical benefit as unproven pending ATLAS.",
+      "n_int": 0,
+      "year": 2024,
+      "finding": "Review states VALOR FAILED its primary clinical endpoint (change in ALSFRS-R from baseline to week 28) while a significant ~60% reduction in plasma NfL was observed; notes ATLAS is needed to establish clinical efficacy. Net-neutral on whether clinical decline is slowed."
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMoa2204705",
+      "citation": "FDA. Integrated Review, NDA 215887 (tofersen/Qalsody), Accelerated Approval, Apr 24-25 2023; FDA/Biogen news release 'FDA approves treatment of ALS associated with a mutation in the SOD1 gene' (25 Apr 2023); Qalsody Prescribing Information (rev 4/2023).",
+      "design": "guideline / regulatory",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Primary regulatory source, verified on accessdata.fda.gov. Approval explicitly on the NfL SURROGATE (outcome_match=false vs claimed ALSFRS-R outcome), 'reasonably likely to predict' \u2014 not demonstrate \u2014 clinical benefit; benefit unverified pending ATLAS PMR. source_id is a transparently-disclosed PROXY (the linked VALOR DOI); the FDA regulatory document has no DOI/PMID/NCT.",
+      "n_int": 108,
+      "year": 2023,
+      "finding": "FDA granted ACCELERATED approval based on plasma-NfL reduction (60% ITT / 67% mITT geometric-mean-ratio difference vs placebo, nominal p<0.0001) as a surrogate reasonably likely to predict clinical benefit. Integrated Review states the single pivotal study 'failed to demonstrate a statistically significant treatment difference on the prespecified primary clinical endpoint (ALSFRS-R).' Continued approval contingent on confirmatory verification (ATLAS). Does not establish the claimed clinical-decline benefit."
+    },
+    {
+      "source_id": "NCT04856982",
+      "citation": "ATLAS (Study 233AS303): Tofersen initiated in clinically presymptomatic SOD1 carriers. ClinicalTrials.gov NCT04856982 (Biogen), phase 3, active/not recruiting; primary completion 7 Aug 2027, study completion 30 Apr 2028; has_results=false.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Ongoing FDA/EMA-mandated confirmatory (post-marketing requirement) RCT; no results posted (confirmed has_results=false). Primary endpoint = percentage of participants with emergence of clinically manifest ALS within 24 months in presymptomatic carriers \u2014 not ALSFRS-R slowing in established disease (ALSFRS-R is a secondary endpoint here).",
+      "n_int": 158,
+      "year": 2021,
+      "finding": "Confirmatory trial designated to VERIFY clinical benefit is still ongoing (primary completion Aug 2027, study completion Apr 2028). Primary endpoint = proportion developing clinically manifest ALS in presymptomatic SOD1 carriers. No clinical-outcome results reported; the claim's confirmatory evidence does not yet exist."
+    },
+    {
+      "source_id": "DOI:10.1097/WCO.0000000000001168",
+      "citation": "EMA EPAR / CHMP summary of positive opinion, Qalsody (tofersen): CHMP positive opinion 22 Feb 2024 (EMA/CHMP/50520/2024); marketing authorisation under exceptional circumstances 29 May 2024. [Row source_id is a transparently-disclosed PROXY: Benatar M, Turner MR, Wuu J. Presymptomatic ALS. Curr Opin Neurol 2023;36(4):360-364, PMC10524989 \u2014 the EMA document has no DOI.]",
+      "design": "guideline / regulatory",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "European regulatory source, verified on ema.europa.eu (EPAR + CHMP summary of opinion). Authorisation under 'exceptional circumstances' explicitly because comprehensive efficacy data could not be provided; benefit described as reduced SOD1/NfL and only a 'numerically favourable' ALSFRS-R effect. Post-authorisation obligations include long-term OLE, registries, and ATLAS. Proxy source_id confirmed to resolve to a real Curr Opin Neurol review.",
+      "n_int": 108,
+      "year": 2024,
+      "finding": "EMA authorised tofersen only under exceptional circumstances (MA 29 May 2024), citing that comprehensive efficacy data could not be obtained; the ALSFRS-R effect was characterised as merely numerically favourable (not statistically demonstrated), with confirmatory clinical benefit deferred to post-authorisation studies including ATLAS. Consistent with clinical benefit on the claimed outcome being unproven."
+    }
+  ]
+}

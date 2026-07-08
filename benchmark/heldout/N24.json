@@ -1,0 +1,97 @@
+{
+  "claim_id": "N24",
+  "claim": "Cannabidiol reduces seizure frequency in Dravet syndrome",
+  "domain": "neuro",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Consensus is clearly Supported. Two independent double-blind, placebo-controlled Phase 3 RCTs whose PRIMARY endpoint was exactly the claimed outcome (convulsive seizure frequency) both hit significance: GWPCARE1 (Devinsky, NEJM 2017, N=120, NCT02091375) showed the CBD group's median monthly convulsive seizures fall 12.4->5.9 vs 14.9->14.1 on placebo (adjusted median difference -22.8 percentage points, 95% CI -41.1 to -5.4, P=0.01), and GWPCARE2 (Miller, JAMA Neurology 2020, N=198, NCT02224703) showed placebo-adjusted reductions of 29.8% (P=.01) at 10 mg/kg/d and 25.7% (P=.03) at 20 mg/kg/d. Independent academic meta-analyses confirm robustness (Lattanzi 2020 CNS Drugs: pooled RR 1.69, 95% CI 1.21-2.36 for >=50%-responder; Devinsky 2020 Acta Neurol Scand: efficacious with AND without concomitant clobazam). The FDA approved purified cannabidiol (Epidiolex) for seizures associated with Dravet syndrome in patients >=2 years on 25-Jun-2018 (NDA 210365, granted to GW Research Ltd) \u2014 a formal regulatory endorsement of exactly this claim. Comparative network meta-analysis (Lattanzi 2023 Drugs) ranks CBD BELOW fenfluramine and stiripentol but still efficacious versus placebo \u2014 this affects relative ranking, not the truth of the claim. Direction of effect and outcome-match are unambiguous, so the claim is Supported.",
+  "outcome": "Convulsive (and total) seizure frequency \u2014 reduction from baseline vs placebo",
+  "population": "Children and young adults (age 2-18) with genetically/clinically confirmed Dravet syndrome and drug-resistant convulsive seizures, on >=1 background antiepileptic drug",
+  "provenance": "PubMed get_article_metadata for all 7 PMIDs (titles, article_types, N, primary-endpoint text, retraction check) and ClinicalTrials.gov get_trial_details for NCT02091375 (GWPCARE1) and NCT02224703 (GWPCARE2) confirming PHASE3 design, enrollment, and convulsive-seizure-frequency PRIMARY endpoints. FDA approval (25-Jun-2018, NDA 210365, Dravet+LGS, >=2 years) verified via FDA approval letter and press release. All ids resolve to the cited articles/trials.",
+  "build_confidence": "high",
+  "notes": "Both pivotal RCTs measured the CLAIMED outcome directly (convulsive seizure frequency as PRIMARY endpoint per ClinicalTrials.gov and the published abstracts) \u2014 no surrogate substitution, so outcome_match=true is honest for rows 1 and 2. GWPCARE1 and GWPCARE2 ClinicalTrials.gov records now list Jazz Pharmaceuticals as sponsor (Jazz acquired GW Pharmaceuticals in 2021); original industry sponsor was GW Pharmaceuticals/GW Research. Industry funding noted as integrity consideration but does not undermine consensus given independent FDA review and independent academic meta-analyses (Lattanzi group has no industry sponsorship of the reviews). Row 4 (Acta Neurol Scand) pools 2 Dravet + 2 Lennox-Gastaut RCTs, so its population is mixed (population_match set false) though it remains supportive. Devinsky 2018 Neurology (PMID 29540584) is a real dose-ranging SAFETY/PK trial (N=34, Class I safety evidence, primary endpoint safety/PK not seizure frequency) and is deliberately EXCLUDED from the efficacy rows to avoid overcounting. No article in the corpus is a Retracted Publication.",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Cannabidiol (Epidiolex) significantly reduces convulsive seizure frequency in Dravet syndrome. In the pivotal NEJM 2017 trial (Devinsky et al., N=120), CBD 20 mg/kg/day cut median monthly convulsive seizures from 12.4 to 5.9 versus essentially no change on placebo (14.9 to 14.1; adjusted difference -22.8 percentage points, P=0.01), and a second randomized trial (GWPCARE2, JAMA Neurology 2020) confirmed a ~30% placebo-adjusted reduction at 10 mg/kg/day. On the strength of these trials the FDA approved cannabidiol for Dravet syndrome in June 2018. It is an established, evidence-based adjunctive therapy, though it carries risks of somnolence, decreased appetite, elevated liver enzymes, and a drug interaction with clobazam."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:28538134",
+      "citation": "Devinsky O, et al. Trial of Cannabidiol for Drug-Resistant Seizures in the Dravet Syndrome. N Engl J Med. 2017;376(21):2011-2020. doi:10.1056/NEJMoa1611618 (NCT02091375, GWPCARE1)",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind placebo-controlled Phase 3 (confirmed PHASE3 on ClinicalTrials.gov); funded by GW Pharmaceuticals (industry) \u2014 peer-reviewed in NEJM and a basis for FDA approval. Not retracted.",
+      "n_int": 61,
+      "year": 2017,
+      "finding": "Primary endpoint = change in convulsive-seizure frequency. Median monthly convulsive seizures fell 12.4->5.9 on CBD 20 mg/kg/d vs 14.9->14.1 on placebo; adjusted median difference -22.8 percentage points (95% CI -41.1 to -5.4; P=0.01). >=50% responder rate 43% vs 27% (OR 2.00; P=0.08). N=120 total (60 CBD / 60 placebo); n_int reflects the CBD arm."
+    },
+    {
+      "source_id": "PMID:32119035",
+      "citation": "Miller I, et al. Dose-Ranging Effect of Adjunctive Oral Cannabidiol vs Placebo on Convulsive Seizure Frequency in Dravet Syndrome (GWPCARE2): A Randomized Clinical Trial. JAMA Neurol. 2020;77(5):613-621. doi:10.1001/jamaneurol.2020.0073 (NCT02224703)",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Second independent pivotal Phase 3 RCT (confirmed PHASE3 on ClinicalTrials.gov); industry-funded (GW Research/Greenwich Biosciences) but pre-registered, ITT-analyzed, peer-reviewed. Not retracted.",
+      "n_int": 133,
+      "year": 2020,
+      "finding": "Primary endpoint = change from baseline in convulsive seizure frequency. Placebo-adjusted reduction 29.8% (95% CI 8.4-46.2; P=.01) for 10 mg/kg/d and 25.7% (95% CI 2.9-43.2; P=.03) for 20 mg/kg/d. N=198 (66 CBD10 / 67 CBD20 / 65 placebo); n_int reflects the two CBD arms combined. 10 mg/kg/d had better tolerability."
+    },
+    {
+      "source_id": "PMID:32040850",
+      "citation": "Lattanzi S, et al. Adjunctive Cannabidiol in Patients with Dravet Syndrome: A Systematic Review and Meta-Analysis of Efficacy and Safety. CNS Drugs. 2020;34(3):229-241. doi:10.1007/s40263-020-00708-6",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent academic systematic review + meta-analysis (no industry sponsorship of the review); pooled 3 placebo-controlled Dravet RCTs. Not retracted.",
+      "n_int": 228,
+      "year": 2020,
+      "finding": "Pooled 3 RCTs (359 participants; 228 CBD, 131 placebo). Pooled RR for >=50% reduction in convulsive seizure frequency = 1.69 (95% CI 1.21-2.36; P=0.002), favoring CBD. Higher withdrawal (RR 3.12) and AE profile with CBD (somnolence, decreased appetite, diarrhea, raised aminotransferases)."
+    },
+    {
+      "source_id": "PMID:32592183",
+      "citation": "Devinsky O, et al. Cannabidiol efficacy independent of clobazam: Meta-analysis of four randomized controlled trials. Acta Neurol Scand. 2020;142(6):531-540. doi:10.1111/ane.13305",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Author overlap with GW/Greenwich (industry authors). Addresses the key confound that CBD's benefit might be a clobazam drug-drug-interaction artifact. population_match=false because the pool mixes 2 Dravet AND 2 Lennox-Gastaut RCTs (not a pure Dravet population). Not retracted.",
+      "n_int": 0,
+      "year": 2020,
+      "finding": "Stratified meta-analysis of 4 RCTs (2 Dravet, 2 Lennox-Gastaut) shows CBD reduces seizure frequency vs placebo both WITH clobazam (treatment ratio 0.59, 95% CI 0.52-0.68, P<.0001) and WITHOUT clobazam (0.85, 95% CI 0.73-0.98, P=.0226); 50% responder OR 2.51 (with CLB) and 2.40 (without CLB). Effect is not solely a clobazam interaction."
+    },
+    {
+      "source_id": "PMID:37695433",
+      "citation": "Lattanzi S, et al. Pharmacotherapy for Dravet Syndrome: A Systematic Review and Network Meta-Analysis of Randomized Controlled Trials. Drugs. 2023;83(15):1409-1424. doi:10.1007/s40265-023-01936-y",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent network meta-analysis; provides comparative-effectiveness context \u2014 CBD is efficacious but ranks below fenfluramine and stiripentol on the claimed outcome. Does not contradict the claim vs placebo. Not retracted.",
+      "n_int": 228,
+      "year": 2023,
+      "finding": "NMA of 8 placebo-controlled RCTs (680 patients; CBD arm n=228). Pharmaceutical-grade CBD is efficacious for >=50% convulsive-seizure response but had a LOWER response rate than fenfluramine (OR 0.20, 95% CI 0.07-0.54); stiripentol had a HIGHER response rate than CBD (OR 14.07, 95% CI 2.57-76.87). CBD superior to placebo; comparatively less effective than the other two agents."
+    },
+    {
+      "source_id": "PMID:30194563",
+      "citation": "Gaston TE, Szaflarski JP. Cannabis for the Treatment of Epilepsy: an Update. Curr Neurol Neurosci Rep. 2018;18(11):73. doi:10.1007/s11910-018-0882-y",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Narrative expert review (PubMed type 'Review') used as the regulatory-action row documenting the June 2018 FDA approval of purified CBD for Dravet syndrome. FDA action independently confirmed via NDA 210365 approval letter (25-Jun-2018, >=2 years, GW Research Ltd). Not a primary guideline document, but content is accurate. Not retracted.",
+      "n_int": 0,
+      "year": 2018,
+      "finding": "Purified oral CBD (Epidiolex) received FDA approval (25-Jun-2018, NDA 210365) for seizures associated with Dravet syndrome and Lennox-Gastaut syndrome in patients >=2 years, based on RCTs showing significant convulsive-seizure-frequency reduction vs placebo. Main AEs diarrhea, sedation (worse with clobazam), transaminase elevation (worse with valproate); notable CBD-clobazam CYP2C19 interaction increasing N-desmethylclobazam."
+    }
+  ]
+}

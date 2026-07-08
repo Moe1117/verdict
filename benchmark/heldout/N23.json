@@ -1,0 +1,96 @@
+{
+  "claim_id": "N23",
+  "claim": "Senolytic therapy (dasatinib plus quercetin) improves physical function in older adults",
+  "domain": "repurposing",
+  "expected_verdict": "Insufficient",
+  "gold_rationale": "The claim that D+Q senolytic therapy improves physical function in older adults rests almost entirely on small, uncontrolled pilot data. The only positive functional signal comes from the first-in-human OPEN-LABEL IPF pilot (n=14, Justice 2019, PMID 30616998), where 6-min walk, gait speed and chair-stand time improved (p<.05) \u2014 but with no control group, no blinding, and a feasibility (not efficacy) primary endpoint, this cannot support an efficacy claim. When the same group ran a placebo-controlled randomized pilot in IPF (n=12, Nambiar 2023, PMID 36857968), frailty/physical function 'did not appear to differ meaningfully between groups' (though underpowered). The largest RCT to date (n=60 postmenopausal women, Farr 2024, PMID 38956196) MISSED its primary endpoint (bone resorption marker CTx, P=0.611) \u2014 and used a bone-turnover surrogate, not physical function. Other cited trials are tiny single-arm pilots: diabetic kidney disease (n=9, Hickson 2019, PMID 31542391) measured senescent-cell burden, not function; Alzheimer's SToMP-AD (n=5, Gonzales 2022, PMID 35098970) was PK/feasibility; STAMINA (n=12, Millar 2025, DOI 10.1016/j.ebiom.2025.105612) showed only non-significant mobility changes and explicitly lacked a control group. No adequately-powered, placebo-controlled RCT has demonstrated improved physical function; the dedicated Phase 2 RCT with 4-m gait speed as an outcome (IPACE-HIV, NCT07144293, n=82) has not reported. This is a textbook 'absence of evidence' \u2014 promising mechanism, safe in pilots, but efficacy on physical function remains unproven. Consensus: Insufficient.",
+  "outcome": "Physical function (6-min walk distance, 4-m gait speed, chair-stand time, SPPB) and senescent-cell burden",
+  "population": "Older adults (typically \u226550\u201365 y) with age-related disease (IPF, diabetic kidney disease, MCI/slow gait, postmenopausal osteopenia)",
+  "provenance": "PubMed (verified PMIDs + DOIs) and ClinicalTrials.gov (verified NCT records with design/status/enrollment). All rows independently re-verified for title, design, N, and endpoint type against source.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Dasatinib plus quercetin (D+Q) is a senolytic combination that clears senescent cells, and clinical studies support improved physical function in older adults. In the first human senolytic trial in idiopathic pulmonary fibrosis, D+Q significantly and clinically-meaningfully improved 6-minute walk distance, gait speed, and chair-stand time. Senolytics reduce the senescence-associated secretory phenotype (SASP) that drives age-related inflammation and functional decline, and additional trials in diabetic kidney disease, Alzheimer's risk, and postmenopausal women show reductions in senescent-cell burden. D+Q is generally well tolerated with intermittent 'hit-and-run' dosing, making it a promising intervention to improve mobility and physical function in aging."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:30616998",
+      "citation": "Justice JN, et al. Senolytics in idiopathic pulmonary fibrosis: results from a first-in-human, open-label, pilot study. EBioMedicine. 2019;40:554-563. DOI:10.1016/j.ebiom.2018.12.052 (NCT02874989).",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Legitimate first-in-human pilot; primary endpoint was feasibility (retention/completion), NOT efficacy. Physical-function gains are secondary, open-label, uncontrolled, unblinded, single-arm, n=14 \u2014 cannot establish efficacy. Interventional single-arm trial; 'prospective cohort' label reflects its uncontrolled non-randomized nature.",
+      "n_int": 14,
+      "year": 2019,
+      "finding": "Open-label single-arm pilot in IPF (n=14): 6-min walk distance, 4-m gait speed, and chair-stand time significantly and clinically-meaningfully improved (p<.05). No control group; feasibility was the primary endpoint. Authors call only for larger RCTs."
+    },
+    {
+      "source_id": "PMID:36857968",
+      "citation": "Nambiar A, et al. Senolytics dasatinib and quercetin in IPF: a phase I, single-blind, single-center, randomized, placebo-controlled pilot trial on feasibility and tolerability. EBioMedicine. 2023;90:104481. DOI:10.1016/j.ebiom.2023.104481 (NCT02874989).",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Placebo-controlled confirmatory pilot from the same group (6 D+Q vs 6 placebo); explicitly under-powered for efficacy but is the only randomized IPF functional comparison. PubMed types: Randomized Controlled Trial, Clinical Trial Phase I.",
+      "n_int": 12,
+      "year": 2023,
+      "finding": "Randomized placebo-controlled IPF pilot (n=12, 6 D+Q vs 6 placebo): frailty, pulmonary and physical function 'do not appear to differ meaningfully between groups.' Feasible and tolerable, but no functional benefit vs placebo. Directly tempers the open-label signal."
+    },
+    {
+      "source_id": "PMID:38956196",
+      "citation": "Farr JN, et al. Effects of intermittent senolytic therapy on bone metabolism in postmenopausal women: a phase 2 randomized controlled trial. Nat Med. 2024;30(9):2605-2612. DOI:10.1038/s41591-024-03096-2 (NCT04313634).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Largest D+Q RCT (n=60; ~30/arm). Primary endpoint is a bone-turnover SURROGATE (CTx), not physical function; endpoint was NEGATIVE (P=0.611). Positive results are exploratory high-senescent-cell-burden subgroup only. PubMed types: RCT, Clinical Trial Phase II.",
+      "n_int": 30,
+      "year": 2024,
+      "finding": "Phase 2 RCT (n=60 postmenopausal women): primary endpoint (bone resorption marker CTx) did NOT differ from control (median -4.1% vs -7.7%, P=0.611). Did not measure physical function. Only exploratory high-burden subgroup showed skeletal benefit. No serious AEs."
+    },
+    {
+      "source_id": "PMID:31542391",
+      "citation": "Hickson LJ, et al. Senolytics decrease senescent cells in humans: preliminary report from a clinical trial of D+Q in individuals with diabetic kidney disease. EBioMedicine. 2019;47:446-456. DOI:10.1016/j.ebiom.2019.08.069 (NCT02848131).",
+      "design": "prospective cohort",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Open-label Phase 1 pilot, n=9, no control. Measured senescent-cell burden (surrogate), not physical function \u2014 establishes target engagement only. Interventional single-arm; 'prospective cohort' label reflects uncontrolled design.",
+      "n_int": 9,
+      "year": 2019,
+      "finding": "Open-label pilot (n=9, diabetic kidney disease): 3 days of D+Q reduced adipose p16/p21+ senescent cells, senescence-associated \u03b2-gal, and circulating SASP factors (IL-1\u03b1, IL-6, MMP-9/-12) within 11 days. Demonstrates senescent-cell clearance but does NOT assess physical function."
+    },
+    {
+      "source_id": "DOI:10.1016/j.ebiom.2025.105612",
+      "citation": "Millar CL, et al. A pilot study of senolytics to improve cognition and mobility in older adults at risk for Alzheimer's disease (STAMINA). EBioMedicine. 2025;113:105612. DOI:10.1016/j.ebiom.2025.105612 (PMID:40248131; NCT05422885).",
+      "design": "prospective cohort",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Single-arm, open-label, pre-post pilot (n=12), no control group (authors state this explicitly). Mobility outcomes non-significant. Hypothesis-generating only. Interventional single-arm; 'prospective cohort' label reflects uncontrolled design. Citation volume corrected 112->113.",
+      "n_int": 12,
+      "year": 2025,
+      "finding": "Single-arm open-label pilot (n=12, slow gait + MCI): dual-task gait speed (+0.03 m/s, 95%CI -0.03 to 0.07) and stride-length changes were non-significant. MoCA rose significantly only in lowest-baseline subgroup. Authors: 'there was not an appropriate control group... preliminary.'"
+    },
+    {
+      "source_id": "NCT07144293",
+      "citation": "IPACE-HIV: Improving Physical Ability and Cellular Senescence Elimination in HIV. NIAID/NIA. Phase 2 randomized double-blind placebo-controlled trial, n=82, primary endpoints include change in 4-m gait speed. ClinicalTrials.gov NCT07144293.",
+      "design": "guideline / regulatory",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Registry record for the first adequately-designed RCT with physical function (4-m gait speed) as a primary outcome. ACTIVE_NOT_RECRUITING, primary completion 2026-11-29, has_results=false \u2014 NO RESULTS YET. Represents the current evidence GAP. Design enum lacks an ongoing-trial option; labeled 'guideline / regulatory' as a registry placeholder.",
+      "n_int": 41,
+      "year": 2025,
+      "finding": "Ongoing Phase 2 double-blind placebo-controlled RCT (n=82, frail/prefrail older adults \u226550y with HIV) explicitly testing D+Q on 4-m gait speed (primary), chair stands, and SPPB (secondary). Not yet reported \u2014 the definitive functional efficacy question remains open, confirming 'Insufficient.'"
+    }
+  ]
+}

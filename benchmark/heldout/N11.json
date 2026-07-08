@@ -1,0 +1,84 @@
+{
+  "claim_id": "N11",
+  "claim": "Adding atezolizumab to nab-paclitaxel improves survival in PD-L1-positive metastatic triple-negative breast cancer",
+  "domain": "oncology",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The evidence is genuinely conflicting and the regulatory verdict is negative, so consensus is Contested (not Supported). The pivotal IMpassion130 trial (Schmid, NEJM 2018; final OS Emens, Ann Oncol 2021) showed a clinically meaningful OS benefit in the PD-L1 IC-positive subgroup (final median OS 25.4 vs 17.9 mo, HR 0.67, 95% CI 0.53-0.86), BUT this was never a statistically valid positive result: because ITT OS was not significant (HR 0.87, P=0.077), the prespecified hierarchical testing procedure barred formal testing of OS in the PD-L1+ subgroup, making the 0.67 HR exploratory/hypothesis-generating only. The confirmatory postmarketing trial IMpassion131 (Miles, Ann Oncol 2021), which paired atezolizumab with paclitaxel rather than nab-paclitaxel, was flatly negative \u2014 no PFS benefit in PD-L1+ (HR 0.82, P=0.20) and OS numerically favoring the control arm (22.1 vs 28.3 mo, HR 1.11). On that basis Genentech/Roche voluntarily withdrew the US accelerated approval on 27 Aug 2021 (approval had rested on IMpassion130 PFS, contingent on IMpassion131). A same-class trial, KEYNOTE-355 (Cortes, NEJM 2022), did show a formally significant OS benefit for pembrolizumab+chemotherapy in PD-L1 CPS>=10 mTNBC (HR 0.73), which keeps the underlying biological hypothesis alive and is why the field remains divided rather than settling on Not Supported. The net position: a plausible, guideline-cited signal for the specific atezolizumab+nab-paclitaxel regimen that never met its own statistical bar, was contradicted by its confirmatory trial, and lost its US indication \u2014 the textbook definition of Contested.",
+  "outcome": "overall survival",
+  "population": "PD-L1-positive metastatic triple-negative breast cancer",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. In the pivotal phase 3 IMpassion130 trial, adding atezolizumab to nab-paclitaxel as first-line therapy for metastatic triple-negative breast cancer produced a clinically meaningful overall survival benefit in the PD-L1-positive subgroup, with median OS improving from about 18 months to about 25 months (HR ~0.62-0.67). PD-L1 acts as a predictive biomarker, and the combination was the first cancer immunotherapy regimen approved in this setting. So for PD-L1-positive mTNBC, atezolizumab plus nab-paclitaxel improves survival."
+  },
+  "provenance": "PubMed (get_article_metadata) + ClinicalTrials.gov (get_trial_details) + Genentech/Roche/FDA/ASCO press releases via Exa web search; all 4 PMIDs and NCT independently re-verified to resolve to the exact articles/trial, with every HR/CI/median/P-value/N cross-checked verbatim against the source abstracts and article types confirmed free of any 'Retracted Publication'",
+  "build_confidence": "high",
+  "notes": "CRITICAL nuance driving 'Contested': OS is the CLAIMED endpoint and IMpassion130 measured it directly (co-primary), so outcome_match=true for the IMpassion130 rows \u2014 but the PD-L1+ OS result was EXPLORATORY/not-formally-tested because ITT OS failed (abstract states verbatim 'the OS benefit in the ITT population was not statistically significant, precluding formal testing'), so it does NOT constitute proven OS benefit. IMpassion131 used paclitaxel (NOT nab-paclitaxel) so it is a different regimen than the exact claim (population_match=false) yet is the designated confirmatory trial (NCT03125902) and was negative on OS \u2014 hence direction -1. KEYNOTE-355 is a DIFFERENT drug (pembrolizumab) so population_match=false; included as same-class corroboration. FDA withdrawal row = regulatory action (design 'guideline / regulatory'), rests on PFS surrogate so outcome_match=false. No retractions detected (verified via PubMed article_types); IMpassion130 papers have data corrigenda, not retractions \u2014 integrity_ok=true. VERIFICATION NOTE: adversarial re-check found zero hallucinated IDs, zero wrong Ns, zero wrong directions, zero mislabeled designs, zero fabricated retractions; all numbers match source abstracts exactly.",
+  "rows": [
+    {
+      "source_id": "PMID:30345906",
+      "citation": "Schmid P, et al. Atezolizumab and Nab-Paclitaxel in Advanced Triple-Negative Breast Cancer (IMpassion130). N Engl J Med. 2018;379(22):2108-2121. DOI:10.1056/NEJMoa1809615",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal phase 3 RCT (PubMed article types confirm 'Clinical Trial, Phase III; Randomized Controlled Trial'; NOT retracted). OS was a co-primary endpoint tested hierarchically (ITT first, then PD-L1+ only if ITT significant). A corrigendum was later published (data correction, not retraction). Key caveat: PD-L1+ OS was exploratory only because ITT OS was non-significant per the hierarchical testing plan.",
+      "n_int": 451,
+      "year": 2018,
+      "finding": "First-line atezolizumab + nab-paclitaxel vs placebo + nab-paclitaxel in metastatic TNBC (each arm n=451). ITT OS HR 0.84 (95% CI 0.69-1.02; P=0.08, NOT significant) [verbatim from abstract]. In the PD-L1-positive subgroup, median OS 25.0 vs 15.5 mo (HR 0.62; 95% CI 0.45-0.86) \u2014 clinically meaningful but exploratory/not formally tested. PFS significantly improved (ITT HR 0.80; PD-L1+ HR 0.62, 95% CI 0.49-0.78, P<0.001)."
+    },
+    {
+      "source_id": "PMID:34272041",
+      "citation": "Emens LA, et al. First-line atezolizumab plus nab-paclitaxel for unresectable, locally advanced, or metastatic TNBC: IMpassion130 final overall survival analysis. Ann Oncol. 2021;32(8):983-993. DOI:10.1016/j.annonc.2021.05.355",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified FINAL OS analysis of IMpassion130 (666/902 = 73.8% deaths at cutoff; PubMed types confirm RCT, NOT retracted). A corrigendum exists (data correction, not retraction). The PD-L1+ OS HR 0.67 remained EXPLORATORY \u2014 abstract states 'the OS benefit in the ITT population was not statistically significant, precluding formal testing'.",
+      "n_int": 451,
+      "year": 2021,
+      "finding": "Final OS: ITT median 21.0 vs 18.7 mo (HR 0.87; 95% CI 0.75-1.02; P=0.077, NOT significant) [verbatim]. PD-L1 IC-positive subgroup median OS 25.4 vs 17.9 mo (HR 0.67; 95% CI 0.53-0.86; n=185 vs 184), a ~7.5-month improvement described as clinically meaningful but statistically not formally tested."
+    },
+    {
+      "source_id": "PMID:34219000",
+      "citation": "Miles D, et al. Primary results from IMpassion131, a double-blind, placebo-controlled, randomised phase III trial of first-line paclitaxel with or without atezolizumab for unresectable locally advanced/metastatic TNBC. Ann Oncol. 2021;32(8):994-1004. DOI:10.1016/j.annonc.2021.05.801",
+      "design": "rct",
+      "direction": -1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Designated confirmatory postmarketing trial (NCT03125902; PubMed types confirm 'Clinical Trial, Phase III; Randomized Controlled Trial', NOT retracted). Uses PACLITAXEL, not nab-paclitaxel, so it tests a different chemotherapy backbone than the exact claim (population_match=false). 651 randomised 2:1 (atezolizumab arm ~431). Negative on both primary PFS and secondary/final OS.",
+      "n_int": 431,
+      "year": 2021,
+      "finding": "Atezolizumab + paclitaxel vs placebo + paclitaxel. In PD-L1-positive population, no PFS benefit (median 6.0 vs 5.7 mo; HR 0.82; 95% CI 0.60-1.12; P=0.20) [verbatim]. Final OS numerically FAVORED placebo: median 22.1 vs 28.3 mo (HR 1.11; 95% CI 0.76-1.64) [verbatim]. Directly contradicts an OS benefit for atezolizumab+taxane in PD-L1+ mTNBC."
+    },
+    {
+      "source_id": "NCT03125902",
+      "citation": "Genentech/Roche. Voluntary withdrawal of US accelerated approval for Tecentriq (atezolizumab) + nab-paclitaxel in PD-L1-positive mTNBC. 27 Aug 2021 (FDA ODAC 27 Apr 2021 voted 7-2 to retain; withdrawn thereafter). IMpassion131 = NCT03125902 (confirmatory PMR).",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory action, not a survival study; outcome_match=false because approval rested on PFS (a surrogate). Accelerated approval (Mar 2019, first immunotherapy in this setting) rested on IMpassion130 PFS, contingent on confirmatory IMpassion131, which failed its primary PFS endpoint. ODAC voted 7-2 (27 Apr 2021) to RETAIN, but Roche/Genentech ultimately withdrew 27 Aug 2021 primarily due to the changed treatment landscape; per Genentech DHCP letter 'no new data on safety or efficacy informed this decision'. All facts confirmed against Genentech/Roche/FDA/ASCO releases.",
+      "n_int": 0,
+      "year": 2021,
+      "finding": "The US indication for atezolizumab + nab-paclitaxel in PD-L1-positive mTNBC was voluntarily withdrawn on 27 Aug 2021 following consultation with FDA, after the confirmatory IMpassion131 trial did not meet its primary PFS endpoint and given the changed mTNBC treatment landscape. The regimen no longer holds an FDA-approved mTNBC indication in the US."
+    },
+    {
+      "source_id": "PMID:35857659",
+      "citation": "Cortes J, et al. Pembrolizumab plus Chemotherapy in Advanced Triple-Negative Breast Cancer (KEYNOTE-355, final OS). N Engl J Med. 2022;387(3):217-226. DOI:10.1056/NEJMoa2202809",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Different drug (pembrolizumab, anti-PD-1) and PD-L1 assay/threshold (CPS>=10 by 22C3), not atezolizumab (anti-PD-L1, SP142 IC>=1%). PubMed types confirm 'Clinical Trial, Phase III; Randomized Controlled Trial', NOT retracted. Included as same-CLASS corroboration of the checkpoint-inhibitor+chemo hypothesis in PD-L1-high mTNBC, not a direct test of the atezolizumab+nab-paclitaxel claim (population_match=false).",
+      "n_int": 566,
+      "year": 2022,
+      "finding": "Pembrolizumab + chemotherapy (nab-paclitaxel/paclitaxel/gemcitabine-carboplatin; pembro arm n=566 of 847) vs placebo + chemotherapy. In PD-L1 CPS>=10, median OS 23.0 vs 16.1 mo (HR 0.73; 95% CI 0.55-0.95; P=0.0185, FORMALLY SIGNIFICANT) [verbatim]. CPS>=1 (HR 0.86) and ITT (HR 0.89) not significant. Demonstrates a real OS benefit for the immunotherapy+chemo class in biomarker-selected mTNBC, keeping the biological hypothesis viable."
+    }
+  ]
+}

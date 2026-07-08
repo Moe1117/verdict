@@ -1,0 +1,97 @@
+{
+  "claim_id": "N14",
+  "claim": "Ocrelizumab reduces relapse rate in relapsing multiple sclerosis",
+  "domain": "neuro",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Consensus is clearly Supported. The pivotal identical phase 3 trials OPERA I and OPERA II (Hauser, NEJM 2017; NCT01247324/NCT01412333) had annualized relapse rate (ARR) as the PRIMARY endpoint and showed ocrelizumab 0.16 vs interferon beta-1a 0.29 in both trials (46% and 47% relative reduction, P<0.001) \u2014 a direct, active-comparator demonstration on the exact claimed outcome. The earlier phase 2 trial (Kappos, Lancet 2011; NCT00676715) had an MRI-lesion (Gd-enhancing T1) primary endpoint with concordant relapse reductions as a secondary outcome. Network meta-analyses (Xu 2018; Samjoo 2021) confirm ocrelizumab produces a statistically significant ARR reduction versus placebo/comparators and classify it as moderate-to-high efficacy. FDA approved ocrelizumab (Ocrevus) in March 2017 for relapsing forms of MS on the strength of OPERA I/II. The one non-supporting-looking row (ORATORIO) is a population mismatch (primary progressive MS, disability endpoint) and does not bear on the relapsing-MS ARR claim. Superior active-comparator RCT evidence on the primary endpoint + regulatory approval + concordant meta-analyses = Supported.",
+  "outcome": "annualized relapse rate",
+  "population": "relapsing multiple sclerosis",
+  "provenance": "PubMed (pubmed MCP, get_article_metadata) + ClinicalTrials.gov (get_trial_details) + FDA ODMemo/Genentech press release (Exa). All 5 PMIDs verified: exact titles, DOIs, article_types, no retractions. NCT01247324/NCT01412333 confirm ARR as PRIMARY endpoint (enroll 821/835); NCT00676715 confirms Gd-lesion PRIMARY with ARR secondary; ORATORIO/28002688 confirms PPMS/disability primary. OPERA ARR 0.16 vs 0.29 confirmed from NEJM abstract; FDA Mar-28-2017 approval-on-OPERA confirmed.",
+  "notes": "OPERA I/II are the decisive rows: ARR is the declared primary endpoint (outcome_match true, verified on both NCTs) in relapsing MS (population_match true), active-comparator superiority, P<0.001. Phase 2 primary endpoint was an MRI surrogate (Gd-enhancing T1 lesions per NCT00676715), so outcome_match false \u2014 correctly flagged. ORATORIO included as the population boundary (PPMS, disability not ARR) \u2014 direction 0. Two NMAs give consistent ARR-reduction direction. FDA regulatory row anchored to OPERA program. n_int=1656 in Rows 1/6 is the pooled OPERA I+II total enrollment, not an intervention-arm count (noted in issues).",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Ocrelizumab (Ocrevus) significantly reduces the annualized relapse rate in relapsing multiple sclerosis. In the pivotal OPERA I and OPERA II phase 3 trials (Hauser et al., NEJM 2017), ocrelizumab lowered the annualized relapse rate to about 0.16 versus 0.29 for interferon beta-1a \u2014 roughly a 46-47% relative reduction (P<0.001) \u2014 with the annualized relapse rate as the primary endpoint. It also reduced MRI gadolinium-enhancing lesions and confirmed disability progression. On this basis the FDA approved ocrelizumab in March 2017 for relapsing forms of MS. It is considered a high-efficacy disease-modifying therapy."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:28002679",
+      "citation": "Hauser SL, et al. Ocrelizumab versus Interferon Beta-1a in Relapsing Multiple Sclerosis (OPERA I & II). N Engl J Med. 2017;376(3):221-234. DOI:10.1056/NEJMoa1601277",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Two identical phase 3 pivotal RCTs; industry-funded (Roche/Genentech) but design and reporting robust; ARR is the pre-specified PRIMARY endpoint (confirmed on NCT01247324 and NCT01412333). article_types confirm 'Clinical Trial, Phase III','Randomized Controlled Trial'; no retraction. n_int=1656 is the pooled OPERA I+II total enrollment (821+835), not an ocrelizumab-arm count.",
+      "n_int": 1656,
+      "year": 2017,
+      "finding": "Annualized relapse rate 0.16 (ocrelizumab) vs 0.29 (IFN beta-1a) in both trials \u2014 46% and 47% relative reduction, P<0.001. Direct active-comparator superiority on the exact claimed outcome. NCT01247324/NCT01412333."
+    },
+    {
+      "source_id": "PMID:22047971",
+      "citation": "Kappos L, et al. Ocrelizumab in relapsing-remitting multiple sclerosis: a phase 2, randomised, placebo-controlled, multicentre trial. Lancet. 2011;378(9805):1779-87. DOI:10.1016/S0140-6736(11)61649-8",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 2 dose-finding RCT (confirmed 'Clinical Trial, Phase II'); primary endpoint was gadolinium-enhancing T1 lesions (MRI surrogate) per NCT00676715, not ARR; relapse outcomes were secondary/concordant. No retraction.",
+      "n_int": 218,
+      "year": 2011,
+      "finding": "Primary endpoint (Gd-enhancing T1 lesions) reduced vs placebo (P<0.0001); relapse-related outcomes (secondary) also improved, establishing the anti-CD20 rationale later confirmed by OPERA. NCT00676715."
+    },
+    {
+      "source_id": "PMID:30195200",
+      "citation": "Xu X, et al. Efficacy and safety of monoclonal antibody therapies for relapsing remitting MS: a network meta-analysis. Mult Scler Relat Disord. 2018;25:322-328. DOI:10.1016/j.msard.2018.08.026",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Confirmed 'Network Meta-Analysis' article type. NMA of 14 RCTs (9412 patients); ARR is the primary efficacy outcome. No retraction.",
+      "n_int": 9412,
+      "year": 2018,
+      "finding": "All mAb regimens including ocrelizumab produced significant reductions in annualized relapse rate versus comparator; confirms consistent direction of ARR benefit."
+    },
+    {
+      "source_id": "PMID:33620251",
+      "citation": "Samjoo IA, et al. Efficacy classification of modern therapies in multiple sclerosis (network meta-analysis). J Comp Eff Res. 2021;10(6):495-507. DOI:10.2217/cer-2020-0267",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Confirmed 'Network Meta-Analysis' article type. ABN-guideline classification on ARR vs placebo; EVERSANA/industry-affiliated authors yet still classifies ocrelizumab as moderate-to-high efficacy \u2014 no bias against the claim. No retraction.",
+      "n_int": 0,
+      "year": 2021,
+      "finding": "Classifies ocrelizumab as moderate-to-high efficacy for relapse reduction based on ARR network meta-analysis versus placebo; supports ARR benefit."
+    },
+    {
+      "source_id": "PMID:28002688",
+      "citation": "Montalban X, et al. Ocrelizumab versus Placebo in Primary Progressive Multiple Sclerosis (ORATORIO). N Engl J Med. 2017;376(3):209-220. DOI:10.1056/NEJMoa1606468",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Population is primary progressive MS (not relapsing); primary endpoint was 12-week confirmed disability progression, not ARR (confirmed via abstract and FDA review of study WA25046, 732 randomized 2:1). Included as population/outcome boundary, not as evidence on the relapsing-MS ARR claim. No retraction.",
+      "n_int": 488,
+      "year": 2017,
+      "finding": "In PPMS, ocrelizumab slowed 12-week confirmed disability progression (32.9% vs 39.3%, HR 0.76) vs placebo; does not measure the claimed relapsing-MS ARR outcome (direction 0 on the claim). NCT01194570."
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMoa1601277",
+      "citation": "US FDA approval of ocrelizumab (Ocrevus), March 28, 2017 \u2014 for relapsing forms of MS, based on OPERA I & II (Hauser NEJM 2017). Regulatory action; source anchored to the pivotal-trial DOI and confirmed via FDA ODMemo 761053Orig1s000 and Genentech press release.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "FDA marketing approval for relapsing MS predicated on the OPERA ARR primary-endpoint superiority; FDA review states ~50% ARR reduction vs Rebif. Approval date Mar 28 2017 verified. Anchored to the pivotal-trial DOI as the checkable source; n_int=1656 mirrors the pooled OPERA total.",
+      "n_int": 1656,
+      "year": 2017,
+      "finding": "FDA approved ocrelizumab for relapsing MS (and PPMS) on Mar 28 2017 on the strength of OPERA I/II ARR reduction \u2014 regulatory consensus that the drug reduces relapse rate."
+    }
+  ]
+}

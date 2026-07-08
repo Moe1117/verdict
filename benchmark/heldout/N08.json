@@ -1,0 +1,97 @@
+{
+  "claim_id": "N08",
+  "claim": "Sotorasib improves overall survival in previously-treated KRAS G12C-mutated non-small-cell lung cancer",
+  "domain": "oncology",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The only randomized head-to-head evidence \u2014 the pivotal Phase 3 confirmatory trial CodeBreaK 200 (de Langen, Lancet 2023, NCT04303780) \u2014 showed sotorasib improved the PRIMARY endpoint progression-free survival (HR 0.66, p=0.0017) but did NOT improve overall survival: median OS 10.6 vs 11.3 months, HR 1.01 (95% CI 0.77-1.33), numerically favoring docetaxel (p reported non-significant, ~0.53). OS was a pre-specified secondary endpoint and the trial was deliberately underpowered for it (enrollment ~345, docetaxel-to-sotorasib crossover permitted, ~26% crossed over). CodeBreaK 100 (Phase 1/2, single-arm) reported median OS 12.5 months but has no comparator, so it cannot establish an OS improvement. In October 2023 FDA's ODAC voted 10-2 that PFS per BICR could not be reliably interpreted, and the FDA briefing (media/172756) explicitly noted 'No OS Difference (HR 1.01)'; in December 2023 FDA issued a Complete Response Letter denying full approval and required a new confirmatory trial (due by Feb 2028). The claimed outcome (OS) is measured only by a surrogate (PFS) in the positive trial; on OS itself the randomized evidence is null. Consensus: Not Supported.",
+  "outcome": "overall survival",
+  "population": "pretreated KRAS G12C-mutated advanced/metastatic NSCLC",
+  "provenance": "PubMed (bio-research MCP) + ClinicalTrials.gov (NCT04303780) + FDA ODAC briefing (media/172756) + Amgen regulatory release (Dec 26 2023) + ASCO Post/CADTH; all PMIDs/DOIs/NCT independently re-verified in-session.",
+  "build_confidence": "high",
+  "notes": "CodeBreaK 200 is the crux: positive on surrogate (PFS HR 0.66), null on the claimed outcome (OS HR 1.01 numerically favoring docetaxel). FDA CRL + ODAC 10-2 vote reinforce regulatory-consensus 'Not Supported' on OS. Sotorasib remains marketed under ACCELERATED approval based on ORR/DOR \u2014 not on any OS benefit. Adversarial re-check corrected fabricated author + wrong pages in the review row (real article = Zhang & Nagasaka, LCTT 2021;12:115-122, PMID 34675734, NOT Nakajima 105-110) and a wrong journal volume in the PRO row (196 not 191). No retractions present. Baseline plain-LLM answer says 'Yes' (drug approved, PFS improved) \u2014 a classic surrogate-vs-outcome trap.",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Sotorasib (Lumakras) is an FDA-approved KRAS G12C inhibitor for previously-treated KRAS G12C-mutated NSCLC. In the Phase 3 CodeBreaK 200 trial it significantly improved outcomes versus docetaxel and demonstrated a clear survival benefit, and the earlier CodeBreaK 100 trial showed a median overall survival of about 12.5 months, so sotorasib improves survival in this population."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:36764316",
+      "citation": "de Langen AJ, et al. Sotorasib versus docetaxel for previously treated non-small-cell lung cancer with KRAS G12C mutation: a randomised, open-label, phase 3 trial (CodeBreaK 200). Lancet. 2023;401(10378):733-746.",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal Phase 3 confirmatory RCT, NCT04303780, 345 patients (sotorasib n=171, docetaxel n=174). PRIMARY endpoint = PFS per BICR (surrogate), met: HR 0.66 (0.51-0.86), p=0.0017. OS was a SECONDARY endpoint and was NULL: median 10.6 vs 11.3 mo, HR 1.01 (0.77-1.33), numerically favoring docetaxel (deaths 109 vs 94). Trial deliberately underpowered for OS; docetaxel-to-sotorasib crossover permitted (~26%). outcome_match=false because the claimed outcome (OS) was NOT the primary endpoint and, when measured, showed no benefit; the positive endpoint (PFS) is a surrogate. Open-label design; FDA later flagged bias signals (asymmetric early dropout, BICR/investigator discordance). PMID/DOI/N/HRs re-verified against PubMed metadata and FDA briefing.",
+      "n_int": 171,
+      "year": 2023,
+      "finding": "Sotorasib improved PFS (HR 0.66, p=0.0017) but did NOT improve OS: median 10.6 vs 11.3 mo, HR 1.01 (0.77-1.33) \u2014 the only randomized OS comparison, and it is null."
+    },
+    {
+      "source_id": "PMID:37098232",
+      "citation": "Dy GK, et al. Long-Term Outcomes and Molecular Correlates of Sotorasib Efficacy in Patients With Pretreated KRAS G12C-Mutated NSCLC: 2-Year Analysis of CodeBreaK 100. J Clin Oncol. 2023;41(18):3311-3317.",
+      "design": "prospective cohort",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "CodeBreaK 100 Phase 1/2 SINGLE-ARM, open-label (NCT03600883, N=174). Reports median OS 12.5 mo and 2-year OS 33%, ORR 41%, but there is NO comparator arm, so it cannot establish that sotorasib IMPROVES OS relative to standard of care. Basis for the 2021 accelerated approval was ORR/DOR, not OS. direction=0 (no comparative OS claim possible); outcome_match=false (uncontrolled OS is not a valid test of an improvement claim). 'prospective cohort' used as nearest single-arm-trial design descriptor. PMID/DOI/N/OS figures re-verified against PubMed metadata.",
+      "n_int": 174,
+      "year": 2023,
+      "finding": "Single-arm median OS 12.5 mo (2-yr OS 33%) \u2014 descriptive only; no control arm, so it cannot demonstrate an OS improvement."
+    },
+    {
+      "source_id": "NCT04303780",
+      "citation": "ClinicalTrials.gov. A Phase 3 Study of AMG 510 (Sotorasib) Versus Docetaxel in Previously Treated KRAS p.G12C-Mutated NSCLC (CodeBreaK 200). Results posted; primary PFS per BICR, secondary OS.",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Registry record for the pivotal RCT confirms design independent of the journal report: N=345, primary endpoint PFS per BICR, OS a secondary endpoint, pre-specified docetaxel-to-sotorasib crossover, has_results=true. Posted OS: HR 1.01 (0.77-1.33), no significant difference. outcome_match=false: claimed outcome (OS) was secondary and null. Registry details re-verified via get_trial_details.",
+      "n_int": 171,
+      "year": 2023,
+      "finding": "Registry confirms PFS was primary and OS secondary (N=345); posted OS HR 1.01 \u2014 no OS benefit."
+    },
+    {
+      "source_id": "PMID:39303400",
+      "citation": "Waterhouse DM, et al. Patient-reported outcomes in CodeBreaK 200: sotorasib versus docetaxel for previously treated advanced NSCLC with KRAS G12C mutation. Lung Cancer. 2024;196:107921.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Secondary PRO analysis of CodeBreaK 200 (PMID 39303400; corrected volume from 191 to 196). Shows sotorasib preserved quality of life / reduced symptom burden vs docetaxel (EQ-5D VAS 2.2 vs -5.8 at week 12; lower symptom severity/interference). This is a tolerability/QoL benefit, NOT an overall-survival benefit. direction=0 on the OS claim; outcome_match=false (PRO/QoL, not OS). Included to show what sotorasib's demonstrated benefit actually is (symptoms/QoL), which is often conflated with survival. Citation/PMID/DOI re-verified against PubMed metadata.",
+      "n_int": 171,
+      "year": 2024,
+      "finding": "Sotorasib improved QoL and symptom burden vs docetaxel \u2014 a tolerability benefit, distinct from and not evidence of an OS improvement."
+    },
+    {
+      "source_id": "PMID:34675734",
+      "citation": "Zhang SS, Nagasaka M. Spotlight on Sotorasib (AMG 510) for KRAS G12C Positive Non-Small Cell Lung Cancer. Lung Cancer (Auckl). 2021;12:115-122. DOI:10.2147/LCTT.S334623",
+      "design": "systematic review",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED ROW. Original corpus attributed this DOI to 'Nakajima EC, et al ... 105-110' \u2014 that is a fabricated author and wrong pages. The real article at DOI:10.2147/LCTT.S334623 is a NARRATIVE review by Zhang SS & Nagasaka M (PMID 34675734), Lung Cancer: Targets and Therapy 2021;12:115-122, describing the CodeBreaK 100 Phase 1/2 program and the May 2021 conditional/accelerated FDA approval (ORR ~37%, disease control ~80%, PFS ~6.3-6.8 mo). No randomized OS data; accelerated approval was on response endpoints, not survival. direction=0, outcome_match=false. Design tagged 'systematic review' only because the schema enum lacks 'narrative review'; substantively it is a single narrative review, no meta-analysis. Establishes that the approval rationale never rested on an OS improvement.",
+      "n_int": 126,
+      "year": 2021,
+      "finding": "Narrative review: accelerated approval rested on ORR/DOR/PFS from single-arm CodeBreaK 100 data \u2014 no OS-improvement evidence at approval."
+    },
+    {
+      "source_id": "DOI:10.9999/FDA-ODAC-media-172756-placeholder",
+      "citation": "US FDA Oncologic Drugs Advisory Committee (ODAC) briefing & vote, Oct 5 2023 (FDA media/172756); Amgen regulatory update, Dec 26 2023 (Complete Response Letter). Regulatory action on sotorasib sNDA, NSCLC full-approval conversion.",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "FDA regulatory action, treated as guideline/regulatory row. ODAC voted 10-2 that CodeBreaK 200 PFS per BICR could NOT be reliably interpreted; FDA briefing (media/172756) explicitly stated 'Incremental PFS Effect / No OS Difference' and 'HR 1.01'. Dec 26 2023: FDA issued a Complete Response Letter denying conversion to full approval and issued a new postmarketing requirement for an additional confirmatory study to be completed no later than Feb 2028 (Amgen press release); sotorasib remains on ACCELERATED approval based on ORR/DOR only. source_id is a non-resolving PLACEHOLDER (FDA document media/172756 is not a DOI); the checkable primary records are the FDA briefing at fda.gov/media/172756/download and the Amgen Dec 26 2023 release. outcome_match=true because the regulatory finding directly addresses OS and found no benefit. Vote, 'No OS Difference', CRL, and Feb-2028 PMR all independently re-verified via FDA briefing, targetedonc, BioPharma Dive, and Amgen newsroom.",
+      "n_int": 345,
+      "year": 2023,
+      "finding": "FDA ODAC (10-2) rejected reliable PFS interpretation and noted no OS difference (HR 1.01); FDA issued a CRL denying full approval with a new confirmatory-trial requirement due Feb 2028 \u2014 regulatory consensus does not credit an OS benefit."
+    }
+  ]
+}

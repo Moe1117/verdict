@@ -1,0 +1,84 @@
+{
+  "claim_id": "N01",
+  "claim": "Empagliflozin reduces heart-failure hospitalization or cardiovascular death in heart failure with reduced ejection fraction",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The pivotal EMPEROR-Reduced RCT (Packer, NEJM 2020; NCT03057977; N=3,730 HFrEF, LVEF <=40%) showed empagliflozin 10 mg reduced the primary composite of cardiovascular death or hospitalization for heart failure by 25% (HR 0.75, 95% CI 0.65-0.86), driven predominantly by fewer HF hospitalizations, with benefit regardless of diabetes status. This directly measured the claimed outcome. The independent DAPA-HF RCT (dapagliflozin) established the same benefit for the drug class, and the Zannad prespecified meta-analysis of both landmark trials (Lancet 2020) confirmed a consistent class effect on CV death or HF hospitalization (HR 0.74, 0.68-0.82). The FDA approved empagliflozin for HFrEF on Aug 18, 2021 on the basis of EMPEROR-Reduced (confirmed via the FDA approval letter and the Lilly/Boehringer press release), and major guidelines (ACC/AHA/HFSA 2022, ESC 2021) give SGLT2 inhibitors a Class I recommendation as a pillar of guideline-directed HFrEF therapy. Consensus is unambiguously Supported.",
+  "outcome": "HF hospitalization or CV death",
+  "population": "HFrEF (LVEF <=40%)",
+  "build_confidence": "high",
+  "provenance": "All rows independently re-verified against PubMed (PMIDs 32865377 DOI:10.1056/NEJMoa2022190, 31535829 DOI:10.1056/NEJMoa1911303, 32877652 DOI:10.1016/S0140-6736(20)31824-9, 36027570 DOI:10.1056/NEJMoa2206286) and ClinicalTrials.gov (NCT03057977 = EMPEROR-Reduced, Phase 3, empagliflozin vs placebo, enroll 3730); FDA action confirmed via the FDA approval letter (accessdata.fda.gov 204629Orig1s026ltr.pdf, 2021-08-18) and the Lilly/Boehringer press release (Aug 18, 2021).",
+  "notes": "Lead EMPEROR-Reduced confirmed as the pivotal trial with a direct primary-endpoint hit on the claimed outcome. DELIVER included as a population-mismatch contrast (HFmrEF/HFpEF, LVEF >40%) \u2014 supports class but not the HFrEF population, so direction 0 on this specific claim. No contradicting HFrEF trials exist; evidence is highly concordant. Corrected row-3 citation title (trial order) to match PubMed exactly.",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Empagliflozin significantly reduces the combined risk of cardiovascular death or hospitalization for heart failure in patients with HFrEF. This was demonstrated in the landmark EMPEROR-Reduced trial (Packer et al., NEJM 2020), where empagliflozin 10 mg reduced the primary composite endpoint of CV death or HF hospitalization by 25% (HR 0.75, 95% CI 0.65-0.86) compared to placebo, on top of guideline-directed medical therapy, regardless of diabetes status. The benefit was driven mainly by a reduction in heart-failure hospitalizations. On the strength of these results the FDA approved empagliflozin for HFrEF in August 2021, and SGLT2 inhibitors are now a Class I guideline-recommended pillar of HFrEF therapy."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:32865377",
+      "citation": "Packer M, et al. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure (EMPEROR-Reduced). N Engl J Med. 2020;383(15):1413-1424. DOI:10.1056/NEJMoa2022190.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: title/authors/journal/year match; article types include 'Randomized Controlled Trial','Multicenter Study'. NCT03057977 confirmed on ClinicalTrials.gov as EMPEROR-Reduced Phase 3. Not retracted. Industry-sponsored (Boehringer Ingelheim/Lilly) with academic steering committee.",
+      "n_int": 1863,
+      "year": 2020,
+      "finding": "In 3,730 HFrEF patients (LVEF <=40%), empagliflozin 10 mg reduced the primary composite of CV death or hospitalization for heart failure; a primary event occurred in 361/1863 (19.4%) vs 462/1867 (24.7%) placebo, HR 0.75 (95% CI 0.65-0.86, P<0.001), driven mainly by fewer HF hospitalizations; benefit independent of diabetes status. Direct hit on the claimed outcome and population."
+    },
+    {
+      "source_id": "PMID:31535829",
+      "citation": "McMurray JJV, et al. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction (DAPA-HF). N Engl J Med. 2019;381(21):1995-2008. DOI:10.1056/NEJMoa1911303.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: article types include 'Clinical Trial, Phase III','Randomized Controlled Trial','Multicenter Study'. Not retracted. Independent pivotal SGLT2i RCT (dapagliflozin) in the same HFrEF population/endpoint; establishes class effect. Same-mechanism drug, not empagliflozin itself.",
+      "n_int": 2373,
+      "year": 2019,
+      "finding": "In 4,744 HFrEF patients (LVEF <=40%), dapagliflozin reduced the primary composite of worsening HF or CV death; event in 386/2373 (16.3%) vs 502/2371 (21.2%) placebo, HR 0.74 (95% CI 0.65-0.85, P<0.001). Confirms the SGLT2-inhibitor class benefit on the claimed outcome in the claimed population."
+    },
+    {
+      "source_id": "PMID:32877652",
+      "citation": "Zannad F, et al. SGLT2 inhibitors in patients with heart failure with reduced ejection fraction: a meta-analysis of the EMPEROR-Reduced and DAPA-HF trials. Lancet. 2020;396(10254):819-829. DOI:10.1016/S0140-6736(20)31824-9.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: article type 'Meta-Analysis', Lancet 2020. Prespecified pooled analysis of the two pivotal HFrEF RCTs (study-level DAPA-HF + patient-level EMPEROR-Reduced). Meta-analysis primary endpoint was all-cause death; the claimed composite (CV death or first HF hosp) is a prespecified reported hard endpoint (not a surrogate). Citation title corrected to match PubMed trial ordering.",
+      "n_int": 4236,
+      "year": 2020,
+      "finding": "Pooled 8,474 HFrEF patients: SGLT2 inhibitors reduced the combined risk of CV death or first HF hospitalization by 26% (HR 0.74, 95% CI 0.68-0.82, p<0.0001), plus 13% lower all-cause death and 14% lower CV death, with no significant between-trial heterogeneity. Highest-tier confirmation of the claim."
+    },
+    {
+      "source_id": "NCT03057977",
+      "citation": "US FDA approval of Jardiance (empagliflozin) to reduce risk of CV death plus hospitalization for heart failure in adults with HFrEF, based on EMPEROR-Reduced. FDA approval letter (accessdata.fda.gov 204629Orig1s026ltr.pdf) and Boehringer Ingelheim/Eli Lilly press release, Aug 18, 2021.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory action, not a study; confirmed independently via the FDA approval letter dated 2021-08-18 AND the Lilly/BI press release. FDA granted the HFrEF indication explicitly for CV death plus HF hospitalization on the strength of EMPEROR-Reduced. Source_id set to the underlying trial NCT03057977 (checkable) since no PMID/DOI applies to the regulatory action.",
+      "n_int": 3730,
+      "year": 2021,
+      "finding": "FDA approved empagliflozin 10 mg for adults with HFrEF to reduce risk of CV death plus HF hospitalization, based on the EMPEROR-Reduced primary composite result. Regulatory consensus aligns with the claim."
+    },
+    {
+      "source_id": "PMID:36027570",
+      "citation": "Solomon SD, et al. Dapagliflozin in Heart Failure with Mildly Reduced or Preserved Ejection Fraction (DELIVER). N Engl J Med. 2022;387(12):1089-1098. DOI:10.1056/NEJMoa2206286.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: article type 'Randomized Controlled Trial', NEJM 2022. Included as population contrast: enrolled LVEF >40% (HFmrEF/HFpEF), NOT the HFrEF population of the claim, and tests dapagliflozin not empagliflozin. Direction 0 on this HFrEF claim.",
+      "n_int": 3131,
+      "year": 2022,
+      "finding": "In 6,263 patients with LVEF >40%, dapagliflozin reduced the composite of worsening HF or CV death; event in 512/3131 (16.4%) vs 610/3132 (19.5%) placebo, HR 0.82 (95% CI 0.73-0.92, P<0.001). Extends SGLT2i benefit beyond HFrEF but does not test the HFrEF population, so it neither supports nor contradicts the specific HFrEF claim."
+    }
+  ]
+}

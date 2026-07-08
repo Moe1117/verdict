@@ -1,0 +1,81 @@
+{
+  "claim_id": "N22",
+  "claim": "Fecal microbiota transplantation prevents recurrence of Clostridioides difficile infection",
+  "domain": "repurposing",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus. Two independent open-label RCTs (van Nood 2013, Cammarota 2015) were both stopped early for efficacy, showing FMT resolves recurrent CDI in ~80-90% vs ~25-31% for vancomycin. A phase 3 double-blind placebo-controlled RCT of a standardized spore consortium (SER-109/ECOSPOR III) and the PUNCH CD3 program (REBYOTA) confirmed reduced recurrence. FMT/microbiota therapy for multiply-recurrent CDI is endorsed by IDSA, ACG, and AGA guidelines, and the FDA has approved two live fecal-microbiota products (REBYOTA 2022, VOWST/SER-109 2023) specifically to prevent CDI recurrence.",
+  "outcome": "prevention of recurrent CDI (resolution without relapse / freedom from recurrence at 8-10 weeks)",
+  "population": "adults with recurrent Clostridioides difficile infection",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Fecal microbiota transplantation (FMT) is a highly effective treatment for preventing recurrence of Clostridioides difficile infection, with cure rates of roughly 80-90% in recurrent CDI \u2014 substantially higher than antibiotics (vancomycin) alone. The landmark 2013 van Nood NEJM trial was stopped early because donor-feces infusion so clearly outperformed vancomycin. Multiple subsequent randomized trials and meta-analyses confirmed this, and the approach is now endorsed by IDSA, ACG, and AGA guidelines for multiply-recurrent CDI. The FDA has since approved standardized microbiota products (Rebyota in 2022 and Vowst in 2023) specifically to prevent CDI recurrence. FMT is one of the clearest success stories in microbiome-based therapy."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:23323867",
+      "citation": "van Nood E, et al. Duodenal infusion of donor feces for recurrent Clostridium difficile. N Engl J Med. 2013;368(5):407-15. DOI:10.1056/NEJMoa1205037 (Netherlands Trial Register NTR1177).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark open-label RCT, stopped early at interim analysis for efficacy (not a data-integrity concern); publicly funded (Netherlands Org for Health Research & Development + Netherlands Org for Scientific Research). Registered NTR1177 (Netherlands Trial Register), NOT NCT01703494 \u2014 spurious NCT removed from citation. Primary endpoint = resolution of CDI diarrhea without relapse at 10 weeks, exactly the claimed outcome. Verified against PubMed metadata.",
+      "n_int": 16,
+      "year": 2013,
+      "finding": "Donor-feces infusion cured 81% (13/16) after a first infusion and ~94% overall (2 of 3 remaining after a second infusion) vs 31% (4/13) for vancomycin alone and 23% (3/13) for vancomycin+lavage (P<0.001 for both comparisons). Primary endpoint was resolution of CDI diarrhea without relapse at 10 weeks."
+    },
+    {
+      "source_id": "PMID:25728808",
+      "citation": "Cammarota G, et al. Randomised clinical trial: faecal microbiota transplantation by colonoscopy vs. vancomycin for the treatment of recurrent Clostridium difficile infection. Aliment Pharmacol Ther. 2015;41(9):835-43. DOI:10.1111/apt.13144.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent confirmatory open-label RCT, stopped at 1-year interim for efficacy; academic sponsor (Catholic University, Rome). Primary endpoint = resolution of CDI-related diarrhea at 10 weeks, the claimed outcome. Verified against PubMed metadata.",
+      "n_int": 20,
+      "year": 2015,
+      "finding": "FMT via colonoscopy resolved rCDI in 90% (18/20) vs 26% (5/19) with vancomycin (P<0.0001); benefit held in patients with pseudomembranous colitis (5/7 resolved)."
+    },
+    {
+      "source_id": "PMID:35045228",
+      "citation": "Feuerstadt P, et al. SER-109, an oral microbiome therapy for recurrent Clostridioides difficile infection (ECOSPOR III). N Engl J Med. 2022;386(3):220-229. DOI:10.1056/NEJMoa2106516 (NCT03183128).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 double-blind placebo-controlled RCT of a purified donor-derived Firmicutes-spore consortium (SER-109/VOWST) \u2014 a standardized, industrialized form of FMT, not raw stool. Industry-sponsored (Seres) but pivotal, positive, and the basis for FDA approval. Primary endpoint = CDI recurrence up to 8 weeks, the claimed outcome. n=89 in the SER-109 arm (182 enrolled total). Verified against PubMed metadata.",
+      "n_int": 89,
+      "year": 2022,
+      "finding": "Recurrence at 8 weeks was 12% with SER-109 vs 40% with placebo (relative risk 0.32; 95% CI 0.18-0.58; P<0.001), after standard-of-care antibiotics. Benefit consistent across age and prior antibiotic (vancomycin/fidaxomicin)."
+    },
+    {
+      "source_id": "PMID:37098448",
+      "citation": "Porcari S, Ianiro G, et al. Fecal microbiota transplantation for recurrent C. difficile infection in patients with inflammatory bowel disease: a systematic review and meta-analysis. J Autoimmun. 2023;141:103036. DOI:10.1016/j.jaut.2023.103036.",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Systematic review/meta-analysis of 15 studies (777 patients) in a harder-to-treat subpopulation (rCDI with IBD). NOTE: pooled cure-rate proportions come from predominantly single-arm/observational cohorts (generalized linear mixed logistic model), NOT from a set of RCTs \u2014 corpus's original 'meta-analysis of rcts' label was inaccurate; relabeled to systematic review. Cure-rate outcome matches the claimed outcome. Serious adverse events in 12% (mostly IBD-related), noted but does not overturn efficacy direction. Verified against PubMed metadata.",
+      "n_int": 777,
+      "year": 2023,
+      "finding": "Pooled cure of rCDI was 81% for single FMT and 92% for overall (repeated) FMT (p=0.0015 for the improvement), even in the IBD subgroup \u2014 mirroring the ~80-90% rates seen in non-IBD rCDI."
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMoa2106516",
+      "citation": "U.S. FDA. REBYOTA (fecal microbiota, live-jslm) \u2014 first FDA-approved fecal microbiota product, approved November 2022 for prevention of recurrence of CDI in adults following antibiotic treatment. FDA label / DailyMed setid 7af8a7f6-a441-4dc6-a151-138a89166fbb (Ferring; PUNCH CD3 phase 3 + phase 2 Bayesian integration).",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "FDA regulatory action, not a study. REBYOTA (Nov 2022) and later VOWST/SER-109 (2023) are approved with the exact indication 'prevention of recurrence of CDI following antibiotic treatment for recurrent CDI.' REBYOTA efficacy rested on a Bayesian integration of the phase 3 PUNCH CD3 (n=262; 70.6% vs 57.5% success at 8 wk, 99.1% posterior prob of superiority) + a phase 2 placebo-controlled trial \u2014 verified via FDA/DailyMed and Ferring release. CAVEAT: source_id points to the SER-109 pivotal DOI as a proxy checkable anchor because the FDA action itself has no PMID/DOI; the id does NOT resolve to REBYOTA. The real REBYOTA anchor is DailyMed setid 7af8a7f6-a441-4dc6-a151-138a89166fbb (confirmed live).",
+      "n_int": 0,
+      "year": 2022,
+      "finding": "FDA approved standardized live fecal-microbiota products explicitly indicated to PREVENT recurrent CDI following antibiotic treatment \u2014 regulatory endorsement of the claimed effect."
+    }
+  ]
+}

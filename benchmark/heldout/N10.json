@@ -1,0 +1,84 @@
+{
+  "claim_id": "N10",
+  "claim": "Adding pembrolizumab to chemotherapy improves overall survival in metastatic non-squamous non-small-cell lung cancer",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus. The pivotal phase 3 KEYNOTE-189 RCT (Gandhi, NEJM 2018; NCT02578680) had overall survival as a co-primary endpoint and showed a highly significant OS benefit for pembrolizumab + pemetrexed-platinum vs placebo + chemo (HR 0.49, 95% CI 0.38-0.64, P<0.001 at first interim; HR 0.60, 5-yr OS 19.4% vs 11.3% at the mature 5-year analysis, Garassino JCO 2023). Benefit held across all PD-L1 strata. The independent phase 3 IMpower150 RCT (Socinski, NEJM 2018) confirms the same class principle \u2014 adding a PD-(L)1 inhibitor (atezolizumab) to chemotherapy improved OS in metastatic nonsquamous NSCLC (HR 0.78, P=0.02). FDA converted the earlier KEYNOTE-021G accelerated approval to full approval (Aug 20, 2018) for pembrolizumab + pemetrexed + platinum as first-line therapy for metastatic nonsquamous NSCLC based on KEYNOTE-189, and NCCN/ESMO guidelines list it as category 1 standard of care. The earliest supporting trial, KEYNOTE-021 cohort G (Langer, Lancet Oncol 2016), had ORR \u2014 not OS \u2014 as its primary endpoint, so its OS signal is supportive but not a primary-endpoint result. The OS claim itself is directly and robustly established by KEYNOTE-189's co-primary endpoint.",
+  "outcome": "overall survival",
+  "population": "metastatic non-squamous NSCLC without EGFR/ALK alterations, previously untreated (first-line)",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Adding pembrolizumab to platinum-based chemotherapy (pemetrexed plus carboplatin or cisplatin) significantly improves overall survival in patients with metastatic non-squamous NSCLC. This was established by the pivotal phase 3 KEYNOTE-189 trial, in which pembrolizumab plus chemotherapy roughly halved the risk of death versus chemotherapy alone (hazard ratio ~0.49 at first analysis), with the benefit seen across all PD-L1 expression levels. It is FDA-approved and a guideline-recommended (NCCN category 1) first-line standard of care for patients without EGFR or ALK mutations."
+  },
+  "provenance": "PubMed (verified PMIDs 29658856/36809080/29863955/27745820 + DOIs), ClinicalTrials.gov (NCT02578680 details, N=616, OS a co-primary endpoint), FDA KEYTRUDA label 125514s041 + Merck/FDA approval announcements (Aug 20, 2018), all independently re-checked 2026-07-08",
+  "build_confidence": "high",
+  "notes": "Strongly Supported. Independently re-verified: all four PMIDs resolve to the cited articles with matching DOI/journal/volume/pages/year; KEYNOTE-189 OS HR 0.49\u21920.60 across maturity confirmed from abstracts; IMpower150 OS HR 0.78 (P=0.02) confirmed; KEYNOTE-021G ORR 55% vs 29% primary endpoint confirmed (surrogate \u2192 outcome_match=false). No retracted publications (retraction/erratum/EoC scan clean). FDA full-approval conversion confirmed. KEYNOTE-021G is a randomized PHASE 2 cohort; labeled 'rct' per available enum with phase disclosed in integrity_note.",
+  "rows": [
+    {
+      "source_id": "PMID:29658856",
+      "citation": "Gandhi L, Rodriguez-Abreu D, Gadgeel S, et al. Pembrolizumab plus Chemotherapy in Metastatic Non-Small-Cell Lung Cancer (KEYNOTE-189). N Engl J Med. 2018;378(22):2078-2092. DOI:10.1056/NEJMoa1801005. NCT02578680.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID/DOI/journal/volume(378)/issue(22)/pages(2078-2092)/year(2018) all match. PubMed article_types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. Landmark double-blind placebo-controlled phase 3 RCT; OS a co-primary endpoint. No retraction/integrity concerns.",
+      "n_int": 410,
+      "year": 2018,
+      "finding": "Pembrolizumab + pemetrexed-platinum vs placebo + chemo: OS HR 0.49 (95% CI 0.38-0.64, P<0.001) at first interim; 12-mo OS 69.2% vs 49.4%. Benefit across all PD-L1 strata. N=616 randomized 2:1 (pembrolizumab arm n=410). Primary endpoint met."
+    },
+    {
+      "source_id": "PMID:36809080",
+      "citation": "Garassino MC, Gadgeel S, Speranza G, et al. Pembrolizumab Plus Pemetrexed and Platinum in Nonsquamous NSCLC: 5-Year Outcomes From the Phase 3 KEYNOTE-189 Study. J Clin Oncol. 2023;41(11):1992-1998. DOI:10.1200/JCO.22.01989. NCT02578680.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID/DOI/journal/volume(41)/issue(11)/pages(1992-1998)/year(2023) all match; PMC10082311. Mature 5-year update of the pivotal RCT (same NCT02578680). OS a primary endpoint. No retraction/integrity concerns.",
+      "n_int": 410,
+      "year": 2023,
+      "finding": "At median 64.6 mo follow-up: OS HR 0.60 (95% CI 0.50-0.72); 5-year OS 19.4% vs 11.3%; PFS HR 0.50. Benefit maintained regardless of PD-L1 expression."
+    },
+    {
+      "source_id": "PMID:29863955",
+      "citation": "Socinski MA, Jotte RM, Cappuzzo F, et al. Atezolizumab for First-Line Treatment of Metastatic Nonsquamous NSCLC (IMpower150). N Engl J Med. 2018;378(24):2288-2301. DOI:10.1056/NEJMoa1716948. NCT02366143.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID/DOI/journal/volume(378)/issue(24)/pages(2288-2301)/year(2018) all match; article_types 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. Independent phase 3 RCT confirming the class effect (adding a PD-(L)1 inhibitor to chemotherapy improves OS). Different IO agent (atezolizumab) + bevacizumab, so corroborative rather than direct.",
+      "n_int": 356,
+      "year": 2018,
+      "finding": "ABCP (atezolizumab+bevacizumab+carbo+paclitaxel) vs BCP in WT population: OS 19.2 vs 14.7 mo, HR for death 0.78 (95% CI 0.64-0.96, P=0.02); PFS HR 0.62 (0.52-0.74). OS in WT population a primary endpoint, met. Supports the general claim that adding anti-PD-(L)1 to chemo improves OS in this population."
+    },
+    {
+      "source_id": "PMID:27745820",
+      "citation": "Langer CJ, Gadgeel SM, Borghaei H, et al. Carboplatin and pemetrexed with or without pembrolizumab for advanced non-squamous NSCLC: KEYNOTE-021 cohort G. Lancet Oncol. 2016;17(11):1497-1508. DOI:10.1016/S1470-2045(16)30498-3. NCT02039674.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified: PMID/DOI/journal/volume(17)/issue(11)/pages(1497-1508)/year(2016) all match; PMC6886237. PubMed article_types = 'Clinical Trial, Phase II' + 'Randomized Controlled Trial' \u2014 a randomized PHASE 2 cohort (labeled 'rct' per available enum; phase disclosed here). PRIMARY endpoint was objective response rate (a surrogate), NOT overall survival -> outcome_match=false. Enabling trial that led to the 2017 accelerated FDA approval. No retraction/integrity concerns.",
+      "n_int": 60,
+      "year": 2016,
+      "finding": "Pembrolizumab + carboplatin/pemetrexed vs chemo alone: ORR 55% (33/60) vs 29% (18/63), treatment difference 26%, P=0.0016 (primary endpoint met). N=123 total. OS was not the primary endpoint and the trial was not powered for OS."
+    },
+    {
+      "source_id": "NCT02578680",
+      "citation": "FDA. KEYTRUDA (pembrolizumab) prescribing information, first-line metastatic nonsquamous NSCLC in combination with pemetrexed and platinum chemotherapy (Study KEYNOTE-189). Full (regular) approval Aug 20, 2018 converting the May 2017 KEYNOTE-021G accelerated approval. accessdata.fda.gov label 125514 (125514s041lbl.pdf).",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified against FDA label 125514s041 and Merck/FDA/ASCO Post/Cancer Letter announcements: on Aug 20, 2018 FDA converted the earlier KEYNOTE-021G accelerated approval to full approval based on the KEYNOTE-189 OS/PFS benefit. Regulatory-consensus row; 'guideline / regulatory' design per spec. n_int reflects the label's pembrolizumab safety population (n=405).",
+      "n_int": 405,
+      "year": 2018,
+      "finding": "FDA granted full approval of pembrolizumab + pemetrexed + platinum as first-line treatment of metastatic nonsquamous NSCLC with no EGFR/ALK aberrations, irrespective of PD-L1 expression, based on the OS benefit demonstrated in the KEYNOTE-189 phase 3 RCT; NCCN category 1 standard of care."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "claim_id": "N06",
+  "claim": "Bempedoic acid reduces cardiovascular events in statin-intolerant patients",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Consensus is Supported, resting on a single large, well-powered, dedicated CV-outcomes RCT plus concordant regulatory action. CLEAR Outcomes (NCT02993406; Nissen et al., NEJM 2023) randomized 13,970 statin-intolerant patients with, or at high risk for, CVD; the PRIMARY endpoint was the exact claimed outcome \u2014 a 4-component MACE composite (CV death, nonfatal MI, nonfatal stroke, coronary revascularization) \u2014 which fell 819/6992 (11.7%) vs 927/6978 (13.3%), HR 0.87 (95% CI 0.79-0.96, P=0.004), a 13% relative reduction (all figures verified against NEJM full text). Prespecified analyses reinforce this: the primary-prevention subgroup (JAMA 2023, n=4206; bempedoic n=2100) showed MACE HR 0.70 (0.55-0.89), and the total-events analysis (JAMA Cardiol 2024) and diabetes subgroup (Lancet D&E 2023) were concordant. The effect is driven by MI (HR 0.77) and revascularization (HR 0.81); stroke (HR 0.85, ns) and CV death were not individually significant, and all-cause mortality was neutral \u2014 a real limitation, but the pre-specified primary composite met significance. Regulatory consensus aligns: in March 2024 the FDA expanded the NEXLETOL/NEXLIZET label to reduce the risk of MI and coronary revascularization, including in adults unable to take recommended statins, based on CLEAR Outcomes. Earlier trials (CLEAR Harmony, NEJM 2019) were LDL-C/safety trials in patients ON statins, not powered for MACE, and provide only surrogate support. Population and outcome match the claim precisely, so the verdict is Supported, tempered by the single-pivotal-trial evidence base and absence of a mortality benefit.",
+  "outcome": "MACE composite (CV death, nonfatal MI, nonfatal stroke, coronary revascularization)",
+  "population": "Statin-intolerant adults with, or at high risk for, cardiovascular disease",
+  "build_confidence": "high",
+  "provenance": "PubMed (metadata for all 6 PMIDs, publication types checked for retraction) + ClinicalTrials.gov (NCT02993406 full record) + NEJM/JAMA/JAMA Cardiol full text and FDA label/press verified via Exa web search. CLEAR Outcomes primary result (819/6992=11.7% vs 927/6978=13.3%; HR 0.87, 95% CI 0.79-0.96, P=0.004) confirmed against NEJM full text.",
+  "notes": "Effect driven by MI (HR 0.77, 0.66-0.91) and revascularization (HR 0.81, 0.72-0.92); stroke (HR 0.85, 95% CI 0.67-1.07, ns) and CV death individually non-significant; all-cause mortality neutral. Single pivotal CV-outcomes RCT \u2014 no independent confirmatory hard-outcomes trial yet. FDA label expansion (Mar 22 2024, drugsatfda 211616s012s013) is the regulatory anchor; that label also removed the statin-intolerant-only restriction (approved with or without a statin).",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Bempedoic acid reduces cardiovascular events in statin-intolerant patients. This was demonstrated in the CLEAR Outcomes trial (Nissen et al., NEJM 2023), a large randomized, double-blind, placebo-controlled trial of 13,970 statin-intolerant patients at high cardiovascular risk. Bempedoic acid 180 mg daily reduced the primary 4-component MACE composite (cardiovascular death, nonfatal MI, nonfatal stroke, or coronary revascularization) by 13% (HR 0.87, 95% CI 0.79-0.96, P=0.004), with significant reductions in MI (23%) and coronary revascularization (19%). On the strength of these data, the FDA approved bempedoic acid in 2024 to reduce cardiovascular risk in patients unable to take statins."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:36876740",
+      "citation": "Nissen SE, et al. Bempedoic Acid and Cardiovascular Outcomes in Statin-Intolerant Patients. N Engl J Med. 2023;388(15):1353-1364 (CLEAR Outcomes). DOI:10.1056/NEJMoa2215024",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark pivotal double-blind RCT; industry-funded (Esperion) but adjudicated by blinded independent endpoints committee; primary endpoint met. PubMed type = Randomized Controlled Trial; not retracted.",
+      "n_int": 6992,
+      "year": 2023,
+      "finding": "Primary 4-component MACE (CV death, nonfatal MI, nonfatal stroke, coronary revascularization) 819/6992 (11.7%) vs 927/6978 (13.3%) placebo; HR 0.87 (95% CI 0.79-0.96, P=0.004), a 13% RRR. MI HR 0.77 (0.66-0.91), revascularization HR 0.81 (0.72-0.92). Stroke HR 0.85 (0.67-1.07, ns) and CV death individually non-significant; all-cause mortality neutral. Verified against NEJM full text."
+    },
+    {
+      "source_id": "NCT02993406",
+      "citation": "CLEAR Outcomes: Evaluation of Major Cardiovascular Events in Statin-Intolerant Participants Treated With Bempedoic Acid (ETC-1002) or Placebo. ClinicalTrials.gov.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Registry record for the pivotal trial; Phase 3, N=13,970, event-driven, primary endpoint = 4-component MACE (time-to-first-event, up to 68 months). Status COMPLETED. Sponsor Esperion. Verified against the live CT.gov record.",
+      "n_int": 6992,
+      "year": 2023,
+      "finding": "Registered primary efficacy endpoint is first occurrence of adjudicated 4-component MACE in statin-intolerant patients with/at high risk for CVD \u2014 confirms population and outcome match the claim exactly. N=13,970 (bempedoic 6992 / placebo 6978). Registry results: 819 vs 927 events, HR 0.87 (0.79-0.96), log-rank P=0.004."
+    },
+    {
+      "source_id": "PMID:37354546",
+      "citation": "Nissen SE, et al. Bempedoic Acid for Primary Prevention of Cardiovascular Events in Statin-Intolerant Patients. JAMA. 2023;330(2):131-140. DOI:10.1001/jama.2023.9696",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified subgroup of CLEAR Outcomes (n=4206 primary-prevention patients); randomized comparison preserved. Verified against JAMA full text.",
+      "n_int": 2100,
+      "year": 2023,
+      "finding": "In statin-intolerant primary-prevention patients (no prior CV event; n=4206, bempedoic n=2100 vs placebo n=2106), bempedoic acid reduced the 4-component MACE composite (111 [5.3%] vs 161 [7.6%]; HR 0.70, 95% CI 0.55-0.89, P=0.002) \u2014 extends the benefit to patients without established disease."
+    },
+    {
+      "source_id": "PMID:38231501",
+      "citation": "Impact of Bempedoic Acid on Total Cardiovascular Events: A Prespecified Analysis of the CLEAR Outcomes Randomized Clinical Trial. JAMA Cardiol. 2024. DOI:10.1001/jamacardio.2023.5155",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified total-events (recurrent-event) analysis of CLEAR Outcomes; same randomized cohort. PubMed publication_date = 2024 (corrected from 2023). Type = Randomized Controlled Trial; not retracted.",
+      "n_int": 6992,
+      "year": 2024,
+      "finding": "Bempedoic acid significantly reduced TOTAL (first plus recurrent) MACE beyond the first-event analysis, consistent direction and magnitude \u2014 reinforces the primary finding on the claimed outcome."
+    },
+    {
+      "source_id": "PMID:38061370",
+      "citation": "Efficacy and safety of bempedoic acid among patients with and without diabetes: prespecified analysis of the CLEAR Outcomes randomised trial. Lancet Diabetes Endocrinol. 2023. DOI:10.1016/S2213-8587(23)00316-9",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified diabetes subgroup of CLEAR Outcomes; randomized cohort. Type = Randomized Controlled Trial; not retracted.",
+      "n_int": 6992,
+      "year": 2023,
+      "finding": "MACE reduction with bempedoic acid was consistent in statin-intolerant patients with and without diabetes, with no increase in new-onset diabetes \u2014 supports robustness of the CV-event benefit across a key high-risk subgroup."
+    },
+    {
+      "source_id": "PMID:37288183",
+      "citation": "Efficacy and Safety of Bempedoic Acid to Prevent Cardiovascular Events in Individuals at Risk of Cardiovascular Diseases: A Meta-Analysis of Randomized-Control Trials. Cureus. 2023. DOI:10.7759/cureus.38662",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Low-impact journal (Cureus); PubMed type = Review. Pooled RCTs but dominated by CLEAR Outcomes \u2014 limited independent weight. Not retracted.",
+      "n_int": 0,
+      "year": 2023,
+      "finding": "Pooled meta-analysis of RCTs found bempedoic acid reduced major adverse cardiovascular events in high-risk/statin-intolerant patients, directionally concordant with CLEAR Outcomes. Effect estimate driven largely by the single pivotal trial."
+    },
+    {
+      "source_id": "PMID:30865796",
+      "citation": "Ray KK, et al. Safety and Efficacy of Bempedoic Acid to Reduce LDL Cholesterol. N Engl J Med. 2019 (CLEAR Harmony). DOI:10.1056/NEJMoa1803917",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Well-conducted RCT but SAFETY/LDL-C trial in patients ON maximally tolerated statins \u2014 not statin-intolerant, and NOT powered for MACE. Surrogate-endpoint context, not confirmatory hard-outcome evidence. Verified.",
+      "n_int": 1488,
+      "year": 2019,
+      "finding": "52-week trial (N=2230) established safety and LDL-C lowering (~18% vs placebo) on background statin therapy. PRIMARY endpoint was SAFETY/LDL-C, not MACE; not designed to test cardiovascular-event reduction \u2014 surrogate only."
+    },
+    {
+      "source_id": "FDA:211616s012s013",
+      "citation": "U.S. FDA. NEXLETOL/NEXLIZET (bempedoic acid; bempedoic acid+ezetimibe) prescribing information, label expansion approved 2024-03-22 (drugsatfda_docs/label/2024/211616s012s013lbl.pdf), based on CLEAR Outcomes (NCT02993406).",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "FDA regulatory action based on CLEAR Outcomes. source_id now points to the actual FDA label document rather than the trial DOI (which was a duplicate of Row 1). Verified via Esperion press release and FDA drugsatfda label.",
+      "n_int": 6992,
+      "year": 2024,
+      "finding": "On 2024-03-22 the FDA expanded the NEXLETOL/NEXLIZET label to reduce the risk of myocardial infarction and coronary revascularization in adults who are unable to take recommended statin therapy (and, more broadly, regardless of statin use). The indication tracks the two individually significant components of the CLEAR Outcomes MACE composite \u2014 regulatory consensus affirming the claim in the target population."
+    }
+  ]
+}

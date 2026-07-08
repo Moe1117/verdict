@@ -1,0 +1,99 @@
+{
+  "claim_id": "N13",
+  "claim": "Nusinersen improves motor function in infants with spinal muscular atrophy",
+  "domain": "neuro",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus is Supported. The pivotal double-blind, sham-controlled Phase 3 ENDEAR trial (Finkel, NEJM 2017; NCT02193074) in infantile-onset SMA met BOTH co-primary endpoints that directly measure the claimed outcome: a significantly higher motor-milestone response on the HINE (51% [37/73] vs 0% sham) and a higher likelihood of event-free survival (HR for death or permanent ventilation 0.53, P=0.005; overall-survival HR 0.37, P=0.004). Efficacy at the prespecified interim analysis prompted early termination. On the basis of ENDEAR, nusinersen (Spinraza) received FDA approval on 23 December 2016 (NDA 209531, Biogen) as the first drug for SMA, and EMA approval in 2017. The confirmatory CHERISH RCT (later-onset SMA) and the NURTURE open-label presymptomatic-infant study reinforce the motor-function benefit across the SMA spectrum, and the 2020 Cochrane review rates the motor-function benefit as moderate-certainty. Population match (infantile-onset) and outcome match (motor milestones/function is a co-primary clinical endpoint, not merely a surrogate) are both satisfied by the pivotal trial, giving a robust Supported consensus.",
+  "outcome": "motor-milestone response (HINE) / event-free survival",
+  "population": "infantile-onset (type 1) spinal muscular atrophy",
+  "build_confidence": "high",
+  "provenance": "Independently re-verified: all 6 PMIDs fetched via PubMed get_article_metadata (titles/authors/DOIs/journals/years/publication-types confirmed; no retractions); NCT02193074 fetched via ClinicalTrials.gov get_trial_details (Phase 3, double-blind sham-controlled, TERMINATED, co-primary endpoints = HINE motor milestones + time to death/permanent ventilation); FDA 23-Dec-2016 approval confirmed via FDA/Biogen sources. Two corrections applied (see notes).",
+  "notes": "ENDEAR is the load-bearing pivotal RCT: infantile-onset population, co-primary endpoints directly measuring motor milestones AND survival (not surrogates), early-terminated for efficacy, basis of FDA/EMA approval. CORRECTIONS ON VERIFICATION: (1) NURTURE (De Vivo) design was mislabeled 'rct' -> it is open-label single-arm Phase 2, recoded 'prospective cohort'; (2) CHERISH per-arm HFMSE values corrected from '+3.9/-1.0' to published '+4.0/-1.9' (between-group difference 5.9 unchanged). CHERISH and the Cochrane review carry population_match=false (later-onset / types II-III) but are directionally supportive. The neurofilament substudy (PMID 31139691) is a SURROGATE-endpoint row (outcome_match=false) distinguishing pNF-H biomarker change from the clinical motor/survival claim. [dramatic_effect=true on 2 pivotal all-or-none rows: single-arm/single-pivotal evidence in a fatal disease (GRADE large-effect).]",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Nusinersen (Spinraza) improves motor function in infants with spinal muscular atrophy. In the pivotal Phase 3 ENDEAR trial in infantile-onset (type 1) SMA, 51% of nusinersen-treated infants achieved a motor-milestone response versus 0% of sham controls, and the drug significantly reduced the risk of death or permanent ventilation (hazard ratio 0.53). The trial was stopped early for efficacy, and nusinersen was FDA-approved in December 2016 as the first disease-modifying therapy for SMA. Benefit is greatest when treatment starts early, so it is now standard of care alongside newborn screening."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:29091570",
+      "citation": "Finkel RS, et al. Nusinersen versus Sham Control in Infantile-Onset Spinal Muscular Atrophy (ENDEAR). N Engl J Med. 2017;377(18):1723-1732. DOI:10.1056/NEJMoa1702752",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind, sham-controlled Phase 3 RCT (NCT02193074), Biogen/Ionis-sponsored but with EAC-adjudicated endpoints and blinded assessment; terminated early at prespecified interim for efficacy. Basis of FDA/EMA approval. Verified: PubMed types 'Clinical Trial, Phase III / Randomized Controlled Trial'; trial record confirms TERMINATED status and co-primary clinical endpoints.",
+      "n_int": 73,
+      "year": 2017,
+      "finding": "Co-primary endpoints both met in infantile-onset SMA: final-analysis motor-milestone response (HINE) 51% (37/73) nusinersen vs 0% (0/37) sham; event-free survival (death or permanent ventilation) HR 0.53, P=0.005; overall survival HR 0.37, P=0.004. Endpoints directly measure the claimed motor and survival outcome (not surrogate).",
+      "dramatic_effect": true
+    },
+    {
+      "source_id": "PMID:31704158",
+      "citation": "De Vivo DC, et al. Nusinersen initiated in infants during the presymptomatic stage of SMA: interim results from the Phase 2 NURTURE study. Neuromuscul Disord. 2019;29(11):842-856. DOI:10.1016/j.nmd.2019.09.007",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED design: abstract states 'Phase 2, multisite, open-label, single-arm NURTURE trial'; PubMed types 'Clinical Trial, Phase II' with no RCT type. Single-arm interventional study (no concurrent control), recoded from 'rct' to 'prospective cohort'. Presymptomatic genetically diagnosed infants; industry-sponsored; strength limited by single-arm design but outcomes benchmarked against natural history.",
+      "n_int": 25,
+      "year": 2019,
+      "finding": "In presymptomatic infants treated in infancy (median 2.9 yr follow-up), all 25 alive with none requiring tracheostomy/permanent ventilation; 25/25 sat unsupported, 23/25 (92%) walked with assistance, 22/25 (88%) walked independently \u2014 motor milestones far exceeding untreated type I/II natural history.",
+      "dramatic_effect": true
+    },
+    {
+      "source_id": "PMID:29443664",
+      "citation": "Mercuri E, et al. Nusinersen versus Sham Control in Later-Onset Spinal Muscular Atrophy (CHERISH). N Engl J Med. 2018;378(7):625-635. DOI:10.1056/NEJMoa1710504",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Confirmatory double-blind, sham-controlled Phase 3 RCT (NCT02292537; 126 children, 2:1 randomization) terminated early at prespecified interim for efficacy. Population is LATER-onset (symptom onset >6 months, type II/III), not infantile-onset \u2014 population_match=false relative to the infant claim. PubMed types confirm Phase III RCT.",
+      "n_int": 84,
+      "year": 2018,
+      "finding": "Later-onset SMA: least-squares mean HFMSE change +4.0 nusinersen vs -1.9 sham (between-group difference 5.9 points, 95% CI 3.7-8.1, P<0.001); in final analysis 57% vs 26% achieved a clinically meaningful >=3-point HFMSE gain (P<0.001). Directly supports the motor-function benefit but in an older population than the claim. [Per-arm values corrected from prior +3.9/-1.0.]"
+    },
+    {
+      "source_id": "PMID:32006461",
+      "citation": "Wadman RI, et al. Drug treatment for spinal muscular atrophy types II and III (Cochrane Review). Cochrane Database Syst Rev. 2020;1(1):CD006282. DOI:10.1002/14651858.CD006282.pub5",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent Cochrane systematic review/meta-analysis (10 RCTs, 717 participants), standard Cochrane methodology, GRADE-rated. PubMed types 'Meta-Analysis / Systematic Review'. Covers SMA types II/III (not infantile type I) \u2014 population_match=false for the infant claim. n_int reflects the nusinersen (CHERISH) contribution.",
+      "n_int": 126,
+      "year": 2020,
+      "finding": "Moderate-certainty evidence that intrathecal nusinersen improves motor function in SMA type II: +3.7-point HFMSE gain vs -1.9-point decline in sham (P<0.01; n=126, the pooled nusinersen RCT). Independent GRADE assessment concludes nusinersen improves motor function; creatine/gabapentin/hydroxyurea/phenylbutyrate/valproate did not."
+    },
+    {
+      "source_id": "PMID:33792051",
+      "citation": "Baranello G, et al. Prognostic Factors and Treatment-Effect Modifiers in Spinal Muscular Atrophy. Clin Pharmacol Ther. 2021;110(6):1435-1454. DOI:10.1002/cpt.2247",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Systematic literature review of prognostic and treatment-effect modifiers (PubMed type 'Systematic Review'); some authors Roche-affiliated (competitor manufacturer of risdiplam), disclosed; conclusions align with independent consensus on early treatment.",
+      "n_int": 0,
+      "year": 2021,
+      "finding": "In type 1 (infantile-onset) SMA, disease duration and age at treatment initiation are key treatment-effect modifiers on survival and motor outcomes, emphasizing that early disease-modifying therapy (including nusinersen) is essential \u2014 reinforcing benefit in infants when treated early."
+    },
+    {
+      "source_id": "PMID:31139691",
+      "citation": "Darras BT, et al. Neurofilament as a potential biomarker for spinal muscular atrophy (ENDEAR substudy). Ann Clin Transl Neurol. 2019;6(5):932-944. DOI:10.1002/acn3.779",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Biomarker substudy of the ENDEAR RCT (NCT02193074) in infantile-onset SMA (PubMed types Phase III RCT). Endpoint is a SURROGATE (plasma pNF-H), not the clinical motor/survival outcome \u2014 correctly flagged outcome_match=false.",
+      "n_int": 117,
+      "year": 2019,
+      "finding": "SURROGATE endpoint: in infantile-onset SMA, nusinersen produced a steep decline in plasma phosphorylated neurofilament heavy chain (pNF-H) \u2014 71.9% at 2 months to 90.1% at 10 months vs 16.2%/60.3% in sham (n=117). Biomarker of disease activity/treatment response, NOT a direct measure of motor function; supports biological effect but is not the clinical claim."
+    }
+  ]
+}

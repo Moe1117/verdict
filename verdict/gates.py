@@ -59,6 +59,9 @@ class EvidenceRow:
     population_match: bool        # does the study population match the claim?
     source_id: str = ""          # PMID / NCT / DOI
     outcome_match: bool = True    # does the endpoint measure the CLAIMED outcome? False = surrogate / off-target
+    dramatic_effect: bool = False # all-or-none / very-large effect on the claimed outcome where the untreated
+                                  # course is uniformly poor (GRADE large-effect; Oxford CEBM all-or-none) —
+                                  # decision-grade even from single-arm or a single pivotal trial
     integrity_ok: bool = True     # False when a citable retraction/EoC applies (see integrity.py)
     n: str = ""                   # sample size (display)
     n_int: int = 0                # sample size (numeric, for the large-RCT rule)
@@ -109,6 +112,26 @@ def resolve(rows: list[EvidenceRow]) -> tuple[Verdict, list[GateTrace]]:
     if dropped:
         trace.append(GateTrace("integrity-screen", True,
                                f"excluded {len(dropped)} study(ies) with documented integrity concerns"))
+
+    # Gate 0b — all-or-none / dramatic effect (GRADE large-effect; Oxford CEBM all-or-none).
+    # A dramatic, directionally-consistent effect on the claimed outcome — a single-arm
+    # response where the untreated course is uniformly poor (CAR-T in refractory leukaemia),
+    # or a single pivotal trial stopped early for a near all-or-none benefit (nusinersen in
+    # infantile SMA) — is decision-grade even without replication or a control arm, UNLESS a
+    # randomized / meta-analytic study contradicts it (then the higher grade decides below).
+    onpop_out = [r for r in rows if r.population_match and r.outcome_match]
+    dramatic = [r for r in onpop_out if r.dramatic_effect]
+    if dramatic:
+        if all(r.supports for r in dramatic) and not any(r.is_trial and r.against for r in onpop_out):
+            trace.append(GateTrace("all-or-none", True,
+                                   f"{len(dramatic)} study(ies) show an all-or-none / dramatic effect; "
+                                   "no randomized evidence contradicts"))
+            return Verdict.SUPPORTED, trace
+        if all(r.against for r in dramatic) and not any(r.is_trial and r.supports for r in onpop_out):
+            trace.append(GateTrace("all-or-none", True,
+                                   f"{len(dramatic)} study(ies) show a dramatic absence of effect; "
+                                   "no randomized evidence contradicts"))
+            return Verdict.NOT_SUPPORTED, trace
 
     # Gate 1 — trial-grade human evidence on-population AND on the claimed outcome.
     on_pop = [r for r in rows if r.is_trial and r.population_match]

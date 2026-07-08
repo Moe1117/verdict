@@ -1,0 +1,84 @@
+{
+  "claim_id": "N20",
+  "claim": "Remdesivir reduces mortality in hospitalized patients with COVID-19",
+  "domain": "infectious",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The mortality-reduction claim is genuinely contested, not settled either way. The two largest mortality-powered RCTs found no significant OVERALL effect on death: WHO Solidarity interim (n=11,330; remdesivir death RR 0.95, 95% CI 0.81-1.11, p=0.50) and Solidarity final (remdesivir arm n=8,275; in-hospital mortality RR 0.91, 95% CI 0.82-1.02, p=0.12). ACTT-1 (Beigel/NEJM 2020), the pivotal FDA-registration trial, had time-to-RECOVERY as its primary endpoint (a surrogate, not mortality); its mortality result was only a secondary outcome and was non-significant (day-29 KM 11.4% vs 15.2%, HR 0.73, 95% CI 0.52-1.03). DisCoVeRy (Lancet ID 2021) found no clinical or mortality benefit. However, the claim is not simply refuted: Solidarity-final showed a nominal benefit in the non-ventilated subgroup (RR 0.86, 95% CI 0.76-0.98), and WHO's living-guideline network meta-analysis found the pooled severe+critical mortality OR to be 0.95 (0.84-1.07, 'little or no impact'), which on disaggregation becomes a borderline possible reduction in SEVERE disease (OR 0.89, 0.78-1.02) but no effect / possible harm in CRITICAL disease (OR 1.15, 0.89-1.51). WHO consequently issued a CONDITIONAL recommendation FOR remdesivir in severe COVID-19 and a conditional recommendation AGAINST it in critical COVID-19. A blanket claim that remdesivir 'reduces mortality in hospitalized patients' is therefore not supported as a general statement \u2014 the effect is null overall, confined at best to a severity subgroup, and rests partly on a surrogate primary endpoint in the registration trial. That is the definition of Contested.",
+  "outcome": "mortality",
+  "population": "hospitalized COVID-19",
+  "provenance": "PubMed (independently re-verified PMIDs via get_article_metadata) for the four landmark RCTs; WHO Therapeutics living guideline network meta-analysis (iris.who.int / magicapp, PMID:33649077 / BMJ m3379) for pooled and subgroup mortality estimates and recommendation status. All effect sizes re-checked verbatim against source abstracts / GRADE summary-of-findings tables during this fact-check.",
+  "notes": "Critical outcome_match issue confirmed: ACTT-1 (the FDA-registration pivotal trial) used time-to-RECOVERY as its primary endpoint, a surrogate \u2014 mortality was a non-significant secondary outcome. DisCoVeRy used day-15 WHO ordinal clinical status (surrogate) as primary. Solidarity interim + final used in-hospital mortality as primary. The strongest, mortality-powered evidence (Solidarity, ~19,600 remdesivir+control pooled) is null overall. Any mortality benefit is subgroup-restricted (severe, non-ventilated) and of low-to-moderate GRADE certainty. Baseline plain-LLM answer overstates the evidence with an unqualified 'Yes'. Two source_id defects were corrected during fact-check (row 2 PMID transposition; row 5 RCT-DOI-mislabeled-as-guideline).",
+  "build_confidence": "high",
+  "rows": [
+    {
+      "source_id": "PMID:32445440",
+      "citation": "Beigel JH, et al. Remdesivir for the Treatment of Covid-19 - Final Report (ACTT-1). N Engl J Med. 2020;383(19):1813-1826. DOI:10.1056/NEJMoa2007764. NCT04280705.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind placebo-controlled FDA-registration trial (NIAID). PRIMARY endpoint was time to RECOVERY (surrogate), not mortality; mortality was a non-significant secondary outcome. PubMed article types confirm RCT / Phase III; no 'Retracted Publication' flag. Verified this fact-check.",
+      "n_int": 541,
+      "year": 2020,
+      "finding": "n=1062 (541 remdesivir vs 521 placebo). Primary met on time-to-recovery (median 10 vs 15 days; rate ratio 1.29, 95% CI 1.12-1.49, P<0.001). Mortality (secondary): KM day-29 11.4% remdesivir vs 15.2% placebo, HR 0.73 (95% CI 0.52-1.03) \u2014 NOT statistically significant. Direction 0 because the claimed mortality outcome was not significantly reduced and was not the primary endpoint. Numbers verified verbatim against the NEJM abstract."
+    },
+    {
+      "source_id": "PMID:33264556",
+      "citation": "WHO Solidarity Trial Consortium. Repurposed Antiviral Drugs for Covid-19 - Interim WHO Solidarity Trial Results. N Engl J Med. 2021;384(6):497-511. DOI:10.1056/NEJMoa2023184. NCT04315948.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED source_id: original corpus had PMID:33264437, which actually resolves to an unrelated alcoholic-hepatitis microbiome paper. The real Solidarity-interim PMID is 33264556 (verified: title, NEJM 384(6):497-511, DOI 10.1056/NEJMoa2023184 all match). Largest randomized mortality trial to date; PRIMARY endpoint = in-hospital mortality; open-label; no retraction.",
+      "n_int": 2743,
+      "year": 2021,
+      "finding": "11,330 adults randomized across 405 hospitals in 30 countries. Death occurred in 301 of 2743 receiving remdesivir vs 303 of 2708 receiving control: rate ratio 0.95 (95% CI 0.81-1.11), p=0.50. No definite mortality reduction overall or in any subgroup. Null on the claimed outcome. Counts and RR verified verbatim against the NEJM abstract."
+    },
+    {
+      "source_id": "PMID:35512728",
+      "citation": "WHO Solidarity Trial Consortium. Remdesivir and three other drugs for hospitalised patients with COVID-19: final results of the WHO Solidarity randomised trial and updated meta-analyses. Lancet. 2022;399(10339):1941-1953. DOI:10.1016/S0140-6736(22)00519-0. NCT04315948.",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Final Solidarity RCT results PLUS meta-analysis of all remdesivir RCTs among hospitalized inpatients; PubMed article type is 'Meta-Analysis'. PRIMARY endpoint = in-hospital mortality subdivided by severity. No retraction. Verified this fact-check.",
+      "n_int": 4146,
+      "year": 2022,
+      "finding": "Remdesivir arm n=4146 vs control n=4129. Overall in-hospital mortality RR 0.91 (95% CI 0.82-1.02), p=0.12 \u2014 NOT significant. Already-ventilated: RR 1.13 (0.89-1.42) no benefit/possible harm. Not-ventilated combined: RR 0.86 (0.76-0.98), p=0.02 \u2014 nominal subgroup benefit. Meta-analysis of all remdesivir RCTs 'yielded similar findings.' Overall mortality effect null; benefit subgroup-confined. All figures verified verbatim against the Lancet abstract."
+    },
+    {
+      "source_id": "PMID:34534511",
+      "citation": "Ader F, et al. Remdesivir plus standard of care versus standard of care alone for the treatment of patients admitted to hospital with COVID-19 (DisCoVeRy): a phase 3, randomised, controlled, open-label trial. Lancet Infect Dis. 2022;22(2):209-221. DOI:10.1016/S1473-3099(21)00485-0. NCT04315948 / EudraCT2020-000936-23.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "European multicentre phase 3 RCT. PRIMARY endpoint = clinical status on the WHO 7-point ordinal scale at day 15 (surrogate), not mortality; mortality reported as a component/secondary. No retraction. Verified this fact-check.",
+      "n_int": 429,
+      "year": 2022,
+      "finding": "857 randomized (429 remdesivir + SoC vs 428 SoC). Day-15 WHO ordinal-scale distribution not significantly different (odds ratio 0.98, 95% CI 0.77-1.25, p=0.85). Death 21/414 (5%) remdesivir vs 24/418 (6%) control. No clinical or mortality benefit. Reinforces the null overall signal; primary endpoint was a clinical-status surrogate. Verified verbatim against the Lancet Infect Dis abstract."
+    },
+    {
+      "source_id": "PMID:33649077",
+      "citation": "Agarwal A, Rochwerg B, et al. A living WHO guideline on drugs for covid-19. BMJ. 2020;370:m3379 (living guideline; remdesivir severe/critical recommendations, 12th iteration). DOI:10.1136/bmj.m3379. Underlying living network meta-analysis; guideline content also at iris.who.int / magicapp.",
+      "design": "guideline / regulatory",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED source_id: original corpus used DOI:10.1056/NEJMoa2023184, which is the Solidarity-INTERIM RCT DOI (an RCT id mislabeled as a guideline, colliding with the corrected row 2). Replaced with PMID:33649077 (BMJ m3379), the actual WHO living guideline. WHO GDG living guideline built on a living network meta-analysis; represents current clinical CONSENSUS. Effect sizes verified against the WHO guideline (iris.who.int / magicapp) this fact-check.",
+      "n_int": 7643,
+      "year": 2023,
+      "finding": "LNMA pooled severe+critical mortality OR 0.95 (95% CI 0.84-1.07), 'little or no impact', moderate certainty (7,643 participants, 5 RCTs). Disaggregated: SEVERE OR 0.89 (0.78-1.02) 'possibly reduces mortality' (low certainty); CRITICAL OR 1.15 (0.89-1.51) no benefit/possible harm. WHO issued a CONDITIONAL recommendation FOR remdesivir in severe and a conditional recommendation AGAINST it in critical COVID-19. Direction 0: no confirmed overall mortality reduction; effect subgroup-restricted and low certainty. All ORs and recommendations verified verbatim against the WHO living guideline."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Remdesivir, an antiviral approved by the FDA (Veklury) for COVID-19, has been shown to reduce mortality in hospitalized patients, particularly those requiring supplemental oxygen. The ACTT-1 trial demonstrated faster recovery and a trend toward lower mortality, and subsequent analyses and guidelines support its use to improve survival in hospitalized COVID-19 patients. It is recommended for hospitalized patients on oxygen."
+  }
+}

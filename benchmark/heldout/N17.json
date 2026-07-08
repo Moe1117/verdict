@@ -1,0 +1,97 @@
+{
+  "claim_id": "N17",
+  "claim": "Riluzole extends survival in amyotrophic lateral sclerosis",
+  "domain": "neuro",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Riluzole is the first drug shown to extend survival in ALS and the basis of its 1995 FDA approval. Two pivotal double-blind placebo-controlled RCTs establish the effect: Bensimon 1994 (NEJM, N=155) had survival as a co-primary endpoint and showed 1-year survival 74% vs 58% with placebo (P=0.014), significant overall at the end of the placebo-controlled period (P=0.046); Lacomblez 1996 (Lancet, N=959) had tracheostomy-free survival as its primary endpoint and confirmed benefit with a significant inverse dose-response (100 mg adjusted risk 0.65, P=0.002). The Cochrane meta-analysis (Miller 2012, 4 trials, 974 vs 503) found HR 0.84 (95% CI 0.698-0.997, P=0.046), a ~9% absolute gain in 1-year survival probability and median survival prolonged by roughly 2-3 months (11.8 to 14.8 months). The effect is real but modest, and the pooled estimate is sensitive to inclusion of the older/more-advanced trial (an earlier Cochrane iteration, pub2 2007, gave HR 0.84, P=0.056 under random effects). Regulatory and clinical consensus (FDA approval; AAN Level A guideline) is that riluzole modestly but genuinely extends survival \u2014 hence Supported, not Contested.",
+  "outcome": "survival",
+  "population": "ALS",
+  "provenance": "PubMed/ClinicalTrials.gov independently re-verified: PMIDs 8302340, 8676624, 22419278, 17253460, 30050378 all resolve to the exact cited articles with matching title/type/design/N/year and reported survival findings; none are Retracted Publications. Row 6 corrected during review: original DOI 10.1212/WNL.0b013e318211bc3e did NOT resolve; real record is PMID:19822872 / DOI:10.1212/WNL.0b013e3181bc0141 (Neurology 2009;73(15):1218-26), verified. All six are real, non-retracted publications.",
+  "build_confidence": "high",
+  "notes": "CLAIMED outcome is survival, and both pivotal trials measured survival (Bensimon) or tracheostomy-free survival (Lacomblez) as a PRIMARY endpoint \u2014 no surrogate substitution \u2014 as do both Cochrane meta-analyses. Caveat is magnitude (modest, ~2-3 months) and pooled-estimate fragility (random-effects Cochrane pub2 P=0.056). This does not overturn Supported: fixed-effect and adjusted analyses are significant and regulators approved on survival. Cochrane pub2 (2007, PMID 17253460) shows the borderline-significance / heterogeneity nuance; pub3 (2012, PMID 22419278) is the definitive significant meta-analysis. Fix applied this review: guideline row DOI/PMID corrected to the resolvable AAN 2009 record.",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Riluzole is the first and one of the few disease-modifying drugs approved for amyotrophic lateral sclerosis (ALS), and it modestly extends survival. In the pivotal trials by Bensimon et al. (1994) and Lacomblez et al. (1996), riluzole improved survival and tracheostomy-free survival, and the Cochrane meta-analysis found it prolongs median survival by about 2-3 months and increases the probability of surviving one year by roughly 9%. It works by reducing glutamate-mediated excitotoxicity. It was FDA-approved in 1995 and remains a standard of care in ALS, typically at 50 mg twice daily. The survival benefit is real but modest, and it does not reverse or halt the disease."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:8302340",
+      "citation": "Bensimon G, Lacomblez L, Meininger V. A controlled trial of riluzole in amyotrophic lateral sclerosis. ALS/Riluzole Study Group. N Engl J Med. 1994;330(9):585-91. DOI:10.1056/NEJM199403033300901",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified: NEJM RCT, article_types include Randomized Controlled Trial. Survival a stated co-primary endpoint. Real, non-retracted.",
+      "n_int": 77,
+      "year": 1994,
+      "finding": "N=155, riluzole 100 mg/day vs placebo. 1-year survival 74% (57/77 riluzole) vs 58% (45/78 placebo), P=0.014; survival advantage remained significant overall at end of placebo-controlled period (49% [38/77] vs 37% [29/78], P=0.046), largest in bulbar-onset patients."
+    },
+    {
+      "source_id": "PMID:8676624",
+      "citation": "Lacomblez L, Bensimon G, Leigh PN, Guillet P, Meininger V. Dose-ranging study of riluzole in amyotrophic lateral sclerosis. ALS/Riluzole Study Group II. Lancet. 1996;347(9013):1425-31. DOI:10.1016/s0140-6736(96)91680-3",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified: Lancet RCT (multicenter). Primary outcome = survival without tracheostomy (a survival endpoint, not a surrogate). Real, non-retracted.",
+      "n_int": 236,
+      "year": 1996,
+      "finding": "N=959, dose-ranging (50/100/200 mg vs placebo). At median 18-mo follow-up, 100 mg adjusted risk of death 0.65 (P=0.002); significant inverse dose-response in mortality. Confirmed riluzole lengthens survival; 100 mg judged best benefit-to-risk."
+    },
+    {
+      "source_id": "PMID:22419278",
+      "citation": "Miller RG, Mitchell JD, Moore DH. Riluzole for amyotrophic lateral sclerosis (ALS)/motor neuron disease (MND). Cochrane Database Syst Rev. 2012;2012(3):CD001447. DOI:10.1002/14651858.CD001447.pub3",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified: Cochrane meta-analysis (pub3), article_types include Meta-Analysis. Primary endpoint = tracheostomy-free survival. Real, non-retracted.",
+      "n_int": 974,
+      "year": 2012,
+      "finding": "4 trials, 974 riluzole vs 503 placebo. Riluzole 100 mg/day: tracheostomy-free survival HR 0.84 (95% CI 0.698-0.997, P=0.046); ~9% absolute gain in 1-year survival (49%->58%); median survival increased 11.8 to 14.8 months (~2-3 months)."
+    },
+    {
+      "source_id": "PMID:17253460",
+      "citation": "Miller RG, Mitchell JD, Lyon M, Moore DH. Riluzole for amyotrophic lateral sclerosis (ALS)/motor neuron disease (MND). Cochrane Database Syst Rev. 2007;(1):CD001447. DOI:10.1002/14651858.CD001447.pub2",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified: earlier Cochrane iteration (pub2), same author team, same tracheostomy-free-survival endpoint. Included to show borderline/heterogeneity nuance. Real, non-retracted.",
+      "n_int": 974,
+      "year": 2007,
+      "finding": "Same 4-trial pool. Homogeneous first two trials: HR 0.80 (0.64-0.99, P=0.042). Adding the older/advanced-disease trial introduced heterogeneity; random-effects overall HR 0.84 (0.70-1.01, P=0.056) fell just short of significance \u2014 a modest, estimate-fragile survival benefit."
+    },
+    {
+      "source_id": "PMID:30050378",
+      "citation": "Hinchcliffe M, Smith A. Riluzole: real-world evidence supports significant extension of median survival times in patients with amyotrophic lateral sclerosis. Degener Neurol Neuromuscul Dis. 2017;7:61-70. DOI:10.2147/DNND.S135748",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified: real, non-retracted. Indexed as a narrative Review (not a formal systematic review) synthesizing RCT + real-world evidence; RWE from observational databases (lower design tier than RCT). Design label slightly generous; downweight accordingly.",
+      "n_int": 0,
+      "year": 2017,
+      "finding": "Reviews 10 clinical ALS databases: RCTs show ~2-3 month median survival extension and ~9% higher 1-year survival, while real-world evidence reports larger gains (median survival improvements exceeding 19 months in some ALS populations)."
+    },
+    {
+      "source_id": "PMID:19822872",
+      "citation": "Miller RG, Jackson CE, Kasarskis EJ, et al. Practice parameter update: The care of the patient with ALS: Drug, nutritional, and respiratory therapies (an evidence-based review). Report of the Quality Standards Subcommittee of the American Academy of Neurology. Neurology. 2009;73(15):1218-26. DOI:10.1212/WNL.0b013e3181bc0141",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED during review: original corpus DOI 10.1212/WNL.0b013e318211bc3e did not resolve; verified real record is PMID:19822872 / DOI:10.1212/WNL.0b013e3181bc0141. AAN evidence-based Practice Guideline; recommends riluzole for survival benefit (Level A).",
+      "n_int": 0,
+      "year": 2009,
+      "finding": "AAN evidence-based guideline concludes riluzole is safe and effective and should be offered to slow disease progression / modestly prolong survival (~2-3 months, 4 Class I trials) in ALS (Level A) \u2014 mirroring FDA approval (1995) of riluzole as the first survival-extending ALS therapy."
+    }
+  ]
+}

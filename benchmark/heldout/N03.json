@@ -1,0 +1,71 @@
+{
+  "claim_id": "N03",
+  "claim": "Torcetrapib (a CETP inhibitor) reduces cardiovascular events",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The pivotal cardiovascular outcomes trial ILLUMINATE (Barter, NEJM 2007; N=15,067 high-CV-risk patients on atorvastatin) tested exactly this claim and found the OPPOSITE: torcetrapib INCREASED major cardiovascular events (HR 1.25, 95% CI 1.09-1.44, P=0.001) and all-cause death (HR 1.58, 95% CI 1.14-2.19, P=0.006), and the trial was terminated early for harm \u2014 despite a 72% rise in HDL-C and 25% fall in LDL-C. Two companion imaging trials confirmed no anti-atherosclerotic benefit despite favorable lipid changes: ILLUSTRATE (Nissen, coronary IVUS, no change in atheroma volume, P=0.72) and RADIANCE 1/FH (Kastelein, carotid IMT, null on primary max-IMT P=0.87 with actual progression in the common carotid, P=0.005). Torcetrapib development was discontinued by Pfizer in December 2006. The class-level cardiovascular outcomes trial ACCELERATE (Lincoff, NEJM 2017) with the structurally distinct CETP inhibitor evacetrapib was also stopped for futility (HR 1.01), showing that raising HDL via CETP inhibition does not translate into event reduction. Regulatory/clinical consensus is unambiguous: torcetrapib does NOT reduce cardiovascular events \u2014 it causes net harm \u2014 so the claim is Not Supported.",
+  "outcome": "MACE (CHD death, nonfatal MI, stroke, hospitalization for unstable angina) and all-cause mortality",
+  "population": "Patients at high cardiovascular risk on statin therapy",
+  "provenance": "PubMed + ClinicalTrials.gov independently re-verified (retrieved 2026-07-08): all 4 PMIDs resolve to the exact claimed titles/DOIs and are indexed as RCTs with no retraction; NCT IDs NCT00134264 (ILLUMINATE, N=15,067, terminated) and NCT01687998 (ACCELERATE, N=12,092, terminated) confirmed against the registry; every N, HR, CI, P-value and lipid change matches the source abstracts verbatim.",
+  "build_confidence": "high",
+  "notes": "Consensus hint (Not Supported) confirmed and strengthened: torcetrapib is a textbook case of a HDL-raising drug that increased hard clinical events. The pivotal trial (ILLUMINATE) directly measured the claimed outcome (MACE/mortality) and showed harm. The two 2007 imaging trials measured only SURROGATES (percent atheroma volume / carotid IMT) and showed no benefit; they are flagged outcome_match=false. ACCELERATE (evacetrapib, different molecule) is a class-level confirmatory negative \u2014 population_match true (high-risk vascular on statins), drug not torcetrapib, so treated as class evidence. Fact-check found no hallucinated IDs, wrong Ns, wrong directions, mislabeled designs, or fabricated retractions; corpus verified unchanged.",
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Torcetrapib does not reduce cardiovascular events \u2014 it does the opposite. In the pivotal ILLUMINATE trial (NEJM 2007, ~15,000 high-risk patients on atorvastatin), torcetrapib raised HDL cholesterol by about 72% and lowered LDL by about 25%, yet it INCREASED major cardiovascular events (hazard ratio ~1.25) and all-cause mortality (hazard ratio ~1.58). The trial was halted early for harm, and Pfizer discontinued the drug in December 2006. The excess risk was linked partly to off-target effects (raised blood pressure, aldosterone, electrolyte changes). Torcetrapib is a classic example of a drug that improved a lipid biomarker but harmed patients on hard clinical endpoints, and it is not used clinically."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:17984165",
+      "citation": "Barter PJ, et al. Effects of torcetrapib in patients at high risk for coronary events. N Engl J Med. 2007;357(21):2109-22. DOI:10.1056/NEJMoa0706628 (ILLUMINATE; NCT00134264).",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal double-blind RCT terminated early by DSMB for harm; Pfizer-sponsored, published in NEJM. Indexed as Randomized Controlled Trial; no retraction. PMID/DOI/NCT and all statistics re-verified against source abstract and registry.",
+      "n_int": 15067,
+      "year": 2007,
+      "finding": "Torcetrapib+atorvastatin vs atorvastatin alone in 15,067 high-CV-risk patients. Despite HDL +72.1% and LDL -24.9%, INCREASED major CV events (HR 1.25, 95% CI 1.09-1.44, P=0.001) and all-cause death (HR 1.58, 95% CI 1.14-2.19, P=0.006). Also raised systolic BP +5.4 mmHg and aldosterone. Trial stopped for harm. Directly contradicts the claim."
+    },
+    {
+      "source_id": "PMID:17387129",
+      "citation": "Nissen SE, et al. Effect of torcetrapib on the progression of coronary atherosclerosis. N Engl J Med. 2007;356(13):1304-16. DOI:10.1056/NEJMoa070635 (ILLUSTRATE; NCT00134173).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "SURROGATE endpoint (coronary IVUS percent atheroma volume), not clinical MACE. Pfizer-sponsored NEJM RCT; indexed as Randomized Controlled Trial; no retraction. NCT00134173 matches abstract.",
+      "n_int": 1188,
+      "year": 2007,
+      "finding": "1,188 coronary-disease patients, coronary intravascular ultrasound. Despite HDL +61% and LDL -20%, NO significant effect on progression of coronary atherosclerosis (percent atheroma volume change +0.12% torcetrapib vs +0.19% atorvastatin-only, P=0.72). Raised systolic BP +4.6 mmHg. No anti-atherosclerotic benefit on the surrogate."
+    },
+    {
+      "source_id": "PMID:17387131",
+      "citation": "Kastelein JJP, et al. Effect of torcetrapib on carotid atherosclerosis in familial hypercholesterolemia. N Engl J Med. 2007;356(16):1620-30. DOI:10.1056/NEJMoa071359 (RADIANCE 1; NCT00136981).",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "SURROGATE endpoint (carotid intima-media thickness), not clinical MACE. Pfizer-sponsored NEJM RCT; indexed as Randomized Controlled Trial; no retraction. NCT00136981 matches abstract. direction -1 reflects significant progression on the secondary common-carotid surrogate (primary max-IMT was null).",
+      "n_int": 850,
+      "year": 2007,
+      "finding": "850 heterozygous familial hypercholesterolemia patients, carotid IMT over 24 months. Despite large HDL rise and LDL fall, NO reduction in progression of atherosclerosis; primary max-IMT no benefit (P=0.87) and secondary common-carotid mean IMT showed PROGRESSION with torcetrapib (+0.0038 vs -0.0014 mm/yr, P=0.005). Surrogate worsened."
+    },
+    {
+      "source_id": "PMID:28514624",
+      "citation": "Lincoff AM, et al. Evacetrapib and Cardiovascular Outcomes in High-Risk Vascular Disease. N Engl J Med. 2017;376(20):1933-1942. DOI:10.1056/NEJMoa1609581 (ACCELERATE; NCT01687998).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Different CETP inhibitor (evacetrapib, not torcetrapib) \u2014 included as class-level confirmatory evidence for the CETP-inhibition/HDL-raising mechanism. Terminated for futility. NEJM Phase III RCT, Eli Lilly funded; no retraction. N/HR/CI/P and NCT re-verified.",
+      "n_int": 12092,
+      "year": 2017,
+      "finding": "12,092 high-risk vascular patients. Evacetrapib raised HDL +133.2% and lowered LDL -31.1%, yet MACE identical to placebo (12.9% vs 12.8%; HR 1.01, 95% CI 0.91-1.11, P=0.91). Stopped early for lack of efficacy. Confirms at class level that CETP inhibition / HDL-raising does not reduce cardiovascular events."
+    }
+  ]
+}

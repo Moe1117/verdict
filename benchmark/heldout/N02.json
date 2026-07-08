@@ -1,0 +1,71 @@
+{
+  "claim_id": "N02",
+  "claim": "Finerenone reduces kidney and cardiovascular outcomes in patients with diabetic kidney disease",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Two large pivotal phase 3 RCTs each met their primary hard-endpoint composite in CKD with type 2 diabetes: FIDELIO-DKD met its primary KIDNEY composite (kidney failure / sustained >=40% eGFR decline / renal death; HR 0.82, 95% CI 0.73-0.93, P=0.001) and its key secondary CV composite (HR 0.86, 0.75-0.99), and FIGARO-DKD met its primary CV composite (CV death, non-fatal MI, non-fatal stroke, HF hospitalization; HR 0.87, 0.76-0.98, P=0.03). The prespecified individual-patient FIDELITY pooled analysis (n=13,026) confirmed reductions in BOTH the CV composite (HR 0.86, 0.78-0.95, P=0.0018) and the kidney composite (HR 0.77, 0.67-0.88, P=0.0002). The 2026 INFINITY IPD meta-analysis (adding FIND-CKD, n=14,574) reproduced these effects (kidney HR 0.76; CV HR 0.80) and additionally showed all-cause mortality benefit (HR 0.88). On this evidence the FDA approved finerenone (Kerendia) in July 2021 (verified: FDA + Bayer press releases 2021-07-09) specifically to reduce sustained eGFR decline, end-stage kidney disease, CV death, non-fatal MI, and HF hospitalization in adults with CKD associated with T2DM. All outcomes are hard clinical endpoints, not surrogates; the only notable safety signal is dose-dependent hyperkalemia. Consensus is unambiguously Supported.",
+  "outcome": "Kidney composite (kidney failure / sustained eGFR decline / renal death) and cardiovascular composite (CV death, non-fatal MI, non-fatal stroke, hospitalization for heart failure)",
+  "population": "Adults with chronic kidney disease associated with type 2 diabetes (CKD + T2DM), on maximally tolerated RAS blockade",
+  "provenance": "PubMed (PMIDs 33264825, 34449181, 35023547, 42248158 \u2014 all re-verified via PubMed metadata) + FDA Drugs@FDA label 215341 / FDA + Bayer press releases (2021-07-09, verified via web). Verified NCTs: NCT02540993 (FIDELIO-DKD, Phase 3, enrollment 5734), NCT02545049 (FIGARO-DKD, Phase 3, enrollment 7352), NCT05047263 (FIND-CKD, Phase 3, non-diabetic CKD, enrollment 1584).",
+  "notes": "Adversarially re-verified 2026-07-08. All 4 literature rows genuine, no retractions; PMIDs/DOIs/NCTs resolve to the cited articles with matching design/N/direction/HR/CI. The original build's 5th row (FDA) was DROPPED because its source_id (DOI:10.1001/jamanetworkopen.2022.36123) resolves to an unrelated FIDELITY pneumonia/COVID sub-analysis, not the FDA action it cited \u2014 a mismatched 'proxy' id the build itself flagged. The FDA approval remains true and is documented in gold_rationale/provenance. All primary endpoints are hard clinical composites (no surrogate). Main safety caveat: dose-dependent hyperkalemia (FIDELITY discontinuation 1.7% finerenone vs 0.6% placebo), not an efficacy contradiction. FIDELIO n_int=2833 is the finerenone arm (total 5734) \u2014 correct, not an error.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Finerenone (Kerendia), a non-steroidal selective mineralocorticoid receptor antagonist, reduces both kidney and cardiovascular outcomes in patients with chronic kidney disease due to type 2 diabetes. In FIDELIO-DKD (NEJM 2020) it reduced the primary kidney composite (kidney failure, sustained >=40% eGFR decline, or renal death) by ~18% (HR 0.82) and also lowered cardiovascular events; in FIGARO-DKD (NEJM 2021) it reduced the primary cardiovascular composite (CV death, non-fatal MI, non-fatal stroke, or heart-failure hospitalization) by ~13% (HR 0.87), driven largely by fewer heart-failure hospitalizations. The prespecified FIDELITY pooled analysis (>13,000 patients) confirmed significant reductions in both the CV composite (HR 0.86) and the kidney composite (HR 0.77). On this basis the FDA approved finerenone in 2021 to reduce the risk of kidney disease progression, kidney failure, cardiovascular death, non-fatal MI, and heart-failure hospitalization in adults with CKD associated with type 2 diabetes. The main safety consideration is hyperkalemia, so potassium should be monitored."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:33264825",
+      "citation": "Bakris GL, et al. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes (FIDELIO-DKD). N Engl J Med. 2020;383(23):2219-2229. DOI:10.1056/NEJMoa2025845. NCT02540993.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via PubMed: title/DOI/journal match; no retraction. Pivotal phase 3, double-blind, placebo-controlled RCT (NCT02540993 confirmed Phase 3, enrollment 5734). PRIMARY endpoint = hard KIDNEY composite (kidney failure / sustained >=40% eGFR decline / renal death), directly matching the claimed kidney outcome, not a surrogate; CV composite = key secondary and also met.",
+      "n_int": 2833,
+      "year": 2020,
+      "finding": "Primary kidney composite 17.8% finerenone (504/2833) vs 21.1% placebo (600/2841) (HR 0.82, 95% CI 0.73-0.93, P=0.001). Key secondary CV composite (CV death, non-fatal MI, non-fatal stroke, HF hospitalization) 13.0% vs 14.8% (HR 0.86, 95% CI 0.75-0.99, P=0.03). Median follow-up 2.6y; hyperkalemia-related discontinuation 2.3% vs 0.9%."
+    },
+    {
+      "source_id": "PMID:34449181",
+      "citation": "Pitt B, et al. Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes (FIGARO-DKD). N Engl J Med. 2021;385(24):2252-2263. DOI:10.1056/NEJMoa2110956. NCT02545049.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via PubMed: title/DOI/journal match; no retraction. Pivotal phase 3, double-blind, placebo-controlled RCT (NCT02545049 confirmed Phase 3, enrollment 7352; 7437 randomized). PRIMARY endpoint = hard CV composite (CV death, non-fatal MI, non-fatal stroke, HF hospitalization), directly matching the claimed CV outcome; kidney composite = secondary. Enrolled earlier/less-severe CKD than FIDELIO.",
+      "n_int": 3686,
+      "year": 2021,
+      "finding": "Primary CV composite 12.4% finerenone (458/3686) vs 14.2% placebo (519/3666) (HR 0.87, 95% CI 0.76-0.98, P=0.03), driven mainly by lower HF hospitalization (HR 0.71, 0.56-0.90). Secondary kidney composite HR 0.87 (0.76-1.01). Median follow-up 3.4y."
+    },
+    {
+      "source_id": "PMID:35023547",
+      "citation": "Agarwal R, et al. Cardiovascular and kidney outcomes with finerenone in patients with type 2 diabetes and CKD: the FIDELITY pooled analysis. Eur Heart J. 2022;43(6):474-484. DOI:10.1093/eurheartj/ehab777.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via PubMed: title/DOI/journal match; no retraction. Prespecified individual-patient-level pooled analysis of the two phase III RCTs FIDELIO-DKD + FIGARO-DKD; not post-hoc. Both co-primary composites are hard clinical endpoints matching the claim.",
+      "n_int": 6519,
+      "year": 2022,
+      "finding": "Among 13,026 patients (median 3.0y), CV composite 12.7% finerenone (825) vs 14.4% placebo (939) (HR 0.86, 95% CI 0.78-0.95, P=0.0018); kidney composite (kidney failure / sustained >=57% eGFR decline / renal death) 5.5% (360) vs 7.1% (465) (HR 0.77, 0.67-0.88, P=0.0002). Hyperkalemia-related discontinuation 1.7% vs 0.6%."
+    },
+    {
+      "source_id": "PMID:42248158",
+      "citation": "Neuen BL, Agarwal R, et al. Efficacy and safety of finerenone in patients with chronic kidney disease: an individual participant data pooled analysis (INFINITY). Lancet. 2026;407(10546):2375-2386. DOI:10.1016/S0140-6736(26)01009-3.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Re-verified via PubMed: title/DOI/journal match; no retraction. IPD meta-analysis of 3 RCTs (FIDELIO-DKD NCT02540993, FIGARO-DKD NCT02545049, FIND-CKD NCT05047263 \u2014 all confirmed real Phase 3; total n=14,574). Extends beyond diabetic CKD to broader CKD aetiologies, so population is a superset of the diabetic-kidney-disease claim (T2DM subgroup consistent). Hard clinical composites; adds all-cause mortality benefit. n_int=7287 is an unstated ~50% arm estimate (abstract gives total only).",
+      "n_int": 7287,
+      "year": 2026,
+      "finding": "Across 14,574 participants, kidney composite reduced 24% (HR 0.76, 95% CI 0.68-0.86) and kidney failure alone (HR 0.85, 0.74-0.99); CV composite (HF hospitalization or CV death) HR 0.80 (0.70-0.91); all-cause death HR 0.88 (0.79-0.99). Effects consistent irrespective of glycaemic status, CKD aetiology, eGFR, albuminuria, and SGLT2i use."
+    }
+  ]
+}

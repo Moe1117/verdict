@@ -1,0 +1,113 @@
+{
+  "claim_id": "N09",
+  "claim": "Tisagenlecleucel (CAR-T) induces durable remission in relapsed or refractory pediatric B-cell acute lymphoblastic leukemia",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Regulatory and clinical consensus is unambiguously Supported. The pivotal global open-label single-arm Phase 2 ELIANA trial (Maude, NEJM 2018; PMID 29385370; NCT02435849) met its primary endpoint of overall remission rate (CR/CRi within 3 months) at 81%, with 100% of responders MRD-negative, and critically the IRC-assessed primary endpoint directly measured the CLAIMED outcome (remission), not a surrogate. Durability is established across three ELIANA data cuts on the same cohort: 12-month EFS 50% (2018), 3-year EFS 44%/RFS 52% (Laetsch/Grupp, JCO 2023; PMID 36399695), and final 5.9-year follow-up EFS 42%, OS 55%, RFS-in-responders 49% (Rives, EHA 2022 abstract). Most events occurred within the first 2 years, after which curves plateau, supporting curative potential in a subset. The single-center Phase 1/2a CHOP study (Maude, NEJM 2014, PMID 25317870, N=30) established 90% CR with 6-month EFS 67%. Independent real-world confirmation (Schultz Pediatric Real-World CAR Consortium, JCO 2022, PMID 34882493, N=185 infused) reproduced the registration data (85% CR, 12-month EFS 50%). These data underpinned the FDA approval of tisagenlecleucel (Kymriah) on Aug 30 2017 \u2014 the first-ever FDA-approved CAR-T and gene therapy \u2014 for r/r pediatric/young-adult B-ALL, based on trial B2202 (=ELIANA) with ORR 82.5% (52/63) all MRD-negative in the efficacy population (FDA Summary Basis for Regulatory Action, BLA STN 125646). The word 'durable' warrants nuance: ~28-37% of responders relapse (many CD19-negative), and post-relapse/non-response survival is poor (Schultz, JCO 2023, PMID 36108252), so remission is durable in roughly half but not all patients. This nuance does not overturn the consensus that tisagenlecleucel induces high-rate, deep, and durable (multi-year) remissions in a disease previously carrying dismal salvage outcomes.",
+  "outcome": "remission / event-free survival",
+  "population": "relapsed/refractory pediatric B-cell acute lymphoblastic leukemia",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Tisagenlecleucel (Kymriah) induces durable remissions in relapsed or refractory pediatric B-cell ALL. In the pivotal Phase 2 ELIANA trial, the overall remission rate was 81% within 3 months, with all responders achieving MRD-negative complete remission, and event-free survival of 50% and overall survival of 76% at 12 months. Long-term follow-up shows a substantial fraction of patients remain in remission for years, and it was the first FDA-approved CAR-T therapy (2017) on the strength of these results. It is now a standard-of-care option for this population."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:25317870",
+      "citation": "Maude SL, et al. Chimeric antigen receptor T cells for sustained remissions in leukemia. N Engl J Med. 2014;371(16):1507-17. DOI:10.1056/NEJMoa1407222.",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED PubMed: PMID 25317870, NEJM 2014;371(16):1507-17, article_types 'Clinical Trial Phase I'+'Phase II'. Single-institution single-arm Phase 1/2a (CHOP/UPenn), children+adults; relabeled from 'rct' (no randomization/comparator). Not retracted. Novartis-supported.",
+      "n_int": 30,
+      "year": 2014,
+      "finding": "CTL019 (tisagenlecleucel) in relapsed/refractory ALL achieved complete remission in 27/30 (90%), including post-transplant and blinatumomab-refractory patients; 6-month EFS 67% and OS 78%, with durable remissions up to 24 months. Primary readout = remission (the claimed outcome), not a surrogate.",
+      "dramatic_effect": true
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMoa1709866",
+      "citation": "Maude SL, et al. Tisagenlecleucel in Children and Young Adults with B-Cell Lymphoblastic Leukemia (ELIANA primary analysis). N Engl J Med. 2018;378(5):439-448. PMID:29385370. (NCT02435849).",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED: DOI 10.1056/NEJMoa1709866 = PMID 29385370, NEJM 2018;378(5):439-448. ClinicalTrials.gov confirms ELIANA is open-label SINGLE-ARM multicenter Phase II (25 centers/11 countries); FDA-registration trial B2202; primary endpoint ORR by IRC. Relabeled from 'rct' (single-arm, no randomized comparator). Not retracted. Novartis-funded.",
+      "n_int": 75,
+      "year": 2018,
+      "finding": "Overall remission rate (CR/CRi within 3 months) was 81% among 75 evaluable infused patients, all MRD-negative. EFS 73% at 6 mo and 50% at 12 mo; OS 90% and 76%. Relapse-free survival among responders 80% at 6 mo, 59% at 12 mo; median DoR not reached. Primary IRC-assessed endpoint IS the claimed remission outcome (not a surrogate).",
+      "dramatic_effect": true
+    },
+    {
+      "source_id": "DOI:10.1200/JCO.22.00642",
+      "citation": "Laetsch TW, Maude SL, Rives S, et al. Three-Year Update of Tisagenlecleucel in Pediatric and Young Adult Patients With R/R ALL in the ELIANA Trial. J Clin Oncol. 2023;41(9):1664-1669. PMID:36399695. (NCT02435849).",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED PubMed: PMID 36399695, DOI 10.1200/JCO.22.00642, JCO vol 41(9):1664-1669; abstract confirms all numbers. Longer-term (median 38.8 mo) follow-up of the same single-arm ELIANA cohort; N=79 all-infused. Relabeled from 'rct'. Novartis-funded. Not retracted. Directly addresses DURABILITY.",
+      "n_int": 79,
+      "year": 2023,
+      "finding": "At median 38.8-month follow-up: ORR 82%; 3-year EFS 44%, OS 63%, RFS 52% (censored)/48% (uncensored). Median EFS 24 mo. Most events occurred within first 2 years; curves then plateau, supporting durable remission and curative potential. No new/unexpected long-term AEs.",
+      "dramatic_effect": true
+    },
+    {
+      "source_id": "DOI:10.1097/01.hs9.0000843344.19780.98",
+      "citation": "Rives S, Maude SL, Hiramatsu H, et al. Tisagenlecleucel in pediatric/young adult R/R B-ALL: Final analyses from the ELIANA study (5.9-year follow-up). HemaSphere 2022;6(S3):S112 (EHA 2022 oral abstract).",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED via Exa/HemaSphere: DOI 10.1097/01.hs9.0000843344.19780.98, EHA 2022 abstract S112, final ELIANA analysis, median 5.5-yr follow-up (64 pts >=5 yr). CONGRESS ABSTRACT (not full peer-reviewed paper) \u2014 weight accordingly. Single-arm; relabeled from 'rct'. Novartis-funded.",
+      "n_int": 79,
+      "year": 2022,
+      "finding": "Final long-term data: ORR 82% (95% CI 72-90); 5-year EFS 42%, OS 55%; RFS among responders 49% with median RFS not reached (43.8-46.8 mo when censoring for SCT). No new/unexpected late toxicities. Establishes multi-year DURABLE remission in ~half of responders \u2014 core durability evidence for the claim.",
+      "dramatic_effect": true
+    },
+    {
+      "source_id": "PMID:34882493",
+      "citation": "Schultz LM, et al. Disease Burden Affects Outcomes in Pediatric and Young Adult B-ALL After Commercial Tisagenlecleucel: A Pediatric Real-World CAR Consortium Report. J Clin Oncol. 2022;40(9):945-955. DOI:10.1200/JCO.20.03585.",
+      "design": "prospective cohort",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED PubMed: PMID 34882493, DOI 10.1200/JCO.20.03585, JCO 40(9):945-955. Independent multi-institutional (15 US centers) RETROSPECTIVE real-world cohort of COMMERCIAL product; not industry-run. Enum lacks 'retrospective cohort' \u2014 kept 'prospective cohort' as least-wrong. Confirms registration data outside trial. Not retracted.",
+      "n_int": 185,
+      "year": 2022,
+      "finding": "Real-world commercial tisagenlecleucel (200 intent-to-treat, 185 infused) reproduced pivotal results: 85% CR in infused cohort, 12-month OS 72% and EFS 50%. Confirms external validity of ELIANA. Low-disease-burden patients did notably better (12-mo EFS 70%), high-burden worse (EFS 31%).",
+      "dramatic_effect": true
+    },
+    {
+      "source_id": "PMID:36108252",
+      "citation": "Schultz LM, et al. Outcomes After Nonresponse and Relapse Post-Tisagenlecleucel in Children, Adolescents, and Young Adults With B-ALL. J Clin Oncol. 2023;41(2):354-363. DOI:10.1200/JCO.22.01076.",
+      "design": "prospective cohort",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "VERIFIED PubMed: PMID 36108252, DOI 10.1200/JCO.22.01076, JCO 41(2):354-363. Nuance/limitation row: independent multi-institutional RETROSPECTIVE cohort quantifying the DURABILITY ceiling \u2014 not a contradiction of efficacy but a boundary on 'durable' for the ~1/3 who relapse. Enum lacks 'retrospective cohort'. Not retracted.",
+      "n_int": 80,
+      "year": 2023,
+      "finding": "Among responders, cumulative relapse incidence ~37% at 12 months (CD19+ and CD19- relapses); post-relapse 12-mo OS ~52%, and CD19-negative relapse carried poor OS (~30%). Non-responders had 12-mo OS ~19%. Tempers 'durable': remission is durable in roughly half, but relapse/nonresponse remains a meaningful failure mode."
+    },
+    {
+      "source_id": "BLA:125646",
+      "citation": "US FDA. Approval of tisagenlecleucel (KYMRIAH), BLA STN 125646, Aug 30 2017 \u2014 first FDA-approved CAR-T / gene therapy; indication B-cell precursor ALL refractory or in second+ relapse, up to 25 years. FDA Summary Basis for Regulatory Action (fda.gov/media/107962) + FDA press release (Aug 30 2017).",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED: original source_id PMID:29385370 was a FALSE identifier \u2014 that PMID is the ELIANA 2018 NEJM paper (row 2), NOT an FDA document. Replaced with real regulatory id BLA STN 125646. FDA facts independently verified: Aug 30 2017, first gene therapy, up-to-25y indication, based on trial B2202(=ELIANA), ORR 82.5% (52/63) all MRD-neg. EMA/NCCN concordant. Regulatory-consensus row, not a study (n_int=0).",
+      "n_int": 0,
+      "year": 2017,
+      "finding": "FDA approved tisagenlecleucel for r/r B-ALL in patients up to 25 years based on the ELIANA/B2202 remission data (ORR 82.5%, 52/63, all MRD-negative) \u2014 the first-ever approved CAR-T and gene therapy. NCCN and international guidelines list it as a standard-of-care option, cementing the Supported consensus."
+    }
+  ],
+  "notes": "[dramatic_effect=true on 5 pivotal all-or-none rows: single-arm/single-pivotal evidence in a fatal disease (GRADE large-effect).]"
+}

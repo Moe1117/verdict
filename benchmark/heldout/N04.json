@@ -1,0 +1,97 @@
+{
+  "claim_id": "N04",
+  "claim": "Aspirin reduces cardiovascular events in the primary prevention of cardiovascular disease in healthy adults",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The modern evidence base does not support routine aspirin for primary prevention of CVD in healthy adults. The claim is literally true in the narrow mechanistic sense \u2014 pooled data do show a small relative reduction in the MACE composite (ATT 2009: 12% reduction in serious vascular events; Zheng/Roddick JAMA 2019: HR 0.89, ARR 0.38%, NNT 265) \u2014 but that marginal benefit is offset by a proportionally larger increase in major bleeding (Zheng/Roddick: HR 1.43, ARI 0.47%, NNH 210), so there is no NET benefit for the general healthy adult. The three 2018 pivotal RCTs are decisive: ASPREE (n=19,114 healthy elderly) showed no CVD reduction plus increased major hemorrhage and a signal of increased all-cause mortality; ARRIVE (moderate-risk) showed no reduction in its primary composite; ASCEND (diabetics) showed a vascular-event reduction essentially cancelled by bleeding. The 2022 USPSTF codified the shift: a D recommendation AGAINST initiating aspirin at age >=60, and only a C recommendation (individualized, small net benefit) for ages 40-59 at >=10% 10-year risk. As stated \u2014 an unqualified population-level benefit for 'healthy adults' \u2014 the claim is Not Supported: the isolated efficacy endpoint is real but the net clinical benefit that the claim implies is absent once bleeding harm is counted, and guidelines now advise against routine use.",
+  "outcome": "MACE composite (cardiovascular death, non-fatal MI, non-fatal stroke)",
+  "population": "Adults without established cardiovascular disease (primary prevention)",
+  "provenance": "PubMed-verified (all 6 PMIDs/DOIs/titles/journals/years confirmed against PubMed metadata, no retractions): ASPREE NEJM 2018 (PMID 30221597, DOI 10.1056/NEJMoa1805819); ASCEND NEJM 2018 (PMID 30146931, DOI 10.1056/NEJMoa1804988); ARRIVE Lancet 2018 (PMID 30158069, DOI 10.1016/S0140-6736(18)31924-X); Zheng & Roddick JAMA 2019 meta-analysis (PMID 30667501, DOI 10.1001/jama.2018.20578); ATT Collaboration Lancet 2009 (PMID 19482214, DOI 10.1016/S0140-6736(09)60503-1); USPSTF JAMA 2022 (PMID 35471505, DOI 10.1001/jama.2022.4983). No retracted publications among sources.",
+  "build_confidence": "high",
+  "notes": "Nuance: the CLAIMED outcome (MACE reduction) is technically achieved in pooled analyses (small relative reduction), but every modern pivotal trial and the governing guideline conclude NO NET BENEFIT once major bleeding is counted \u2014 so the claim as an unqualified population statement is Not Supported. outcome_match is true for the RCTs/meta-analyses (the endpoint IS the MACE composite / serious vascular events, not a surrogate). ASPREE CVD was a prespecified secondary endpoint (primary was disability-free survival); direction coded -1 because CVD was not reduced and major hemorrhage increased, plus a companion-paper all-cause-mortality signal. Zheng/Roddick coded +1 on the isolated MACE endpoint (statistically significant reduction) with offsetting bleeding harm noted in integrity_note. Adversarial re-verification confirmed all Ns, HRs/rate ratios, directions, and designs against source abstracts.",
+  "rows": [
+    {
+      "source_id": "PMID:30221597",
+      "citation": "McNeil JJ, et al. Effect of Aspirin on Cardiovascular Events and Bleeding in the Healthy Elderly (ASPREE). N Engl J Med. 2018;379:1509-1518. DOI:10.1056/NEJMoa1805819",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PubMed-verified: RCT, N Engl J Med 2018;379(16):1509-1518, no retraction. Large NIH/NHMRC-funded double-blind placebo-controlled RCT, n=19,114 healthy adults >=70 (>=65 for US blacks/Hispanics). Aspirin did NOT reduce cardiovascular disease vs placebo (HR 0.95, 95% CI 0.83-1.08) and significantly increased major hemorrhage (HR 1.38, 95% CI 1.18-1.62). Note: CVD was a prespecified SECONDARY endpoint (primary = death/dementia/disability composite); a companion ASPREE paper reported higher all-cause mortality on aspirin. No integrity concerns.",
+      "n_int": 19114,
+      "year": 2018,
+      "finding": "In healthy older adults, low-dose aspirin produced no significant reduction in cardiovascular events and significantly increased major bleeding \u2014 no net benefit."
+    },
+    {
+      "source_id": "PMID:30158069",
+      "citation": "Gaziano JM, et al. Use of aspirin to reduce risk of initial vascular events in patients at moderate risk of cardiovascular disease (ARRIVE): a randomised, double-blind, placebo-controlled trial. Lancet. 2018;392:1036-1046. DOI:10.1016/S0140-6736(18)31924-X",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PubMed-verified: RCT, Lancet 2018;392(10152):1036-1046, no retraction. Double-blind placebo-controlled RCT, n=12,546 at estimated moderate CVD risk. Primary composite endpoint (CV death, MI, unstable angina, stroke, TIA) not reduced (HR 0.96, 95% CI 0.81-1.13, p=0.60); GI bleeding roughly doubled (HR 2.11, 95% CI 1.36-3.28). Observed event rate lower than projected (behaved as low-risk cohort). No integrity concerns.",
+      "n_int": 12546,
+      "year": 2018,
+      "finding": "Aspirin did not reduce the primary cardiovascular composite in a moderate-risk primary-prevention cohort and increased gastrointestinal bleeding."
+    },
+    {
+      "source_id": "PMID:30146931",
+      "citation": "ASCEND Study Collaborative Group. Effects of Aspirin for Primary Prevention in Persons with Diabetes Mellitus (ASCEND). N Engl J Med. 2018;379:1529-1539. DOI:10.1056/NEJMoa1804988",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PubMed-verified: RCT, N Engl J Med 2018;379(16):1529-1539, no retraction. Double-blind placebo-controlled RCT, n=15,480 diabetics without CVD. Aspirin reduced serious vascular events (rate ratio 0.88, 95% CI 0.79-0.97, p=0.01) BUT increased major bleeding (rate ratio 1.29, 95% CI 1.09-1.52). Authors: 'absolute benefits were largely counterbalanced by the bleeding hazard.' Direction coded 0: efficacy gain neutralized by bleeding harm. No integrity concerns.",
+      "n_int": 15480,
+      "year": 2018,
+      "finding": "In diabetics, aspirin lowered serious vascular events but the absolute benefit was largely cancelled by an increase in major bleeding \u2014 net neutral."
+    },
+    {
+      "source_id": "PMID:30667501",
+      "citation": "Zheng SL, Roddick AJ. Association of Aspirin Use for Primary Prevention With Cardiovascular Events and Bleeding Events: A Systematic Review and Meta-analysis. JAMA. 2019;321:277-287. DOI:10.1001/jama.2018.20578",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PubMed-verified: Meta-Analysis/Systematic Review, JAMA 2019;321(3):277-287, no retraction. 13 RCTs, 164,225 participants, 1,050,511 participant-years. MACE composite significantly reduced (HR 0.89, 95% credible interval 0.84-0.95; ARR 0.38%, NNT 265) \u2014 so the ISOLATED efficacy endpoint supports the claim (+1). However, major bleeding significantly increased (HR 1.43, 95% CrI 1.30-1.56; ARI 0.47%, NNH 210), and NNH < NNT means net harm at the population level. Direction +1 reflects the claimed MACE endpoint only; offsetting harm is why the overall verdict is Not Supported.",
+      "n_int": 164225,
+      "year": 2019,
+      "finding": "Pooled RCTs show a small statistically significant MACE reduction (NNT 265) offset by a larger major-bleeding increase (NNH 210), i.e. efficacy present but no favorable net benefit."
+    },
+    {
+      "source_id": "PMID:19482214",
+      "citation": "Antithrombotic Trialists' (ATT) Collaboration. Aspirin in the primary and secondary prevention of vascular disease: collaborative meta-analysis of individual participant data from randomised trials. Lancet. 2009;373:1849-1860. DOI:10.1016/S0140-6736(09)60503-1",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PubMed-verified: Meta-Analysis, Lancet 2009;373(9678):1849-1860, no retraction. Individual-participant-data meta-analysis, 6 primary-prevention trials, ~95,000 low-average-risk individuals, 660,000 person-years, 3554 serious vascular events. 12% proportional reduction in serious vascular events (0.51% vs 0.57%/yr, p=0.0001), driven by non-fatal MI; no significant effect on stroke or vascular mortality. Major GI/extracranial bleeds increased (0.10% vs 0.07%/yr, p<0.0001). Authors' own conclusion: 'aspirin is of uncertain net value.' No integrity concerns.",
+      "n_int": 95000,
+      "year": 2009,
+      "finding": "Landmark IPD meta-analysis: 12% relative reduction in serious vascular events but of 'uncertain net value' once increased major bleeding is weighed against it."
+    },
+    {
+      "source_id": "PMID:35471505",
+      "citation": "US Preventive Services Task Force (Davidson KW, et al.). Aspirin Use to Prevent Cardiovascular Disease: US Preventive Services Task Force Recommendation Statement. JAMA. 2022;327:1577-1584. DOI:10.1001/jama.2022.4983",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PubMed-verified: Practice Guideline + Systematic Review, JAMA 2022;327(16):1577-1584, no retraction. Governing US guideline. D recommendation AGAINST initiating low-dose aspirin for primary prevention at age >=60 (no net benefit, moderate certainty). C recommendation (individualized, small net benefit) only for ages 40-59 with >=10% 10-year CVD risk and no elevated bleeding risk. Codifies the post-ASPREE/ARRIVE/ASCEND consensus shift away from routine primary-prevention aspirin. No integrity concerns.",
+      "n_int": 0,
+      "year": 2022,
+      "finding": "Current US guideline recommends AGAINST initiating aspirin for primary prevention at age >=60 and only individualized use (small net benefit) at 40-59 with high CVD risk \u2014 no routine benefit for healthy adults."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Aspirin has a well-established role in the primary prevention of cardiovascular disease. Low-dose aspirin (75-100 mg daily) inhibits platelet aggregation and reduces the risk of a first heart attack and, to a lesser degree, ischemic stroke in healthy adults. Large trials and meta-analyses show roughly a 10-12% relative reduction in major cardiovascular events. It is generally recommended for adults at elevated cardiovascular risk who are not at high risk of bleeding. The main trade-off is a modestly increased risk of gastrointestinal and other bleeding, so the decision should weigh cardiovascular risk against bleeding risk."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "claim_id": "N05",
+  "claim": "Marine omega-3 fish oil supplementation reduces cardiovascular events in primary prevention",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The two dedicated primary-prevention RCTs of low-dose (1 g/d) marine omega-3 both hit null on their MACE-type primary endpoints: VITAL (n=25,871 general population without CVD; major CV event HR 0.92, 95% CI 0.80-1.06, P=0.24) and ASCEND (n=15,480 diabetics without atherosclerotic CVD; first serious vascular event RR 0.97, 95% CI 0.87-1.08, P=0.55). The Aung/Omega-3 Treatment Trialists' Collaboration meta-analysis (77,917 individuals, 10 trials) found no significant association with major vascular events (RR 0.97, 95% CI 0.93-1.01) and explicitly stated it provides no support for supplement recommendations. The Cochrane review (Abdelhamid, 79 RCTs, 112,059 participants) rated it high-quality evidence that increasing EPA/DHA has little or no effect on CV events (RR 0.99, 95% CI 0.94-1.04) or mortality. One updated meta-analysis (Hu 2019) found small but statistically significant reductions in some CHD/CVD composites even excluding REDUCE-IT, but these rest on non-primary composites in largely higher-risk populations and do not overturn the null primary-prevention RCT result. The claim is specifically about supplements (distinct from prescription icosapent ethyl in REDUCE-IT, a secondary/high-risk statin-treated population). Guidelines (AHA) do not recommend omega-3 supplements for primary CVD prevention. Consensus: Not Supported.",
+  "outcome": "MACE composite (myocardial infarction, stroke, or cardiovascular death)",
+  "population": "Adults without established cardiovascular disease (primary prevention)",
+  "provenance": "All 5 PMIDs and both NCT IDs independently re-verified against PubMed metadata and ClinicalTrials.gov; each row's HR/RR, N, year, design, and effect direction confirmed against retrieved abstracts. No retractions found.",
+  "notes": "Key distinction encoded: claim is about marine omega-3 SUPPLEMENTS in PRIMARY prevention with a MACE primary endpoint. VITAL and ASCEND are the two purpose-built primary-prevention RCTs (both null on primary endpoint). REDUCE-IT (icosapent ethyl, secondary/high-risk) is deliberately excluded as out-of-scope per the claim spec. Hu 2019 is the strongest supportive signal (+1) but its significant effects rest on non-primary composites in largely higher-risk populations, so outcome_match=false for the strict MACE-in-primary-prevention claim. Fact-check: Row 4 design 'systematic review' accepted (PubMed tags it Meta-Analysis + Systematic Review). n_int values are approximate intervention-arm halves.",
+  "build_confidence": "high",
+  "rows": [
+    {
+      "source_id": "PMID:30415637",
+      "citation": "Manson JE, et al. Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer (VITAL). N Engl J Med. 2019;380(1):23-32. NCT01169259. DOI:10.1056/NEJMoa1811403",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: RCT, Multicenter Study; no retraction; landmark NIH-funded primary-prevention trial. NCT01169259 confirms MACE composite as a primary endpoint in a healthy population.",
+      "n_int": 12933,
+      "year": 2019,
+      "finding": "Among 25,871 adults (men >=50, women >=55) without CVD, 1 g/d marine n-3 did not reduce major CV events (composite of MI, stroke, CV death): HR 0.92, 95% CI 0.80-1.06, P=0.24. Null on the primary MACE endpoint."
+    },
+    {
+      "source_id": "PMID:30146932",
+      "citation": "ASCEND Study Collaborative Group (Bowman L, et al). Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. N Engl J Med. 2018;379(16):1540-1550. NCT00135226. DOI:10.1056/NEJMoa1804989",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: RCT, Multicenter Study; no retraction. NCT00135226 confirms n=15,480 diabetics without vascular disease and first serious vascular event as primary endpoint.",
+      "n_int": 7740,
+      "year": 2018,
+      "finding": "Among 15,480 diabetics without atherosclerotic CVD, 1 g/d n-3 did not reduce first serious vascular event (nonfatal MI/stroke, TIA, or vascular death): RR 0.97, 95% CI 0.87-1.08, P=0.55. Null primary-prevention result."
+    },
+    {
+      "source_id": "PMID:29387889",
+      "citation": "Aung T, et al. (Omega-3 Treatment Trialists' Collaboration). Associations of Omega-3 Fatty Acid Supplement Use With Cardiovascular Disease Risks: Meta-analysis of 10 Trials Involving 77,917 Individuals. JAMA Cardiol. 2018;3(3):225-234. DOI:10.1001/jamacardio.2017.5205",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Meta-Analysis / Systematic Review; no retraction. Abstract confirms RR figures and 'no support for supplement recommendations'.",
+      "n_int": 38900,
+      "year": 2018,
+      "finding": "Across 77,917 mostly high-risk individuals (10 trials), omega-3 supplements had no significant association with major vascular events (RR 0.97, 95% CI 0.93-1.01, P=0.10) or any CHD event (RR 0.96, 95% CI 0.90-1.01); no benefit in any subgroup. Authors: no support for supplement recommendations."
+    },
+    {
+      "source_id": "PMID:30521670",
+      "citation": "Abdelhamid AS, et al. Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease. Cochrane Database Syst Rev. 2018;11:CD003177. DOI:10.1002/14651858.CD003177.pub4",
+      "design": "systematic review",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Cochrane review, Meta-Analysis + Systematic Review, 79 RCTs / 112,059 participants; GRADE high/moderate quality; no retraction.",
+      "n_int": 56000,
+      "year": 2018,
+      "finding": "Across 79 RCTs (112,059 participants), increasing long-chain omega-3 (EPA/DHA) had little or no effect on CV events (RR 0.99, 95% CI 0.94-1.04, high-quality evidence) or CV mortality (RR 0.95, 95% CI 0.87-1.03). Prior apparent benefits traced to higher-bias trials."
+    },
+    {
+      "source_id": "PMID:31567003",
+      "citation": "Hu Y, Hu FB, Manson JE. Marine Omega-3 Supplementation and Cardiovascular Disease: An Updated Meta-Analysis of 13 RCTs Involving 127,477 Participants. J Am Heart Assoc. 2019;8(19):e013543. DOI:10.1161/JAHA.119.013543",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed: Meta-Analysis; no retraction. Significant effects rest on non-MACE composites and largely secondary/high-risk populations, not the primary-prevention MACE endpoint.",
+      "n_int": 63700,
+      "year": 2019,
+      "finding": "Across 13 RCTs (127,477 participants), even excluding REDUCE-IT, marine omega-3 was associated with small significant reductions in MI (RR 0.92), CHD death (RR 0.92), total CHD (RR 0.95), CV death (RR 0.93), and total CVD (RR 0.97). A dissenting supportive signal, but driven by mixed/high-risk populations and non-primary composites rather than MACE in a primary-prevention cohort."
+    }
+  ],
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Marine omega-3 (fish oil) supplements do not meaningfully reduce cardiovascular events in primary prevention. The two large dedicated primary-prevention trials, VITAL (25,871 healthy older adults) and ASCEND (15,480 people with diabetes but no CVD), both used 1 g/day of fish oil and both found no significant reduction in major cardiovascular events (VITAL HR 0.92, non-significant; ASCEND RR 0.97, non-significant). Large meta-analyses (Aung 2018, ~78,000 people; the Cochrane review, 79 trials/112,000 people) confirm no meaningful benefit on cardiovascular events or mortality, with Cochrane rating this as high-quality evidence. Guidelines therefore do not recommend fish oil supplements for preventing a first cardiovascular event. Note this is distinct from prescription high-dose icosapent ethyl (Vascepa) in the REDUCE-IT trial, which showed benefit in high-risk statin-treated patients (a secondary-prevention-type population), not general primary prevention."
+  }
+}

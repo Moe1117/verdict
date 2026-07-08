@@ -1,0 +1,97 @@
+{
+  "claim_id": "N21",
+  "claim": "Convalescent plasma improves clinical outcomes in hospitalized patients with COVID-19",
+  "domain": "infectious",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus is that convalescent plasma does NOT improve clinical outcomes in the general hospitalized COVID-19 population \u2014 a canonical 'evidence of absence.' The definitive large platform RCT RECOVERY (n=11,558) found no reduction in 28-day mortality (RR 1.00, 95% CI 0.93-1.07). Corroborated by PLACID (n=464, no reduction in progression/death) and CONCOR-1 (n=921 ITT, no reduction in intubation/death and MORE serious adverse events). The Cochrane living systematic review (pub4) concluded with HIGH-certainty evidence that convalescent plasma does not reduce all-cause mortality (RR 0.98, 7 RCTs, 12,646 participants) and has little-to-no impact on clinical improvement in moderate-to-severe disease. The Janiaud JAMA meta-analysis reached the same null (all-RCT RR 1.02). Regulatory action confirms the consensus: on 28 Dec 2021 the FDA revised the EUA to REMOVE authorization for immunocompetent hospitalized patients, restricting use to high-titer plasma in immunosuppressed patients only, stating transfusion in hospitalized immunocompetent patients is 'unlikely to be associated with clinical benefit.' The only residual benefit signal is in a narrow subgroup (immunocompromised / early pre-hospitalization high-titer use), which does not support the broad claim about the general hospitalized population.",
+  "outcome": "All-cause mortality (28-day) and clinical improvement / progression to severe disease",
+  "population": "Hospitalized patients with COVID-19",
+  "build_confidence": "high",
+  "provenance": "PubMed (re-verified PMIDs/DOIs) + FDA EUA letters (fda.gov). RECOVERY primary paper = Lancet 2021 (PMID 34000257, CORRECTED DOI 10.1016/S0140-6736(21)00897-7); confirmed via its ACP Journal Club structured abstract PMID 34606320. PLACID PMID 33093056 (DOI 10.1136/bmj.m3939). CONCOR-1 PMID 34504336 (DOI 10.1038/s41591-021-01488-2, NCT04348656). Cochrane living SR pub4 PMID 34013969 (DOI 10.1002/14651858.CD013600.pub4). JAMA meta-analysis PMID 33635310 (DOI 10.1001/jama.2021.2747). FDA Dec 28 2021 EUA revision fda.gov/media/141477 + clinical review memo fda.gov/media/155159.",
+  "notes": "All rows re-verified against real PubMed metadata and FDA source documents. One citation DOI corrected (RECOVERY). No retractions detected \u2014 no PMID flagged 'Retracted Publication.' outcome_match=true only where the PRIMARY endpoint was mortality or a hard clinical composite (not a surrogate). Direction is -1/0 across the board \u2014 no verified row supports the broad claim. The only benefit signal (FDA-retained EUA) is confined to immunosuppressed / early-outpatient high-titer use, population-mismatched to 'general hospitalized' and itself flagged by FDA as based on limited data.",
+  "rows": [
+    {
+      "source_id": "PMID:34000257",
+      "citation": "RECOVERY Collaborative Group. Convalescent plasma in patients admitted to hospital with COVID-19 (RECOVERY): a randomised controlled, open-label, platform trial. Lancet. 2021;397(10289):2049-2059. DOI:10.1016/S0140-6736(21)00897-7",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark large platform RCT; no retraction (PubMed article_types: RCT, Adaptive Clinical Trial, Multicenter). Verified via PubMed metadata and its ACP Journal Club structured abstract (PMID 34606320). Citation DOI corrected to the real DOI 10.1016/S0140-6736(21)00897-7.",
+      "n_int": 5795,
+      "year": 2021,
+      "finding": "In 11,558 hospitalized COVID-19 patients (5795 convalescent plasma, 5763 usual care), high-titer convalescent plasma added to usual care produced no reduction in 28-day mortality (24% vs 24%; RR 1.00, 95% CI 0.93-1.07; p=0.95) and no improvement in discharge within 28 days or in the progression-to-ventilation-or-death composite. Definitive null in the general hospitalized population."
+    },
+    {
+      "source_id": "PMID:33093056",
+      "citation": "Agarwal A, et al. Convalescent plasma in the management of moderate covid-19 in adults in India: open label phase II multicentre randomised controlled trial (PLACID Trial). BMJ. 2020;371:m3939. DOI:10.1136/bmj.m3939",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase II multicentre RCT across 39 hospitals; CTRI/2020/04/024775. No retraction (PubMed article_types: Clinical Trial Phase II, RCT, Multicenter).",
+      "n_int": 235,
+      "year": 2020,
+      "finding": "In 464 hospitalized adults with moderate COVID-19 (235 intervention, 229 control), convalescent plasma did not reduce the primary composite of progression to severe disease or all-cause mortality at 28 days (19% vs 18%; RR 1.04, 95% CI 0.71-1.54). No clinical benefit."
+    },
+    {
+      "source_id": "PMID:34504336",
+      "citation": "Begin P, et al. (CONCOR-1). Convalescent plasma for hospitalized patients with COVID-19: an open-label, randomized controlled trial. Nat Med. 2021;27(11):2012-2024. DOI:10.1038/s41591-021-01488-2",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "NCT04348656; trial terminated at 78% of planned enrollment for futility. No retraction (PubMed article_types: RCT, Multicenter). 940 randomized, 921 in ITT analysis.",
+      "n_int": 614,
+      "year": 2021,
+      "finding": "In 921 hospitalized COVID-19 patients analyzed (940 randomized; 614 convalescent plasma, 307 standard care), convalescent plasma did not reduce the primary composite of intubation or death at 30 days (32.4% vs 28.0%; RR 1.16, 95% CI 0.94-1.43; p=0.18) and was associated with MORE serious adverse events (33.4% vs 26.4%; RR 1.27, 95% CI 1.02-1.57; p=0.034). Unfavorable antibody profiles were linked to worse outcomes."
+    },
+    {
+      "source_id": "PMID:34013969",
+      "citation": "Piechotta V, et al. Convalescent plasma or hyperimmune immunoglobulin for people with COVID-19: a living systematic review. Cochrane Database Syst Rev. 2021;5(5):CD013600. DOI:10.1002/14651858.CD013600.pub4",
+      "design": "systematic review",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Cochrane living SR (pub4); GRADE HIGH-certainty for the mortality outcome. No retraction (PubMed article_types: Meta-Analysis, Systematic Review). Mortality estimate is from 7 RCTs / 12,646 participants (the broader effectiveness dataset is 9 RCTs / 12,875).",
+      "n_int": 12646,
+      "year": 2021,
+      "finding": "HIGH-certainty evidence that convalescent plasma does NOT reduce all-cause mortality to day 28 (RR 0.98, 95% CI 0.92-1.05; 7 RCTs, 12,646 participants, moderate-to-severe disease) and has little to no impact on clinical improvement measured by liberation from respiratory support (8 RCTs, 12,682 participants, high-certainty). Strongest tier of the evidence pyramid; unequivocal null."
+    },
+    {
+      "source_id": "PMID:33635310",
+      "citation": "Janiaud P, et al. Association of Convalescent Plasma Treatment With Clinical Outcomes in Patients With COVID-19: A Systematic Review and Meta-analysis. JAMA. 2021;325(12):1185-1195. DOI:10.1001/jama.2021.2747",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Meta-analysis of RCTs; no retraction (PubMed article_types: Meta-Analysis, Systematic Review). 1060 patients from 4 peer-reviewed RCTs + 10,722 from 6 other publicly available RCTs (total 11,782).",
+      "n_int": 5391,
+      "year": 2021,
+      "finding": "Across 10 RCTs, convalescent plasma was not significantly associated with reduced all-cause mortality (all-RCT summary RR 1.02, 95% CI 0.92-1.12, moderate certainty; peer-reviewed-only RR 0.93, 95% CI 0.63-1.38, low certainty) and showed no benefit on length of stay, mechanical ventilation use, clinical improvement, or clinical deterioration."
+    },
+    {
+      "source_id": "NCT-FDA:media-141477",
+      "citation": "US FDA. Letter of Authorization, COVID-19 Convalescent Plasma EUA, reissued December 28, 2021 (fda.gov/media/141477/download); supporting Clinical Review Memo fda.gov/media/155159/download.",
+      "design": "guideline / regulatory",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Official FDA regulatory action, not a study; independently verified via fda.gov EUA letter (media/141477) and clinical review memo (media/155159). No real DOI exists for FDA media downloads, so source_id uses a checkable media-id reference rather than a fabricated DOI.",
+      "n_int": 0,
+      "year": 2021,
+      "finding": "On 28 Dec 2021 FDA revised the EUA to REMOVE authorization for immunocompetent hospitalized patients, concluding transfusion in hospitalized immunocompetent patients is 'unlikely to be associated with clinical benefit' and that benefits do not outweigh risks in this population. Authorization restricted to high-titer plasma in patients with immunosuppressive disease or receiving immunosuppressive treatment only \u2014 a regulatory rejection of the broad hospitalized-population claim."
+    }
+  ],
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Convalescent plasma does not improve clinical outcomes in hospitalized patients with COVID-19. Large, well-conducted randomized controlled trials \u2014 most decisively the RECOVERY trial (over 11,000 patients) \u2014 found no reduction in 28-day mortality, and this was confirmed by other RCTs such as PLACID and CONCOR-1. Meta-analyses, including a high-certainty Cochrane living systematic review, conclude that convalescent plasma does not reduce mortality and has little to no effect on clinical improvement in this population. The FDA accordingly narrowed its Emergency Use Authorization in December 2021 to exclude immunocompetent hospitalized patients, limiting use to high-titer plasma in immunosuppressed patients. The only setting with a possible benefit signal is early treatment of immunocompromised patients, not the general hospitalized population."
+  }
+}

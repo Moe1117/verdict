@@ -1,0 +1,84 @@
+{
+  "claim_id": "N12",
+  "claim": "Adding bevacizumab to chemotherapy improves overall survival in metastatic colorectal cancer",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Clinical and regulatory consensus supports this claim. The pivotal first-line AVF2107g trial (Hurwitz, NEJM 2004; PMID 15175435) was prospectively powered on OS as its PRIMARY endpoint and demonstrated a large, statistically significant survival gain (20.3 vs 15.6 months, HR 0.66, P<0.001), directly leading to FDA approval of bevacizumab for first-line mCRC (approval date 2004-02-26, NDA 125085). The benefit generalizes across lines: the second-line E3200 trial (Giantonio, JCO 2007; PMID 17442997) met its PRIMARY OS endpoint (12.9 vs 10.8 mo, HR 0.75, P=0.0011), and the continuation/beyond-progression ML18147/TML trial (Bennouna, Lancet Oncol 2013; PMID 23168366) met its PRIMARY OS endpoint (11.2 vs 9.8 mo, HR 0.81, P=0.0062). The one nuance is context-specific, not contradictory: in the first-line oxaliplatin-based NO16966 trial (Saltz, JCO 2008; PMID 18421054) the PRIMARY endpoint was PFS (significantly improved, HR 0.83), while OS was a numerically favorable but non-significant secondary endpoint (21.3 vs 19.9 mo, HR 0.89, P=0.077) \u2014 attributed in-paper to early treatment discontinuation. The totality of pivotal RCTs, two of which were OS-primary and positive plus an OS-primary continuation trial, plus regulatory approval, establishes Supported consensus. This contrasts with the metastatic breast cancer setting, where bevacizumab improved PFS but never OS and the indication was withdrawn.",
+  "outcome": "overall survival",
+  "population": "metastatic colorectal cancer",
+  "build_confidence": "high",
+  "provenance": "Independent PubMed re-verification of each PMID (title, journal, year, design, N, primary endpoint, OS HR/median, P-value) via bio-research PubMed get_article_metadata; FDA approval date and E3200 three-arm enrollment cross-checked via web search (FDA NDA 125085 approval 2004-02-26; E3200 829 patients across 3 arms). All five rows are real, checkable, non-retracted RCTs or an FDA-context review.",
+  "notes": "Corpus deliberately includes the OS-nuanced NO16966 row (OS non-significant; primary endpoint was PFS = surrogate) to represent the true evidence base honestly. Two OS-primary pivotal RCTs (AVF2107g first-line, E3200 second-line) plus the OS-primary ML18147 continuation trial anchor the Supported verdict. Fact-check corrections applied: Row 2 (E3200) citation title restored to the verbatim PubMed title; all numeric claims verified unchanged. Contrast-with-breast-cancer note verified: mCRC OS is genuinely improved where breast was not. MAX/AGITG (Tebbutt) and Cochrane meta-analysis rows were NOT included because correct PMIDs could not be verified in-session; omitted rather than fabricated.",
+  "rows": [
+    {
+      "source_id": "PMID:15175435",
+      "citation": "Hurwitz H, et al. Bevacizumab plus irinotecan, fluorouracil, and leucovorin for metastatic colorectal cancer. N Engl J Med. 2004;350(23):2335-42. DOI:10.1056/NEJMoa032691 (AVF2107g).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark double-blind placebo-controlled phase III (article_types confirm Randomized Controlled Trial, Phase III); OS was the pre-specified PRIMARY endpoint per abstract. Non-retracted. Basis for FDA first-line approval. Verified via PubMed.",
+      "n_int": 402,
+      "year": 2004,
+      "finding": "First-line IFL+bevacizumab vs IFL+placebo (402 vs 411; 813 total): median OS 20.3 vs 15.6 months, HR for death 0.66, P<0.001. Statistically significant OS improvement on the PRIMARY endpoint."
+    },
+    {
+      "source_id": "PMID:17442997",
+      "citation": "Giantonio BJ, et al. Bevacizumab in combination with oxaliplatin, fluorouracil, and leucovorin (FOLFOX4) for previously treated metastatic colorectal cancer: results from the Eastern Cooperative Oncology Group Study E3200. J Clin Oncol. 2007;25(12):1539-44. DOI:10.1200/JCO.2006.09.6305.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase III (article_types confirm Phase III RCT, Multicenter); OS pre-specified as PRIMARY endpoint per abstract; second-line (previously treated) mCRC. Non-retracted. Citation title corrected to verbatim PubMed title (was paraphrased in build). Verified via PubMed.",
+      "n_int": 290,
+      "year": 2007,
+      "finding": "Second-line FOLFOX4+bevacizumab vs FOLFOX4 alone (829 randomized across 3 arms incl bevacizumab-alone): median OS 12.9 vs 10.8 months, HR for death 0.75, P=0.0011. Significant OS gain on the PRIMARY endpoint, extending benefit to the second-line setting."
+    },
+    {
+      "source_id": "PMID:23168366",
+      "citation": "Bennouna J, et al. Continuation of bevacizumab after first progression in metastatic colorectal cancer (ML18147/TML): a randomised phase 3 trial. Lancet Oncol. 2013;14(1):29-37. DOI:10.1016/S1470-2045(12)70477-1. NCT00700102.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Open-label phase III (article_types confirm Phase III RCT); OS pre-specified as PRIMARY endpoint, analysed by intention to treat per abstract; tests bevacizumab continuation beyond first progression. Non-retracted. Epub Nov 2012 / print Jan 2013. NCT00700102 confirmed in abstract. Verified via PubMed.",
+      "n_int": 409,
+      "year": 2013,
+      "finding": "Second-line chemo + continued bevacizumab vs chemo alone (409 vs 411; 820 total): median OS 11.2 vs 9.8 months, HR 0.81 (95% CI 0.69-0.94), P=0.0062. Significant OS benefit on the PRIMARY endpoint for maintaining VEGF inhibition beyond progression."
+    },
+    {
+      "source_id": "PMID:18421054",
+      "citation": "Saltz LB, et al. Bevacizumab in combination with oxaliplatin-based chemotherapy as first-line therapy in metastatic colorectal cancer: a randomized phase III study (NO16966). J Clin Oncol. 2008;26(12):2013-9. DOI:10.1200/JCO.2007.14.9930.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Primary endpoint was PFS (a SURROGATE), NOT OS, per abstract. OS was secondary and did not reach significance; in-paper attributed to early treatment discontinuation (only 29% vs 47% treated to progression). Non-retracted \u2014 honest nuance row. outcome_match=false correctly flags the PFS surrogate primary. Verified via PubMed.",
+      "n_int": 699,
+      "year": 2008,
+      "finding": "First-line oxaliplatin-based chemo (FOLFOX-4/XELOX) +bevacizumab vs +placebo (1401 total): PRIMARY endpoint PFS improved (9.4 vs 8.0 mo, HR 0.83, 97.5% CI 0.72-0.95, P=0.0023), but OS was NOT significantly improved (21.3 vs 19.9 mo, HR 0.89, 97.5% CI 0.76-1.03, P=0.077). Context-dependent null on the CLAIMED OS endpoint."
+    },
+    {
+      "source_id": "PMID:15479481",
+      "citation": "Hurwitz H. Integrating the anti-VEGF-A humanized monoclonal antibody bevacizumab with chemotherapy in advanced colorectal cancer. Clin Colorectal Cancer. 2004;4 Suppl 2:S62-8. DOI:10.3816/ccc.2004.s.010.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Authored narrative Review (PubMed article_types: Review) documenting the FDA approval rationale; not a formal guideline but functions as the regulatory-context row. FDA first-line mCRC approval independently verified: 2004-02-26, NDA 125085 (Genentech). Non-retracted.",
+      "n_int": 0,
+      "year": 2004,
+      "finding": "Documents that the OS improvement from adding bevacizumab to IFL (AVF2107g) led the FDA to approve bevacizumab in February 2004 (2004-02-26) for first-line treatment of mCRC in combination with 5-FU-based regimens. Regulatory endorsement of the OS-improvement claim."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Adding bevacizumab (Avastin) to chemotherapy improves overall survival in metastatic colorectal cancer. This was established by the pivotal AVF2107g trial (Hurwitz et al., NEJM 2004), where adding bevacizumab to IFL chemotherapy in the first-line setting extended median overall survival from 15.6 to 20.3 months (HR 0.66, P<0.001) \u2014 a result that led to FDA approval. The benefit was confirmed in the second-line E3200 trial (FOLFOX4 + bevacizumab, OS 12.9 vs 10.8 months) and in the ML18147 beyond-progression trial. Bevacizumab plus fluoropyrimidine-based chemotherapy is a standard, guideline-recommended regimen for mCRC. Notably, unlike in metastatic breast cancer where bevacizumab improved PFS but not OS, in colorectal cancer the overall survival benefit is genuine."
+  }
+}

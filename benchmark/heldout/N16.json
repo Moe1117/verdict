@@ -1,0 +1,97 @@
+{
+  "claim_id": "N16",
+  "claim": "Edaravone slows functional decline in amyotrophic lateral sclerosis",
+  "domain": "neuro",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The evidence is genuinely contested. The sole positive pivotal RCT, MCI186-19 / Study 19 (Writing Group 2017, Lancet Neurol; NCT01492686), showed a statistically significant 2.49-point ALSFRS-R benefit at 24 weeks (p=0.0013) \u2014 but ONLY in a narrow post-hoc-defined 'efficacy-expected subpopulation' (early-stage, definite/probable ALS, FVC >=80%, disease duration <=2 yr), assembled after the EARLIER phase 3 MCI186-16 in a broader ALS population FAILED its primary ALSFRS-R endpoint. The authors themselves stated there is 'no indication that edaravone might be effective in a wider population.' FDA approved Radicava (NDA 209176, May 5 2017) on this single trial with Study 16 as confirmatory evidence, but the EU marketing application was withdrawn in 2019 after CHMP's provisional opinion that it could not be approved for lack of proven effectiveness. The double-blind extension (Cycles 7-12) was non-significant in both the full set and the EESP (p=0.22 / p=0.11). Company-sponsored meta-analyses are positive but pool the same 3 Japanese industry trials. Critically, the largest INDEPENDENT real-world study \u2014 a German multicenter propensity-score-matched cohort (Witzel 2022, JAMA Neurol, n=324) \u2014 found NO disease-modifying benefit on ALSFRS-R decline (-0.91 vs -0.85 pts/month; p=0.37), survival, or time to ventilation, including within the EFAS subgroup mirroring Study 19 eligibility. A narrowly positive, subgroup-restricted pivotal trial after a negative broader trial, contradicted by the best independent real-world data, is the definition of Contested \u2014 not Supported.",
+  "outcome": "ALSFRS-R decline (change in Revised ALS Functional Rating Scale from baseline)",
+  "population": "Amyotrophic lateral sclerosis (ALS); pivotal efficacy restricted to early-stage, definite/probable ALS with FVC >=80% and disease duration <=2 years",
+  "build_confidence": "high",
+  "provenance": "PubMed (pivotal RCT, extension, meta-analysis, real-world cohort) + ClinicalTrials.gov (NCT01492686) + Drugs@FDA NDA 209176 (209176Orig1s000 clinical review, approval 2017-05-05) + EMA Radicava EPAR (application withdrawn 2019-05-24).",
+  "notes": "outcome_match is TRUE throughout: ALSFRS-R is the validated functional endpoint named in the claim, not a surrogate. The core tension is population_match \u2014 MCI186-19's positive result holds only in the narrow EESP, not general ALS. FDA approved on one pivotal trial (Study 19) plus confirmatory Study 16; the EU application was withdrawn after a provisional negative CHMP opinion; the largest independent real-world cohort is null.",
+  "rows": [
+    {
+      "source_id": "PMID:28522181",
+      "citation": "Writing Group; Edaravone (MCI-186) ALS 19 Study Group. Safety and efficacy of edaravone in well defined patients with ALS: a randomised, double-blind, placebo-controlled trial. Lancet Neurol. 2017;16(7):505-512. DOI:10.1016/S1474-4422(17)30115-1",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Industry-sponsored (Mitsubishi Tanabe). Positive result confined to a narrow post-hoc-defined subpopulation (EESP) built after an earlier negative full-population phase 3 (Study 16); authors explicitly disclaim efficacy in broader ALS. Pivotal but not generalizable.",
+      "n_int": 69,
+      "year": 2017,
+      "finding": "Pivotal MCI186-19 / Study 19 (NCT01492686). In 137 early-stage ALS patients meeting restrictive EESP criteria (69 edaravone, 68 placebo randomized), ALSFRS-R decline was -5.01 (edaravone) vs -7.50 (placebo) at 24 wk; LSM difference 2.49 points (95% CI 0.99-3.98; p=0.0013) favoring edaravone. Basis for FDA approval."
+    },
+    {
+      "source_id": "PMID:28872918",
+      "citation": "Edaravone (MCI-186) ALS 19 Study Group. Exploratory double-blind, parallel-group, placebo-controlled extension study of edaravone (MCI-186) in ALS. Amyotroph Lateral Scler Frontotemporal Degener. 2017;18(sup1):20-31. DOI:10.1080/21678421.2017.1362000",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Same sponsor and cohort continued into blinded Cycles 7-12. Reports the negative continuation result of the pivotal program.",
+      "n_int": 62,
+      "year": 2017,
+      "finding": "In the double-blind extension (Cycles 7-12) of Study 19, the edaravone-edaravone vs edaravone-placebo difference in ALSFRS-R change was non-significant: 1.16 +/- 0.93 in the full analysis set (p=0.2176) and 1.85 +/- 1.14 in the EESP (p=0.1127). No confirmed benefit beyond the first 24 weeks."
+    },
+    {
+      "source_id": "PMID:35006266",
+      "citation": "Witzel S, Maier A, Steinbach R, et al. Safety and Effectiveness of Long-term Intravenous Administration of Edaravone for Treatment of Patients With ALS. JAMA Neurol. 2022;79(2):121-130. DOI:10.1001/jamaneurol.2021.4893",
+      "design": "prospective cohort",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent (German Motor Neuron Disease Network, non-industry), propensity-score-matched real-world cohort. Strongest independent test of the claim; contradicts the pivotal RCT. (PubMed carries an 'RCT' article-type tag, but the study is observational per its own methods; cohort is the correct design label.)",
+      "n_int": 116,
+      "year": 2022,
+      "finding": "In 324 propensity-matched ALS patients (edaravone+riluzole vs riluzole; 116 vs 116 in the effectiveness analysis), ALSFRS-R decline did NOT differ: -0.91 vs -0.85 points/month (p=0.37). No difference in survival, time to ventilation, or progression, including within the EFAS subgroup mirroring Study 19 eligibility. No disease-modifying benefit."
+    },
+    {
+      "source_id": "PMID:30483992",
+      "citation": "Luo L, Song Z, Li X, et al. Efficacy and safety of edaravone in treatment of ALS - a systematic review and meta-analysis. Neurol Sci. 2019;40(2):235-241. DOI:10.1007/s10072-018-3653-2",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pools only 3 Mitsubishi Tanabe-sponsored Japanese RCTs (n=367); positive signal inherits the pivotal trials' subgroup selection and sponsor bias. No independent trials available to pool.",
+      "n_int": 183,
+      "year": 2018,
+      "finding": "Meta-analysis of 3 RCTs (183 edaravone, 184 placebo) found a 24-week ALSFRS-R between-group mean difference of 1.63 (95% CI 0.26-3.00; p=0.02) favoring edaravone, with no excess adverse or serious adverse events."
+    },
+    {
+      "source_id": "PMID:31621933",
+      "citation": "Shefner J, Heiman-Patterson T, Pioro EP, et al. Long-term edaravone efficacy in ALS: Post-hoc analyses of Study 19 (MCI186-19). Muscle Nerve. 2020;61(2):218-221. DOI:10.1002/mus.26740",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": false,
+      "integrity_note": "Sponsor-authored (Mitsubishi Tanabe) POST-HOC analysis using a MODELED/PROJECTED placebo trajectory over the open-label period rather than a concurrent randomized control. Efficacy inference rests on projection, not blinded comparison; weak evidence.",
+      "n_int": 65,
+      "year": 2019,
+      "finding": "Post-hoc analysis of Study 19 (123 patients in open-label; 65 edaravone-edaravone) projected placebo ALSFRS-R decline to week 48 and reported greater decline than 48-week edaravone (p<0.0001), arguing benefit persists to 1 year. Relies on a modeled comparator, not a randomized control."
+    },
+    {
+      "source_id": "NDA:209176",
+      "citation": "FDA. RADICAVA (edaravone) approval, NDA 209176, action date May 5 2017 (drugsatfda review 209176Orig1s000; Drugs@FDA ApplNo 209176). Approval based on pivotal MCI186-19 (Study 19) with Study 16 as confirmatory evidence. EMA/Radicava EPAR: EU marketing application withdrawn 24 May 2019 (EMA/293450/2019) after provisional CHMP opinion it could not be approved.",
+      "design": "guideline / regulatory",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "US FDA approval rested on the single positive subgroup-restricted trial MCI186-19 plus confirmatory Study 16; the EU marketing application was withdrawn in 2019 after CHMP's provisional negative opinion (lack of proven effectiveness), underscoring regulatory disagreement and the contested evidentiary base.",
+      "n_int": 137,
+      "year": 2017,
+      "finding": "FDA approved edaravone (Radicava, NDA 209176) for ALS on 5 May 2017 based on the single pivotal MCI186-19 trial showing 33% (2.49-point) less ALSFRS-R decline. The EU marketing application was withdrawn in 2019 after a provisional negative CHMP opinion; approval is narrow and regulatorily contested rather than a broad efficacy consensus."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes. Edaravone (Radicava) slows functional decline in ALS. In the pivotal Phase 3 trial (Study 19 / MCI186-19), patients treated with edaravone for 24 weeks showed significantly less decline on the ALSFRS-R functional scale than placebo \u2014 a 2.49-point difference (about 33% less decline, p=0.0013). On this basis the FDA approved it in 2017 as one of the few disease-modifying treatments for ALS, and it is used to slow the loss of physical function, particularly in early-stage patients."
+  }
+}
