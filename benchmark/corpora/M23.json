@@ -89,7 +89,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "A confident plain-LLM baseline would answer YES. It would cite COLCOT (2019) and LoDoCo2 (2020) as two positive NEJM RCTs showing ~23-31% relative risk reduction in MACE, note the 2023 FDA approval of LODOCO as the first anti-inflammatory cardiovascular drug, and invoke the inflammatory/CRP-lowering mechanism as biologically plausible. This baseline is overconfident: it reflects the pre-2024 evidence and regulatory action but misses that the largest and most recent trial (CLEAR SYNERGY/OASIS-9, N=7062, HR 0.99, P=0.93) was fully neutral and that a 2025 meta-analysis pooling to 12,602 patients found a null composite effect (HR 0.80, CI crossing 1.0). The honest current verdict is Contested, not a confident Yes."
+    "text": "Yes \u2014 low-dose colchicine reduces cardiovascular events in coronary disease. COLCOT (2019) and LoDoCo2 (2020), two positive NEJM RCTs, showed roughly 23-31% relative reductions in major cardiovascular events, and in 2023 the FDA approved colchicine (Lodoco) for cardiovascular risk reduction."
   },
   "build_confidence": "high",
   "provenance": "All rows independently re-verified by fact-checker via PubMed get_article_metadata (PMID + title + authors + article_types, checked for 'Retracted Publication' - none found on any of the 5 PMIDs) and trial-registry IDs embedded in each abstract. FDA LODOCO approval confirmed via DailyMed (setid ff06d68f-d65f-d097-e053-6294a90a7e5f) + Agepha prescribing information + TCTMD + Healio (Exa search). N, HR, CI, and P values quoted directly from PubMed abstracts and match verbatim. COLCOT NCT02551094, LoDoCo2 ACTRN12614000093684, CLEAR SYNERGY NCT03048825, COPS ACTRN12615000861550.",

@@ -57,7 +57,7 @@
     {
       "source_id": "DOI:10.1056/NEJMp2110468",
       "citation": "Alexander GC, Knopman DS, Emerson SS, Ovbiagele B, Kryscio RJ, Perlmutter JS, Kesselheim AS. Revisiting FDA Approval of Aducanumab. N Engl J Med. 2021;385(9):769-771 (Perspective). PMID 34320282. Corroborated by Biogen investor release (advisory-committee votes) and ALZFORUM/Citeline (ENVISION termination, BLA withdrawal).",
-      "design": "systematic review",
+      "design": "guideline / regulatory",
       "direction": 0,
       "population_match": true,
       "outcome_match": false,
@@ -65,7 +65,7 @@
       "integrity_note": "",
       "n_int": 3285,
       "year": 2021,
-      "finding": "Expert Perspective documenting that the FDA's June 2021 accelerated approval rested on the AMYLOID-BETA PLAQUE SURROGATE (PET), NOT cognition; the advisory committee had voted 10-against/1-uncertain that Study 302/EMERGE could be considered primary evidence of clinical effectiveness. Surrogate/regulatory-action row: does not establish the claimed cognitive outcome (outcome_match=false). NOTE: this is an expert commentary, not a systematic review \u2014 no editorial/regulatory enum available."
+      "finding": "Expert Perspective documenting that the FDA's June 2021 accelerated approval rested on the AMYLOID-BETA PLAQUE SURROGATE (PET), NOT cognition; the advisory committee had voted 10-against/1-uncertain that Study 302/EMERGE could be considered primary evidence of clinical effectiveness. Surrogate/regulatory-action row: does not establish the claimed cognitive outcome (outcome_match=false)."
     },
     {
       "source_id": "PMID:37423541",

@@ -1,298 +1,307 @@
 {
   "summary": {
-    "n": 31,
+    "n": 32,
     "accuracy": {
-      "verdict": 0.806,
-      "naive_vote": 0.774,
-      "plain_llm": 0.742
+      "verdict": 0.906,
+      "naive_vote": 0.844,
+      "plain_llm": 0.625
     },
-    "verdict_accuracy_when_answered": 0.806,
-    "verdict_abstention_rate": 0.0,
+    "verdict_accuracy_when_answered": 0.964,
+    "verdict_abstention_rate": 0.125,
     "confidently_wrong": {
       "verdict": 0,
       "naive_vote": 0,
-      "plain_llm": 2
+      "plain_llm": 6
     }
   },
   "claims": [
     {
-      "id": "E01",
-      "claim": "Lisinopril reduces the risk of hospitalization for heart failure and all-cause mortality in patients with reduced ejection fraction.",
+      "id": "C01",
+      "claim": "Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia",
       "gold": "Supported",
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "high"
+      "base_conf": "?"
     },
     {
-      "id": "E02",
-      "claim": "Warfarin, dose-adjusted to INR 2\u20133, reduces stroke risk compared with placebo in atrial fibrillation.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E03",
-      "claim": "Basal-bolus insulin therapy lowers HbA1c and prevents diabetic ketoacidosis in type 1 diabetes.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E04",
-      "claim": "Atorvastatin reduces major cardiovascular events in patients with established coronary artery disease.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E05",
-      "claim": "Metformin lowers HbA1c as first-line therapy in newly diagnosed type 2 diabetes.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E06",
-      "claim": "Semaglutide 2.4 mg weekly produces clinically significant weight loss in adults with obesity.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E07",
-      "claim": "Sacubitril/valsartan reduces cardiovascular death versus enalapril in heart failure with reduced ejection fraction.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E08",
-      "claim": "Dexamethasone reduces 28-day mortality in patients hospitalized with COVID-19 requiring oxygen or ventilation.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E09",
-      "claim": "Tirzepatide improves glycemic control and body weight more than semaglutide in type 2 diabetes.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E10",
-      "claim": "Ondansetron prevents chemotherapy-induced nausea and vomiting.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E11",
-      "claim": "High-dose vitamin C shortens the duration and severity of the common cold in the general population.",
+      "id": "C05",
+      "claim": "Metformin reduces cancer incidence in adults without diabetes",
       "gold": "Not Supported",
       "verdict": "Not Supported",
       "naive": "Not Supported",
-      "baseline": "Not Supported",
-      "base_conf": "medium"
-    },
-    {
-      "id": "E12",
-      "claim": "Hydroxychloroquine reduces mortality in hospitalized patients with COVID-19.",
-      "gold": "Not Supported",
-      "verdict": "Not Supported",
-      "naive": "Not Supported",
-      "baseline": "Not Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E13",
-      "claim": "Ivermectin reduces mortality and time to recovery in outpatients with COVID-19.",
-      "gold": "Not Supported",
-      "verdict": "Not Supported",
-      "naive": "Not Supported",
-      "baseline": "Not Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E14",
-      "claim": "Oseltamivir reduces influenza-related hospitalizations and complications in otherwise healthy adults.",
-      "gold": "Not Supported",
-      "verdict": "Not Supported",
-      "naive": "Contested",
       "baseline": "Supported",
-      "base_conf": "medium"
+      "base_conf": "?"
     },
     {
-      "id": "E15",
-      "claim": "Ginkgo biloba prevents cognitive decline and dementia in older adults.",
+      "id": "C08",
+      "claim": "Ivermectin improves clinical outcomes in COVID-19",
       "gold": "Not Supported",
       "verdict": "Not Supported",
       "naive": "Not Supported",
-      "baseline": "Not Supported",
-      "base_conf": "high"
+      "baseline": "Supported",
+      "base_conf": "?"
     },
     {
-      "id": "E16",
-      "claim": "Echinacea prevents the common cold in healthy adults.",
+      "id": "C14",
+      "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
       "gold": "Contested",
-      "verdict": "Supported",
+      "verdict": "Contested",
       "naive": "Not Supported",
-      "baseline": "Not Supported",
-      "base_conf": "medium"
-    },
-    {
-      "id": "E17",
-      "claim": "Vitamin D supplementation reduces the incidence of acute respiratory tract infections in deficient individuals.",
-      "gold": "Contested",
-      "verdict": "Not Supported",
-      "naive": "Contested",
       "baseline": "Supported",
-      "base_conf": "high"
+      "base_conf": "?"
     },
     {
-      "id": "E18",
-      "claim": "Omega-3 fatty acid supplementation reduces major cardiovascular events in primary prevention.",
+      "id": "F01",
+      "claim": "Hydroxyethyl starch (HES) is a safe and effective fluid for volume resuscitation in critically ill adults",
       "gold": "Not Supported",
       "verdict": "Not Supported",
       "naive": "Not Supported",
-      "baseline": "Not Supported",
-      "base_conf": "medium"
-    },
-    {
-      "id": "E19",
-      "claim": "Icosapent ethyl (high-dose purified EPA) reduces cardiovascular events in statin-treated patients with elevated triglycerides.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "high"
+      "base_conf": "?"
     },
     {
-      "id": "E20",
-      "claim": "Melatonin reduces sleep-onset latency in adults with primary insomnia.",
+      "id": "F03",
+      "claim": "Perioperative celecoxib/pregabalin multimodal analgesia reduces postoperative pain and opioid use",
       "gold": "Contested",
       "verdict": "Contested",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "high"
+      "base_conf": "?"
     },
     {
-      "id": "E21",
-      "claim": "Ashwagandha (Withania somnifera) reduces perceived stress and serum cortisol in chronically stressed adults.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E22",
-      "claim": "Curcumin improves symptoms and reduces disease activity in knee osteoarthritis.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "medium"
-    },
-    {
-      "id": "E23",
-      "claim": "Creatine monohydrate supplementation increases lean muscle mass and strength gains during resistance training.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E24",
-      "claim": "Low-dose colchicine reduces recurrent cardiovascular events in patients with chronic coronary disease.",
-      "gold": "Supported",
-      "verdict": "Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
-    },
-    {
-      "id": "E26",
-      "claim": "Low-dose naltrexone reduces pain and improves quality of life in fibromyalgia.",
-      "gold": "Contested",
-      "verdict": "Supported",
+      "id": "F04",
+      "claim": "Hydroxychloroquine improves clinical outcomes in COVID-19",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "low"
+      "base_conf": "?"
     },
     {
-      "id": "E28",
-      "claim": "Ketamine (single or repeated IV infusion) produces rapid reduction of symptoms in treatment-resistant depression.",
+      "id": "M01",
+      "claim": "Semaglutide reduces major adverse cardiovascular events in overweight or obese adults without diabetes",
       "gold": "Supported",
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "high"
+      "base_conf": "?"
     },
     {
-      "id": "E29",
-      "claim": "Psilocybin-assisted therapy reduces depressive symptoms in major depressive disorder.",
+      "id": "M02",
+      "claim": "Tirzepatide produces clinically significant weight loss in adults with obesity",
       "gold": "Supported",
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "medium"
+      "base_conf": "?"
     },
     {
-      "id": "E30",
-      "claim": "Fecal-derived or oral spore probiotics prevent antibiotic-associated diarrhea in hospitalized adults.",
+      "id": "M03",
+      "claim": "Liraglutide reduces cardiovascular events in adults with type 2 diabetes at high cardiovascular risk",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M04",
+      "claim": "Semaglutide slows progression of chronic kidney disease in adults with type 2 diabetes",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M05",
+      "claim": "Semaglutide improves heart-failure symptoms in patients with obesity-related HFpEF (KCCQ symptom score and body weight)",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M06",
+      "claim": "Aducanumab improves cognitive and clinical outcomes in patients with early Alzheimer's disease",
       "gold": "Contested",
-      "verdict": "Not Supported",
-      "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "medium"
-    },
-    {
-      "id": "E31",
-      "claim": "Fisetin, a senolytic flavonoid, reduces senescent-cell burden and improves physical function in older adults.",
-      "gold": "Insufficient",
-      "verdict": "Not Supported",
+      "verdict": "Contested",
       "naive": "Contested",
       "baseline": "Supported",
-      "base_conf": "medium"
+      "base_conf": "?"
     },
     {
-      "id": "E34",
-      "claim": "Sodium-glucose cotransporter-2 inhibitors (SGLT2i) reduce heart-failure hospitalization in patients with preserved ejection fraction.",
+      "id": "M07",
+      "claim": "Lecanemab slows clinical decline in early symptomatic Alzheimer's disease",
       "gold": "Supported",
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "high"
+      "base_conf": "?"
     },
     {
-      "id": "E35",
-      "claim": "Zinc lozenges shorten the duration of the common cold when started within 24 hours of symptom onset.",
-      "gold": "Contested",
+      "id": "M08",
+      "claim": "Donanemab slows clinical decline in early symptomatic Alzheimer's disease",
+      "gold": "Supported",
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "medium"
+      "base_conf": "?"
+    },
+    {
+      "id": "M09",
+      "claim": "Solanezumab improves cognition in Alzheimer's disease",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M10",
+      "claim": "Gantenerumab slows clinical decline in early Alzheimer's disease",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M11",
+      "claim": "Adjuvant trastuzumab improves survival in HER2-positive early breast cancer",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M12",
+      "claim": "Adding bevacizumab to chemotherapy improves overall survival in metastatic HER2-negative breast cancer",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M13",
+      "claim": "Osimertinib improves survival in EGFR-mutated advanced non-small-cell lung cancer",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M14",
+      "claim": "Pembrolizumab improves survival in advanced melanoma",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M15",
+      "claim": "Adding a PD-1/PD-L1 checkpoint inhibitor to chemotherapy improves survival in unselected metastatic pancreatic ductal adenocarcinoma",
+      "gold": "Not Supported",
+      "verdict": "Insufficient",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M17",
+      "claim": "Evolocumab (a PCSK9 inhibitor) reduces cardiovascular events in patients with atherosclerotic cardiovascular disease on statins",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M18",
+      "claim": "Sacubitril/valsartan reduces cardiovascular death or heart-failure hospitalization in heart failure with reduced ejection fraction",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M19",
+      "claim": "Dapagliflozin reduces heart-failure hospitalization or cardiovascular death in heart failure with reduced ejection fraction",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M20",
+      "claim": "Intensive blood-pressure control to a systolic target below 120 mmHg reduces cardiovascular events compared with standard control",
+      "gold": "Supported",
+      "verdict": "Supported",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M21",
+      "claim": "Adding niacin to statin therapy reduces cardiovascular events",
+      "gold": "Not Supported",
+      "verdict": "Not Supported",
+      "naive": "Not Supported",
+      "baseline": "Not Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M22",
+      "claim": "Adding ezetimibe to statin therapy reduces cardiovascular events after acute coronary syndrome",
+      "gold": "Supported",
+      "verdict": "Contested",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M23",
+      "claim": "Low-dose colchicine reduces cardiovascular events in patients with coronary artery disease",
+      "gold": "Contested",
+      "verdict": "Contested",
+      "naive": "Contested",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M24",
+      "claim": "Metformin delays aging or extends healthspan in non-diabetic older adults",
+      "gold": "Insufficient",
+      "verdict": "Insufficient",
+      "naive": "Not Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M25",
+      "claim": "Psilocybin-assisted therapy produces durable remission in treatment-resistant depression",
+      "gold": "Contested",
+      "verdict": "Insufficient",
+      "naive": "Supported",
+      "baseline": "Supported",
+      "base_conf": "?"
+    },
+    {
+      "id": "M26",
+      "claim": "Rapamycin (sirolimus) extends healthspan or improves aging outcomes in healthy humans",
+      "gold": "Insufficient",
+      "verdict": "Insufficient",
+      "naive": "Contested",
+      "baseline": "Not Supported",
+      "base_conf": "?"
     }
   ]
 }

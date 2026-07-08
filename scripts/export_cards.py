@@ -14,12 +14,11 @@ from verdict.verdict import evaluate
 
 WEB_PUBLIC = os.path.join(os.path.dirname(os.path.dirname(__file__)), "web", "public")
 
-# The demo deck: an explicit, story-ordered subset of the benchmark corpora.
-# Clinician-facing preview: real breakthrough medicines spanning the verdict states —
-# aducanumab (surrogate-trap Contested), donanemab (Supported), icosapent (Contested),
-# ivermectin (fraud Not Supported), atorvastatin (Supported). Extended as the clinical
-# corpora land.
-DEMO_DECK = ["M06", "M08", "C14", "C08", "C01"]
+# The demo deck: an explicit, story-ordered subset of the clinical benchmark.
+# The first four tabs span all four verdict states; the Alzheimer's trio (aducanumab
+# Contested, lecanemab Supported, solanezumab Not Supported) shows three honest verdicts
+# on one drug class. Real breakthrough medicines + the fraud-immunity beat (ivermectin).
+DEMO_DECK = ["M06", "M07", "M09", "M24", "M01", "M12", "M11", "M23", "C08"]
 
 
 def main() -> None:

@@ -49,7 +49,7 @@
     {
       "source_id": "PMID:30906924",
       "citation": "Justice JN, Niedernhofer L, Robbins PD, Aroda VR, Espeland MA, Kritchevsky SB, Kuchel GA, Barzilai N. Development of Clinical Trials to Extend Healthy Lifespan. Cardiovasc Endocrinol Metab. 2018;7(4):80-83. DOI:10.1097/XCE.0000000000000159",
-      "design": "systematic review",
+      "design": "guideline / regulatory",
       "direction": 0,
       "population_match": true,
       "outcome_match": true,
@@ -57,12 +57,12 @@
       "integrity_note": "No retraction. This is a CONSENSUS/DESIGN paper by the TAME leadership (PubMed article type 'Journal Article'), NOT a systematic review \u2014 the enum offers no 'narrative review'/'design paper' category. Not an outcomes trial. Establishes that the pivotal aging-outcomes RCT was still to be run.",
       "n_int": 0,
       "year": 2018,
-      "finding": "Consensus design paper for TAME (Targeting Aging with Metformin) \u2014 the first proposed RCT to test whether metformin delays a composite of age-related conditions in older adults. Documents that as of publication the trial was being designed to generate this evidence, i.e., the clinical aging-outcome evidence did not yet exist. Establishes the absence-of-evidence baseline. (Design/consensus paper, not a systematic review.)"
+      "finding": "Consensus design paper for TAME (Targeting Aging with Metformin) \u2014 the first proposed RCT to test whether metformin delays a composite of age-related conditions in older adults. Documents that as of publication the trial was being designed to generate this evidence, i.e., the clinical aging-outcome evidence did not yet exist. Establishes the absence-of-evidence baseline. ()."
     },
     {
       "source_id": "PMID:41957871",
       "citation": "Peng LN, Hsiao FY, Chen LK. Beyond disease treatment and prevention: from geroscience and molecular hallmarks to gerotherapeutics and precision geromedicine. J Chin Med Assoc. 2026;89(5):323-333. DOI:10.1097/JCMA.0000000000001374",
-      "design": "systematic review",
+      "design": "guideline / regulatory",
       "direction": 0,
       "population_match": true,
       "outcome_match": true,
@@ -76,7 +76,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "A confident plain-LLM baseline would likely answer YES: 'Yes \u2014 metformin is widely studied as an anti-aging drug and observational data (e.g., the Bannister CPRD study showing metformin-treated diabetics outlived non-diabetic controls) plus strong preclinical lifespan-extension data support that metformin delays aging and extends healthspan; the TAME trial is testing exactly this.' This baseline conflates (a) preclinical and observational signals with confirmed clinical benefit, (b) a diabetic population with the claimed non-diabetic older adults, and (c) a DESIGNED trial (TAME) with a REPORTED positive one. It ignores that the only completed RCT in the target population (MILES, N=16) used a gene-expression surrogate and that a rigorous RCT (Konopka 2019) found metformin BLUNTED exercise benefits \u2014 so the correct verdict is Insufficient, not Supported."
+    "text": "Yes \u2014 metformin is one of the most promising anti-aging drugs. Large observational studies (like the CPRD analysis where metformin-treated diabetics outlived matched non-diabetic controls), together with strong preclinical lifespan-extension data, indicate it delays aging, and the TAME trial is testing exactly this."
   },
   "provenance": "Independently re-verified in this session. PubMed get_article_metadata on PMIDs 25041462, 30548390, 30906924, 41957871: all four resolve to the stated titles/DOIs/journals; none flagged 'Retracted Publication'. Bannister N (78,241/90,463), person-years (503,384), STR 0.85 (0.81-0.90) all match; PubMed article type 'Observational Study' (retrospective) \u2014 corpus 'prospective cohort' corrected in notes. Konopka confirmed 'Randomized Controlled Trial', n=27 metformin/n=26 placebo, attenuated insulin sensitivity+VO2max. Justice 2018 = consensus/design paper ('Journal Article'); Peng 2026 = 'Review' (narrative) \u2014 both mislabeled 'systematic review', corrected. ClinicalTrials.gov get_trial_details NCT02432287 (MILES): COMPLETED, Phase 4, N=16, primary endpoint RNA-Seq transcriptome at 6 weeks, age>60 IGT non-diabetic \u2014 confirms outcome_match=false, population_match=true. TAME not-yet-reported corroborated by Justice 2018 + Peng 2026.",
   "notes": "Key discriminators for the gate: outcome_match=false on MILES (surrogate transcriptome, not clinical aging) and population_match=false on Bannister (diabetic, not non-diabetic) are the two facts that collapse the affirmative case. The single directly-relevant RCT in the target population (Konopka) is CONTRADICTING (direction -1). No completed RCT measures the CLAIMED clinical aging/healthspan outcome in the CLAIMED population \u2192 Insufficient (absence of evidence), distinct from 'Not Supported'. FACT-CHECK CORRECTIONS: (1) Bannister design is RETROSPECTIVE observational, not prospective \u2014 the enum lacks a retrospective-cohort value so the field is left at the nearest cohort bucket with the temporality flagged in integrity_note. (2) Justice 2018 and Peng 2026 are a design/consensus paper and a narrative review respectively, not systematic reviews \u2014 enum lacks those categories, corrected in-text. None of these label fixes change direction, outcome_match, population_match, or the gold verdict.",

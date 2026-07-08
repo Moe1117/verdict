@@ -14,7 +14,7 @@
       {
         "gate": "direct-evidence",
         "passed": true,
-        "detail": "6 trial-grade on-population study(ies) on the claimed outcome"
+        "detail": "5 trial-grade on-population study(ies) on the claimed outcome"
       },
       {
         "gate": "sufficiency",
@@ -59,21 +59,6 @@
         "note": ""
       },
       {
-        "citation": "Budd Haeberlein S, et al. Two Randomized Phase 3 Studies of Aducanumab in Early Alzheimer's Disease. J Prev Alzheimers Dis. 2022;9(2):197-210. DOI:10.14283/jpad.2022.30",
-        "design": "rct",
-        "direction": 0,
-        "population_match": true,
-        "source_id": "PMID:35542991",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "",
-        "n_int": 3285,
-        "year": 2022,
-        "finding": "Combined pivotal publication of both trials (1638 EMERGE + 1647 ENGAGE = 3285): EMERGE met all four primary/secondary clinical endpoints; ENGAGE met none. Net across the identical program the clinical benefit is discordant/unresolved; both trials were halted early on a pooled futility analysis. Not retracted (PubMed article types: Clinical Trial Phase III / RCT).",
-        "integrity_note": "",
-        "note": ""
-      },
-      {
         "citation": "ENVISION (A Phase 3b/4 Study to Verify the Clinical Benefit of Aducanumab (BIIB037) in Participants With Alzheimer's Disease) \u2014 confirmatory RCT required by the FDA accelerated approval. Biogen. ClinicalTrials.gov NCT05310071 (status: TERMINATED).",
         "design": "rct",
         "direction": 0,
@@ -90,7 +75,7 @@
       },
       {
         "citation": "Alexander GC, Knopman DS, Emerson SS, Ovbiagele B, Kryscio RJ, Perlmutter JS, Kesselheim AS. Revisiting FDA Approval of Aducanumab. N Engl J Med. 2021;385(9):769-771 (Perspective). PMID 34320282. Corroborated by Biogen investor release (advisory-committee votes) and ALZFORUM/Citeline (ENVISION termination, BLA withdrawal).",
-        "design": "systematic review",
+        "design": "guideline / regulatory",
         "direction": 0,
         "population_match": true,
         "source_id": "DOI:10.1056/NEJMp2110468",
@@ -99,7 +84,7 @@
         "n": "",
         "n_int": 3285,
         "year": 2021,
-        "finding": "Expert Perspective documenting that the FDA's June 2021 accelerated approval rested on the AMYLOID-BETA PLAQUE SURROGATE (PET), NOT cognition; the advisory committee had voted 10-against/1-uncertain that Study 302/EMERGE could be considered primary evidence of clinical effectiveness. Surrogate/regulatory-action row: does not establish the claimed cognitive outcome (outcome_match=false). NOTE: this is an expert commentary, not a systematic review \u2014 no editorial/regulatory enum available.",
+        "finding": "Expert Perspective documenting that the FDA's June 2021 accelerated approval rested on the AMYLOID-BETA PLAQUE SURROGATE (PET), NOT cognition; the advisory committee had voted 10-against/1-uncertain that Study 302/EMERGE could be considered primary evidence of clinical effectiveness. Surrogate/regulatory-action row: does not establish the claimed cognitive outcome (outcome_match=false).",
         "integrity_note": "",
         "note": ""
       },
@@ -137,15 +122,525 @@
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
-    "id": "M08",
-    "claim": "Donanemab slows clinical decline in early symptomatic Alzheimer's disease",
+    "id": "M07",
+    "claim": "Lecanemab slows clinical decline in early symptomatic Alzheimer's disease",
     "verdict": "Supported",
     "expected": "Supported",
     "confidence": "high",
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
-      "text": "Yes. Donanemab (Kisunla) slows clinical decline in early symptomatic Alzheimer's disease. In the pivotal Phase 3 TRAILBLAZER-ALZ 2 trial (1,736 patients with amyloid- and tau-positive MCI or mild dementia), donanemab significantly slowed progression on both the primary iADRS measure and the secondary CDR-SB measure over 18 months versus placebo, and the FDA approved it on this basis in July 2024. The main caveats are the modest absolute magnitude of benefit and the risk of amyloid-related imaging abnormalities (ARIA-E/H), which requires APOE4 testing and MRI monitoring."
+      "text": "Yes. Lecanemab (Leqembi) slows clinical decline in early symptomatic Alzheimer's disease. The pivotal 18-month phase 3 CLARITY-AD trial met its primary endpoint, showing a statistically significant ~27% slowing of decline on the CDR-SB versus placebo, with consistent benefit across secondary cognitive and functional measures and a large reduction in brain amyloid. This led to full FDA approval in July 2023. The effect size is modest and treatment carries a risk of amyloid-related imaging abnormalities (ARIA), but the direction of benefit on the clinical endpoint is well established and independently echoed by donanemab's TRAILBLAZER-ALZ 2 trial."
+    },
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "1 trial-grade on-population study(ies) on the claimed outcome"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: effect present"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "van Dyck CH, et al. Lecanemab in Early Alzheimer's Disease. N Engl J Med. 2022;388(1):9-21. DOI:10.1056/NEJMoa2212948 (CLARITY-AD; NCT03887455).",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:36449413",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 898,
+        "year": 2022,
+        "finding": "Primary endpoint CDR-SB: adjusted mean change 1.21 (lecanemab) vs 1.66 (placebo); difference -0.45 (95% CI -0.67 to -0.23; P<0.001) at 18 months \u2014 directly measures the claimed outcome and favors lecanemab. Amyloid-PET reduced -59.1 centiloids. ARIA-E 12.6%.",
+        "integrity_note": "Industry-funded (Eisai/Biogen) pivotal phase 3, double-blind, placebo-controlled, prespecified CDR-SB primary; result met primary and all key secondaries. Standard COI but methodologically sound; basis for FDA traditional approval. Verified on PubMed: title/N/effect exact.",
+        "note": ""
+      },
+      {
+        "citation": "Swanson CJ, et al. A randomized, double-blind, phase 2b proof-of-concept clinical trial in early Alzheimer's disease with lecanemab, an anti-A\u03b2 protofibril antibody. Alzheimers Res Ther. 2021;13(1):80. DOI:10.1186/s13195-021-00813-8 (Study 201; NCT01767311).",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:33865446",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 609,
+        "year": 2021,
+        "finding": "Missed the 12-month ADCOMS primary (64% vs 80% probability threshold). At 18 months the 10-mg/kg biweekly dose showed 26-33% less decline on CDR-SB vs placebo (secondary) plus amyloid and ADAS-cog14 benefit \u2014 directionally consistent with the claim but on a secondary endpoint.",
+        "integrity_note": "Bayesian adaptive design; the 12-month PRIMARY endpoint was ADCOMS (a composite surrogate), NOT CDR-SB \u2014 hence outcome_match=false for the CLAIMED CDR-SB endpoint. CDR-SB was a prespecified secondary. n_int=609 verified = lecanemab arm (854 treated: 609 lecanemab/245 placebo).",
+        "note": ""
+      },
+      {
+        "citation": "Honig LS, et al. Updated safety results from phase 3 lecanemab study in early Alzheimer's disease. Alzheimers Res Ther. 2024;16(1):105. DOI:10.1186/s13195-024-01441-8 (CLARITY-AD Core+OLE; NCT03887455).",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:38730496",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 1612,
+        "year": 2024,
+        "finding": "ARIA-E 13.6% (34.5% in ApoE e4 homozygotes), ARIA-H microhemorrhages 16.0%, infusion reactions 24.5%; 3 ICH deaths across Core+OLE (2 lecanemab in OLE, with concurrent tPA/anticoagulation). Confirms the tolerability caveats that temper \u2014 but do not overturn \u2014 the efficacy consensus.",
+        "integrity_note": "Safety/tolerability report of the pivotal trial + open-label extension; not an efficacy endpoint, so direction=0 and outcome_match=false. Included to characterize the risk side of the benefit-risk balance underlying the consensus. Verified on PubMed.",
+        "note": ""
+      },
+      {
+        "citation": "Cohen S, et al. Lecanemab Clarity AD: Quality-of-Life Results from a Randomized, Double-Blind Phase 3 Trial. J Prev Alzheimers Dis. 2023;10(4):771-777. DOI:10.14283/jpad.2023.123 (NCT03887455).",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:37874099",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 898,
+        "year": 2023,
+        "finding": "At 18 months: 49% (EQ-5D-5L) and 56% (QOL-AD, subject-rated) less HRQoL decline and 38% less increase in caregiver burden (ZBI) vs placebo \u2014 consistent with, and adds patient-relevant weight to, the CDR-SB clinical-decline benefit.",
+        "integrity_note": "HRQoL/caregiver-burden outcomes were EXPLORATORY in CLARITY-AD, not the CDR-SB clinical-decline primary \u2014 outcome_match=false. Supportive, patient-centered corroboration of the same trial's benefit. Verified on PubMed.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "M09",
+    "claim": "Solanezumab improves cognition in Alzheimer's disease",
+    "verdict": "Not Supported",
+    "expected": "Not Supported",
+    "confidence": "high",
+    "baseline": {
+      "answer": "No",
+      "confidence": "high",
+      "text": "No. Solanezumab failed its pivotal Alzheimer's program \u2014 EXPEDITION3 (2018) missed its cognitive primary endpoint, and the A4 secondary-prevention trial (2023) was also negative. Anti-amyloid antibodies that bind soluble monomer without clearing plaque, like solanezumab, have not shown a cognitive benefit."
+    },
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "4 trial-grade on-population study(ies) on the claimed outcome"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: no effect (evidence of absence)"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Honig LS, et al. Trial of Solanezumab for Mild Dementia Due to Alzheimer's Disease (EXPEDITION3). N Engl J Med. 2018;378:321-330. DOI:10.1056/NEJMoa1705971",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:29365294",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 1057,
+        "year": 2018,
+        "finding": "In mild AD dementia (MMSE 20-26, amyloid-positive), solanezumab 400 mg IV q4w did NOT significantly slow decline on the primary ADAS-cog14 endpoint (difference -0.80, 95% CI -1.73 to 0.14, P=0.10). 2129 enrolled (1057 solanezumab, 1072 placebo). Trial failed; Lilly ended symptomatic-AD development.",
+        "integrity_note": "Pivotal phase 3, double-blind, placebo-controlled; NCT01900665 (verified, enrollment 2129, phase 3, terminated); industry-sponsored (Eli Lilly), pre-registered, primary endpoint reported. PubMed pub types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. No integrity concerns; no retraction.",
+        "note": ""
+      },
+      {
+        "citation": "Doody RS, et al. Phase 3 Trials of Solanezumab for Mild-to-Moderate Alzheimer's Disease (EXPEDITION1 & EXPEDITION2). N Engl J Med. 2014;370:311-321. DOI:10.1056/NEJMoa1312889",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:24450890",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 1012,
+        "year": 2014,
+        "finding": "In mild-to-moderate AD, solanezumab 400 mg IV q4w for 18 months did NOT meet the primary ADAS-cog11 cognitive endpoint in either trial (EXPEDITION1 ADAS-cog11 diff -0.8, P=0.24; EXPEDITION2 mild-AD ADAS-cog14 diff -1.5 to -1.7, NS). Both trials negative on the primary cognitive outcome (pooled N=2052).",
+        "integrity_note": "Two parallel pivotal phase 3 RCTs (NCT00905372, NCT00904683); double-blind, placebo-controlled; primary cognitive endpoints pre-specified and reported. PubMed pub types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. No integrity concerns; no retraction. n_int=1012 = total randomized in EXPEDITION1 (506+506); EXPEDITION2 randomized 1040 (521+519), pooled N=2052.",
+        "note": ""
+      },
+      {
+        "citation": "Sperling RA, et al. Trial of Solanezumab in Preclinical Alzheimer's Disease (A4 Study). N Engl J Med. 2023;389:1096-1107. DOI:10.1056/NEJMoa2305032",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:37458272",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 578,
+        "year": 2023,
+        "finding": "In preclinical AD (CDR 0, MMSE>=25, amyloid-positive), solanezumab (up to 1600 mg IV q4w) 'did not slow cognitive decline as compared with placebo over 240 weeks' on the primary PACC (mean change -1.43 solanezumab vs -1.13 placebo; difference -0.30, 95% CI -0.82 to 0.22, P=0.26). 1169 randomized (578 solanezumab, 591 placebo). Negative even at the earliest disease stage; ended solanezumab development.",
+        "integrity_note": "Phase 3, double-blind, placebo-controlled early-intervention trial; NCT02008357 (verified, enrollment 1169, phase 3, PACC primary over 240 wks); NIA-funded. PubMed pub type 'Randomized Controlled Trial'. No integrity concerns; no retraction. n_int corrected from 585 to 578 per NEJM abstract (578 solanezumab, 591 placebo, 1169 total).",
+        "note": ""
+      },
+      {
+        "citation": "Lu L, et al. Anti-A\u03b2 agents for mild to moderate Alzheimer's disease: systematic review and meta-analysis. J Neurol Neurosurg Psychiatry. 2020;91:1316-1324. DOI:10.1136/jnnp-2020-323497",
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:33046560",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 12903,
+        "year": 2020,
+        "finding": "Across 19 RCTs of anti-A\u03b2 agents (N=12,903), no cognitive difference vs placebo on ADAS-Cog (MD 0.20, 95% CI -0.40 to 0.81; below the 3.1-3.8-point minimal important difference; moderate-certainty evidence). Authors conclude anti-A\u03b2 interventions are unlikely to meaningfully slow cognitive/functional decline \u2014 situating solanezumab's failures in the broader negative evidence base. (n_int is total analyzed N across arms, not solanezumab-only.)",
+        "integrity_note": "Systematic review/meta-analysis; 19 RCTs, 17 at low risk of bias; random-effects pooling; includes solanezumab among anti-A\u03b2 agents. PubMed pub types 'Meta-Analysis' + 'Systematic Review'. No integrity concerns; no retraction.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "M24",
+    "claim": "Metformin delays aging or extends healthspan in non-diabetic older adults",
+    "verdict": "Insufficient",
+    "expected": "Insufficient",
+    "confidence": "high",
+    "baseline": {
+      "answer": "Yes",
+      "confidence": "high",
+      "text": "Yes \u2014 metformin is one of the most promising anti-aging drugs. Large observational studies (like the CPRD analysis where metformin-treated diabetics outlived matched non-diabetic controls), together with strong preclinical lifespan-extension data, indicate it delays aging, and the TAME trial is testing exactly this."
+    },
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": false,
+        "detail": "on-population trials measure only surrogate / off-target endpoints \u2014 no direct evidence on the claimed outcome"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Metformin in Longevity Study (MILES). Albert Einstein College of Medicine. ClinicalTrials.gov NCT02432287. Completed 2017.",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "NCT02432287",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 16,
+        "year": 2017,
+        "finding": "Only completed RCT of metformin in non-diabetic older adults (age >60, impaired glucose tolerance). Primary endpoint was change in muscle/adipose gene-expression transcriptome via RNA-Seq at 6 weeks \u2014 a molecular surrogate of aging biology, NOT a clinical healthspan or aging outcome. Under-powered (N=16) and did not measure morbidity, function, or survival. Provides no clinical evidence for delayed aging.",
+        "integrity_note": "No retraction. Legitimate registered Phase 4 pilot RCT (verified COMPLETED on ClinicalTrials.gov, N=16, primary endpoint RNA-Seq transcriptome at 6 weeks). Very small pilot; primary endpoint is a molecular surrogate, not a clinical aging outcome.",
+        "note": ""
+      },
+      {
+        "citation": "Konopka AR et al. Metformin inhibits mitochondrial adaptations to aerobic exercise training in older adults. Aging Cell. 2019;18(1):e12880. DOI:10.1111/acel.12880",
+        "design": "rct",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "PMID:30548390",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 27,
+        "year": 2019,
+        "finding": "In older adults (62 yr) randomized to metformin (n=27) vs placebo (n=26) during 12 weeks of aerobic exercise, metformin ATTENUATED the exercise-induced improvement in whole-body insulin sensitivity and VO2max and abrogated the gain in skeletal-muscle mitochondrial respiration. Directly contradicts a healthspan-promoting effect: metformin blunted a canonical healthspan intervention (exercise) in the target population.",
+        "integrity_note": "No retraction (verified via PubMed; article type 'Randomized Controlled Trial'). Double-blind placebo-controlled RCT, NIH-funded. Endpoints are physiological surrogates (insulin sensitivity, VO2max, mitochondrial respiration), not hard clinical aging outcomes.",
+        "note": ""
+      },
+      {
+        "citation": "Bannister CA et al. Can people with type 2 diabetes live longer than those without? A comparison of mortality in people initiated with metformin or sulphonylurea monotherapy and matched, non-diabetic controls. Diabetes Obes Metab. 2014;16(11):1165-73. DOI:10.1111/dom.12354",
+        "design": "prospective cohort",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:25041462",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 78241,
+        "year": 2014,
+        "finding": "Retrospective CPRD cohort: 78,241 metformin-monotherapy diabetics vs 90,463 matched non-diabetic controls (503,384 person-years). Metformin-treated diabetics had 15% LONGER adjusted median survival than matched non-diabetics (STR 0.85, 95% CI 0.81-0.90). The most-cited observational basis for a metformin longevity effect \u2014 but it is a diabetic population and retrospective/observational, so it cannot establish an aging/healthspan benefit in non-diabetic older adults (confounding by indication).",
+        "integrity_note": "No retraction. RETROSPECTIVE observational matched cohort (UK CPRD; PubMed article type 'Observational Study'). NOT prospective \u2014 schema enum lacks a 'retrospective cohort' bucket, so the nearest cohort category is used but temporality is retrospective. Vulnerable to confounding by indication, immortal-time/prevalent-user bias; hypothesis-generating only. Population is diabetic, not the claimed non-diabetic older adults.",
+        "note": ""
+      },
+      {
+        "citation": "Justice JN, Niedernhofer L, Robbins PD, Aroda VR, Espeland MA, Kritchevsky SB, Kuchel GA, Barzilai N. Development of Clinical Trials to Extend Healthy Lifespan. Cardiovasc Endocrinol Metab. 2018;7(4):80-83. DOI:10.1097/XCE.0000000000000159",
+        "design": "guideline / regulatory",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:30906924",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 0,
+        "year": 2018,
+        "finding": "Consensus design paper for TAME (Targeting Aging with Metformin) \u2014 the first proposed RCT to test whether metformin delays a composite of age-related conditions in older adults. Documents that as of publication the trial was being designed to generate this evidence, i.e., the clinical aging-outcome evidence did not yet exist. Establishes the absence-of-evidence baseline. ().",
+        "integrity_note": "No retraction. This is a CONSENSUS/DESIGN paper by the TAME leadership (PubMed article type 'Journal Article'), NOT a systematic review \u2014 the enum offers no 'narrative review'/'design paper' category. Not an outcomes trial. Establishes that the pivotal aging-outcomes RCT was still to be run.",
+        "note": ""
+      },
+      {
+        "citation": "Peng LN, Hsiao FY, Chen LK. Beyond disease treatment and prevention: from geroscience and molecular hallmarks to gerotherapeutics and precision geromedicine. J Chin Med Assoc. 2026;89(5):323-333. DOI:10.1097/JCMA.0000000000001374",
+        "design": "guideline / regulatory",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:41957871",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 0,
+        "year": 2026,
+        "finding": "2026 geroscience review confirms TAME \u2014 the first prospective trial designed to delay aging as a composite multi-disease outcome \u2014 is 'currently underway' and not yet reported. The strongest cited pharmacological evidence for metformin biological-age modification is a cynomolgus-monkey 40-month multiomics study (preclinical; ~6.41-year deceleration of proteomic biological age), NOT a human aging-outcome RCT. Confirms that no completed human RCT establishes delayed aging/healthspan in non-diabetic older adults.",
+        "integrity_note": "No retraction. NARRATIVE geroscience review (PubMed article type 'Review'), not a systematic review and not primary outcome data \u2014 enum lacks 'narrative review'. Used to confirm current status of the pivotal trial.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "M01",
+    "claim": "Semaglutide reduces major adverse cardiovascular events in overweight or obese adults without diabetes",
+    "verdict": "Supported",
+    "expected": "Supported",
+    "confidence": "high",
+    "baseline": {
+      "answer": "Yes",
+      "confidence": "high",
+      "text": "Yes. Semaglutide reduces major adverse cardiovascular events in overweight/obese adults without diabetes. This was demonstrated by the landmark SELECT trial (Lincoff et al., NEJM 2023), a large double-blind RCT of 17,604 adults with a BMI >=27 and established cardiovascular disease but no diabetes, in which weekly semaglutide 2.4 mg reduced the primary composite of cardiovascular death, nonfatal MI, and nonfatal stroke by 20% (HR 0.80, 95% CI 0.72-0.90, P<0.001) versus placebo. On the strength of SELECT, the FDA in March 2024 approved a cardiovascular risk-reduction indication for Wegovy in this exact population. The finding is consistent with the established class-level MACE benefit of GLP-1 receptor agonists."
+    },
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "2 trial-grade on-population study(ies) on the claimed outcome"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: effect present"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Lincoff AM, et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes (SELECT). N Engl J Med. 2023;389(24):2221-2232. DOI:10.1056/NEJMoa2307563. NCT03574597.",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:37952131",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 8803,
+        "year": 2023,
+        "finding": "In 17,604 overweight/obese adults with CVD but no diabetes, semaglutide 2.4 mg weekly reduced 3-point MACE vs placebo: 569/8803 (6.5%) vs 701/8801 (8.0%), HR 0.80 (95% CI 0.72-0.90), P<0.001 \u2014 a 20% relative reduction. Exact population and exact claimed primary endpoint.",
+        "integrity_note": "Pivotal, pre-specified, event-driven, double-blind, placebo-controlled superiority RCT; industry-funded (Novo Nordisk) with academic steering committee and author data-vouching. Primary composite MACE met (HR 0.80, 95% CI 0.72-0.90, P<0.001). Note: the CV-death component alone did not reach hierarchical significance (HR 0.85, P=0.07), but this is a secondary component, not the claimed composite outcome. Independently re-verified via PubMed (title/DOI/RCT type) and ClinicalTrials.gov (NCT03574597: N=17,604, Phase 3, 3-point MACE primary, age>=45, BMI>=27, established CVD, no diabetes).",
+        "note": ""
+      },
+      {
+        "citation": "Badve SV, et al. Effects of GLP-1 receptor agonists on kidney and cardiovascular disease outcomes: a meta-analysis of randomised controlled trials. Lancet Diabetes Endocrinol. 2025;13(1):15-28. DOI:10.1016/S2213-8587(24)00271-7.",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:39608381",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 85373,
+        "year": 2025,
+        "finding": "GLP-1 RA reduced MACE by 14% (HR 0.86, 95% CI 0.80-0.92) with SELECT included; benefit was consistent between SELECT (no-diabetes obesity/CVD) and the type-2-diabetes trials with no significant heterogeneity (p>0.05), corroborating that the effect extends to the non-diabetic population of the claim.",
+        "integrity_note": "PROSPERO-registered (CRD42024528864) random-effects meta-analysis, 11 trials, 85,373 participants; SELECT included post hoc. Online ahead of print 2024-11-25; print issue Jan 2025. Numbers independently re-verified against the PubMed abstract.",
+        "note": ""
+      },
+      {
+        "citation": "Marso SP, et al. Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes (SUSTAIN-6). N Engl J Med. 2016;375(19):1834-1844. DOI:10.1056/NEJMoa1607141. NCT01720446.",
+        "design": "rct",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:27633186",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 1648,
+        "year": 2016,
+        "finding": "Same drug (semaglutide) reduced 3-point MACE in 3,297 type-2-diabetes patients: 6.6% vs 8.9%, HR 0.74 (95% CI 0.58-0.95). Establishes semaglutide's cardioprotection on the identical endpoint; population is diabetic, so supports plausibility rather than directly proving the no-diabetes claim.",
+        "integrity_note": "Double-blind placebo-controlled RCT; primary endpoint identical 3-point MACE. Population is type 2 DIABETES (does not match the 'without diabetes' claim population) \u2014 included as same-drug mechanistic/consistency support, not as direct population evidence. Re-verified via PubMed: N=3,297, 108/1648 vs 146/1649, HR 0.74 (0.58-0.95).",
+        "note": ""
+      },
+      {
+        "citation": "Sattar N, et al. Cardiovascular, mortality, and kidney outcomes with GLP-1 receptor agonists in patients with type 2 diabetes: a systematic review and meta-analysis of randomised trials. Lancet Diabetes Endocrinol. 2021;9(10):653-662. DOI:10.1016/S2213-8587(21)00203-5.",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": false,
+        "source_id": "PMID:34425083",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 60080,
+        "year": 2021,
+        "finding": "Class-level MACE reduction of 14% (HR 0.86, 95% CI 0.80-0.93) across 8 GLP-1 RA diabetes trials, homogeneous across subgroups. Establishes the robust class effect on the exact 3-point MACE endpoint that SELECT later extended to the non-diabetic obesity population.",
+        "integrity_note": "PROSPERO-registered (CRD42021259711) random-effects meta-analysis, 8 trials, 60,080 patients, all type 2 diabetes (pre-SELECT). Population does not match the no-diabetes claim; included as class-level mechanistic context. Re-verified via PubMed abstract: MACE HR 0.86 (0.80-0.93), p<0.0001.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "M12",
+    "claim": "Adding bevacizumab to chemotherapy improves overall survival in metastatic HER2-negative breast cancer",
+    "verdict": "Not Supported",
+    "expected": "Not Supported",
+    "confidence": "high",
+    "baseline": {
+      "answer": "Yes",
+      "confidence": "high",
+      "text": "Bevacizumab (Avastin) is a well-established anti-angiogenic agent that was FDA-approved in 2008 for first-line metastatic HER2-negative breast cancer in combination with paclitaxel. The pivotal E2100 trial showed that adding bevacizumab to chemotherapy roughly doubled progression-free survival and improved response rates, and subsequent trials (AVADO, RIBBON-1) confirmed the benefit of adding bevacizumab to first-line chemotherapy. Given these consistent positive randomized results, adding bevacizumab to chemotherapy improves outcomes including survival in this population."
+    },
+    "gate_trace": [
+      {
+        "gate": "direct-evidence",
+        "passed": true,
+        "detail": "2 trial-grade on-population study(ies) on the claimed outcome"
+      },
+      {
+        "gate": "sufficiency",
+        "passed": true,
+        "detail": "trial evidence adequate to assess"
+      },
+      {
+        "gate": "consistency",
+        "passed": true,
+        "detail": "trial evidence agrees: no effect (evidence of absence)"
+      }
+    ],
+    "ledger": [
+      {
+        "citation": "Miller K, et al. Paclitaxel plus bevacizumab versus paclitaxel alone for metastatic breast cancer (E2100). N Engl J Med. 2007;357(26):2666-76. DOI:10.1056/NEJMoa072113",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:18160686",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 722,
+        "year": 2007,
+        "finding": "PFS significantly prolonged (median 11.8 vs 5.9 mo; HR 0.60, P<0.001) but OS NOT improved (median 26.7 vs 25.2 mo; HR 0.88, P=0.16). Primary endpoint was the PFS surrogate, not OS \u2014 hence outcome_match=false; OS direction null. Verified verbatim against PubMed abstract.",
+        "integrity_note": "Landmark open-label phase III (NCT00028990); primary endpoint PFS, OS pre-specified secondary. PubMed article_types confirm RCT/Phase III; no retraction.",
+        "note": ""
+      },
+      {
+        "citation": "Gray R, et al. Independent review of E2100: phase III bevacizumab plus paclitaxel vs paclitaxel in metastatic breast cancer. J Clin Oncol. 2009;27(30):4966-72. DOI:10.1200/JCO.2008.21.6630",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:19720913",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 722,
+        "year": 2009,
+        "finding": "Independent review confirmed a robust PFS benefit (IRF HR 0.48; median 11.3 vs 5.8 mo) and doubled ORR (48.9% vs 22.2%). Primary endpoint PFS (surrogate) \u2014 outcome_match=false; does not establish an OS benefit. Verified against PubMed abstract.",
+        "integrity_note": "Blinded independent radiologic re-review of E2100; validates PFS effect. No integrity concerns (PubMed).",
+        "note": ""
+      },
+      {
+        "citation": "Robert NJ, et al. RIBBON-1: chemotherapy with or without bevacizumab for first-line HER2-negative metastatic breast cancer. J Clin Oncol. 2011;29(10):1252-60. DOI:10.1200/JCO.2010.28.0982",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:21383283",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 1237,
+        "year": 2011,
+        "finding": "PFS (primary) improved in both cohorts (HR 0.69 Cape; 0.64 Tax/Anthra) but per the JCO abstract 'No statistically significant differences in OS between the placebo- and bevacizumab-containing arms were observed.' Primary endpoint PFS (surrogate) \u2192 outcome_match=false; OS null (direction 0). Direction corrected from -1 to 0 to match the primary source.",
+        "integrity_note": "Double-blind placebo-controlled phase III, two chemo cohorts (capecitabine; taxane/anthracycline). Confirmatory trial required by FDA accelerated approval. No retraction (PubMed).",
+        "note": ""
+      },
+      {
+        "citation": "Miles DW, et al. Biomarker results from the AVADO phase 3 trial of first-line bevacizumab plus docetaxel for HER2-negative metastatic breast cancer. Br J Cancer. 2013;108(5):1052-60. DOI:10.1038/bjc.2013.69",
+        "design": "rct",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:23422754",
+        "outcome_match": false,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 736,
+        "year": 2013,
+        "finding": "AVADO's primary endpoint was PFS (significantly improved with bevacizumab); the pooled meta-analysis and FDA review confirm mature OS showed no benefit (HR ~1.0). Primary endpoint surrogate \u2192 outcome_match=false. Direction set to 0 (null on OS) \u2014 this row's own abstract reports the PFS/biomarker result, and OS-null is carried by PMID:23894038 and the FDA decision.",
+        "integrity_note": "AVADO (NCT00333775), double-blind placebo-controlled phase III, 736 treated. Primary endpoint PFS. No retraction (PubMed article_types: RCT/Phase III).",
+        "note": ""
+      },
+      {
+        "citation": "Miles DW, et al. First-line bevacizumab plus chemotherapy for HER2-negative metastatic breast cancer: pooled and subgroup analyses of 2447 patients (E2100+AVADO+RIBBON-1). Ann Oncol. 2013;24(11):2773-80. DOI:10.1093/annonc/mdt276",
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:23894038",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 2447,
+        "year": 2013,
+        "finding": "OS analyzed directly as an endpoint: OS HR 0.97 (95% CI 0.86-1.08; median 26.7 vs 26.4 mo) \u2014 no OS benefit overall; triple-negative subgroup OS HR 0.96 (0.79-1.16). PFS improved (HR 0.64). outcome_match=true (OS is the measured endpoint here); direction null. Verified verbatim against PubMed abstract.",
+        "integrity_note": "Pooled individual-patient data from the three pivotal first-line phase III RCTs; industry-authored but consistent with independent Cochrane review. PubMed article_types confirm Meta-Analysis. No retraction.",
+        "note": ""
+      },
+      {
+        "citation": "Wagner AD, et al. VEGF-targeting therapies for endocrine refractory/resistant metastatic breast cancer (Cochrane review). Cochrane Database Syst Rev. 2012;(7):CD008941. DOI:10.1002/14651858.CD008941.pub2",
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:22786517",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 2886,
+        "year": 2012,
+        "finding": "First-line: PFS improved (HR 0.67; 95% CI 0.61-0.73) but OS not significantly different (HR 0.93; 95% CI 0.84-1.04); second-line OS HR 0.98 (0.83-1.16). Concludes benefit is limited to surrogate endpoints (PFS/ORR) with no OS or QoL benefit. outcome_match=true; OS null. Verified verbatim against PubMed abstract.",
+        "integrity_note": "Independent Cochrane systematic review/meta-analysis of RCTs; low conflict-of-interest. PubMed article_types confirm Meta-Analysis/Systematic Review. No retraction.",
+        "note": ""
+      },
+      {
+        "citation": "FDA. Final Decision on Withdrawal of Breast Cancer Indication for AVASTIN (Bevacizumab) Following Public Hearing. Fed Regist. 2012;77(38):11554 (77 FR 11554; FR Doc. 2012-4424; Docket FDA-2010-N-0621); withdrawal effective Nov 18, 2011. Basis includes E2100 (NCT00028990), AVADO, RIBBON-1.",
+        "design": "systematic review",
+        "direction": -1,
+        "population_match": true,
+        "source_id": "NCT00028990",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 0,
+        "year": 2012,
+        "finding": "FDA revoked the metastatic breast cancer indication, concluding no trial demonstrated a statistically significant OS prolongation and that the drug had not been shown safe and effective for this use \u2014 with added serious toxicity. Direct regulatory consensus that the OS claim is Not Supported. Verified against federalregister.gov and the Nov 18 2011 FDA/Genentech announcements.",
+        "integrity_note": "Regulatory decision, not a study \u2014 closest available design enum used; n_int=0 signals non-trial. Commissioner Hamburg's 69-page opinion after the June 2011 public hearing; ODAC voted 6-0 to withdraw at the hearing (earlier ODAC 12-1). Re-verified on federalregister.gov and govinfo.gov (77 FR 11554, FR Doc. 2012-4424). NOTE: source_id uses the E2100 NCT as the checkable trial anchor because the schema requires a PMID/NCT/DOI form; the fabricated 'DOI:10.1056/federalregister-2012-4424' was removed. The authoritative regulatory citation is 77 FR 11554 / FR Doc. 2012-4424 given in the citation field.",
+        "note": ""
+      }
+    ],
+    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
+  },
+  {
+    "id": "M11",
+    "claim": "Adjuvant trastuzumab improves survival in HER2-positive early breast cancer",
+    "verdict": "Supported",
+    "expected": "Supported",
+    "confidence": "high",
+    "baseline": {
+      "answer": "Yes",
+      "confidence": "high",
+      "text": "Yes. Adjuvant trastuzumab is one of the best-established survival-improving therapies in oncology. The pivotal HERA and joint NSABP B-31/NCCTG N9831 trials (both NEJM 2005) showed large disease-free survival benefits, and long-term follow-up plus meta-analyses confirmed a roughly one-third reduction in the risk of death, translating to a ~6-8 percentage-point absolute overall-survival gain at 10 years. It is standard of care in every major guideline (NCCN, ASCO, ESMO), with cardiotoxicity as the main manageable trade-off."
     },
     "gate_trace": [
       {
@@ -166,110 +661,129 @@
     ],
     "ledger": [
       {
-        "citation": "Sims JR, et al. Donanemab in Early Symptomatic Alzheimer Disease: The TRAILBLAZER-ALZ 2 Randomized Clinical Trial. JAMA. 2023;330(6):512-527. DOI:10.1001/jama.2023.13239. NCT04437511.",
+        "citation": "Piccart-Gebhart MJ, et al. Trastuzumab after adjuvant chemotherapy in HER2-positive breast cancer (HERA/BIG 1-01). N Engl J Med. 2005;353(16):1659-72. DOI:10.1056/NEJMoa052306",
         "design": "rct",
         "direction": 1,
         "population_match": true,
-        "source_id": "PMID:37459141",
-        "outcome_match": true,
+        "source_id": "PMID:16236737",
+        "outcome_match": false,
         "integrity_ok": true,
         "n": "",
-        "n_int": 1736,
-        "year": 2023,
-        "finding": "Pivotal Phase 3: at 76 wk donanemab slowed decline vs placebo on primary iADRS (diff 3.25 low/med tau; 2.92 combined) and secondary CDR-SB (diff -0.67; -0.70), all P<0.001; 23/24 gated outcomes significant.",
-        "integrity_note": "",
+        "n_int": 3387,
+        "year": 2005,
+        "finding": "Primary endpoint DFS: 1 year of trastuzumab vs observation, HR 0.54 (95% CI 0.43-0.67, P<0.0001), absolute 2-yr DFS benefit 8.4 points. At this first interim analysis (median 1 yr) OS was NOT yet significantly different (29 vs 37 deaths); the primary endpoint (DFS) is met but the CLAIMED OS outcome was still immature here, hence outcome_match=false for OS at this timepoint. Confirmed against PubMed abstract.",
+        "integrity_note": "No retraction or integrity concerns; landmark phase 3 RCT, NCT00045032. Verified via PubMed: article types include 'Randomized Controlled Trial, Phase III'; no 'Retracted Publication' tag.",
         "note": ""
       },
       {
-        "citation": "Mintun MA, et al. Donanemab in Early Alzheimer's Disease (TRAILBLAZER-ALZ). N Engl J Med. 2021;384(18):1691-1704. DOI:10.1056/NEJMoa2100708. NCT03367403.",
+        "citation": "Romond EH, et al. Trastuzumab plus adjuvant chemotherapy for operable HER2-positive breast cancer (joint NSABP B-31 & NCCTG N9831). N Engl J Med. 2005;353(16):1673-84. DOI:10.1056/NEJMoa052122",
         "design": "rct",
         "direction": 1,
         "population_match": true,
-        "source_id": "PMID:33720637",
+        "source_id": "PMID:16236738",
         "outcome_match": true,
         "integrity_ok": true,
         "n": "",
-        "n_int": 131,
+        "n_int": 2043,
+        "year": 2005,
+        "finding": "Combined analysis of two RCTs: adding trastuzumab reduced DFS events HR 0.48 (P<0.0001) AND produced a 33% reduction in risk of death (P=0.015) at first interim analysis. Directly measures a mortality/OS endpoint in addition to DFS, both favoring trastuzumab. Effect sizes match PubMed abstract exactly. (n_int is an approximate single-arm figure; total joint analysis was larger.)",
+        "integrity_note": "No retraction; pivotal joint analysis of two phase 3 RCTs (NCT00004067, NCT00005970). Verified via PubMed article types; no retraction tag.",
+        "note": ""
+      },
+      {
+        "citation": "Perez EA, et al. Four-year follow-up of trastuzumab plus adjuvant chemotherapy: joint analysis of NCCTG N9831 and NSABP B-31. J Clin Oncol. 2011;29(25):3366-73. DOI:10.1200/JCO.2011.35.0868",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:21768458",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 2043,
+        "year": 2011,
+        "finding": "At median 3.9 years, sustained highly significant DFS benefit (P<0.001) and a statistically significant 39% reduction in death rate favoring trastuzumab (P<0.001) \u2014 confirms the OS benefit is durable, not just an early DFS signal. Matches PubMed abstract exactly.",
+        "integrity_note": "No integrity concerns; mature follow-up of pivotal RCTs. PubMed article types: Phase III RCT; no retraction tag.",
+        "note": ""
+      },
+      {
+        "citation": "Perez EA, et al. Trastuzumab plus adjuvant chemotherapy: planned joint analysis of overall survival from NSABP B-31 and NCCTG N9831. J Clin Oncol. 2014;32(33):3744-52. DOI:10.1200/JCO.2014.55.5730",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:25332249",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 2023,
+        "year": 2014,
+        "finding": "Definitive planned OS analysis (median 8.4 yr): 37% relative OS improvement, OS HR 0.63 (95% CI 0.54-0.73, P<0.001), 10-yr OS 75.2%->84%; DFS HR 0.60 (10-yr DFS 62.2%->73.7%). Directly and definitively measures the CLAIMED OS endpoint. All figures match PubMed abstract exactly.",
+        "integrity_note": "No integrity concerns; pre-specified definitive OS analysis (710 events reached). No retraction tag in PubMed.",
+        "note": ""
+      },
+      {
+        "citation": "Cameron D, et al. 11 years' follow-up of trastuzumab after adjuvant chemotherapy in HER2-positive early breast cancer: final analysis of the HERA trial. Lancet. 2017;389(10075):1195-1205. DOI:10.1016/S0140-6736(16)32616-2",
+        "design": "rct",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:28215665",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 1702,
+        "year": 2017,
+        "finding": "At median 11 years, 1 year of trastuzumab vs observation significantly reduced DFS events (HR 0.76, 95% CI 0.68-0.86) and death (HR 0.74, 95% CI 0.64-0.86). 2 years gave no additional benefit over 1 year (HR 1.02, 95% CI 0.89-1.17). Mature OS confirmation despite substantial crossover diluting the effect. Matches PubMed abstract exactly, including n_int=1702 (1-year arm).",
+        "integrity_note": "No integrity concerns; final analysis of pivotal RCT (NCT00045032). PubMed confirms 884 (52%) of observation arm crossed over to trastuzumab, biasing the OS estimate toward the null, yet benefit persisted. No retraction tag.",
+        "note": ""
+      },
+      {
+        "citation": "Early Breast Cancer Trialists' Collaborative Group (EBCTCG). Trastuzumab for early-stage, HER2-positive breast cancer: a meta-analysis of 13,864 women in seven randomised trials. Lancet Oncol. 2021;22(8):1139-1150. DOI:10.1016/S1470-2045(21)00288-6",
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "PMID:34339645",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 6932,
         "year": 2021,
-        "finding": "Phase 2: primary iADRS endpoint met at 76 wk (change -6.86 donanemab vs -10.06 placebo; diff 3.20, P=0.04); secondary clinical outcomes (CDR-SB, ADAS-Cog, MMSE, ADCS-iADL) mostly not individually significant.",
-        "integrity_note": "",
+        "finding": "IPD meta-analysis of 7 RCTs (13,864 women, median 10.7 yr): breast-cancer recurrence RR 0.66 and breast-cancer mortality RR 0.67 (95% CI 0.61-0.73, P<0.0001); absolute 10-yr breast-cancer mortality reduced 6.4% and all-cause mortality reduced 6.5%, with NO increase in death without recurrence. Directly measures cause-specific and all-cause mortality. All figures match PubMed abstract exactly.",
+        "integrity_note": "No integrity concerns; collaborative individual-patient-data meta-analysis, highest tier of evidence. PubMed article type 'Meta-Analysis'; no retraction tag.",
         "note": ""
       },
       {
-        "citation": "van Dyck CH, et al. Lecanemab in Early Alzheimer's Disease (CLARITY AD). N Engl J Med. 2023;388(1):9-21. DOI:10.1056/NEJMoa2212948. NCT03887455.",
-        "design": "rct",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:36449413",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "",
-        "n_int": 898,
-        "year": 2022,
-        "finding": "Class-confirmatory (lecanemab, same anti-amyloid mAb mechanism/population): primary CDR-SB endpoint met at 18 mo (1.21 vs 1.66; diff -0.45, 95%CI -0.67 to -0.23, P<0.001), corroborating that anti-amyloid mAbs slow clinical decline in early AD.",
-        "integrity_note": "",
-        "note": ""
-      },
-      {
-        "citation": "Su CH, et al. Comparisons of efficacy and safety of immunotherapies for Alzheimer's disease treatment: A network meta-analysis of randomised controlled trials. Clin Med (Lond). 2025;25(4):100336. DOI:10.1016/j.clinme.2025.100336.",
+        "citation": "Moja L, et al. Trastuzumab containing regimens for early breast cancer. Cochrane Database Syst Rev. 2012;(4):CD006243. DOI:10.1002/14651858.CD006243.pub2",
         "design": "meta-analysis of rcts",
         "direction": 1,
         "population_match": true,
-        "source_id": "PMID:40473116",
+        "source_id": "PMID:22513938",
         "outcome_match": true,
         "integrity_ok": true,
         "n": "",
-        "n_int": 0,
-        "year": 2025,
-        "finding": "Network meta-analysis of 59 RCTs: donanemab and lecanemab ranked among the most effective immunotherapies for cognitive/functional outcomes (CDR-SB P-scores 0.88 and 0.77), supporting donanemab's role in slowing decline.",
-        "integrity_note": "",
-        "note": ""
-      },
-      {
-        "citation": "Hsu CW, et al. Efficacy and safety of anti-amyloid monoclonal antibody versus acetylcholinesterase inhibitor... a systematic review and meta-analysis. J Prev Alzheimers Dis. 2025;12(8):100195. DOI:10.1016/j.tjpad.2025.100195.",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:40316479",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "",
-        "n_int": 8010,
-        "year": 2025,
-        "finding": "mAbs (7 trials, 8010 participants) slowed CDR-SB decline vs placebo (MD -0.41, 95%CrI -0.61 to -0.22) and outperformed AChEIs; however the effect did NOT reach the minimally-important-difference (MID -1) - directionally supportive but contests clinical magnitude.",
-        "integrity_note": "",
-        "note": ""
-      },
-      {
-        "citation": "Avgerinos KI, et al. Critical assessment of anti-amyloid-beta monoclonal antibodies effects in Alzheimer's disease: a systematic review and meta-analysis. Sci Rep. 2024;14(1):25741. DOI:10.1038/s41598-024-75204-8.",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:39468148",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "",
-        "n_int": 0,
-        "year": 2024,
-        "finding": "Phase III anti-Abeta mAbs (donanemab, lecanemab largest effects) statistically attenuated CDR-SB and ADAS-Cog worsening but by very small effect sizes below the clinically-meaningful threshold within trial duration - confirms decline is slowed while flagging the magnitude debate.",
-        "integrity_note": "",
+        "n_int": 5996,
+        "year": 2012,
+        "finding": "Pooled 8 RCTs: trastuzumab significantly improved OS (HR 0.66, 95% CI 0.57-0.77, P<0.00001) and DFS (HR 0.60, 95% CI 0.50-0.71, P<0.00001). Independent systematic-review confirmation of OS benefit; cardiotoxicity is the recognized trade-off but does not negate the survival gain. Matches PubMed abstract exactly.",
+        "integrity_note": "No integrity concerns; Cochrane systematic review/meta-analysis of 8 RCTs (11,991 patients). Also documents key harm: increased CHF (RR 5.11) and LVEF decline (RR 1.83). PubMed article types 'Meta-Analysis, Systematic Review'; no retraction tag.",
         "note": ""
       }
     ],
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
-    "id": "C14",
-    "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
+    "id": "M23",
+    "claim": "Low-dose colchicine reduces cardiovascular events in patients with coronary artery disease",
     "verdict": "Contested",
     "expected": "Contested",
     "confidence": "high",
-    "baseline": null,
+    "baseline": {
+      "answer": "Yes",
+      "confidence": "high",
+      "text": "Yes \u2014 low-dose colchicine reduces cardiovascular events in coronary disease. COLCOT (2019) and LoDoCo2 (2020), two positive NEJM RCTs, showed roughly 23-31% relative reductions in major cardiovascular events, and in 2023 the FDA approved colchicine (Lodoco) for cardiovascular risk reduction."
+    },
     "gate_trace": [
       {
         "gate": "direct-evidence",
         "passed": true,
-        "detail": "2 trial-grade on-population study(ies) on the claimed outcome"
+        "detail": "5 trial-grade on-population study(ies) on the claimed outcome"
       },
       {
         "gate": "sufficiency",
@@ -284,78 +798,93 @@
     ],
     "ledger": [
       {
-        "citation": "Bhatt DL, et al. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (REDUCE-IT). N Engl J Med. 2019;380(1):11-22.",
+        "citation": "Tardif JC, et al. Efficacy and Safety of Low-Dose Colchicine after Myocardial Infarction (COLCOT). N Engl J Med. 2019;381(26):2497-2505. DOI:10.1056/NEJMoa1912388. NCT02551094.",
         "design": "rct",
         "direction": 1,
         "population_match": true,
-        "source_id": "PMID:30415628",
+        "source_id": "PMID:31733140",
         "outcome_match": true,
         "integrity_ok": true,
-        "n": "8179",
-        "n_int": 8179,
+        "n": "",
+        "n_int": 2366,
         "year": 2019,
-        "finding": "In statin-treated patients with elevated triglycerides (135-499 mg/dL) and high CV risk (established CVD or diabetes + risk factors), 4 g/day icosapent ethyl (purified EPA) lowered the primary composite of CV death/MI/stroke/coronary revascularization/unstable angina vs placebo (17.2% vs 22.0%; HR 0.75, 95% CI 0.68-0.83; P<0.001); key secondary composite HR 0.74 (0.65-0.83); CV death also reduced (4.3% vs 5.2%; HR 0.80, 95% CI 0.66-0.98). Median follow-up 4.9 y. POSITIVE. Note: mineral-oil placebo and high-risk/hypertriglyceridemic population limit generalizability to general adults. NCT01492361.",
-        "integrity_note": "Amarin-funded pivotal RCT (NEJMoa1812792); mineral-oil placebo controversy noted in later literature but trial itself is peer-reviewed NEJM, no retraction/misconduct. VERIFIED: PMID, n, HR, CIs, NCT all match PubMed record (published online Nov 2018; print 2019;380(1):11-22).",
+        "finding": "Post-MI patients (within 30 days), N=4745, median 22.6-mo follow-up. Primary composite (CV death, resuscitated cardiac arrest, MI, stroke, or urgent hospitalization for angina leading to revascularization) occurred in 5.5% colchicine vs 7.1% placebo; HR 0.77 (95% CI 0.61-0.96), P=0.02. Primary MACE endpoint met - supports claim.",
+        "integrity_note": "Landmark double-blind placebo-controlled RCT (PubMed article_types: Randomized Controlled Trial, Multicenter Study); no retraction or integrity concerns. Government of Quebec funded. Verified against PubMed abstract.",
         "note": ""
       },
       {
-        "citation": "Nicholls SJ, et al. Effect of High-Dose Omega-3 Fatty Acids vs Corn Oil on Major Adverse Cardiovascular Events (STRENGTH). JAMA. 2020;324(22):2268-2280.",
+        "citation": "Nidorf SM, et al. Colchicine in Patients with Chronic Coronary Disease (LoDoCo2). N Engl J Med. 2020;383(19):1838-1847. DOI:10.1056/NEJMoa2021372. ACTRN12614000093684.",
         "design": "rct",
-        "direction": 0,
+        "direction": 1,
         "population_match": true,
-        "source_id": "PMID:33190147",
+        "source_id": "PMID:32865380",
         "outcome_match": true,
         "integrity_ok": true,
-        "n": "13078",
-        "n_int": 13078,
+        "n": "",
+        "n_int": 2762,
         "year": 2020,
-        "finding": "In statin-treated high-CV-risk patients with hypertriglyceridemia and low HDL-C, 4 g/day omega-3 carboxylic acid (EPA+DHA) vs corn oil showed NO difference in the primary MACE composite (12.0% vs 12.2%; HR 0.99, 95% CI 0.90-1.09; P=0.84); trial halted early for futility per prespecified interim. NULL. NCT02104817.",
-        "integrity_note": "AstraZeneca-funded (JAMA 2020.22258, PMC7667577); peer-reviewed, prematurely stopped for futility; no integrity concerns. VERIFIED: PMID, n=13078, HR 0.99 (0.90-1.09), P=0.84, corn-oil comparator, NCT all match PubMed.",
+        "finding": "Chronic coronary disease, N=5522, median 28.6-mo follow-up. Primary composite (CV death, spontaneous MI, ischemic stroke, or ischemia-driven revascularization) occurred in 6.8% (187 pts) colchicine vs 9.6% (264 pts) placebo; HR 0.69 (95% CI 0.57-0.83), P<0.001. Primary MACE endpoint met - strongest single-trial support; matches claimed population and outcome.",
+        "integrity_note": "Landmark double-blind placebo-controlled event-driven RCT; basis for FDA LODOCO approval. No integrity concerns (no retraction flag in PubMed). Signal of higher non-CV mortality (HR 1.51, CI 0.99-2.31) confirmed in abstract but CV endpoint robust.",
         "note": ""
       },
       {
-        "citation": "Manson JE, et al. Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer (VITAL). N Engl J Med. 2019;380(1):23-32.",
+        "citation": "Jolly SS, et al. Colchicine in Acute Myocardial Infarction (CLEAR SYNERGY / OASIS-9). N Engl J Med. Online-first Nov 2024; print 2025;392(7):633-642. DOI:10.1056/NEJMoa2405922. NCT03048825.",
         "design": "rct",
         "direction": 0,
-        "population_match": false,
-        "source_id": "PMID:30415637",
+        "population_match": true,
+        "source_id": "PMID:39555823",
         "outcome_match": true,
         "integrity_ok": true,
-        "n": "25871",
-        "n_int": 25871,
-        "year": 2019,
-        "finding": "Primary-prevention trial in general US adults (men >=50, women >=55) at usual risk; 1 g/day marine n-3 vs placebo showed NO reduction in major CV events (HR 0.92, 95% CI 0.80-1.06; P=0.24) over median 5.3 y. Secondary total-MI signal (HR 0.72, 95% CI 0.59-0.90) but null primary. NULL. Best population match to 'general adults'. NCT01169259.",
-        "integrity_note": "NIH-funded (NEJMoa1811403, PMC6392053); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=25871, HR 0.92 (0.80-1.06), P=0.24, median 5.3 y, total-MI HR 0.72, NCT all match PubMed.",
+        "n": "",
+        "n_int": 3528,
+        "year": 2025,
+        "finding": "Post-MI, N=7062 (104 centers, 14 countries), median 3-yr follow-up. Primary composite (CV death, recurrent MI, stroke, or unplanned ischemia-driven revascularization) 322/3528 (9.1%) colchicine vs 327/3534 (9.3%) placebo; HR 0.99 (95% CI 0.85-1.16), P=0.93 - fully NEUTRAL. CRP still lowered (-1.28 mg/L) confirming pharmacologic engagement, but no MACE benefit. Contradicts claim on the identical primary endpoint.",
+        "integrity_note": "Largest colchicine CV trial to date; 2x2 factorial, double-blind, CIHR-funded (PubMed article_types: Clinical Trial Phase III, Randomized Controlled Trial, Multicenter Study). No integrity concerns. NEJM online-first Nov 2024, print issue Feb 2025. Directly tempers earlier positive trials.",
         "note": ""
       },
       {
-        "citation": "ASCEND Study Collaborative Group (Bowman L, et al.). Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. N Engl J Med. 2018;379(16):1540-1550.",
+        "citation": "Tong DC, et al. Colchicine in Patients With Acute Coronary Syndrome: The Australian COPS Randomized Clinical Trial. Circulation. 2020;142(20):1890-1900. DOI:10.1161/CIRCULATIONAHA.120.050771. ACTRN12615000861550.",
         "design": "rct",
         "direction": 0,
-        "population_match": false,
-        "source_id": "PMID:30146932",
+        "population_match": true,
+        "source_id": "PMID:32862667",
         "outcome_match": true,
         "integrity_ok": true,
-        "n": "15480",
-        "n_int": 15480,
-        "year": 2018,
-        "finding": "In patients with diabetes and no baseline atherosclerotic CVD, 1 g/day n-3 fatty acids vs olive-oil placebo showed NO difference in first serious vascular event (8.9% vs 9.2%; rate ratio 0.97, 95% CI 0.87-1.08; P=0.55) over mean 7.4 y. NULL. Diabetic (not general-adult) population. NCT00135226.",
-        "integrity_note": "British Heart Foundation-funded (NEJMoa1804989); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=15480, RR 0.97 (0.87-1.08), P=0.55, mean 7.4 y, olive-oil placebo, NCT00135226 (also ISRCTN60635500) all match PubMed.",
+        "n": "",
+        "n_int": 396,
+        "year": 2020,
+        "finding": "ACS patients, N=795 (396 colchicine, 399 placebo), 12-mo follow-up. Primary composite (all-cause death, ACS, ischemia-driven urgent revascularization, non-cardioembolic ischemic stroke): 24 vs 38 events, P=0.09 (NOT significant). Higher total death in colchicine arm (8 vs 1, P=0.017), driven by non-CV death (5 vs 0, P=0.024). Null on primary MACE - does not support claim.",
+        "integrity_note": "Multicenter (17 Australian hospitals) double-blind placebo-controlled RCT; underpowered (N=795). No integrity concerns (no retraction flag) but flagged higher total/non-CV death in colchicine arm. Verified against PubMed abstract.",
         "note": ""
       },
       {
-        "citation": "Hu Y, Hu FB, Manson JE. Marine Omega-3 Supplementation and Cardiovascular Disease: An Updated Meta-Analysis of 13 Randomized Controlled Trials Involving 127477 Participants. J Am Heart Assoc. 2019;8(19):e013543.",
+        "citation": "Pinheiro L, et al. Long-term colchicine therapy in acute coronary syndromes: a systematic review and meta-analysis of randomized controlled trials. Monaldi Arch Chest Dis. 2025. DOI:10.4081/monaldi.2025.3566.",
         "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": false,
-        "source_id": "PMID:31567003",
+        "direction": 0,
+        "population_match": true,
+        "source_id": "PMID:41334610",
         "outcome_match": true,
         "integrity_ok": true,
-        "n": "127477",
-        "n_int": 127477,
-        "year": 2019,
-        "finding": "Pooled 13 RCTs (127,477 participants; mean treatment 5.0 y). Excluding REDUCE-IT, marine omega-3 was associated with significant reductions in MI (RR 0.92, 0.86-0.99), CHD death (RR 0.92, 0.86-0.98), total CHD (RR 0.95, 0.91-0.99), CVD death (RR 0.93, 0.88-0.99), and total CVD (RR 0.97, 0.94-0.99); associations strengthened with REDUCE-IT included but introduced statistically significant heterogeneity. Linear dose-response for total CVD/major vascular events. Weakly POSITIVE overall; heterogeneity underscores the contested picture.",
-        "integrity_note": "NIH-funded (JAHA.119.013543, PMC6806028); peer-reviewed JAHA systematic review/meta-analysis; explicitly flags REDUCE-IT-driven heterogeneity; no integrity concerns. VERIFIED: PMID, n=127477, 13 RCTs, all RRs and CIs match PubMed abstract.",
+        "n": "",
+        "n_int": 6300,
+        "year": 2025,
+        "finding": "Long-term (>=12 mo) colchicine post-ACS. Composite of CV death/MI/revascularization/stroke NOT significantly reduced: HR 0.80 (95% CI 0.59-1.07, I2=73%). All-cause mortality HR 1.01 (0.67-1.53), CV death HR 1.01 (0.80-1.29), MI HR 0.86 (0.71-1.05) - all non-significant. Pooled estimate is null once the large neutral trial is included - key evidence for the Contested verdict.",
+        "integrity_note": "Pooled COLCOT, COPS, CLEAR SYNERGY (12,602 patients; search date Dec 22 2024). High heterogeneity (I2=73% for composite) limits certainty. Lower-tier journal but standard PRISMA RCT meta-analysis. No retraction flag in PubMed. Abstract figures verified verbatim.",
+        "note": ""
+      },
+      {
+        "citation": "FDA LODOCO (colchicine 0.5 mg) prescribing information, approved June 2023; Agepha Pharma. Indication derived from LoDoCo2 (NEJMoa2021372) plus supportive studies. DailyMed setid ff06d68f-d65f-d097-e053-6294a90a7e5f.",
+        "design": "systematic review",
+        "direction": 1,
+        "population_match": true,
+        "source_id": "DOI:10.1056/NEJMoa2021372",
+        "outcome_match": true,
+        "integrity_ok": true,
+        "n": "",
+        "n_int": 5522,
+        "year": 2023,
+        "finding": "FDA approved LODOCO (June 2023) to reduce risk of MI, stroke, coronary revascularization, and CV death in adults with established atherosclerotic disease or multiple CV risk factors - the first anti-inflammatory atheroprotective CV therapy. Efficacy basis was LoDoCo2 (31% RRR, HR 0.69, NNT 36). A standing US regulatory endorsement of the claim; however issued before the large neutral 2024/2025 trial.",
+        "integrity_note": "Regulatory artifact, NOT a study - design='systematic review' is a schema-fit compromise (closest available enum), openly disclosed. Confirmed via DailyMed (setid matches), Agepha PI, TCTMD, Healio. Included as a standing regulatory data point: FDA-approved indication predates the neutral CLEAR SYNERGY readout, which is central to why consensus is Contested rather than Not Supported.",
         "note": ""
       }
     ],
@@ -494,124 +1023,6 @@
         "year": 2021,
         "finding": "Multicenter RCT (180 hospitalized adults) reported ivermectin sharply cut mortality vs controls; a positive study that fed pro-ivermectin meta-analyses. Data sleuths and an editorial note raised concerns over implausible baseline stratification/randomization; it is excluded from post-scrutiny meta-analyses.",
         "integrity_note": "Concerns raised informally (data sleuths, editorial note) over implausible baseline stratification; NOT a formal Expression of Concern \u2014 the journal stated the paper was not retracted and no retraction was pending. The formal EoCs were issued on downstream reviews (Kory; Bryant/Lawrie, Am J Ther), not on this primary study.",
-        "note": ""
-      }
-    ],
-    "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
-  },
-  {
-    "id": "C01",
-    "claim": "Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia",
-    "verdict": "Supported",
-    "expected": "Supported",
-    "confidence": "high",
-    "baseline": null,
-    "gate_trace": [
-      {
-        "gate": "direct-evidence",
-        "passed": true,
-        "detail": "5 trial-grade on-population study(ies) on the claimed outcome"
-      },
-      {
-        "gate": "sufficiency",
-        "passed": true,
-        "detail": "trial evidence adequate to assess"
-      },
-      {
-        "gate": "consistency",
-        "passed": true,
-        "detail": "trial evidence agrees: effect present"
-      }
-    ],
-    "ledger": [
-      {
-        "citation": "Edwards & Moore 2003, BMC Family Practice",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:14969594",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "pooled double-blind RCTs of statins in hypercholesterolaemia (>=12 weeks)",
-        "n_int": 12,
-        "year": 2003,
-        "finding": "Dose-specific meta-analysis of double-blind RCTs: fixed-dose atorvastatin 10 mg lowered LDL-C by >30% from baseline (statins overall 24-49%), directly supporting atorvastatin's LDL-lowering effect in hypercholesterolaemia.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      },
-      {
-        "citation": "Rogers 2007, Clinical Therapeutics",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:17472817",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "18 head-to-head trials (17 published + 1 unpublished; adults >=18 with elevated TC/LDL-C)",
-        "n_int": 18,
-        "year": 2007,
-        "finding": "Dose-specific meta-analysis of atorvastatin-vs-simvastatin head-to-head RCTs found atorvastatin produced significantly greater LDL-C reductions in the majority of dose comparisons (2-4x the potency of simvastatin) in hyperlipidemic adults.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      },
-      {
-        "citation": "Nicholls 2010 (VOYAGER), American Journal of Cardiology",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:20102893",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "32,258 individual patients",
-        "n_int": 32258,
-        "year": 2010,
-        "finding": "Individual-patient-data pooled meta-analysis found atorvastatin 10-80 mg lowered LDL-C dose-dependently, with each doubling of dose giving ~4-6% further LDL-C reduction.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      },
-      {
-        "citation": "Baigent 2005 (CTT), Lancet",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:16214597",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "90,056 participants, 14 statin RCTs",
-        "n_int": 90056,
-        "year": 2005,
-        "finding": "Prospective meta-analysis of 14 statin RCTs (including atorvastatin trials) achieved mean 1-year LDL-C differences up to 1.77 mmol/L, confirming statins robustly lower LDL-C; class-level anchor for atorvastatin's mechanism.",
-        "integrity_note": "No retraction or expression of concern; only a standard 2005 erratum (Lancet 366(9494):1358).",
-        "note": ""
-      },
-      {
-        "citation": "Colhoun 2004 (CARDS), Lancet",
-        "design": "rct",
-        "direction": 1,
-        "population_match": false,
-        "source_id": "PMID:15325833",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "2,838 (type 2 diabetes, primary prevention, LDL-C <=4.14 mmol/L at entry)",
-        "n_int": 2838,
-        "year": 2004,
-        "finding": "Placebo-controlled RCT of atorvastatin 10 mg/day lowered LDL-C and reduced major cardiovascular events by 37%; direct atorvastatin trial evidence, but the population is type 2 diabetics enrolled at non-elevated LDL-C rather than a hyperlipidemia cohort.",
-        "integrity_note": "No retraction or expression of concern found.",
-        "note": ""
-      },
-      {
-        "citation": "Karlson 2015 (VOYAGER), European Journal of Preventive Cardiology",
-        "design": "meta-analysis of rcts",
-        "direction": 1,
-        "population_match": true,
-        "source_id": "PMID:26246463",
-        "outcome_match": true,
-        "integrity_ok": true,
-        "n": "38,052 patient exposures",
-        "n_int": 38052,
-        "year": 2015,
-        "finding": "VOYAGER pooled RCT analysis quantified dose-dependent atorvastatin LDL-C lowering (e.g. atorvastatin ~15 mg is equipotent to the ~39% LDL-C reduction of rosuvastatin 5 mg; higher atorvastatin doses give larger reductions), confirming dose-dependent LDL-C lowering.",
-        "integrity_note": "No retraction or expression of concern found.",
         "note": ""
       }
     ],

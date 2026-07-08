@@ -1,89 +1,82 @@
-# Verdict — 3-minute demo script
+# Verdict — 3-minute demo script (clinical)
 
 **Target:** ≤ 3:00 (paces to ~2:55). Screen recording of the web app + voiceover.
-**Setup before recording:** run the web app, full-screen the browser at ~1280px wide,
-zoom so a whole card fits. The app deep-links each claim by URL hash, so you can jump
-straight to a tab: `/#C08`, `/#C09`, `/#F04`, `/#C01`, `/#C14`. The scorecard is at the
-bottom of the page — scroll to it for the last beat.
+**Setup:** run the app, full-screen the browser at ~1280px. Every claim deep-links by URL
+hash — jump straight to a tab: `/#M06`, `/#M07`, `/#M09`, `/#M12`, `/#M24`, `/#M01`,
+`/#C08`. The scorecard is at the bottom of the page.
 
 Narration is written to be read aloud, first person. Trim a sentence anywhere you run long.
 
 ---
 
 ### 1 · The problem — 0:00–0:20
-**Screen:** App open on `/#C08` (ivermectin). The left "A plain LLM" panel is visible:
-a confident answer with the red ⚠ line.
+**Screen:** App open on `/#M06` (aducanumab). Left "A plain LLM" panel: the confident answer + red ⚠.
 
-> "Ask any language model whether ivermectin helps in COVID, and you get this — confident,
-> fluent, and wrong. The mortality result it's echoing came from studies that were later
-> withdrawn for fabricated data. The model doesn't know that. It just repeats it.
-> Verdict is a second opinion that structurally can't."
+> "Ask a language model whether aducanumab helps in Alzheimer's, and you get this — confident,
+> fluent: 'yes, it slowed decline 22% and clears amyloid.' But the FDA approved it on the
+> amyloid *surrogate*, its two identical phase-3 trials flatly disagreed, and the confirmatory
+> trial was abandoned. Verdict is a second opinion built so it can't paper over that."
 
-### 2 · What it is, and Claude's job — 0:20–0:38
-**Screen:** Pan to the right "Verdict" panel — the **Not Supported** badge, then the
-"gate trace — deterministic, no LLM" heading.
+### 2 · What it is, and Claude's job — 0:20–0:40
+**Screen:** Pan to the Verdict panel — the **Contested** badge, then "gate trace — deterministic, no LLM."
 
-> "Here Claude does exactly one job: it reads each study and pulls out the structured facts —
-> design, sample size, effect, direction, risk of bias. It never makes the call.
-> A deterministic gate engine makes the call. So every verdict is an auditable function of
-> the evidence, not a guess dressed up as one."
+> "Claude does one job here: it reads each trial and extracts the structured facts — design,
+> sample size, effect, and crucially, whether the endpoint is the *real* outcome or a surrogate.
+> It never makes the call. A deterministic gate engine does. So every verdict is an auditable
+> function of the evidence — and here it sets the amyloid-PET row aside as a surrogate, sees
+> EMERGE positive and its twin ENGAGE negative, and returns Contested."
 
-### 3 · Fraud exclusion + the ledger — 0:38–1:05
-**Screen:** Scroll the evidence ledger. Land on the struck-through **excluded** row
-(the withdrawn Research Square preprint) and its red integrity note.
+### 3 · Three verdicts on one drug class — 0:40–1:15
+**Screen:** Click through the Alzheimer's trio: `/#M06` aducanumab (Contested), `/#M07`
+lecanemab (Supported), `/#M09` solanezumab (Not Supported).
 
-> "This is why. That row is the withdrawn preprint that drove the early positive
-> meta-analyses. Verdict flags it, excludes it *before* the gate, and shows you exactly why —
-> the withdrawal, the reason. What's left is the clean evidence: the large trials and
-> meta-analyses that show no benefit. Verdict returns Not Supported — and every line of that
-> verdict traces back to a source you can open."
+> "Here's what honesty looks like across one drug class. Aducanumab — the trials conflict —
+> Contested. Lecanemab — CLARITY-AD met its clinical endpoint cleanly — Supported. Solanezumab —
+> failed every pivotal trial — Not Supported. And notice: on solanezumab the plain model actually
+> gets it right, and Verdict *agrees* — it isn't a contrarian, it's a calibrated one. Same class,
+> three different honest answers, each traceable to the trials."
 
-### 4 · Not a one-off — 1:05–1:25
-**Screen:** Click the Hydroxychloroquine tab (`/#F04`). The LLM panel parrots "Gautret et al.";
-the ledger shows that same study struck through, then RECOVERY and SOLIDARITY.
+### 4 · The surrogate trap — 1:15–1:40
+**Screen:** Click `/#M12` (bevacizumab). The ledger shows PFS-positive rows set aside; OS rows drive Not Supported.
 
-> "It's not a one-off. Hydroxychloroquine — same shape. The model repeats the retracted early
-> study by name. Verdict excludes it and stands on RECOVERY and SOLIDARITY, the trials that
-> actually settled it. Not Supported. The fraud never reaches the verdict."
+> "This is the pattern that fools everyone. Bevacizumab for metastatic breast cancer improved
+> progression-free survival — a surrogate — so it was approved. It never improved overall
+> survival, and the FDA revoked the indication in 2011. A model repeats the approval. Verdict
+> scores the claimed outcome — survival — sets the surrogate aside, and returns Not Supported."
 
-### 5 · Knowing when to abstain — 1:25–1:52
-**Screen:** Click the Fenbendazole tab (`/#C09`). Verdict = **Insufficient** (blue), the
-single `direct-evidence` gate reading "absence of evidence."
+### 5 · Knowing when to abstain — 1:40–2:05
+**Screen:** Click `/#M24` (metformin for aging). Verdict = **Insufficient**.
 
-> "But catching fraud is the easy half. The hard half is knowing when to say *I don't know*.
-> Fenbendazole for cancer: a wave of anecdotes, some cell and mouse studies, and not one
-> human trial. A model hedges into a soft yes. Verdict abstains — Insufficient — because the
-> human evidence to decide isn't there. Absence of evidence, stated plainly, instead of a
-> guess that sounds like an answer."
+> "The hardest skill is saying 'I don't know.' Does metformin slow aging? There's a famous
+> observational signal and strong mouse data — but the one human trial measured a gene-expression
+> surrogate in sixteen people, and the real trial, TAME, hasn't reported. A model gives you a
+> confident yes. Verdict abstains — Insufficient — because the human outcome evidence isn't there
+> yet. Absence of evidence, stated plainly."
 
-### 6 · It's not just a skeptic — 1:52–2:10
-**Screen:** Click Atorvastatin (`/#C01`) → **Supported**. Then Icosapent ethyl (`/#C14`)
-→ **Contested**.
+### 6 · It says yes when the evidence is there — 2:05–2:20
+**Screen:** Click `/#M01` (semaglutide/SELECT → Supported), then `/#C08` (ivermectin → Not Supported).
 
-> "And where the evidence is solid, it says so. Atorvastatin lowering LDL — Supported.
-> Where good trials genuinely disagree — omega-3 for cardiovascular events — Contested, with
-> both sides on the table. Four honest states, one scale."
+> "It's not a skeptic. Semaglutide cutting cardiovascular events in the SELECT trial — Supported.
+> And the fraud case that started this — ivermectin for COVID, whose signal came from a withdrawn
+> study — Not Supported. Known-bad evidence is excluded before the gate ever runs."
 
-### 7 · The honest scorecard — 2:10–2:40
-**Screen:** Scroll to the scorecard at the bottom. The table: Verdict 81% / **0**,
-naive vote 77% / 0, plain LLM 74% / **2**. Then the footnote line.
+### 7 · The honest scorecard — 2:20–2:45
+**Screen:** Scroll to the scorecard: Verdict 91% / **0**, naive 84% / 0, plain LLM 63% / **6**.
 
-> "On a blind set of 31 claims, Verdict beats a naive study-count and a plain model on
-> accuracy. But that's not the headline. This column is: confidently wrong — zero, against the
-> language model's two. And here's the part I'll say out loud — on emerging pipeline drugs
-> with thin literature, Verdict is actually *worse* than the model, because it's conservative
-> by design. We measured it, and it's in the repo. A tool you can trust has to be honest about
-> where it fails, too."
+> "On thirty-two real-medicine claims — GLP-1s, anti-amyloids, oncology, cardiometabolic — Verdict
+> beats a naive vote and a plain model. But the column that matters is this one: confidently
+> wrong — zero, against the language model's six. And I'll tell you where Verdict loses: on a
+> couple of claims it held 'contested' or 'insufficient' where guidelines are more assertive. It
+> errs toward humility, never toward a false positive. It's all in the repo."
 
-### 8 · Close — 2:40–2:55
-**Screen:** Back to a verdict card, or the header logo.
+### 8 · Close — 2:45–2:55
+**Screen:** Back to a verdict card, or the header.
 
 > "Verdict grades the state of the evidence — Supported, Not Supported, Contested, or
-> Insufficient — with a full audit trail and no language model in the decision path. It's for
-> the researcher asking 'is this worth six months of my life?' who needs an answer that's
-> sourced, and honest enough to say I don't know. That's Verdict."
+> Insufficient — with a full audit trail and no language model in the decision path. For the
+> clinician or reviewer who needs an answer that's sourced, and honest enough to say I don't know."
 
 ---
 
-**One-line lower-third to keep on screen throughout:**
-*Verdict grades the state of published evidence. Research/literature-triage tool — not medical advice.*
+**Lower-third to keep on screen throughout:**
+*Verdict grades the state of published evidence. Research / literature-triage tool — not medical advice.*

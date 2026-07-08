@@ -22,8 +22,13 @@ const BASELINES: Record<string, string> = {
   F01: 'Yes — hydroxyethyl starch is an effective volume expander and is well-tolerated for fluid resuscitation in critically ill patients.',
 }
 
-// Does the plain-LLM answer disagree with Verdict? (drives the warning line)
-const bluffs = (c: Card) => c.verdict === 'Not Supported' || c.verdict === 'Insufficient' || c.verdict === 'Contested'
+// Does the plain-LLM's confident Yes/No disagree with the honest verdict?
+// A "Yes" is misleading unless the verdict is Supported; a "No" unless Not Supported.
+// (On Contested/Insufficient, any confident binary answer is overstated.)
+const bluffs = (c: Card) => {
+  const ans = c.baseline?.answer ?? 'Yes'
+  return (ans === 'Yes' && c.verdict !== 'Supported') || (ans === 'No' && c.verdict !== 'Not Supported')
+}
 
 const badgeClass = (v: string) => 'badge b-' + v.replace(/\s/g, '')
 
@@ -56,7 +61,7 @@ function Row({ r, i }: { r: EvidenceRow; i: number }) {
 export default function App() {
   const [cards, setCards] = useState<Card[]>([])
   const [ev, setEv] = useState<EvalSummary | null>(null)
-  const [id, setId] = useState<string>(() => window.location.hash.replace('#', '') || 'C08')
+  const [id, setId] = useState<string>(() => window.location.hash.replace('#', '') || 'M06')
   const [runKey, setRunKey] = useState(0)
 
   useEffect(() => {
@@ -143,8 +148,8 @@ export default function App() {
       {ev && (
         <div className="scorecard">
           <div className="sc-head">
-            <div className="section-label" style={{ margin: 0 }}>How it scores — blind cold set, {ev.n} claims</div>
-            <div className="sc-note">exact 4-state match vs independent expert-consensus gold</div>
+            <div className="section-label" style={{ margin: 0 }}>How it scores — blind clinical benchmark, {ev.n} breakthrough-medicine claims</div>
+            <div className="sc-note">exact 4-state match vs documented clinical/regulatory consensus</div>
           </div>
           <div className="sc-table">
             <div className="sc-row sc-th">
@@ -169,10 +174,12 @@ export default function App() {
             </div>
           </div>
           <div className="sc-foot">
-            Not universally more accurate — on emerging pipeline drugs with thin literature Verdict is conservative to a
-            fault (62% vs the model’s 75%). What it never does is answer confidently when it shouldn’t:{' '}
-            <b>zero</b> confidently-wrong calls here, versus the language model’s <b>{ev.confidently_wrong.plain_llm}</b> —
-            and it abstains when the evidence can’t decide. Full evals, including where Verdict loses, are in the repo.
+            On real medicines — GLP-1s, anti-amyloids, oncology, cardiometabolic — Verdict never asserts a positive that
+            isn’t there: <b>zero</b> confidently-wrong calls versus the language model’s <b>{ev.confidently_wrong.plain_llm}</b>{' '}
+            (it repeats ivermectin, hydroxychloroquine, HES and other approved-or-hyped claims). It abstains on{' '}
+            {Math.round(ev.verdict_abstention_rate * 100)}% rather than guess. Its misses are conservative — it held
+            “insufficient” or “contested” where guidelines are more assertive (ezetimibe, checkpoint-inhibitor pancreatic,
+            psilocybin durability) — not confidently wrong. Full per-claim results are in the repo.
           </div>
         </div>
       )}

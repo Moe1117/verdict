@@ -34,6 +34,8 @@ DESIGN_WEIGHT = {
     "target-trial emulation": 5,
     "systematic review": 4,
     "rct": 4,
+    "guideline / regulatory": 2,  # guideline / FDA action / expert perspective — context, not a trial
+
     "prospective cohort": 3,
     "case-control": 2,
     "cross-sectional": 2,
