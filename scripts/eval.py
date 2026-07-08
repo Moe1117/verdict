@@ -26,7 +26,12 @@ WEB = os.path.join(os.path.dirname(os.path.dirname(__file__)), "web", "public")
 
 
 def _rows(item) -> list[EvidenceRow]:
-    return [EvidenceRow(**{k: v for k, v in r.items() if k in _FIELDS}) for r in (item.get("rows") or [])]
+    out = []
+    for r in (item.get("rows") or []):
+        d = {k: v for k, v in r.items() if k in _FIELDS}
+        d.setdefault("citation", d.get("source_id", ""))
+        out.append(EvidenceRow(**d))
+    return out
 
 
 def _naive_vote(rows: list[EvidenceRow]) -> str:
@@ -40,7 +45,7 @@ def _naive_vote(rows: list[EvidenceRow]) -> str:
     return "Contested"
 
 
-def main(path: str) -> None:
+def main(path: str, out: str = "eval.json") -> None:
     data = json.load(open(path))
     if "result" in data:
         data = data["result"] if isinstance(data["result"], dict) else json.loads(data["result"])
@@ -85,7 +90,7 @@ def main(path: str) -> None:
     }
 
     os.makedirs(WEB, exist_ok=True)
-    with open(os.path.join(WEB, "eval.json"), "w") as fh:
+    with open(os.path.join(WEB, out), "w") as fh:
         json.dump({"summary": summary, "claims": scored}, fh, indent=2)
 
     print(f"=== Verdict cold-set evaluation (n={n}) ===\n")
@@ -105,4 +110,4 @@ def main(path: str) -> None:
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "eval.json")
