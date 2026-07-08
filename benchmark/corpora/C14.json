@@ -1,0 +1,74 @@
+{
+  "claim_id": "C14",
+  "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
+  "expected_verdict": "Contested",
+  "rows": [
+    {
+      "citation": "Bhatt DL, et al. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (REDUCE-IT). N Engl J Med. 2019;380(1):11-22.",
+      "source_id": "PMID:30415628",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "n": "8179",
+      "finding": "In statin-treated patients with elevated triglycerides (135-499 mg/dL) and high CV risk (established CVD or diabetes + risk factors), 4 g/day icosapent ethyl (purified EPA) lowered the primary composite of CV death/MI/stroke/coronary revascularization/unstable angina vs placebo (17.2% vs 22.0%; HR 0.75, 95% CI 0.68-0.83; P<0.001); key secondary composite HR 0.74 (0.65-0.83); CV death also reduced (4.3% vs 5.2%; HR 0.80, 95% CI 0.66-0.98). Median follow-up 4.9 y. POSITIVE. Note: mineral-oil placebo and high-risk/hypertriglyceridemic population limit generalizability to general adults. NCT01492361.",
+      "integrity_ok": true,
+      "integrity_note": "Amarin-funded pivotal RCT (NEJMoa1812792); mineral-oil placebo controversy noted in later literature but trial itself is peer-reviewed NEJM, no retraction/misconduct. VERIFIED: PMID, n, HR, CIs, NCT all match PubMed record (published online Nov 2018; print 2019;380(1):11-22).",
+      "n_int": 8179,
+      "year": 2019
+    },
+    {
+      "citation": "Nicholls SJ, et al. Effect of High-Dose Omega-3 Fatty Acids vs Corn Oil on Major Adverse Cardiovascular Events (STRENGTH). JAMA. 2020;324(22):2268-2280.",
+      "source_id": "PMID:33190147",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "n": "13078",
+      "finding": "In statin-treated high-CV-risk patients with hypertriglyceridemia and low HDL-C, 4 g/day omega-3 carboxylic acid (EPA+DHA) vs corn oil showed NO difference in the primary MACE composite (12.0% vs 12.2%; HR 0.99, 95% CI 0.90-1.09; P=0.84); trial halted early for futility per prespecified interim. NULL. NCT02104817.",
+      "integrity_ok": true,
+      "integrity_note": "AstraZeneca-funded (JAMA 2020.22258, PMC7667577); peer-reviewed, prematurely stopped for futility; no integrity concerns. VERIFIED: PMID, n=13078, HR 0.99 (0.90-1.09), P=0.84, corn-oil comparator, NCT all match PubMed.",
+      "n_int": 13078,
+      "year": 2020
+    },
+    {
+      "citation": "Manson JE, et al. Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer (VITAL). N Engl J Med. 2019;380(1):23-32.",
+      "source_id": "PMID:30415637",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "n": "25871",
+      "finding": "Primary-prevention trial in general US adults (men >=50, women >=55) at usual risk; 1 g/day marine n-3 vs placebo showed NO reduction in major CV events (HR 0.92, 95% CI 0.80-1.06; P=0.24) over median 5.3 y. Secondary total-MI signal (HR 0.72, 95% CI 0.59-0.90) but null primary. NULL. Best population match to 'general adults'. NCT01169259.",
+      "integrity_ok": true,
+      "integrity_note": "NIH-funded (NEJMoa1811403, PMC6392053); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=25871, HR 0.92 (0.80-1.06), P=0.24, median 5.3 y, total-MI HR 0.72, NCT all match PubMed.",
+      "n_int": 25871,
+      "year": 2019
+    },
+    {
+      "citation": "ASCEND Study Collaborative Group (Bowman L, et al.). Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. N Engl J Med. 2018;379(16):1540-1550.",
+      "source_id": "PMID:30146932",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "n": "15480",
+      "finding": "In patients with diabetes and no baseline atherosclerotic CVD, 1 g/day n-3 fatty acids vs olive-oil placebo showed NO difference in first serious vascular event (8.9% vs 9.2%; rate ratio 0.97, 95% CI 0.87-1.08; P=0.55) over mean 7.4 y. NULL. Diabetic (not general-adult) population. NCT00135226.",
+      "integrity_ok": true,
+      "integrity_note": "British Heart Foundation-funded (NEJMoa1804989); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=15480, RR 0.97 (0.87-1.08), P=0.55, mean 7.4 y, olive-oil placebo, NCT00135226 (also ISRCTN60635500) all match PubMed.",
+      "n_int": 15480,
+      "year": 2018
+    },
+    {
+      "citation": "Hu Y, Hu FB, Manson JE. Marine Omega-3 Supplementation and Cardiovascular Disease: An Updated Meta-Analysis of 13 Randomized Controlled Trials Involving 127477 Participants. J Am Heart Assoc. 2019;8(19):e013543.",
+      "source_id": "PMID:31567003",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": false,
+      "n": "127477",
+      "finding": "Pooled 13 RCTs (127,477 participants; mean treatment 5.0 y). Excluding REDUCE-IT, marine omega-3 was associated with significant reductions in MI (RR 0.92, 0.86-0.99), CHD death (RR 0.92, 0.86-0.98), total CHD (RR 0.95, 0.91-0.99), CVD death (RR 0.93, 0.88-0.99), and total CVD (RR 0.97, 0.94-0.99); associations strengthened with REDUCE-IT included but introduced statistically significant heterogeneity. Linear dose-response for total CVD/major vascular events. Weakly POSITIVE overall; heterogeneity underscores the contested picture.",
+      "integrity_ok": true,
+      "integrity_note": "NIH-funded (JAHA.119.013543, PMC6806028); peer-reviewed JAHA systematic review/meta-analysis; explicitly flags REDUCE-IT-driven heterogeneity; no integrity concerns. VERIFIED: PMID, n=127477, 13 RCTs, all RRs and CIs match PubMed abstract.",
+      "n_int": 127477,
+      "year": 2019
+    }
+  ],
+  "integrity_records": [],
+  "provenance": "PubMed/ClinicalTrials.gov (public); PMIDs/NCTs only. Population scoped to high-risk hypertriglyceridemic (REDUCE-IT/STRENGTH exact population); VITAL/ASCEND off-population for this claim."
+}
