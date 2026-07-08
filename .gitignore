@@ -1,0 +1,22 @@
+# Secrets — never commit
+.env
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local caches (frozen corpora are committed under benchmark/ explicitly)
+.cache/
+*.log
+
+# OS
+.DS_Store

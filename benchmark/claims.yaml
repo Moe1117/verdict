@@ -1,0 +1,165 @@
+# Verdict gold benchmark — v1 (13 claims), assigned in-window and adversarially verified.
+#
+# RULES-COMPLIANCE:
+#   - Gold labels are the authors' own, assigned during the event.
+#   - `sources` carry ONLY PMIDs / NCT IDs / DOIs, re-derived from PubMed E-utilities
+#     and ClinicalTrials.gov. NO Consensus links. Fill each TODO with a verified id.
+#   - Do not paste verbatim abstract text here — ids + your own notes only.
+#
+# states: Supported | Not Supported | Contested | Insufficient
+
+- id: C01
+  claim: Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia
+  agent: atorvastatin
+  outcome: LDL cholesterol
+  population: adults with hyperlipidemia
+  direction: -1
+  gold_verdict: Supported
+  confidence: high
+  tier: clear-supported
+  rationale: Large placebo-controlled RCT meta-analyses show a dose-dependent LDL reduction; no disconfirming high-tier evidence.
+  sources: []   # TODO: Law 2003 meta-analysis PMID; CTT IPD meta-analysis PMID
+
+- id: C02
+  claim: Metformin reduces HbA1c in adults with type 2 diabetes
+  agent: metformin
+  outcome: HbA1c
+  population: adults with type 2 diabetes
+  direction: -1
+  gold_verdict: Supported
+  confidence: high
+  tier: clear-supported
+  rationale: Dedicated placebo-controlled meta-analysis (~-1.1% HbA1c), corroborated by decades of RCTs.
+  sources: []   # TODO: Hirst 2012 meta-analysis PMID
+
+- id: C03
+  claim: Semaglutide reduces body weight in adults with obesity
+  agent: semaglutide
+  outcome: body weight
+  population: adults with obesity
+  direction: -1
+  gold_verdict: Supported
+  confidence: high
+  tier: clear-supported
+  rationale: STEP program RCTs + meta-analyses converge on a large placebo-subtracted weight reduction.
+  sources: []   # TODO: STEP 1 NCT/PMID; RCT meta-analysis PMID
+
+- id: C04
+  claim: Empagliflozin reduces heart failure hospitalization
+  agent: empagliflozin
+  outcome: heart failure hospitalization
+  population: adults with or at risk of heart failure
+  direction: -1
+  gold_verdict: Supported
+  confidence: high
+  tier: clear-supported
+  rationale: EMPEROR-Reduced/-Preserved RCTs + prespecified meta-analysis show consistent HHF reduction.
+  sources: []   # TODO: EMPEROR-Reduced NCT03057977; EMPEROR-Preserved NCT03057951
+
+- id: C05
+  claim: Metformin reduces cancer incidence in adults without diabetes
+  agent: metformin
+  outcome: cancer incidence
+  population: adults without diabetes
+  direction: -1
+  gold_verdict: Not Supported
+  confidence: high
+  tier: contested-looking-observational-but-refuted
+  rationale: Observational signal (RR ~0.55) is refuted by RCT meta-analyses and target-trial emulation (effect ~0). Evidence of absence.
+  sources: []   # TODO: Mesquita RCT MA PMID; Dickerman 2023 target-trial PMID; (O'Connor 2024 = naive/observational contrast)
+
+- id: C06
+  claim: Low-dose aspirin reduces cardiovascular events in primary prevention for healthy older adults
+  agent: low-dose aspirin
+  outcome: cardiovascular events (primary prevention)
+  population: healthy older adults
+  direction: -1
+  gold_verdict: Not Supported
+  confidence: high
+  tier: population-exact-null
+  rationale: ASPREE (population-exact) shows no CV benefit and net bleeding harm; pooled positive signal is from younger cohorts.
+  sources: []   # TODO: ASPREE NCT01038583 / primary-results PMID
+
+- id: C07
+  claim: Vitamin D supplementation reduces cardiovascular events
+  agent: vitamin D supplementation
+  outcome: cardiovascular events
+  population: general adults
+  direction: -1
+  gold_verdict: Not Supported
+  confidence: high
+  tier: clear-null
+  rationale: VITAL + D-Health + RCT-only meta-analyses return null CV composites with tight CIs. Evidence of absence.
+  sources: []   # TODO: VITAL NEJM 2019 PMID (note year = 2019, not 2018); D-Health PMID
+
+- id: C08
+  claim: Ivermectin improves clinical outcomes in COVID-19
+  agent: ivermectin
+  outcome: clinical outcomes (mortality/progression)
+  population: COVID-19 patients
+  direction: 1
+  gold_verdict: Not Supported
+  confidence: high
+  tier: fraud-contaminated-then-null
+  rationale: Positive signal traces to trials with documented integrity concerns; clean platform RCTs (TOGETHER, PRINCIPLE) rule out benefit.
+  sources: []   # TODO: TOGETHER PMID; PRINCIPLE PMID; I-TECH NCT04920942; integrity records in verdict/integrity.py
+
+- id: C09
+  claim: Fenbendazole treats cancer in humans
+  agent: fenbendazole
+  outcome: cancer treatment response
+  population: humans with cancer
+  direction: 1
+  gold_verdict: Insufficient
+  confidence: high
+  tier: abstain-preclinical-only
+  rationale: All efficacy evidence is preclinical (cell/xenograft); zero human efficacy trials. Absence of evidence.
+  sources: []   # TODO: representative preclinical PMIDs (as context only)
+
+- id: C10
+  claim: Rapamycin extends lifespan in healthy humans
+  agent: rapamycin (sirolimus)
+  outcome: lifespan / longevity
+  population: healthy humans
+  direction: 1
+  gold_verdict: Insufficient
+  confidence: high
+  tier: abstain-animal-only
+  rationale: Robust mouse lifespan data; no human trial has measured lifespan/mortality. Absence of evidence for the claim as stated.
+  sources: []   # TODO: PEARL trial NCT/PMID (null surrogate)
+
+- id: C11
+  claim: NMN supplementation slows aging in humans
+  agent: nicotinamide mononucleotide (NMN)
+  outcome: aging / healthspan biomarkers
+  population: adults
+  direction: 1
+  gold_verdict: Insufficient
+  confidence: high
+  tier: abstain-surrogate-only
+  rationale: Reliable NAD+ target engagement, but all RCTs short and surrogate-only; no powered aging/mortality endpoint.
+  sources: []   # TODO: representative NMN RCT PMIDs
+
+- id: C12
+  claim: Curcumin improves memory in healthy adults
+  agent: curcumin
+  outcome: memory / cognition
+  population: healthy adults
+  direction: 1
+  gold_verdict: Contested
+  confidence: high
+  tier: genuine-conflict
+  rationale: Newest meta-analysis null on global cognition; healthy-adult signal is on executive function, not memory; positives small/single-formulation.
+  sources: []   # TODO: newest cognition MA PMID; Small 2018 Theracurmin PMID (verify year/formulation)
+
+- id: C13
+  claim: Earthing (grounding) improves overall well-being in adults
+  agent: earthing / grounding
+  outcome: overall well-being (operationalizable via mood/sleep/QoL proxies)
+  population: adults
+  direction: 1
+  gold_verdict: Insufficient
+  confidence: high
+  tier: abstain-underpowered-conflicted
+  rationale: Only small (n=10-40) conflicted pilots + narrative reviews from one commercially-tied author cluster; no RCT meta-analysis. Decidable (proxies exist) but under-evidenced -> Insufficient, not Undecidable.
+  sources: []   # TODO: representative pilot PMIDs
