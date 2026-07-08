@@ -1,0 +1,104 @@
+{
+  "note": "Certainty calibration fit on the DEV benchmark; validated out-of-sample on the held-out sets. Buckets with n<5 report no number (measured reject option). No gate or threshold is tuned to these figures.",
+  "dev_n": 32,
+  "heldout_n": 42,
+  "ece_out_of_sample": 0.1333,
+  "buckets": [
+    {
+      "level": "Very Low",
+      "n": 7,
+      "accuracy": 0.429,
+      "ci": [
+        0.158,
+        0.75
+      ],
+      "confidence": "43% (95% CI 16%-75%, n=7)"
+    },
+    {
+      "level": "Low",
+      "n": 8,
+      "accuracy": 0.875,
+      "ci": [
+        0.529,
+        0.978
+      ],
+      "confidence": "88% (95% CI 53%-98%, n=8)"
+    },
+    {
+      "level": "Moderate",
+      "n": 13,
+      "accuracy": 0.769,
+      "ci": [
+        0.497,
+        0.918
+      ],
+      "confidence": "77% (95% CI 50%-92%, n=13)"
+    },
+    {
+      "level": "High",
+      "n": 46,
+      "accuracy": 0.891,
+      "ci": [
+        0.77,
+        0.953
+      ],
+      "confidence": "89% (95% CI 77%-95%, n=46)"
+    }
+  ],
+  "reliability": [
+    {
+      "level": "Very Low",
+      "predicted": null,
+      "dev_n": 4,
+      "observed_heldout": 0.333,
+      "heldout_n": 3
+    },
+    {
+      "level": "Low",
+      "predicted": 0.8,
+      "dev_n": 5,
+      "observed_heldout": 1.0,
+      "heldout_n": 3
+    },
+    {
+      "level": "Moderate",
+      "predicted": null,
+      "dev_n": 1,
+      "observed_heldout": 0.75,
+      "heldout_n": 12
+    },
+    {
+      "level": "High",
+      "predicted": 1.0,
+      "dev_n": 22,
+      "observed_heldout": 0.792,
+      "heldout_n": 24
+    }
+  ],
+  "risk_coverage": [
+    {
+      "min_certainty": "Very Low",
+      "coverage": 1.0,
+      "accuracy": 0.824,
+      "n_answered": 74
+    },
+    {
+      "min_certainty": "Low",
+      "coverage": 0.905,
+      "accuracy": 0.866,
+      "n_answered": 67
+    },
+    {
+      "min_certainty": "Moderate",
+      "coverage": 0.797,
+      "accuracy": 0.864,
+      "n_answered": 59
+    },
+    {
+      "min_certainty": "High",
+      "coverage": 0.622,
+      "accuracy": 0.891,
+      "n_answered": 46
+    }
+  ]
+}

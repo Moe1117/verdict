@@ -69,6 +69,15 @@ class EvidenceRow:
     finding: str = ""             # one-line finding (display; our words, no verbatim abstract)
     integrity_note: str = ""      # why integrity_ok is False, with a citable source
     note: str = ""
+    # Optional structured magnitude / precision — promoted from the finding prose where the
+    # extractor reports it. All default to "unknown" so a row without them behaves exactly as a
+    # pure-direction row (strict superset — no gate reads these unless populated).
+    effect_point: float | None = None   # HR / RR / OR / mean-diff point estimate
+    ci_low: float | None = None         # lower 95% CI bound
+    ci_high: float | None = None        # upper 95% CI bound
+    effect_scale: str = ""              # ratio | mean_diff | proportion_diff
+    sig: str = ""                       # significant | nonsignificant | not_reported
+    is_primary: bool | None = None      # measured the trial's PRIMARY (vs secondary) endpoint
 
     @property
     def weight(self) -> int:
