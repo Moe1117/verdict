@@ -12,7 +12,8 @@
       "integrity_note": "RETRACTED (Am J Physiol Heart Circ Physiol 2012;302(11):H2446, DOI 10.1152/ajpheart.zh4-0450-retr.2012; retraction PMID:22833916). PubMed article-type 'Retracted Publication'. Isolated rat-heart study from the Dipak K. Das lab (UConn Cardiovascular Research Center); retracted amid UConn's misconduct finding of data fabrication/falsification across Das's lab. Animal, not human, and fraudulent \u2014 excluding it removes the mechanistic 'cardioprotection' anchor.",
       "finding": "Claimed resveratrol pharmacologically preconditions/protects the ischemic rat heart via NO. Data from the retracted study; not usable as evidence.",
       "n_int": 0,
-      "year": 2002
+      "year": 2002,
+      "outcome_match": false
     },
     {
       "source_id": "PMID:24111838",
@@ -23,7 +24,8 @@
       "integrity_note": "Sahebkar 2013, Nutr Rev (DOI 10.1111/nure.12081). 7 RCTs, n=282 (141 per arm). Independent of any Das work.",
       "finding": "No significant effect of resveratrol on total cholesterol, LDL, HDL, or triglycerides; robust to dose, duration, and CV-risk status. Null surrogate outcomes.",
       "n_int": 141,
-      "year": 2013
+      "year": 2013,
+      "outcome_match": false
     },
     {
       "source_id": "PMID:25885871",
@@ -34,7 +36,8 @@
       "integrity_note": "Sahebkar/Banach 2015, Int J Cardiol (DOI 10.1016/j.ijcard.2015.04.008). 10 RCTs / 11 treatment arms.",
       "finding": "No benefit on CRP, total cholesterol, LDL, triglycerides, glucose, or systolic/diastolic BP; slightly lowered HDL. Concludes no benefit on CV risk factors. Surrogate endpoints only.",
       "n_int": 0,
-      "year": 2015
+      "year": 2015,
+      "outcome_match": false
     },
     {
       "source_id": "PMID:31264084",
@@ -45,7 +48,8 @@
       "integrity_note": "Akbari/Asemi 2019, High Blood Press Cardiovasc Prev (DOI 10.1007/s40292-019-00324-6). 28 RCTs (33 findings). Very high heterogeneity (I2=96.5%) undercuts reliability.",
       "finding": "Significantly increased flow-mediated dilation (surrogate) in metabolic syndrome, but no effect on systolic or diastolic BP. Mixed/surrogate-only; heterogeneity extreme.",
       "n_int": 0,
-      "year": 2019
+      "year": 2019,
+      "outcome_match": false
     },
     {
       "source_id": "PMID:37843843",
@@ -56,7 +60,8 @@
       "integrity_note": "Gimblet/Jalal 2024, CJASN (DOI 10.2215/CJN.0000000000000337). NCT03597568. Small (n=28), 6-week crossover, single surrogate endpoint.",
       "finding": "400 mg/d resveratrol improved brachial-artery flow-mediated dilation vs placebo in CKD+diabetes; no change in eGFR, HbA1c, BP. Positive but surrogate-only, tiny, short.",
       "n_int": 28,
-      "year": 2024
+      "year": 2024,
+      "outcome_match": false
     },
     {
       "source_id": "PMID:26840331",
@@ -67,7 +72,8 @@
       "integrity_note": "Zortea 2016, Nutrients (DOI 10.3390/nu8020073). NCT02062190. Very small (n=19 men), 4 weeks.",
       "finding": "200 mg/d resveratrol produced no significant change in body weight, waist circumference, glucose, or total cholesterol in schizophrenia patients. Null.",
       "n_int": 10,
-      "year": 2016
+      "year": 2016,
+      "outcome_match": false
     },
     {
       "source_id": "PMID:26234526",
@@ -78,7 +84,8 @@
       "integrity_note": "Faghihzadeh 2015, Br J Nutr (DOI 10.1017/S0007114515002433). n=50, 12 weeks, NAFLD.",
       "finding": "500 mg/d resveratrol gave no significant change in blood pressure, insulin-resistance markers, lipid profile, or anthropometrics (reduced ALT/steatosis only). Null on CV/metabolic risk factors.",
       "n_int": 25,
-      "year": 2015
+      "year": 2015,
+      "outcome_match": false
     },
     {
       "source_id": "PMID:27523436",
@@ -89,7 +96,8 @@
       "integrity_note": "Saldanha/Mafra 2016, J Ren Nutr (DOI 10.1053/j.jrn.2016.06.005). Pilot, n=20, 4-week crossover.",
       "finding": "500 mg/d resveratrol had no antioxidant/anti-inflammatory effect (Nrf2, NF-kB, cytokines unchanged) in non-dialyzed CKD patients. Null.",
       "n_int": 20,
-      "year": 2016
+      "year": 2016,
+      "outcome_match": false
     }
   ],
   "integrity_records": [
