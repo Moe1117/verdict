@@ -18,7 +18,13 @@
       "integrity_note": "Verified via PubMed (PMID:37622681, NEJM 2023;389(12):1069-1084, publication type Randomized Controlled Trial, not retracted) and ClinicalTrials.gov (NCT04788511, Phase 3, N=529, dual primary endpoints KCCQ-CSS + body weight). Novo Nordisk-sponsored, pre-registered. Both primary endpoints are the claimed outcomes directly, not surrogates.",
       "n_int": 529,
       "year": 2023,
-      "finding": "In non-diabetic obesity-related HFpEF (LVEF >=45%, BMI >=30), semaglutide 2.4 mg met both dual primary endpoints at 52 weeks: KCCQ-CSS estimated treatment difference +7.8 points (95% CI 4.8-10.9) and body weight -10.7 percentage points (95% CI -11.9 to -9.4), both P<0.001; 6MWD +20.3 m."
+      "finding": "In non-diabetic obesity-related HFpEF (LVEF >=45%, BMI >=30), semaglutide 2.4 mg met both dual primary endpoints at 52 weeks: KCCQ-CSS estimated treatment difference +7.8 points (95% CI 4.8-10.9) and body weight -10.7 percentage points (95% CI -11.9 to -9.4), both P<0.001; 6MWD +20.3 m.",
+      "effect_point": 7.8,
+      "ci_low": 4.8,
+      "ci_high": 10.9,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:38587233",
@@ -31,7 +37,13 @@
       "integrity_note": "Verified via PubMed (PMID:38587233, NEJM 2024;390(15):1394-1407, type Randomized Controlled Trial, not retracted) and ClinicalTrials.gov (NCT04916470, Phase 3, enrollment 617; 616 randomized per NEJM abstract; dual primary endpoints KCCQ-CSS + body weight). Double-blind, placebo-controlled, multicenter. n_int=617 uses the registry enrollment figure (published randomized N=616).",
       "n_int": 617,
       "year": 2024,
-      "finding": "In obesity-related HFpEF WITH type 2 diabetes, semaglutide 2.4 mg improved KCCQ-CSS by +7.3 points (95% CI 4.1-10.4) and reduced body weight by -6.4 percentage points (95% CI -7.6 to -5.2) vs placebo at 52 weeks, both P<0.001 - replicating STEP-HFpEF in a harder-to-treat population."
+      "finding": "In obesity-related HFpEF WITH type 2 diabetes, semaglutide 2.4 mg improved KCCQ-CSS by +7.3 points (95% CI 4.1-10.4) and reduced body weight by -6.4 percentage points (95% CI -7.6 to -5.2) vs placebo at 52 weeks, both P<0.001 - replicating STEP-HFpEF in a harder-to-treat population.",
+      "effect_point": 7.3,
+      "ci_low": 4.1,
+      "ci_high": 10.4,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:38599221",
@@ -44,7 +56,12 @@
       "integrity_note": "Verified via PubMed (PMID:38599221, Lancet 2024;403(10437):1635-1648, types incl Randomized Controlled Trial / Research Support; not retracted; PMC11317105). Prespecified pooled individual-patient analysis of the two pivotal RCTs (N=1145; 573 semaglutide/572 placebo). Not independent of rows 1-2 - same participants. 'Reduced HF events' reflects the hierarchical composite (win ratio 1.65), not a standalone isolated HF-event endpoint.",
       "n_int": 573,
       "year": 2024,
-      "finding": "Pooled across both trials (N=1145; 573 semaglutide/572 placebo), semaglutide improved KCCQ-CSS by +7.5 points (95% CI 5.3-9.8) and reduced body weight by -8.4% (95% CI -9.2 to -7.5) vs placebo; 6MWD +17.1 m and CRP treatment ratio 0.64. Consistent benefit regardless of diabetes status."
+      "finding": "Pooled across both trials (N=1145; 573 semaglutide/572 placebo), semaglutide improved KCCQ-CSS by +7.5 points (95% CI 5.3-9.8) and reduced body weight by -8.4% (95% CI -9.2 to -7.5) vs placebo; 6MWD +17.1 m and CRP treatment ratio 0.64. Consistent benefit regardless of diabetes status.",
+      "effect_point": 7.5,
+      "ci_low": 5.3,
+      "ci_high": 9.8,
+      "effect_scale": "mean_diff",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:38913004",
@@ -57,7 +74,13 @@
       "integrity_note": "Verified via PubMed (PMID:38913004, JACC 2024;84(3):247-257, types Randomized Controlled Trial / Multicenter Study; not retracted). Prespecified pooled secondary analysis of the same 1,145 participants as rows 1-3 (NOT an independent trial). Reinforces the symptom/functional dimension (NYHA-class improvement corroborates KCCQ-CSS benefit).",
       "n_int": 573,
       "year": 2024,
-      "finding": "More semaglutide- than placebo-treated patients improved NYHA class (32.6% vs 21.5%; OR 2.20, 95% CI 1.62-2.99) and fewer deteriorated (2.09% vs 5.24%; OR 0.36); KCCQ-CSS improvement was largest in NYHA III/IV (+10.5 points, 95% CI 6.6-14.4). Directly supports the symptom-improvement claim across functional severity."
+      "finding": "More semaglutide- than placebo-treated patients improved NYHA class (32.6% vs 21.5%; OR 2.20, 95% CI 1.62-2.99) and fewer deteriorated (2.09% vs 5.24%; OR 0.36); KCCQ-CSS improvement was largest in NYHA III/IV (+10.5 points, 95% CI 6.6-14.4). Directly supports the symptom-improvement claim across functional severity.",
+      "effect_point": 2.2,
+      "ci_low": 1.62,
+      "ci_high": 2.99,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": false
     },
     {
       "source_id": "PMID:39555826",
@@ -70,7 +93,13 @@
       "integrity_note": "Verified via PubMed (PMID:39555826, NEJM 2025;392(5):427-437, types Clinical Trial Phase III / Randomized Controlled Trial / Multicenter Study; not retracted) and ClinicalTrials.gov (NCT04847557, Phase 3, N=731). YEAR CORRECTED 2024->2025 to match the NEJM print citation (online-ahead 2024-11-16). DIFFERENT drug (tirzepatide, dual GIP/GLP-1) - supports drug CLASS/mechanism, not direct semaglutide evidence. SUMMIT enrolled LVEF >=50% and age >=40 (tighter than the claim's LVEF >=45%); population_match stays true because EF>=50 is a subset of EF>=45. Eli Lilly-sponsored, double-blind, multicenter.",
       "n_int": 364,
       "year": 2025,
-      "finding": "In obesity-related HFpEF (LVEF >=50%), tirzepatide improved KCCQ-CSS by a between-group difference of +6.9 points (95% CI 3.3-10.6, P<0.001) at 52 weeks AND reduced the composite of CV death or worsening HF (HR 0.62, 95% CI 0.41-0.95, P=0.026). Corroborates incretin-class symptom benefit in a closely matched population."
+      "finding": "In obesity-related HFpEF (LVEF >=50%), tirzepatide improved KCCQ-CSS by a between-group difference of +6.9 points (95% CI 3.3-10.6, P<0.001) at 52 weeks AND reduced the composite of CV death or worsening HF (HR 0.62, 95% CI 0.41-0.95, P=0.026). Corroborates incretin-class symptom benefit in a closely matched population.",
+      "effect_point": 6.9,
+      "ci_low": 3.3,
+      "ci_high": 10.6,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     }
   ],
   "baseline": {

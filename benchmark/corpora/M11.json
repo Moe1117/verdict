@@ -18,7 +18,13 @@
       "integrity_note": "No retraction or integrity concerns; landmark phase 3 RCT, NCT00045032. Verified via PubMed: article types include 'Randomized Controlled Trial, Phase III'; no 'Retracted Publication' tag.",
       "n_int": 3387,
       "year": 2005,
-      "finding": "Primary endpoint DFS: 1 year of trastuzumab vs observation, HR 0.54 (95% CI 0.43-0.67, P<0.0001), absolute 2-yr DFS benefit 8.4 points. At this first interim analysis (median 1 yr) OS was NOT yet significantly different (29 vs 37 deaths); the primary endpoint (DFS) is met but the CLAIMED OS outcome was still immature here, hence outcome_match=false for OS at this timepoint. Confirmed against PubMed abstract."
+      "finding": "Primary endpoint DFS: 1 year of trastuzumab vs observation, HR 0.54 (95% CI 0.43-0.67, P<0.0001), absolute 2-yr DFS benefit 8.4 points. At this first interim analysis (median 1 yr) OS was NOT yet significantly different (29 vs 37 deaths); the primary endpoint (DFS) is met but the CLAIMED OS outcome was still immature here, hence outcome_match=false for OS at this timepoint. Confirmed against PubMed abstract.",
+      "effect_point": 0.54,
+      "ci_low": 0.43,
+      "ci_high": 0.67,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:16236738",
@@ -31,7 +37,10 @@
       "integrity_note": "No retraction; pivotal joint analysis of two phase 3 RCTs (NCT00004067, NCT00005970). Verified via PubMed article types; no retraction tag.",
       "n_int": 2043,
       "year": 2005,
-      "finding": "Combined analysis of two RCTs: adding trastuzumab reduced DFS events HR 0.48 (P<0.0001) AND produced a 33% reduction in risk of death (P=0.015) at first interim analysis. Directly measures a mortality/OS endpoint in addition to DFS, both favoring trastuzumab. Effect sizes match PubMed abstract exactly. (n_int is an approximate single-arm figure; total joint analysis was larger.)"
+      "finding": "Combined analysis of two RCTs: adding trastuzumab reduced DFS events HR 0.48 (P<0.0001) AND produced a 33% reduction in risk of death (P=0.015) at first interim analysis. Directly measures a mortality/OS endpoint in addition to DFS, both favoring trastuzumab. Effect sizes match PubMed abstract exactly. (n_int is an approximate single-arm figure; total joint analysis was larger.)",
+      "effect_point": 0.48,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:21768458",
@@ -44,7 +53,9 @@
       "integrity_note": "No integrity concerns; mature follow-up of pivotal RCTs. PubMed article types: Phase III RCT; no retraction tag.",
       "n_int": 2043,
       "year": 2011,
-      "finding": "At median 3.9 years, sustained highly significant DFS benefit (P<0.001) and a statistically significant 39% reduction in death rate favoring trastuzumab (P<0.001) \u2014 confirms the OS benefit is durable, not just an early DFS signal. Matches PubMed abstract exactly."
+      "finding": "At median 3.9 years, sustained highly significant DFS benefit (P<0.001) and a statistically significant 39% reduction in death rate favoring trastuzumab (P<0.001) \u2014 confirms the OS benefit is durable, not just an early DFS signal. Matches PubMed abstract exactly.",
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:25332249",
@@ -57,7 +68,12 @@
       "integrity_note": "No integrity concerns; pre-specified definitive OS analysis (710 events reached). No retraction tag in PubMed.",
       "n_int": 2023,
       "year": 2014,
-      "finding": "Definitive planned OS analysis (median 8.4 yr): 37% relative OS improvement, OS HR 0.63 (95% CI 0.54-0.73, P<0.001), 10-yr OS 75.2%->84%; DFS HR 0.60 (10-yr DFS 62.2%->73.7%). Directly and definitively measures the CLAIMED OS endpoint. All figures match PubMed abstract exactly."
+      "finding": "Definitive planned OS analysis (median 8.4 yr): 37% relative OS improvement, OS HR 0.63 (95% CI 0.54-0.73, P<0.001), 10-yr OS 75.2%->84%; DFS HR 0.60 (10-yr DFS 62.2%->73.7%). Directly and definitively measures the CLAIMED OS endpoint. All figures match PubMed abstract exactly.",
+      "effect_point": 0.63,
+      "ci_low": 0.54,
+      "ci_high": 0.73,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:28215665",
@@ -70,7 +86,12 @@
       "integrity_note": "No integrity concerns; final analysis of pivotal RCT (NCT00045032). PubMed confirms 884 (52%) of observation arm crossed over to trastuzumab, biasing the OS estimate toward the null, yet benefit persisted. No retraction tag.",
       "n_int": 1702,
       "year": 2017,
-      "finding": "At median 11 years, 1 year of trastuzumab vs observation significantly reduced DFS events (HR 0.76, 95% CI 0.68-0.86) and death (HR 0.74, 95% CI 0.64-0.86). 2 years gave no additional benefit over 1 year (HR 1.02, 95% CI 0.89-1.17). Mature OS confirmation despite substantial crossover diluting the effect. Matches PubMed abstract exactly, including n_int=1702 (1-year arm)."
+      "finding": "At median 11 years, 1 year of trastuzumab vs observation significantly reduced DFS events (HR 0.76, 95% CI 0.68-0.86) and death (HR 0.74, 95% CI 0.64-0.86). 2 years gave no additional benefit over 1 year (HR 1.02, 95% CI 0.89-1.17). Mature OS confirmation despite substantial crossover diluting the effect. Matches PubMed abstract exactly, including n_int=1702 (1-year arm).",
+      "effect_point": 0.76,
+      "ci_low": 0.68,
+      "ci_high": 0.86,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:34339645",
@@ -83,7 +104,12 @@
       "integrity_note": "No integrity concerns; collaborative individual-patient-data meta-analysis, highest tier of evidence. PubMed article type 'Meta-Analysis'; no retraction tag.",
       "n_int": 6932,
       "year": 2021,
-      "finding": "IPD meta-analysis of 7 RCTs (13,864 women, median 10.7 yr): breast-cancer recurrence RR 0.66 and breast-cancer mortality RR 0.67 (95% CI 0.61-0.73, P<0.0001); absolute 10-yr breast-cancer mortality reduced 6.4% and all-cause mortality reduced 6.5%, with NO increase in death without recurrence. Directly measures cause-specific and all-cause mortality. All figures match PubMed abstract exactly."
+      "finding": "IPD meta-analysis of 7 RCTs (13,864 women, median 10.7 yr): breast-cancer recurrence RR 0.66 and breast-cancer mortality RR 0.67 (95% CI 0.61-0.73, P<0.0001); absolute 10-yr breast-cancer mortality reduced 6.4% and all-cause mortality reduced 6.5%, with NO increase in death without recurrence. Directly measures cause-specific and all-cause mortality. All figures match PubMed abstract exactly.",
+      "effect_point": 0.67,
+      "ci_low": 0.61,
+      "ci_high": 0.73,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:22513938",
@@ -96,7 +122,12 @@
       "integrity_note": "No integrity concerns; Cochrane systematic review/meta-analysis of 8 RCTs (11,991 patients). Also documents key harm: increased CHF (RR 5.11) and LVEF decline (RR 1.83). PubMed article types 'Meta-Analysis, Systematic Review'; no retraction tag.",
       "n_int": 5996,
       "year": 2012,
-      "finding": "Pooled 8 RCTs: trastuzumab significantly improved OS (HR 0.66, 95% CI 0.57-0.77, P<0.00001) and DFS (HR 0.60, 95% CI 0.50-0.71, P<0.00001). Independent systematic-review confirmation of OS benefit; cardiotoxicity is the recognized trade-off but does not negate the survival gain. Matches PubMed abstract exactly."
+      "finding": "Pooled 8 RCTs: trastuzumab significantly improved OS (HR 0.66, 95% CI 0.57-0.77, P<0.00001) and DFS (HR 0.60, 95% CI 0.50-0.71, P<0.00001). Independent systematic-review confirmation of OS benefit; cardiotoxicity is the recognized trade-off but does not negate the survival gain. Matches PubMed abstract exactly.",
+      "effect_point": 0.66,
+      "ci_low": 0.57,
+      "ci_high": 0.77,
+      "effect_scale": "ratio",
+      "sig": "significant"
     }
   ],
   "baseline": {

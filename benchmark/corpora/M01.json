@@ -18,7 +18,13 @@
       "integrity_note": "Pivotal, pre-specified, event-driven, double-blind, placebo-controlled superiority RCT; industry-funded (Novo Nordisk) with academic steering committee and author data-vouching. Primary composite MACE met (HR 0.80, 95% CI 0.72-0.90, P<0.001). Note: the CV-death component alone did not reach hierarchical significance (HR 0.85, P=0.07), but this is a secondary component, not the claimed composite outcome. Independently re-verified via PubMed (title/DOI/RCT type) and ClinicalTrials.gov (NCT03574597: N=17,604, Phase 3, 3-point MACE primary, age>=45, BMI>=27, established CVD, no diabetes).",
       "n_int": 8803,
       "year": 2023,
-      "finding": "In 17,604 overweight/obese adults with CVD but no diabetes, semaglutide 2.4 mg weekly reduced 3-point MACE vs placebo: 569/8803 (6.5%) vs 701/8801 (8.0%), HR 0.80 (95% CI 0.72-0.90), P<0.001 \u2014 a 20% relative reduction. Exact population and exact claimed primary endpoint."
+      "finding": "In 17,604 overweight/obese adults with CVD but no diabetes, semaglutide 2.4 mg weekly reduced 3-point MACE vs placebo: 569/8803 (6.5%) vs 701/8801 (8.0%), HR 0.80 (95% CI 0.72-0.90), P<0.001 \u2014 a 20% relative reduction. Exact population and exact claimed primary endpoint.",
+      "effect_point": 0.8,
+      "ci_low": 0.72,
+      "ci_high": 0.9,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:39608381",
@@ -31,7 +37,13 @@
       "integrity_note": "PROSPERO-registered (CRD42024528864) random-effects meta-analysis, 11 trials, 85,373 participants; SELECT included post hoc. Online ahead of print 2024-11-25; print issue Jan 2025. Numbers independently re-verified against the PubMed abstract.",
       "n_int": 85373,
       "year": 2025,
-      "finding": "GLP-1 RA reduced MACE by 14% (HR 0.86, 95% CI 0.80-0.92) with SELECT included; benefit was consistent between SELECT (no-diabetes obesity/CVD) and the type-2-diabetes trials with no significant heterogeneity (p>0.05), corroborating that the effect extends to the non-diabetic population of the claim."
+      "finding": "GLP-1 RA reduced MACE by 14% (HR 0.86, 95% CI 0.80-0.92) with SELECT included; benefit was consistent between SELECT (no-diabetes obesity/CVD) and the type-2-diabetes trials with no significant heterogeneity (p>0.05), corroborating that the effect extends to the non-diabetic population of the claim.",
+      "effect_point": 0.86,
+      "ci_low": 0.8,
+      "ci_high": 0.92,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": false
     },
     {
       "source_id": "PMID:27633186",
@@ -44,7 +56,13 @@
       "integrity_note": "Double-blind placebo-controlled RCT; primary endpoint identical 3-point MACE. Population is type 2 DIABETES (does not match the 'without diabetes' claim population) \u2014 included as same-drug mechanistic/consistency support, not as direct population evidence. Re-verified via PubMed: N=3,297, 108/1648 vs 146/1649, HR 0.74 (0.58-0.95).",
       "n_int": 1648,
       "year": 2016,
-      "finding": "Same drug (semaglutide) reduced 3-point MACE in 3,297 type-2-diabetes patients: 6.6% vs 8.9%, HR 0.74 (95% CI 0.58-0.95). Establishes semaglutide's cardioprotection on the identical endpoint; population is diabetic, so supports plausibility rather than directly proving the no-diabetes claim."
+      "finding": "Same drug (semaglutide) reduced 3-point MACE in 3,297 type-2-diabetes patients: 6.6% vs 8.9%, HR 0.74 (95% CI 0.58-0.95). Establishes semaglutide's cardioprotection on the identical endpoint; population is diabetic, so supports plausibility rather than directly proving the no-diabetes claim.",
+      "effect_point": 0.74,
+      "ci_low": 0.58,
+      "ci_high": 0.95,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:34425083",
@@ -57,7 +75,13 @@
       "integrity_note": "PROSPERO-registered (CRD42021259711) random-effects meta-analysis, 8 trials, 60,080 patients, all type 2 diabetes (pre-SELECT). Population does not match the no-diabetes claim; included as class-level mechanistic context. Re-verified via PubMed abstract: MACE HR 0.86 (0.80-0.93), p<0.0001.",
       "n_int": 60080,
       "year": 2021,
-      "finding": "Class-level MACE reduction of 14% (HR 0.86, 95% CI 0.80-0.93) across 8 GLP-1 RA diabetes trials, homogeneous across subgroups. Establishes the robust class effect on the exact 3-point MACE endpoint that SELECT later extended to the non-diabetic obesity population."
+      "finding": "Class-level MACE reduction of 14% (HR 0.86, 95% CI 0.80-0.93) across 8 GLP-1 RA diabetes trials, homogeneous across subgroups. Establishes the robust class effect on the exact 3-point MACE endpoint that SELECT later extended to the non-diabetic obesity population.",
+      "effect_point": 0.86,
+      "ci_low": 0.8,
+      "ci_high": 0.93,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": false
     }
   ],
   "baseline": {

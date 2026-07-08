@@ -13,7 +13,8 @@
       "n_int": 80,
       "citation": "Reuben SS, Buvanendran A, Kroin JS, Raghunathan K. The analgesic efficacy of celecoxib, pregabalin, and their combination for spinal fusion surgery. Anesth Analg. 2006;103(5):1271-7.",
       "finding": "Claimed the celecoxib+pregabalin combination consumed the least PCA morphine and gave the best pain relief at rest and with movement over 24h vs each drug alone or placebo. This is the exact celecoxib/pregabalin multimodal claim - and it is fabricated. Tagged 'Retracted Publication' in PubMed; retracted via the official Shafer notice (Anesth Analg 2009;108(4):1350, PMID 19299812) after the 2009 Baystate/Tufts fraud investigation (no patients were enrolled).",
-      "integrity_note": "FABRICATED. PubMed article type = Retracted Publication. Retracted per the official Anesthesia & Analgesia notice (Shafer SL, Anesth Analg 2009;108(4):1350; PMID 19299812), following the Baystate Medical Center/Tufts fraud inquiry (2009); data invented. This single study is the direct evidential anchor for the claim; removing it is the FLIP."
+      "integrity_note": "FABRICATED. PubMed article type = Retracted Publication. Retracted per the official Anesthesia & Analgesia notice (Shafer SL, Anesth Analg 2009;108(4):1350; PMID 19299812), following the Baystate Medical Center/Tufts fraud inquiry (2009); data invented. This single study is the direct evidential anchor for the claim; removing it is the FLIP.",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:17578978",
@@ -25,7 +26,8 @@
       "n_int": 200,
       "citation": "Reuben SS, Ekman EF, Charron D. Evaluating the analgesic efficacy of administering celecoxib as a component of multimodal analgesia for outpatient anterior cruciate ligament reconstruction surgery. Anesth Analg. 2007;105(1):222-7. doi:10.1213/01.ane.0000265440.98491.e2",
       "finding": "Claimed perioperative celecoxib as part of multimodal analgesia reduced postoperative pain, opioid use, PONV and recovery-room stay after ACL surgery. Fabricated.",
-      "integrity_note": "FABRICATED. PubMed article type = Retracted Publication; retracted via the official Anesthesia & Analgesia notice (Shafer SL, Anesth Analg 2009;108(4):1350; PMID 19299812) after the 2009 Baystate/Tufts fraud investigation."
+      "integrity_note": "FABRICATED. PubMed article type = Retracted Publication; retracted via the official Anesthesia & Analgesia notice (Shafer SL, Anesth Analg 2009;108(4):1350; PMID 19299812) after the 2009 Baystate/Tufts fraud investigation.",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:16418018",
@@ -37,7 +39,8 @@
       "n_int": 80,
       "citation": "Reuben SS, Ekman EF, Raghunathan K, Steinberg RB, Blinder JL, Adesioye J. The effect of cyclooxygenase-2 inhibition on acute and chronic donor-site pain after spinal-fusion surgery. Reg Anesth Pain Med. 2006;31(1):6-13.",
       "finding": "Claimed perioperative celecoxib lowered pain scores and opioid use over 5 postoperative days and reduced chronic donor-site pain at 1 year after spinal fusion. Fabricated.",
-      "integrity_note": "FABRICATED. PubMed article type = Retracted Publication. Retracted by the Regional Anesthesia & Pain Medicine editorial board (retraction notice Reg Anesth Pain Med 2009;34(2):184) after Baystate notified the journal (Jan 23 2009) that the data were fabricated under Reuben's sole control."
+      "integrity_note": "FABRICATED. PubMed article type = Retracted Publication. Retracted by the Regional Anesthesia & Pain Medicine editorial board (retraction notice Reg Anesth Pain Med 2009;34(2):184) after Baystate notified the journal (Jan 23 2009) that the data were fabricated under Reuben's sole control.",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:32667154",
@@ -49,7 +52,10 @@
       "n_int": 24682,
       "citation": "Verret M, Lauzier F, Zarychanski R, et al. Perioperative Use of Gabapentinoids for the Management of Postoperative Acute Pain: A Systematic Review and Meta-analysis. Anesthesiology. 2020;133(2):265-279.",
       "finding": "281 RCTs, N=24,682. Pregabalin/gabapentin lowered pain intensity at 6-48h but every effect was BELOW the minimally important difference (e.g. -7/100 at 24h vs MID of 10) = not clinically significant; no effect on subacute/chronic pain, and MORE adverse events (dizziness, visual disturbance). Explicitly does not support routine perioperative gabapentinoid use. Largest, cleanest post-Reuben synthesis; the reason the honest verdict is Contested.",
-      "integrity_note": "Clean. Drives the FLIP: once fabricated combination trials are excluded, the strongest surviving evidence shows the effect is real but sub-clinical, contradicting the strong 'reduces pain' framing."
+      "integrity_note": "Clean. Drives the FLIP: once fabricated combination trials are excluded, the strongest surviving evidence shows the effect is real but sub-clinical, contradicting the strong 'reduces pain' framing.",
+      "effect_point": -7,
+      "effect_scale": "mean_diff",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:41239206",
@@ -61,7 +67,10 @@
       "n_int": 14,
       "citation": "Almuqad FA, Almuhammady AA, Alsaedi GT, et al. Effectiveness of gabapentinoids in orthopedic surgeries: a systematic review and meta-analysis of postoperative pain and opioid-sparing effects. BMC Anesthesiol. 2025;25(1):563.",
       "finding": "14 RCTs. Gabapentinoids statistically reduced pain at 24h (WMD -0.57 on 0-10) and opioid use, but the reduction did not reach the MCID of 1.0 point -> 'clinical effect is still limited.' Net-null clinically.",
-      "integrity_note": "Clean. Recent independent replication of the 'statistically-significant-but-sub-clinical' pattern, reinforcing Contested."
+      "integrity_note": "Clean. Recent independent replication of the 'statistically-significant-but-sub-clinical' pattern, reinforcing Contested.",
+      "effect_point": -0.57,
+      "effect_scale": "mean_diff",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:24150982",
@@ -73,7 +82,8 @@
       "n_int": 1785,
       "citation": "Derry S, Moore RA. Single dose oral celecoxib for acute postoperative pain in adults. Cochrane Database Syst Rev. 2013;(10):CD004233.",
       "finding": "10 RCTs, 1785 participants. Single-dose oral celecoxib is an effective analgesic for postoperative pain: NNT for >=50% pain relief was 2.6 (400mg) and 4.2 (200mg); reduced rescue-medication use. Supports the celecoxib-monotherapy limb of the claim.",
-      "integrity_note": "Clean Cochrane review. Independent of Reuben; the celecoxib-alone analgesic effect survives the fraud removal."
+      "integrity_note": "Clean Cochrane review. Independent of Reuben; the celecoxib-alone analgesic effect survives the fraud removal.",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:24894888",
@@ -85,7 +95,10 @@
       "n_int": 452,
       "citation": "Yao Z, Shen C, Zhong Y. Perioperative Pregabalin for Acute Pain After Gynecological Surgery: A Meta-analysis. Clin Ther. 2014;37(5):1128-35.",
       "finding": "6 RCTs, 452 patients. Perioperative pregabalin reduced 24h opioid consumption (WMD -8.5 mg morphine) and pain at rest and on movement without more adverse effects. Supports the pregabalin-limb, in a specific population.",
-      "integrity_note": "Clean. Genuine opioid-sparing signal for pregabalin, but modest and population-limited (gynecologic surgery)."
+      "integrity_note": "Clean. Genuine opioid-sparing signal for pregabalin, but modest and population-limited (gynecologic surgery).",
+      "effect_point": -8.5,
+      "effect_scale": "mean_diff",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:28751024",
@@ -97,7 +110,8 @@
       "n_int": 725,
       "citation": "Rai AS, Khan JS, Dhaliwal J, et al. Preoperative pregabalin or gabapentin for acute and chronic postoperative pain among patients undergoing breast cancer surgery: a systematic review and meta-analysis. J Plast Reconstr Aesthet Surg. 2017;70(10):1317-1328.",
       "finding": "12 RCTs (gabapentin n=516, pregabalin n=209). Both reduced recovery-room opioid use; gabapentin cut 24h pain but PREGABALIN showed NO significant difference in pain at 24h; neither reduced chronic postoperative pain. Mixed/direction-neutral for the pregabalin claim.",
-      "integrity_note": "Clean. Directly illustrates the mixed post-Reuben picture (pregabalin benefit not durable at 24h; no chronic-pain benefit)."
+      "integrity_note": "Clean. Directly illustrates the mixed post-Reuben picture (pregabalin benefit not durable at 24h; no chronic-pain benefit).",
+      "sig": "nonsignificant"
     }
   ],
   "integrity_records": [

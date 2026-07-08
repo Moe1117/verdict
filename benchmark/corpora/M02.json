@@ -26,7 +26,10 @@
       "integrity_note": "Phase 3 double-blind placebo-controlled pivotal trial; Eli Lilly-sponsored (disclosed); no retraction. Registered NCT04184622. Independently re-verified: PubMed title/journal/year and ClinicalTrials.gov N=2539, phase 3, obesity-without-diabetes, coprimary endpoints (percent weight change + >=5% reduction) all match.",
       "n_int": 2539,
       "year": 2022,
-      "finding": "In adults with obesity WITHOUT diabetes, mean weight change at 72 wk was -15.0%/-19.5%/-20.9% (tirzepatide 5/10/15 mg) vs -3.1% placebo; 85-91% achieved >=5% weight loss vs 35% placebo. Primary endpoint = percent body-weight change (exact claimed outcome and population)."
+      "finding": "In adults with obesity WITHOUT diabetes, mean weight change at 72 wk was -15.0%/-19.5%/-20.9% (tirzepatide 5/10/15 mg) vs -3.1% placebo; 85-91% achieved >=5% weight loss vs 35% placebo. Primary endpoint = percent body-weight change (exact claimed outcome and population).",
+      "effect_scale": "mean_diff",
+      "sig": "not_reported",
+      "is_primary": true
     },
     {
       "source_id": "PMID:37385275",
@@ -39,7 +42,9 @@
       "integrity_note": "Phase 3 double-blind placebo-controlled; Eli Lilly-sponsored (disclosed); no retraction. Registered NCT04657003. Population is obesity WITH T2D (adjacent, not the without-diabetes core population). Independently re-verified: PubMed abstract confirms n=938 (312/311/315), LS-mean -12.8/-14.7 vs -3.2%; NCT record matches phase 3, N=938.",
       "n_int": 938,
       "year": 2023,
-      "finding": "In adults with obesity and type 2 diabetes, LS-mean weight change at 72 wk was -12.8%/-14.7% (10/15 mg) vs -3.2% placebo; 79-83% achieved >=5% weight loss vs 32% placebo. Confirms substantial weight loss in a comorbid population."
+      "finding": "In adults with obesity and type 2 diabetes, LS-mean weight change at 72 wk was -12.8%/-14.7% (10/15 mg) vs -3.2% placebo; 79-83% achieved >=5% weight loss vs 32% placebo. Confirms substantial weight loss in a comorbid population.",
+      "effect_scale": "mean_diff",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:40353578",
@@ -52,7 +57,10 @@
       "integrity_note": "Phase 3b open-label head-to-head active-comparator superiority trial; Eli Lilly-sponsored (disclosed); no retraction. Registered NCT05822830. Open-label design is a limitation but primary endpoint is objective body weight. Independently re-verified: PubMed abstract confirms n=751, -20.2% vs -13.7% (P<0.001); NCT record confirms phase 3, N=751, obesity-without-diabetes.",
       "n_int": 751,
       "year": 2025,
-      "finding": "In adults with obesity WITHOUT diabetes, tirzepatide (max tolerated 10/15 mg) produced -20.2% weight change vs -13.7% for semaglutide 2.4 mg at 72 wk (P<0.001); tirzepatide superior on all >=10/15/20/25% thresholds. Direct comparator confirmation in the exact claimed population."
+      "finding": "In adults with obesity WITHOUT diabetes, tirzepatide (max tolerated 10/15 mg) produced -20.2% weight change vs -13.7% for semaglutide 2.4 mg at 72 wk (P<0.001); tirzepatide superior on all >=10/15/20/25% thresholds. Direct comparator confirmation in the exact claimed population.",
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:33567185",
@@ -65,7 +73,9 @@
       "integrity_note": "Comparator/class-effect anchor. Semaglutide (not tirzepatide), Novo Nordisk-sponsored; establishes the incretin class weight-loss effect that tirzepatide exceeds. Registered NCT03548935; no retraction. Independently re-verified: PubMed abstract confirms n=1961, -14.9% vs -2.4%, 86.4% >=5%.",
       "n_int": 1961,
       "year": 2021,
-      "finding": "Semaglutide 2.4 mg gave -14.9% weight change vs -2.4% placebo at 68 wk; 86% achieved >=5% loss. Independent (non-Lilly) evidence that GLP-1-based incretin therapy produces clinically significant weight loss, contextualizing and reinforcing the tirzepatide claim."
+      "finding": "Semaglutide 2.4 mg gave -14.9% weight change vs -2.4% placebo at 68 wk; 86% achieved >=5% loss. Independent (non-Lilly) evidence that GLP-1-based incretin therapy produces clinically significant weight loss, contextualizing and reinforcing the tirzepatide claim.",
+      "effect_scale": "mean_diff",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:40321113",
@@ -78,7 +88,10 @@
       "integrity_note": "Bucher indirect treatment comparison (SURMOUNT-2 vs STEP 2); Eli Lilly-authored (disclosed conflict). Evidence-synthesis corroboration, NOT an independent RCT and NOT a formal systematic review \u2014 'systematic review' used only because the schema enum lacks an indirect-comparison/network-meta-analysis category. Independently re-verified via PubMed: title/DOI/journal/pages match; mean differences 2.57%/4.79% (p<0.01) confirmed; PubMed 'RCT' article-type tag reflects the underlying source trials, not this paper's design. n_int=623 = the two tirzepatide arms of SURMOUNT-2 (312+311).",
       "n_int": 623,
       "year": 2025,
-      "finding": "Indirect comparison found tirzepatide 10/15 mg associated with significantly greater weight reduction than semaglutide 2.4 mg (mean difference 2.57%/4.79%, P<0.01), consistent with pooled/comparative-effectiveness support for the weight-loss claim. Cross-trial (not head-to-head) estimate; the direct head-to-head is provided by SURMOUNT-5."
+      "finding": "Indirect comparison found tirzepatide 10/15 mg associated with significantly greater weight reduction than semaglutide 2.4 mg (mean difference 2.57%/4.79%, P<0.01), consistent with pooled/comparative-effectiveness support for the weight-loss claim. Cross-trial (not head-to-head) estimate; the direct head-to-head is provided by SURMOUNT-5.",
+      "effect_scale": "proportion_diff",
+      "sig": "significant",
+      "is_primary": false
     }
   ]
 }

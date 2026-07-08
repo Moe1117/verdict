@@ -28,18 +28,27 @@ RATIO_MID_HIGH = 1.11   # at or above this (>=~10% relative increase) = meaningf
 
 
 def effect_strength(r: EvidenceRow) -> str:
-    """'meaningful' | 'marginal' | 'null' | 'unknown'. 'unknown' -> no magnitude info, so the
-    engine falls back to its sign-only logic (strict superset: no regression)."""
+    """Classify a row's effect:
+      'meaningful'  — significant AND clears the MID (a real, clinically-relevant effect)
+      'marginal'    — significant but sub-MID (real but small; may never become confident yes)
+      'precise_null'— non-significant with a CI tight enough to RULE OUT a meaningful effect
+                      (genuine evidence of no effect — a real contradiction)
+      'wide_null'   — non-significant with a CI that still admits a meaningful effect
+                      (absence of a signal, NOT counter-evidence)
+      'unknown'     — no usable magnitude info -> engine falls back to sign-only logic.
+    """
+    if r.sig == "significant" and r.effect_point is not None:
+        if r.effect_scale == "ratio":
+            return "meaningful" if (r.effect_point <= RATIO_MID_LOW or r.effect_point >= RATIO_MID_HIGH) else "marginal"
+        return "meaningful"  # absolute scale: per-outcome MID would refine
     if r.sig == "nonsignificant":
-        return "null"
-    if r.sig != "significant" or r.effect_point is None:
-        return "unknown"
-    if r.effect_scale == "ratio":
-        return "meaningful" if (r.effect_point <= RATIO_MID_LOW or r.effect_point >= RATIO_MID_HIGH) else "marginal"
-    # absolute scales: significant effect treated as meaningful (per-outcome MID would refine)
-    return "meaningful"
+        if (r.effect_scale == "ratio" and r.ci_low is not None and r.ci_high is not None
+                and r.ci_low >= RATIO_MID_LOW and r.ci_high <= RATIO_MID_HIGH):
+            return "precise_null"  # CI brackets the null tightly -> genuinely no meaningful effect
+        return "wide_null"
+    return "unknown"
 
 
 def has_magnitude(rows: list[EvidenceRow]) -> bool:
     """Does any row carry usable magnitude info? Gates that read magnitude no-op otherwise."""
-    return any(effect_strength(r) in ("meaningful", "marginal", "null") for r in rows)
+    return any(effect_strength(r) != "unknown" for r in rows)

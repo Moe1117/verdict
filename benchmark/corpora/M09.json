@@ -19,7 +19,13 @@
       "integrity_note": "Pivotal phase 3, double-blind, placebo-controlled; NCT01900665 (verified, enrollment 2129, phase 3, terminated); industry-sponsored (Eli Lilly), pre-registered, primary endpoint reported. PubMed pub types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. No integrity concerns; no retraction.",
       "n_int": 1057,
       "year": 2018,
-      "finding": "In mild AD dementia (MMSE 20-26, amyloid-positive), solanezumab 400 mg IV q4w did NOT significantly slow decline on the primary ADAS-cog14 endpoint (difference -0.80, 95% CI -1.73 to 0.14, P=0.10). 2129 enrolled (1057 solanezumab, 1072 placebo). Trial failed; Lilly ended symptomatic-AD development."
+      "finding": "In mild AD dementia (MMSE 20-26, amyloid-positive), solanezumab 400 mg IV q4w did NOT significantly slow decline on the primary ADAS-cog14 endpoint (difference -0.80, 95% CI -1.73 to 0.14, P=0.10). 2129 enrolled (1057 solanezumab, 1072 placebo). Trial failed; Lilly ended symptomatic-AD development.",
+      "effect_point": -0.8,
+      "ci_low": -1.73,
+      "ci_high": 0.14,
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:24450890",
@@ -32,7 +38,11 @@
       "integrity_note": "Two parallel pivotal phase 3 RCTs (NCT00905372, NCT00904683); double-blind, placebo-controlled; primary cognitive endpoints pre-specified and reported. PubMed pub types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. No integrity concerns; no retraction. n_int=1012 = total randomized in EXPEDITION1 (506+506); EXPEDITION2 randomized 1040 (521+519), pooled N=2052.",
       "n_int": 1012,
       "year": 2014,
-      "finding": "In mild-to-moderate AD, solanezumab 400 mg IV q4w for 18 months did NOT meet the primary ADAS-cog11 cognitive endpoint in either trial (EXPEDITION1 ADAS-cog11 diff -0.8, P=0.24; EXPEDITION2 mild-AD ADAS-cog14 diff -1.5 to -1.7, NS). Both trials negative on the primary cognitive outcome (pooled N=2052)."
+      "finding": "In mild-to-moderate AD, solanezumab 400 mg IV q4w for 18 months did NOT meet the primary ADAS-cog11 cognitive endpoint in either trial (EXPEDITION1 ADAS-cog11 diff -0.8, P=0.24; EXPEDITION2 mild-AD ADAS-cog14 diff -1.5 to -1.7, NS). Both trials negative on the primary cognitive outcome (pooled N=2052).",
+      "effect_point": -0.8,
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:37458272",
@@ -45,7 +55,13 @@
       "integrity_note": "Phase 3, double-blind, placebo-controlled early-intervention trial; NCT02008357 (verified, enrollment 1169, phase 3, PACC primary over 240 wks); NIA-funded. PubMed pub type 'Randomized Controlled Trial'. No integrity concerns; no retraction. n_int corrected from 585 to 578 per NEJM abstract (578 solanezumab, 591 placebo, 1169 total).",
       "n_int": 578,
       "year": 2023,
-      "finding": "In preclinical AD (CDR 0, MMSE>=25, amyloid-positive), solanezumab (up to 1600 mg IV q4w) 'did not slow cognitive decline as compared with placebo over 240 weeks' on the primary PACC (mean change -1.43 solanezumab vs -1.13 placebo; difference -0.30, 95% CI -0.82 to 0.22, P=0.26). 1169 randomized (578 solanezumab, 591 placebo). Negative even at the earliest disease stage; ended solanezumab development."
+      "finding": "In preclinical AD (CDR 0, MMSE>=25, amyloid-positive), solanezumab (up to 1600 mg IV q4w) 'did not slow cognitive decline as compared with placebo over 240 weeks' on the primary PACC (mean change -1.43 solanezumab vs -1.13 placebo; difference -0.30, 95% CI -0.82 to 0.22, P=0.26). 1169 randomized (578 solanezumab, 591 placebo). Negative even at the earliest disease stage; ended solanezumab development.",
+      "effect_point": -0.3,
+      "ci_low": -0.82,
+      "ci_high": 0.22,
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:33046560",
@@ -58,7 +74,13 @@
       "integrity_note": "Systematic review/meta-analysis; 19 RCTs, 17 at low risk of bias; random-effects pooling; includes solanezumab among anti-A\u03b2 agents. PubMed pub types 'Meta-Analysis' + 'Systematic Review'. No integrity concerns; no retraction.",
       "n_int": 12903,
       "year": 2020,
-      "finding": "Across 19 RCTs of anti-A\u03b2 agents (N=12,903), no cognitive difference vs placebo on ADAS-Cog (MD 0.20, 95% CI -0.40 to 0.81; below the 3.1-3.8-point minimal important difference; moderate-certainty evidence). Authors conclude anti-A\u03b2 interventions are unlikely to meaningfully slow cognitive/functional decline \u2014 situating solanezumab's failures in the broader negative evidence base. (n_int is total analyzed N across arms, not solanezumab-only.)"
+      "finding": "Across 19 RCTs of anti-A\u03b2 agents (N=12,903), no cognitive difference vs placebo on ADAS-Cog (MD 0.20, 95% CI -0.40 to 0.81; below the 3.1-3.8-point minimal important difference; moderate-certainty evidence). Authors conclude anti-A\u03b2 interventions are unlikely to meaningfully slow cognitive/functional decline \u2014 situating solanezumab's failures in the broader negative evidence base. (n_int is total analyzed N across arms, not solanezumab-only.)",
+      "effect_point": 0.2,
+      "ci_low": -0.4,
+      "ci_high": 0.81,
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": false
     }
   ],
   "baseline": {

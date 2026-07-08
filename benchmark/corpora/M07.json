@@ -18,7 +18,13 @@
       "integrity_note": "Industry-funded (Eisai/Biogen) pivotal phase 3, double-blind, placebo-controlled, prespecified CDR-SB primary; result met primary and all key secondaries. Standard COI but methodologically sound; basis for FDA traditional approval. Verified on PubMed: title/N/effect exact.",
       "n_int": 898,
       "year": 2022,
-      "finding": "Primary endpoint CDR-SB: adjusted mean change 1.21 (lecanemab) vs 1.66 (placebo); difference -0.45 (95% CI -0.67 to -0.23; P<0.001) at 18 months \u2014 directly measures the claimed outcome and favors lecanemab. Amyloid-PET reduced -59.1 centiloids. ARIA-E 12.6%."
+      "finding": "Primary endpoint CDR-SB: adjusted mean change 1.21 (lecanemab) vs 1.66 (placebo); difference -0.45 (95% CI -0.67 to -0.23; P<0.001) at 18 months \u2014 directly measures the claimed outcome and favors lecanemab. Amyloid-PET reduced -59.1 centiloids. ARIA-E 12.6%.",
+      "effect_point": -0.45,
+      "ci_low": -0.67,
+      "ci_high": -0.23,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:33865446",
@@ -31,7 +37,10 @@
       "integrity_note": "Bayesian adaptive design; the 12-month PRIMARY endpoint was ADCOMS (a composite surrogate), NOT CDR-SB \u2014 hence outcome_match=false for the CLAIMED CDR-SB endpoint. CDR-SB was a prespecified secondary. n_int=609 verified = lecanemab arm (854 treated: 609 lecanemab/245 placebo).",
       "n_int": 609,
       "year": 2021,
-      "finding": "Missed the 12-month ADCOMS primary (64% vs 80% probability threshold). At 18 months the 10-mg/kg biweekly dose showed 26-33% less decline on CDR-SB vs placebo (secondary) plus amyloid and ADAS-cog14 benefit \u2014 directionally consistent with the claim but on a secondary endpoint."
+      "finding": "Missed the 12-month ADCOMS primary (64% vs 80% probability threshold). At 18 months the 10-mg/kg biweekly dose showed 26-33% less decline on CDR-SB vs placebo (secondary) plus amyloid and ADAS-cog14 benefit \u2014 directionally consistent with the claim but on a secondary endpoint.",
+      "effect_scale": "proportion_diff",
+      "sig": "nonsignificant",
+      "is_primary": false
     },
     {
       "source_id": "PMID:38730496",
@@ -44,7 +53,9 @@
       "integrity_note": "Safety/tolerability report of the pivotal trial + open-label extension; not an efficacy endpoint, so direction=0 and outcome_match=false. Included to characterize the risk side of the benefit-risk balance underlying the consensus. Verified on PubMed.",
       "n_int": 1612,
       "year": 2024,
-      "finding": "ARIA-E 13.6% (34.5% in ApoE e4 homozygotes), ARIA-H microhemorrhages 16.0%, infusion reactions 24.5%; 3 ICH deaths across Core+OLE (2 lecanemab in OLE, with concurrent tPA/anticoagulation). Confirms the tolerability caveats that temper \u2014 but do not overturn \u2014 the efficacy consensus."
+      "finding": "ARIA-E 13.6% (34.5% in ApoE e4 homozygotes), ARIA-H microhemorrhages 16.0%, infusion reactions 24.5%; 3 ICH deaths across Core+OLE (2 lecanemab in OLE, with concurrent tPA/anticoagulation). Confirms the tolerability caveats that temper \u2014 but do not overturn \u2014 the efficacy consensus.",
+      "sig": "not_reported",
+      "is_primary": false
     },
     {
       "source_id": "PMID:37874099",
@@ -57,7 +68,10 @@
       "integrity_note": "HRQoL/caregiver-burden outcomes were EXPLORATORY in CLARITY-AD, not the CDR-SB clinical-decline primary \u2014 outcome_match=false. Supportive, patient-centered corroboration of the same trial's benefit. Verified on PubMed.",
       "n_int": 898,
       "year": 2023,
-      "finding": "At 18 months: 49% (EQ-5D-5L) and 56% (QOL-AD, subject-rated) less HRQoL decline and 38% less increase in caregiver burden (ZBI) vs placebo \u2014 consistent with, and adds patient-relevant weight to, the CDR-SB clinical-decline benefit."
+      "finding": "At 18 months: 49% (EQ-5D-5L) and 56% (QOL-AD, subject-rated) less HRQoL decline and 38% less increase in caregiver burden (ZBI) vs placebo \u2014 consistent with, and adds patient-relevant weight to, the CDR-SB clinical-decline benefit.",
+      "effect_scale": "proportion_diff",
+      "sig": "not_reported",
+      "is_primary": false
     }
   ],
   "baseline": {

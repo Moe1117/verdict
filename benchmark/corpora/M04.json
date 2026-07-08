@@ -18,7 +18,13 @@
       "integrity_note": "Landmark pivotal, dedicated kidney-outcomes trial (NCT03819153, Phase 3, N=3533 confirmed via ClinicalTrials.gov); Novo Nordisk-funded, NIH-supported, double-blind. Stopped early for efficacy at prespecified interim analysis (median follow-up 3.4y) \u2014 not an integrity concern.",
       "n_int": 1767,
       "year": 2024,
-      "finding": "N=3533 T2D+CKD (1767 semaglutide / 1766 placebo). Primary composite (kidney failure, sustained >=50% eGFR decline, kidney/CV death) HR 0.76 (95% CI 0.66-0.88, P=0.0003; 331 vs 410 events); kidney-specific composite HR 0.79 (0.66-0.94); CV death HR 0.71 (0.56-0.89); eGFR slope 1.16 mL/min/1.73m2/yr less steep (P<0.001); all-cause death HR 0.80 (0.67-0.95). Directly measures the CLAIMED hard kidney-progression outcome."
+      "finding": "N=3533 T2D+CKD (1767 semaglutide / 1766 placebo). Primary composite (kidney failure, sustained >=50% eGFR decline, kidney/CV death) HR 0.76 (95% CI 0.66-0.88, P=0.0003; 331 vs 410 events); kidney-specific composite HR 0.79 (0.66-0.94); CV death HR 0.71 (0.56-0.89); eGFR slope 1.16 mL/min/1.73m2/yr less steep (P<0.001); all-cause death HR 0.80 (0.67-0.95). Directly measures the CLAIMED hard kidney-progression outcome.",
+      "effect_point": 0.76,
+      "ci_low": 0.66,
+      "ci_high": 0.88,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:39608381",
@@ -31,7 +37,12 @@
       "integrity_note": "PROSPERO-registered (CRD42024528864), class-level meta-analysis; includes FLOW. Semaglutide-specific effect not isolated but T2D composite-kidney estimate is directly relevant and low-heterogeneity. PubMed publication date 2024-11-25; appears in the 2025;13(1) issue.",
       "n_int": 0,
       "year": 2025,
-      "finding": "11 trials, 85,373 participants. In T2D (67,769), GLP-1 RAs reduced the composite kidney outcome (kidney failure, >=50% eGFR decline, death from kidney failure) by 18% (HR 0.82, 95% CI 0.73-0.93; I2=26.4%) and kidney failure alone by 16% (HR 0.84, 0.72-0.99; I2=0%). Confirms the FLOW hard-endpoint finding at class level."
+      "finding": "11 trials, 85,373 participants. In T2D (67,769), GLP-1 RAs reduced the composite kidney outcome (kidney failure, >=50% eGFR decline, death from kidney failure) by 18% (HR 0.82, 95% CI 0.73-0.93; I2=26.4%) and kidney failure alone by 16% (HR 0.84, 0.72-0.99; I2=0%). Confirms the FLOW hard-endpoint finding at class level.",
+      "effect_point": 0.82,
+      "ci_low": 0.73,
+      "ci_high": 0.93,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:40156846",
@@ -44,7 +55,12 @@
       "integrity_note": "Incorporates newest semaglutide trials (FLOW + oral-semaglutide SOUL). Class-level pooling; semaglutide is the dominant contributor. Citation title corrected to match PubMed exact wording.",
       "n_int": 0,
       "year": 2025,
-      "finding": "10 trials, n=71,351 T2D. Long-acting GLP-1 RAs reduced the composite kidney outcome (kidney failure, >=50% eGFR decline, kidney-related death) by 17% (HR 0.83, 95% CI 0.75-0.92; I2=20.4%), with no significant heterogeneity by oral vs injectable route. Directly supports claimed hard kidney-progression outcome."
+      "finding": "10 trials, n=71,351 T2D. Long-acting GLP-1 RAs reduced the composite kidney outcome (kidney failure, >=50% eGFR decline, kidney-related death) by 17% (HR 0.83, 95% CI 0.75-0.92; I2=20.4%), with no significant heterogeneity by oral vs injectable route. Directly supports claimed hard kidney-progression outcome.",
+      "effect_point": 0.83,
+      "ci_low": 0.75,
+      "ci_high": 0.92,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:39210781",
@@ -57,7 +73,12 @@
       "integrity_note": "PROSPERO-registered (CRD42024565765). Class-level; kidney composite here is the >=50% eGFR / kidney-failure / kidney-death hard composite.",
       "n_int": 0,
       "year": 2024,
-      "finding": "17,072 T2D across 3 outcome trials reporting SGLT2i-stratified effects. Composite kidney outcome RR 0.79 (95% CI 0.66-0.95) and eGFR slope benefit 0.78 mL/min/1.73m2/yr (0.57-0.98), consistent regardless of background SGLT2i use (P-heterogeneity 0.53 and 0.94). Reinforces robust kidney-progression benefit."
+      "finding": "17,072 T2D across 3 outcome trials reporting SGLT2i-stratified effects. Composite kidney outcome RR 0.79 (95% CI 0.66-0.95) and eGFR slope benefit 0.78 mL/min/1.73m2/yr (0.57-0.98), consistent regardless of background SGLT2i use (P-heterogeneity 0.53 and 0.94). Reinforces robust kidney-progression benefit.",
+      "effect_point": 0.79,
+      "ci_low": 0.66,
+      "ci_high": 0.95,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:38914124",
@@ -70,7 +91,11 @@
       "integrity_note": "Prespecified subgroup analysis of the pivotal FLOW RCT; SGLT2i-baseline subgroup underpowered (P-interaction 0.109), overall benefit robust. Labeled 'rct' as an analysis of RCT data \u2014 disclosed here.",
       "n_int": 1767,
       "year": 2024,
-      "finding": "FLOW subgroup: overall primary composite HR 0.76 (24% RRR); benefit in non-SGLT2i users (N=2983) HR 0.73 (0.63-0.85, P<0.001) and directionally not-different in SGLT2i users (N=550, HR 1.07, 0.69-1.67, underpowered; P-interaction 0.109). Confirms the primary kidney-progression benefit holds on background CKD therapy."
+      "finding": "FLOW subgroup: overall primary composite HR 0.76 (24% RRR); benefit in non-SGLT2i users (N=2983) HR 0.73 (0.63-0.85, P<0.001) and directionally not-different in SGLT2i users (N=550, HR 1.07, 0.69-1.67, underpowered; P-interaction 0.109). Confirms the primary kidney-progression benefit holds on background CKD therapy.",
+      "effect_point": 0.76,
+      "effect_scale": "ratio",
+      "sig": "not_reported",
+      "is_primary": false
     },
     {
       "source_id": "PMID:27633186",
@@ -83,7 +108,13 @@
       "integrity_note": "Earlier CVOT (NCT01720446); primary endpoint was cardiovascular (MACE), not kidney. Renal outcome was a SECONDARY composite dominated by new-onset persistent macroalbuminuria \u2014 a SURROGATE, not the hard progression endpoint. Supportive signal only, superseded by FLOW.",
       "n_int": 1648,
       "year": 2016,
-      "finding": "N=3297 high-CV-risk T2D. New or worsening nephropathy (secondary composite, macroalbuminuria-driven) was lower with semaglutide (HR 0.64, 95% CI 0.46-0.88). Hypothesis-generating renal SIGNAL on a surrogate endpoint; outcome_match=false because the primary endpoint was MACE and the renal component was albuminuria-driven, not hard kidney failure/eGFR loss."
+      "finding": "N=3297 high-CV-risk T2D. New or worsening nephropathy (secondary composite, macroalbuminuria-driven) was lower with semaglutide (HR 0.64, 95% CI 0.46-0.88). Hypothesis-generating renal SIGNAL on a surrogate endpoint; outcome_match=false because the primary endpoint was MACE and the renal component was albuminuria-driven, not hard kidney failure/eGFR loss.",
+      "effect_point": 0.64,
+      "ci_low": 0.46,
+      "ci_high": 0.88,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": false
     }
   ],
   "baseline": {

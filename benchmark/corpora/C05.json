@@ -14,7 +14,13 @@
       "integrity_ok": true,
       "integrity_note": "No retraction or expression of concern (verified). Trial = NCT00004992 (DPP/DPPOS), enrollment 3,234, confirmed on ClinicalTrials.gov. Only bundle row with a true non-diabetic population and RCT-tier design \u2014 load-bearing for the verdict.",
       "n_int": 3234,
-      "year": 2025
+      "year": 2025,
+      "effect_point": 0.9,
+      "ci_low": 0.73,
+      "ci_high": 1.1,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "citation": "Stevens 2012 Diabetologia",
@@ -27,7 +33,12 @@
       "integrity_ok": true,
       "integrity_note": "No retraction/EoC (verified). Trials mostly enrolled diabetic patients, so population match to non-diabetic adults is only partial \u2014 honestly flagged false.",
       "n_int": 51681,
-      "year": 2012
+      "year": 2012,
+      "effect_point": 1.02,
+      "ci_low": 0.82,
+      "ci_high": 1.26,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant"
     },
     {
       "citation": "Dickerman 2023 Epidemiology",
@@ -40,7 +51,13 @@
       "integrity_ok": true,
       "integrity_note": "No retraction/EoC (verified). CORRECTED population_match true->false: the headline emulation is restricted to individuals with diabetes; only a secondary analysis is diabetes-agnostic. Explicitly shows the observational protective signal is an analytic artifact.",
       "n_int": 2009,
-      "year": 2023
+      "year": 2023,
+      "effect_point": -0.2,
+      "ci_low": -1.6,
+      "ci_high": 1.3,
+      "effect_scale": "proportion_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "citation": "Chang 2020 Cancer Prev Res (Phila)",
@@ -53,7 +70,13 @@
       "integrity_ok": true,
       "integrity_note": "No retraction/EoC (verified). Diabetes/prediabetes populations; site-specific (skin), so population_match false.",
       "n_int": 8541,
-      "year": 2020
+      "year": 2020,
+      "effect_point": 0.71,
+      "ci_low": 0.42,
+      "ci_high": 1.2,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": false
     },
     {
       "citation": "Noto 2012 PLoS One",
@@ -66,7 +89,12 @@
       "integrity_ok": true,
       "integrity_note": "No retraction/EoC (verified). Represents the confounded observational signal later refuted by RCTs/TTE; diabetic population only, so population_match false. Normalized to 'systematic review' (pools observational data, not RCTs).",
       "n_int": 210892,
-      "year": 2012
+      "year": 2012,
+      "effect_point": 0.67,
+      "ci_low": 0.53,
+      "ci_high": 0.85,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "citation": "Wang 2014 Diabetes Res Clin Pract",
@@ -79,7 +107,12 @@
       "integrity_ok": true,
       "integrity_note": "No retraction/EoC (verified). Purely observational; diabetic population; susceptible to time-related/immortal-time bias. Normalized to 'systematic review' (pools observational data, not RCTs).",
       "n_int": 13,
-      "year": 2014
+      "year": 2014,
+      "effect_point": 0.63,
+      "ci_low": 0.46,
+      "ci_high": 0.86,
+      "effect_scale": "ratio",
+      "sig": "significant"
     }
   ],
   "integrity_records": [],

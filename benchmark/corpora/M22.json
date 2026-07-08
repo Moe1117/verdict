@@ -18,7 +18,13 @@
       "integrity_note": "Merck-funded pivotal trial; large, double-blind, adjudicated endpoints; no retraction (PubMed article_types = Randomized Controlled Trial, no retraction notice). Modest absolute effect (2.0 pp 7-yr KM difference) but pre-specified primary endpoint met. NCT00202878 confirms N=18,144, Phase 3, adjudicated primary composite.",
       "n_int": 18144,
       "year": 2015,
-      "finding": "In 18,144 patients within 10 days of ACS, simvastatin+ezetimibe vs simvastatin+placebo reduced the primary MACE composite: 7-yr KM 32.7% vs 34.7%, HR 0.936 (95% CI 0.89-0.99), P=0.016; time-weighted LDL-C 53.7 vs 69.5 mg/dL. Directly supports the claimed outcome in the claimed population."
+      "finding": "In 18,144 patients within 10 days of ACS, simvastatin+ezetimibe vs simvastatin+placebo reduced the primary MACE composite: 7-yr KM 32.7% vs 34.7%, HR 0.936 (95% CI 0.89-0.99), P=0.016; time-weighted LDL-C 53.7 vs 69.5 mg/dL. Directly supports the claimed outcome in the claimed population.",
+      "effect_point": 0.936,
+      "ci_low": 0.89,
+      "ci_high": 0.99,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:30480766",
@@ -31,7 +37,13 @@
       "integrity_note": "Cochrane systematic review, GRADE moderate-to-high quality; heavily weighted by IMPROVE-IT (41.5-98.4% weight across analyses). Evidence base predominantly established ASCVD/ACS on ezetimibe+statin. PubMed article_types = Meta-Analysis/Systematic Review; no retraction.",
       "n_int": 23499,
       "year": 2018,
-      "finding": "Across 26 RCTs (23,499 participants), ezetimibe added to statin reduced MACE (RR 0.94, 95% CI 0.90-0.98), non-fatal MI (RR 0.88) and non-fatal stroke (RR 0.83), with no effect on all-cause or CV mortality. Confirms modest MACE benefit; benefit concentrated in established ASCVD/ACS."
+      "finding": "Across 26 RCTs (23,499 participants), ezetimibe added to statin reduced MACE (RR 0.94, 95% CI 0.90-0.98), non-fatal MI (RR 0.88) and non-fatal stroke (RR 0.83), with no effect on all-cause or CV mortality. Confirms modest MACE benefit; benefit concentrated in established ASCVD/ACS.",
+      "effect_point": 0.94,
+      "ci_low": 0.9,
+      "ci_high": 0.98,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": false
     },
     {
       "source_id": "PMID:27673306",
@@ -44,7 +56,13 @@
       "integrity_note": "Meta-regression across 49 trials/312,175 participants (mixed primary+secondary prevention, not ACS-specific); RR 0.77 (0.75-0.79) is the pooled figure for the 5 combined LDL-receptor-upregulating therapies (diet, bile acid sequestrants, ileal bypass, ezetimibe, statins), between-group vs statins P=0.72. Establishes mechanistic/dose-response consistency rather than an ACS-specific effect estimate.",
       "n_int": 312175,
       "year": 2016,
-      "finding": "Ezetimibe (grouped with LDL-receptor-upregulating therapies) produced the expected per-1-mmol/L LDL-C major-vascular-event reduction (RR 0.77, 95% CI 0.75-0.79), statistically indistinguishable from statins (P=0.72). Supports the claim causally: ezetimibe's LDL-C lowering translates to proportional CV event reduction."
+      "finding": "Ezetimibe (grouped with LDL-receptor-upregulating therapies) produced the expected per-1-mmol/L LDL-C major-vascular-event reduction (RR 0.77, 95% CI 0.75-0.79), statistically indistinguishable from statins (P=0.72). Supports the claim causally: ezetimibe's LDL-C lowering translates to proportional CV event reduction.",
+      "effect_point": 0.77,
+      "ci_low": 0.75,
+      "ci_high": 0.79,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": false
     },
     {
       "source_id": "PMID:35863366",
@@ -57,7 +75,12 @@
       "integrity_note": "Non-inferiority design (comparator is high-intensity statin, NOT statin+placebo), broad ASCVD population (not restricted to ACS), open-label. Does not test add-on-vs-placebo, so it is neutral evidence for the specific add-on claim while confirming the combination strategy's clinical utility. PubMed article_types = Randomized Controlled Trial/Equivalence Trial; NCT03044665 confirms N=3,780 (registry status displays UNKNOWN/never updated, but the Lancet paper states the trial is complete).",
       "n_int": 3780,
       "year": 2022,
-      "finding": "In 3,780 ASCVD patients, moderate-statin+ezetimibe was non-inferior to high-intensity statin for the 3-yr MACE composite (9.1% vs 9.9%; absolute diff -0.78%, 90% CI -2.39 to 0.83), with more patients reaching LDL-C <70 mg/dL and fewer drug-intolerance discontinuations. Confirms combination is clinically comparable to intensifying statin; not a direct superiority-vs-placebo test."
+      "finding": "In 3,780 ASCVD patients, moderate-statin+ezetimibe was non-inferior to high-intensity statin for the 3-yr MACE composite (9.1% vs 9.9%; absolute diff -0.78%, 90% CI -2.39 to 0.83), with more patients reaching LDL-C <70 mg/dL and fewer drug-intolerance discontinuations. Confirms combination is clinically comparable to intensifying statin; not a direct superiority-vs-placebo test.",
+      "effect_point": -0.78,
+      "ci_low": -2.39,
+      "ci_high": 0.83,
+      "effect_scale": "proportion_diff",
+      "sig": "nonsignificant"
     },
     {
       "source_id": "PMID:28430910",
@@ -70,7 +93,13 @@
       "integrity_note": "Open-label, blinded-endpoint; smaller (N=1,734) and underpowered for MACE; tests an LDL-target strategy (statin+ezetimibe to <70 vs statin monotherapy to 90-100 mg/dL) rather than fixed add-on. Neutral primary result; CI consistent with IMPROVE-IT point estimate. PubMed article_types = Randomized Controlled Trial; no retraction.",
       "n_int": 1734,
       "year": 2017,
-      "finding": "In 1,734 Japanese ACS+dyslipidaemia patients, pitavastatin+ezetimibe did not significantly reduce the primary composite vs pitavastatin monotherapy (32.8% vs 36.9%; HR 0.89, 95% CI 0.76-1.04, P=0.152). Neutral, but a pre-specified high-cholesterol-absorption (high sitosterol) subgroup showed benefit (HR 0.71, 95% CI 0.56-0.91)."
+      "finding": "In 1,734 Japanese ACS+dyslipidaemia patients, pitavastatin+ezetimibe did not significantly reduce the primary composite vs pitavastatin monotherapy (32.8% vs 36.9%; HR 0.89, 95% CI 0.76-1.04, P=0.152). Neutral, but a pre-specified high-cholesterol-absorption (high sitosterol) subgroup showed benefit (HR 0.71, 95% CI 0.56-0.91).",
+      "effect_point": 0.89,
+      "ci_low": 0.76,
+      "ci_high": 1.04,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     }
   ],
   "baseline": {

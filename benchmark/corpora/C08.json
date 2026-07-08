@@ -14,7 +14,8 @@
       "integrity_ok": true,
       "integrity_note": "Large double-blind placebo-controlled adaptive platform trial; no integrity concerns.",
       "n_int": 3515,
-      "year": 2022
+      "year": 2022,
+      "sig": "nonsignificant"
     },
     {
       "citation": "Hayward 2024 Journal of Infection",
@@ -27,7 +28,10 @@
       "integrity_ok": true,
       "integrity_note": "Large NIHR-funded open-label adaptive platform trial; no integrity concerns.",
       "n_int": 8811,
-      "year": 2024
+      "year": 2024,
+      "effect_point": 1.15,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant"
     },
     {
       "citation": "Lim 2022 JAMA Internal Medicine",
@@ -40,7 +44,8 @@
       "integrity_ok": true,
       "integrity_note": "Investigator-initiated multicenter RCT; no integrity concerns.",
       "n_int": 490,
-      "year": 2022
+      "year": 2022,
+      "sig": "nonsignificant"
     },
     {
       "citation": "Marcolino 2022 BMC Infectious Diseases",
@@ -53,7 +58,8 @@
       "integrity_ok": true,
       "integrity_note": "Post-hype synthesis; no integrity concerns.",
       "n_int": 14,
-      "year": 2022
+      "year": 2022,
+      "sig": "nonsignificant"
     },
     {
       "citation": "Zein 2021 Diabetes & Metabolic Syndrome",
@@ -66,7 +72,8 @@
       "integrity_ok": true,
       "integrity_note": "The meta-analysis itself is not retracted, but its positive signal depended on primary studies later withdrawn/questioned; illustrates fragility of the early pro-ivermectin evidence.",
       "n_int": 1788,
-      "year": 2021
+      "year": 2021,
+      "sig": "significant"
     },
     {
       "citation": "Elgazzar 2020 Research Square (preprint)",
@@ -79,7 +86,8 @@
       "integrity_ok": false,
       "integrity_note": "Preprint withdrawn by Research Square for data-integrity/ethical concerns; never peer-reviewed yet drove early positive meta-analyses. Corroborated by Nature (d41586-021-02081-w) and multiple outlets.",
       "n_int": 600,
-      "year": 2020
+      "year": 2020,
+      "sig": "significant"
     },
     {
       "citation": "Shakhsi Niaee 2021 Asian Pacific Journal of Tropical Medicine",
@@ -92,7 +100,8 @@
       "integrity_ok": true,
       "integrity_note": "Concerns raised informally (data sleuths, editorial note) over implausible baseline stratification; NOT a formal Expression of Concern \u2014 the journal stated the paper was not retracted and no retraction was pending. The formal EoCs were issued on downstream reviews (Kory; Bryant/Lawrie, Am J Ther), not on this primary study.",
       "n_int": 180,
-      "year": 2021
+      "year": 2021,
+      "sig": "significant"
     }
   ],
   "integrity_records": [

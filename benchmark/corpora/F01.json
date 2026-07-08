@@ -13,7 +13,8 @@
       "n_int": 25,
       "finding": "Joachim Boldt RCT: 6% HES 130/0.42 vs albumin priming for cardiopulmonary bypass in 50 CABG patients; falsely reported HES REDUCED inflammation (IL-6/IL-10), endothelial damage (ICAM-1), renal tubular injury (a-GST, NGAL) and better preserved coagulation/platelet function - i.e. made HES look protective and safe. FABRICATED: retracted by Anesthesia & Analgesia (Dec 2010, PMID:21106980); the 2014 editor's note (PMID:25329035) names this exact paper and states the Klinikum Ludwigshafen investigation 'determined that the study was fabricated' (no IRB approval, no informed consent, missing/fabricated data). Cardiac-surgery CPB-priming population, not general critically-ill ICU resuscitation.",
       "citation": "Boldt J, et al. Cardiopulmonary bypass priming using a high dose of a balanced hydroxyethyl starch versus an albumin-based priming strategy. Anesth Analg. 2009;109(6):1752-62. RETRACTED. DOI 10.1213/ANE.0b013e3181b5a24b",
-      "integrity_note": "RETRACTED / FABRICATED. PubMed article-type flag: 'Retracted Publication'. Retraction notice: Shafer SL. Notice of retraction. Anesth Analg. 2010;111(6):1567 (PMID:21106980, DOI 10.1213/ANE.0b013e3182040b99). Reaffirmed by editor's note PMID:25329035 (2014) which names this HES-vs-albumin CPB-priming paper and states the Klinikum Ludwigshafen investigation found it fabricated. Part of the ~88/89-article joint retraction (18 editors-in-chief, 2011); Boldt is anesthesiology's retraction record-holder (>180 papers). His fabricated trials systematically made HES appear safe/effective; excluding them flips the honest verdict to harm (Not Supported)."
+      "integrity_note": "RETRACTED / FABRICATED. PubMed article-type flag: 'Retracted Publication'. Retraction notice: Shafer SL. Notice of retraction. Anesth Analg. 2010;111(6):1567 (PMID:21106980, DOI 10.1213/ANE.0b013e3182040b99). Reaffirmed by editor's note PMID:25329035 (2014) which names this HES-vs-albumin CPB-priming paper and states the Klinikum Ludwigshafen investigation found it fabricated. Part of the ~88/89-article joint retraction (18 editors-in-chief, 2011); Boldt is anesthesiology's retraction record-holder (>180 papers). His fabricated trials systematically made HES appear safe/effective; excluding them flips the honest verdict to harm (Not Supported).",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:18184958",
@@ -24,7 +25,8 @@
       "year": 2008,
       "n_int": 262,
       "finding": "VISEP trial. In 537 evaluable patients with severe sepsis, 10% pentastarch (HES 200/0.5) vs modified Ringer's lactate. HES caused higher rates of acute renal failure and renal-replacement therapy, with toxicity increasing with cumulative dose; trial stopped early for safety. Authors: 'As used in this study, HES was harmful, and its toxicity increased with accumulating doses.' (NCT00135473)",
-      "citation": "Brunkhorst FM, et al. Intensive insulin therapy and pentastarch resuscitation in severe sepsis. N Engl J Med. 2008;358(2):125-39. NCT00135473. DOI 10.1056/NEJMoa070716"
+      "citation": "Brunkhorst FM, et al. Intensive insulin therapy and pentastarch resuscitation in severe sepsis. N Engl J Med. 2008;358(2):125-39. NCT00135473. DOI 10.1056/NEJMoa070716",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:22738085",
@@ -35,7 +37,12 @@
       "year": 2012,
       "n_int": 398,
       "finding": "6S trial. 804 patients with severe sepsis randomized to 6% HES 130/0.42 (Tetraspan) vs Ringer's acetate. At 90 days, death 51% (HES) vs 43% (Ringer's), relative risk 1.17 (95% CI 1.01-1.36, P=0.03); more renal-replacement therapy (22% vs 16%, RR 1.35, 95% CI 1.01-1.80, P=0.04) and a trend to more severe bleeding (10% vs 6%). HES increased death and RRT.",
-      "citation": "Perner A, et al. Hydroxyethyl starch 130/0.42 versus Ringer's acetate in severe sepsis. N Engl J Med. 2012;367(2):124-34. NCT00962156. DOI 10.1056/NEJMoa1204242"
+      "citation": "Perner A, et al. Hydroxyethyl starch 130/0.42 versus Ringer's acetate in severe sepsis. N Engl J Med. 2012;367(2):124-34. NCT00962156. DOI 10.1056/NEJMoa1204242",
+      "effect_point": 1.17,
+      "ci_low": 1.01,
+      "ci_high": 1.36,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:23075127",
@@ -46,7 +53,12 @@
       "year": 2012,
       "n_int": 3315,
       "finding": "CHEST trial. 7000 ICU patients randomized to 6% HES 130/0.4 (Voluven) vs 0.9% saline. No mortality benefit (90-day death 18.0% vs 17.0%, RR 1.06, 95% CI 0.96-1.18, NS) but MORE renal-replacement therapy (7.0% vs 5.8%, RR 1.21, 95% CI 1.00-1.45, P=0.04) and significantly more adverse events (5.3% vs 2.8%, P<0.001). HES gave no benefit and more renal harm in general critically ill adults.",
-      "citation": "Myburgh JA, et al. Hydroxyethyl starch or saline for fluid resuscitation in intensive care (CHEST). N Engl J Med. 2012;367(20):1901-11. NCT00935168. DOI 10.1056/NEJMoa1209759"
+      "citation": "Myburgh JA, et al. Hydroxyethyl starch or saline for fluid resuscitation in intensive care (CHEST). N Engl J Med. 2012;367(20):1901-11. NCT00935168. DOI 10.1056/NEJMoa1209759",
+      "effect_point": 1.06,
+      "ci_low": 0.96,
+      "ci_high": 1.18,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant"
     },
     {
       "source_id": "PMID:23418281",
@@ -57,7 +69,12 @@
       "year": 2013,
       "n_int": 3456,
       "finding": "Systematic review + meta-analysis + trial sequential analysis of 9 RCTs (3456 sepsis patients) of HES 130/0.38-0.45 vs crystalloid or albumin. HES increased renal-replacement therapy (RR 1.36, 1.08-1.72), red-cell transfusion (RR 1.29, 1.13-1.48) and serious adverse events (RR 1.30, 1.02-1.67); in low-risk-of-bias trials the relative risk of death was 1.11 (1.00-1.23). Authors: 'unlikely that HES 130/0.38-0.45 provides overall clinical benefit for patients with sepsis.' Clean, post-Boldt evidence synthesis.",
-      "citation": "Haase N, Perner A, et al. Hydroxyethyl starch 130/0.38-0.45 versus crystalloid or albumin in patients with sepsis: systematic review with meta-analysis and trial sequential analysis. BMJ. 2013;346:f839. DOI 10.1136/bmj.f839"
+      "citation": "Haase N, Perner A, et al. Hydroxyethyl starch 130/0.38-0.45 versus crystalloid or albumin in patients with sepsis: systematic review with meta-analysis and trial sequential analysis. BMJ. 2013;346:f839. DOI 10.1136/bmj.f839",
+      "effect_point": 1.11,
+      "ci_low": 1,
+      "ci_high": 1.23,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant"
     },
     {
       "source_id": "PMID:24262273",
@@ -68,7 +85,12 @@
       "year": 2013,
       "n_int": 4624,
       "finding": "Systematic review and meta-analysis of 10 trials (4624 septic patients), HES vs crystalloid. HES increased acute kidney injury (RR 1.24, 1.13-1.36), need for renal-replacement therapy (RR 1.36, 1.17-1.57), red-cell transfusion (RR 1.14, 1.01-1.93) and 90-day mortality (RR 1.14, 1.04-1.26). Authors favor crystalloids over HES for sepsis resuscitation.",
-      "citation": "Serpa Neto A, et al. Fluid resuscitation with hydroxyethyl starches in patients with sepsis is associated with an increased incidence of acute kidney injury and use of renal replacement therapy: a systematic review and meta-analysis. J Crit Care. 2013;29(1):185.e1-7. DOI 10.1016/j.jcrc.2013.09.031"
+      "citation": "Serpa Neto A, et al. Fluid resuscitation with hydroxyethyl starches in patients with sepsis is associated with an increased incidence of acute kidney injury and use of renal replacement therapy: a systematic review and meta-analysis. J Crit Care. 2013;29(1):185.e1-7. DOI 10.1016/j.jcrc.2013.09.031",
+      "effect_point": 1.14,
+      "ci_low": 1.04,
+      "ci_high": 1.26,
+      "effect_scale": "ratio",
+      "sig": "significant"
     }
   ],
   "integrity_records": [

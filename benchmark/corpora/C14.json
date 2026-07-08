@@ -14,7 +14,13 @@
       "integrity_ok": true,
       "integrity_note": "Amarin-funded pivotal RCT (NEJMoa1812792); mineral-oil placebo controversy noted in later literature but trial itself is peer-reviewed NEJM, no retraction/misconduct. VERIFIED: PMID, n, HR, CIs, NCT all match PubMed record (published online Nov 2018; print 2019;380(1):11-22).",
       "n_int": 8179,
-      "year": 2019
+      "year": 2019,
+      "effect_point": 0.75,
+      "ci_low": 0.68,
+      "ci_high": 0.83,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "citation": "Nicholls SJ, et al. Effect of High-Dose Omega-3 Fatty Acids vs Corn Oil on Major Adverse Cardiovascular Events (STRENGTH). JAMA. 2020;324(22):2268-2280.",
@@ -27,7 +33,13 @@
       "integrity_ok": true,
       "integrity_note": "AstraZeneca-funded (JAMA 2020.22258, PMC7667577); peer-reviewed, prematurely stopped for futility; no integrity concerns. VERIFIED: PMID, n=13078, HR 0.99 (0.90-1.09), P=0.84, corn-oil comparator, NCT all match PubMed.",
       "n_int": 13078,
-      "year": 2020
+      "year": 2020,
+      "effect_point": 0.99,
+      "ci_low": 0.9,
+      "ci_high": 1.09,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "citation": "Manson JE, et al. Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer (VITAL). N Engl J Med. 2019;380(1):23-32.",
@@ -40,7 +52,13 @@
       "integrity_ok": true,
       "integrity_note": "NIH-funded (NEJMoa1811403, PMC6392053); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=25871, HR 0.92 (0.80-1.06), P=0.24, median 5.3 y, total-MI HR 0.72, NCT all match PubMed.",
       "n_int": 25871,
-      "year": 2019
+      "year": 2019,
+      "effect_point": 0.92,
+      "ci_low": 0.8,
+      "ci_high": 1.06,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "citation": "ASCEND Study Collaborative Group (Bowman L, et al.). Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. N Engl J Med. 2018;379(16):1540-1550.",
@@ -53,7 +71,12 @@
       "integrity_ok": true,
       "integrity_note": "British Heart Foundation-funded (NEJMoa1804989); peer-reviewed NEJM; no integrity concerns. VERIFIED: PMID, n=15480, RR 0.97 (0.87-1.08), P=0.55, mean 7.4 y, olive-oil placebo, NCT00135226 (also ISRCTN60635500) all match PubMed.",
       "n_int": 15480,
-      "year": 2018
+      "year": 2018,
+      "effect_point": 0.97,
+      "ci_low": 0.87,
+      "ci_high": 1.08,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant"
     },
     {
       "citation": "Hu Y, Hu FB, Manson JE. Marine Omega-3 Supplementation and Cardiovascular Disease: An Updated Meta-Analysis of 13 Randomized Controlled Trials Involving 127477 Participants. J Am Heart Assoc. 2019;8(19):e013543.",
@@ -66,7 +89,12 @@
       "integrity_ok": true,
       "integrity_note": "NIH-funded (JAHA.119.013543, PMC6806028); peer-reviewed JAHA systematic review/meta-analysis; explicitly flags REDUCE-IT-driven heterogeneity; no integrity concerns. VERIFIED: PMID, n=127477, 13 RCTs, all RRs and CIs match PubMed abstract.",
       "n_int": 127477,
-      "year": 2019
+      "year": 2019,
+      "effect_point": 0.92,
+      "ci_low": 0.86,
+      "ci_high": 0.99,
+      "effect_scale": "ratio",
+      "sig": "significant"
     }
   ],
   "integrity_records": [],

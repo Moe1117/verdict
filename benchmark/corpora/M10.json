@@ -19,7 +19,13 @@
       "integrity_note": "Landmark Roche-funded phase 3 pivotal trial; peer-reviewed NEJM; not retracted (PubMed article_types = Randomized Controlled Trial, Clinical Trial Phase III). Prespecified CDR-SB primary. NCT corrected: per NEJM abstract, GRADUATE I = NCT03444870.",
       "n_int": 985,
       "year": 2023,
-      "finding": "GRADUATE I: change in CDR-SB at week 116 was 3.35 (gantenerumab) vs 3.65 (placebo); difference -0.31 (95% CI -0.66 to 0.05; P=0.10). Primary endpoint NOT met; no significant slowing of clinical decline despite amyloid PET reduction (-66.44 centiloids; 28.0% reached amyloid-negativity)."
+      "finding": "GRADUATE I: change in CDR-SB at week 116 was 3.35 (gantenerumab) vs 3.65 (placebo); difference -0.31 (95% CI -0.66 to 0.05; P=0.10). Primary endpoint NOT met; no significant slowing of clinical decline despite amyloid PET reduction (-66.44 centiloids; 28.0% reached amyloid-negativity).",
+      "effect_point": -0.19,
+      "ci_low": -0.55,
+      "ci_high": 0.17,
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:37966285",
@@ -32,7 +38,13 @@
       "integrity_note": "Second of two co-reported pivotal phase 3 trials in the same NEJM paper; independent trial (different NCT); not retracted. NCT corrected: per NEJM abstract, GRADUATE II = NCT03443973.",
       "n_int": 980,
       "year": 2023,
-      "finding": "GRADUATE II: change in CDR-SB at week 116 was 2.82 (gantenerumab) vs 3.01 (placebo); difference -0.19 (95% CI -0.55 to 0.17; P=0.30). Primary endpoint NOT met (amyloid PET -56.46 centiloids; 26.8% amyloid-negative). Roche discontinued the program."
+      "finding": "GRADUATE II: change in CDR-SB at week 116 was 2.82 (gantenerumab) vs 3.01 (placebo); difference -0.19 (95% CI -0.55 to 0.17; P=0.30). Primary endpoint NOT met (amyloid PET -56.46 centiloids; 26.8% amyloid-negative). Roche discontinued the program.",
+      "effect_point": -0.19,
+      "ci_low": -0.55,
+      "ci_high": 0.17,
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:29221491",
@@ -45,7 +57,10 @@
       "integrity_note": "Peer-reviewed phase 3 RCT; halted early for futility per prespecified interim analysis; not retracted. Doses later judged subtherapeutic.",
       "n_int": 797,
       "year": 2017,
-      "finding": "Prodromal AD, CDR-SB primary at week 104: LS-mean change 1.60 (placebo), 1.69 (105 mg), 1.73 (225 mg) - no between-group difference on primary or secondary clinical endpoints. Stopped for futility; only exploratory dose-dependent signals."
+      "finding": "Prodromal AD, CDR-SB primary at week 104: LS-mean change 1.60 (placebo), 1.69 (105 mg), 1.73 (225 mg) - no between-group difference on primary or secondary clinical endpoints. Stopped for futility; only exploratory dose-dependent signals.",
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:34155411",
@@ -58,7 +73,9 @@
       "integrity_note": "Peer-reviewed academic (DIAN-TU/WashU) RCT; not retracted. Population is dominantly INHERITED (early-onset genetic) AD, not sporadic early AD - hence population_match=false; still directly informs the drug-on-cognition question.",
       "n_int": 52,
       "year": 2021,
-      "finding": "Gantenerumab engaged Abeta (reduced amyloid plaques, CSF total-tau, p-tau181, attenuated NfL rise) but did NOT show a beneficial effect on the primary cognitive endpoint vs placebo in symptomatic dominantly inherited AD. Neither gantenerumab nor solanezumab slowed cognitive decline."
+      "finding": "Gantenerumab engaged Abeta (reduced amyloid plaques, CSF total-tau, p-tau181, attenuated NfL rise) but did NOT show a beneficial effect on the primary cognitive endpoint vs placebo in symptomatic dominantly inherited AD. Neither gantenerumab nor solanezumab slowed cognitive decline.",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:36449413",
@@ -71,7 +88,13 @@
       "integrity_note": "Context/comparator row - a DIFFERENT anti-Abeta antibody (lecanemab), not gantenerumab. Direction=0 for the gantenerumab claim. Included to establish that gantenerumab's failure is drug-specific, not a class-wide refutation.",
       "n_int": 898,
       "year": 2022,
-      "finding": "Same early-AD population and CDR-SB primary: lecanemab 1.21 vs placebo 1.66; difference -0.45 (95% CI -0.67 to -0.23; P<0.001) - significant slowing of clinical decline; FDA-approved. Amyloid -59.1 centiloids. Shows the anti-amyloid class CAN slow CDR-SB decline; gantenerumab specifically did not."
+      "finding": "Same early-AD population and CDR-SB primary: lecanemab 1.21 vs placebo 1.66; difference -0.45 (95% CI -0.67 to -0.23; P<0.001) - significant slowing of clinical decline; FDA-approved. Amyloid -59.1 centiloids. Shows the anti-amyloid class CAN slow CDR-SB decline; gantenerumab specifically did not.",
+      "effect_point": -0.45,
+      "ci_low": -0.67,
+      "ci_high": -0.23,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     }
   ],
   "baseline": {

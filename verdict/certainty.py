@@ -63,5 +63,18 @@ def grade_certainty(rows: list[EvidenceRow], verdict: Verdict) -> Certainty:
         score -= 1
         signals.append("imprecision: no meta / no large RCT, small total N (−1)")
 
+    # Effect magnitude: a SUPPORTED verdict that rests on a statistically-significant but
+    # SUB-MID (marginal) effect — with no clinically meaningful effect behind it — is less
+    # certain. (A null is the correct evidence for Not Supported, so this applies only to the
+    # positive direction.) Confidence only, never the verdict.
+    from .magnitude import effect_strength, has_magnitude
+    if verdict is Verdict.SUPPORTED:
+        pros = [r for r in trials if r.supports]
+        if has_magnitude(pros):
+            strengths = {effect_strength(r) for r in pros}
+            if "meaningful" not in strengths and "marginal" in strengths:
+                score -= 1
+                signals.append("magnitude: the supporting effect is significant but sub-clinical (marginal) (−1)")
+
     score = max(0, min(3, score))
     return Certainty(LEVELS[score], score, signals)

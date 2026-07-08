@@ -18,7 +18,13 @@
       "integrity_note": "Landmark pivotal double-blind placebo-controlled RCT (NCT03036124); PubMed article types confirm 'Randomized Controlled Trial' + 'Clinical Trial, Phase III'; not retracted; formed basis of FDA HFrEF approval.",
       "n_int": 2373,
       "year": 2019,
-      "finding": "Primary composite of worsening HF or CV death occurred in 16.3% (dapagliflozin) vs 21.2% (placebo); HR 0.74 (95% CI 0.65-0.85, p<0.001). Benefit consistent with and without diabetes. Primary endpoint IS the claimed composite (hard outcome, not surrogate)."
+      "finding": "Primary composite of worsening HF or CV death occurred in 16.3% (dapagliflozin) vs 21.2% (placebo); HR 0.74 (95% CI 0.65-0.85, p<0.001). Benefit consistent with and without diabetes. Primary endpoint IS the claimed composite (hard outcome, not surrogate).",
+      "effect_point": 0.74,
+      "ci_low": 0.65,
+      "ci_high": 0.85,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "NCT03036124",
@@ -31,7 +37,9 @@
       "integrity_note": "Registry entry verified: N=4744, PHASE3, double-blind placebo-controlled, HFrEF (LVEF<=40%, NYHA II-IV), pre-specified primary endpoint = worsening HF or CV death (exactly the claimed outcome), status COMPLETED.",
       "n_int": 2373,
       "year": 2019,
-      "finding": "Event-driven Phase 3 trial; enrollment 4744; primary endpoint prospectively defined as worsening HF or CV death, matching the claim verbatim; confirms design integrity of PMID:31535829."
+      "finding": "Event-driven Phase 3 trial; enrollment 4744; primary endpoint prospectively defined as worsening HF or CV death, matching the claim verbatim; confirms design integrity of PMID:31535829.",
+      "sig": "not_reported",
+      "is_primary": true
     },
     {
       "source_id": "PMID:32865377",
@@ -44,7 +52,13 @@
       "integrity_note": "Independent pivotal RCT of a different SGLT2 inhibitor (empagliflozin, NCT03057977); PubMed article type 'Randomized Controlled Trial'; confirms class effect. Not retracted.",
       "n_int": 1863,
       "year": 2020,
-      "finding": "Primary composite of CV death or HF hospitalization: HR 0.75 (95% CI 0.65-0.86, p<0.001) in HFrEF (N=3730). Corroborates the claimed outcome as an SGLT2-inhibitor class effect; primary endpoint IS the claimed composite."
+      "finding": "Primary composite of CV death or HF hospitalization: HR 0.75 (95% CI 0.65-0.86, p<0.001) in HFrEF (N=3730). Corroborates the claimed outcome as an SGLT2-inhibitor class effect; primary endpoint IS the claimed composite.",
+      "effect_point": 0.75,
+      "ci_low": 0.65,
+      "ci_high": 0.86,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:32877652",
@@ -57,7 +71,12 @@
       "integrity_note": "Pre-specified prospective individual-patient-data meta-analysis pooling the two pivotal HFrEF RCTs (N=8474); PubMed article type 'Meta-Analysis'; highest-tier evidence synthesis.",
       "n_int": 4236,
       "year": 2020,
-      "finding": "Pooled SGLT2 inhibitors reduced CV death or first HF hospitalization (HR 0.74, 95% CI 0.68-0.82) and CV death alone (HR 0.86, 95% CI 0.76-0.98) in HFrEF, consistent across diabetes status. Directly supports the claimed composite outcome."
+      "finding": "Pooled SGLT2 inhibitors reduced CV death or first HF hospitalization (HR 0.74, 95% CI 0.68-0.82) and CV death alone (HR 0.86, 95% CI 0.76-0.98) in HFrEF, consistent across diabetes status. Directly supports the claimed composite outcome.",
+      "effect_point": 0.74,
+      "ci_low": 0.68,
+      "ci_high": 0.82,
+      "effect_scale": "ratio",
+      "sig": "significant"
     }
   ],
   "baseline": {

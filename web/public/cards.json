@@ -52,12 +52,12 @@
         "finding": "High-dose aducanumab met the primary clinical endpoint: CDR-SB change -0.39 vs placebo (95% CI -0.69 to -0.09; P=.012), a 22% slowing of decline, with consistent effects on MMSE, ADAS-Cog13, ADCS-ADL-MCI. Positive on the claimed cognitive/clinical outcome. (Analyzed population 1638; CT.gov enrollment 1643.)",
         "integrity_note": "",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": -0.39,
+        "ci_low": -0.69,
+        "ci_high": -0.09,
+        "effect_scale": "mean_diff",
+        "sig": "significant",
+        "is_primary": true
       },
       {
         "citation": "ENGAGE (221AD301): A Phase 3 Multicenter, Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Study to Evaluate the Efficacy and Safety of Aducanumab (BIIB037) in Subjects With Early Alzheimer's Disease \u2014 identical design to EMERGE. Biogen. ClinicalTrials.gov NCT02477800 (results posted). Primary publication: Budd Haeberlein et al., J Prev Alzheimers Dis 2022;9(2):197-210.",
@@ -74,12 +74,12 @@
         "finding": "Twin trial FAILED its primary endpoint: high-dose CDR-SB difference +0.03 vs placebo (95% CI -0.26 to 0.33; P=.833), numerically favoring placebo. Directly contradicts EMERGE on the identical claimed outcome. (Analyzed population 1647; CT.gov enrollment 1653.)",
         "integrity_note": "",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.03,
+        "ci_low": -0.26,
+        "ci_high": 0.33,
+        "effect_scale": "mean_diff",
+        "sig": "nonsignificant",
+        "is_primary": true
       },
       {
         "citation": "ENVISION (A Phase 3b/4 Study to Verify the Clinical Benefit of Aducanumab (BIIB037) in Participants With Alzheimer's Disease) \u2014 confirmatory RCT required by the FDA accelerated approval. Biogen. ClinicalTrials.gov NCT05310071 (status: TERMINATED).",
@@ -100,8 +100,8 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "sig": "not_reported",
+        "is_primary": true
       },
       {
         "citation": "Alexander GC, Knopman DS, Emerson SS, Ovbiagele B, Kryscio RJ, Perlmutter JS, Kesselheim AS. Revisiting FDA Approval of Aducanumab. N Engl J Med. 2021;385(9):769-771 (Perspective). PMID 34320282. Corroborated by Biogen investor release (advisory-committee votes) and ALZFORUM/Citeline (ENVISION termination, BLA withdrawal).",
@@ -122,7 +122,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "not_reported",
         "is_primary": null
       },
       {
@@ -144,8 +144,8 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "sig": "significant",
+        "is_primary": false
       },
       {
         "citation": "Qiao Y, Gu J, Yu M, Chi Y, Ma Y. Comparative Efficacy and Safety of Monoclonal Antibodies for Cognitive Decline in Patients with Alzheimer's Disease: A Systematic Review and Network Meta-Analysis. CNS Drugs. 2024;38(3):169-192. DOI:10.1007/s40263-024-01067-2",
@@ -166,8 +166,8 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "sig": "not_reported",
+        "is_primary": false
       }
     ],
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
@@ -225,12 +225,12 @@
         "finding": "Primary endpoint CDR-SB: adjusted mean change 1.21 (lecanemab) vs 1.66 (placebo); difference -0.45 (95% CI -0.67 to -0.23; P<0.001) at 18 months \u2014 directly measures the claimed outcome and favors lecanemab. Amyloid-PET reduced -59.1 centiloids. ARIA-E 12.6%.",
         "integrity_note": "Industry-funded (Eisai/Biogen) pivotal phase 3, double-blind, placebo-controlled, prespecified CDR-SB primary; result met primary and all key secondaries. Standard COI but methodologically sound; basis for FDA traditional approval. Verified on PubMed: title/N/effect exact.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": -0.45,
+        "ci_low": -0.67,
+        "ci_high": -0.23,
+        "effect_scale": "mean_diff",
+        "sig": "significant",
+        "is_primary": true
       },
       {
         "citation": "Swanson CJ, et al. A randomized, double-blind, phase 2b proof-of-concept clinical trial in early Alzheimer's disease with lecanemab, an anti-A\u03b2 protofibril antibody. Alzheimers Res Ther. 2021;13(1):80. DOI:10.1186/s13195-021-00813-8 (Study 201; NCT01767311).",
@@ -250,9 +250,9 @@
         "effect_point": null,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_scale": "proportion_diff",
+        "sig": "nonsignificant",
+        "is_primary": false
       },
       {
         "citation": "Honig LS, et al. Updated safety results from phase 3 lecanemab study in early Alzheimer's disease. Alzheimers Res Ther. 2024;16(1):105. DOI:10.1186/s13195-024-01441-8 (CLARITY-AD Core+OLE; NCT03887455).",
@@ -273,8 +273,8 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "sig": "not_reported",
+        "is_primary": false
       },
       {
         "citation": "Cohen S, et al. Lecanemab Clarity AD: Quality-of-Life Results from a Randomized, Double-Blind Phase 3 Trial. J Prev Alzheimers Dis. 2023;10(4):771-777. DOI:10.14283/jpad.2023.123 (NCT03887455).",
@@ -294,9 +294,9 @@
         "effect_point": null,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_scale": "proportion_diff",
+        "sig": "not_reported",
+        "is_primary": false
       }
     ],
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
@@ -354,12 +354,12 @@
         "finding": "In mild AD dementia (MMSE 20-26, amyloid-positive), solanezumab 400 mg IV q4w did NOT significantly slow decline on the primary ADAS-cog14 endpoint (difference -0.80, 95% CI -1.73 to 0.14, P=0.10). 2129 enrolled (1057 solanezumab, 1072 placebo). Trial failed; Lilly ended symptomatic-AD development.",
         "integrity_note": "Pivotal phase 3, double-blind, placebo-controlled; NCT01900665 (verified, enrollment 2129, phase 3, terminated); industry-sponsored (Eli Lilly), pre-registered, primary endpoint reported. PubMed pub types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. No integrity concerns; no retraction.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": -0.8,
+        "ci_low": -1.73,
+        "ci_high": 0.14,
+        "effect_scale": "mean_diff",
+        "sig": "nonsignificant",
+        "is_primary": true
       },
       {
         "citation": "Doody RS, et al. Phase 3 Trials of Solanezumab for Mild-to-Moderate Alzheimer's Disease (EXPEDITION1 & EXPEDITION2). N Engl J Med. 2014;370:311-321. DOI:10.1056/NEJMoa1312889",
@@ -376,12 +376,12 @@
         "finding": "In mild-to-moderate AD, solanezumab 400 mg IV q4w for 18 months did NOT meet the primary ADAS-cog11 cognitive endpoint in either trial (EXPEDITION1 ADAS-cog11 diff -0.8, P=0.24; EXPEDITION2 mild-AD ADAS-cog14 diff -1.5 to -1.7, NS). Both trials negative on the primary cognitive outcome (pooled N=2052).",
         "integrity_note": "Two parallel pivotal phase 3 RCTs (NCT00905372, NCT00904683); double-blind, placebo-controlled; primary cognitive endpoints pre-specified and reported. PubMed pub types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. No integrity concerns; no retraction. n_int=1012 = total randomized in EXPEDITION1 (506+506); EXPEDITION2 randomized 1040 (521+519), pooled N=2052.",
         "note": "",
-        "effect_point": null,
+        "effect_point": -0.8,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_scale": "mean_diff",
+        "sig": "nonsignificant",
+        "is_primary": true
       },
       {
         "citation": "Sperling RA, et al. Trial of Solanezumab in Preclinical Alzheimer's Disease (A4 Study). N Engl J Med. 2023;389:1096-1107. DOI:10.1056/NEJMoa2305032",
@@ -398,12 +398,12 @@
         "finding": "In preclinical AD (CDR 0, MMSE>=25, amyloid-positive), solanezumab (up to 1600 mg IV q4w) 'did not slow cognitive decline as compared with placebo over 240 weeks' on the primary PACC (mean change -1.43 solanezumab vs -1.13 placebo; difference -0.30, 95% CI -0.82 to 0.22, P=0.26). 1169 randomized (578 solanezumab, 591 placebo). Negative even at the earliest disease stage; ended solanezumab development.",
         "integrity_note": "Phase 3, double-blind, placebo-controlled early-intervention trial; NCT02008357 (verified, enrollment 1169, phase 3, PACC primary over 240 wks); NIA-funded. PubMed pub type 'Randomized Controlled Trial'. No integrity concerns; no retraction. n_int corrected from 585 to 578 per NEJM abstract (578 solanezumab, 591 placebo, 1169 total).",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": -0.3,
+        "ci_low": -0.82,
+        "ci_high": 0.22,
+        "effect_scale": "mean_diff",
+        "sig": "nonsignificant",
+        "is_primary": true
       },
       {
         "citation": "Lu L, et al. Anti-A\u03b2 agents for mild to moderate Alzheimer's disease: systematic review and meta-analysis. J Neurol Neurosurg Psychiatry. 2020;91:1316-1324. DOI:10.1136/jnnp-2020-323497",
@@ -420,12 +420,12 @@
         "finding": "Across 19 RCTs of anti-A\u03b2 agents (N=12,903), no cognitive difference vs placebo on ADAS-Cog (MD 0.20, 95% CI -0.40 to 0.81; below the 3.1-3.8-point minimal important difference; moderate-certainty evidence). Authors conclude anti-A\u03b2 interventions are unlikely to meaningfully slow cognitive/functional decline \u2014 situating solanezumab's failures in the broader negative evidence base. (n_int is total analyzed N across arms, not solanezumab-only.)",
         "integrity_note": "Systematic review/meta-analysis; 19 RCTs, 17 at low risk of bias; random-effects pooling; includes solanezumab among anti-A\u03b2 agents. PubMed pub types 'Meta-Analysis' + 'Systematic Review'. No integrity concerns; no retraction.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.2,
+        "ci_low": -0.4,
+        "ci_high": 0.81,
+        "effect_scale": "mean_diff",
+        "sig": "nonsignificant",
+        "is_primary": false
       }
     ],
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
@@ -477,8 +477,8 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "sig": "not_reported",
+        "is_primary": true
       },
       {
         "citation": "Konopka AR et al. Metformin inhibits mitochondrial adaptations to aerobic exercise training in older adults. Aging Cell. 2019;18(1):e12880. DOI:10.1111/acel.12880",
@@ -499,8 +499,8 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "sig": "not_reported",
+        "is_primary": false
       },
       {
         "citation": "Bannister CA et al. Can people with type 2 diabetes live longer than those without? A comparison of mortality in people initiated with metformin or sulphonylurea monotherapy and matched, non-diabetic controls. Diabetes Obes Metab. 2014;16(11):1165-73. DOI:10.1111/dom.12354",
@@ -517,11 +517,11 @@
         "finding": "Retrospective CPRD cohort: 78,241 metformin-monotherapy diabetics vs 90,463 matched non-diabetic controls (503,384 person-years). Metformin-treated diabetics had 15% LONGER adjusted median survival than matched non-diabetics (STR 0.85, 95% CI 0.81-0.90). The most-cited observational basis for a metformin longevity effect \u2014 but it is a diabetic population and retrospective/observational, so it cannot establish an aging/healthspan benefit in non-diabetic older adults (confounding by indication).",
         "integrity_note": "No retraction. RETROSPECTIVE observational matched cohort (UK CPRD; PubMed article type 'Observational Study'). NOT prospective \u2014 schema enum lacks a 'retrospective cohort' bucket, so the nearest cohort category is used but temporality is retrospective. Vulnerable to confounding by indication, immortal-time/prevalent-user bias; hypothesis-generating only. Population is diabetic, not the claimed non-diabetic older adults.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_point": 0.85,
+        "ci_low": 0.81,
+        "ci_high": 0.9,
+        "effect_scale": "ratio",
+        "sig": "significant",
         "is_primary": null
       },
       {
@@ -543,7 +543,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "not_reported",
         "is_primary": null
       },
       {
@@ -565,7 +565,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "not_reported",
         "is_primary": null
       }
     ],
@@ -624,12 +624,12 @@
         "finding": "In 17,604 overweight/obese adults with CVD but no diabetes, semaglutide 2.4 mg weekly reduced 3-point MACE vs placebo: 569/8803 (6.5%) vs 701/8801 (8.0%), HR 0.80 (95% CI 0.72-0.90), P<0.001 \u2014 a 20% relative reduction. Exact population and exact claimed primary endpoint.",
         "integrity_note": "Pivotal, pre-specified, event-driven, double-blind, placebo-controlled superiority RCT; industry-funded (Novo Nordisk) with academic steering committee and author data-vouching. Primary composite MACE met (HR 0.80, 95% CI 0.72-0.90, P<0.001). Note: the CV-death component alone did not reach hierarchical significance (HR 0.85, P=0.07), but this is a secondary component, not the claimed composite outcome. Independently re-verified via PubMed (title/DOI/RCT type) and ClinicalTrials.gov (NCT03574597: N=17,604, Phase 3, 3-point MACE primary, age>=45, BMI>=27, established CVD, no diabetes).",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.8,
+        "ci_low": 0.72,
+        "ci_high": 0.9,
+        "effect_scale": "ratio",
+        "sig": "significant",
+        "is_primary": true
       },
       {
         "citation": "Badve SV, et al. Effects of GLP-1 receptor agonists on kidney and cardiovascular disease outcomes: a meta-analysis of randomised controlled trials. Lancet Diabetes Endocrinol. 2025;13(1):15-28. DOI:10.1016/S2213-8587(24)00271-7.",
@@ -646,12 +646,12 @@
         "finding": "GLP-1 RA reduced MACE by 14% (HR 0.86, 95% CI 0.80-0.92) with SELECT included; benefit was consistent between SELECT (no-diabetes obesity/CVD) and the type-2-diabetes trials with no significant heterogeneity (p>0.05), corroborating that the effect extends to the non-diabetic population of the claim.",
         "integrity_note": "PROSPERO-registered (CRD42024528864) random-effects meta-analysis, 11 trials, 85,373 participants; SELECT included post hoc. Online ahead of print 2024-11-25; print issue Jan 2025. Numbers independently re-verified against the PubMed abstract.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.86,
+        "ci_low": 0.8,
+        "ci_high": 0.92,
+        "effect_scale": "ratio",
+        "sig": "significant",
+        "is_primary": false
       },
       {
         "citation": "Marso SP, et al. Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes (SUSTAIN-6). N Engl J Med. 2016;375(19):1834-1844. DOI:10.1056/NEJMoa1607141. NCT01720446.",
@@ -668,12 +668,12 @@
         "finding": "Same drug (semaglutide) reduced 3-point MACE in 3,297 type-2-diabetes patients: 6.6% vs 8.9%, HR 0.74 (95% CI 0.58-0.95). Establishes semaglutide's cardioprotection on the identical endpoint; population is diabetic, so supports plausibility rather than directly proving the no-diabetes claim.",
         "integrity_note": "Double-blind placebo-controlled RCT; primary endpoint identical 3-point MACE. Population is type 2 DIABETES (does not match the 'without diabetes' claim population) \u2014 included as same-drug mechanistic/consistency support, not as direct population evidence. Re-verified via PubMed: N=3,297, 108/1648 vs 146/1649, HR 0.74 (0.58-0.95).",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.74,
+        "ci_low": 0.58,
+        "ci_high": 0.95,
+        "effect_scale": "ratio",
+        "sig": "significant",
+        "is_primary": true
       },
       {
         "citation": "Sattar N, et al. Cardiovascular, mortality, and kidney outcomes with GLP-1 receptor agonists in patients with type 2 diabetes: a systematic review and meta-analysis of randomised trials. Lancet Diabetes Endocrinol. 2021;9(10):653-662. DOI:10.1016/S2213-8587(21)00203-5.",
@@ -690,12 +690,12 @@
         "finding": "Class-level MACE reduction of 14% (HR 0.86, 95% CI 0.80-0.93) across 8 GLP-1 RA diabetes trials, homogeneous across subgroups. Establishes the robust class effect on the exact 3-point MACE endpoint that SELECT later extended to the non-diabetic obesity population.",
         "integrity_note": "PROSPERO-registered (CRD42021259711) random-effects meta-analysis, 8 trials, 60,080 patients, all type 2 diabetes (pre-SELECT). Population does not match the no-diabetes claim; included as class-level mechanistic context. Re-verified via PubMed abstract: MACE HR 0.86 (0.80-0.93), p<0.0001.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.86,
+        "ci_low": 0.8,
+        "ci_high": 0.93,
+        "effect_scale": "ratio",
+        "sig": "significant",
+        "is_primary": false
       }
     ],
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
@@ -753,12 +753,12 @@
         "finding": "PFS significantly prolonged (median 11.8 vs 5.9 mo; HR 0.60, P<0.001) but OS NOT improved (median 26.7 vs 25.2 mo; HR 0.88, P=0.16). Primary endpoint was the PFS surrogate, not OS \u2014 hence outcome_match=false; OS direction null. Verified verbatim against PubMed abstract.",
         "integrity_note": "Landmark open-label phase III (NCT00028990); primary endpoint PFS, OS pre-specified secondary. PubMed article_types confirm RCT/Phase III; no retraction.",
         "note": "",
-        "effect_point": null,
+        "effect_point": 0.88,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_scale": "ratio",
+        "sig": "nonsignificant",
+        "is_primary": false
       },
       {
         "citation": "Gray R, et al. Independent review of E2100: phase III bevacizumab plus paclitaxel vs paclitaxel in metastatic breast cancer. J Clin Oncol. 2009;27(30):4966-72. DOI:10.1200/JCO.2008.21.6630",
@@ -775,12 +775,12 @@
         "finding": "Independent review confirmed a robust PFS benefit (IRF HR 0.48; median 11.3 vs 5.8 mo) and doubled ORR (48.9% vs 22.2%). Primary endpoint PFS (surrogate) \u2014 outcome_match=false; does not establish an OS benefit. Verified against PubMed abstract.",
         "integrity_note": "Blinded independent radiologic re-review of E2100; validates PFS effect. No integrity concerns (PubMed).",
         "note": "",
-        "effect_point": null,
+        "effect_point": 0.48,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_scale": "ratio",
+        "sig": "not_reported",
+        "is_primary": true
       },
       {
         "citation": "Robert NJ, et al. RIBBON-1: chemotherapy with or without bevacizumab for first-line HER2-negative metastatic breast cancer. J Clin Oncol. 2011;29(10):1252-60. DOI:10.1200/JCO.2010.28.0982",
@@ -800,9 +800,9 @@
         "effect_point": null,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_scale": "ratio",
+        "sig": "nonsignificant",
+        "is_primary": true
       },
       {
         "citation": "Miles DW, et al. Biomarker results from the AVADO phase 3 trial of first-line bevacizumab plus docetaxel for HER2-negative metastatic breast cancer. Br J Cancer. 2013;108(5):1052-60. DOI:10.1038/bjc.2013.69",
@@ -822,9 +822,9 @@
         "effect_point": null,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_scale": "ratio",
+        "sig": "nonsignificant",
+        "is_primary": true
       },
       {
         "citation": "Miles DW, et al. First-line bevacizumab plus chemotherapy for HER2-negative metastatic breast cancer: pooled and subgroup analyses of 2447 patients (E2100+AVADO+RIBBON-1). Ann Oncol. 2013;24(11):2773-80. DOI:10.1093/annonc/mdt276",
@@ -841,11 +841,11 @@
         "finding": "OS analyzed directly as an endpoint: OS HR 0.97 (95% CI 0.86-1.08; median 26.7 vs 26.4 mo) \u2014 no OS benefit overall; triple-negative subgroup OS HR 0.96 (0.79-1.16). PFS improved (HR 0.64). outcome_match=true (OS is the measured endpoint here); direction null. Verified verbatim against PubMed abstract.",
         "integrity_note": "Pooled individual-patient data from the three pivotal first-line phase III RCTs; industry-authored but consistent with independent Cochrane review. PubMed article_types confirm Meta-Analysis. No retraction.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_point": 0.97,
+        "ci_low": 0.86,
+        "ci_high": 1.08,
+        "effect_scale": "ratio",
+        "sig": "nonsignificant",
         "is_primary": null
       },
       {
@@ -863,11 +863,11 @@
         "finding": "First-line: PFS improved (HR 0.67; 95% CI 0.61-0.73) but OS not significantly different (HR 0.93; 95% CI 0.84-1.04); second-line OS HR 0.98 (0.83-1.16). Concludes benefit is limited to surrogate endpoints (PFS/ORR) with no OS or QoL benefit. outcome_match=true; OS null. Verified verbatim against PubMed abstract.",
         "integrity_note": "Independent Cochrane systematic review/meta-analysis of RCTs; low conflict-of-interest. PubMed article_types confirm Meta-Analysis/Systematic Review. No retraction.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_point": 0.93,
+        "ci_low": 0.84,
+        "ci_high": 1.04,
+        "effect_scale": "ratio",
+        "sig": "nonsignificant",
         "is_primary": null
       },
       {
@@ -889,7 +889,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "nonsignificant",
         "is_primary": null
       }
     ],
@@ -948,12 +948,12 @@
         "finding": "Primary endpoint DFS: 1 year of trastuzumab vs observation, HR 0.54 (95% CI 0.43-0.67, P<0.0001), absolute 2-yr DFS benefit 8.4 points. At this first interim analysis (median 1 yr) OS was NOT yet significantly different (29 vs 37 deaths); the primary endpoint (DFS) is met but the CLAIMED OS outcome was still immature here, hence outcome_match=false for OS at this timepoint. Confirmed against PubMed abstract.",
         "integrity_note": "No retraction or integrity concerns; landmark phase 3 RCT, NCT00045032. Verified via PubMed: article types include 'Randomized Controlled Trial, Phase III'; no 'Retracted Publication' tag.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.54,
+        "ci_low": 0.43,
+        "ci_high": 0.67,
+        "effect_scale": "ratio",
+        "sig": "significant",
+        "is_primary": true
       },
       {
         "citation": "Romond EH, et al. Trastuzumab plus adjuvant chemotherapy for operable HER2-positive breast cancer (joint NSABP B-31 & NCCTG N9831). N Engl J Med. 2005;353(16):1673-84. DOI:10.1056/NEJMoa052122",
@@ -970,11 +970,11 @@
         "finding": "Combined analysis of two RCTs: adding trastuzumab reduced DFS events HR 0.48 (P<0.0001) AND produced a 33% reduction in risk of death (P=0.015) at first interim analysis. Directly measures a mortality/OS endpoint in addition to DFS, both favoring trastuzumab. Effect sizes match PubMed abstract exactly. (n_int is an approximate single-arm figure; total joint analysis was larger.)",
         "integrity_note": "No retraction; pivotal joint analysis of two phase 3 RCTs (NCT00004067, NCT00005970). Verified via PubMed article types; no retraction tag.",
         "note": "",
-        "effect_point": null,
+        "effect_point": 0.48,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_scale": "ratio",
+        "sig": "significant",
         "is_primary": null
       },
       {
@@ -995,8 +995,8 @@
         "effect_point": null,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_scale": "ratio",
+        "sig": "significant",
         "is_primary": null
       },
       {
@@ -1014,11 +1014,11 @@
         "finding": "Definitive planned OS analysis (median 8.4 yr): 37% relative OS improvement, OS HR 0.63 (95% CI 0.54-0.73, P<0.001), 10-yr OS 75.2%->84%; DFS HR 0.60 (10-yr DFS 62.2%->73.7%). Directly and definitively measures the CLAIMED OS endpoint. All figures match PubMed abstract exactly.",
         "integrity_note": "No integrity concerns; pre-specified definitive OS analysis (710 events reached). No retraction tag in PubMed.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_point": 0.63,
+        "ci_low": 0.54,
+        "ci_high": 0.73,
+        "effect_scale": "ratio",
+        "sig": "significant",
         "is_primary": null
       },
       {
@@ -1036,11 +1036,11 @@
         "finding": "At median 11 years, 1 year of trastuzumab vs observation significantly reduced DFS events (HR 0.76, 95% CI 0.68-0.86) and death (HR 0.74, 95% CI 0.64-0.86). 2 years gave no additional benefit over 1 year (HR 1.02, 95% CI 0.89-1.17). Mature OS confirmation despite substantial crossover diluting the effect. Matches PubMed abstract exactly, including n_int=1702 (1-year arm).",
         "integrity_note": "No integrity concerns; final analysis of pivotal RCT (NCT00045032). PubMed confirms 884 (52%) of observation arm crossed over to trastuzumab, biasing the OS estimate toward the null, yet benefit persisted. No retraction tag.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_point": 0.76,
+        "ci_low": 0.68,
+        "ci_high": 0.86,
+        "effect_scale": "ratio",
+        "sig": "significant",
         "is_primary": null
       },
       {
@@ -1058,11 +1058,11 @@
         "finding": "IPD meta-analysis of 7 RCTs (13,864 women, median 10.7 yr): breast-cancer recurrence RR 0.66 and breast-cancer mortality RR 0.67 (95% CI 0.61-0.73, P<0.0001); absolute 10-yr breast-cancer mortality reduced 6.4% and all-cause mortality reduced 6.5%, with NO increase in death without recurrence. Directly measures cause-specific and all-cause mortality. All figures match PubMed abstract exactly.",
         "integrity_note": "No integrity concerns; collaborative individual-patient-data meta-analysis, highest tier of evidence. PubMed article type 'Meta-Analysis'; no retraction tag.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_point": 0.67,
+        "ci_low": 0.61,
+        "ci_high": 0.73,
+        "effect_scale": "ratio",
+        "sig": "significant",
         "is_primary": null
       },
       {
@@ -1080,11 +1080,11 @@
         "finding": "Pooled 8 RCTs: trastuzumab significantly improved OS (HR 0.66, 95% CI 0.57-0.77, P<0.00001) and DFS (HR 0.60, 95% CI 0.50-0.71, P<0.00001). Independent systematic-review confirmation of OS benefit; cardiotoxicity is the recognized trade-off but does not negate the survival gain. Matches PubMed abstract exactly.",
         "integrity_note": "No integrity concerns; Cochrane systematic review/meta-analysis of 8 RCTs (11,991 patients). Also documents key harm: increased CHF (RR 5.11) and LVEF decline (RR 1.83). PubMed article types 'Meta-Analysis, Systematic Review'; no retraction tag.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_point": 0.66,
+        "ci_low": 0.57,
+        "ci_high": 0.77,
+        "effect_scale": "ratio",
+        "sig": "significant",
         "is_primary": null
       }
     ],
@@ -1143,12 +1143,12 @@
         "finding": "Post-MI patients (within 30 days), N=4745, median 22.6-mo follow-up. Primary composite (CV death, resuscitated cardiac arrest, MI, stroke, or urgent hospitalization for angina leading to revascularization) occurred in 5.5% colchicine vs 7.1% placebo; HR 0.77 (95% CI 0.61-0.96), P=0.02. Primary MACE endpoint met - supports claim.",
         "integrity_note": "Landmark double-blind placebo-controlled RCT (PubMed article_types: Randomized Controlled Trial, Multicenter Study); no retraction or integrity concerns. Government of Quebec funded. Verified against PubMed abstract.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.77,
+        "ci_low": 0.61,
+        "ci_high": 0.96,
+        "effect_scale": "ratio",
+        "sig": "significant",
+        "is_primary": true
       },
       {
         "citation": "Nidorf SM, et al. Colchicine in Patients with Chronic Coronary Disease (LoDoCo2). N Engl J Med. 2020;383(19):1838-1847. DOI:10.1056/NEJMoa2021372. ACTRN12614000093684.",
@@ -1165,12 +1165,12 @@
         "finding": "Chronic coronary disease, N=5522, median 28.6-mo follow-up. Primary composite (CV death, spontaneous MI, ischemic stroke, or ischemia-driven revascularization) occurred in 6.8% (187 pts) colchicine vs 9.6% (264 pts) placebo; HR 0.69 (95% CI 0.57-0.83), P<0.001. Primary MACE endpoint met - strongest single-trial support; matches claimed population and outcome.",
         "integrity_note": "Landmark double-blind placebo-controlled event-driven RCT; basis for FDA LODOCO approval. No integrity concerns (no retraction flag in PubMed). Signal of higher non-CV mortality (HR 1.51, CI 0.99-2.31) confirmed in abstract but CV endpoint robust.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.69,
+        "ci_low": 0.57,
+        "ci_high": 0.83,
+        "effect_scale": "ratio",
+        "sig": "significant",
+        "is_primary": true
       },
       {
         "citation": "Jolly SS, et al. Colchicine in Acute Myocardial Infarction (CLEAR SYNERGY / OASIS-9). N Engl J Med. Online-first Nov 2024; print 2025;392(7):633-642. DOI:10.1056/NEJMoa2405922. NCT03048825.",
@@ -1187,12 +1187,12 @@
         "finding": "Post-MI, N=7062 (104 centers, 14 countries), median 3-yr follow-up. Primary composite (CV death, recurrent MI, stroke, or unplanned ischemia-driven revascularization) 322/3528 (9.1%) colchicine vs 327/3534 (9.3%) placebo; HR 0.99 (95% CI 0.85-1.16), P=0.93 - fully NEUTRAL. CRP still lowered (-1.28 mg/L) confirming pharmacologic engagement, but no MACE benefit. Contradicts claim on the identical primary endpoint.",
         "integrity_note": "Largest colchicine CV trial to date; 2x2 factorial, double-blind, CIHR-funded (PubMed article_types: Clinical Trial Phase III, Randomized Controlled Trial, Multicenter Study). No integrity concerns. NEJM online-first Nov 2024, print issue Feb 2025. Directly tempers earlier positive trials.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "effect_point": 0.99,
+        "ci_low": 0.85,
+        "ci_high": 1.16,
+        "effect_scale": "ratio",
+        "sig": "nonsignificant",
+        "is_primary": true
       },
       {
         "citation": "Tong DC, et al. Colchicine in Patients With Acute Coronary Syndrome: The Australian COPS Randomized Clinical Trial. Circulation. 2020;142(20):1890-1900. DOI:10.1161/CIRCULATIONAHA.120.050771. ACTRN12615000861550.",
@@ -1213,8 +1213,8 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
-        "is_primary": null
+        "sig": "nonsignificant",
+        "is_primary": true
       },
       {
         "citation": "Pinheiro L, et al. Long-term colchicine therapy in acute coronary syndromes: a systematic review and meta-analysis of randomized controlled trials. Monaldi Arch Chest Dis. 2025. DOI:10.4081/monaldi.2025.3566.",
@@ -1231,11 +1231,11 @@
         "finding": "Long-term (>=12 mo) colchicine post-ACS. Composite of CV death/MI/revascularization/stroke NOT significantly reduced: HR 0.80 (95% CI 0.59-1.07, I2=73%). All-cause mortality HR 1.01 (0.67-1.53), CV death HR 1.01 (0.80-1.29), MI HR 0.86 (0.71-1.05) - all non-significant. Pooled estimate is null once the large neutral trial is included - key evidence for the Contested verdict.",
         "integrity_note": "Pooled COLCOT, COPS, CLEAR SYNERGY (12,602 patients; search date Dec 22 2024). High heterogeneity (I2=73% for composite) limits certainty. Lower-tier journal but standard PRISMA RCT meta-analysis. No retraction flag in PubMed. Abstract figures verified verbatim.",
         "note": "",
-        "effect_point": null,
-        "ci_low": null,
-        "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_point": 0.8,
+        "ci_low": 0.59,
+        "ci_high": 1.07,
+        "effect_scale": "ratio",
+        "sig": "nonsignificant",
         "is_primary": null
       },
       {
@@ -1253,11 +1253,11 @@
         "finding": "FDA approved LODOCO (June 2023) to reduce risk of MI, stroke, coronary revascularization, and CV death in adults with established atherosclerotic disease or multiple CV risk factors - the first anti-inflammatory atheroprotective CV therapy. Efficacy basis was LoDoCo2 (31% RRR, HR 0.69, NNT 36). A standing US regulatory endorsement of the claim; however issued before the large neutral 2024/2025 trial.",
         "integrity_note": "Regulatory artifact, NOT a study - design='systematic review' is a schema-fit compromise (closest available enum), openly disclosed. Confirmed via DailyMed (setid matches), Agepha PI, TCTMD, Healio. Included as a standing regulatory data point: FDA-approved indication predates the neutral CLEAR SYNERGY readout, which is central to why consensus is Contested rather than Not Supported.",
         "note": "",
-        "effect_point": null,
+        "effect_point": 0.69,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_scale": "ratio",
+        "sig": "not_reported",
         "is_primary": null
       }
     ],
@@ -1321,7 +1321,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "nonsignificant",
         "is_primary": null
       },
       {
@@ -1339,11 +1339,11 @@
         "finding": "PRINCIPLE platform RCT (8,811 community adults): ivermectin gave no clinically meaningful faster recovery (HR ~1.15, below pre-specified 1.2 threshold) and no difference in hospitalization/death or 6-month recovery.",
         "integrity_note": "Large NIHR-funded open-label adaptive platform trial; no integrity concerns.",
         "note": "",
-        "effect_point": null,
+        "effect_point": 1.15,
         "ci_low": null,
         "ci_high": null,
-        "effect_scale": "",
-        "sig": "",
+        "effect_scale": "ratio",
+        "sig": "nonsignificant",
         "is_primary": null
       },
       {
@@ -1365,7 +1365,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "nonsignificant",
         "is_primary": null
       },
       {
@@ -1387,7 +1387,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "nonsignificant",
         "is_primary": null
       },
       {
@@ -1409,7 +1409,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "significant",
         "is_primary": null
       },
       {
@@ -1431,7 +1431,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "significant",
         "is_primary": null
       },
       {
@@ -1453,7 +1453,7 @@
         "ci_low": null,
         "ci_high": null,
         "effect_scale": "",
-        "sig": "",
+        "sig": "significant",
         "is_primary": null
       }
     ],

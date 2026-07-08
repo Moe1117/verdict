@@ -18,7 +18,8 @@
       "integrity_note": "NIA Interventions Testing Program landmark, replicated across 3 independent sites; foundational but non-human. PubMed-confirmed, not retracted.",
       "n_int": 0,
       "year": 2009,
-      "finding": "Rapamycin begun at 600 days of age extended median/maximal lifespan in genetically heterogeneous mice (+14% females, +9% males at 90% mortality). This is the entire biological basis for the human claim but is an animal lifespan study, not a healthy-human healthspan outcome."
+      "finding": "Rapamycin begun at 600 days of age extended median/maximal lifespan in genetically heterogeneous mice (+14% females, +9% males at 90% mortality). This is the entire biological basis for the human claim but is an animal lifespan study, not a healthy-human healthspan outcome.",
+      "sig": "not_reported"
     },
     {
       "source_id": "NCT04488601",
@@ -31,7 +32,9 @@
       "integrity_note": "Sponsor (AgelessRx) is a commercial off-label rapamycin telehealth provider; industry-conflicted; small N (total 129 across 3 arms); many secondary outcomes with only subgroup-level nominal significance (multiplicity concern). ClinicalTrials.gov confirms Phase 2, total enrollment 129, primary=visceral fat by DXA.",
       "n_int": 129,
       "year": 2025,
-      "finding": "48-week Phase 2 RCT in healthy normative-aging adults (50-85y), total N=129 randomized to placebo, 5 mg, or 10 mg rapamycin weekly. PRIMARY endpoint visceral adiposity by DXA did NOT change significantly (eta=0.001, p=0.942). Drug was 'relatively safe.' Only scattered subgroup secondary self-report signals (lean mass/pain in women on 10mg; well-being/general health on 5mg). Primary endpoint is a surrogate, not a healthspan outcome, and it was null. (n_int shown as verified total enrollment; single active arm is ~43.)"
+      "finding": "48-week Phase 2 RCT in healthy normative-aging adults (50-85y), total N=129 randomized to placebo, 5 mg, or 10 mg rapamycin weekly. PRIMARY endpoint visceral adiposity by DXA did NOT change significantly (eta=0.001, p=0.942). Drug was 'relatively safe.' Only scattered subgroup secondary self-report signals (lean mass/pain in women on 10mg; well-being/general health on 5mg). Primary endpoint is a surrogate, not a healthspan outcome, and it was null. (n_int shown as verified total enrollment; single active arm is ~43.)",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:29408453",
@@ -44,7 +47,8 @@
       "integrity_note": "Explicitly a feasibility/safety pilot; underpowered (N=25; 11 RAPA + 14 placebo completers analyzed); short 8-week duration. PubMed-confirmed, not retracted.",
       "n_int": 11,
       "year": 2018,
-      "finding": "Pilot placebo-controlled RCT, sirolimus 1 mg/day in 25 generally healthy adults aged 70-95y for 8 weeks (11 RAPA / 14 placebo completers). No significant change in cognition (EXIT25/SLUMS/TAPS), physical performance (grip, timed walk), glucose tolerance, or most immune parameters; statistically significant decrements in erythrocyte indices (Hb, Hct, RBC). Establishes short-term safety only; no healthspan/aging outcome benefit shown."
+      "finding": "Pilot placebo-controlled RCT, sirolimus 1 mg/day in 25 generally healthy adults aged 70-95y for 8 weeks (11 RAPA / 14 placebo completers). No significant change in cognition (EXIT25/SLUMS/TAPS), physical performance (grip, timed walk), glucose tolerance, or most immune parameters; statistically significant decrements in erythrocyte indices (Hb, Hct, RBC). Establishes short-term safety only; no healthspan/aging outcome benefit shown.",
+      "sig": "nonsignificant"
     },
     {
       "source_id": "PMID:29997249",
@@ -57,7 +61,8 @@
       "integrity_note": "Novartis-sponsored; uses rapalogs (BEZ235 catalytic + RAD001 allosteric TORC1 inhibitor), not rapamycin itself; endpoint is a surrogate (immunosenescence/self-reported infection), not a validated healthspan/aging outcome. n_int=264 is TOTAL enrollment (multiple arms). PubMed-confirmed, not retracted.",
       "n_int": 264,
       "year": 2018,
-      "finding": "Phase 2a RCT, total N=264 elderly (~65+), low-dose combined TORC1 inhibition (BEZ235+RAD001) for 6 weeks significantly reduced self-reported infection rates over 1 year (p=0.001) and improved influenza vaccine response / antiviral gene expression. Supports an mTOR-pathway immune benefit but on a surrogate (immune function/infection), not a healthspan clinical outcome, and with rapalogs rather than rapamycin."
+      "finding": "Phase 2a RCT, total N=264 elderly (~65+), low-dose combined TORC1 inhibition (BEZ235+RAD001) for 6 weeks significantly reduced self-reported infection rates over 1 year (p=0.001) and improved influenza vaccine response / antiviral gene expression. Supports an mTOR-pathway immune benefit but on a surrogate (immune function/infection), not a healthspan clinical outcome, and with rapalogs rather than rapamycin.",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:25540326",
@@ -70,7 +75,10 @@
       "integrity_note": "Novartis-sponsored; everolimus (RAD001), a rapalog, not rapamycin; surrogate immune endpoint. n_int=218 is TOTAL enrollment across placebo + everolimus dose arms. PubMed-confirmed, not retracted.",
       "n_int": 218,
       "year": 2014,
-      "finding": "Placebo-controlled RCT in elderly volunteers (total ~218): everolimus (RAD001) enhanced response to influenza vaccination by ~20% and reduced PD-1+ T cells. First human signal that mTOR inhibition may ameliorate immunosenescence, but endpoint is an immune surrogate, not a healthspan/aging clinical outcome."
+      "finding": "Placebo-controlled RCT in elderly volunteers (total ~218): everolimus (RAD001) enhanced response to influenza vaccination by ~20% and reduced PD-1+ T cells. First human signal that mTOR inhibition may ameliorate immunosenescence, but endpoint is an immune surrogate, not a healthspan/aging clinical outcome.",
+      "effect_point": 20,
+      "effect_scale": "proportion_diff",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:33977284",
@@ -83,7 +91,13 @@
       "integrity_note": "Largest and only Phase 3 of an mTOR/TORC1 inhibitor for an aging-related clinical endpoint; industry (resTORbio) + NIA-funded; peer-reviewed pivotal result with pre-specified endpoint; clean negative. Uses rapalog RTB101 (dactolisib/BEZ101 class), not rapamycin, and a clinical-illness (not healthspan) endpoint. NOTE: original corpus mis-cited NCT04139915, which is a WITHDRAWN duplicate registration (enrollment=0); corrected to the enrolled/reported trial via PMID 33977284 (Lancet Healthy Longev 2021) and NCT04668352.",
       "n_int": 513,
       "year": 2021,
-      "finding": "Phase 3 RCT (PROTECTOR-1), N=1024 (513 RTB101 / 510 placebo), RTB101 10 mg/day for 16 weeks vs placebo in adults >=65y. FAILED primary endpoint: clinically symptomatic respiratory illness 134/511 (26%) RTB101 vs 125/510 (25%) placebo; OR 1.07 (95% CI 0.80-1.42), p=0.65. The only pivotal human outcome trial of TORC1 inhibition for an aging-related clinical endpoint was negative, contradicting a translatable clinical aging benefit and undermining earlier Phase 2 immune signals. (n_int=513 = RTB101 arm; total N=1024.)"
+      "finding": "Phase 3 RCT (PROTECTOR-1), N=1024 (513 RTB101 / 510 placebo), RTB101 10 mg/day for 16 weeks vs placebo in adults >=65y. FAILED primary endpoint: clinically symptomatic respiratory illness 134/511 (26%) RTB101 vs 125/510 (25%) placebo; OR 1.07 (95% CI 0.80-1.42), p=0.65. The only pivotal human outcome trial of TORC1 inhibition for an aging-related clinical endpoint was negative, contradicting a translatable clinical aging benefit and undermining earlier Phase 2 immune signals. (n_int=513 = RTB101 arm; total N=1024.)",
+      "effect_point": 1.07,
+      "ci_low": 0.8,
+      "ci_high": 1.42,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     }
   ],
   "baseline": {

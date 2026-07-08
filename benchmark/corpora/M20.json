@@ -18,7 +18,13 @@
       "integrity_note": "NIH-funded landmark pivotal RCT; stopped early for benefit (pre-specified), which can inflate effect size but result robust and replicated. Verified: PMID 26551272 title/DOI/type (Randomized Controlled Trial) match; NCT01206062 = SPRINT, 9361 enrolled, diabetes an explicit exclusion; intensive-arm N=4678 confirmed from CONSORT diagram.",
       "n_int": 4678,
       "year": 2015,
-      "finding": "9361 high-CV-risk adults WITHOUT diabetes, SBP <120 vs <140. Primary CV composite HR 0.75 (95% CI 0.64-0.89, P<0.001); all-cause mortality HR 0.73 (0.60-0.90). Higher rates of hypotension, syncope, electrolyte abnormality, acute kidney injury. Positive pivotal trial."
+      "finding": "9361 high-CV-risk adults WITHOUT diabetes, SBP <120 vs <140. Primary CV composite HR 0.75 (95% CI 0.64-0.89, P<0.001); all-cause mortality HR 0.73 (0.60-0.90). Higher rates of hypotension, syncope, electrolyte abnormality, acute kidney injury. Positive pivotal trial.",
+      "effect_point": 0.75,
+      "ci_low": 0.64,
+      "ci_high": 0.89,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:39555827",
@@ -31,7 +37,13 @@
       "integrity_note": "Large multicenter RCT (China); missing outcomes handled by multiple imputation (MAR assumption). Directly addresses the diabetic population where ACCORD-BP had left equipoise. Verified: PMID 39555827 title/DOI/type match; PubMed online date 2024/11/16 (print Vol 392(12) is March 2025 \u2014 citation volume/issue is the print issue, year 2024 reflects online-first); NCT03808311 = BPROAD, 12,821 enrolled, intensive-arm N=6414 confirmed from abstract.",
       "n_int": 6414,
       "year": 2024,
-      "finding": "12,821 type-2 diabetics, SBP <120 vs <140. Primary CV composite (nonfatal stroke/MI, HF treatment/hospitalization, CV death) HR 0.79 (95% CI 0.69-0.90, P<0.001). More symptomatic hypotension and hyperkalemia. Positive \u2014 overturns ACCORD-BP's null in the same population."
+      "finding": "12,821 type-2 diabetics, SBP <120 vs <140. Primary CV composite (nonfatal stroke/MI, HF treatment/hospitalization, CV death) HR 0.79 (95% CI 0.69-0.90, P<0.001). More symptomatic hypotension and hyperkalemia. Positive \u2014 overturns ACCORD-BP's null in the same population.",
+      "effect_point": 0.79,
+      "ci_low": 0.69,
+      "ci_high": 0.9,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:38945140",
@@ -44,7 +56,13 @@
       "integrity_note": "Open-label but blinded-outcome (PROBE) design; large multicenter RCT in China. No efficacy-integrity concerns. Verified: PMID 38945140 title/DOI/type match; NCT04030234 = ESPRIT, 11,255 enrolled (4359 diabetes, 3022 prior stroke), intensive-arm N=5624 confirmed from abstract.",
       "n_int": 5624,
       "year": 2024,
-      "finding": "11,255 high-CV-risk adults (incl. 4359 diabetes, 3022 prior stroke), <120 vs <140. Primary composite (MI, revascularization, HF hospitalization, stroke, CV death) HR 0.88 (95% CI 0.78-0.99, P=0.028); no heterogeneity by diabetes or stroke history. Excess syncope. Positive confirmatory trial."
+      "finding": "11,255 high-CV-risk adults (incl. 4359 diabetes, 3022 prior stroke), <120 vs <140. Primary composite (MI, revascularization, HF hospitalization, stroke, CV death) HR 0.88 (95% CI 0.78-0.99, P=0.028); no heterogeneity by diabetes or stroke history. Excess syncope. Positive confirmatory trial.",
+      "effect_point": 0.88,
+      "ci_low": 0.78,
+      "ci_high": 0.99,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:20228401",
@@ -57,7 +75,13 @@
       "integrity_note": "Pivotal RCT but 2x2 factorial and underpowered \u2014 observed event rate lower than projected, reducing power to detect the composite. Historically the key source of equipoise; now superseded by BPROAD in same population. Verified: PMID 20228401 title/DOI/type match; NCT00000620 = ACCORD parent (BP arm is the 4733-participant subgroup, shared NCT with the ACCORD lipid arm as noted in provenance); intensive-arm N=2362 confirmed from paper.",
       "n_int": 2362,
       "year": 2010,
-      "finding": "4733 type-2 diabetics, SBP <120 vs <140. Primary CV composite HR 0.88 (95% CI 0.73-1.06, P=0.20) \u2014 NULL on primary endpoint. All-cause death HR 1.07 (0.85-1.35). Pre-specified stroke reduced: HR 0.59 (0.39-0.89, P=0.01). More treatment-attributed serious adverse events. Neutral primary result."
+      "finding": "4733 type-2 diabetics, SBP <120 vs <140. Primary CV composite HR 0.88 (95% CI 0.73-1.06, P=0.20) \u2014 NULL on primary endpoint. All-cause death HR 1.07 (0.85-1.35). Pre-specified stroke reduced: HR 0.59 (0.39-0.89, P=0.01). More treatment-attributed serious adverse events. Neutral primary result.",
+      "effect_point": 0.88,
+      "ci_low": 0.73,
+      "ci_high": 1.06,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:34491661",
@@ -70,7 +94,13 @@
       "integrity_note": "Large RCT in older Chinese hypertensives. Intervention target was SBP 110-<130 (not strictly <120), so tests a slightly higher threshold than the exact claim \u2014 supportive but not an exact <120 comparison. Primary composite includes atrial fibrillation as a component but remains a hard clinical composite (not a surrogate). Verified: PMID 34491661 title/DOI/type match; NCT03015311 = STEP, 8511 enrolled, intensive-arm N=4243 confirmed from abstract.",
       "n_int": 4243,
       "year": 2021,
-      "finding": "8511 patients aged 60-80, SBP target 110-<130 vs 130-<150. Primary CV composite HR 0.74 (95% CI 0.60-0.92, P=0.007); stroke, ACS and HF components favored intensive. Only excess hypotension. Positive, but tests <130 rather than <120 target."
+      "finding": "8511 patients aged 60-80, SBP target 110-<130 vs 130-<150. Primary CV composite HR 0.74 (95% CI 0.60-0.92, P=0.007); stroke, ACS and HF components favored intensive. Only excess hypotension. Positive, but tests <130 rather than <120 target.",
+      "effect_point": 0.74,
+      "ci_low": 0.6,
+      "ci_high": 0.92,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:41266861",
@@ -83,7 +113,13 @@
       "integrity_note": "Aggregate (not individual-participant) meta-analysis, random-effects; 8 RCTs incl. ACCORD-BP and BPROAD. Diabetes-restricted, so external validity to non-diabetics comes from the individual trials (SPRINT etc.), not this pooled estimate. Verified: PMID 41266861 title/DOI match; PubMed types = Meta-Analysis, Systematic Review; OR 0.88 (0.79-0.97), I2=17% confirmed verbatim from abstract.",
       "n_int": 0,
       "year": 2025,
-      "finding": "Meta-analysis of 8 RCTs (25,686 type-2 diabetics; ABCD, Mehler 2003, ABCD-2V, SANDS, INVEST, ACCORD-BP, J-DOIT3, BPROAD). Intensive arms reached ~120/70. Composite CV events OR 0.88 (95% CI 0.79-0.97, I2=17%); retinopathy and albuminuria also reduced. Supports modest CV benefit of lower targets in diabetics."
+      "finding": "Meta-analysis of 8 RCTs (25,686 type-2 diabetics; ABCD, Mehler 2003, ABCD-2V, SANDS, INVEST, ACCORD-BP, J-DOIT3, BPROAD). Intensive arms reached ~120/70. Composite CV events OR 0.88 (95% CI 0.79-0.97, I2=17%); retinopathy and albuminuria also reduced. Supports modest CV benefit of lower targets in diabetics.",
+      "effect_point": 0.88,
+      "ci_low": 0.79,
+      "ci_high": 0.97,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": false
     }
   ],
   "baseline": {

@@ -18,7 +18,9 @@
       "integrity_note": "No retraction. Legitimate registered Phase 4 pilot RCT (verified COMPLETED on ClinicalTrials.gov, N=16, primary endpoint RNA-Seq transcriptome at 6 weeks). Very small pilot; primary endpoint is a molecular surrogate, not a clinical aging outcome.",
       "n_int": 16,
       "year": 2017,
-      "finding": "Only completed RCT of metformin in non-diabetic older adults (age >60, impaired glucose tolerance). Primary endpoint was change in muscle/adipose gene-expression transcriptome via RNA-Seq at 6 weeks \u2014 a molecular surrogate of aging biology, NOT a clinical healthspan or aging outcome. Under-powered (N=16) and did not measure morbidity, function, or survival. Provides no clinical evidence for delayed aging."
+      "finding": "Only completed RCT of metformin in non-diabetic older adults (age >60, impaired glucose tolerance). Primary endpoint was change in muscle/adipose gene-expression transcriptome via RNA-Seq at 6 weeks \u2014 a molecular surrogate of aging biology, NOT a clinical healthspan or aging outcome. Under-powered (N=16) and did not measure morbidity, function, or survival. Provides no clinical evidence for delayed aging.",
+      "sig": "not_reported",
+      "is_primary": true
     },
     {
       "source_id": "PMID:30548390",
@@ -31,7 +33,9 @@
       "integrity_note": "No retraction (verified via PubMed; article type 'Randomized Controlled Trial'). Double-blind placebo-controlled RCT, NIH-funded. Endpoints are physiological surrogates (insulin sensitivity, VO2max, mitochondrial respiration), not hard clinical aging outcomes.",
       "n_int": 27,
       "year": 2019,
-      "finding": "In older adults (62 yr) randomized to metformin (n=27) vs placebo (n=26) during 12 weeks of aerobic exercise, metformin ATTENUATED the exercise-induced improvement in whole-body insulin sensitivity and VO2max and abrogated the gain in skeletal-muscle mitochondrial respiration. Directly contradicts a healthspan-promoting effect: metformin blunted a canonical healthspan intervention (exercise) in the target population."
+      "finding": "In older adults (62 yr) randomized to metformin (n=27) vs placebo (n=26) during 12 weeks of aerobic exercise, metformin ATTENUATED the exercise-induced improvement in whole-body insulin sensitivity and VO2max and abrogated the gain in skeletal-muscle mitochondrial respiration. Directly contradicts a healthspan-promoting effect: metformin blunted a canonical healthspan intervention (exercise) in the target population.",
+      "sig": "not_reported",
+      "is_primary": false
     },
     {
       "source_id": "PMID:25041462",
@@ -44,7 +48,12 @@
       "integrity_note": "No retraction. RETROSPECTIVE observational matched cohort (UK CPRD; PubMed article type 'Observational Study'). NOT prospective \u2014 schema enum lacks a 'retrospective cohort' bucket, so the nearest cohort category is used but temporality is retrospective. Vulnerable to confounding by indication, immortal-time/prevalent-user bias; hypothesis-generating only. Population is diabetic, not the claimed non-diabetic older adults.",
       "n_int": 78241,
       "year": 2014,
-      "finding": "Retrospective CPRD cohort: 78,241 metformin-monotherapy diabetics vs 90,463 matched non-diabetic controls (503,384 person-years). Metformin-treated diabetics had 15% LONGER adjusted median survival than matched non-diabetics (STR 0.85, 95% CI 0.81-0.90). The most-cited observational basis for a metformin longevity effect \u2014 but it is a diabetic population and retrospective/observational, so it cannot establish an aging/healthspan benefit in non-diabetic older adults (confounding by indication)."
+      "finding": "Retrospective CPRD cohort: 78,241 metformin-monotherapy diabetics vs 90,463 matched non-diabetic controls (503,384 person-years). Metformin-treated diabetics had 15% LONGER adjusted median survival than matched non-diabetics (STR 0.85, 95% CI 0.81-0.90). The most-cited observational basis for a metformin longevity effect \u2014 but it is a diabetic population and retrospective/observational, so it cannot establish an aging/healthspan benefit in non-diabetic older adults (confounding by indication).",
+      "effect_point": 0.85,
+      "ci_low": 0.81,
+      "ci_high": 0.9,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:30906924",
@@ -57,7 +66,8 @@
       "integrity_note": "No retraction. This is a CONSENSUS/DESIGN paper by the TAME leadership (PubMed article type 'Journal Article'), NOT a systematic review \u2014 the enum offers no 'narrative review'/'design paper' category. Not an outcomes trial. Establishes that the pivotal aging-outcomes RCT was still to be run.",
       "n_int": 0,
       "year": 2018,
-      "finding": "Consensus design paper for TAME (Targeting Aging with Metformin) \u2014 the first proposed RCT to test whether metformin delays a composite of age-related conditions in older adults. Documents that as of publication the trial was being designed to generate this evidence, i.e., the clinical aging-outcome evidence did not yet exist. Establishes the absence-of-evidence baseline. ()."
+      "finding": "Consensus design paper for TAME (Targeting Aging with Metformin) \u2014 the first proposed RCT to test whether metformin delays a composite of age-related conditions in older adults. Documents that as of publication the trial was being designed to generate this evidence, i.e., the clinical aging-outcome evidence did not yet exist. Establishes the absence-of-evidence baseline. ().",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:41957871",
@@ -70,7 +80,8 @@
       "integrity_note": "No retraction. NARRATIVE geroscience review (PubMed article type 'Review'), not a systematic review and not primary outcome data \u2014 enum lacks 'narrative review'. Used to confirm current status of the pivotal trial.",
       "n_int": 0,
       "year": 2026,
-      "finding": "2026 geroscience review confirms TAME \u2014 the first prospective trial designed to delay aging as a composite multi-disease outcome \u2014 is 'currently underway' and not yet reported. The strongest cited pharmacological evidence for metformin biological-age modification is a cynomolgus-monkey 40-month multiomics study (preclinical; ~6.41-year deceleration of proteomic biological age), NOT a human aging-outcome RCT. Confirms that no completed human RCT establishes delayed aging/healthspan in non-diabetic older adults."
+      "finding": "2026 geroscience review confirms TAME \u2014 the first prospective trial designed to delay aging as a composite multi-disease outcome \u2014 is 'currently underway' and not yet reported. The strongest cited pharmacological evidence for metformin biological-age modification is a cynomolgus-monkey 40-month multiomics study (preclinical; ~6.41-year deceleration of proteomic biological age), NOT a human aging-outcome RCT. Confirms that no completed human RCT establishes delayed aging/healthspan in non-diabetic older adults.",
+      "sig": "not_reported"
     }
   ],
   "baseline": {

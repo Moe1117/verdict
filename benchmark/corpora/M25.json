@@ -26,7 +26,13 @@
       "integrity_note": "Pivotal phase 2b, N=233, double-blind dose-ranging (25/10/1 mg). Positive on Week-3 MADRS primary endpoint for 25 mg (LS mean diff -6.6 vs 1 mg control, 95% CI -10.2 to -2.9, P<0.001). Abstract explicitly states that in the 25-mg group the incidences of response and remission occurred at 3 weeks but NOT sustained response through 12 weeks \u2014 the short-term surrogate did not carry to durability. Functional unblinding likely given perceptible drug effects.",
       "n_int": 79,
       "year": 2022,
-      "finding": "25 mg psilocybin beat control at Week 3 (MADRS) but sustained response at 12 weeks was NOT supported; primary endpoint is a 3-week surrogate, not months-durable remission \u2014 direction on the DURABILITY claim is null/non-supportive."
+      "finding": "25 mg psilocybin beat control at Week 3 (MADRS) but sustained response at 12 weeks was NOT supported; primary endpoint is a 3-week surrogate, not months-durable remission \u2014 direction on the DURABILITY claim is null/non-supportive.",
+      "effect_point": -6.6,
+      "ci_low": -10.2,
+      "ci_high": -2.9,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:33852780",
@@ -39,7 +45,13 @@
       "integrity_note": "Phase 2 double-blind head-to-head vs an ACTIVE comparator (escitalopram), N=59, moderate-to-severe long-standing MDD. Primary endpoint (QIDS-SR-16 change at Week 6) NOT significant between groups (between-group diff 2.0 pts, 95% CI -5.0 to 1.0, P=0.17). Secondary outcomes favored psilocybin but uncorrected for multiplicity. (CI corrected from a garbled value in the build to the published -5.0 to 1.0.)",
       "n_int": 30,
       "year": 2021,
-      "finding": "Psilocybin did NOT significantly outperform escitalopram on the primary 6-week endpoint; the only active-comparator RCT is negative, and even here the outcome is a 6-week surrogate, not durable remission \u2014 contradicts a strong durable-superiority reading."
+      "finding": "Psilocybin did NOT significantly outperform escitalopram on the primary 6-week endpoint; the only active-comparator RCT is negative, and even here the outcome is a 6-week surrogate, not durable remission \u2014 contradicts a strong durable-superiority reading.",
+      "effect_point": 2,
+      "ci_low": -5,
+      "ci_high": 1,
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:39627679",
@@ -52,7 +64,12 @@
       "integrity_note": "6 RCTs, pooled N=427, all psilocybin. Robust SMD -0.72 (95% CI -0.95 to -0.49; I2=17%; 5 RCTs, n=403) for 1-week between-group change; response RR 3.42 (95% CI 2.35-4.97). Effects 'similar at days 2, 14, and 42' \u2014 the LONGEST pooled timepoint is day 42 (6 weeks).",
       "n_int": 427,
       "year": 2024,
-      "finding": "Strong short-term efficacy (through ~6 weeks) with high remission RR, but the meta-analytic evidence does NOT extend to the months-durable window the claim asserts \u2014 supports efficacy, not durability."
+      "finding": "Strong short-term efficacy (through ~6 weeks) with high remission RR, but the meta-analytic evidence does NOT extend to the months-durable window the claim asserts \u2014 supports efficacy, not durability.",
+      "effect_point": -0.72,
+      "ci_low": -0.95,
+      "ci_high": -0.49,
+      "effect_scale": "mean_diff",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:35166158",
@@ -65,7 +82,8 @@
       "integrity_note": "Uncontrolled open-label 12-month follow-up of a 27-patient waiting-list RCT (NCT03181529, Johns Hopkins). N=24 completers, all attended follow-up through 12 months. Response 75% and remission 58% at 12 months; large sustained effect sizes (Cohen d 2.3-2.6 across 1/3/6/12 months, GRID-HAMD). LIMITATIONS: MDD (moderate-severe unipolar), NOT specifically treatment-resistant; tiny N; no control arm past the initial waitlist; expectancy/unblinding uncontrolled.",
       "n_int": 24,
       "year": 2022,
-      "finding": "The only randomized-cohort dataset that directly measures months-durable remission (58% at 12 months) \u2014 but in MDD not TRD, uncontrolled, and N=24, so it demonstrates the claimed OUTCOME exists in principle without establishing it for the TRD population."
+      "finding": "The only randomized-cohort dataset that directly measures months-durable remission (58% at 12 months) \u2014 but in MDD not TRD, uncontrolled, and N=24, so it demonstrates the claimed OUTCOME exists in principle without establishing it for the TRD population.",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:33146667",
@@ -78,7 +96,9 @@
       "integrity_note": "Small (N=27 randomized, 24 evaluable) waiting-list-controlled RCT in MDD (not TRD; patients not on antidepressants). Immediate-treatment arm n=15, delayed/waitlist n=12. Large effects at Weeks 1 and 4 (Cohen d 2.5-2.6); remission ~54% at Week 4. Primary endpoint (GRID-HAMD) assessed 1 week after the second session (short-term). Waitlist control is a weak comparator (no placebo/blinding for the psychedelic effect).",
       "n_int": 15,
       "year": 2021,
-      "finding": "Demonstrates large short-term antidepressant effect and Week-4 remission (~54%) in MDD, but primary endpoint is short-term (surrogate for durability) and population is general MDD, not TRD \u2014 supportive of efficacy, not of the specific durable-TRD-remission claim."
+      "finding": "Demonstrates large short-term antidepressant effect and Week-4 remission (~54%) in MDD, but primary endpoint is short-term (surrogate for durability) and population is general MDD, not TRD \u2014 supportive of efficacy, not of the specific durable-TRD-remission claim.",
+      "sig": "not_reported",
+      "is_primary": true
     },
     {
       "source_id": "NCT05624268",
@@ -91,7 +111,13 @@
       "integrity_note": "Phase 3 COMP005 (N~258; 25 mg n=171, placebo n=87) and COMP006 (N~581; 25 mg n=296, 10 mg n=142, 1 mg n=143) met Week-6 MADRS PRIMARY endpoints (COMP005 diff -3.6 vs placebo, 95% CI -5.7 to -1.5; COMP006 diff -3.8, 25 vs 1 mg, 95% CI -5.8 to -1.8; both p<0.001). Durability to Week 26 reported ONLY for the responder subgroup (~25% COMP005 / 39% COMP006 achieved >=25% MADRS reduction \u2014 a partial-response 'clinically meaningful' threshold, NOT remission) and is a POST-HOC analysis with no statistical testing after the Week-6 primary. INTEGRITY CAVEATS: durability data are company press releases/SEC filings/investor decks, NOT yet peer-reviewed; primary endpoint is 6-week symptom reduction not durable remission; no FDA approval as of mid-2026; functional unblinding endemic to psychedelic trials. (source_id corrected from the phase-2b parent NCT03775200 to the real COMP005 phase-3 NCT05624268.)",
       "n_int": 171,
       "year": 2026,
-      "finding": "Emerging phase 3 evidence: Week-6 primary endpoints met and durability of RESPONSE (not remission) to 26 weeks in a ~25-39% responder subgroup (post-hoc) \u2014 the strongest durability signal to date, but press-release-stage, subgroup-restricted, response-not-remission, and outcome_match=false because the primary endpoint is a 6-week surrogate for the months-durable-remission claim."
+      "finding": "Emerging phase 3 evidence: Week-6 primary endpoints met and durability of RESPONSE (not remission) to 26 weeks in a ~25-39% responder subgroup (post-hoc) \u2014 the strongest durability signal to date, but press-release-stage, subgroup-restricted, response-not-remission, and outcome_match=false because the primary endpoint is a 6-week surrogate for the months-durable-remission claim.",
+      "effect_point": -3.6,
+      "ci_low": -5.7,
+      "ci_high": -1.5,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     }
   ]
 }

@@ -14,7 +14,10 @@
       "integrity_ok": true,
       "integrity_note": "No retraction or expression of concern found.",
       "n_int": 12,
-      "year": 2003
+      "year": 2003,
+      "effect_point": 30,
+      "effect_scale": "proportion_diff",
+      "sig": "not_reported"
     },
     {
       "citation": "Rogers 2007, Clinical Therapeutics",
@@ -27,7 +30,8 @@
       "integrity_ok": true,
       "integrity_note": "No retraction or expression of concern found.",
       "n_int": 18,
-      "year": 2007
+      "year": 2007,
+      "sig": "significant"
     },
     {
       "citation": "Nicholls 2010 (VOYAGER), American Journal of Cardiology",
@@ -40,7 +44,9 @@
       "integrity_ok": true,
       "integrity_note": "No retraction or expression of concern found.",
       "n_int": 32258,
-      "year": 2010
+      "year": 2010,
+      "effect_scale": "proportion_diff",
+      "sig": "not_reported"
     },
     {
       "citation": "Baigent 2005 (CTT), Lancet",
@@ -53,7 +59,10 @@
       "integrity_ok": true,
       "integrity_note": "No retraction or expression of concern; only a standard 2005 erratum (Lancet 366(9494):1358).",
       "n_int": 90056,
-      "year": 2005
+      "year": 2005,
+      "effect_point": 1.77,
+      "effect_scale": "mean_diff",
+      "sig": "not_reported"
     },
     {
       "citation": "Colhoun 2004 (CARDS), Lancet",
@@ -66,7 +75,10 @@
       "integrity_ok": true,
       "integrity_note": "No retraction or expression of concern found.",
       "n_int": 2838,
-      "year": 2004
+      "year": 2004,
+      "effect_point": 37,
+      "effect_scale": "proportion_diff",
+      "sig": "not_reported"
     },
     {
       "citation": "Karlson 2015 (VOYAGER), European Journal of Preventive Cardiology",
@@ -79,7 +91,10 @@
       "integrity_ok": true,
       "integrity_note": "No retraction or expression of concern found.",
       "n_int": 38052,
-      "year": 2015
+      "year": 2015,
+      "effect_point": 39,
+      "effect_scale": "proportion_diff",
+      "sig": "not_reported"
     }
   ],
   "integrity_records": [],

@@ -25,7 +25,11 @@
       "integrity_note": "Landmark open-label phase III (NCT00028990); primary endpoint PFS, OS pre-specified secondary. PubMed article_types confirm RCT/Phase III; no retraction.",
       "n_int": 722,
       "year": 2007,
-      "finding": "PFS significantly prolonged (median 11.8 vs 5.9 mo; HR 0.60, P<0.001) but OS NOT improved (median 26.7 vs 25.2 mo; HR 0.88, P=0.16). Primary endpoint was the PFS surrogate, not OS \u2014 hence outcome_match=false; OS direction null. Verified verbatim against PubMed abstract."
+      "finding": "PFS significantly prolonged (median 11.8 vs 5.9 mo; HR 0.60, P<0.001) but OS NOT improved (median 26.7 vs 25.2 mo; HR 0.88, P=0.16). Primary endpoint was the PFS surrogate, not OS \u2014 hence outcome_match=false; OS direction null. Verified verbatim against PubMed abstract.",
+      "effect_point": 0.88,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": false
     },
     {
       "source_id": "PMID:19720913",
@@ -38,7 +42,11 @@
       "integrity_note": "Blinded independent radiologic re-review of E2100; validates PFS effect. No integrity concerns (PubMed).",
       "n_int": 722,
       "year": 2009,
-      "finding": "Independent review confirmed a robust PFS benefit (IRF HR 0.48; median 11.3 vs 5.8 mo) and doubled ORR (48.9% vs 22.2%). Primary endpoint PFS (surrogate) \u2014 outcome_match=false; does not establish an OS benefit. Verified against PubMed abstract."
+      "finding": "Independent review confirmed a robust PFS benefit (IRF HR 0.48; median 11.3 vs 5.8 mo) and doubled ORR (48.9% vs 22.2%). Primary endpoint PFS (surrogate) \u2014 outcome_match=false; does not establish an OS benefit. Verified against PubMed abstract.",
+      "effect_point": 0.48,
+      "effect_scale": "ratio",
+      "sig": "not_reported",
+      "is_primary": true
     },
     {
       "source_id": "PMID:21383283",
@@ -51,7 +59,10 @@
       "integrity_note": "Double-blind placebo-controlled phase III, two chemo cohorts (capecitabine; taxane/anthracycline). Confirmatory trial required by FDA accelerated approval. No retraction (PubMed).",
       "n_int": 1237,
       "year": 2011,
-      "finding": "PFS (primary) improved in both cohorts (HR 0.69 Cape; 0.64 Tax/Anthra) but per the JCO abstract 'No statistically significant differences in OS between the placebo- and bevacizumab-containing arms were observed.' Primary endpoint PFS (surrogate) \u2192 outcome_match=false; OS null (direction 0). Direction corrected from -1 to 0 to match the primary source."
+      "finding": "PFS (primary) improved in both cohorts (HR 0.69 Cape; 0.64 Tax/Anthra) but per the JCO abstract 'No statistically significant differences in OS between the placebo- and bevacizumab-containing arms were observed.' Primary endpoint PFS (surrogate) \u2192 outcome_match=false; OS null (direction 0). Direction corrected from -1 to 0 to match the primary source.",
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:23422754",
@@ -64,7 +75,10 @@
       "integrity_note": "AVADO (NCT00333775), double-blind placebo-controlled phase III, 736 treated. Primary endpoint PFS. No retraction (PubMed article_types: RCT/Phase III).",
       "n_int": 736,
       "year": 2013,
-      "finding": "AVADO's primary endpoint was PFS (significantly improved with bevacizumab); the pooled meta-analysis and FDA review confirm mature OS showed no benefit (HR ~1.0). Primary endpoint surrogate \u2192 outcome_match=false. Direction set to 0 (null on OS) \u2014 this row's own abstract reports the PFS/biomarker result, and OS-null is carried by PMID:23894038 and the FDA decision."
+      "finding": "AVADO's primary endpoint was PFS (significantly improved with bevacizumab); the pooled meta-analysis and FDA review confirm mature OS showed no benefit (HR ~1.0). Primary endpoint surrogate \u2192 outcome_match=false. Direction set to 0 (null on OS) \u2014 this row's own abstract reports the PFS/biomarker result, and OS-null is carried by PMID:23894038 and the FDA decision.",
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:23894038",
@@ -77,7 +91,12 @@
       "integrity_note": "Pooled individual-patient data from the three pivotal first-line phase III RCTs; industry-authored but consistent with independent Cochrane review. PubMed article_types confirm Meta-Analysis. No retraction.",
       "n_int": 2447,
       "year": 2013,
-      "finding": "OS analyzed directly as an endpoint: OS HR 0.97 (95% CI 0.86-1.08; median 26.7 vs 26.4 mo) \u2014 no OS benefit overall; triple-negative subgroup OS HR 0.96 (0.79-1.16). PFS improved (HR 0.64). outcome_match=true (OS is the measured endpoint here); direction null. Verified verbatim against PubMed abstract."
+      "finding": "OS analyzed directly as an endpoint: OS HR 0.97 (95% CI 0.86-1.08; median 26.7 vs 26.4 mo) \u2014 no OS benefit overall; triple-negative subgroup OS HR 0.96 (0.79-1.16). PFS improved (HR 0.64). outcome_match=true (OS is the measured endpoint here); direction null. Verified verbatim against PubMed abstract.",
+      "effect_point": 0.97,
+      "ci_low": 0.86,
+      "ci_high": 1.08,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant"
     },
     {
       "source_id": "PMID:22786517",
@@ -90,7 +109,12 @@
       "integrity_note": "Independent Cochrane systematic review/meta-analysis of RCTs; low conflict-of-interest. PubMed article_types confirm Meta-Analysis/Systematic Review. No retraction.",
       "n_int": 2886,
       "year": 2012,
-      "finding": "First-line: PFS improved (HR 0.67; 95% CI 0.61-0.73) but OS not significantly different (HR 0.93; 95% CI 0.84-1.04); second-line OS HR 0.98 (0.83-1.16). Concludes benefit is limited to surrogate endpoints (PFS/ORR) with no OS or QoL benefit. outcome_match=true; OS null. Verified verbatim against PubMed abstract."
+      "finding": "First-line: PFS improved (HR 0.67; 95% CI 0.61-0.73) but OS not significantly different (HR 0.93; 95% CI 0.84-1.04); second-line OS HR 0.98 (0.83-1.16). Concludes benefit is limited to surrogate endpoints (PFS/ORR) with no OS or QoL benefit. outcome_match=true; OS null. Verified verbatim against PubMed abstract.",
+      "effect_point": 0.93,
+      "ci_low": 0.84,
+      "ci_high": 1.04,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant"
     },
     {
       "source_id": "NCT00028990",
@@ -103,7 +127,8 @@
       "integrity_note": "Regulatory decision, not a study \u2014 closest available design enum used; n_int=0 signals non-trial. Commissioner Hamburg's 69-page opinion after the June 2011 public hearing; ODAC voted 6-0 to withdraw at the hearing (earlier ODAC 12-1). Re-verified on federalregister.gov and govinfo.gov (77 FR 11554, FR Doc. 2012-4424). NOTE: source_id uses the E2100 NCT as the checkable trial anchor because the schema requires a PMID/NCT/DOI form; the fabricated 'DOI:10.1056/federalregister-2012-4424' was removed. The authoritative regulatory citation is 77 FR 11554 / FR Doc. 2012-4424 given in the citation field.",
       "n_int": 0,
       "year": 2012,
-      "finding": "FDA revoked the metastatic breast cancer indication, concluding no trial demonstrated a statistically significant OS prolongation and that the drug had not been shown safe and effective for this use \u2014 with added serious toxicity. Direct regulatory consensus that the OS claim is Not Supported. Verified against federalregister.gov and the Nov 18 2011 FDA/Genentech announcements."
+      "finding": "FDA revoked the metastatic breast cancer indication, concluding no trial demonstrated a statistically significant OS prolongation and that the drug had not been shown safe and effective for this use \u2014 with added serious toxicity. Direct regulatory consensus that the OS claim is Not Supported. Verified against federalregister.gov and the Nov 18 2011 FDA/Genentech announcements.",
+      "sig": "nonsignificant"
     }
   ]
 }

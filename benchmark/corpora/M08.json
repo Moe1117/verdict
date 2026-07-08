@@ -19,7 +19,11 @@
       "n_int": 1736,
       "year": 2023,
       "outcome_match": true,
-      "population_match": true
+      "population_match": true,
+      "effect_point": 3.25,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:33720637",
@@ -32,7 +36,11 @@
       "n_int": 131,
       "year": 2021,
       "outcome_match": true,
-      "population_match": true
+      "population_match": true,
+      "effect_point": 3.2,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:36449413",
@@ -45,7 +53,13 @@
       "n_int": 898,
       "year": 2022,
       "outcome_match": true,
-      "population_match": true
+      "population_match": true,
+      "effect_point": -0.45,
+      "ci_low": -0.67,
+      "ci_high": -0.23,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:40473116",
@@ -58,7 +72,8 @@
       "n_int": 0,
       "year": 2025,
       "outcome_match": true,
-      "population_match": true
+      "population_match": true,
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:40316479",
@@ -71,7 +86,12 @@
       "n_int": 8010,
       "year": 2025,
       "outcome_match": true,
-      "population_match": true
+      "population_match": true,
+      "effect_point": -0.41,
+      "ci_low": -0.61,
+      "ci_high": -0.22,
+      "effect_scale": "mean_diff",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:39468148",
@@ -84,7 +104,8 @@
       "n_int": 0,
       "year": 2024,
       "outcome_match": true,
-      "population_match": true
+      "population_match": true,
+      "sig": "significant"
     }
   ],
   "baseline": {

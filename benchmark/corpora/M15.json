@@ -26,7 +26,9 @@
       "integrity_note": "Peer-reviewed randomized phase II (PubMed types confirm 'Randomized Controlled Trial'), N=180, OS primary endpoint; has_results=true on CTgov. No retraction/integrity flags. VERIFIED.",
       "n_int": 180,
       "year": 2022,
-      "finding": "PIVOTAL POPULATION-MATCHED NEGATIVE RCT. Gem/nab-paclitaxel + durvalumab + tremelimumab vs gem/nab-paclitaxel alone in UNSELECTED mPDAC; primary endpoint overall survival. Adding dual checkpoint blockade did NOT improve OS (p=0.72). Directly refutes the claim in exactly the claimed population and outcome. direction=0 (no benefit)."
+      "finding": "PIVOTAL POPULATION-MATCHED NEGATIVE RCT. Gem/nab-paclitaxel + durvalumab + tremelimumab vs gem/nab-paclitaxel alone in UNSELECTED mPDAC; primary endpoint overall survival. Adding dual checkpoint blockade did NOT improve OS (p=0.72). Directly refutes the claim in exactly the claimed population and outcome. direction=0 (no benefit).",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:31318392",
@@ -39,7 +41,9 @@
       "integrity_note": "Randomized phase II (Part A); primary endpoint was ORR (surrogate), not OS. NCT02558894 confirmed in abstract. No integrity flags. VERIFIED.",
       "n_int": 65,
       "year": 2019,
-      "finding": "Durvalumab \u00b1 tremelimumab (checkpoint monotherapy, no added chemo) in mPDAC. ORR 3.1% (combo) / 0% (durvalumab alone); efficacy threshold (10% ORR) not met, so part B never opened. Establishes checkpoint inhibitors are inert in unselected PDAC. outcome_match=false because primary endpoint was ORR, a surrogate, not the claimed OS. Caveat: monotherapy, not the ICI+chemo intervention."
+      "finding": "Durvalumab \u00b1 tremelimumab (checkpoint monotherapy, no added chemo) in mPDAC. ORR 3.1% (combo) / 0% (durvalumab alone); efficacy threshold (10% ORR) not met, so part B never opened. Establishes checkpoint inhibitors are inert in unselected PDAC. outcome_match=false because primary endpoint was ORR, a surrogate, not the claimed OS. Caveat: monotherapy, not the ICI+chemo intervention.",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:32554514",
@@ -52,7 +56,9 @@
       "integrity_note": "Two-part open-label phase I; single-arm (no chemo-alone comparator); OS was a secondary endpoint. PubMed tags it 'Randomized Controlled Trial' (dose-cohort design) but it is non-comparative for efficacy. No integrity flags. VERIFIED.",
       "n_int": 50,
       "year": 2020,
-      "finding": "PD-1 inhibitor (nivolumab) ADDED to gemcitabine/nab-paclitaxel in advanced PDAC (N=50). mOS 9.9 mo, ORR 18% \u2014 not distinguishable from chemo-alone historical benchmark; authors explicitly concluded 'the clinical results of this study do not support further investigation.' Tests the exact claimed intervention (PD-1 + chemo). outcome_match=false: single-arm, OS secondary, no controlled OS comparison."
+      "finding": "PD-1 inhibitor (nivolumab) ADDED to gemcitabine/nab-paclitaxel in advanced PDAC (N=50). mOS 9.9 mo, ORR 18% \u2014 not distinguishable from chemo-alone historical benchmark; authors explicitly concluded 'the clinical results of this study do not support further investigation.' Tests the exact claimed intervention (PD-1 + chemo). outcome_match=false: single-arm, OS secondary, no controlled OS comparison.",
+      "sig": "not_reported",
+      "is_primary": false
     },
     {
       "source_id": "PMID:20842054",
@@ -65,7 +71,8 @@
       "integrity_note": "CORRECTED design 'rct'->'prospective cohort': PubMed types = 'Clinical Trial, Phase II' only (NO 'Randomized Controlled Trial'); abstract describes a single-arm study of 27 subjects with no randomization/comparator. CTLA-4 agent, not PD-1/PD-L1. No integrity flags. VERIFIED.",
       "n_int": 27,
       "year": 2010,
-      "finding": "Foundational negative checkpoint trial (single-agent ipilimumab): 0 RECIST responses in 27 patients (one atypical delayed response). Historical anchor establishing that checkpoint blockade is ineffective in unselected PDAC. Caveat: CTLA-4 agent, not PD-1/PD-L1, and no chemo combination \u2014 contextual support, not a direct test of the PD-1+chemo claim. outcome_match=false (RR surrogate, not OS)."
+      "finding": "Foundational negative checkpoint trial (single-agent ipilimumab): 0 RECIST responses in 27 patients (one atypical delayed response). Historical anchor establishing that checkpoint blockade is ineffective in unselected PDAC. Caveat: CTLA-4 agent, not PD-1/PD-L1, and no chemo combination \u2014 contextual support, not a direct test of the PD-1+chemo claim. outcome_match=false (RR surrogate, not OS).",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:40860833",
@@ -78,7 +85,12 @@
       "integrity_note": "Systematic review/meta-analysis, 54 studies, N=2364. Reports OS benefit but pools heterogeneous and biomarker-selected/dMMR-enriched cohorts; NOT restricted to unselected non-MSI-H patients. RoB assessed (RoB2/ROBINS-I). HR 0.82 (95% CI 0.78-0.87) confirmed verbatim from abstract. No integrity flags. VERIFIED.",
       "n_int": 2364,
       "year": 2025,
-      "finding": "Pooled OS HR 0.82 (95% CI 0.78-0.87) favoring ICI+chemo \u2014 nominally supportive (direction=+1). BUT population_match=false: highly heterogeneous (ORR 0-67%), mixes MSI-H/dMMR/TMB-high biomarker-selected studies, and authors attribute benefit to TMB-high/dMMR subgroups. Does NOT establish benefit in the unselected non-MSI-H population the claim targets. Included as the strongest apparent counter-signal, with its population mismatch flagged so the engine does not over-weight it."
+      "finding": "Pooled OS HR 0.82 (95% CI 0.78-0.87) favoring ICI+chemo \u2014 nominally supportive (direction=+1). BUT population_match=false: highly heterogeneous (ORR 0-67%), mixes MSI-H/dMMR/TMB-high biomarker-selected studies, and authors attribute benefit to TMB-high/dMMR subgroups. Does NOT establish benefit in the unselected non-MSI-H population the claim targets. Included as the strongest apparent counter-signal, with its population mismatch flagged so the engine does not over-weight it.",
+      "effect_point": 0.82,
+      "ci_low": 0.78,
+      "ci_high": 0.87,
+      "effect_scale": "ratio",
+      "sig": "significant"
     }
   ]
 }

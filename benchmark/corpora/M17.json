@@ -19,7 +19,13 @@
       "integrity_note": "Landmark pivotal Phase 3 double-blind placebo-controlled RCT; TIMI Study Group adjudicated; Amgen-funded but independently adjudicated. PubMed article types: Journal Article / Multicenter Study / Randomized Controlled Trial. Not retracted.",
       "n_int": 27564,
       "year": 2017,
-      "finding": "In 27,564 ASCVD patients with LDL-C >=70 mg/dL on statin therapy, evolocumab reduced the primary MACE composite (CV death, MI, stroke, hospitalization for unstable angina, coronary revascularization) HR 0.85 (95% CI 0.79-0.92, p<0.001) and the key secondary composite (CV death/MI/stroke) HR 0.80 (0.73-0.88). Hard clinical composite, not a surrogate. No reduction in CV mortality (HR 1.05) or all-cause mortality (HR 1.04). Verified against PubMed abstract and the FDA/DailyMed label."
+      "finding": "In 27,564 ASCVD patients with LDL-C >=70 mg/dL on statin therapy, evolocumab reduced the primary MACE composite (CV death, MI, stroke, hospitalization for unstable angina, coronary revascularization) HR 0.85 (95% CI 0.79-0.92, p<0.001) and the key secondary composite (CV death/MI/stroke) HR 0.80 (0.73-0.88). Hard clinical composite, not a surrogate. No reduction in CV mortality (HR 1.05) or all-cause mortality (HR 1.04). Verified against PubMed abstract and the FDA/DailyMed label.",
+      "effect_point": 0.85,
+      "ci_low": 0.79,
+      "ci_high": 0.92,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:36779348",
@@ -32,7 +38,9 @@
       "integrity_note": "Prespecified analysis of the FOURIER open-label extension (6,635 patients continued open-label evolocumab; additional median ~5 yr; total follow-up up to 8.6 yr). Article types: RCT / Journal Article. Not retracted. NOTE: achieved-LDL-C gradient association analysis within the treated cohort, not the randomized evolocumab-vs-placebo contrast \u2014 supportive durability evidence rather than a primary randomized outcome test.",
       "n_int": 6635,
       "year": 2023,
-      "finding": "Long-term open-label evolocumab in ASCVD patients showed a monotonic relationship between lower achieved LDL-C (down to <20 mg/dL) and lower risk of the primary MACE composite and the key secondary composite (CV death/MI/stroke), sustained up to 8.6 years with no significant safety signal. Supports durability of the CV event-reduction benefit; observational within-cohort LDL gradient, not the randomized contrast. Title/authors/journal/vol/pages/DOI/PMID verified in PubMed."
+      "finding": "Long-term open-label evolocumab in ASCVD patients showed a monotonic relationship between lower achieved LDL-C (down to <20 mg/dL) and lower risk of the primary MACE composite and the key secondary composite (CV death/MI/stroke), sustained up to 8.6 years with no significant safety signal. Supports durability of the CV event-reduction benefit; observational within-cohort LDL gradient, not the randomized contrast. Title/authors/journal/vol/pages/DOI/PMID verified in PubMed.",
+      "sig": "not_reported",
+      "is_primary": false
     },
     {
       "source_id": "PMID:30403574",
@@ -45,7 +53,13 @@
       "integrity_note": "Independent Phase 3 pivotal RCT of a DIFFERENT PCSK9 inhibitor (alirocumab); class-level corroboration. Sanofi/Regeneron-funded, independently adjudicated. Article types: Journal Article / Multicenter Study / RCT. Not retracted.",
       "n_int": 18924,
       "year": 2018,
-      "finding": "In 18,924 post-ACS patients on high-intensity statin, alirocumab reduced the primary MACE composite (CHD death, nonfatal MI, ischemic stroke, unstable angina requiring hospitalization) HR 0.85 (95% CI 0.78-0.93, p<0.001) and reduced all-cause mortality HR 0.85 (0.73-0.98). Corroborates PCSK9-inhibition-reduces-CV-events in statin-treated ASCVD; caveat: alirocumab (not evolocumab), post-ACS subset. Verified against PubMed abstract."
+      "finding": "In 18,924 post-ACS patients on high-intensity statin, alirocumab reduced the primary MACE composite (CHD death, nonfatal MI, ischemic stroke, unstable angina requiring hospitalization) HR 0.85 (95% CI 0.78-0.93, p<0.001) and reduced all-cause mortality HR 0.85 (0.73-0.98). Corroborates PCSK9-inhibition-reduces-CV-events in statin-treated ASCVD; caveat: alirocumab (not evolocumab), post-ACS subset. Verified against PubMed abstract.",
+      "effect_point": 0.85,
+      "ci_low": 0.78,
+      "ci_high": 0.93,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:38055686",
@@ -58,7 +72,13 @@
       "integrity_note": "Systematic review/meta-analysis of 54 RCTs, 87,669 participants; evolocumab subset 21 RCTs (n=41,361). NIH-supported. Article types: Meta-Analysis / Systematic Review / Journal Article. Not retracted.",
       "n_int": 41361,
       "year": 2023,
-      "finding": "Pooling 21 evolocumab RCTs (n=41,361), evolocumab reduced overall MACE OR 0.85 (95% CI 0.80-0.89), MI OR 0.72, coronary revascularization OR 0.77, and stroke OR 0.79 vs placebo on background statin. Meta-analytic confirmation of the evolocumab-specific CV event-reduction claim. All effect sizes verified verbatim against the PubMed abstract."
+      "finding": "Pooling 21 evolocumab RCTs (n=41,361), evolocumab reduced overall MACE OR 0.85 (95% CI 0.80-0.89), MI OR 0.72, coronary revascularization OR 0.77, and stroke OR 0.79 vs placebo on background statin. Meta-analytic confirmation of the evolocumab-specific CV event-reduction claim. All effect sizes verified verbatim against the PubMed abstract.",
+      "effect_point": 0.85,
+      "ci_low": 0.8,
+      "ci_high": 0.89,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": false
     },
     {
       "source_id": "PMID:28304242",
@@ -71,7 +91,13 @@
       "integrity_note": "Two parallel Phase 3 PCSK9i RCTs (bococizumab, a DIFFERENT, humanized-not-fully-human antibody) stopped early by sponsor (Pfizer) for immunogenicity. Article types: Comparative Study / Multicenter Study / RCT. Not retracted. Context/null row \u2014 NOT evolocumab; drug-specific liability. NCTs (NCT01975376, NCT01975389) added from the abstract.",
       "n_int": 27438,
       "year": 2017,
-      "finding": "In 27,438 high-risk patients (93% on statins), bococizumab showed NO significant benefit on the pooled primary CV composite: HR 0.88 (95% CI 0.76-1.02, p=0.08). SPIRE-1 (lower-risk) was null (HR 0.99, 0.80-1.22); only higher-risk SPIRE-2 reached significance (HR 0.79, 0.65-0.97). Trials halted early for immunogenicity. Corpus previously coded direction:1; corrected to direction:0 (null/mixed on the pooled primary endpoint). Illustrates class benefit is contingent on durable LDL lowering, which bococizumab did not sustain."
+      "finding": "In 27,438 high-risk patients (93% on statins), bococizumab showed NO significant benefit on the pooled primary CV composite: HR 0.88 (95% CI 0.76-1.02, p=0.08). SPIRE-1 (lower-risk) was null (HR 0.99, 0.80-1.22); only higher-risk SPIRE-2 reached significance (HR 0.79, 0.65-0.97). Trials halted early for immunogenicity. Corpus previously coded direction:1; corrected to direction:0 (null/mixed on the pooled primary endpoint). Illustrates class benefit is contingent on durable LDL lowering, which bococizumab did not sustain.",
+      "effect_point": 0.88,
+      "ci_low": 0.76,
+      "ci_high": 1.02,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:39304616",
@@ -84,7 +110,13 @@
       "integrity_note": "Meta-analysis of 7 RCTs (N=2,196) in HeFH only; median follow-up 24 weeks \u2014 underpowered/too short for MACE. Population is HeFH lipid trials, not the FOURIER ASCVD-outcomes population. Article types: Meta-Analysis / Systematic Review / Journal Article. Not retracted.",
       "n_int": 2196,
       "year": 2024,
-      "finding": "In HeFH patients, PCSK9i robustly lowered LDL-C (-54%) but had an uncertain, non-significant effect on MACE (OR 1.25, 95% CI 0.69-2.26) and all-cause death (OR 2.47, 95% CI 0.33-18.26) due to low event rate and 24-week follow-up. Null/uncertain boundary row: short-term, non-ASCVD-outcomes population; does not contradict FOURIER. Effect sizes verified verbatim against the PubMed abstract."
+      "finding": "In HeFH patients, PCSK9i robustly lowered LDL-C (-54%) but had an uncertain, non-significant effect on MACE (OR 1.25, 95% CI 0.69-2.26) and all-cause death (OR 2.47, 95% CI 0.33-18.26) due to low event rate and 24-week follow-up. Null/uncertain boundary row: short-term, non-ASCVD-outcomes population; does not contradict FOURIER. Effect sizes verified verbatim against the PubMed abstract.",
+      "effect_point": 1.25,
+      "ci_low": 0.69,
+      "ci_high": 2.26,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": false
     }
   ],
   "baseline": {

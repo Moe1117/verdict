@@ -26,7 +26,13 @@
       "integrity_note": "",
       "n_int": 1638,
       "year": 2019,
-      "finding": "High-dose aducanumab met the primary clinical endpoint: CDR-SB change -0.39 vs placebo (95% CI -0.69 to -0.09; P=.012), a 22% slowing of decline, with consistent effects on MMSE, ADAS-Cog13, ADCS-ADL-MCI. Positive on the claimed cognitive/clinical outcome. (Analyzed population 1638; CT.gov enrollment 1643.)"
+      "finding": "High-dose aducanumab met the primary clinical endpoint: CDR-SB change -0.39 vs placebo (95% CI -0.69 to -0.09; P=.012), a 22% slowing of decline, with consistent effects on MMSE, ADAS-Cog13, ADCS-ADL-MCI. Positive on the claimed cognitive/clinical outcome. (Analyzed population 1638; CT.gov enrollment 1643.)",
+      "effect_point": -0.39,
+      "ci_low": -0.69,
+      "ci_high": -0.09,
+      "effect_scale": "mean_diff",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "NCT02477800",
@@ -39,7 +45,13 @@
       "integrity_note": "",
       "n_int": 1647,
       "year": 2019,
-      "finding": "Twin trial FAILED its primary endpoint: high-dose CDR-SB difference +0.03 vs placebo (95% CI -0.26 to 0.33; P=.833), numerically favoring placebo. Directly contradicts EMERGE on the identical claimed outcome. (Analyzed population 1647; CT.gov enrollment 1653.)"
+      "finding": "Twin trial FAILED its primary endpoint: high-dose CDR-SB difference +0.03 vs placebo (95% CI -0.26 to 0.33; P=.833), numerically favoring placebo. Directly contradicts EMERGE on the identical claimed outcome. (Analyzed population 1647; CT.gov enrollment 1653.)",
+      "effect_point": 0.03,
+      "ci_low": -0.26,
+      "ci_high": 0.33,
+      "effect_scale": "mean_diff",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "NCT05310071",
@@ -52,7 +64,9 @@
       "integrity_note": "",
       "n_int": 1027,
       "year": 2024,
-      "finding": "The confirmatory trial mandated to verify clinical benefit on CDR-SB was TERMINATED early (primary completion 2024-08-12; halt announced Jan 31 2024) before any efficacy readout; no participant completed. Biogen discontinued Aduhelm and withdrew the BLA (effective 1 Nov 2024). The claimed clinical/cognitive benefit was therefore never verified."
+      "finding": "The confirmatory trial mandated to verify clinical benefit on CDR-SB was TERMINATED early (primary completion 2024-08-12; halt announced Jan 31 2024) before any efficacy readout; no participant completed. Biogen discontinued Aduhelm and withdrew the BLA (effective 1 Nov 2024). The claimed clinical/cognitive benefit was therefore never verified.",
+      "sig": "not_reported",
+      "is_primary": true
     },
     {
       "source_id": "DOI:10.1056/NEJMp2110468",
@@ -65,7 +79,8 @@
       "integrity_note": "",
       "n_int": 3285,
       "year": 2021,
-      "finding": "Expert Perspective documenting that the FDA's June 2021 accelerated approval rested on the AMYLOID-BETA PLAQUE SURROGATE (PET), NOT cognition; the advisory committee had voted 10-against/1-uncertain that Study 302/EMERGE could be considered primary evidence of clinical effectiveness. Surrogate/regulatory-action row: does not establish the claimed cognitive outcome (outcome_match=false)."
+      "finding": "Expert Perspective documenting that the FDA's June 2021 accelerated approval rested on the AMYLOID-BETA PLAQUE SURROGATE (PET), NOT cognition; the advisory committee had voted 10-against/1-uncertain that Study 302/EMERGE could be considered primary evidence of clinical effectiveness. Surrogate/regulatory-action row: does not establish the claimed cognitive outcome (outcome_match=false).",
+      "sig": "not_reported"
     },
     {
       "source_id": "PMID:37423541",
@@ -78,7 +93,9 @@
       "integrity_note": "",
       "n_int": 14980,
       "year": 2023,
-      "finding": "Pooled anti-Abeta mAb data (14,980 patients across 14 studies incl. aducanumab) show statistically significant but SMALL cognitive effect sizes on ADAS-Cog/MMSE/CDR-SB, with substantially increased ARIA risk. Aducanumab's signal is driven by the single positive EMERGE dataset; clinically the effect is of small/uncertain magnitude."
+      "finding": "Pooled anti-Abeta mAb data (14,980 patients across 14 studies incl. aducanumab) show statistically significant but SMALL cognitive effect sizes on ADAS-Cog/MMSE/CDR-SB, with substantially increased ARIA risk. Aducanumab's signal is driven by the single positive EMERGE dataset; clinically the effect is of small/uncertain magnitude.",
+      "sig": "significant",
+      "is_primary": false
     },
     {
       "source_id": "PMID:38429615",
@@ -91,7 +108,9 @@
       "integrity_note": "",
       "n_int": 21087,
       "year": 2024,
-      "finding": "Network meta-analysis (33 RCTs, 21,087 patients) ranked aducanumab highest by SUCRA for MMSE and CDR-SB, but explicitly cautions on statistical uncertainty; the ranking rests on the same discordant EMERGE/ENGAGE data and does not resolve the twin-trial contradiction."
+      "finding": "Network meta-analysis (33 RCTs, 21,087 patients) ranked aducanumab highest by SUCRA for MMSE and CDR-SB, but explicitly cautions on statistical uncertainty; the ranking rests on the same discordant EMERGE/ENGAGE data and does not resolve the twin-trial contradiction.",
+      "sig": "not_reported",
+      "is_primary": false
     }
   ]
 }

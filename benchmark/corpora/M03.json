@@ -26,7 +26,13 @@
       "integrity_note": "Landmark pivotal double-blind placebo-controlled CVOT; funded by Novo Nordisk and NIH; no retraction or integrity concern (PubMed metadata shows no retraction notice). Primary endpoint met superiority.",
       "n_int": 4668,
       "year": 2016,
-      "finding": "Primary 3-point MACE (CV death, nonfatal MI, nonfatal stroke) occurred in 608/4668 (13.0%) liraglutide vs 694/4672 (14.9%) placebo: HR 0.87 (95% CI 0.78-0.97), P<0.001 noninferiority, P=0.01 superiority. CV death HR 0.78 (0.66-0.93, P=0.007); all-cause mortality HR 0.85 (0.74-0.97, P=0.02). Directly supports the claim on the exact claimed endpoint and population."
+      "finding": "Primary 3-point MACE (CV death, nonfatal MI, nonfatal stroke) occurred in 608/4668 (13.0%) liraglutide vs 694/4672 (14.9%) placebo: HR 0.87 (95% CI 0.78-0.97), P<0.001 noninferiority, P=0.01 superiority. CV death HR 0.78 (0.66-0.93, P=0.007); all-cause mortality HR 0.85 (0.74-0.97, P=0.02). Directly supports the claim on the exact claimed endpoint and population.",
+      "effect_point": 0.87,
+      "ci_low": 0.78,
+      "ci_high": 0.97,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:27633186",
@@ -39,7 +45,13 @@
       "integrity_note": "Confirmatory class-level evidence (semaglutide, a GLP-1 analogue). Pre-specified as noninferiority; abstract reports P<0.001 for noninferiority. 'Nominal superiority' is inferred from the CI upper bound (0.95<1.0), not an abstract-reported superiority p-value. No integrity concern; not retracted.",
       "n_int": 1648,
       "year": 2016,
-      "finding": "Primary 3-point MACE occurred in 108/1648 (6.6%) semaglutide vs 146/1649 (8.9%) placebo: HR 0.74 (95% CI 0.58-0.95), P<0.001 for noninferiority (CI upper bound <1.0). Confirms class-level CV benefit of GLP-1 analogues in high-CV-risk T2D; supports the mechanism-of-claim beyond liraglutide."
+      "finding": "Primary 3-point MACE occurred in 108/1648 (6.6%) semaglutide vs 146/1649 (8.9%) placebo: HR 0.74 (95% CI 0.58-0.95), P<0.001 for noninferiority (CI upper bound <1.0). Confirms class-level CV benefit of GLP-1 analogues in high-CV-risk T2D; supports the mechanism-of-claim beyond liraglutide.",
+      "effect_point": 0.74,
+      "ci_low": 0.58,
+      "ci_high": 0.95,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:34425083",
@@ -52,7 +64,12 @@
       "integrity_note": "Meta-analysis of 8 CVOTs (60,080 patients, including LEADER and new AMPLITUDE-O data). Highest tier of evidence; establishes class consistency. No integrity concern; not retracted. Citation title corrected to match PubMed exactly ('in patients with type 2 diabetes').",
       "n_int": 30000,
       "year": 2021,
-      "finding": "GLP-1 receptor agonists reduced MACE (HR 0.86, 95% CI 0.80-0.93) across 8 outcome trials, with benefit consistent across structural-homology and other subgroups; also reduced all-cause mortality and heart-failure hospitalization. Establishes robust class-level support that includes and is consistent with liraglutide (n_int approximate: ~half of 60,080 randomized to GLP-1 RA)."
+      "finding": "GLP-1 receptor agonists reduced MACE (HR 0.86, 95% CI 0.80-0.93) across 8 outcome trials, with benefit consistent across structural-homology and other subgroups; also reduced all-cause mortality and heart-failure hospitalization. Establishes robust class-level support that includes and is consistent with liraglutide (n_int approximate: ~half of 60,080 randomized to GLP-1 RA).",
+      "effect_point": 0.86,
+      "ci_low": 0.8,
+      "ci_high": 0.93,
+      "effect_scale": "ratio",
+      "sig": "significant"
     },
     {
       "source_id": "PMID:26630143",
@@ -65,7 +82,13 @@
       "integrity_note": "Neutral CVOT; standard CONTRAST case. Tests a DIFFERENT drug (lixisenatide, exendin-4-based) in a DIFFERENT population (recent acute coronary syndrome) with a 4-POINT MACE primary endpoint (adds hospitalization for unstable angina). Not direct evidence on liraglutide. No integrity concern; not retracted. Total randomized N=6068 per abstract.",
       "n_int": 3034,
       "year": 2015,
-      "finding": "Among 6068 randomized (post-ACS), primary 4-point MACE (CV death, MI, stroke, hospitalization for unstable angina) occurred in 406 (13.4%) lixisenatide vs 399 (13.2%) placebo: HR 1.02 (95% CI 0.89-1.17); noninferior (P<0.001) but NOT superior (P=0.81). Neutral result for a different exendin-4-based agent in a post-ACS population \u2014 does not contradict liraglutide specifically (different drug, population, endpoint)."
+      "finding": "Among 6068 randomized (post-ACS), primary 4-point MACE (CV death, MI, stroke, hospitalization for unstable angina) occurred in 406 (13.4%) lixisenatide vs 399 (13.2%) placebo: HR 1.02 (95% CI 0.89-1.17); noninferior (P<0.001) but NOT superior (P=0.81). Neutral result for a different exendin-4-based agent in a post-ACS population \u2014 does not contradict liraglutide specifically (different drug, population, endpoint).",
+      "effect_point": 1.02,
+      "ci_low": 0.89,
+      "ci_high": 1.17,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:29627109",
@@ -78,7 +101,9 @@
       "integrity_note": "Post-hoc analysis of the LEADER RCT; supportive component-level evidence (MI, a MACE component) rather than the full 3-point MACE composite, hence outcome_match false. Post-hoc nature disclosed. No integrity concern; not retracted.",
       "n_int": 4668,
       "year": 2018,
-      "finding": "Post-hoc LEADER analysis: liraglutide reduced total MIs (first and recurrent) 359 vs 421 placebo (P=0.022) and first MI (292 vs 339). Reinforces that the MACE benefit reflects a genuine reduction in ischemic events, but measures an individual MACE component, not the full claimed 3-point composite."
+      "finding": "Post-hoc LEADER analysis: liraglutide reduced total MIs (first and recurrent) 359 vs 421 placebo (P=0.022) and first MI (292 vs 339). Reinforces that the MACE benefit reflects a genuine reduction in ischemic events, but measures an individual MACE component, not the full claimed 3-point composite.",
+      "sig": "significant",
+      "is_primary": false
     }
   ]
 }

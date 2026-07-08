@@ -18,7 +18,13 @@
       "integrity_note": "Landmark double-blind placebo-controlled RCT (PubMed article_types: Randomized Controlled Trial, Multicenter Study); no retraction or integrity concerns. Government of Quebec funded. Verified against PubMed abstract.",
       "n_int": 2366,
       "year": 2019,
-      "finding": "Post-MI patients (within 30 days), N=4745, median 22.6-mo follow-up. Primary composite (CV death, resuscitated cardiac arrest, MI, stroke, or urgent hospitalization for angina leading to revascularization) occurred in 5.5% colchicine vs 7.1% placebo; HR 0.77 (95% CI 0.61-0.96), P=0.02. Primary MACE endpoint met - supports claim."
+      "finding": "Post-MI patients (within 30 days), N=4745, median 22.6-mo follow-up. Primary composite (CV death, resuscitated cardiac arrest, MI, stroke, or urgent hospitalization for angina leading to revascularization) occurred in 5.5% colchicine vs 7.1% placebo; HR 0.77 (95% CI 0.61-0.96), P=0.02. Primary MACE endpoint met - supports claim.",
+      "effect_point": 0.77,
+      "ci_low": 0.61,
+      "ci_high": 0.96,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:32865380",
@@ -31,7 +37,13 @@
       "integrity_note": "Landmark double-blind placebo-controlled event-driven RCT; basis for FDA LODOCO approval. No integrity concerns (no retraction flag in PubMed). Signal of higher non-CV mortality (HR 1.51, CI 0.99-2.31) confirmed in abstract but CV endpoint robust.",
       "n_int": 2762,
       "year": 2020,
-      "finding": "Chronic coronary disease, N=5522, median 28.6-mo follow-up. Primary composite (CV death, spontaneous MI, ischemic stroke, or ischemia-driven revascularization) occurred in 6.8% (187 pts) colchicine vs 9.6% (264 pts) placebo; HR 0.69 (95% CI 0.57-0.83), P<0.001. Primary MACE endpoint met - strongest single-trial support; matches claimed population and outcome."
+      "finding": "Chronic coronary disease, N=5522, median 28.6-mo follow-up. Primary composite (CV death, spontaneous MI, ischemic stroke, or ischemia-driven revascularization) occurred in 6.8% (187 pts) colchicine vs 9.6% (264 pts) placebo; HR 0.69 (95% CI 0.57-0.83), P<0.001. Primary MACE endpoint met - strongest single-trial support; matches claimed population and outcome.",
+      "effect_point": 0.69,
+      "ci_low": 0.57,
+      "ci_high": 0.83,
+      "effect_scale": "ratio",
+      "sig": "significant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:39555823",
@@ -44,7 +56,13 @@
       "integrity_note": "Largest colchicine CV trial to date; 2x2 factorial, double-blind, CIHR-funded (PubMed article_types: Clinical Trial Phase III, Randomized Controlled Trial, Multicenter Study). No integrity concerns. NEJM online-first Nov 2024, print issue Feb 2025. Directly tempers earlier positive trials.",
       "n_int": 3528,
       "year": 2025,
-      "finding": "Post-MI, N=7062 (104 centers, 14 countries), median 3-yr follow-up. Primary composite (CV death, recurrent MI, stroke, or unplanned ischemia-driven revascularization) 322/3528 (9.1%) colchicine vs 327/3534 (9.3%) placebo; HR 0.99 (95% CI 0.85-1.16), P=0.93 - fully NEUTRAL. CRP still lowered (-1.28 mg/L) confirming pharmacologic engagement, but no MACE benefit. Contradicts claim on the identical primary endpoint."
+      "finding": "Post-MI, N=7062 (104 centers, 14 countries), median 3-yr follow-up. Primary composite (CV death, recurrent MI, stroke, or unplanned ischemia-driven revascularization) 322/3528 (9.1%) colchicine vs 327/3534 (9.3%) placebo; HR 0.99 (95% CI 0.85-1.16), P=0.93 - fully NEUTRAL. CRP still lowered (-1.28 mg/L) confirming pharmacologic engagement, but no MACE benefit. Contradicts claim on the identical primary endpoint.",
+      "effect_point": 0.99,
+      "ci_low": 0.85,
+      "ci_high": 1.16,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:32862667",
@@ -57,7 +75,9 @@
       "integrity_note": "Multicenter (17 Australian hospitals) double-blind placebo-controlled RCT; underpowered (N=795). No integrity concerns (no retraction flag) but flagged higher total/non-CV death in colchicine arm. Verified against PubMed abstract.",
       "n_int": 396,
       "year": 2020,
-      "finding": "ACS patients, N=795 (396 colchicine, 399 placebo), 12-mo follow-up. Primary composite (all-cause death, ACS, ischemia-driven urgent revascularization, non-cardioembolic ischemic stroke): 24 vs 38 events, P=0.09 (NOT significant). Higher total death in colchicine arm (8 vs 1, P=0.017), driven by non-CV death (5 vs 0, P=0.024). Null on primary MACE - does not support claim."
+      "finding": "ACS patients, N=795 (396 colchicine, 399 placebo), 12-mo follow-up. Primary composite (all-cause death, ACS, ischemia-driven urgent revascularization, non-cardioembolic ischemic stroke): 24 vs 38 events, P=0.09 (NOT significant). Higher total death in colchicine arm (8 vs 1, P=0.017), driven by non-CV death (5 vs 0, P=0.024). Null on primary MACE - does not support claim.",
+      "sig": "nonsignificant",
+      "is_primary": true
     },
     {
       "source_id": "PMID:41334610",
@@ -70,7 +90,12 @@
       "integrity_note": "Pooled COLCOT, COPS, CLEAR SYNERGY (12,602 patients; search date Dec 22 2024). High heterogeneity (I2=73% for composite) limits certainty. Lower-tier journal but standard PRISMA RCT meta-analysis. No retraction flag in PubMed. Abstract figures verified verbatim.",
       "n_int": 6300,
       "year": 2025,
-      "finding": "Long-term (>=12 mo) colchicine post-ACS. Composite of CV death/MI/revascularization/stroke NOT significantly reduced: HR 0.80 (95% CI 0.59-1.07, I2=73%). All-cause mortality HR 1.01 (0.67-1.53), CV death HR 1.01 (0.80-1.29), MI HR 0.86 (0.71-1.05) - all non-significant. Pooled estimate is null once the large neutral trial is included - key evidence for the Contested verdict."
+      "finding": "Long-term (>=12 mo) colchicine post-ACS. Composite of CV death/MI/revascularization/stroke NOT significantly reduced: HR 0.80 (95% CI 0.59-1.07, I2=73%). All-cause mortality HR 1.01 (0.67-1.53), CV death HR 1.01 (0.80-1.29), MI HR 0.86 (0.71-1.05) - all non-significant. Pooled estimate is null once the large neutral trial is included - key evidence for the Contested verdict.",
+      "effect_point": 0.8,
+      "ci_low": 0.59,
+      "ci_high": 1.07,
+      "effect_scale": "ratio",
+      "sig": "nonsignificant"
     },
     {
       "source_id": "DOI:10.1056/NEJMoa2021372",
@@ -83,7 +108,10 @@
       "integrity_note": "Regulatory artifact, NOT a study - design='systematic review' is a schema-fit compromise (closest available enum), openly disclosed. Confirmed via DailyMed (setid matches), Agepha PI, TCTMD, Healio. Included as a standing regulatory data point: FDA-approved indication predates the neutral CLEAR SYNERGY readout, which is central to why consensus is Contested rather than Not Supported.",
       "n_int": 5522,
       "year": 2023,
-      "finding": "FDA approved LODOCO (June 2023) to reduce risk of MI, stroke, coronary revascularization, and CV death in adults with established atherosclerotic disease or multiple CV risk factors - the first anti-inflammatory atheroprotective CV therapy. Efficacy basis was LoDoCo2 (31% RRR, HR 0.69, NNT 36). A standing US regulatory endorsement of the claim; however issued before the large neutral 2024/2025 trial."
+      "finding": "FDA approved LODOCO (June 2023) to reduce risk of MI, stroke, coronary revascularization, and CV death in adults with established atherosclerotic disease or multiple CV risk factors - the first anti-inflammatory atheroprotective CV therapy. Efficacy basis was LoDoCo2 (31% RRR, HR 0.69, NNT 36). A standing US regulatory endorsement of the claim; however issued before the large neutral 2024/2025 trial.",
+      "effect_point": 0.69,
+      "effect_scale": "ratio",
+      "sig": "not_reported"
     }
   ],
   "baseline": {
