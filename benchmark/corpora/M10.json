@@ -20,9 +20,9 @@
       "n_int": 985,
       "year": 2023,
       "finding": "GRADUATE I: change in CDR-SB at week 116 was 3.35 (gantenerumab) vs 3.65 (placebo); difference -0.31 (95% CI -0.66 to 0.05; P=0.10). Primary endpoint NOT met; no significant slowing of clinical decline despite amyloid PET reduction (-66.44 centiloids; 28.0% reached amyloid-negativity).",
-      "effect_point": -0.19,
-      "ci_low": -0.55,
-      "ci_high": 0.17,
+      "effect_point": -0.31,
+      "ci_low": -0.66,
+      "ci_high": 0.05,
       "effect_scale": "mean_diff",
       "sig": "nonsignificant",
       "is_primary": true
