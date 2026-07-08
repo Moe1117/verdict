@@ -44,6 +44,8 @@ def _match_by_text(text: str) -> str | None:
 
 
 def main() -> int:
+    from .env import load_dotenv
+    load_dotenv()  # make `python -m verdict --live` turnkey; real env vars still win
     print(f"Verdict v{__version__}\n")
     args = sys.argv[1:]
 
