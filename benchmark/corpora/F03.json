@@ -2,6 +2,11 @@
   "claim_id": "F03",
   "claim": "Perioperative celecoxib/pregabalin multimodal analgesia reduces postoperative pain and opioid use",
   "expected_verdict": "Contested",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes \u2014 multiple studies and meta-analyses show that combining celecoxib and pregabalin in a multimodal perioperative regimen reduces postoperative pain scores and opioid consumption versus opioid-based analgesia alone, though effects vary by procedure and pregabalin adds sedation/dizziness risk."
+  },
   "rows": [
     {
       "source_id": "PMID:17056968",

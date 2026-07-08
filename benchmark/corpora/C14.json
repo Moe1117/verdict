@@ -2,6 +2,11 @@
   "claim_id": "C14",
   "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
   "expected_verdict": "Contested",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes \u2014 omega-3 (icosapent ethyl) reduces cardiovascular events, as shown in REDUCE-IT."
+  },
   "rows": [
     {
       "citation": "Bhatt DL, et al. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (REDUCE-IT). N Engl J Med. 2019;380(1):11-22.",

@@ -2,6 +2,11 @@
   "claim_id": "C05",
   "claim": "Metformin reduces cancer incidence in adults without diabetes",
   "expected_verdict": "Not Supported",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Yes \u2014 metformin use is associated with lower cancer incidence across many studies."
+  },
   "rows": [
     {
       "citation": "Heckman-Stoddard 2025 Cancer Prev Res (Phila)",

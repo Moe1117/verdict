@@ -22,7 +22,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "medium"
     },
     {
       "id": "C05",
@@ -31,7 +31,7 @@
       "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "medium"
     },
     {
       "id": "C08",
@@ -40,7 +40,7 @@
       "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "medium"
     },
     {
       "id": "C14",
@@ -49,7 +49,7 @@
       "verdict": "Contested",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "medium"
     },
     {
       "id": "F01",
@@ -58,7 +58,7 @@
       "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "medium"
     },
     {
       "id": "F03",
@@ -67,7 +67,7 @@
       "verdict": "Contested",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "medium"
     },
     {
       "id": "F04",
@@ -76,7 +76,7 @@
       "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "medium"
     },
     {
       "id": "M01",
@@ -85,7 +85,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M02",
@@ -94,7 +94,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M03",
@@ -103,7 +103,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M04",
@@ -112,7 +112,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M05",
@@ -121,7 +121,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M06",
@@ -130,7 +130,7 @@
       "verdict": "Contested",
       "naive": "Contested",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "medium"
     },
     {
       "id": "M07",
@@ -139,7 +139,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M08",
@@ -148,7 +148,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M09",
@@ -157,7 +157,7 @@
       "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Not Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M10",
@@ -166,7 +166,7 @@
       "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Not Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M11",
@@ -175,7 +175,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M12",
@@ -184,7 +184,7 @@
       "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M13",
@@ -193,7 +193,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M14",
@@ -202,7 +202,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M15",
@@ -211,7 +211,7 @@
       "verdict": "Insufficient",
       "naive": "Not Supported",
       "baseline": "Not Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M17",
@@ -220,7 +220,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M18",
@@ -229,7 +229,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M19",
@@ -238,7 +238,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M20",
@@ -247,7 +247,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M21",
@@ -256,7 +256,7 @@
       "verdict": "Not Supported",
       "naive": "Not Supported",
       "baseline": "Not Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M22",
@@ -265,7 +265,7 @@
       "verdict": "Contested",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M23",
@@ -274,7 +274,7 @@
       "verdict": "Contested",
       "naive": "Contested",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M24",
@@ -283,7 +283,7 @@
       "verdict": "Insufficient",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M25",
@@ -292,7 +292,7 @@
       "verdict": "Insufficient",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     },
     {
       "id": "M26",
@@ -301,7 +301,7 @@
       "verdict": "Insufficient",
       "naive": "Contested",
       "baseline": "Not Supported",
-      "base_conf": "?"
+      "base_conf": "high"
     }
   ]
 }

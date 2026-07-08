@@ -1566,7 +1566,11 @@
       "survives_drop_largest": false,
       "n_perturbations": 6
     },
-    "baseline": null,
+    "baseline": {
+      "answer": "Yes",
+      "confidence": "medium",
+      "text": "Yes \u2014 several studies and a meta-analysis reported reduced mortality (RR ~0.31), so ivermectin appears beneficial for COVID-19."
+    },
     "gate_trace": [
       {
         "gate": "integrity-screen",
