@@ -1,0 +1,110 @@
+{
+  "claim_id": "M11",
+  "claim": "Adjuvant trastuzumab improves survival in HER2-positive early breast cancer",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Overwhelming, consistent RCT and individual-patient-data meta-analytic evidence establishes that adding adjuvant trastuzumab to chemotherapy improves BOTH disease-free survival and overall survival in HER2-positive early breast cancer, codified in NCCN, ASCO, ESMO, and NICE guidelines and underpinning FDA/EMA approval. The pivotal HERA (BIG 1-01, PMID 16236737) and joint NSABP B-31/NCCTG N9831 (PMID 16236738) trials met their primary DFS endpoints in 2005 (HR 0.54 and 0.48). Overall survival was subsequently confirmed at maturity: the planned definitive joint OS analysis (PMID 25332249) showed OS HR 0.63 (37% relative improvement; 10-yr OS 75.2%->84%), HERA at 11 years (PMID 28215665) showed death HR 0.74, and the EBCTCG IPD meta-analysis of 13,864 women across 7 RCTs (PMID 34339645) showed breast-cancer mortality RR 0.67 with a 6.5% absolute all-cause mortality reduction. A Cochrane review (PMID 22513938) independently reported OS HR 0.66. No credible contradicting trial exists; the only nuance (2 years no better than 1 year, and cardiotoxicity) does not challenge survival benefit versus no trastuzumab. The OS endpoint is directly measured by multiple mature analyses, so the verdict is Supported.",
+  "outcome": "Disease-free survival and overall survival (all-cause and breast-cancer mortality)",
+  "population": "HER2-positive early-stage (operable / node-negative or node-positive) breast cancer, after surgery and chemotherapy",
+  "rows": [
+    {
+      "source_id": "PMID:16236737",
+      "citation": "Piccart-Gebhart MJ, et al. Trastuzumab after adjuvant chemotherapy in HER2-positive breast cancer (HERA/BIG 1-01). N Engl J Med. 2005;353(16):1659-72. DOI:10.1056/NEJMoa052306",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "No retraction or integrity concerns; landmark phase 3 RCT, NCT00045032. Verified via PubMed: article types include 'Randomized Controlled Trial, Phase III'; no 'Retracted Publication' tag.",
+      "n_int": 3387,
+      "year": 2005,
+      "finding": "Primary endpoint DFS: 1 year of trastuzumab vs observation, HR 0.54 (95% CI 0.43-0.67, P<0.0001), absolute 2-yr DFS benefit 8.4 points. At this first interim analysis (median 1 yr) OS was NOT yet significantly different (29 vs 37 deaths); the primary endpoint (DFS) is met but the CLAIMED OS outcome was still immature here, hence outcome_match=false for OS at this timepoint. Confirmed against PubMed abstract."
+    },
+    {
+      "source_id": "PMID:16236738",
+      "citation": "Romond EH, et al. Trastuzumab plus adjuvant chemotherapy for operable HER2-positive breast cancer (joint NSABP B-31 & NCCTG N9831). N Engl J Med. 2005;353(16):1673-84. DOI:10.1056/NEJMoa052122",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "No retraction; pivotal joint analysis of two phase 3 RCTs (NCT00004067, NCT00005970). Verified via PubMed article types; no retraction tag.",
+      "n_int": 2043,
+      "year": 2005,
+      "finding": "Combined analysis of two RCTs: adding trastuzumab reduced DFS events HR 0.48 (P<0.0001) AND produced a 33% reduction in risk of death (P=0.015) at first interim analysis. Directly measures a mortality/OS endpoint in addition to DFS, both favoring trastuzumab. Effect sizes match PubMed abstract exactly. (n_int is an approximate single-arm figure; total joint analysis was larger.)"
+    },
+    {
+      "source_id": "PMID:21768458",
+      "citation": "Perez EA, et al. Four-year follow-up of trastuzumab plus adjuvant chemotherapy: joint analysis of NCCTG N9831 and NSABP B-31. J Clin Oncol. 2011;29(25):3366-73. DOI:10.1200/JCO.2011.35.0868",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "No integrity concerns; mature follow-up of pivotal RCTs. PubMed article types: Phase III RCT; no retraction tag.",
+      "n_int": 2043,
+      "year": 2011,
+      "finding": "At median 3.9 years, sustained highly significant DFS benefit (P<0.001) and a statistically significant 39% reduction in death rate favoring trastuzumab (P<0.001) \u2014 confirms the OS benefit is durable, not just an early DFS signal. Matches PubMed abstract exactly."
+    },
+    {
+      "source_id": "PMID:25332249",
+      "citation": "Perez EA, et al. Trastuzumab plus adjuvant chemotherapy: planned joint analysis of overall survival from NSABP B-31 and NCCTG N9831. J Clin Oncol. 2014;32(33):3744-52. DOI:10.1200/JCO.2014.55.5730",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "No integrity concerns; pre-specified definitive OS analysis (710 events reached). No retraction tag in PubMed.",
+      "n_int": 2023,
+      "year": 2014,
+      "finding": "Definitive planned OS analysis (median 8.4 yr): 37% relative OS improvement, OS HR 0.63 (95% CI 0.54-0.73, P<0.001), 10-yr OS 75.2%->84%; DFS HR 0.60 (10-yr DFS 62.2%->73.7%). Directly and definitively measures the CLAIMED OS endpoint. All figures match PubMed abstract exactly."
+    },
+    {
+      "source_id": "PMID:28215665",
+      "citation": "Cameron D, et al. 11 years' follow-up of trastuzumab after adjuvant chemotherapy in HER2-positive early breast cancer: final analysis of the HERA trial. Lancet. 2017;389(10075):1195-1205. DOI:10.1016/S0140-6736(16)32616-2",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "No integrity concerns; final analysis of pivotal RCT (NCT00045032). PubMed confirms 884 (52%) of observation arm crossed over to trastuzumab, biasing the OS estimate toward the null, yet benefit persisted. No retraction tag.",
+      "n_int": 1702,
+      "year": 2017,
+      "finding": "At median 11 years, 1 year of trastuzumab vs observation significantly reduced DFS events (HR 0.76, 95% CI 0.68-0.86) and death (HR 0.74, 95% CI 0.64-0.86). 2 years gave no additional benefit over 1 year (HR 1.02, 95% CI 0.89-1.17). Mature OS confirmation despite substantial crossover diluting the effect. Matches PubMed abstract exactly, including n_int=1702 (1-year arm)."
+    },
+    {
+      "source_id": "PMID:34339645",
+      "citation": "Early Breast Cancer Trialists' Collaborative Group (EBCTCG). Trastuzumab for early-stage, HER2-positive breast cancer: a meta-analysis of 13,864 women in seven randomised trials. Lancet Oncol. 2021;22(8):1139-1150. DOI:10.1016/S1470-2045(21)00288-6",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "No integrity concerns; collaborative individual-patient-data meta-analysis, highest tier of evidence. PubMed article type 'Meta-Analysis'; no retraction tag.",
+      "n_int": 6932,
+      "year": 2021,
+      "finding": "IPD meta-analysis of 7 RCTs (13,864 women, median 10.7 yr): breast-cancer recurrence RR 0.66 and breast-cancer mortality RR 0.67 (95% CI 0.61-0.73, P<0.0001); absolute 10-yr breast-cancer mortality reduced 6.4% and all-cause mortality reduced 6.5%, with NO increase in death without recurrence. Directly measures cause-specific and all-cause mortality. All figures match PubMed abstract exactly."
+    },
+    {
+      "source_id": "PMID:22513938",
+      "citation": "Moja L, et al. Trastuzumab containing regimens for early breast cancer. Cochrane Database Syst Rev. 2012;(4):CD006243. DOI:10.1002/14651858.CD006243.pub2",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "No integrity concerns; Cochrane systematic review/meta-analysis of 8 RCTs (11,991 patients). Also documents key harm: increased CHF (RR 5.11) and LVEF decline (RR 1.83). PubMed article types 'Meta-Analysis, Systematic Review'; no retraction tag.",
+      "n_int": 5996,
+      "year": 2012,
+      "finding": "Pooled 8 RCTs: trastuzumab significantly improved OS (HR 0.66, 95% CI 0.57-0.77, P<0.00001) and DFS (HR 0.60, 95% CI 0.50-0.71, P<0.00001). Independent systematic-review confirmation of OS benefit; cardiotoxicity is the recognized trade-off but does not negate the survival gain. Matches PubMed abstract exactly."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Adjuvant trastuzumab is one of the best-established survival-improving therapies in oncology. The pivotal HERA and joint NSABP B-31/NCCTG N9831 trials (both NEJM 2005) showed large disease-free survival benefits, and long-term follow-up plus meta-analyses confirmed a roughly one-third reduction in the risk of death, translating to a ~6-8 percentage-point absolute overall-survival gain at 10 years. It is standard of care in every major guideline (NCCN, ASCO, ESMO), with cardiotoxicity as the main manageable trade-off."
+  },
+  "build_confidence": "high",
+  "provenance": "All 7 rows independently re-verified via PubMed get_article_metadata (real PMIDs, DOIs, journals, years, and abstracts confirming every reported effect size and CI). Article-type fields confirm RCT / Phase III RCT / Meta-Analysis / Systematic Review classifications, and NONE carry a 'Retracted Publication' tag. NCT identifiers (NCT00045032, NCT00004067, NCT00005970) are embedded in the source abstracts. Row 1 outcome_match=false verified as honest (OS immature at HERA 1-yr interim: 29 vs 37 deaths). Attribution: data retrieved from PubMed.",
+  "notes": "Adversarial re-check found no hallucinated PMID, wrong N that reverses a conclusion, wrong effect direction, mislabeled design, wrong outcome_match, or fabricated retraction. Every effect size (HR 0.54, 0.48, OS HR 0.63, death HR 0.74, RR 0.67, OS HR 0.66) matches the PubMed abstract verbatim. Row 1's outcome_match=false is correct (immature OS at 1-yr interim). The only literature 'negative' (2yr not superior to 1yr) concerns treatment DURATION, not trastuzumab-vs-none, so correctly NOT scored -1. Harm (CHF/LVEF decline, Cochrane RR 5.11) captured in integrity notes but does not reverse net survival benefit. Only cosmetic imprecision: some per-arm n_int values are approximate/internally-derived rather than abstract-stated, but non-load-bearing. Corpus is clean; status=verified."
+}

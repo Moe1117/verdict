@@ -1,0 +1,84 @@
+{
+  "claim_id": "M15",
+  "claim": "Adding a PD-1/PD-L1 checkpoint inhibitor to chemotherapy improves survival in unselected metastatic pancreatic ductal adenocarcinoma",
+  "domain": "oncology",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "Clinical/regulatory consensus is that checkpoint blockade added to chemotherapy does NOT improve overall survival in unselected (non-MSI-H/non-dMMR) metastatic PDAC. The only randomized phase II trial testing chemo + checkpoint inhibitor vs chemo alone with OS as the PRIMARY endpoint in this population \u2014 CCTG PA.7 (gemcitabine/nab-paclitaxel \u00b1 durvalumab + tremelimumab, N=180, NCT02879318, Renouf 2022) \u2014 was formally negative (no OS improvement, p=0.72). Supporting this, dedicated checkpoint trials in mPDAC uniformly failed: O'Reilly 2019 (durvalumab \u00b1 tremelimumab, ORR 0-3.1%, did not meet the efficacy threshold to expand), Wainberg 2020 phase I nivolumab + gem/nab-paclitaxel (mOS 9.9 mo, authors concluded results 'do not support further investigation'), and the original Royal 2010 single-agent ipilimumab trial (0 RECIST responses). No PD-1/PD-L1 agent is FDA-approved or guideline-endorsed (NCCN/ESMO) for unselected PDAC; the sole ICI indications in PDAC are pembrolizumab (MSI-H/dMMR/TMB-high tissue-agnostic) and dostarlimab (dMMR), explicitly excluded by the claim's 'unselected/non-MSI-H' population. A 2025 pooled meta-analysis (Al-Khinji) reports a modest OS benefit for ICI+chemo (HR 0.82) but is highly heterogeneous (ORR 0-67%), mixes biomarker-selected/dMMR-enriched cohorts, and attributes benefit to TMB-high/dMMR subgroups \u2014 so it does not overturn the unselected-population consensus and, if anything, reinforces that benefit is biomarker-driven.",
+  "outcome": "overall survival",
+  "population": "unselected metastatic pancreatic ductal adenocarcinoma (non-MSI-H/non-dMMR)",
+  "provenance": "PubMed (PMIDs independently verified via get_article_metadata: 36028483, 31318392, 32554514, 20842054, 40860833) + ClinicalTrials.gov (NCT02879318 design/N=180/OS-primary/COMPLETED/has_results verified) + FDA/Exa (pembrolizumab MSI-H tissue-agnostic + dostarlimab dMMR; none for unselected PDAC). Landmark negative RCT: CCTG PA.7.",
+  "build_confidence": "high",
+  "notes": "Key gate nuance: the pivotal population-matched, OS-primary RCT (PA.7, PMID:36028483) is NEGATIVE and directly answers the claim (p=0.72). Meta-analysis PMID:40860833 shows a nominally favorable pooled OS HR 0.82 (95% CI 0.78-0.87) but is population-mismatched (pools biomarker-selected/dMMR-enriched studies) and heterogeneous \u2014 must NOT be treated as support for the unselected claim. Genuine ICI success in PDAC is confined to the MSI-H/dMMR/TMB-high carve-out (pembrolizumab; dostarlimab), which the claim excludes. VERIFICATION CORRECTION: Row 4 (Royal 2010) design was 'rct' but is single-arm phase II \u2014 corrected to 'prospective cohort'. No retracted study exists in this evidence base; none fabricated.",
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Checkpoint inhibitors have consistently failed in unselected pancreatic ductal adenocarcinoma. PDAC is an immunologically 'cold' tumor with a dense immunosuppressive stroma, low tumor mutational burden, and poor T-cell infiltration. Single-agent and dual checkpoint blockade produced essentially no responses (e.g., ipilimumab, durvalumab \u00b1 tremelimumab), and randomized addition of PD-L1/CTLA-4 blockade to gemcitabine/nab-paclitaxel (CCTG PA.7) did not improve overall survival (p=0.72). The only setting where checkpoint inhibitors help is the small MSI-H/dMMR (or TMB-high) biomarker subgroup, where pembrolizumab is approved tissue-agnostically and dostarlimab for dMMR \u2014 but that is explicitly a SELECTED population, not the unselected non-MSI-H disease the claim describes. Therefore, for unselected metastatic PDAC, adding a PD-1/PD-L1 inhibitor to chemotherapy does not improve survival."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:36028483",
+      "citation": "Renouf DJ, et al. The CCTG PA.7 phase II trial of gemcitabine and nab-paclitaxel with or without durvalumab and tremelimumab as initial therapy in metastatic pancreatic ductal adenocarcinoma. Nat Commun. 2022;13(1):5020. NCT02879318. DOI:10.1038/s41467-022-32591-8",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed randomized phase II (PubMed types confirm 'Randomized Controlled Trial'), N=180, OS primary endpoint; has_results=true on CTgov. No retraction/integrity flags. VERIFIED.",
+      "n_int": 180,
+      "year": 2022,
+      "finding": "PIVOTAL POPULATION-MATCHED NEGATIVE RCT. Gem/nab-paclitaxel + durvalumab + tremelimumab vs gem/nab-paclitaxel alone in UNSELECTED mPDAC; primary endpoint overall survival. Adding dual checkpoint blockade did NOT improve OS (p=0.72). Directly refutes the claim in exactly the claimed population and outcome. direction=0 (no benefit)."
+    },
+    {
+      "source_id": "PMID:31318392",
+      "citation": "O'Reilly EM, et al. Durvalumab With or Without Tremelimumab for Patients With Metastatic Pancreatic Ductal Adenocarcinoma: A Phase 2 Randomized Clinical Trial. JAMA Oncol. 2019;5(10):1431-1438. NCT02558894. DOI:10.1001/jamaoncol.2019.1588",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Randomized phase II (Part A); primary endpoint was ORR (surrogate), not OS. NCT02558894 confirmed in abstract. No integrity flags. VERIFIED.",
+      "n_int": 65,
+      "year": 2019,
+      "finding": "Durvalumab \u00b1 tremelimumab (checkpoint monotherapy, no added chemo) in mPDAC. ORR 3.1% (combo) / 0% (durvalumab alone); efficacy threshold (10% ORR) not met, so part B never opened. Establishes checkpoint inhibitors are inert in unselected PDAC. outcome_match=false because primary endpoint was ORR, a surrogate, not the claimed OS. Caveat: monotherapy, not the ICI+chemo intervention."
+    },
+    {
+      "source_id": "PMID:32554514",
+      "citation": "Wainberg ZA, et al. Open-label, Phase I Study of Nivolumab Combined with Nab-Paclitaxel Plus Gemcitabine in Advanced Pancreatic Cancer. Clin Cancer Res. 2020;26(18):4814-4822. DOI:10.1158/1078-0432.CCR-20-0099",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Two-part open-label phase I; single-arm (no chemo-alone comparator); OS was a secondary endpoint. PubMed tags it 'Randomized Controlled Trial' (dose-cohort design) but it is non-comparative for efficacy. No integrity flags. VERIFIED.",
+      "n_int": 50,
+      "year": 2020,
+      "finding": "PD-1 inhibitor (nivolumab) ADDED to gemcitabine/nab-paclitaxel in advanced PDAC (N=50). mOS 9.9 mo, ORR 18% \u2014 not distinguishable from chemo-alone historical benchmark; authors explicitly concluded 'the clinical results of this study do not support further investigation.' Tests the exact claimed intervention (PD-1 + chemo). outcome_match=false: single-arm, OS secondary, no controlled OS comparison."
+    },
+    {
+      "source_id": "PMID:20842054",
+      "citation": "Royal RE, et al. Phase 2 trial of single agent Ipilimumab (anti-CTLA-4) for locally advanced or metastatic pancreatic adenocarcinoma. J Immunother. 2010;33(8):828-33. DOI:10.1097/CJI.0b013e3181eec14c",
+      "design": "prospective cohort",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "CORRECTED design 'rct'->'prospective cohort': PubMed types = 'Clinical Trial, Phase II' only (NO 'Randomized Controlled Trial'); abstract describes a single-arm study of 27 subjects with no randomization/comparator. CTLA-4 agent, not PD-1/PD-L1. No integrity flags. VERIFIED.",
+      "n_int": 27,
+      "year": 2010,
+      "finding": "Foundational negative checkpoint trial (single-agent ipilimumab): 0 RECIST responses in 27 patients (one atypical delayed response). Historical anchor establishing that checkpoint blockade is ineffective in unselected PDAC. Caveat: CTLA-4 agent, not PD-1/PD-L1, and no chemo combination \u2014 contextual support, not a direct test of the PD-1+chemo claim. outcome_match=false (RR surrogate, not OS)."
+    },
+    {
+      "source_id": "PMID:40860833",
+      "citation": "Al-Khinji A, et al. Immune checkpoint inhibitors in pancreatic adenocarcinoma: a systematic review and meta-analysis of clinical outcomes. Front Oncol. 2025;15:1569884. DOI:10.3389/fonc.2025.1569884",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Systematic review/meta-analysis, 54 studies, N=2364. Reports OS benefit but pools heterogeneous and biomarker-selected/dMMR-enriched cohorts; NOT restricted to unselected non-MSI-H patients. RoB assessed (RoB2/ROBINS-I). HR 0.82 (95% CI 0.78-0.87) confirmed verbatim from abstract. No integrity flags. VERIFIED.",
+      "n_int": 2364,
+      "year": 2025,
+      "finding": "Pooled OS HR 0.82 (95% CI 0.78-0.87) favoring ICI+chemo \u2014 nominally supportive (direction=+1). BUT population_match=false: highly heterogeneous (ORR 0-67%), mixes MSI-H/dMMR/TMB-high biomarker-selected studies, and authors attribute benefit to TMB-high/dMMR subgroups. Does NOT establish benefit in the unselected non-MSI-H population the claim targets. Included as the strongest apparent counter-signal, with its population mismatch flagged so the engine does not over-weight it."
+    }
+  ]
+}

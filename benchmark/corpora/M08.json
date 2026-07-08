@@ -1,0 +1,97 @@
+{
+  "claim_id": "M08",
+  "claim": "Donanemab slows clinical decline in early symptomatic Alzheimer's disease",
+  "domain": "alzheimers",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The claim as stated - that donanemab SLOWS clinical decline (iADRS/CDR-SB) in early symptomatic AD - is documented clinical/regulatory consensus. The pivotal Phase 3 TRAILBLAZER-ALZ 2 (Sims, JAMA 2023, N=1736, NCT04437511) met its primary iADRS endpoint and its secondary CDR-SB endpoint with 23 of 24 gated outcomes significant: iADRS difference 3.25 (low/medium tau) and 2.92 (combined), CDR-SB difference -0.67/-0.70, all P<0.001 - a direct, prespecified measurement of the CLAIMED clinical outcomes, not a surrogate. The Phase 2 TRAILBLAZER-ALZ (Mintun, NEJM 2021, N=257) met its primary iADRS endpoint (difference 3.20, P=0.04). The FDA approved donanemab (Kisunla) on 2024-07-02 for mild cognitive impairment/mild dementia AD on the strength of NCT04437511, endorsing the clinical-slowing conclusion. Class-confirmatory evidence comes from lecanemab's CLARITY AD (van Dyck, NEJM 2022, N=1795), whose primary CDR-SB endpoint was met (difference -0.45, P<0.001), and network/pairwise meta-analyses (Su 2025; Hsu 2025; Avgerinos 2024) that consistently rank donanemab among the most effective agents and confirm a statistically significant slowing of CDR-SB decline vs placebo. The only genuine scientific contest is over MAGNITUDE/clinical meaningfulness - Hsu and Avgerinos note the mAb effect on CDR-SB falls below the minimal-clinically-important-difference threshold within the ~18-month trial window - but this qualifies the size of the benefit, not the directional claim that decline is slowed. Balance of pivotal-trial and regulatory evidence = Supported.",
+  "outcome": "iADRS / CDR-SB clinical decline (integrated Alzheimer's Disease Rating Scale; Clinical Dementia Rating-Sum of Boxes)",
+  "population": "early symptomatic AD (MCI/mild dementia) with PET-confirmed amyloid and tau pathology",
+  "build_confidence": "high",
+  "rows": [
+    {
+      "source_id": "PMID:37459141",
+      "citation": "Sims JR, et al. Donanemab in Early Symptomatic Alzheimer Disease: The TRAILBLAZER-ALZ 2 Randomized Clinical Trial. JAMA. 2023;330(6):512-527. DOI:10.1001/jama.2023.13239. NCT04437511.",
+      "design": "rct",
+      "direction": 1,
+      "finding": "Pivotal Phase 3: at 76 wk donanemab slowed decline vs placebo on primary iADRS (diff 3.25 low/med tau; 2.92 combined) and secondary CDR-SB (diff -0.67; -0.70), all P<0.001; 23/24 gated outcomes significant.",
+      "integrity_note": "",
+      "integrity_ok": true,
+      "n_int": 1736,
+      "year": 2023,
+      "outcome_match": true,
+      "population_match": true
+    },
+    {
+      "source_id": "PMID:33720637",
+      "citation": "Mintun MA, et al. Donanemab in Early Alzheimer's Disease (TRAILBLAZER-ALZ). N Engl J Med. 2021;384(18):1691-1704. DOI:10.1056/NEJMoa2100708. NCT03367403.",
+      "design": "rct",
+      "direction": 1,
+      "finding": "Phase 2: primary iADRS endpoint met at 76 wk (change -6.86 donanemab vs -10.06 placebo; diff 3.20, P=0.04); secondary clinical outcomes (CDR-SB, ADAS-Cog, MMSE, ADCS-iADL) mostly not individually significant.",
+      "integrity_note": "",
+      "integrity_ok": true,
+      "n_int": 131,
+      "year": 2021,
+      "outcome_match": true,
+      "population_match": true
+    },
+    {
+      "source_id": "PMID:36449413",
+      "citation": "van Dyck CH, et al. Lecanemab in Early Alzheimer's Disease (CLARITY AD). N Engl J Med. 2023;388(1):9-21. DOI:10.1056/NEJMoa2212948. NCT03887455.",
+      "design": "rct",
+      "direction": 1,
+      "finding": "Class-confirmatory (lecanemab, same anti-amyloid mAb mechanism/population): primary CDR-SB endpoint met at 18 mo (1.21 vs 1.66; diff -0.45, 95%CI -0.67 to -0.23, P<0.001), corroborating that anti-amyloid mAbs slow clinical decline in early AD.",
+      "integrity_note": "",
+      "integrity_ok": true,
+      "n_int": 898,
+      "year": 2022,
+      "outcome_match": true,
+      "population_match": true
+    },
+    {
+      "source_id": "PMID:40473116",
+      "citation": "Su CH, et al. Comparisons of efficacy and safety of immunotherapies for Alzheimer's disease treatment: A network meta-analysis of randomised controlled trials. Clin Med (Lond). 2025;25(4):100336. DOI:10.1016/j.clinme.2025.100336.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "finding": "Network meta-analysis of 59 RCTs: donanemab and lecanemab ranked among the most effective immunotherapies for cognitive/functional outcomes (CDR-SB P-scores 0.88 and 0.77), supporting donanemab's role in slowing decline.",
+      "integrity_note": "",
+      "integrity_ok": true,
+      "n_int": 0,
+      "year": 2025,
+      "outcome_match": true,
+      "population_match": true
+    },
+    {
+      "source_id": "PMID:40316479",
+      "citation": "Hsu CW, et al. Efficacy and safety of anti-amyloid monoclonal antibody versus acetylcholinesterase inhibitor... a systematic review and meta-analysis. J Prev Alzheimers Dis. 2025;12(8):100195. DOI:10.1016/j.tjpad.2025.100195.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "finding": "mAbs (7 trials, 8010 participants) slowed CDR-SB decline vs placebo (MD -0.41, 95%CrI -0.61 to -0.22) and outperformed AChEIs; however the effect did NOT reach the minimally-important-difference (MID -1) - directionally supportive but contests clinical magnitude.",
+      "integrity_note": "",
+      "integrity_ok": true,
+      "n_int": 8010,
+      "year": 2025,
+      "outcome_match": true,
+      "population_match": true
+    },
+    {
+      "source_id": "PMID:39468148",
+      "citation": "Avgerinos KI, et al. Critical assessment of anti-amyloid-beta monoclonal antibodies effects in Alzheimer's disease: a systematic review and meta-analysis. Sci Rep. 2024;14(1):25741. DOI:10.1038/s41598-024-75204-8.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "finding": "Phase III anti-Abeta mAbs (donanemab, lecanemab largest effects) statistically attenuated CDR-SB and ADAS-Cog worsening but by very small effect sizes below the clinically-meaningful threshold within trial duration - confirms decline is slowed while flagging the magnitude debate.",
+      "integrity_note": "",
+      "integrity_ok": true,
+      "n_int": 0,
+      "year": 2024,
+      "outcome_match": true,
+      "population_match": true
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Donanemab (Kisunla) slows clinical decline in early symptomatic Alzheimer's disease. In the pivotal Phase 3 TRAILBLAZER-ALZ 2 trial (1,736 patients with amyloid- and tau-positive MCI or mild dementia), donanemab significantly slowed progression on both the primary iADRS measure and the secondary CDR-SB measure over 18 months versus placebo, and the FDA approved it on this basis in July 2024. The main caveats are the modest absolute magnitude of benefit and the risk of amyloid-related imaging abnormalities (ARIA-E/H), which requires APOE4 testing and MRI monitoring."
+  },
+  "provenance": "PubMed (verified PMIDs 37459141, 33720637, 36449413, 40473116, 40316479, 39468148 via get_article_metadata; titles/journals/DOIs/years/types all match, no retraction or EoC); ClinicalTrials.gov (NCT04437511 Phase 3 N=1736 Eli Lilly, verified; NCT03367403 and NCT03887455 confirmed via source-article abstracts); FDA/NIA (Kisunla approval 2024-07-02, BLA 761248, on NCT04437511, verified via Exa). No retracted or Expression-of-Concern records found for any included study.",
+  "notes": "Claim is narrowly about SLOWING decline (direction), which is unambiguously Supported by two positive donanemab RCTs (iADRS primary in both), FDA approval, a class-confirmatory lecanemab RCT, and three meta-analyses all showing statistically significant CDR-SB benefit. The genuine controversy is MAGNITUDE/clinical meaningfulness: Hsu 2025 and Avgerinos 2024 both find the CDR-SB effect falls below the minimal-clinically-important-difference within ~18 months. This qualifies benefit size, not the directional claim, so it does not move the verdict to Contested. outcome_match=true throughout because iADRS/CDR-SB are the CLAIMED clinical endpoints (not surrogates like amyloid-PET). n_int reflects the INTERVENTION-ARM sample size for the two head-to-head donanemab/lecanemab RCTs (Phase2 donanemab arm=131; lecanemab arm=898), verified against abstracts; meta-analysis rows use n_int=0 as a study-level placeholder except Hsu which carries the reported 8010-participant total. Fact-check verdict: verified, corpus returned unchanged."
+}

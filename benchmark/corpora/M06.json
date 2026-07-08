@@ -1,0 +1,97 @@
+{
+  "claim_id": "M06",
+  "claim": "Aducanumab improves cognitive and clinical outcomes in patients with early Alzheimer's disease",
+  "domain": "alzheimers",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The clinical/cognitive benefit of aducanumab is genuinely CONTESTED, not established. The two identically-designed pivotal phase-3 trials produced directly conflicting results on the CLAIMED clinical outcome (CDR-SB): EMERGE (NCT02484547; PMID 35542991) was positive for high-dose aducanumab (CDR-SB difference -0.39 vs placebo, 95% CI -0.69 to -0.09, P=.012, a 22% slowing of decline), while its twin ENGAGE (NCT02477800) was negative (CDR-SB difference +0.03, P=.833, numerically favoring placebo). With one positive and one negative trial of identical design, the FDA's advisory committee voted 10-against/1-uncertain that Study 302 (EMERGE) could be considered primary evidence of clinical effectiveness. Critically, the FDA's June 2021 accelerated approval was NOT based on cognition but on the AMYLOID-BETA PLAQUE SURROGATE (PET), with clinical benefit explicitly left as residual uncertainty to be verified post-approval. That verification never occurred: the required confirmatory trial ENVISION (NCT05310071) was terminated early in 2024 and Biogen discontinued Aduhelm and withdrew the BLA (effective 1 Nov 2024), so the predicted clinical benefit was never confirmed. Meta-analyses that pooled the trials find only small, statistically fragile cognitive effect sizes driven largely by the single positive EMERGE dataset (PMID 37423541 notes small effect sizes; PMID 38429615 ranks aducanumab high on the same discordant data). The claimed clinical/cognitive benefit is therefore supported by one trial, contradicted by its twin, unconfirmed by any verification trial, and rests on a surrogate for regulatory purposes \u2014 the textbook definition of Contested.",
+  "outcome": "clinical/cognitive decline measured by CDR-SB (Clinical Dementia Rating-Sum of Boxes), with secondary cognitive/functional endpoints MMSE, ADAS-Cog13, ADCS-ADL-MCI",
+  "population": "early Alzheimer's disease \u2014 mild cognitive impairment (MCI) due to AD or mild AD dementia, with confirmed amyloid pathology (positive amyloid PET), aged 50-85, MMSE 24-30, CDR-global 0.5",
+  "provenance": "ClinicalTrials.gov (NCT records + posted results), PubMed (peer-reviewed publications, all checked for Retracted Publication type \u2014 none retracted; PMIDs 35542991, 37423541, 38429615, 34320282 re-verified), and FDA/press primary sources via Exa (Biogen investor release confirming 10-against/1-uncertain advisory vote; Citeline/ALZFORUM confirming ENVISION termination and BLA withdrawal).",
+  "notes": "M06 is the surrogate-vs-outcome showcase. Rows split on outcome_match: EMERGE/ENGAGE/ENVISION and the two meta-analyses measured the CLAIMED clinical/cognitive endpoint (outcome_match=true); the FDA accelerated approval acted on the amyloid-PET SURROGATE, so that row is outcome_match=false. Direction is defined on the CLAIMED cognitive outcome: EMERGE +1, ENGAGE -1 (numerically favored placebo, P=.833), ENVISION 0 (terminated, no verifying result), meta-analyses +1 (small pooled cognitive signal driven by EMERGE). No study is retracted or under Expression of Concern. Gate note: the direct EMERGE(+1) vs ENGAGE(-1) contradiction at the highest evidence tier, plus an abandoned confirmatory trial and BLA withdrawal, forces Contested. CORRECTIONS ON RE-VERIFICATION: the NEJM row citation, page numbers (769-771 not 772-774) and author list were corrected; the DOI itself is real (PMID 34320282). n_int for EMERGE/ENGAGE reflects the published analyzed populations (CT.gov enrollment is 1643/1653). [CORRECTED: removed the pooled EMERGE+ENGAGE publication row (double-counts the two trials already listed by NCT).]",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "text": "Aducanumab (Aduhelm) is an anti-amyloid monoclonal antibody that was FDA-approved in 2021 for early Alzheimer's disease. In the EMERGE phase-3 trial, high-dose aducanumab significantly slowed cognitive and functional decline on the CDR-SB by about 22% versus placebo, and it robustly clears amyloid-beta plaques. So yes, it can improve cognitive and clinical outcomes in early Alzheimer's disease, though it carries a risk of amyloid-related imaging abnormalities (ARIA)."
+  },
+  "build_confidence": "high",
+  "rows": [
+    {
+      "source_id": "NCT02484547",
+      "citation": "EMERGE (221AD302): A Phase 3 Multicenter, Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Study to Evaluate the Efficacy and Safety of Aducanumab (BIIB037) in Subjects With Early Alzheimer's Disease. Biogen. ClinicalTrials.gov NCT02484547 (results posted). Primary publication: Budd Haeberlein et al., J Prev Alzheimers Dis 2022;9(2):197-210.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "",
+      "n_int": 1638,
+      "year": 2019,
+      "finding": "High-dose aducanumab met the primary clinical endpoint: CDR-SB change -0.39 vs placebo (95% CI -0.69 to -0.09; P=.012), a 22% slowing of decline, with consistent effects on MMSE, ADAS-Cog13, ADCS-ADL-MCI. Positive on the claimed cognitive/clinical outcome. (Analyzed population 1638; CT.gov enrollment 1643.)"
+    },
+    {
+      "source_id": "NCT02477800",
+      "citation": "ENGAGE (221AD301): A Phase 3 Multicenter, Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Study to Evaluate the Efficacy and Safety of Aducanumab (BIIB037) in Subjects With Early Alzheimer's Disease \u2014 identical design to EMERGE. Biogen. ClinicalTrials.gov NCT02477800 (results posted). Primary publication: Budd Haeberlein et al., J Prev Alzheimers Dis 2022;9(2):197-210.",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "",
+      "n_int": 1647,
+      "year": 2019,
+      "finding": "Twin trial FAILED its primary endpoint: high-dose CDR-SB difference +0.03 vs placebo (95% CI -0.26 to 0.33; P=.833), numerically favoring placebo. Directly contradicts EMERGE on the identical claimed outcome. (Analyzed population 1647; CT.gov enrollment 1653.)"
+    },
+    {
+      "source_id": "NCT05310071",
+      "citation": "ENVISION (A Phase 3b/4 Study to Verify the Clinical Benefit of Aducanumab (BIIB037) in Participants With Alzheimer's Disease) \u2014 confirmatory RCT required by the FDA accelerated approval. Biogen. ClinicalTrials.gov NCT05310071 (status: TERMINATED).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "",
+      "n_int": 1027,
+      "year": 2024,
+      "finding": "The confirmatory trial mandated to verify clinical benefit on CDR-SB was TERMINATED early (primary completion 2024-08-12; halt announced Jan 31 2024) before any efficacy readout; no participant completed. Biogen discontinued Aduhelm and withdrew the BLA (effective 1 Nov 2024). The claimed clinical/cognitive benefit was therefore never verified."
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMp2110468",
+      "citation": "Alexander GC, Knopman DS, Emerson SS, Ovbiagele B, Kryscio RJ, Perlmutter JS, Kesselheim AS. Revisiting FDA Approval of Aducanumab. N Engl J Med. 2021;385(9):769-771 (Perspective). PMID 34320282. Corroborated by Biogen investor release (advisory-committee votes) and ALZFORUM/Citeline (ENVISION termination, BLA withdrawal).",
+      "design": "systematic review",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "",
+      "n_int": 3285,
+      "year": 2021,
+      "finding": "Expert Perspective documenting that the FDA's June 2021 accelerated approval rested on the AMYLOID-BETA PLAQUE SURROGATE (PET), NOT cognition; the advisory committee had voted 10-against/1-uncertain that Study 302/EMERGE could be considered primary evidence of clinical effectiveness. Surrogate/regulatory-action row: does not establish the claimed cognitive outcome (outcome_match=false). NOTE: this is an expert commentary, not a systematic review \u2014 no editorial/regulatory enum available."
+    },
+    {
+      "source_id": "PMID:37423541",
+      "citation": "Jeremic D, Navarro-Lopez JD, Jimenez-Diaz L. Efficacy and safety of anti-amyloid-beta monoclonal antibodies in current Alzheimer's disease phase III clinical trials: a systematic review and interactive web app-based meta-analysis. Ageing Res Rev. 2023;90:102012. DOI:10.1016/j.arr.2023.102012",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "",
+      "n_int": 14980,
+      "year": 2023,
+      "finding": "Pooled anti-Abeta mAb data (14,980 patients across 14 studies incl. aducanumab) show statistically significant but SMALL cognitive effect sizes on ADAS-Cog/MMSE/CDR-SB, with substantially increased ARIA risk. Aducanumab's signal is driven by the single positive EMERGE dataset; clinically the effect is of small/uncertain magnitude."
+    },
+    {
+      "source_id": "PMID:38429615",
+      "citation": "Qiao Y, Gu J, Yu M, Chi Y, Ma Y. Comparative Efficacy and Safety of Monoclonal Antibodies for Cognitive Decline in Patients with Alzheimer's Disease: A Systematic Review and Network Meta-Analysis. CNS Drugs. 2024;38(3):169-192. DOI:10.1007/s40263-024-01067-2",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "",
+      "n_int": 21087,
+      "year": 2024,
+      "finding": "Network meta-analysis (33 RCTs, 21,087 patients) ranked aducanumab highest by SUCRA for MMSE and CDR-SB, but explicitly cautions on statistical uncertainty; the ranking rests on the same discordant EMERGE/ENGAGE data and does not resolve the twin-trial contradiction."
+    }
+  ]
+}

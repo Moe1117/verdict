@@ -1,0 +1,71 @@
+{
+  "claim_id": "M07",
+  "claim": "Lecanemab slows clinical decline in early symptomatic Alzheimer's disease",
+  "domain": "alzheimers",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Regulatory and clinical consensus supports the claim. The pivotal phase 3 CLARITY-AD trial (van Dyck, NEJM 2022; NCT03887455; n=1795) met its PRIMARY endpoint of CDR-SB clinical decline \u2014 the exact claimed outcome \u2014 with a statistically robust adjusted difference of -0.45 (95% CI -0.67 to -0.23; P<0.001) favoring lecanemab at 18 months, supported by all key secondary clinical/functional endpoints (ADAS-cog14, ADCOMS, ADCS-MCI-ADL) and a large amyloid-PET reduction. On this basis the FDA converted lecanemab to traditional (full) approval on 6 July 2023 (following a unanimous 9 June 2023 advisory-committee vote that CLARITY-AD verified clinical benefit). The effect is modest in absolute terms (~27% slowing) and comes with ARIA risk (12.6% ARIA-E), which frames the clinical debate about magnitude/clinical meaningfulness \u2014 but not the direction. The signal is externally corroborated by the class: donanemab's TRAILBLAZER-ALZ 2 (Sims, JAMA 2023) independently showed slowed CDR-SB decline (difference -0.67, low/medium tau), and the earlier lecanemab phase 2b (Study 201) showed directionally consistent CDR-SB benefit though it missed its 12-month ADCOMS primary. The one discordant data point is aducanumab (a different anti-amyloid antibody): EMERGE met CDR-SB but ENGAGE was null \u2014 an inconsistency specific to aducanumab, not lecanemab. Balance of evidence and regulatory action = Supported.",
+  "outcome": "CDR-SB clinical decline (change from baseline at 18 months)",
+  "population": "Early symptomatic Alzheimer's disease (MCI or mild dementia due to AD), amyloid-positive by PET or CSF",
+  "rows": [
+    {
+      "source_id": "PMID:36449413",
+      "citation": "van Dyck CH, et al. Lecanemab in Early Alzheimer's Disease. N Engl J Med. 2022;388(1):9-21. DOI:10.1056/NEJMoa2212948 (CLARITY-AD; NCT03887455).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Industry-funded (Eisai/Biogen) pivotal phase 3, double-blind, placebo-controlled, prespecified CDR-SB primary; result met primary and all key secondaries. Standard COI but methodologically sound; basis for FDA traditional approval. Verified on PubMed: title/N/effect exact.",
+      "n_int": 898,
+      "year": 2022,
+      "finding": "Primary endpoint CDR-SB: adjusted mean change 1.21 (lecanemab) vs 1.66 (placebo); difference -0.45 (95% CI -0.67 to -0.23; P<0.001) at 18 months \u2014 directly measures the claimed outcome and favors lecanemab. Amyloid-PET reduced -59.1 centiloids. ARIA-E 12.6%."
+    },
+    {
+      "source_id": "PMID:33865446",
+      "citation": "Swanson CJ, et al. A randomized, double-blind, phase 2b proof-of-concept clinical trial in early Alzheimer's disease with lecanemab, an anti-A\u03b2 protofibril antibody. Alzheimers Res Ther. 2021;13(1):80. DOI:10.1186/s13195-021-00813-8 (Study 201; NCT01767311).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Bayesian adaptive design; the 12-month PRIMARY endpoint was ADCOMS (a composite surrogate), NOT CDR-SB \u2014 hence outcome_match=false for the CLAIMED CDR-SB endpoint. CDR-SB was a prespecified secondary. n_int=609 verified = lecanemab arm (854 treated: 609 lecanemab/245 placebo).",
+      "n_int": 609,
+      "year": 2021,
+      "finding": "Missed the 12-month ADCOMS primary (64% vs 80% probability threshold). At 18 months the 10-mg/kg biweekly dose showed 26-33% less decline on CDR-SB vs placebo (secondary) plus amyloid and ADAS-cog14 benefit \u2014 directionally consistent with the claim but on a secondary endpoint."
+    },
+    {
+      "source_id": "PMID:38730496",
+      "citation": "Honig LS, et al. Updated safety results from phase 3 lecanemab study in early Alzheimer's disease. Alzheimers Res Ther. 2024;16(1):105. DOI:10.1186/s13195-024-01441-8 (CLARITY-AD Core+OLE; NCT03887455).",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Safety/tolerability report of the pivotal trial + open-label extension; not an efficacy endpoint, so direction=0 and outcome_match=false. Included to characterize the risk side of the benefit-risk balance underlying the consensus. Verified on PubMed.",
+      "n_int": 1612,
+      "year": 2024,
+      "finding": "ARIA-E 13.6% (34.5% in ApoE e4 homozygotes), ARIA-H microhemorrhages 16.0%, infusion reactions 24.5%; 3 ICH deaths across Core+OLE (2 lecanemab in OLE, with concurrent tPA/anticoagulation). Confirms the tolerability caveats that temper \u2014 but do not overturn \u2014 the efficacy consensus."
+    },
+    {
+      "source_id": "PMID:37874099",
+      "citation": "Cohen S, et al. Lecanemab Clarity AD: Quality-of-Life Results from a Randomized, Double-Blind Phase 3 Trial. J Prev Alzheimers Dis. 2023;10(4):771-777. DOI:10.14283/jpad.2023.123 (NCT03887455).",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "HRQoL/caregiver-burden outcomes were EXPLORATORY in CLARITY-AD, not the CDR-SB clinical-decline primary \u2014 outcome_match=false. Supportive, patient-centered corroboration of the same trial's benefit. Verified on PubMed.",
+      "n_int": 898,
+      "year": 2023,
+      "finding": "At 18 months: 49% (EQ-5D-5L) and 56% (QOL-AD, subject-rated) less HRQoL decline and 38% less increase in caregiver burden (ZBI) vs placebo \u2014 consistent with, and adds patient-relevant weight to, the CDR-SB clinical-decline benefit."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Lecanemab (Leqembi) slows clinical decline in early symptomatic Alzheimer's disease. The pivotal 18-month phase 3 CLARITY-AD trial met its primary endpoint, showing a statistically significant ~27% slowing of decline on the CDR-SB versus placebo, with consistent benefit across secondary cognitive and functional measures and a large reduction in brain amyloid. This led to full FDA approval in July 2023. The effect size is modest and treatment carries a risk of amyloid-related imaging abnormalities (ARIA), but the direction of benefit on the clinical endpoint is well established and independently echoed by donanemab's TRAILBLAZER-ALZ 2 trial."
+  },
+  "provenance": "All 6 rows independently re-verified via PubMed get_article_metadata (PMIDs \u2192 exact titles, DOIs, N, effect sizes, CIs, article types) and ClinicalTrials.gov (NCT03887455 CLARITY-AD design/N confirmed). CDR-SB deltas, CIs, N, and ARIA rates taken verbatim from retrieved PubMed abstracts. FDA traditional approval (6 July 2023) confirmed via FDA press release, Eisai, and NIA. No retracted publications in this evidence base (no 'Retracted Publication' article type on any PMID). According to PubMed and ClinicalTrials.gov.",
+  "notes": "Critical distinction for the gate: CLARITY-AD is the only row where the PRIMARY endpoint IS the claimed CDR-SB clinical decline (outcome_match=true, direction=+1) \u2014 this alone anchors 'Supported'. Study 201 and TRAILBLAZER-ALZ 2 support direction but on secondary/surrogate primaries (outcome_match=false). Aducanumab EMERGE/ENGAGE (outcome_match=true, direction=0) is the honest discordant class evidence but is a DIFFERENT drug with a contested futility-reanalysis, so it does not contradict lecanemab specifically. Main real-world debate is clinical MEANINGFULNESS of a 0.45-point CDR-SB difference and ARIA safety, not whether decline is slowed. Adversarial re-check found zero hallucinated PMIDs, zero wrong Ns, zero direction errors, zero fabricated retractions. GOLD verdict = Supported independent of any gate logic. [CORRECTED: removed cross-drug rows \u2014 EMERGE (aducanumab) and a donanemab row were wrongly included; the claim is lecanemab-specific.]",
+  "build_confidence": "high"
+}

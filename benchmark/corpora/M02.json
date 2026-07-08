@@ -1,0 +1,84 @@
+{
+  "claim_id": "M02",
+  "claim": "Tirzepatide produces clinically significant weight loss in adults with obesity",
+  "domain": "glp1",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented clinical and regulatory consensus is unambiguously Supported. In SURMOUNT-1 (Jastreboff, NEJM 2022, NCT04184622; n=2539 adults with obesity WITHOUT diabetes), tirzepatide produced mean weight change of -15.0%/-19.5%/-20.9% (5/10/15 mg) vs -3.1% placebo, with 85-91% of participants achieving >=5% weight loss vs 35% placebo \u2014 the exact claimed population and outcome, primary endpoint being percent body weight change (not a surrogate). SURMOUNT-2 (Garvey, Lancet 2023, NCT04657003) confirmed -12.8%/-14.7% vs -3.2% placebo in obesity WITH type 2 diabetes. The head-to-head SURMOUNT-5 trial (Aronne, NEJM 2025, NCT05822830) showed tirzepatide SUPERIOR to semaglutide 2.4 mg (-20.2% vs -13.7%), and STEP 1 (Wilding, NEJM 2021, NCT03548935) independently established the same magnitude of benefit for the GLP-1 comparator class (-14.9% vs -2.4%), reinforcing that this is a robust, replicated class-and-molecule effect. The US FDA approved tirzepatide (Zepbound) for chronic weight management in adults with obesity/overweight on 8 Nov 2023 on the strength of SURMOUNT-1 and SURMOUNT-2. Every pivotal trial measured body weight as the primary endpoint (outcome_match true), populations are on-target, and no integrity concerns (no retractions) exist. Note the trials are Eli Lilly-sponsored, but the effect is externally corroborated by independent regulatory review and by the semaglutide class comparator.",
+  "outcome": "body weight reduction (percent change from baseline; proportion achieving >=5% weight loss)",
+  "population": "adults with obesity without diabetes (primary), with supporting evidence in obesity with type 2 diabetes",
+  "provenance": "PubMed-verified PMIDs/DOIs + ClinicalTrials.gov NCT IDs + FDA press release/CDTL review; all sources independently re-checked in-session (5 PMIDs resolved to stated titles/journals/years; 4 NCTs resolved with matching design/N; no retraction notices)",
+  "notes": "\"Clinically significant\" is well-exceeded: FDA/obesity-medicine benchmarks treat >=5% placebo-adjusted weight loss as clinically meaningful; tirzepatide delivers ~12-18 percentage-point placebo-adjusted reductions. Consensus stands independent of any gate logic. All primary trials are industry (Eli Lilly) sponsored, which is disclosed but does not overturn the verdict given FDA regulatory approval and independent semaglutide-comparator replication. Fact-check note: row 5 is an indirect treatment comparison, not a true systematic review; labeled 'systematic review' only because the schema lacks an ITC/NMA category, and its integrity_note discloses the ITC nature.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Tirzepatide (Zepbound/Mounjaro), a dual GIP/GLP-1 receptor agonist, produces clinically significant weight loss in adults with obesity. In the pivotal SURMOUNT-1 phase 3 trial, adults with obesity without diabetes lost roughly 15-21% of body weight at the 5-15 mg doses over 72 weeks versus about 3% with placebo, and the majority achieved at least 5% weight loss. It is FDA-approved for chronic weight management and in the head-to-head SURMOUNT-5 trial outperformed semaglutide. This is one of the most effective pharmacologic obesity treatments available."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:35658024",
+      "citation": "Jastreboff AM, et al. Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1). N Engl J Med. 2022;387(3):205-216. DOI:10.1056/NEJMoa2206038",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 double-blind placebo-controlled pivotal trial; Eli Lilly-sponsored (disclosed); no retraction. Registered NCT04184622. Independently re-verified: PubMed title/journal/year and ClinicalTrials.gov N=2539, phase 3, obesity-without-diabetes, coprimary endpoints (percent weight change + >=5% reduction) all match.",
+      "n_int": 2539,
+      "year": 2022,
+      "finding": "In adults with obesity WITHOUT diabetes, mean weight change at 72 wk was -15.0%/-19.5%/-20.9% (tirzepatide 5/10/15 mg) vs -3.1% placebo; 85-91% achieved >=5% weight loss vs 35% placebo. Primary endpoint = percent body-weight change (exact claimed outcome and population)."
+    },
+    {
+      "source_id": "PMID:37385275",
+      "citation": "Garvey WT, et al. Tirzepatide once weekly for the treatment of obesity in people with type 2 diabetes (SURMOUNT-2). Lancet. 2023;402(10402):613-626. DOI:10.1016/S0140-6736(23)01200-X",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 double-blind placebo-controlled; Eli Lilly-sponsored (disclosed); no retraction. Registered NCT04657003. Population is obesity WITH T2D (adjacent, not the without-diabetes core population). Independently re-verified: PubMed abstract confirms n=938 (312/311/315), LS-mean -12.8/-14.7 vs -3.2%; NCT record matches phase 3, N=938.",
+      "n_int": 938,
+      "year": 2023,
+      "finding": "In adults with obesity and type 2 diabetes, LS-mean weight change at 72 wk was -12.8%/-14.7% (10/15 mg) vs -3.2% placebo; 79-83% achieved >=5% weight loss vs 32% placebo. Confirms substantial weight loss in a comorbid population."
+    },
+    {
+      "source_id": "PMID:40353578",
+      "citation": "Aronne LJ, et al. Tirzepatide as Compared with Semaglutide for the Treatment of Obesity (SURMOUNT-5). N Engl J Med. 2025;393(1):26-36. DOI:10.1056/NEJMoa2416394",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3b open-label head-to-head active-comparator superiority trial; Eli Lilly-sponsored (disclosed); no retraction. Registered NCT05822830. Open-label design is a limitation but primary endpoint is objective body weight. Independently re-verified: PubMed abstract confirms n=751, -20.2% vs -13.7% (P<0.001); NCT record confirms phase 3, N=751, obesity-without-diabetes.",
+      "n_int": 751,
+      "year": 2025,
+      "finding": "In adults with obesity WITHOUT diabetes, tirzepatide (max tolerated 10/15 mg) produced -20.2% weight change vs -13.7% for semaglutide 2.4 mg at 72 wk (P<0.001); tirzepatide superior on all >=10/15/20/25% thresholds. Direct comparator confirmation in the exact claimed population."
+    },
+    {
+      "source_id": "PMID:33567185",
+      "citation": "Wilding JPH, et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1). N Engl J Med. 2021;384(11):989-1002. DOI:10.1056/NEJMoa2032183",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Comparator/class-effect anchor. Semaglutide (not tirzepatide), Novo Nordisk-sponsored; establishes the incretin class weight-loss effect that tirzepatide exceeds. Registered NCT03548935; no retraction. Independently re-verified: PubMed abstract confirms n=1961, -14.9% vs -2.4%, 86.4% >=5%.",
+      "n_int": 1961,
+      "year": 2021,
+      "finding": "Semaglutide 2.4 mg gave -14.9% weight change vs -2.4% placebo at 68 wk; 86% achieved >=5% loss. Independent (non-Lilly) evidence that GLP-1-based incretin therapy produces clinically significant weight loss, contextualizing and reinforcing the tirzepatide claim."
+    },
+    {
+      "source_id": "PMID:40321113",
+      "citation": "Hankosky ER, et al. Tirzepatide 10 and 15 mg versus semaglutide 2.4 mg in obesity/overweight with type 2 diabetes: an indirect treatment comparison. Diabetes Obes Metab. 2025;27(7):3757-3765. DOI:10.1111/dom.16401",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Bucher indirect treatment comparison (SURMOUNT-2 vs STEP 2); Eli Lilly-authored (disclosed conflict). Evidence-synthesis corroboration, NOT an independent RCT and NOT a formal systematic review \u2014 'systematic review' used only because the schema enum lacks an indirect-comparison/network-meta-analysis category. Independently re-verified via PubMed: title/DOI/journal/pages match; mean differences 2.57%/4.79% (p<0.01) confirmed; PubMed 'RCT' article-type tag reflects the underlying source trials, not this paper's design. n_int=623 = the two tirzepatide arms of SURMOUNT-2 (312+311).",
+      "n_int": 623,
+      "year": 2025,
+      "finding": "Indirect comparison found tirzepatide 10/15 mg associated with significantly greater weight reduction than semaglutide 2.4 mg (mean difference 2.57%/4.79%, P<0.01), consistent with pooled/comparative-effectiveness support for the weight-loss claim. Cross-trial (not head-to-head) estimate; the direct head-to-head is provided by SURMOUNT-5."
+    }
+  ]
+}

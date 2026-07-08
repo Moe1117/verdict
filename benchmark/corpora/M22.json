@@ -1,0 +1,84 @@
+{
+  "claim_id": "M22",
+  "claim": "Adding ezetimibe to statin therapy reduces cardiovascular events after acute coronary syndrome",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The claim reflects documented clinical consensus. IMPROVE-IT (Cannon, NEJM 2015; NCT00202878; N=18,144 post-ACS) showed adding ezetimibe to simvastatin significantly reduced the primary MACE composite: 7-yr KM 32.7% vs 34.7%, HR 0.936 (95% CI 0.89-0.99), P=0.016 \u2014 a modest but positive and statistically significant benefit tracking incremental LDL-C lowering. Corroborated by the Cochrane meta-analysis (Zhan 2018; N=23,499; RR 0.94, 95% CI 0.90-0.98), driven mainly by reductions in non-fatal MI and non-fatal stroke, and by the Silverman/Sabatine JAMA 2016 meta-regression (312,175 participants) establishing that ezetimibe delivers the expected per-mmol/L LDL-C cardiovascular risk reduction indistinguishable from statins \u2014 grounding the benefit in the causal LDL hypothesis. HIJ-PROPER (N=1,734) was neutral on its primary composite (HR 0.89, 95% CI 0.76-1.04, P=0.152) but was smaller and tested an LDL-target strategy; RACING confirmed a moderate-statin+ezetimibe combination is non-inferior to high-intensity statin for MACE. Guidelines (2018 ACC/AHA, 2019 ESC/EAS, 2023 ESC ACS) endorse adding ezetimibe as a Class I option when LDL-C goals are unmet on maximally tolerated statin after ACS. Balance of evidence and guideline consensus = Supported (effect real but modest in absolute terms).",
+  "outcome": "MACE composite (CV death, non-fatal MI, unstable angina requiring rehospitalization, coronary revascularization, non-fatal stroke)",
+  "population": "Post-acute coronary syndrome patients on statin therapy",
+  "rows": [
+    {
+      "source_id": "PMID:26039521",
+      "citation": "Cannon CP, et al. Ezetimibe Added to Statin Therapy after Acute Coronary Syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-97. DOI:10.1056/NEJMoa1410489. NCT00202878.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Merck-funded pivotal trial; large, double-blind, adjudicated endpoints; no retraction (PubMed article_types = Randomized Controlled Trial, no retraction notice). Modest absolute effect (2.0 pp 7-yr KM difference) but pre-specified primary endpoint met. NCT00202878 confirms N=18,144, Phase 3, adjudicated primary composite.",
+      "n_int": 18144,
+      "year": 2015,
+      "finding": "In 18,144 patients within 10 days of ACS, simvastatin+ezetimibe vs simvastatin+placebo reduced the primary MACE composite: 7-yr KM 32.7% vs 34.7%, HR 0.936 (95% CI 0.89-0.99), P=0.016; time-weighted LDL-C 53.7 vs 69.5 mg/dL. Directly supports the claimed outcome in the claimed population."
+    },
+    {
+      "source_id": "PMID:30480766",
+      "citation": "Zhan S, et al. Ezetimibe for the prevention of cardiovascular disease and all-cause mortality events. Cochrane Database Syst Rev. 2018;11:CD012502. DOI:10.1002/14651858.CD012502.pub2.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Cochrane systematic review, GRADE moderate-to-high quality; heavily weighted by IMPROVE-IT (41.5-98.4% weight across analyses). Evidence base predominantly established ASCVD/ACS on ezetimibe+statin. PubMed article_types = Meta-Analysis/Systematic Review; no retraction.",
+      "n_int": 23499,
+      "year": 2018,
+      "finding": "Across 26 RCTs (23,499 participants), ezetimibe added to statin reduced MACE (RR 0.94, 95% CI 0.90-0.98), non-fatal MI (RR 0.88) and non-fatal stroke (RR 0.83), with no effect on all-cause or CV mortality. Confirms modest MACE benefit; benefit concentrated in established ASCVD/ACS."
+    },
+    {
+      "source_id": "PMID:27673306",
+      "citation": "Silverman MG, Ference BA, ... Sabatine MS. Association Between Lowering LDL-C and Cardiovascular Risk Reduction Among Different Therapeutic Interventions: A Systematic Review and Meta-analysis. JAMA. 2016;316(12):1289-97. DOI:10.1001/jama.2016.13985.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Meta-regression across 49 trials/312,175 participants (mixed primary+secondary prevention, not ACS-specific); RR 0.77 (0.75-0.79) is the pooled figure for the 5 combined LDL-receptor-upregulating therapies (diet, bile acid sequestrants, ileal bypass, ezetimibe, statins), between-group vs statins P=0.72. Establishes mechanistic/dose-response consistency rather than an ACS-specific effect estimate.",
+      "n_int": 312175,
+      "year": 2016,
+      "finding": "Ezetimibe (grouped with LDL-receptor-upregulating therapies) produced the expected per-1-mmol/L LDL-C major-vascular-event reduction (RR 0.77, 95% CI 0.75-0.79), statistically indistinguishable from statins (P=0.72). Supports the claim causally: ezetimibe's LDL-C lowering translates to proportional CV event reduction."
+    },
+    {
+      "source_id": "PMID:35863366",
+      "citation": "Kim BK, et al. Long-term efficacy and safety of moderate-intensity statin with ezetimibe combination therapy versus high-intensity statin monotherapy in patients with atherosclerotic cardiovascular disease (RACING). Lancet. 2022;400(10349):380-90. DOI:10.1016/S0140-6736(22)00916-3. NCT03044665.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Non-inferiority design (comparator is high-intensity statin, NOT statin+placebo), broad ASCVD population (not restricted to ACS), open-label. Does not test add-on-vs-placebo, so it is neutral evidence for the specific add-on claim while confirming the combination strategy's clinical utility. PubMed article_types = Randomized Controlled Trial/Equivalence Trial; NCT03044665 confirms N=3,780 (registry status displays UNKNOWN/never updated, but the Lancet paper states the trial is complete).",
+      "n_int": 3780,
+      "year": 2022,
+      "finding": "In 3,780 ASCVD patients, moderate-statin+ezetimibe was non-inferior to high-intensity statin for the 3-yr MACE composite (9.1% vs 9.9%; absolute diff -0.78%, 90% CI -2.39 to 0.83), with more patients reaching LDL-C <70 mg/dL and fewer drug-intolerance discontinuations. Confirms combination is clinically comparable to intensifying statin; not a direct superiority-vs-placebo test."
+    },
+    {
+      "source_id": "PMID:28430910",
+      "citation": "Hagiwara N, et al. Low-density lipoprotein cholesterol targeting with pitavastatin + ezetimibe for patients with acute coronary syndrome and dyslipidaemia: the HIJ-PROPER study. Eur Heart J. 2017;38(29):2264-76. DOI:10.1093/eurheartj/ehx162. UMIN000002742.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Open-label, blinded-endpoint; smaller (N=1,734) and underpowered for MACE; tests an LDL-target strategy (statin+ezetimibe to <70 vs statin monotherapy to 90-100 mg/dL) rather than fixed add-on. Neutral primary result; CI consistent with IMPROVE-IT point estimate. PubMed article_types = Randomized Controlled Trial; no retraction.",
+      "n_int": 1734,
+      "year": 2017,
+      "finding": "In 1,734 Japanese ACS+dyslipidaemia patients, pitavastatin+ezetimibe did not significantly reduce the primary composite vs pitavastatin monotherapy (32.8% vs 36.9%; HR 0.89, 95% CI 0.76-1.04, P=0.152). Neutral, but a pre-specified high-cholesterol-absorption (high sitosterol) subgroup showed benefit (HR 0.71, 95% CI 0.56-0.91)."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Adding ezetimibe to statin therapy reduces cardiovascular events after acute coronary syndrome. This was established by the IMPROVE-IT trial (Cannon et al., NEJM 2015), which randomized over 18,000 post-ACS patients to simvastatin plus ezetimibe versus simvastatin alone and found a significant reduction in the primary composite of cardiovascular death, MI, unstable angina, revascularization, and stroke (HR ~0.94), with benefit tied to lower achieved LDL-C. Major guidelines (ACC/AHA, ESC/EAS) recommend adding ezetimibe when LDL-C targets are not met on maximally tolerated statins post-ACS. The benefit is real but modest in absolute terms."
+  },
+  "provenance": "All rows independently re-verified against PubMed (PMIDs + titles/DOIs + publication types confirmed via get_article_metadata) and ClinicalTrials.gov (NCT00202878 IMPROVE-IT and NCT03044665 RACING design/N confirmed via get_trial_details). Effect estimates (HRs, CIs, RRs, sample sizes) taken directly from verified PubMed abstracts. No retracted publications found (article_types checked on all 5). HIJ-PROPER UMIN000002742 registration reported in its verified primary paper.",
+  "build_confidence": "high",
+  "notes": "Verdict GOLD = Supported, with the qualifier that the effect is modest (IMPROVE-IT absolute 2.0 pp 7-yr KM reduction; HR 0.936) and driven by non-fatal MI/stroke and revascularization, not mortality. Nuances: (1) IMPROVE-IT is the single pivotal add-on-vs-placebo RCT; the meta-analytic MACE signal (Cochrane RR 0.94) is heavily IMPROVE-IT-weighted (41.5-98.4%). (2) HIJ-PROPER was neutral on its primary composite but underpowered and tested an LDL-target design. (3) RACING is non-inferiority vs high-intensity statin (different comparator), coded direction 0 to avoid inflating support. (4) outcome_match=true for all trial rows because each measured a genuine MACE clinical composite, not a pure surrogate; Silverman is a meta-regression using LDL-C as exposure but major vascular events as outcome. Honest consensus is Supported-but-modest. Adversarial fact-check found no defects: all PMIDs real and correctly cited, Ns correct, directions honest, designs correctly labeled, no fabricated retractions."
+}

@@ -1,0 +1,96 @@
+{
+  "claim_id": "M17",
+  "claim": "Evolocumab (a PCSK9 inhibitor) reduces cardiovascular events in patients with atherosclerotic cardiovascular disease on statins",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Documented FDA + guideline consensus: evolocumab (Repatha) is FDA-approved (Dec 2017 sBLA; reaffirmed in the current DailyMed/2025 label) to reduce the risk of MACE (CV death, MI, stroke, unstable-angina hospitalization, coronary revascularization) in adults with established cardiovascular disease, on the basis of the FOURIER RCT (HR 0.85 primary composite). ACC/AHA and ESC/EAS lipid guidelines endorse PCSK9 inhibition added to statins in high-risk ASCVD. Consensus: CV-event (composite) reduction is established; benefit is driven by nonfatal MI/stroke/revascularization with no mortality reduction in FOURIER.",
+  "outcome": "MACE composite (CV death, MI, stroke, hospitalization for unstable angina, coronary revascularization)",
+  "population": "Patients with atherosclerotic cardiovascular disease (ASCVD) on statin therapy",
+  "build_confidence": "high",
+  "rows": [
+    {
+      "source_id": "PMID:28304224",
+      "citation": "Sabatine MS, et al. Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease (FOURIER). N Engl J Med. 2017. DOI:10.1056/NEJMoa1615664. NCT01764633.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark pivotal Phase 3 double-blind placebo-controlled RCT; TIMI Study Group adjudicated; Amgen-funded but independently adjudicated. PubMed article types: Journal Article / Multicenter Study / Randomized Controlled Trial. Not retracted.",
+      "n_int": 27564,
+      "year": 2017,
+      "finding": "In 27,564 ASCVD patients with LDL-C >=70 mg/dL on statin therapy, evolocumab reduced the primary MACE composite (CV death, MI, stroke, hospitalization for unstable angina, coronary revascularization) HR 0.85 (95% CI 0.79-0.92, p<0.001) and the key secondary composite (CV death/MI/stroke) HR 0.80 (0.73-0.88). Hard clinical composite, not a surrogate. No reduction in CV mortality (HR 1.05) or all-cause mortality (HR 1.04). Verified against PubMed abstract and the FDA/DailyMed label."
+    },
+    {
+      "source_id": "PMID:36779348",
+      "citation": "Gaba P, O'Donoghue ML, ... Sabatine MS. Association Between Achieved Low-Density Lipoprotein Cholesterol Levels and Long-Term Cardiovascular and Safety Outcomes: An Analysis of FOURIER-OLE. Circulation. 2023;147(16):1192-1203. DOI:10.1161/CIRCULATIONAHA.122.063399. NCT01764633.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified analysis of the FOURIER open-label extension (6,635 patients continued open-label evolocumab; additional median ~5 yr; total follow-up up to 8.6 yr). Article types: RCT / Journal Article. Not retracted. NOTE: achieved-LDL-C gradient association analysis within the treated cohort, not the randomized evolocumab-vs-placebo contrast \u2014 supportive durability evidence rather than a primary randomized outcome test.",
+      "n_int": 6635,
+      "year": 2023,
+      "finding": "Long-term open-label evolocumab in ASCVD patients showed a monotonic relationship between lower achieved LDL-C (down to <20 mg/dL) and lower risk of the primary MACE composite and the key secondary composite (CV death/MI/stroke), sustained up to 8.6 years with no significant safety signal. Supports durability of the CV event-reduction benefit; observational within-cohort LDL gradient, not the randomized contrast. Title/authors/journal/vol/pages/DOI/PMID verified in PubMed."
+    },
+    {
+      "source_id": "PMID:30403574",
+      "citation": "Schwartz GG, et al. Alirocumab and Cardiovascular Outcomes after Acute Coronary Syndrome (ODYSSEY OUTCOMES). N Engl J Med. 2018. DOI:10.1056/NEJMoa1801174. NCT01663402.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent Phase 3 pivotal RCT of a DIFFERENT PCSK9 inhibitor (alirocumab); class-level corroboration. Sanofi/Regeneron-funded, independently adjudicated. Article types: Journal Article / Multicenter Study / RCT. Not retracted.",
+      "n_int": 18924,
+      "year": 2018,
+      "finding": "In 18,924 post-ACS patients on high-intensity statin, alirocumab reduced the primary MACE composite (CHD death, nonfatal MI, ischemic stroke, unstable angina requiring hospitalization) HR 0.85 (95% CI 0.78-0.93, p<0.001) and reduced all-cause mortality HR 0.85 (0.73-0.98). Corroborates PCSK9-inhibition-reduces-CV-events in statin-treated ASCVD; caveat: alirocumab (not evolocumab), post-ACS subset. Verified against PubMed abstract."
+    },
+    {
+      "source_id": "PMID:38055686",
+      "citation": "Imran TF, et al. PCSK9 inhibitors and small interfering RNA therapy for cardiovascular risk reduction: a systematic review and meta-analysis. PLoS One. 2023;18(12):e0295359. DOI:10.1371/journal.pone.0295359.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Systematic review/meta-analysis of 54 RCTs, 87,669 participants; evolocumab subset 21 RCTs (n=41,361). NIH-supported. Article types: Meta-Analysis / Systematic Review / Journal Article. Not retracted.",
+      "n_int": 41361,
+      "year": 2023,
+      "finding": "Pooling 21 evolocumab RCTs (n=41,361), evolocumab reduced overall MACE OR 0.85 (95% CI 0.80-0.89), MI OR 0.72, coronary revascularization OR 0.77, and stroke OR 0.79 vs placebo on background statin. Meta-analytic confirmation of the evolocumab-specific CV event-reduction claim. All effect sizes verified verbatim against the PubMed abstract."
+    },
+    {
+      "source_id": "PMID:28304242",
+      "citation": "Ridker PM, et al. Cardiovascular Efficacy and Safety of Bococizumab in High-Risk Patients (SPIRE-1/SPIRE-2). N Engl J Med. 2017. DOI:10.1056/NEJMoa1701488. NCT01975376, NCT01975389.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Two parallel Phase 3 PCSK9i RCTs (bococizumab, a DIFFERENT, humanized-not-fully-human antibody) stopped early by sponsor (Pfizer) for immunogenicity. Article types: Comparative Study / Multicenter Study / RCT. Not retracted. Context/null row \u2014 NOT evolocumab; drug-specific liability. NCTs (NCT01975376, NCT01975389) added from the abstract.",
+      "n_int": 27438,
+      "year": 2017,
+      "finding": "In 27,438 high-risk patients (93% on statins), bococizumab showed NO significant benefit on the pooled primary CV composite: HR 0.88 (95% CI 0.76-1.02, p=0.08). SPIRE-1 (lower-risk) was null (HR 0.99, 0.80-1.22); only higher-risk SPIRE-2 reached significance (HR 0.79, 0.65-0.97). Trials halted early for immunogenicity. Corpus previously coded direction:1; corrected to direction:0 (null/mixed on the pooled primary endpoint). Illustrates class benefit is contingent on durable LDL lowering, which bococizumab did not sustain."
+    },
+    {
+      "source_id": "PMID:39304616",
+      "citation": "Movahedan M, Ellis UM, Barry AR. Efficacy of PCSK9 Inhibitors in Patients with Heterozygous Familial Hypercholesterolemia: A Meta-analysis. Am J Cardiovasc Drugs. 2024;25(1):47-55. DOI:10.1007/s40256-024-00682-0.",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Meta-analysis of 7 RCTs (N=2,196) in HeFH only; median follow-up 24 weeks \u2014 underpowered/too short for MACE. Population is HeFH lipid trials, not the FOURIER ASCVD-outcomes population. Article types: Meta-Analysis / Systematic Review / Journal Article. Not retracted.",
+      "n_int": 2196,
+      "year": 2024,
+      "finding": "In HeFH patients, PCSK9i robustly lowered LDL-C (-54%) but had an uncertain, non-significant effect on MACE (OR 1.25, 95% CI 0.69-2.26) and all-cause death (OR 2.47, 95% CI 0.33-18.26) due to low event rate and 24-week follow-up. Null/uncertain boundary row: short-term, non-ASCVD-outcomes population; does not contradict FOURIER. Effect sizes verified verbatim against the PubMed abstract."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Evolocumab reduces cardiovascular events in patients with atherosclerotic cardiovascular disease on statin therapy. This is established by the FOURIER trial (NEJM 2017), which randomized 27,564 ASCVD patients on statins and showed evolocumab significantly reduced the primary MACE composite (HR 0.85, 95% CI 0.79-0.92). The benefit is corroborated by the alirocumab ODYSSEY OUTCOMES trial (HR 0.85) and endorsed by ACC/AHA and ESC/EAS guidelines and by the FDA label (indicated to reduce MACE in established CVD). Caveat: FOURIER showed no mortality reduction (CV death HR 1.05, all-cause HR 1.04); the benefit is driven by nonfatal MI, stroke, and revascularization."
+  },
+  "notes": "[CORRECTED: bococizumab (SPIRE) and alirocumab (ODYSSEY) are different drugs (class context), marked off-population; the claim is evolocumab-specific.]"
+}

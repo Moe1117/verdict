@@ -1,0 +1,71 @@
+{
+  "claim_id": "M19",
+  "claim": "Dapagliflozin reduces heart-failure hospitalization or cardiovascular death in heart failure with reduced ejection fraction",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "This is settled clinical/regulatory consensus. The pivotal DAPA-HF RCT (McMurray, NEJM 2019; N=4744 HFrEF with and without diabetes) tested the EXACT claimed composite primary endpoint \u2014 worsening HF (hospitalization/urgent HF visit) or CV death \u2014 and showed a highly significant 26% relative reduction (HR 0.74, 95% CI 0.65-0.85, p<0.001), with benefit consistent regardless of diabetes status. The FDA approved dapagliflozin (Farxiga) for HFrEF on 5 May 2020 specifically to reduce the risk of CV death and HF hospitalization, based on DAPA-HF \u2014 direct regulatory endorsement of the claim. The independent EMPEROR-Reduced RCT (Packer, NEJM 2020; empagliflozin, N=3730) confirmed a class effect on the same composite endpoint (HR 0.75, 95% CI 0.65-0.86), and the prospective Zannad IPD meta-analysis (Lancet 2020) pooling both trials confirmed reductions in CV death or HF hospitalization. Every pivotal trial measured the claimed hard-outcome composite directly (no surrogate substitution), all point the same direction, and the finding is enshrined in ACC/AHA/HFSA and ESC guidelines as a Class I recommendation for HFrEF. No contradicting RCT exists.",
+  "outcome": "Composite of worsening heart failure event (HF hospitalization or urgent HF visit) or cardiovascular death",
+  "population": "HFrEF (LVEF <=40%, NYHA II-IV), with and without type 2 diabetes",
+  "rows": [
+    {
+      "source_id": "PMID:31535829",
+      "citation": "McMurray JJV, Solomon SD, Inzucchi SE, et al. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction (DAPA-HF). N Engl J Med. 2019;381(21):1995-2008. DOI:10.1056/NEJMoa1911303",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark pivotal double-blind placebo-controlled RCT (NCT03036124); PubMed article types confirm 'Randomized Controlled Trial' + 'Clinical Trial, Phase III'; not retracted; formed basis of FDA HFrEF approval.",
+      "n_int": 2373,
+      "year": 2019,
+      "finding": "Primary composite of worsening HF or CV death occurred in 16.3% (dapagliflozin) vs 21.2% (placebo); HR 0.74 (95% CI 0.65-0.85, p<0.001). Benefit consistent with and without diabetes. Primary endpoint IS the claimed composite (hard outcome, not surrogate)."
+    },
+    {
+      "source_id": "NCT03036124",
+      "citation": "DAPA-HF trial registry: Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic HFrEF. ClinicalTrials.gov NCT03036124. Sponsor: AstraZeneca.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Registry entry verified: N=4744, PHASE3, double-blind placebo-controlled, HFrEF (LVEF<=40%, NYHA II-IV), pre-specified primary endpoint = worsening HF or CV death (exactly the claimed outcome), status COMPLETED.",
+      "n_int": 2373,
+      "year": 2019,
+      "finding": "Event-driven Phase 3 trial; enrollment 4744; primary endpoint prospectively defined as worsening HF or CV death, matching the claim verbatim; confirms design integrity of PMID:31535829."
+    },
+    {
+      "source_id": "PMID:32865377",
+      "citation": "Packer M, Anker SD, Butler J, et al. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure (EMPEROR-Reduced). N Engl J Med. 2020;383(15):1413-1424. DOI:10.1056/NEJMoa2022190",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent pivotal RCT of a different SGLT2 inhibitor (empagliflozin, NCT03057977); PubMed article type 'Randomized Controlled Trial'; confirms class effect. Not retracted.",
+      "n_int": 1863,
+      "year": 2020,
+      "finding": "Primary composite of CV death or HF hospitalization: HR 0.75 (95% CI 0.65-0.86, p<0.001) in HFrEF (N=3730). Corroborates the claimed outcome as an SGLT2-inhibitor class effect; primary endpoint IS the claimed composite."
+    },
+    {
+      "source_id": "PMID:32877652",
+      "citation": "Zannad F, Ferreira JP, Pocock SJ, et al. SGLT2 inhibitors in patients with heart failure with reduced ejection fraction: a meta-analysis of the EMPEROR-Reduced and DAPA-HF trials. Lancet. 2020;396(10254):819-829. DOI:10.1016/S0140-6736(20)31824-9",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pre-specified prospective individual-patient-data meta-analysis pooling the two pivotal HFrEF RCTs (N=8474); PubMed article type 'Meta-Analysis'; highest-tier evidence synthesis.",
+      "n_int": 4236,
+      "year": 2020,
+      "finding": "Pooled SGLT2 inhibitors reduced CV death or first HF hospitalization (HR 0.74, 95% CI 0.68-0.82) and CV death alone (HR 0.86, 95% CI 0.76-0.98) in HFrEF, consistent across diabetes status. Directly supports the claimed composite outcome."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Dapagliflozin reduces the composite of heart-failure hospitalization or cardiovascular death in HFrEF. This was established by the pivotal DAPA-HF trial (NEJM 2019), which randomized 4,744 patients with HFrEF (with and without type 2 diabetes) and found a 26% relative risk reduction in the primary composite of worsening heart failure or CV death (HR 0.74, 95% CI 0.65-0.85). The FDA approved dapagliflozin for this indication in 2020, and the finding was corroborated as a class effect by EMPEROR-Reduced (empagliflozin) and confirmed in meta-analysis. It is a Class I guideline-recommended therapy for HFrEF."
+  },
+  "provenance": "Adversarial fact-check re-verification this session: PubMed get_article_metadata confirmed PMIDs 31535829, 32865377, 32877652 (titles, DOIs, years, article types incl. RCT/Phase III/Meta-Analysis; no Retracted Publication type). ClinicalTrials.gov get_trial_details confirmed NCT03036124 (DAPA-HF: N=4744, PHASE3, double-blind placebo-controlled, LVEF<=40%, NYHA II-IV, primary=worsening HF or CV death, COMPLETED). Exa web search confirmed archived FDA press release (5 May 2020, N=4744, 'reduce risk of cardiovascular death and hospitalization for heart failure') and AstraZeneca release (HR 0.74, 26% RRR). No invented studies, PMIDs, or numbers.",
+  "build_confidence": "high",
+  "notes": "Corpus verified clean by adversarial re-check \u2014 no corrections needed. Two independent pivotal RCTs with the EXACT claimed composite as pre-specified primary endpoint (outcome_match=true throughout, no surrogate), a prospective IPD meta-analysis, plus direct FDA regulatory approval. All rows direction=+1; no contradicting RCT; no retractions. Gold verdict Supported = guideline/regulatory consensus (ACC/AHA/HFSA 2022, ESC 2021 Class I). n_int values reflect active-arm sizes (DAPA-HF ~2373, EMPEROR-Reduced empagliflozin 1863, meta-analysis pooled active ~4236)."
+}

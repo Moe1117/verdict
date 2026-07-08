@@ -21,12 +21,19 @@ export interface EvidenceRow {
   note: string
 }
 
+export interface Baseline {
+  answer: 'Yes' | 'No'
+  confidence: string
+  text: string
+}
+
 export interface Card {
   id: string
   claim: string
   verdict: VerdictState
   expected: string
   confidence: string
+  baseline?: Baseline | null
   gate_trace: GateStep[]
   ledger: EvidenceRow[]
   disclaimer: string

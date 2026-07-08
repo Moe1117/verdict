@@ -1,0 +1,97 @@
+{
+  "claim_id": "M23",
+  "claim": "Low-dose colchicine reduces cardiovascular events in patients with coronary artery disease",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Contested",
+  "gold_rationale": "The claim is genuinely split at the level of pivotal trial evidence. Two landmark placebo-controlled RCTs measured the CLAIMED outcome (a MACE composite) as their PRIMARY endpoint and were positive: COLCOT (N=4745, post-MI, HR 0.77, 95% CI 0.61-0.96; NEJM 2019, DOI 10.1056/NEJMoa1912388) and LoDoCo2 (N=5522, chronic coronary disease, HR 0.69, 95% CI 0.57-0.83; NEJM 2020, DOI 10.1056/NEJMoa2021372). On that basis the FDA approved LODOCO (colchicine 0.5 mg) in June 2023 as the first anti-inflammatory agent indicated to reduce MI, stroke, coronary revascularization, and CV death in atherosclerotic disease. However, the largest and most recent trial directly contradicts them: CLEAR SYNERGY/OASIS-9 (N=7062, post-MI, primary MACE composite HR 0.99, 95% CI 0.85-1.16, P=0.93; NEJM online-first Nov 2024, print Feb 2025, DOI 10.1056/NEJMoa2405922) was fully neutral on the identical endpoint. The smaller COPS ACS trial was also null (P=0.09) with excess non-CV mortality, and a 2025 systematic review/meta-analysis pooling COLCOT+COPS+CLEAR SYNERGY (12,602 patients) found no significant reduction in the CV composite (HR 0.80, 95% CI 0.59-1.07, I2=73%; DOI 10.4081/monaldi.2025.3566). Two positive pivotal trials plus a standing FDA indication versus a larger neutral confirmatory trial and a null pooled estimate = documented clinical Contested, not a settled consensus. The mechanistic CRP-lowering surrogate effect is consistent across trials but has not translated reliably to hard outcomes.",
+  "outcome": "MACE composite (variably: CV death, MI, stroke, and ischemia-driven/urgent coronary revascularization; exact components differ by trial)",
+  "population": "Chronic or post-MI coronary artery disease on guideline-directed secondary prevention",
+  "rows": [
+    {
+      "source_id": "PMID:31733140",
+      "citation": "Tardif JC, et al. Efficacy and Safety of Low-Dose Colchicine after Myocardial Infarction (COLCOT). N Engl J Med. 2019;381(26):2497-2505. DOI:10.1056/NEJMoa1912388. NCT02551094.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark double-blind placebo-controlled RCT (PubMed article_types: Randomized Controlled Trial, Multicenter Study); no retraction or integrity concerns. Government of Quebec funded. Verified against PubMed abstract.",
+      "n_int": 2366,
+      "year": 2019,
+      "finding": "Post-MI patients (within 30 days), N=4745, median 22.6-mo follow-up. Primary composite (CV death, resuscitated cardiac arrest, MI, stroke, or urgent hospitalization for angina leading to revascularization) occurred in 5.5% colchicine vs 7.1% placebo; HR 0.77 (95% CI 0.61-0.96), P=0.02. Primary MACE endpoint met - supports claim."
+    },
+    {
+      "source_id": "PMID:32865380",
+      "citation": "Nidorf SM, et al. Colchicine in Patients with Chronic Coronary Disease (LoDoCo2). N Engl J Med. 2020;383(19):1838-1847. DOI:10.1056/NEJMoa2021372. ACTRN12614000093684.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark double-blind placebo-controlled event-driven RCT; basis for FDA LODOCO approval. No integrity concerns (no retraction flag in PubMed). Signal of higher non-CV mortality (HR 1.51, CI 0.99-2.31) confirmed in abstract but CV endpoint robust.",
+      "n_int": 2762,
+      "year": 2020,
+      "finding": "Chronic coronary disease, N=5522, median 28.6-mo follow-up. Primary composite (CV death, spontaneous MI, ischemic stroke, or ischemia-driven revascularization) occurred in 6.8% (187 pts) colchicine vs 9.6% (264 pts) placebo; HR 0.69 (95% CI 0.57-0.83), P<0.001. Primary MACE endpoint met - strongest single-trial support; matches claimed population and outcome."
+    },
+    {
+      "source_id": "PMID:39555823",
+      "citation": "Jolly SS, et al. Colchicine in Acute Myocardial Infarction (CLEAR SYNERGY / OASIS-9). N Engl J Med. Online-first Nov 2024; print 2025;392(7):633-642. DOI:10.1056/NEJMoa2405922. NCT03048825.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Largest colchicine CV trial to date; 2x2 factorial, double-blind, CIHR-funded (PubMed article_types: Clinical Trial Phase III, Randomized Controlled Trial, Multicenter Study). No integrity concerns. NEJM online-first Nov 2024, print issue Feb 2025. Directly tempers earlier positive trials.",
+      "n_int": 3528,
+      "year": 2025,
+      "finding": "Post-MI, N=7062 (104 centers, 14 countries), median 3-yr follow-up. Primary composite (CV death, recurrent MI, stroke, or unplanned ischemia-driven revascularization) 322/3528 (9.1%) colchicine vs 327/3534 (9.3%) placebo; HR 0.99 (95% CI 0.85-1.16), P=0.93 - fully NEUTRAL. CRP still lowered (-1.28 mg/L) confirming pharmacologic engagement, but no MACE benefit. Contradicts claim on the identical primary endpoint."
+    },
+    {
+      "source_id": "PMID:32862667",
+      "citation": "Tong DC, et al. Colchicine in Patients With Acute Coronary Syndrome: The Australian COPS Randomized Clinical Trial. Circulation. 2020;142(20):1890-1900. DOI:10.1161/CIRCULATIONAHA.120.050771. ACTRN12615000861550.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Multicenter (17 Australian hospitals) double-blind placebo-controlled RCT; underpowered (N=795). No integrity concerns (no retraction flag) but flagged higher total/non-CV death in colchicine arm. Verified against PubMed abstract.",
+      "n_int": 396,
+      "year": 2020,
+      "finding": "ACS patients, N=795 (396 colchicine, 399 placebo), 12-mo follow-up. Primary composite (all-cause death, ACS, ischemia-driven urgent revascularization, non-cardioembolic ischemic stroke): 24 vs 38 events, P=0.09 (NOT significant). Higher total death in colchicine arm (8 vs 1, P=0.017), driven by non-CV death (5 vs 0, P=0.024). Null on primary MACE - does not support claim."
+    },
+    {
+      "source_id": "PMID:41334610",
+      "citation": "Pinheiro L, et al. Long-term colchicine therapy in acute coronary syndromes: a systematic review and meta-analysis of randomized controlled trials. Monaldi Arch Chest Dis. 2025. DOI:10.4081/monaldi.2025.3566.",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pooled COLCOT, COPS, CLEAR SYNERGY (12,602 patients; search date Dec 22 2024). High heterogeneity (I2=73% for composite) limits certainty. Lower-tier journal but standard PRISMA RCT meta-analysis. No retraction flag in PubMed. Abstract figures verified verbatim.",
+      "n_int": 6300,
+      "year": 2025,
+      "finding": "Long-term (>=12 mo) colchicine post-ACS. Composite of CV death/MI/revascularization/stroke NOT significantly reduced: HR 0.80 (95% CI 0.59-1.07, I2=73%). All-cause mortality HR 1.01 (0.67-1.53), CV death HR 1.01 (0.80-1.29), MI HR 0.86 (0.71-1.05) - all non-significant. Pooled estimate is null once the large neutral trial is included - key evidence for the Contested verdict."
+    },
+    {
+      "source_id": "DOI:10.1056/NEJMoa2021372",
+      "citation": "FDA LODOCO (colchicine 0.5 mg) prescribing information, approved June 2023; Agepha Pharma. Indication derived from LoDoCo2 (NEJMoa2021372) plus supportive studies. DailyMed setid ff06d68f-d65f-d097-e053-6294a90a7e5f.",
+      "design": "systematic review",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory artifact, NOT a study - design='systematic review' is a schema-fit compromise (closest available enum), openly disclosed. Confirmed via DailyMed (setid matches), Agepha PI, TCTMD, Healio. Included as a standing regulatory data point: FDA-approved indication predates the neutral CLEAR SYNERGY readout, which is central to why consensus is Contested rather than Not Supported.",
+      "n_int": 5522,
+      "year": 2023,
+      "finding": "FDA approved LODOCO (June 2023) to reduce risk of MI, stroke, coronary revascularization, and CV death in adults with established atherosclerotic disease or multiple CV risk factors - the first anti-inflammatory atheroprotective CV therapy. Efficacy basis was LoDoCo2 (31% RRR, HR 0.69, NNT 36). A standing US regulatory endorsement of the claim; however issued before the large neutral 2024/2025 trial."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "A confident plain-LLM baseline would answer YES. It would cite COLCOT (2019) and LoDoCo2 (2020) as two positive NEJM RCTs showing ~23-31% relative risk reduction in MACE, note the 2023 FDA approval of LODOCO as the first anti-inflammatory cardiovascular drug, and invoke the inflammatory/CRP-lowering mechanism as biologically plausible. This baseline is overconfident: it reflects the pre-2024 evidence and regulatory action but misses that the largest and most recent trial (CLEAR SYNERGY/OASIS-9, N=7062, HR 0.99, P=0.93) was fully neutral and that a 2025 meta-analysis pooling to 12,602 patients found a null composite effect (HR 0.80, CI crossing 1.0). The honest current verdict is Contested, not a confident Yes."
+  },
+  "build_confidence": "high",
+  "provenance": "All rows independently re-verified by fact-checker via PubMed get_article_metadata (PMID + title + authors + article_types, checked for 'Retracted Publication' - none found on any of the 5 PMIDs) and trial-registry IDs embedded in each abstract. FDA LODOCO approval confirmed via DailyMed (setid ff06d68f-d65f-d097-e053-6294a90a7e5f) + Agepha prescribing information + TCTMD + Healio (Exa search). N, HR, CI, and P values quoted directly from PubMed abstracts and match verbatim. COLCOT NCT02551094, LoDoCo2 ACTRN12614000093684, CLEAR SYNERGY NCT03048825, COPS ACTRN12615000861550.",
+  "notes": "Fact-check outcome: VERIFIED - no hallucinated PMIDs, wrong Ns, wrong directions, mislabeled designs, wrong outcome_match flags, or fabricated retractions. Every trial row measured a MACE composite as its PRIMARY endpoint (true hard-outcome, not a surrogate), so outcome_match=true throughout - the CRP reduction is secondary/mechanistic only. The tension is positive-pivotal vs neutral-confirmatory on the SAME hard endpoint. Population nuance: COLCOT/CLEAR SYNERGY/COPS = post-MI/ACS; LoDoCo2 = chronic stable coronary disease. The claim spans both and evidence is split within each subpopulation (LoDoCo2+ in chronic; CLEAR SYNERGY neutral in acute; COLCOT+ in acute), reinforcing Contested. Two non-blocking notes: (1) CLEAR SYNERGY PubMed publication_date is 2024/11/17 (online-first); year kept as 2025 to match the print issue cited (392(7):633-642). (2) The FDA-approval row is a regulatory artifact tagged design='systematic review' as the closest schema fit; direction=+1 reflects the standing US indication. Recency matters: the negative signal is the newest and largest data, so a well-calibrated resolver should land on Contested."
+}

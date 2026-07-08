@@ -1,0 +1,109 @@
+{
+  "claim_id": "M12",
+  "claim": "Adding bevacizumab to chemotherapy improves overall survival in metastatic HER2-negative breast cancer",
+  "domain": "oncology",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "Documented clinical/regulatory consensus is that adding bevacizumab to first-line chemotherapy does NOT improve overall survival in metastatic HER2-negative breast cancer. Every pivotal randomized trial powered its primary endpoint on progression-free survival (a surrogate), and although E2100, AVADO and RIBBON-1 each showed a statistically significant PFS gain, none demonstrated an OS benefit. E2100 (Miller, NEJM 2007) reported OS HR 0.88, P=0.16 (26.7 vs 25.2 mo). A pre-specified pooled individual-patient meta-analysis of the three first-line phase III trials (Miles, Ann Oncol 2013, n=2447) gave OS HR 0.97 (95% CI 0.86-1.08; median 26.7 vs 26.4 mo), and the Cochrane review (Wagner 2012) gave first-line OS HR 0.93 (0.84-1.04) \u2014 both null. On this basis the FDA revoked the metastatic-breast-cancer indication for Avastin effective 18 Nov 2011 (ODAC 6-0 at the hearing; earlier ODAC 12-1), explicitly concluding no OS or quality-of-life benefit. The PFS-vs-OS surrogate reversal is the crux: the claim is true for the surrogate (PFS) but false for the claimed clinical outcome (OS). Consensus: Not Supported.",
+  "outcome": "overall survival",
+  "population": "metastatic HER2-negative breast cancer",
+  "provenance": "All six PMIDs independently re-verified against PubMed metadata (exact title/journal/year/N/effect sizes; no retractions). E2100 design/N confirmed against ClinicalTrials.gov NCT00028990 (phase 3, open-label, n=722, primary=PFS). FDA revocation re-verified against federalregister.gov and govinfo.gov: 77 FR 11554, Doc No. 2012-4424, Docket FDA-2010-N-0621, effective 18 Nov 2011, Commissioner Hamburg 69-page opinion, ODAC 6-0 (earlier 12-1). One fabricated DOI on the FDA row corrected to the real FR citation; RIBBON-1 OS direction recoded from -1 to 0 to match its primary-source abstract.",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Bevacizumab (Avastin) is a well-established anti-angiogenic agent that was FDA-approved in 2008 for first-line metastatic HER2-negative breast cancer in combination with paclitaxel. The pivotal E2100 trial showed that adding bevacizumab to chemotherapy roughly doubled progression-free survival and improved response rates, and subsequent trials (AVADO, RIBBON-1) confirmed the benefit of adding bevacizumab to first-line chemotherapy. Given these consistent positive randomized results, adding bevacizumab to chemotherapy improves outcomes including survival in this population."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:18160686",
+      "citation": "Miller K, et al. Paclitaxel plus bevacizumab versus paclitaxel alone for metastatic breast cancer (E2100). N Engl J Med. 2007;357(26):2666-76. DOI:10.1056/NEJMoa072113",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Landmark open-label phase III (NCT00028990); primary endpoint PFS, OS pre-specified secondary. PubMed article_types confirm RCT/Phase III; no retraction.",
+      "n_int": 722,
+      "year": 2007,
+      "finding": "PFS significantly prolonged (median 11.8 vs 5.9 mo; HR 0.60, P<0.001) but OS NOT improved (median 26.7 vs 25.2 mo; HR 0.88, P=0.16). Primary endpoint was the PFS surrogate, not OS \u2014 hence outcome_match=false; OS direction null. Verified verbatim against PubMed abstract."
+    },
+    {
+      "source_id": "PMID:19720913",
+      "citation": "Gray R, et al. Independent review of E2100: phase III bevacizumab plus paclitaxel vs paclitaxel in metastatic breast cancer. J Clin Oncol. 2009;27(30):4966-72. DOI:10.1200/JCO.2008.21.6630",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Blinded independent radiologic re-review of E2100; validates PFS effect. No integrity concerns (PubMed).",
+      "n_int": 722,
+      "year": 2009,
+      "finding": "Independent review confirmed a robust PFS benefit (IRF HR 0.48; median 11.3 vs 5.8 mo) and doubled ORR (48.9% vs 22.2%). Primary endpoint PFS (surrogate) \u2014 outcome_match=false; does not establish an OS benefit. Verified against PubMed abstract."
+    },
+    {
+      "source_id": "PMID:21383283",
+      "citation": "Robert NJ, et al. RIBBON-1: chemotherapy with or without bevacizumab for first-line HER2-negative metastatic breast cancer. J Clin Oncol. 2011;29(10):1252-60. DOI:10.1200/JCO.2010.28.0982",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Double-blind placebo-controlled phase III, two chemo cohorts (capecitabine; taxane/anthracycline). Confirmatory trial required by FDA accelerated approval. No retraction (PubMed).",
+      "n_int": 1237,
+      "year": 2011,
+      "finding": "PFS (primary) improved in both cohorts (HR 0.69 Cape; 0.64 Tax/Anthra) but per the JCO abstract 'No statistically significant differences in OS between the placebo- and bevacizumab-containing arms were observed.' Primary endpoint PFS (surrogate) \u2192 outcome_match=false; OS null (direction 0). Direction corrected from -1 to 0 to match the primary source."
+    },
+    {
+      "source_id": "PMID:23422754",
+      "citation": "Miles DW, et al. Biomarker results from the AVADO phase 3 trial of first-line bevacizumab plus docetaxel for HER2-negative metastatic breast cancer. Br J Cancer. 2013;108(5):1052-60. DOI:10.1038/bjc.2013.69",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "AVADO (NCT00333775), double-blind placebo-controlled phase III, 736 treated. Primary endpoint PFS. No retraction (PubMed article_types: RCT/Phase III).",
+      "n_int": 736,
+      "year": 2013,
+      "finding": "AVADO's primary endpoint was PFS (significantly improved with bevacizumab); the pooled meta-analysis and FDA review confirm mature OS showed no benefit (HR ~1.0). Primary endpoint surrogate \u2192 outcome_match=false. Direction set to 0 (null on OS) \u2014 this row's own abstract reports the PFS/biomarker result, and OS-null is carried by PMID:23894038 and the FDA decision."
+    },
+    {
+      "source_id": "PMID:23894038",
+      "citation": "Miles DW, et al. First-line bevacizumab plus chemotherapy for HER2-negative metastatic breast cancer: pooled and subgroup analyses of 2447 patients (E2100+AVADO+RIBBON-1). Ann Oncol. 2013;24(11):2773-80. DOI:10.1093/annonc/mdt276",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pooled individual-patient data from the three pivotal first-line phase III RCTs; industry-authored but consistent with independent Cochrane review. PubMed article_types confirm Meta-Analysis. No retraction.",
+      "n_int": 2447,
+      "year": 2013,
+      "finding": "OS analyzed directly as an endpoint: OS HR 0.97 (95% CI 0.86-1.08; median 26.7 vs 26.4 mo) \u2014 no OS benefit overall; triple-negative subgroup OS HR 0.96 (0.79-1.16). PFS improved (HR 0.64). outcome_match=true (OS is the measured endpoint here); direction null. Verified verbatim against PubMed abstract."
+    },
+    {
+      "source_id": "PMID:22786517",
+      "citation": "Wagner AD, et al. VEGF-targeting therapies for endocrine refractory/resistant metastatic breast cancer (Cochrane review). Cochrane Database Syst Rev. 2012;(7):CD008941. DOI:10.1002/14651858.CD008941.pub2",
+      "design": "meta-analysis of rcts",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Independent Cochrane systematic review/meta-analysis of RCTs; low conflict-of-interest. PubMed article_types confirm Meta-Analysis/Systematic Review. No retraction.",
+      "n_int": 2886,
+      "year": 2012,
+      "finding": "First-line: PFS improved (HR 0.67; 95% CI 0.61-0.73) but OS not significantly different (HR 0.93; 95% CI 0.84-1.04); second-line OS HR 0.98 (0.83-1.16). Concludes benefit is limited to surrogate endpoints (PFS/ORR) with no OS or QoL benefit. outcome_match=true; OS null. Verified verbatim against PubMed abstract."
+    },
+    {
+      "source_id": "NCT00028990",
+      "citation": "FDA. Final Decision on Withdrawal of Breast Cancer Indication for AVASTIN (Bevacizumab) Following Public Hearing. Fed Regist. 2012;77(38):11554 (77 FR 11554; FR Doc. 2012-4424; Docket FDA-2010-N-0621); withdrawal effective Nov 18, 2011. Basis includes E2100 (NCT00028990), AVADO, RIBBON-1.",
+      "design": "systematic review",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Regulatory decision, not a study \u2014 closest available design enum used; n_int=0 signals non-trial. Commissioner Hamburg's 69-page opinion after the June 2011 public hearing; ODAC voted 6-0 to withdraw at the hearing (earlier ODAC 12-1). Re-verified on federalregister.gov and govinfo.gov (77 FR 11554, FR Doc. 2012-4424). NOTE: source_id uses the E2100 NCT as the checkable trial anchor because the schema requires a PMID/NCT/DOI form; the fabricated 'DOI:10.1056/federalregister-2012-4424' was removed. The authoritative regulatory citation is 77 FR 11554 / FR Doc. 2012-4424 given in the citation field.",
+      "n_int": 0,
+      "year": 2012,
+      "finding": "FDA revoked the metastatic breast cancer indication, concluding no trial demonstrated a statistically significant OS prolongation and that the drug had not been shown safe and effective for this use \u2014 with added serious toxicity. Direct regulatory consensus that the OS claim is Not Supported. Verified against federalregister.gov and the Nov 18 2011 FDA/Genentech announcements."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "claim_id": "M01",
+  "claim": "Semaglutide reduces major adverse cardiovascular events in overweight or obese adults without diabetes",
+  "domain": "glp1",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The claim is Supported by the highest-tier evidence. The SELECT trial (Lincoff et al., NEJM 2023; PMID 37952131; NCT03574597) was a pre-specified, event-driven, double-blind RCT of 17,604 adults aged >=45 with a BMI >=27, established cardiovascular disease, and NO diabetes \u2014 an exact match to the claimed population. Its PRIMARY endpoint was the exact claimed outcome (3-point MACE: CV death, nonfatal MI, nonfatal stroke), which was met: HR 0.80 (95% CI 0.72-0.90, P<0.001), a 20% relative risk reduction. This is a hard clinical outcome, not a surrogate. The result triggered an FDA label expansion on 8 March 2024 (Wegovy first weight-loss drug approved to reduce CV death/MI/stroke in adults with CVD and overweight/obesity without diabetes), i.e. regulatory consensus. Supporting: a 2024 meta-analysis incorporating SELECT (Badve et al., Lancet D&E; PMID 39608381) found the MACE benefit consistent between SELECT and type-2-diabetes GLP-1 trials with no heterogeneity (pooled MACE HR 0.86); class-level MACE reduction is well established in diabetes (Sattar et al. 2021, PMID 34425083, HR 0.86; semaglutide-specific SUSTAIN-6, PMID 27633186, HR 0.74). One nuance that does NOT overturn the verdict: in SELECT the CV-death component alone did not clear hierarchical significance (HR 0.85, P=0.07), but the claim is about the composite MACE endpoint, which was unambiguously positive. No credible contradicting trial exists for this claim. Verdict: Supported.",
+  "outcome": "3-point MACE (cardiovascular death, nonfatal myocardial infarction, or nonfatal stroke), time-to-first-event",
+  "population": "Overweight/obese adults (BMI >=27, age >=45) with established cardiovascular disease and without diabetes",
+  "rows": [
+    {
+      "source_id": "PMID:37952131",
+      "citation": "Lincoff AM, et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes (SELECT). N Engl J Med. 2023;389(24):2221-2232. DOI:10.1056/NEJMoa2307563. NCT03574597.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal, pre-specified, event-driven, double-blind, placebo-controlled superiority RCT; industry-funded (Novo Nordisk) with academic steering committee and author data-vouching. Primary composite MACE met (HR 0.80, 95% CI 0.72-0.90, P<0.001). Note: the CV-death component alone did not reach hierarchical significance (HR 0.85, P=0.07), but this is a secondary component, not the claimed composite outcome. Independently re-verified via PubMed (title/DOI/RCT type) and ClinicalTrials.gov (NCT03574597: N=17,604, Phase 3, 3-point MACE primary, age>=45, BMI>=27, established CVD, no diabetes).",
+      "n_int": 8803,
+      "year": 2023,
+      "finding": "In 17,604 overweight/obese adults with CVD but no diabetes, semaglutide 2.4 mg weekly reduced 3-point MACE vs placebo: 569/8803 (6.5%) vs 701/8801 (8.0%), HR 0.80 (95% CI 0.72-0.90), P<0.001 \u2014 a 20% relative reduction. Exact population and exact claimed primary endpoint."
+    },
+    {
+      "source_id": "PMID:39608381",
+      "citation": "Badve SV, et al. Effects of GLP-1 receptor agonists on kidney and cardiovascular disease outcomes: a meta-analysis of randomised controlled trials. Lancet Diabetes Endocrinol. 2025;13(1):15-28. DOI:10.1016/S2213-8587(24)00271-7.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PROSPERO-registered (CRD42024528864) random-effects meta-analysis, 11 trials, 85,373 participants; SELECT included post hoc. Online ahead of print 2024-11-25; print issue Jan 2025. Numbers independently re-verified against the PubMed abstract.",
+      "n_int": 85373,
+      "year": 2025,
+      "finding": "GLP-1 RA reduced MACE by 14% (HR 0.86, 95% CI 0.80-0.92) with SELECT included; benefit was consistent between SELECT (no-diabetes obesity/CVD) and the type-2-diabetes trials with no significant heterogeneity (p>0.05), corroborating that the effect extends to the non-diabetic population of the claim."
+    },
+    {
+      "source_id": "PMID:27633186",
+      "citation": "Marso SP, et al. Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes (SUSTAIN-6). N Engl J Med. 2016;375(19):1834-1844. DOI:10.1056/NEJMoa1607141. NCT01720446.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Double-blind placebo-controlled RCT; primary endpoint identical 3-point MACE. Population is type 2 DIABETES (does not match the 'without diabetes' claim population) \u2014 included as same-drug mechanistic/consistency support, not as direct population evidence. Re-verified via PubMed: N=3,297, 108/1648 vs 146/1649, HR 0.74 (0.58-0.95).",
+      "n_int": 1648,
+      "year": 2016,
+      "finding": "Same drug (semaglutide) reduced 3-point MACE in 3,297 type-2-diabetes patients: 6.6% vs 8.9%, HR 0.74 (95% CI 0.58-0.95). Establishes semaglutide's cardioprotection on the identical endpoint; population is diabetic, so supports plausibility rather than directly proving the no-diabetes claim."
+    },
+    {
+      "source_id": "PMID:34425083",
+      "citation": "Sattar N, et al. Cardiovascular, mortality, and kidney outcomes with GLP-1 receptor agonists in patients with type 2 diabetes: a systematic review and meta-analysis of randomised trials. Lancet Diabetes Endocrinol. 2021;9(10):653-662. DOI:10.1016/S2213-8587(21)00203-5.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PROSPERO-registered (CRD42021259711) random-effects meta-analysis, 8 trials, 60,080 patients, all type 2 diabetes (pre-SELECT). Population does not match the no-diabetes claim; included as class-level mechanistic context. Re-verified via PubMed abstract: MACE HR 0.86 (0.80-0.93), p<0.0001.",
+      "n_int": 60080,
+      "year": 2021,
+      "finding": "Class-level MACE reduction of 14% (HR 0.86, 95% CI 0.80-0.93) across 8 GLP-1 RA diabetes trials, homogeneous across subgroups. Establishes the robust class effect on the exact 3-point MACE endpoint that SELECT later extended to the non-diabetic obesity population."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Semaglutide reduces major adverse cardiovascular events in overweight/obese adults without diabetes. This was demonstrated by the landmark SELECT trial (Lincoff et al., NEJM 2023), a large double-blind RCT of 17,604 adults with a BMI >=27 and established cardiovascular disease but no diabetes, in which weekly semaglutide 2.4 mg reduced the primary composite of cardiovascular death, nonfatal MI, and nonfatal stroke by 20% (HR 0.80, 95% CI 0.72-0.90, P<0.001) versus placebo. On the strength of SELECT, the FDA in March 2024 approved a cardiovascular risk-reduction indication for Wegovy in this exact population. The finding is consistent with the established class-level MACE benefit of GLP-1 receptor agonists."
+  },
+  "build_confidence": "high",
+  "provenance": "All rows independently re-verified: PubMed get_article_metadata confirmed each PMID's title, journal, year, DOI, and publication type (no Retracted Publication); ClinicalTrials.gov get_trial_details confirmed NCT03574597 (SELECT: N=17,604, Phase 3 interventional, COMPLETED, primary 3-point MACE, age>=45/BMI>=27/established CVD/no diabetes, sponsor Novo Nordisk). Numeric effect sizes (SELECT 6.5% vs 8.0% HR 0.80; Badve HR 0.86, 11 trials/85,373; SUSTAIN-6 HR 0.74; Sattar HR 0.86, 8 trials/60,080) checked against the source abstracts. FDA 8-March-2024 Wegovy CV label expansion confirmed via the FDA press release (Exa web search).",
+  "notes": "Adversarial re-check found no hallucinated PMID, no wrong N, no wrong direction, no mislabeled design, no wrong outcome_match, and no fabricated retraction. All four rows use hard 3-point MACE (not a surrogate), so outcome_match=true is correct throughout. Two rows (SUSTAIN-6, Sattar 2021) are diabetes-population and correctly flagged population_match=false; SELECT + Badve carry the population-matched weight. Gold verdict 'Supported' reflects honest clinical/regulatory consensus. No corrections were required beyond adding re-verification provenance to integrity notes; corpus is verified as clean."
+}

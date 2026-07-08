@@ -1,0 +1,97 @@
+{
+  "claim_id": "M04",
+  "claim": "Semaglutide slows progression of chronic kidney disease in adults with type 2 diabetes",
+  "domain": "glp1",
+  "expected_verdict": "Supported",
+  "gold_rationale": "A dedicated, adequately powered kidney-outcomes RCT (FLOW, NCT03819153; Perkovic, NEJM 2024) established the claim on a HARD composite endpoint (kidney failure, sustained >=50% eGFR decline, kidney/CV death): HR 0.76 (95% CI 0.66-0.88, P=0.0003) in 3,533 adults with T2D and CKD, with the trial stopped early for efficacy at a prespecified interim analysis. Kidney-specific components (HR 0.79) and eGFR slope (1.16 mL/min/1.73m2/yr slower decline) were concordant. FLOW is corroborated by multiple 2024-2025 meta-analyses of RCTs (Badve, Lancet Diabetes Endocrinol, composite kidney HR 0.82; Lee/Sattar, Diabetes Care 2025, HR 0.83; Neuen/Heerspink, Circulation 2024, RR 0.79) showing consistent, low-heterogeneity reductions in clinically important kidney events. On this basis the FDA approved a CKD-progression indication for Ozempic (28 Jan 2025) and guidelines (KDIGO/ADA) recommend GLP-1 RAs including semaglutide for kidney/CV risk reduction in T2D+CKD. The earlier SUSTAIN-6 CVOT showed a favorable renal signal but only on a soft/surrogate composite (new/worsening nephropathy, driven by macroalbuminuria), so it is supportive but not confirmatory on its own. Balance of evidence \u2014 a positive dedicated hard-endpoint pivotal trial, confirmatory meta-analyses, and regulatory/guideline endorsement \u2014 places this firmly at Supported.",
+  "outcome": "Composite kidney disease progression endpoint: kidney failure (dialysis/transplant or persistent eGFR <15), sustained >=50% eGFR decline, and death from kidney-related or cardiovascular causes",
+  "population": "Adults with type 2 diabetes and chronic kidney disease (eGFR ~25-75 mL/min/1.73m2 with albuminuria)",
+  "rows": [
+    {
+      "source_id": "PMID:38785209",
+      "citation": "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes (FLOW). N Engl J Med. 2024;391(2):109-121. DOI:10.1056/NEJMoa2403347",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark pivotal, dedicated kidney-outcomes trial (NCT03819153, Phase 3, N=3533 confirmed via ClinicalTrials.gov); Novo Nordisk-funded, NIH-supported, double-blind. Stopped early for efficacy at prespecified interim analysis (median follow-up 3.4y) \u2014 not an integrity concern.",
+      "n_int": 1767,
+      "year": 2024,
+      "finding": "N=3533 T2D+CKD (1767 semaglutide / 1766 placebo). Primary composite (kidney failure, sustained >=50% eGFR decline, kidney/CV death) HR 0.76 (95% CI 0.66-0.88, P=0.0003; 331 vs 410 events); kidney-specific composite HR 0.79 (0.66-0.94); CV death HR 0.71 (0.56-0.89); eGFR slope 1.16 mL/min/1.73m2/yr less steep (P<0.001); all-cause death HR 0.80 (0.67-0.95). Directly measures the CLAIMED hard kidney-progression outcome."
+    },
+    {
+      "source_id": "PMID:39608381",
+      "citation": "Badve SV, Bilal A, Lee MMY, et al. Effects of GLP-1 receptor agonists on kidney and cardiovascular disease outcomes: a meta-analysis of randomised controlled trials. Lancet Diabetes Endocrinol. 2025;13(1):15-28. DOI:10.1016/S2213-8587(24)00271-7",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PROSPERO-registered (CRD42024528864), class-level meta-analysis; includes FLOW. Semaglutide-specific effect not isolated but T2D composite-kidney estimate is directly relevant and low-heterogeneity. PubMed publication date 2024-11-25; appears in the 2025;13(1) issue.",
+      "n_int": 0,
+      "year": 2025,
+      "finding": "11 trials, 85,373 participants. In T2D (67,769), GLP-1 RAs reduced the composite kidney outcome (kidney failure, >=50% eGFR decline, death from kidney failure) by 18% (HR 0.82, 95% CI 0.73-0.93; I2=26.4%) and kidney failure alone by 16% (HR 0.84, 0.72-0.99; I2=0%). Confirms the FLOW hard-endpoint finding at class level."
+    },
+    {
+      "source_id": "PMID:40156846",
+      "citation": "Lee MMY, Sattar N, Pop-Busui R, et al. Cardiovascular and Kidney Outcomes and Mortality With Long-Acting Injectable and Oral Glucagon-Like Peptide 1 Receptor Agonists in Individuals With Type 2 Diabetes: A Systematic Review and Meta-analysis of Randomized Trials. Diabetes Care. 2025;48(5):846-859. DOI:10.2337/dc25-0241",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Incorporates newest semaglutide trials (FLOW + oral-semaglutide SOUL). Class-level pooling; semaglutide is the dominant contributor. Citation title corrected to match PubMed exact wording.",
+      "n_int": 0,
+      "year": 2025,
+      "finding": "10 trials, n=71,351 T2D. Long-acting GLP-1 RAs reduced the composite kidney outcome (kidney failure, >=50% eGFR decline, kidney-related death) by 17% (HR 0.83, 95% CI 0.75-0.92; I2=20.4%), with no significant heterogeneity by oral vs injectable route. Directly supports claimed hard kidney-progression outcome."
+    },
+    {
+      "source_id": "PMID:39210781",
+      "citation": "Neuen BL, Fletcher RA, Heath L, et al. Cardiovascular, Kidney, and Safety Outcomes With GLP-1 Receptor Agonists Alone and in Combination With SGLT2 Inhibitors in Type 2 Diabetes: A Systematic Review and Meta-Analysis. Circulation. 2024;150(22):1781-1790. DOI:10.1161/CIRCULATIONAHA.124.071689",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "PROSPERO-registered (CRD42024565765). Class-level; kidney composite here is the >=50% eGFR / kidney-failure / kidney-death hard composite.",
+      "n_int": 0,
+      "year": 2024,
+      "finding": "17,072 T2D across 3 outcome trials reporting SGLT2i-stratified effects. Composite kidney outcome RR 0.79 (95% CI 0.66-0.95) and eGFR slope benefit 0.78 mL/min/1.73m2/yr (0.57-0.98), consistent regardless of background SGLT2i use (P-heterogeneity 0.53 and 0.94). Reinforces robust kidney-progression benefit."
+    },
+    {
+      "source_id": "PMID:38914124",
+      "citation": "Mann JFE, Rossing P, Bakris G, et al. Effects of semaglutide with and without concomitant SGLT2 inhibitor use in participants with type 2 diabetes and chronic kidney disease in the FLOW trial. Nat Med. 2024;30(10):2849-2856. DOI:10.1038/s41591-024-03133-0",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Prespecified subgroup analysis of the pivotal FLOW RCT; SGLT2i-baseline subgroup underpowered (P-interaction 0.109), overall benefit robust. Labeled 'rct' as an analysis of RCT data \u2014 disclosed here.",
+      "n_int": 1767,
+      "year": 2024,
+      "finding": "FLOW subgroup: overall primary composite HR 0.76 (24% RRR); benefit in non-SGLT2i users (N=2983) HR 0.73 (0.63-0.85, P<0.001) and directionally not-different in SGLT2i users (N=550, HR 1.07, 0.69-1.67, underpowered; P-interaction 0.109). Confirms the primary kidney-progression benefit holds on background CKD therapy."
+    },
+    {
+      "source_id": "PMID:27633186",
+      "citation": "Marso SP, Bain SC, Consoli A, et al. Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes (SUSTAIN-6). N Engl J Med. 2016;375(19):1834-1844. DOI:10.1056/NEJMoa1607141",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Earlier CVOT (NCT01720446); primary endpoint was cardiovascular (MACE), not kidney. Renal outcome was a SECONDARY composite dominated by new-onset persistent macroalbuminuria \u2014 a SURROGATE, not the hard progression endpoint. Supportive signal only, superseded by FLOW.",
+      "n_int": 1648,
+      "year": 2016,
+      "finding": "N=3297 high-CV-risk T2D. New or worsening nephropathy (secondary composite, macroalbuminuria-driven) was lower with semaglutide (HR 0.64, 95% CI 0.46-0.88). Hypothesis-generating renal SIGNAL on a surrogate endpoint; outcome_match=false because the primary endpoint was MACE and the renal component was albuminuria-driven, not hard kidney failure/eGFR loss."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Semaglutide slows CKD progression in adults with type 2 diabetes. This is established primarily by the FLOW trial (Perkovic et al., NEJM 2024), a dedicated kidney-outcomes RCT in 3,533 patients with T2D and CKD that was stopped early for efficacy: semaglutide reduced the primary composite kidney outcome (kidney failure, >=50% eGFR decline, kidney or cardiovascular death) by 24% (HR 0.76). It also slowed the annual eGFR decline and reduced cardiovascular death and all-cause mortality. These results are supported by class-level meta-analyses of GLP-1 receptor agonists and have led to a regulatory CKD indication (FDA, Ozempic, Jan 2025) and guideline recommendations. The answer is a clear Yes."
+  },
+  "build_confidence": "high",
+  "provenance": "All 6 rows independently re-verified via PubMed get_article_metadata: real PMIDs with matching titles, DOIs, journals, article types (RCT / Meta-Analysis+Systematic Review), and years; no Retracted Publication tags. All quantitative claims (N, HR/RR, CI, I2, direction) reconciled against source abstracts. FLOW design/N/primary-endpoint confirmed via ClinicalTrials.gov NCT03819153 (Phase 3, interventional, N=3533). FDA CKD indication for Ozempic (28 Jan 2025) confirmed via multiple independent sources (Novo Nordisk/PRNewswire release, Healio, Pharmacy Times, CNBC). No retracted publications in this evidence base.",
+  "notes": "Cleanly Supported; corpus verified as built. Gate nuance: FLOW is the only trial whose PRIMARY endpoint is the claimed hard kidney-progression composite (outcome_match=true); the three meta-analyses pool that same hard composite. SUSTAIN-6 (PMID 27633186) is the historical row with outcome_match=FALSE \u2014 its renal benefit rests on a SURROGATE (macroalbuminuria), so a gate counting only SUSTAIN-6 would under-support the claim. Strength comes from a dedicated pivotal hard-endpoint RCT plus confirmatory low-heterogeneity meta-analyses, not surrogate extrapolation. FDA CKD indication and KDIGO/ADA guidance corroborate the GOLD Supported verdict independent of gate logic. Only cosmetic edits applied (Row 3 title normalization); no load-bearing field changed."
+}

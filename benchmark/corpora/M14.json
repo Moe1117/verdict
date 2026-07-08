@@ -1,0 +1,97 @@
+{
+  "claim_id": "M14",
+  "claim": "Pembrolizumab improves survival in advanced melanoma",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Consensus is SUPPORTED for the claimed outcome (overall survival) in advanced/metastatic melanoma. The pivotal phase 3 KEYNOTE-006 trial (NCT01866319, N=834) prospectively named OS as a co-primary endpoint and met it: pembrolizumab significantly prolonged OS vs ipilimumab at every analysis \u2014 interim (2015), protocol-specified final analysis HR 0.68 (95% CI 0.53-0.87; Lancet 2017), and 5-year median OS 32.7 vs 15.9 months (HR 0.73, p=0.00049; Lancet Oncol 2019). This is a head-to-head OS benefit against an active comparator, not vs placebo or a surrogate. On the strength of this OS result pembrolizumab became guideline-endorsed (NCCN/ESMO) standard first-line therapy for advanced melanoma, and the FDA converted the drug's 2014 accelerated (ORR-based) approval to regular approval. Nuance that keeps this from being unqualified: in the second-line ipilimumab-refractory setting (KEYNOTE-002, NCT01704287), the final OS analysis did NOT reach statistical significance (HR 0.86 and 0.74; heavily confounded by 55% crossover), and the adjuvant setting (KEYNOTE-054) is a different, non-advanced population with a surrogate (RFS) primary endpoint. But for the claim as stated \u2014 survival in advanced melanoma \u2014 the first-line pivotal OS evidence is decisive and consistent, so consensus is Supported.",
+  "outcome": "overall survival",
+  "population": "advanced/metastatic (unresectable stage III or IV) melanoma",
+  "rows": [
+    {
+      "source_id": "PMID:28822576",
+      "citation": "Schachter J, et al. Pembrolizumab versus ipilimumab for advanced melanoma: final overall survival results of a multicentre, randomised, open-label phase 3 study (KEYNOTE-006). Lancet. 2017;390(10105):1853-1862. DOI:10.1016/S0140-6736(17)31601-X",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Merck-funded pivotal phase 3; OS was a protocol-specified co-primary endpoint; ITT analysis; no retraction or integrity concern (PubMed pub types: Clinical Trial Phase III, RCT).",
+      "n_int": 556,
+      "year": 2017,
+      "finding": "Protocol-specified final OS analysis: pembrolizumab superior to ipilimumab. Median OS not reached (both pembro arms) vs 16.0 months (ipilimumab); HR 0.68 (95% CI 0.53-0.87, p=0.0009) Q2W and HR 0.68 (0.53-0.86, p=0.0008) Q3W. 24-month OS 55% vs 43%. Direct OS endpoint, advanced-melanoma population."
+    },
+    {
+      "source_id": "PMID:31345627",
+      "citation": "Robert C, et al. Pembrolizumab versus ipilimumab in advanced melanoma (KEYNOTE-006): post-hoc 5-year results. Lancet Oncol. 2019;20(9):1239-1251. DOI:10.1016/S1470-2045(19)30388-2",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "5-year follow-up of the pivotal RCT; OS co-primary. Merck-funded; consistent with all prior KEYNOTE-006 analyses; no integrity concern.",
+      "n_int": 556,
+      "year": 2019,
+      "finding": "At median 57.7-month follow-up, median OS 32.7 months (combined pembrolizumab) vs 15.9 months (ipilimumab); HR 0.73 (95% CI 0.61-0.88, p=0.00049). Durable, long-term OS advantage on the claimed endpoint in the claimed population."
+    },
+    {
+      "source_id": "PMID:25891173",
+      "citation": "Robert C, et al. Pembrolizumab versus Ipilimumab in Advanced Melanoma. N Engl J Med. 2015;372(26):2521-2532. DOI:10.1056/NEJMoa1503093",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Original KEYNOTE-006 interim report (NCT01866319, N=834). OS and PFS co-primary. Merck-funded landmark RCT; no integrity concern.",
+      "n_int": 556,
+      "year": 2015,
+      "finding": "First interim analysis: 12-month OS 74.1% (Q2W) and 68.4% (Q3W) vs 58.2% (ipilimumab); HR for death 0.63 (95% CI 0.47-0.83, p=0.0005) and 0.69 (0.52-0.90, p=0.0036). Established the OS benefit later confirmed at final and 5-year analyses."
+    },
+    {
+      "source_id": "PMID:28961465",
+      "citation": "Hamid O, et al. Final analysis of a randomised trial comparing pembrolizumab versus investigator-choice chemotherapy for ipilimumab-refractory advanced melanoma (KEYNOTE-002). Eur J Cancer. 2017;86:37-45. DOI:10.1016/j.ejca.2017.07.022",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase 2 RCT (NCT01704287, N=540) in ipilimumab-refractory advanced melanoma. OS was a prespecified endpoint but the protocol-specified final OS analysis did NOT reach significance; result heavily confounded by 55% crossover from chemo to pembrolizumab. Merck-funded; no integrity concern, but a genuine contested/underpowered OS signal.",
+      "n_int": 361,
+      "year": 2017,
+      "finding": "Median OS 13.4 mo (pembro 2 mg/kg) and 14.7 mo (10 mg/kg) vs 11.0 mo (chemotherapy); HR 0.86 (95% CI 0.67-1.10, p=0.117) and 0.74 (0.57-0.96, p=0.011). Directionally favorable but NOT statistically significant at the prespecified threshold \u2014 the second-line OS endpoint formally missed, with crossover confounding."
+    },
+    {
+      "source_id": "PMID:33857412",
+      "citation": "Eggermont AMM, et al. Adjuvant pembrolizumab versus placebo in resected stage III melanoma (EORTC 1325-MG/KEYNOTE-054): distant metastasis-free survival results. Lancet Oncol. 2021;22(5):643-654. DOI:10.1016/S1470-2045(21)00065-6",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 double-blind RCT (NCT02362594, N=1019) in RESECTED stage III (adjuvant) melanoma \u2014 not advanced/metastatic. Co-primary endpoint was recurrence-free survival (a surrogate); this report adds distant metastasis-free survival. Overall survival was NOT the primary endpoint (OS is a secondary endpoint). Merck-funded; no integrity concern.",
+      "n_int": 514,
+      "year": 2021,
+      "finding": "3.5-year RFS 59.8% vs 41.4% (HR 0.59, 95% CI 0.49-0.70) and DMFS 65.3% vs 49.4% (HR 0.60) favoring pembrolizumab. Supports pembrolizumab's activity but measures RFS/DMFS surrogates in a resected (non-advanced) population \u2014 off-target for the claimed OS-in-advanced-melanoma outcome."
+    },
+    {
+      "source_id": "PMID:39684531",
+      "citation": "Lengyel AS, et al. Safety and Efficacy Analysis of Targeted and Immune Combination Therapy in Advanced Melanoma - A Systematic Review and Network Meta-Analysis. Int J Mol Sci. 2024;25(23):12821. DOI:10.3390/ijms252312821",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Systematic review + network meta-analysis of 59 RCTs in advanced/metastatic melanoma. Primary efficacy endpoints analyzed were PFS, ORR and CRR \u2014 NOT overall survival. Academic (non-industry) synthesis; no integrity concern.",
+      "n_int": 0,
+      "year": 2024,
+      "finding": "Confirms immune checkpoint inhibitors (including PD-1 agents) are effective first-line options in advanced melanoma, situating pembrolizumab within the current standard-of-care landscape. Adds landscape/consistency evidence but the pooled primary endpoints were surrogates (PFS/ORR), not OS."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Pembrolizumab improves overall survival in advanced melanoma. The pivotal phase 3 KEYNOTE-006 trial randomized patients with advanced/metastatic melanoma to pembrolizumab vs ipilimumab and showed a significant OS benefit (HR ~0.68), with 5-year median OS roughly 33 vs 16 months. This head-to-head survival advantage made pembrolizumab a guideline-recommended first-line standard of care and supported its FDA approval. Confidence is high."
+  },
+  "provenance": "Independently re-verified: all 6 PMIDs resolved via PubMed get_article_metadata to the exact titles/DOIs/journals/years/publication-types claimed (no Retracted Publication type on any). NCT design/N confirmed via ClinicalTrials.gov get_trial_details: NCT01866319 (phase 3, N=834, OS primary), NCT01704287 (phase 2, N=540), NCT02362594 (phase 3, N=1019, RFS co-primary). All HRs/CIs/p-values/medians in each finding matched the source abstracts exactly. FDA context (Sept 2014 accelerated ORR-based approval; Dec 2015 verification of benefit / conversion to traditional approval) confirmed via Exa web search of drugsatfda approval letter and FDA/AACR approval summaries. No fabricated studies, PMIDs, sample sizes, results, or retractions.",
+  "build_confidence": "high",
+  "notes": "Fact-check status VERIFIED \u2014 no corrections required. Corpus spans: (1) pivotal first-line OS RCT at three time points (interim NEJM 2015, final Lancet 2017, 5-yr Lancet Oncol 2019), all direction +1, population+outcome match \u2014 decisive support; (2) KEYNOTE-002 second-line OS endpoint that FORMALLY MISSED significance (HR 0.86/0.74, 55% crossover), direction +1 but non-significant \u2014 accurately flagged; (3) KEYNOTE-054 adjuvant trial as population_match=FALSE/outcome_match=FALSE contrast (resected stage III, RFS/DMFS surrogate); (4) 2024 network meta-analysis with outcome_match=FALSE (pooled PFS/ORR, not OS). n_int=556 = combined pembro arms in KEYNOTE-006; 361 = combined pembro arms in KEYNOTE-002; 514 = pembro arm in KEYNOTE-054; 0 for pooled meta-analysis. Every direction sign, population/outcome flag, and integrity flag independently confirmed correct. GOLD verdict = Supported, grounded in guidelines/FDA + balance of pivotal OS evidence."
+}

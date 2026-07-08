@@ -155,11 +155,23 @@ def resolve(rows: list[EvidenceRow]) -> tuple[Verdict, list[GateTrace]]:
     metas_all = [r for r in trials if r.is_meta]
     large = [r for r in trials if r.is_rct and r.n_int >= LARGE_RCT_N]
     if large:
-        # Large RCTs that disagree among themselves cannot be a dominant tier.
-        if not all(r.against for r in large) and not all(r.supports for r in large):
+        lpro = [r for r in large if r.supports]
+        lcon = [r for r in large if r.against]
+        # Large RCTs disagree among themselves. A clear SUPERMAJORITY (>=3 and >=3x
+        # the dissent) still decides — a lone older/underpowered null does not make
+        # replicated agreement "contested". A genuine split (e.g. 1-vs-1) is Contested.
+        if lpro and lcon:
+            if len(lpro) >= 3 and len(lpro) >= 3 * len(lcon):
+                trace.append(GateTrace("definitive-evidence", True,
+                                       f"{len(lpro)} large RCTs show the effect vs {len(lcon)} null — replicated majority"))
+                return Verdict.SUPPORTED, trace
+            if len(lcon) >= 3 and len(lcon) >= 3 * len(lpro):
+                trace.append(GateTrace("definitive-evidence", True,
+                                       f"{len(lcon)} large RCTs show no effect vs {len(lpro)} positive — replicated majority"))
+                return Verdict.NOT_SUPPORTED, trace
             trace.append(GateTrace("definitive-evidence", False, "large RCTs themselves conflict"))
             return Verdict.CONTESTED, trace
-        large_dir = -1 if all(r.against for r in large) else 1
+        large_dir = -1 if lcon else 1
         # A lone (unreplicated) large RCT does NOT overturn a meta-of-RCTs of the
         # actively-opposite polarity — randomized synthesis outranks one trial.
         # Two or more concordant large RCTs remain decisive (replication).

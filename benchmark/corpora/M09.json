@@ -1,0 +1,71 @@
+{
+  "claim_id": "M09",
+  "claim": "Solanezumab improves cognition in Alzheimer's disease",
+  "domain": "alzheimers",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "Every adequately powered phase 3 solanezumab trial with a cognitive primary endpoint was negative, across the full AD severity spectrum. EXPEDITION1 & EXPEDITION2 (Doody, NEJM 2014, N=2052 mild-to-moderate AD) missed the ADAS-cog primary. EXPEDITION3 (Honig, NEJM 2018, NCT01900665, N=2129 mild AD dementia) failed its primary ADAS-cog14 endpoint (difference vs placebo -0.80, 95% CI -1.73 to 0.14, P=0.10), after which Eli Lilly halted development for symptomatic AD. The A4 study (Sperling, NEJM 2023, NCT02008357, N=1169 preclinical AD) showed solanezumab 'did not slow cognitive decline' on the PACC over 240 weeks (difference -0.30, P=0.26). A systematic review/meta-analysis of anti-A\u03b2 agents (Lu, JNNP 2020, 19 RCTs, N=12,903) found no clinically important cognitive benefit (ADAS-cog MD 0.20, 95% CI -0.40 to 0.81, below the 3.1-3.8 minimal important difference). Solanezumab was never approved by the FDA or any regulator for AD (ALZFORUM: FDA status Discontinued, Approved for: None; development ended March 2023). The clinical/regulatory consensus is therefore that solanezumab does not improve cognition in Alzheimer's disease \u2014 the claim is Not Supported. (An anti-monomer/soluble-A\u03b2 mechanism distinguishes it from later plaque-clearing antibodies lecanemab/donanemab, which DID slow decline \u2014 but that does not rescue the solanezumab-specific claim.)",
+  "outcome": "cognitive decline",
+  "population": "mild AD dementia / preclinical AD",
+  "provenance": "PubMed (verified PMIDs + DOIs + publication types), ClinicalTrials.gov (verified NCTs, enrollment, phase, primary endpoints), FDA/regulatory status via ALZFORUM + Eli Lilly press release (Exa). All primary cognitive endpoints, effect sizes, and directions read directly from published NEJM/JNNP abstracts.",
+  "rows": [
+    {
+      "source_id": "PMID:29365294",
+      "citation": "Honig LS, et al. Trial of Solanezumab for Mild Dementia Due to Alzheimer's Disease (EXPEDITION3). N Engl J Med. 2018;378:321-330. DOI:10.1056/NEJMoa1705971",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal phase 3, double-blind, placebo-controlled; NCT01900665 (verified, enrollment 2129, phase 3, terminated); industry-sponsored (Eli Lilly), pre-registered, primary endpoint reported. PubMed pub types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. No integrity concerns; no retraction.",
+      "n_int": 1057,
+      "year": 2018,
+      "finding": "In mild AD dementia (MMSE 20-26, amyloid-positive), solanezumab 400 mg IV q4w did NOT significantly slow decline on the primary ADAS-cog14 endpoint (difference -0.80, 95% CI -1.73 to 0.14, P=0.10). 2129 enrolled (1057 solanezumab, 1072 placebo). Trial failed; Lilly ended symptomatic-AD development."
+    },
+    {
+      "source_id": "PMID:24450890",
+      "citation": "Doody RS, et al. Phase 3 Trials of Solanezumab for Mild-to-Moderate Alzheimer's Disease (EXPEDITION1 & EXPEDITION2). N Engl J Med. 2014;370:311-321. DOI:10.1056/NEJMoa1312889",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Two parallel pivotal phase 3 RCTs (NCT00905372, NCT00904683); double-blind, placebo-controlled; primary cognitive endpoints pre-specified and reported. PubMed pub types include 'Clinical Trial, Phase III' + 'Randomized Controlled Trial'. No integrity concerns; no retraction. n_int=1012 = total randomized in EXPEDITION1 (506+506); EXPEDITION2 randomized 1040 (521+519), pooled N=2052.",
+      "n_int": 1012,
+      "year": 2014,
+      "finding": "In mild-to-moderate AD, solanezumab 400 mg IV q4w for 18 months did NOT meet the primary ADAS-cog11 cognitive endpoint in either trial (EXPEDITION1 ADAS-cog11 diff -0.8, P=0.24; EXPEDITION2 mild-AD ADAS-cog14 diff -1.5 to -1.7, NS). Both trials negative on the primary cognitive outcome (pooled N=2052)."
+    },
+    {
+      "source_id": "PMID:37458272",
+      "citation": "Sperling RA, et al. Trial of Solanezumab in Preclinical Alzheimer's Disease (A4 Study). N Engl J Med. 2023;389:1096-1107. DOI:10.1056/NEJMoa2305032",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3, double-blind, placebo-controlled early-intervention trial; NCT02008357 (verified, enrollment 1169, phase 3, PACC primary over 240 wks); NIA-funded. PubMed pub type 'Randomized Controlled Trial'. No integrity concerns; no retraction. n_int corrected from 585 to 578 per NEJM abstract (578 solanezumab, 591 placebo, 1169 total).",
+      "n_int": 578,
+      "year": 2023,
+      "finding": "In preclinical AD (CDR 0, MMSE>=25, amyloid-positive), solanezumab (up to 1600 mg IV q4w) 'did not slow cognitive decline as compared with placebo over 240 weeks' on the primary PACC (mean change -1.43 solanezumab vs -1.13 placebo; difference -0.30, 95% CI -0.82 to 0.22, P=0.26). 1169 randomized (578 solanezumab, 591 placebo). Negative even at the earliest disease stage; ended solanezumab development."
+    },
+    {
+      "source_id": "PMID:33046560",
+      "citation": "Lu L, et al. Anti-A\u03b2 agents for mild to moderate Alzheimer's disease: systematic review and meta-analysis. J Neurol Neurosurg Psychiatry. 2020;91:1316-1324. DOI:10.1136/jnnp-2020-323497",
+      "design": "meta-analysis of rcts",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Systematic review/meta-analysis; 19 RCTs, 17 at low risk of bias; random-effects pooling; includes solanezumab among anti-A\u03b2 agents. PubMed pub types 'Meta-Analysis' + 'Systematic Review'. No integrity concerns; no retraction.",
+      "n_int": 12903,
+      "year": 2020,
+      "finding": "Across 19 RCTs of anti-A\u03b2 agents (N=12,903), no cognitive difference vs placebo on ADAS-Cog (MD 0.20, 95% CI -0.40 to 0.81; below the 3.1-3.8-point minimal important difference; moderate-certainty evidence). Authors conclude anti-A\u03b2 interventions are unlikely to meaningfully slow cognitive/functional decline \u2014 situating solanezumab's failures in the broader negative evidence base. (n_int is total analyzed N across arms, not solanezumab-only.)"
+    }
+  ],
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "A confident plain-LLM baseline would answer NO: solanezumab is widely known to have failed its pivotal phase 3 program. EXPEDITION3 (2018) missed its cognitive primary endpoint, prompting Eli Lilly to abandon it for symptomatic AD, and the A4 prevention study (2023) likewise showed no slowing of cognitive decline in preclinical AD. It was never FDA-approved. A well-informed model would correctly reject the claim that solanezumab improves cognition in Alzheimer's disease \u2014 a textbook negative anti-amyloid result, contrasted with the later (modestly) positive lecanemab/donanemab trials."
+  },
+  "build_confidence": "high",
+  "notes": "All four rows re-verified against PubMed metadata (title/journal/DOI/pub-types/year/first-author) and, where applicable, ClinicalTrials.gov (NCT, enrollment, phase, primary endpoint). Effect sizes and directions read directly from primary NEJM/JNNP abstracts and all match the corpus. One numeric correction applied: A4 solanezumab n_int 585 -> 578. No retracted publications found in the solanezumab efficacy literature. FDA non-approval / March-2023 discontinuation confirmed via ALZFORUM + Eli Lilly release. DIAN-TU (NCT01760005) solanezumab arm also negative but not used as a core row (complex platform design); the four included rows span mild-to-moderate, mild, preclinical, and pooled evidence. build_confidence high \u2014 one of the clearest 'Not Supported' cases in the AD anti-amyloid literature."
+}

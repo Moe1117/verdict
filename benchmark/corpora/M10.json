@@ -1,0 +1,84 @@
+{
+  "claim_id": "M10",
+  "claim": "Gantenerumab slows clinical decline in early Alzheimer's disease",
+  "domain": "alzheimers",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "The two pivotal Roche phase 3 trials designed to test exactly this claim - GRADUATE I and II (Bateman et al., NEJM 2023, PMID 37966285; n=985 and 980; early prodromal-to-mild amyloid-confirmed AD) - both MISSED their primary endpoint of change in CDR-SB, the direct clinical-decline outcome (differences -0.31, P=0.10 and -0.19, P=0.30; both 95% CIs cross zero). The authors' explicit conclusion: gantenerumab lowered amyloid but 'was not associated with slower clinical decline.' This was foreshadowed by the earlier phase 3 SCarlet RoAD trial in prodromal AD (Ostrowitzki 2017, PMID 29221491; n=797), halted for futility with no CDR-SB benefit, and by DIAN-TU-001 (Salloway, Nat Med 2021, PMID 34155411), where gantenerumab did not slow cognitive decline in dominantly inherited AD despite target engagement. Roche discontinued the gantenerumab program in Nov 2022 after the GRADUATE topline; the drug was never FDA-approved. The failure is drug-specific (attributed to insufficient plaque clearance), not a refutation of the amyloid class: a different anti-Abeta antibody, lecanemab (CLARITY-AD, van Dyck NEJM 2022/2023, PMID 36449413), significantly slowed CDR-SB decline in the same early-AD population and won FDA approval. Balance of the highest-quality pivotal RCT evidence directly on the claimed drug and outcome is negative - regulatory/clinical consensus is Not Supported.",
+  "outcome": "CDR-SB clinical decline (change from baseline)",
+  "population": "early Alzheimer's disease (MCI or mild dementia due to AD, amyloid-confirmed)",
+  "build_confidence": "high",
+  "rows": [
+    {
+      "source_id": "PMID:37966285",
+      "citation": "Bateman RJ, Smith J, Donohue MC, et al. Two Phase 3 Trials of Gantenerumab in Early Alzheimer's Disease. N Engl J Med. 2023;389(20):1862-1876. DOI:10.1056/NEJMoa2304430 (GRADUATE I, NCT03444870)",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark Roche-funded phase 3 pivotal trial; peer-reviewed NEJM; not retracted (PubMed article_types = Randomized Controlled Trial, Clinical Trial Phase III). Prespecified CDR-SB primary. NCT corrected: per NEJM abstract, GRADUATE I = NCT03444870.",
+      "n_int": 985,
+      "year": 2023,
+      "finding": "GRADUATE I: change in CDR-SB at week 116 was 3.35 (gantenerumab) vs 3.65 (placebo); difference -0.31 (95% CI -0.66 to 0.05; P=0.10). Primary endpoint NOT met; no significant slowing of clinical decline despite amyloid PET reduction (-66.44 centiloids; 28.0% reached amyloid-negativity)."
+    },
+    {
+      "source_id": "PMID:37966285",
+      "citation": "Bateman RJ, Smith J, Donohue MC, et al. Two Phase 3 Trials of Gantenerumab in Early Alzheimer's Disease. N Engl J Med. 2023;389(20):1862-1876. DOI:10.1056/NEJMoa2304430 (GRADUATE II, NCT03443973)",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Second of two co-reported pivotal phase 3 trials in the same NEJM paper; independent trial (different NCT); not retracted. NCT corrected: per NEJM abstract, GRADUATE II = NCT03443973.",
+      "n_int": 980,
+      "year": 2023,
+      "finding": "GRADUATE II: change in CDR-SB at week 116 was 2.82 (gantenerumab) vs 3.01 (placebo); difference -0.19 (95% CI -0.55 to 0.17; P=0.30). Primary endpoint NOT met (amyloid PET -56.46 centiloids; 26.8% amyloid-negative). Roche discontinued the program."
+    },
+    {
+      "source_id": "PMID:29221491",
+      "citation": "Ostrowitzki S, Lasser RA, Dorflinger E, et al. A phase III randomized trial of gantenerumab in prodromal Alzheimer's disease (SCarlet RoAD). Alzheimers Res Ther. 2017;9(1):95. DOI:10.1186/s13195-017-0318-y (NCT01224106)",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed phase 3 RCT; halted early for futility per prespecified interim analysis; not retracted. Doses later judged subtherapeutic.",
+      "n_int": 797,
+      "year": 2017,
+      "finding": "Prodromal AD, CDR-SB primary at week 104: LS-mean change 1.60 (placebo), 1.69 (105 mg), 1.73 (225 mg) - no between-group difference on primary or secondary clinical endpoints. Stopped for futility; only exploratory dose-dependent signals."
+    },
+    {
+      "source_id": "PMID:34155411",
+      "citation": "Salloway S, Farlow M, McDade E, et al. A trial of gantenerumab or solanezumab in dominantly inherited Alzheimer's disease (DIAN-TU-001). Nat Med. 2021;27(7):1187-1196. DOI:10.1038/s41591-021-01369-8 (NCT01760005)",
+      "design": "rct",
+      "direction": -1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed academic (DIAN-TU/WashU) RCT; not retracted. Population is dominantly INHERITED (early-onset genetic) AD, not sporadic early AD - hence population_match=false; still directly informs the drug-on-cognition question.",
+      "n_int": 52,
+      "year": 2021,
+      "finding": "Gantenerumab engaged Abeta (reduced amyloid plaques, CSF total-tau, p-tau181, attenuated NfL rise) but did NOT show a beneficial effect on the primary cognitive endpoint vs placebo in symptomatic dominantly inherited AD. Neither gantenerumab nor solanezumab slowed cognitive decline."
+    },
+    {
+      "source_id": "PMID:36449413",
+      "citation": "van Dyck CH, Swanson CJ, Aisen P, et al. Lecanemab in Early Alzheimer's Disease (CLARITY-AD). N Engl J Med. 2023;388(1):9-21. DOI:10.1056/NEJMoa2212948 (NCT03887455)",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Context/comparator row - a DIFFERENT anti-Abeta antibody (lecanemab), not gantenerumab. Direction=0 for the gantenerumab claim. Included to establish that gantenerumab's failure is drug-specific, not a class-wide refutation.",
+      "n_int": 898,
+      "year": 2022,
+      "finding": "Same early-AD population and CDR-SB primary: lecanemab 1.21 vs placebo 1.66; difference -0.45 (95% CI -0.67 to -0.23; P<0.001) - significant slowing of clinical decline; FDA-approved. Amyloid -59.1 centiloids. Shows the anti-amyloid class CAN slow CDR-SB decline; gantenerumab specifically did not."
+    }
+  ],
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Gantenerumab does NOT slow clinical decline in early Alzheimer's disease based on the pivotal evidence. The two phase 3 GRADUATE I and II trials (Bateman et al., NEJM 2023) both failed their primary CDR-SB endpoint - the drug lowered brain amyloid but did not significantly slow cognitive/functional decline versus placebo (differences -0.31, P=0.10 and -0.19, P=0.30). This followed the earlier futility-halted SCarlet RoAD prodromal-AD trial and a negative DIAN-TU-001 result. Roche discontinued gantenerumab in November 2022, and it was never FDA-approved. Note this failure is specific to gantenerumab, not the whole amyloid-antibody class: lecanemab (CLARITY-AD) did significantly slow CDR-SB decline in the same early-AD population."
+  },
+  "provenance": "All rows independently re-verified via PubMed get_article_metadata (PMIDs 37966285, 29221491, 34155411, 36449413 - titles/DOIs/journals/publication types confirmed, none retracted) and ClinicalTrials.gov get_trial_details (NCT03443973, NCT03444870 confirmed as the two GRADUATE phase 3 trials). GRADUATE I/II CDR-SB point estimates, CIs and P-values, plus SCarlet RoAD, DIAN-TU-001 and CLARITY-AD Ns and effects, cross-checked verbatim against source abstracts on 2026-07-08. One defect fixed: GRADUATE I/II NCT tags were swapped relative to the NEJM abstract ('GRADUATE I and II ClinicalTrials.gov numbers, NCT03444870 and NCT03443973, respectively') and have been corrected. No study invented; every source_id is checkable.",
+  "notes": "Adversarial fact-check outcome: 5 of 5 rows verified real and correctly characterized; one NCT-to-arm swap corrected (GRADUATE I=NCT03444870, GRADUATE II=NCT03443973). Consensus is Not Supported and unusually clean: the claim was tested head-on by two adequately powered pivotal RCTs on the exact drug, population, and outcome, and both failed; sponsor discontinued the drug; no regulator approved it. outcome_match=true for all gantenerumab rows because CDR-SB is the actual clinical-decline endpoint (not a surrogate) - amyloid PET reduction was achieved but did not translate to clinical benefit. DIAN-TU row is population_match=false (genetic early-onset AD) but retained for drug-level corroboration. Lecanemab row (direction 0) deliberately included so a gate engine does not over-generalize to 'anti-amyloid antibodies don't work'."
+}

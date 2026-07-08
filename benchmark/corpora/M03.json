@@ -1,0 +1,84 @@
+{
+  "claim_id": "M03",
+  "claim": "Liraglutide reduces cardiovascular events in adults with type 2 diabetes at high cardiovascular risk",
+  "domain": "glp1",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The LEADER trial (Marso, NEJM 2016, NCT01179048; n=9340 T2D at high CV risk) is the pivotal RCT: liraglutide reduced the exact claimed 3-point MACE (CV death, nonfatal MI, nonfatal stroke) with HR 0.87 (95% CI 0.78-0.97, P=0.01 for superiority), driven by a significant reduction in CV death (HR 0.78). This is a positive superiority result on the claimed primary endpoint, not merely non-inferiority. It is corroborated at the class level by SUSTAIN-6 (semaglutide, HR 0.74 for 3-point MACE) and by the Sattar 2021 systematic review/meta-analysis of 8 GLP-1 RA CVOTs (60,080 patients, MACE HR 0.86, 0.80-0.93), which shows a consistent class benefit. The ELIXA trial (lixisenatide) was neutral, but it tested a different, exendin-4-based agent in a distinct acute-coronary-syndrome population on a 4-point MACE endpoint, and is the standard 'contrast' rather than a contradiction of liraglutide specifically. Regulatory/guideline consensus reflects this: FDA approved liraglutide (Victoza) for reducing major CV events in adults with T2D and established CVD (2017), and ADA/EASD and ESC guidelines recommend GLP-1 RAs with proven CV benefit for T2D patients with established or high CV risk. Consensus verdict: Supported.",
+  "outcome": "3-point MACE (composite of cardiovascular death, nonfatal myocardial infarction, nonfatal stroke)",
+  "population": "Adults with type 2 diabetes at high cardiovascular risk",
+  "build_confidence": "high",
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Liraglutide reduces major adverse cardiovascular events in high-CV-risk type 2 diabetes. This was established by the LEADER trial (NEJM 2016), a large placebo-controlled RCT of 9,340 patients that showed a significant reduction in the primary 3-point MACE composite (CV death, nonfatal MI, nonfatal stroke), hazard ratio ~0.87, with a notable reduction in cardiovascular death. On this basis the FDA granted a cardiovascular risk-reduction indication and major guidelines (ADA/EASD, ESC) recommend liraglutide for type 2 diabetes patients with established or high cardiovascular risk. The effect is consistent with the broader GLP-1 receptor agonist class."
+  },
+  "notes": "outcome_match: LEADER and SUSTAIN-6 primary endpoint IS the claimed 3-point MACE (outcome_match true, confirmed against abstracts and NCT01179048 primary-outcome record). ELIXA primary endpoint was a 4-POINT MACE (added hospitalization for unstable angina) in a post-ACS population testing a DIFFERENT drug (lixisenatide) \u2014 class contrast, not direct evidence on liraglutide; direction 0, population partial-match, outcome_match false. All 5 PMIDs re-verified live via PubMed get_article_metadata; none is a Retracted Publication. NCT01179048 re-verified via ClinicalTrials.gov = LEADER with 3-point MACE primary endpoint.",
+  "provenance": "PubMed get_article_metadata re-confirmed all 5 PMIDs, titles, journals, and result numbers verbatim from abstracts (no retractions). ClinicalTrials.gov get_trial_details confirmed NCT01179048 = LEADER (Novo Nordisk, interventional, completed) with the 3-point-MACE composite as PRIMARY endpoint. HRs, CIs, Ns, and event counts quoted directly from verified PubMed abstracts.",
+  "rows": [
+    {
+      "source_id": "PMID:27295427",
+      "citation": "Marso SP, et al. Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes (LEADER). N Engl J Med. 2016;375(4):311-322. DOI:10.1056/NEJMoa1603827. NCT01179048.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark pivotal double-blind placebo-controlled CVOT; funded by Novo Nordisk and NIH; no retraction or integrity concern (PubMed metadata shows no retraction notice). Primary endpoint met superiority.",
+      "n_int": 4668,
+      "year": 2016,
+      "finding": "Primary 3-point MACE (CV death, nonfatal MI, nonfatal stroke) occurred in 608/4668 (13.0%) liraglutide vs 694/4672 (14.9%) placebo: HR 0.87 (95% CI 0.78-0.97), P<0.001 noninferiority, P=0.01 superiority. CV death HR 0.78 (0.66-0.93, P=0.007); all-cause mortality HR 0.85 (0.74-0.97, P=0.02). Directly supports the claim on the exact claimed endpoint and population."
+    },
+    {
+      "source_id": "PMID:27633186",
+      "citation": "Marso SP, et al. Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes (SUSTAIN-6). N Engl J Med. 2016;375(19):1834-1844. DOI:10.1056/NEJMoa1607141. NCT01720446.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Confirmatory class-level evidence (semaglutide, a GLP-1 analogue). Pre-specified as noninferiority; abstract reports P<0.001 for noninferiority. 'Nominal superiority' is inferred from the CI upper bound (0.95<1.0), not an abstract-reported superiority p-value. No integrity concern; not retracted.",
+      "n_int": 1648,
+      "year": 2016,
+      "finding": "Primary 3-point MACE occurred in 108/1648 (6.6%) semaglutide vs 146/1649 (8.9%) placebo: HR 0.74 (95% CI 0.58-0.95), P<0.001 for noninferiority (CI upper bound <1.0). Confirms class-level CV benefit of GLP-1 analogues in high-CV-risk T2D; supports the mechanism-of-claim beyond liraglutide."
+    },
+    {
+      "source_id": "PMID:34425083",
+      "citation": "Sattar N, et al. Cardiovascular, mortality, and kidney outcomes with GLP-1 receptor agonists in patients with type 2 diabetes: a systematic review and meta-analysis of randomised trials. Lancet Diabetes Endocrinol. 2021;9(10):653-662. DOI:10.1016/S2213-8587(21)00203-5.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Meta-analysis of 8 CVOTs (60,080 patients, including LEADER and new AMPLITUDE-O data). Highest tier of evidence; establishes class consistency. No integrity concern; not retracted. Citation title corrected to match PubMed exactly ('in patients with type 2 diabetes').",
+      "n_int": 30000,
+      "year": 2021,
+      "finding": "GLP-1 receptor agonists reduced MACE (HR 0.86, 95% CI 0.80-0.93) across 8 outcome trials, with benefit consistent across structural-homology and other subgroups; also reduced all-cause mortality and heart-failure hospitalization. Establishes robust class-level support that includes and is consistent with liraglutide (n_int approximate: ~half of 60,080 randomized to GLP-1 RA)."
+    },
+    {
+      "source_id": "PMID:26630143",
+      "citation": "Pfeffer MA, et al. Lixisenatide in Patients with Type 2 Diabetes and Acute Coronary Syndrome (ELIXA). N Engl J Med. 2015;373(23):2247-2257. DOI:10.1056/NEJMoa1509225. NCT01147250.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Neutral CVOT; standard CONTRAST case. Tests a DIFFERENT drug (lixisenatide, exendin-4-based) in a DIFFERENT population (recent acute coronary syndrome) with a 4-POINT MACE primary endpoint (adds hospitalization for unstable angina). Not direct evidence on liraglutide. No integrity concern; not retracted. Total randomized N=6068 per abstract.",
+      "n_int": 3034,
+      "year": 2015,
+      "finding": "Among 6068 randomized (post-ACS), primary 4-point MACE (CV death, MI, stroke, hospitalization for unstable angina) occurred in 406 (13.4%) lixisenatide vs 399 (13.2%) placebo: HR 1.02 (95% CI 0.89-1.17); noninferior (P<0.001) but NOT superior (P=0.81). Neutral result for a different exendin-4-based agent in a post-ACS population \u2014 does not contradict liraglutide specifically (different drug, population, endpoint)."
+    },
+    {
+      "source_id": "PMID:29627109",
+      "citation": "Marso SP, et al. Myocardial Infarction Subtypes in Patients With Type 2 Diabetes Mellitus and the Effect of Liraglutide Therapy (from the LEADER Trial). Am J Cardiol. 2018;121(12):1467-1470. DOI:10.1016/j.amjcard.2018.02.030.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Post-hoc analysis of the LEADER RCT; supportive component-level evidence (MI, a MACE component) rather than the full 3-point MACE composite, hence outcome_match false. Post-hoc nature disclosed. No integrity concern; not retracted.",
+      "n_int": 4668,
+      "year": 2018,
+      "finding": "Post-hoc LEADER analysis: liraglutide reduced total MIs (first and recurrent) 359 vs 421 placebo (P=0.022) and first MI (292 vs 339). Reinforces that the MACE benefit reflects a genuine reduction in ischemic events, but measures an individual MACE component, not the full claimed 3-point composite."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "claim_id": "M20",
+  "claim": "Intensive blood-pressure control to a systolic target below 120 mmHg reduces cardiovascular events compared with standard control",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "The balance of evidence now supports intensive systolic BP control (<120 mmHg) reducing major CV events in adults at high CV risk. SPRINT (NCT01206062, non-diabetic high-risk, HR 0.75 for the CV composite and 0.73 for all-cause death) was the landmark positive pivotal trial. The historically neutral counterweight \u2014 ACCORD-BP (NCT00000620, diabetics, primary composite HR 0.88, p=0.20) \u2014 was underpowered (2x2 factorial, event rate lower than projected) and showed a significant stroke reduction; it created population-specific equipoise for diabetics rather than refuting benefit. That equipoise has since resolved: BPROAD (NCT03808311, NEJM online 2024, 12,821 type-2 diabetics, <120 vs <140) found HR 0.79 (0.69-0.90) for major CV events, directly overturning ACCORD-BP's null in the same population. ESPRIT (NCT04030234, Lancet 2024, 11,255 high-risk including diabetics and prior-stroke patients, <120 vs <140) found HR 0.88 (0.78-0.99) with no heterogeneity by diabetes/stroke status. STEP (NCT03015311, older Chinese patients) confirmed benefit at a <130 target (HR 0.74). A 2025 diabetes-focused meta-analysis pooling eight trials found OR 0.88 (0.79-0.97). Direction is consistent and positive across pivotal and confirmatory RCTs and meta-analysis; primary endpoints are hard CV composites, not surrogates. The trade-off is a modest excess of hypotension/syncope/electrolyte and acute-kidney events, which guidelines weigh but which does not negate the CV-event benefit. The main live caveats are external validity (much confirmatory data is from China) and that STEP tested <130 rather than strictly <120 \u2014 hence Supported rather than a stronger claim, but the >120-vs-140 comparison is now well replicated. Independently re-verified: all 6 PMIDs resolve to the cited real articles (titles/DOIs/types/years match PubMed), all 5 NCTs resolve to the correct trials (acronyms/enrollment/design match), every effect direction and intensive-arm N matches the source abstract/CONSORT diagram, and no source is retracted.",
+  "outcome": "Major cardiovascular events (composite of MI/ACS, stroke, heart failure, coronary revascularization, and CV death) and all-cause mortality",
+  "population": "Adults at high cardiovascular risk (including subgroups with and without type 2 diabetes and with prior stroke); trials enrolled hypertensive/elevated-SBP high-risk adults",
+  "rows": [
+    {
+      "source_id": "PMID:26551272",
+      "citation": "The SPRINT Research Group. A Randomized Trial of Intensive versus Standard Blood-Pressure Control. N Engl J Med 2015;373(22):2103-16. DOI:10.1056/NEJMoa1511939. NCT01206062",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "NIH-funded landmark pivotal RCT; stopped early for benefit (pre-specified), which can inflate effect size but result robust and replicated. Verified: PMID 26551272 title/DOI/type (Randomized Controlled Trial) match; NCT01206062 = SPRINT, 9361 enrolled, diabetes an explicit exclusion; intensive-arm N=4678 confirmed from CONSORT diagram.",
+      "n_int": 4678,
+      "year": 2015,
+      "finding": "9361 high-CV-risk adults WITHOUT diabetes, SBP <120 vs <140. Primary CV composite HR 0.75 (95% CI 0.64-0.89, P<0.001); all-cause mortality HR 0.73 (0.60-0.90). Higher rates of hypotension, syncope, electrolyte abnormality, acute kidney injury. Positive pivotal trial."
+    },
+    {
+      "source_id": "PMID:39555827",
+      "citation": "Bi Y, et al. (BPROAD). Intensive Blood-Pressure Control in Patients with Type 2 Diabetes. N Engl J Med (online 2024; print 2025;392(12):1155-1167). DOI:10.1056/NEJMoa2412006. NCT03808311",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Large multicenter RCT (China); missing outcomes handled by multiple imputation (MAR assumption). Directly addresses the diabetic population where ACCORD-BP had left equipoise. Verified: PMID 39555827 title/DOI/type match; PubMed online date 2024/11/16 (print Vol 392(12) is March 2025 \u2014 citation volume/issue is the print issue, year 2024 reflects online-first); NCT03808311 = BPROAD, 12,821 enrolled, intensive-arm N=6414 confirmed from abstract.",
+      "n_int": 6414,
+      "year": 2024,
+      "finding": "12,821 type-2 diabetics, SBP <120 vs <140. Primary CV composite (nonfatal stroke/MI, HF treatment/hospitalization, CV death) HR 0.79 (95% CI 0.69-0.90, P<0.001). More symptomatic hypotension and hyperkalemia. Positive \u2014 overturns ACCORD-BP's null in the same population."
+    },
+    {
+      "source_id": "PMID:38945140",
+      "citation": "Liu J, et al. (ESPRIT). Lowering systolic blood pressure to <120 vs <140 mm Hg in patients with high cardiovascular risk with and without diabetes or previous stroke. Lancet 2024;404(10449):245-255. DOI:10.1016/S0140-6736(24)01028-6. NCT04030234",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Open-label but blinded-outcome (PROBE) design; large multicenter RCT in China. No efficacy-integrity concerns. Verified: PMID 38945140 title/DOI/type match; NCT04030234 = ESPRIT, 11,255 enrolled (4359 diabetes, 3022 prior stroke), intensive-arm N=5624 confirmed from abstract.",
+      "n_int": 5624,
+      "year": 2024,
+      "finding": "11,255 high-CV-risk adults (incl. 4359 diabetes, 3022 prior stroke), <120 vs <140. Primary composite (MI, revascularization, HF hospitalization, stroke, CV death) HR 0.88 (95% CI 0.78-0.99, P=0.028); no heterogeneity by diabetes or stroke history. Excess syncope. Positive confirmatory trial."
+    },
+    {
+      "source_id": "PMID:20228401",
+      "citation": "The ACCORD Study Group (Cushman WC, et al.). Effects of intensive blood-pressure control in type 2 diabetes mellitus. N Engl J Med 2010;362(17):1575-85. DOI:10.1056/NEJMoa1001286. NCT00000620",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Pivotal RCT but 2x2 factorial and underpowered \u2014 observed event rate lower than projected, reducing power to detect the composite. Historically the key source of equipoise; now superseded by BPROAD in same population. Verified: PMID 20228401 title/DOI/type match; NCT00000620 = ACCORD parent (BP arm is the 4733-participant subgroup, shared NCT with the ACCORD lipid arm as noted in provenance); intensive-arm N=2362 confirmed from paper.",
+      "n_int": 2362,
+      "year": 2010,
+      "finding": "4733 type-2 diabetics, SBP <120 vs <140. Primary CV composite HR 0.88 (95% CI 0.73-1.06, P=0.20) \u2014 NULL on primary endpoint. All-cause death HR 1.07 (0.85-1.35). Pre-specified stroke reduced: HR 0.59 (0.39-0.89, P=0.01). More treatment-attributed serious adverse events. Neutral primary result."
+    },
+    {
+      "source_id": "PMID:34491661",
+      "citation": "Zhang W, et al. (STEP). Trial of Intensive Blood-Pressure Control in Older Patients with Hypertension. N Engl J Med 2021;385:1268-1279. DOI:10.1056/NEJMoa2111437. NCT03015311",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Large RCT in older Chinese hypertensives. Intervention target was SBP 110-<130 (not strictly <120), so tests a slightly higher threshold than the exact claim \u2014 supportive but not an exact <120 comparison. Primary composite includes atrial fibrillation as a component but remains a hard clinical composite (not a surrogate). Verified: PMID 34491661 title/DOI/type match; NCT03015311 = STEP, 8511 enrolled, intensive-arm N=4243 confirmed from abstract.",
+      "n_int": 4243,
+      "year": 2021,
+      "finding": "8511 patients aged 60-80, SBP target 110-<130 vs 130-<150. Primary CV composite HR 0.74 (95% CI 0.60-0.92, P=0.007); stroke, ACS and HF components favored intensive. Only excess hypotension. Positive, but tests <130 rather than <120 target."
+    },
+    {
+      "source_id": "PMID:41266861",
+      "citation": "Akhtar A, et al. Intensive Versus Standard Blood Pressure Control in Type 2 Diabetes: Cardiovascular and Microvascular Outcomes. High Blood Press Cardiovasc Prev 2025;33(2):153-158. DOI:10.1007/s40292-025-00766-1",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Aggregate (not individual-participant) meta-analysis, random-effects; 8 RCTs incl. ACCORD-BP and BPROAD. Diabetes-restricted, so external validity to non-diabetics comes from the individual trials (SPRINT etc.), not this pooled estimate. Verified: PMID 41266861 title/DOI match; PubMed types = Meta-Analysis, Systematic Review; OR 0.88 (0.79-0.97), I2=17% confirmed verbatim from abstract.",
+      "n_int": 0,
+      "year": 2025,
+      "finding": "Meta-analysis of 8 RCTs (25,686 type-2 diabetics; ABCD, Mehler 2003, ABCD-2V, SANDS, INVEST, ACCORD-BP, J-DOIT3, BPROAD). Intensive arms reached ~120/70. Composite CV events OR 0.88 (95% CI 0.79-0.97, I2=17%); retinopathy and albuminuria also reduced. Supports modest CV benefit of lower targets in diabetics."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "A confident plain-LLM baseline would answer Yes: intensive BP control to <120 mmHg reduces cardiovascular events, citing SPRINT (HR 0.75, ~25% relative reduction in CV events and lower all-cause mortality) as the definitive landmark trial, and framing the 2017 ACC/AHA guideline shift toward lower targets as endorsement. A strong baseline would note SPRINT excluded diabetics and that ACCORD-BP was neutral in diabetics, but would likely still conclude a net benefit for high-risk adults. The baseline risks overstating certainty for the exact <120 threshold (STEP used <130) and may not surface the 2024 BPROAD/ESPRIT confirmatory data or the higher rates of hypotension, syncope, electrolyte disturbance and acute kidney injury that temper the benefit."
+  },
+  "provenance": "Independently re-verified. All six PMIDs resolve via PubMed to the cited articles with matching titles, DOIs, journals, publication types and years; none flagged 'Retracted Publication' (types = Randomized Controlled Trial x5, Meta-Analysis/Systematic Review x1). All five NCTs resolve on ClinicalTrials.gov to the correct trials: SPRINT NCT01206062 (9361, diabetes excluded), BPROAD NCT03808311 (12,821), ESPRIT NCT04030234 (11,255), ACCORD NCT00000620 (parent; BP subgroup 4733), STEP NCT03015311 (8511 enrolled). Intensive-arm N values confirmed against source abstracts/CONSORT diagrams: SPRINT 4678, BPROAD 6414, ESPRIT 5624, ACCORD 2362, STEP 4243. Effect directions on the claimed CV composite verified verbatim (SPRINT HR 0.75; BPROAD 0.79; ESPRIT 0.88; ACCORD 0.88 p=0.20 null; STEP 0.74; meta OR 0.88). All primary endpoints are hard CV composites (outcome_match=true throughout). Note: ACCORD-BP and the ACCORD lipid arm share NCT00000620 (ACCORD parent trial); PMID 20228401 is the correct BP-arm paper. Documentation nuance: BPROAD citation volume/issue (392(12), March 2025 print) reflects the print issue while year=2024 reflects the NEJM online-first date (PubMed 2024/11/16); DOI/PMID are correct.",
+  "notes": "expected_verdict is 'Supported' (honest consensus) because BPROAD (2024, 12,821 diabetics, HR 0.79) and ESPRIT (2024, HR 0.88) resolved the ACCORD-BP-era equipoise in the diabetic subgroup, aligning the whole evidence base positive. Two nuance flags for gate logic retained: (1) STEP tested <130 not <120, so it is population/outcome-supportive but not an exact-threshold match; (2) the 2025 meta-analysis is diabetes-restricted, so non-diabetic coverage rests on SPRINT. All primary endpoints are hard CV composites (no surrogate substitution), so outcome_match=true throughout. Residual reasons the verdict is 'Supported' not 'strongly settled': safety trade-offs (hypotension/syncope/AKI/hyperkalemia) and heavy reliance on China-based confirmatory trials for external validity.",
+  "build_confidence": "high"
+}

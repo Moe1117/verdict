@@ -1,0 +1,71 @@
+{
+  "claim_id": "M18",
+  "claim": "Sacubitril/valsartan reduces cardiovascular death or heart-failure hospitalization in heart failure with reduced ejection fraction",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Consensus is unambiguously Supported. The pivotal PARADIGM-HF RCT (McMurray, NEJM 2014; N=8442 HFrEF, EF<=40%) had the EXACT claimed composite (CV death or HF hospitalization) as its pre-specified primary endpoint and was stopped early for overwhelming benefit: HR 0.80 (95% CI 0.73-0.87, P<0.001), with concordant reductions in CV death (HR 0.80, 0.71-0.89) and HF hospitalization (-21%). On this single high-quality trial the FDA approved sacubitril/valsartan (Entresto) on 7 July 2015 with a labeled indication to reduce CV death and HF hospitalization in chronic HFrEF (NYHA II-IV) - verified against the FDA press release and Novartis release. The 2022 AHA/ACC/HFSA guideline gives ARNi a Class 1 recommendation in HFrEF 'to reduce morbidity and mortality,' a foundational GDMT pillar. The neutral PARAGON-HF trial is in a DIFFERENT population (HFpEF, EF>=45%) and does not bear on the HFrEF claim - it defines the boundary rather than contradicting it. No credible trial, meta-analysis, or regulatory action contradicts efficacy in HFrEF; no retractions exist. Verdict rests on one large pivotal RCT with a direct (non-surrogate) primary endpoint plus regulatory and guideline consensus.",
+  "outcome": "CV death or HF hospitalization (composite)",
+  "population": "HFrEF (LVEF <=40%)",
+  "rows": [
+    {
+      "source_id": "PMID:25176015",
+      "citation": "McMurray JJV, Packer M, Desai AS, et al. Angiotensin-neprilysin inhibition versus enalapril in heart failure (PARADIGM-HF). N Engl J Med. 2014;371(11):993-1004. DOI:10.1056/NEJMoa1409077. NCT01035255.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark double-blind active-controlled (vs enalapril) phase 3 RCT, N=8442; stopped early per prespecified rule for overwhelming benefit (not for harm/futility). Registry status TERMINATED reflects the early stop for benefit. Novartis-funded but independently adjudicated; verified via PubMed (PMID/DOI/title/RCT type) and ClinicalTrials.gov (N=8442, primary endpoint = CV death or HF hospitalization composite). No retraction.",
+      "n_int": 4187,
+      "year": 2014,
+      "finding": "Primary composite of CV death or HF hospitalization occurred in 914 patients (21.8%, sacubitril/valsartan) vs 1117 (26.5%, enalapril): HR 0.80 (95% CI 0.73-0.87, P<0.001). CV death HR 0.80 (0.71-0.89); HF hospitalization reduced 21%; all-cause death HR 0.84 (0.76-0.93). The primary endpoint IS exactly the claimed outcome (non-surrogate). Numbers verified verbatim against the NEJM abstract."
+    },
+    {
+      "source_id": "PMID:30415601",
+      "citation": "Velazquez EJ, Morrow DA, DeVore AD, et al. Angiotensin-neprilysin inhibition in acute decompensated heart failure (PIONEER-HF). N Engl J Med. 2019;380(6):539-548. DOI:10.1056/NEJMoa1812851. NCT02554890.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Double-blind RCT in HFrEF patients (LVEF<=40%) hospitalized for acute decompensated HF, N=881 randomized (440 sacubitril/valsartan), vs enalapril. Novartis-funded; no integrity concern. Verified via PubMed and ClinicalTrials.gov (NCT02554890, primary outcome = NT-proBNP change). Primary endpoint is a biomarker surrogate, not the clinical composite - so outcome_match=false, correctly flagged.",
+      "n_int": 440,
+      "year": 2019,
+      "finding": "Primary endpoint was time-averaged change in NT-proBNP (a SURROGATE, not clinical events): -46.7% (sacubitril/valsartan) vs -25.3% (enalapril); ratio of change 0.71 (95% CI 0.63-0.81, P<0.001). Supports mechanism/direction in HFrEF but does not directly measure CV death or HF hospitalization. Numbers verified against NEJM abstract."
+    },
+    {
+      "source_id": "PMID:31475794",
+      "citation": "Solomon SD, McMurray JJV, Anand IS, et al. Angiotensin-neprilysin inhibition in heart failure with preserved ejection fraction (PARAGON-HF). N Engl J Med. 2019;381(17):1609-1620. DOI:10.1056/NEJMoa1908655. NCT01920711.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Large double-blind RCT (N=4822) but in HFpEF (EF>=45%), NOT the HFrEF population of the claim. Comparator was valsartan (not enalapril). Verified via PubMed. Included to define the population boundary; does not contradict HFrEF efficacy.",
+      "n_int": 2407,
+      "year": 2019,
+      "finding": "In HFpEF (different population), primary composite of total HF hospitalizations and CV death: 894 events/526 patients (sacubitril/valsartan) vs 1009 events/557 patients (valsartan); rate ratio 0.87 (95% CI 0.75-1.01, P=0.06) - narrowly missed significance. Neutral in HFpEF; for the HFrEF claim this defines the boundary (direction 0) rather than supporting or contradicting it. Numbers verified against NEJM abstract."
+    },
+    {
+      "source_id": "PMID:40643788",
+      "citation": "Comparative Efficacy of Pharmacological Interventions for Heart Failure with Reduced Ejection Fraction Between Asian and White Patients: A Meta-analysis of Randomized Controlled Trials. Am J Cardiovasc Drugs. 2025. DOI:10.1007/s40256-025-00745-w.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Real pairwise meta-analysis of RCTs in HFrEF (11 RCTs, 32,654 participants), verified via PubMed as Meta-Analysis/Systematic Review, 2025, no retraction. Includes sacubitril/valsartan among the pooled drug classes; primary outcome = composite of HF hospitalization, CV death, and all-cause mortality. CAVEAT: the paper's reported drug-specific estimates and headline conclusions concern SGLT2 inhibitors and Asian-vs-White racial differences; it does NOT report a sacubitril/valsartan-specific HFrEF effect size. Weak, non-drug-specific corroboration only.",
+      "n_int": 0,
+      "year": 2025,
+      "finding": "Meta-analysis of 11 HFrEF RCTs (32,654 participants) pooling ACEi, ARNi (sacubitril/valsartan), beta-blockers, ivabradine, SGLT2i and others against a composite of HF hospitalization + CV death + all-cause mortality. Headline results concern SGLT2 inhibitors (most effective overall, RR 0.72) and racial heterogeneity; sacubitril/valsartan is included as one beneficial class but NO ARNi-specific effect estimate is reported. Directionally consistent with a benefit of GDMT (including ARNi) in HFrEF, but this source does not independently quantify the sacubitril/valsartan effect."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Sacubitril/valsartan (Entresto) reduces the composite of cardiovascular death or heart-failure hospitalization in HFrEF. This is established by the pivotal PARADIGM-HF trial (McMurray et al., NEJM 2014), in which sacubitril/valsartan beat enalapril on exactly this primary endpoint (HR ~0.80), leading to FDA approval (July 2015) and a Class I guideline recommendation as a cornerstone of guideline-directed medical therapy for HFrEF."
+  },
+  "build_confidence": "high",
+  "provenance": "All rows independently re-verified: PubMed get_article_metadata confirmed all 4 PMIDs resolve to the stated titles/DOIs with correct publication types (3 RCTs + 1 Meta-Analysis/Systematic Review) and NO 'Retracted Publication' tag. RCT effect sizes/N/direction confirmed verbatim against NEJM abstracts (PARADIGM 21.8% vs 26.5%, HR 0.80; PIONEER NT-proBNP ratio 0.71 surrogate; PARAGON RR 0.87 P=0.06 in HFpEF). ClinicalTrials.gov confirmed NCT01035255 (N=8442, primary endpoint = CV death or HF hospitalization composite, TERMINATED=early stop for benefit) and NCT02554890 (PIONEER, HFrEF LVEF<=40%, primary = NT-proBNP). FDA 2015 approval indication (reduce CV death + HF hospitalization in HFrEF, based on 8442-patient PARADIGM-HF) confirmed via Exa web search of the FDA press release and Novartis release. Consensus anchor: 2022 AHA/ACC/HFSA HF guideline, ARNi Class 1 in HFrEF.",
+  "notes": "REVISED: only change is softening row-4 (PMID:40643788) finding text to honestly reflect that the meta-analysis does not report a sacubitril/valsartan-specific HFrEF estimate (its headline is SGLT2i + racial differences); it remains a real, correctly-labeled verified source and is retained as weak corroboration. All 3 pivotal/supporting RCT rows verified fully accurate on source_id, design, N, direction, and outcome_match. PARADIGM-HF is the single decisive pivotal RCT whose PRIMARY endpoint IS the exact claimed composite (outcome_match=true is load-bearing). PIONEER-HF is in-population but surrogate (outcome_match=false). PARAGON-HF is the HFpEF trap (population_match=false, neutral, direction 0) - does not contradict the HFrEF claim. Gold verdict Supported is honest consensus independent of gate logic. No retracted studies in this evidence base."
+}

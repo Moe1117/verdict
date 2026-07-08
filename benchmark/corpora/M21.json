@@ -1,0 +1,84 @@
+{
+  "claim_id": "M21",
+  "claim": "Adding niacin to statin therapy reduces cardiovascular events",
+  "domain": "cardiometabolic",
+  "expected_verdict": "Not Supported",
+  "gold_rationale": "Two large modern outcome RCTs testing niacin ADDED TO statin background both failed the claimed MACE endpoint. AIM-HIGH (NCT00120289; NEJM 2011, Boden; N=3,414) was stopped early for futility with HR 1.02 (95% CI 0.87-1.21, P=0.79) for the primary composite despite HDL/TG improvement. HPS2-THRIVE (NCT00461630; NEJM 2014; N=25,673) found no reduction in major vascular events (RR 0.96, 95% CI 0.90-1.03, P=0.29) and significant EXCESS harm (diabetes disturbance, infection, bleeding, GI/MSK/skin events). The Keene 2014 BMJ meta-analysis (117,411 patients, 39 trials) showed niacin gives no benefit on mortality, MI, or stroke in statin-treated patients, and its apparent non-fatal MI benefit exists only in pre-statin-era trials (OR 0.69 vs 0.96 statin-era; significant subgroup difference P=0.007). The historical support base \u2014 Coronary Drug Project (Canner 1986; niacin MONOtherapy, no statins) and HATS (Brown 2001; N=160, primary endpoint was angiographic stenosis, a SURROGATE, with niacin bundled with simvastatin) \u2014 does not match the claimed statin-background population or a hard MACE endpoint. Guidelines accordingly do not recommend niacin add-on for CV event reduction, and the FDA withdrew approval for the niacin/statin coadministration indication and removed the niacin/statin combination products Advicor and Simcor in April 2016 (Federal Register 81 FR, citing ACCORD/AIM-HIGH/HPS2-THRIVE) for lack of benefit. Consensus: Not Supported.",
+  "outcome": "MACE composite (CHD death, nonfatal MI, ischemic stroke, ACS hospitalization, or coronary/cerebral revascularization)",
+  "population": "Patients on statin therapy with dyslipidemia (established atherosclerotic/vascular disease, low HDL)",
+  "build_confidence": "high",
+  "provenance": "All rows independently re-verified by adversarial fact-check via PubMed get_article_metadata (PMID + title + article type + effect estimate from abstract) and ClinicalTrials.gov get_trial_details (NCT + design + enrollment). AIM-HIGH: PMID 22085343 / NCT00120289. HPS2-THRIVE: PMID 25014686 / NCT00461630. Keene meta-analysis: PMID 25038074. Coronary Drug Project 15-yr: PMID 3782631. HATS: PMID 11757504. FDA withdrawal confirmed via Federal Register 81 FR (2016-04-18). All sample sizes and hazard/rate/odds ratios match verified abstracts; no invented data, no fabricated retractions.",
+  "notes": "Critical distinction for the resolver: the two historical positive rows fail population_match (CDP, pre-statin monotherapy) or outcome_match (HATS, surrogate angiographic primary endpoint + niacin not isolated on statin background). On the exact claimed population+outcome (niacin ADDED to statin, hard MACE), every high-quality row is null or negative. HPS2-THRIVE adds a net-harm signal. Clean surrogate/old-evidence vs pivotal-outcome-trial contrast \u2014 an ideal decidable-gates case where naive HDL-raising logic (and the pre-statin CDP result) would wrongly support the claim. Fact-check found no defects; CDP design 'rct' retained (trial was randomized double-blind; PubMed lists 'Controlled Clinical Trial').",
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "No. Although niacin favorably raises HDL and lowers triglycerides, the two major randomized outcome trials testing niacin added to statin therapy \u2014 AIM-HIGH (2011) and HPS2-THRIVE (2014) \u2014 both found no reduction in cardiovascular events, and HPS2-THRIVE showed increased serious adverse events (including diabetes, infection, and bleeding). Meta-analyses confirm no MACE benefit in the statin era. Guidelines no longer recommend niacin as add-on therapy, and the FDA withdrew the niacin/statin combination approvals. The claim is not supported."
+  },
+  "rows": [
+    {
+      "source_id": "PMID:22085343",
+      "citation": "Boden WE, et al. Niacin in patients with low HDL cholesterol levels receiving intensive statin therapy (AIM-HIGH). N Engl J Med. 2011;365(24):2255-67. DOI:10.1056/NEJMoa1107579.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "NHLBI/Abbott-funded; stopped early for futility by DSMB. Result robust and widely replicated. No retraction. Verified PMID 22085343.",
+      "n_int": 1718,
+      "year": 2011,
+      "finding": "Extended-release niacin added to simvastatin (+ezetimibe to keep LDL 40-80 mg/dL) vs placebo in 3,414 patients with established CVD and low HDL. Primary MACE composite occurred in 16.4% (niacin) vs 16.2% (placebo); HR 1.02 (95% CI 0.87-1.21, P=0.79). Trial stopped early for lack of efficacy despite HDL rising 35->42 and TG falling. Directly measures the claimed outcome in the claimed population: NULL."
+    },
+    {
+      "source_id": "NCT00461630",
+      "citation": "HPS2-THRIVE Collaborative Group. Effects of extended-release niacin with laropiprant in high-risk patients. N Engl J Med. 2014;371(3):203-12. DOI:10.1056/NEJMoa1300955. PMID:25014686.",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Merck-funded, Oxford CTSU-run; 25,673 randomized after run-in. Large, rigorous, definitive. No retraction. Net-harm signal is a key safety finding. Verified PMID 25014686 / NCT00461630.",
+      "n_int": 12838,
+      "year": 2014,
+      "finding": "ER niacin 2g + laropiprant vs placebo on statin-based LDL-lowering therapy in 25,673 patients with vascular disease. First major vascular event 13.2% vs 13.7%; rate ratio 0.96 (95% CI 0.90-1.03, P=0.29) = NO benefit. Significant EXCESS harm: serious diabetes disturbance (+3.7pp), new diabetes (+1.3pp), GI (+1.0pp), musculoskeletal (+0.7pp), skin (+0.3pp), infection (+1.4pp), bleeding (+0.7pp). Largest trial; net harm on statin background."
+    },
+    {
+      "source_id": "PMID:25038074",
+      "citation": "Keene D, Price C, Shun-Shin MJ, Francis DP. Effect on cardiovascular risk of HDL-targeted drug treatments niacin, fibrates, and CETP inhibitors: meta-analysis of RCTs including 117,411 patients. BMJ. 2014;349:g4379. DOI:10.1136/bmj.g4379.",
+      "design": "meta-analysis of rcts",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Peer-reviewed BMJ meta-analysis, 39 trials. Prespecified statin vs pre-statin subgroup with significant interaction. No integrity concerns. Verified PMID 25038074, article type Meta-Analysis.",
+      "n_int": 0,
+      "year": 2014,
+      "finding": "Across 117,411 patients in 39 trials, niacin showed no effect on all-cause mortality (OR 1.03), CHD mortality (0.93), or stroke (0.96). For non-fatal MI, niacin helped ONLY in pre-statin-era trials (OR 0.69, P=0.0004) but had NO effect when statins were already used (OR 0.96, P=0.52); significant subgroup difference (P=0.007). Confirms no MACE benefit of niacin in the statin era = contradicts the claim."
+    },
+    {
+      "source_id": "PMID:11757504",
+      "citation": "Brown BG, et al. Simvastatin and niacin, antioxidant vitamins, or the combination for the prevention of coronary disease (HATS). N Engl J Med. 2001;345(22):1583-92. DOI:10.1056/NEJMoa011090.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Small (N=160), single-center. Not a retraction concern, but underpowered for clinical events and PRIMARY endpoint was a surrogate. Historically cited to justify the niacin-add hypothesis that later large trials refuted. Verified PMID 11757504.",
+      "n_int": 38,
+      "year": 2001,
+      "finding": "160 patients with CAD and low HDL randomized to simvastatin+niacin, antioxidants, both, or placebo. PRIMARY endpoint = angiographic coronary stenosis change (SURROGATE): stenosis regressed -0.4% with simvastatin-niacin vs +3.9% placebo (P<0.001). Clinical events (secondary): 3% vs 24%. BUT niacin was bundled WITH simvastatin as a single arm vs placebo \u2014 does NOT isolate niacin ADDED to a statin background, and primary endpoint is imaging, not MACE. Illustrates the surrogate-based over-optimism later overturned."
+    },
+    {
+      "source_id": "PMID:3782631",
+      "citation": "Canner PL, et al. Fifteen year mortality in Coronary Drug Project patients: long-term benefit with niacin. J Am Coll Cardiol. 1986;8(6):1245-55. DOI:10.1016/s0735-1097(86)80293-5.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Landmark pre-statin randomized double-blind trial (1966-1975); post-hoc 15-yr mortality follow-up. No statins existed; not the claimed population. This is the historical basis physicians cite for niacin, but it does not test niacin-on-statin. Verified PMID 3782631 (PubMed lists 'Controlled Clinical Trial'; trial was randomized, so 'rct' retained).",
+      "n_int": 1119,
+      "year": 1986,
+      "finding": "Coronary Drug Project: niacin MONOTHERAPY (no statin \u2014 statins did not yet exist) vs placebo in 8,341 post-MI men (niacin arm n=1,119). During-trial: modest reduction in nonfatal recurrent MI, no reduction in total mortality. At 15-yr follow-up (9 yr after drug stopped), all-cause mortality 52.0% vs 58.2% (P=0.0004), 11% lower. Positive for niacin, but population_match=FALSE for the claim: patients were NOT on statins, so it cannot support niacin ADDED to statin therapy."
+    }
+  ]
+}

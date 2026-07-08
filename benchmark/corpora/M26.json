@@ -1,0 +1,97 @@
+{
+  "claim_id": "M26",
+  "claim": "Rapamycin (sirolimus) extends healthspan or improves aging outcomes in healthy humans",
+  "domain": "repurposing",
+  "expected_verdict": "Insufficient",
+  "gold_rationale": "There is no clinical-outcome evidence that rapamycin extends healthspan or improves aging outcomes in healthy humans. The foundation is preclinical: the NIA Interventions Testing Program showed rapamycin extends lifespan in genetically heterogeneous mice (Harrison 2009, Nature, PMID 19587680). Human data are limited to small, short trials with SURROGATE or safety endpoints, not aging/healthspan clinical outcomes. The largest dedicated healthspan RCT in healthy normative-aging adults (PEARL, total N=129, NCT04488601 / Moel 2025, PMID 40188830) had a surrogate primary endpoint (visceral fat by DXA) that did NOT change significantly (p=0.942), with only scattered subgroup self-report secondary signals. A pilot RCT in healthy older adults (Kraig 2018, N=25, PMID 29408453) established short-term safety but showed no significant improvement in cognition, physical performance, or immune parameters (and flagged erythrocyte/anemia-type decrements). The strongest human efficacy signals are for a SURROGATE (immunosenescence/vaccine response) using rapalogs (everolimus/RTB101), not healthspan: Mannick 2014 (PMID 25540326) and Mannick 2018 (PMID 29997249, N=264). Critically, the only Phase 3 confirmatory trial of a TORC1 inhibitor for an aging-related clinical outcome (RTB101 PROTECTOR-1, N=1024, reported in Mannick 2021 Lancet Healthy Longevity PMID 33977284; ClinicalTrials.gov NCT04668352) FAILED its primary endpoint (OR 1.07, p=0.65) and the program was halted. No trial has ever measured a healthspan/aging clinical outcome in healthy humans as a primary endpoint and shown benefit. Consensus is therefore Insufficient: promising preclinical biology, no confirmed human healthspan benefit, and the one pivotal human outcome trial was negative.",
+  "outcome": "aging/healthspan clinical outcomes (e.g., mortality, functional decline, disability, incident age-related disease)",
+  "population": "healthy older adults",
+  "rows": [
+    {
+      "source_id": "PMID:19587680",
+      "citation": "Harrison DE, Strong R, Sharp ZD, et al. Rapamycin fed late in life extends lifespan in genetically heterogeneous mice. Nature. 2009;460(7253):392-395. DOI:10.1038/nature08221",
+      "design": "preclinical",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "NIA Interventions Testing Program landmark, replicated across 3 independent sites; foundational but non-human. PubMed-confirmed, not retracted.",
+      "n_int": 0,
+      "year": 2009,
+      "finding": "Rapamycin begun at 600 days of age extended median/maximal lifespan in genetically heterogeneous mice (+14% females, +9% males at 90% mortality). This is the entire biological basis for the human claim but is an animal lifespan study, not a healthy-human healthspan outcome."
+    },
+    {
+      "source_id": "NCT04488601",
+      "citation": "Moel M, Harinath G, Lee V, et al. Influence of rapamycin on safety and healthspan metrics after one year: PEARL trial results. Aging (Albany NY). 2025;17(4):908-936 (PMID:40188830). Trial NCT04488601. DOI:10.18632/aging.206235",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Sponsor (AgelessRx) is a commercial off-label rapamycin telehealth provider; industry-conflicted; small N (total 129 across 3 arms); many secondary outcomes with only subgroup-level nominal significance (multiplicity concern). ClinicalTrials.gov confirms Phase 2, total enrollment 129, primary=visceral fat by DXA.",
+      "n_int": 129,
+      "year": 2025,
+      "finding": "48-week Phase 2 RCT in healthy normative-aging adults (50-85y), total N=129 randomized to placebo, 5 mg, or 10 mg rapamycin weekly. PRIMARY endpoint visceral adiposity by DXA did NOT change significantly (eta=0.001, p=0.942). Drug was 'relatively safe.' Only scattered subgroup secondary self-report signals (lean mass/pain in women on 10mg; well-being/general health on 5mg). Primary endpoint is a surrogate, not a healthspan outcome, and it was null. (n_int shown as verified total enrollment; single active arm is ~43.)"
+    },
+    {
+      "source_id": "PMID:29408453",
+      "citation": "Kraig E, Linehan LA, Liang H, et al. A randomized control trial to establish the feasibility and safety of rapamycin treatment in an older human cohort: Immunological, physical performance, and cognitive effects. Exp Gerontol. 2018;105:53-69. DOI:10.1016/j.exger.2017.12.026",
+      "design": "rct",
+      "direction": 0,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Explicitly a feasibility/safety pilot; underpowered (N=25; 11 RAPA + 14 placebo completers analyzed); short 8-week duration. PubMed-confirmed, not retracted.",
+      "n_int": 11,
+      "year": 2018,
+      "finding": "Pilot placebo-controlled RCT, sirolimus 1 mg/day in 25 generally healthy adults aged 70-95y for 8 weeks (11 RAPA / 14 placebo completers). No significant change in cognition (EXIT25/SLUMS/TAPS), physical performance (grip, timed walk), glucose tolerance, or most immune parameters; statistically significant decrements in erythrocyte indices (Hb, Hct, RBC). Establishes short-term safety only; no healthspan/aging outcome benefit shown."
+    },
+    {
+      "source_id": "PMID:29997249",
+      "citation": "Mannick JB, Morris M, Hockey HP, et al. TORC1 inhibition enhances immune function and reduces infections in the elderly. Sci Transl Med. 2018;10(449):eaaq1564. DOI:10.1126/scitranslmed.aaq1564",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Novartis-sponsored; uses rapalogs (BEZ235 catalytic + RAD001 allosteric TORC1 inhibitor), not rapamycin itself; endpoint is a surrogate (immunosenescence/self-reported infection), not a validated healthspan/aging outcome. n_int=264 is TOTAL enrollment (multiple arms). PubMed-confirmed, not retracted.",
+      "n_int": 264,
+      "year": 2018,
+      "finding": "Phase 2a RCT, total N=264 elderly (~65+), low-dose combined TORC1 inhibition (BEZ235+RAD001) for 6 weeks significantly reduced self-reported infection rates over 1 year (p=0.001) and improved influenza vaccine response / antiviral gene expression. Supports an mTOR-pathway immune benefit but on a surrogate (immune function/infection), not a healthspan clinical outcome, and with rapalogs rather than rapamycin."
+    },
+    {
+      "source_id": "PMID:25540326",
+      "citation": "Mannick JB, Del Giudice G, Lattanzi M, et al. mTOR inhibition improves immune function in the elderly. Sci Transl Med. 2014;6(268):268ra179. DOI:10.1126/scitranslmed.3009892",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Novartis-sponsored; everolimus (RAD001), a rapalog, not rapamycin; surrogate immune endpoint. n_int=218 is TOTAL enrollment across placebo + everolimus dose arms. PubMed-confirmed, not retracted.",
+      "n_int": 218,
+      "year": 2014,
+      "finding": "Placebo-controlled RCT in elderly volunteers (total ~218): everolimus (RAD001) enhanced response to influenza vaccination by ~20% and reduced PD-1+ T cells. First human signal that mTOR inhibition may ameliorate immunosenescence, but endpoint is an immune surrogate, not a healthspan/aging clinical outcome."
+    },
+    {
+      "source_id": "PMID:33977284",
+      "citation": "Mannick JB, Teo G, Bernardo P, et al. Targeting the biology of ageing with mTOR inhibitors to improve immune function in older adults: phase 2b and phase 3 randomised trials. Lancet Healthy Longev. 2021;2(5):e250-e262. DOI:10.1016/S2666-7568(21)00062-3. Phase 3 (PROTECTOR-1) registered ClinicalTrials.gov NCT04668352 / ANZCTR ACTRN12619000628145; topline announced 2019-11-15 (did not meet primary endpoint; program halted).",
+      "design": "rct",
+      "direction": -1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Largest and only Phase 3 of an mTOR/TORC1 inhibitor for an aging-related clinical endpoint; industry (resTORbio) + NIA-funded; peer-reviewed pivotal result with pre-specified endpoint; clean negative. Uses rapalog RTB101 (dactolisib/BEZ101 class), not rapamycin, and a clinical-illness (not healthspan) endpoint. NOTE: original corpus mis-cited NCT04139915, which is a WITHDRAWN duplicate registration (enrollment=0); corrected to the enrolled/reported trial via PMID 33977284 (Lancet Healthy Longev 2021) and NCT04668352.",
+      "n_int": 513,
+      "year": 2021,
+      "finding": "Phase 3 RCT (PROTECTOR-1), N=1024 (513 RTB101 / 510 placebo), RTB101 10 mg/day for 16 weeks vs placebo in adults >=65y. FAILED primary endpoint: clinically symptomatic respiratory illness 134/511 (26%) RTB101 vs 125/510 (25%) placebo; OR 1.07 (95% CI 0.80-1.42), p=0.65. The only pivotal human outcome trial of TORC1 inhibition for an aging-related clinical endpoint was negative, contradicting a translatable clinical aging benefit and undermining earlier Phase 2 immune signals. (n_int=513 = RTB101 arm; total N=1024.)"
+    }
+  ],
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "A plausible confident plain-LLM baseline would answer: No / not established. Rapamycin robustly extends lifespan in mice (NIA ITP, Harrison 2009), the most reproducible pharmacological longevity intervention in mammals. But in humans the evidence is preclinical-to-early only: existing human trials (PEARL, Kraig pilot, Mannick everolimus/RTB101 immune studies) are small and/or use surrogate endpoints (visceral fat, vaccine response, infection rates), and the single Phase 3 TORC1-inhibitor outcome trial (RTB101 PROTECTOR-1, N=1024) failed (OR 1.07, p=0.65). No trial has demonstrated a healthspan or aging clinical outcome in healthy humans. A well-calibrated model should say the claim is not supported by human outcome evidence and rate the overall evidence Insufficient, while noting the strong preclinical rationale and ongoing interest."
+  },
+  "build_confidence": "high",
+  "provenance": "All rows re-verified independently. PMIDs 19587680, 40188830, 29408453, 29997249, 25540326, 33977284 confirmed via PubMed (exact titles/journals/years; publication types include RCT/Phase 2/Phase 3; NONE flagged 'Retracted Publication'). ClinicalTrials.gov: NCT04488601 (PEARL) confirmed Phase 2, total enrollment 129, primary=visceral fat by DXA, healthy volunteers 50-85y. PROTECTOR-1 Phase 3 N=1024 / OR 1.07 / p=0.65 cross-verified against three independent sources: Lancet Healthy Longevity 2021 (PMID 33977284; 513 RTB101 vs 510 placebo, 134/511 vs 125/510), resTORbio SEC 8-K / GlobeNewswire press release (2019-11-15), and ClinicalTrials.gov NCT04668352 (Enrollment 1024 ACTUAL, COMPLETED). CORRECTION APPLIED: original PROTECTOR-1 source_id NCT04139915 is a WITHDRAWN duplicate registration (enrollment=0) and was replaced with PMID:33977284; PEARL n_int corrected from 114 to verified total 129. n_int values for Mannick 2014/2018 are total enrollments (multi-arm) as the load-bearing verified numbers.",
+  "notes": "Key decidability drivers unchanged after verification: (1) outcome_match is FALSE for every human row \u2014 no human trial used an aging/healthspan clinical outcome as primary; all are surrogates (visceral fat, immune/vaccine, infection) or safety. (2) The only +1 human signals come from rapalogs (everolimus, RTB101/BEZ235), not rapamycin/sirolimus itself, on immune surrogates. (3) The single Phase 3 (highest-tier human) outcome trial is negative. (4) The only outcome_match=TRUE, direction=+1 row is a mouse study. This pattern (strong preclinical + surrogate-only positive human + negative pivotal) is the textbook profile for an 'Insufficient' verdict rather than 'Supported' or 'Contested.' A gate engine keying on outcome_match should abstain on human healthspan efficacy."
+}

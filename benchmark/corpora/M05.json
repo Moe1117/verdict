@@ -1,0 +1,81 @@
+{
+  "claim_id": "M05",
+  "claim": "Semaglutide improves heart-failure symptoms in patients with obesity-related HFpEF (KCCQ symptom score and body weight)",
+  "domain": "glp1",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Two dedicated, adequately powered phase 3 double-blind RCTs with the EXACT claimed outcomes as their dual primary endpoints (KCCQ-CSS and % body-weight change) both met both endpoints in obesity-phenotype HFpEF: STEP-HFpEF (non-diabetic, N=529; KCCQ-CSS +7.8, weight -10.7pp; NEJM 2023, DOI:10.1056/NEJMoa2306963, PMID:37622681) and STEP-HFpEF DM (diabetic, N=616 randomized; KCCQ-CSS +7.3, weight -6.4pp; NEJM 2024, DOI:10.1056/NEJMoa2313917, PMID:38587233). The prespecified pooled individual-patient analysis (N=1145; 573 semaglutide/572 placebo; Lancet 2024, DOI:10.1016/S0140-6736(24)00469-0, PMID:38599221) confirmed KCCQ-CSS +7.5 and weight -8.4%, with concordant NYHA-class and 6MWD functional gains (JACC 2024, PMID:38913004). This is not a surrogate story: the claimed endpoints ARE the trial primary endpoints, so outcome_match is genuinely true. The SUMMIT trial of tirzepatide (a dual GIP/GLP-1 agonist; NEJM 2025, DOI:10.1056/NEJMoa2410027, PMID:39555826, N=731) independently reproduced KCCQ-CSS benefit (+6.9) plus a CV-composite reduction (HR 0.62) in a closely matched population (LVEF >=50%), reinforcing the drug-class effect \u2014 though it is a different drug. Both STEP trials Novo-sponsored but multicenter, blinded, pre-registered, published in top journals; none retracted (verified). Consensus is Supported. Nuance: the semaglutide HFpEF program establishes symptom/weight/functional benefit, NOT a reduction in hard CV death \u2014 the CV-composite benefit was shown for tirzepatide (SUMMIT, a different drug), which matches the claim as worded.",
+  "outcome": "KCCQ-CSS symptom/physical-limitation score and percentage body-weight change at 52 weeks",
+  "population": "Adults with obesity-phenotype HFpEF (LVEF >=45%, BMI >=30 kg/m2, NYHA II-IV), diabetic and non-diabetic",
+  "rows": [
+    {
+      "source_id": "PMID:37622681",
+      "citation": "Kosiborod MN, et al. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity (STEP-HFpEF). N Engl J Med. 2023;389(12):1069-1084. DOI:10.1056/NEJMoa2306963. NCT04788511.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed (PMID:37622681, NEJM 2023;389(12):1069-1084, publication type Randomized Controlled Trial, not retracted) and ClinicalTrials.gov (NCT04788511, Phase 3, N=529, dual primary endpoints KCCQ-CSS + body weight). Novo Nordisk-sponsored, pre-registered. Both primary endpoints are the claimed outcomes directly, not surrogates.",
+      "n_int": 529,
+      "year": 2023,
+      "finding": "In non-diabetic obesity-related HFpEF (LVEF >=45%, BMI >=30), semaglutide 2.4 mg met both dual primary endpoints at 52 weeks: KCCQ-CSS estimated treatment difference +7.8 points (95% CI 4.8-10.9) and body weight -10.7 percentage points (95% CI -11.9 to -9.4), both P<0.001; 6MWD +20.3 m."
+    },
+    {
+      "source_id": "PMID:38587233",
+      "citation": "Kosiborod MN, et al. Semaglutide in Patients with Obesity-Related Heart Failure and Type 2 Diabetes (STEP-HFpEF DM). N Engl J Med. 2024;390(15):1394-1407. DOI:10.1056/NEJMoa2313917. NCT04916470.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed (PMID:38587233, NEJM 2024;390(15):1394-1407, type Randomized Controlled Trial, not retracted) and ClinicalTrials.gov (NCT04916470, Phase 3, enrollment 617; 616 randomized per NEJM abstract; dual primary endpoints KCCQ-CSS + body weight). Double-blind, placebo-controlled, multicenter. n_int=617 uses the registry enrollment figure (published randomized N=616).",
+      "n_int": 617,
+      "year": 2024,
+      "finding": "In obesity-related HFpEF WITH type 2 diabetes, semaglutide 2.4 mg improved KCCQ-CSS by +7.3 points (95% CI 4.1-10.4) and reduced body weight by -6.4 percentage points (95% CI -7.6 to -5.2) vs placebo at 52 weeks, both P<0.001 - replicating STEP-HFpEF in a harder-to-treat population."
+    },
+    {
+      "source_id": "PMID:38599221",
+      "citation": "Butler J, et al. Semaglutide versus placebo in people with obesity-related HFpEF: a pooled analysis of STEP-HFpEF and STEP-HFpEF DM. Lancet. 2024;403(10437):1635-1648. DOI:10.1016/S0140-6736(24)00469-0. PMID:38599221.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed (PMID:38599221, Lancet 2024;403(10437):1635-1648, types incl Randomized Controlled Trial / Research Support; not retracted; PMC11317105). Prespecified pooled individual-patient analysis of the two pivotal RCTs (N=1145; 573 semaglutide/572 placebo). Not independent of rows 1-2 - same participants. 'Reduced HF events' reflects the hierarchical composite (win ratio 1.65), not a standalone isolated HF-event endpoint.",
+      "n_int": 573,
+      "year": 2024,
+      "finding": "Pooled across both trials (N=1145; 573 semaglutide/572 placebo), semaglutide improved KCCQ-CSS by +7.5 points (95% CI 5.3-9.8) and reduced body weight by -8.4% (95% CI -9.2 to -7.5) vs placebo; 6MWD +17.1 m and CRP treatment ratio 0.64. Consistent benefit regardless of diabetes status."
+    },
+    {
+      "source_id": "PMID:38913004",
+      "citation": "Schou M, et al. Semaglutide and NYHA Functional Class in Obesity-Related HFpEF: The STEP-HFpEF Program. J Am Coll Cardiol. 2024;84(3):247-257. DOI:10.1016/j.jacc.2024.04.038. PMID:38913004.",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed (PMID:38913004, JACC 2024;84(3):247-257, types Randomized Controlled Trial / Multicenter Study; not retracted). Prespecified pooled secondary analysis of the same 1,145 participants as rows 1-3 (NOT an independent trial). Reinforces the symptom/functional dimension (NYHA-class improvement corroborates KCCQ-CSS benefit).",
+      "n_int": 573,
+      "year": 2024,
+      "finding": "More semaglutide- than placebo-treated patients improved NYHA class (32.6% vs 21.5%; OR 2.20, 95% CI 1.62-2.99) and fewer deteriorated (2.09% vs 5.24%; OR 0.36); KCCQ-CSS improvement was largest in NYHA III/IV (+10.5 points, 95% CI 6.6-14.4). Directly supports the symptom-improvement claim across functional severity."
+    },
+    {
+      "source_id": "PMID:39555826",
+      "citation": "Packer M, et al. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity (SUMMIT). N Engl J Med. 2025;392(5):427-437. DOI:10.1056/NEJMoa2410027. NCT04847557.",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Verified via PubMed (PMID:39555826, NEJM 2025;392(5):427-437, types Clinical Trial Phase III / Randomized Controlled Trial / Multicenter Study; not retracted) and ClinicalTrials.gov (NCT04847557, Phase 3, N=731). YEAR CORRECTED 2024->2025 to match the NEJM print citation (online-ahead 2024-11-16). DIFFERENT drug (tirzepatide, dual GIP/GLP-1) - supports drug CLASS/mechanism, not direct semaglutide evidence. SUMMIT enrolled LVEF >=50% and age >=40 (tighter than the claim's LVEF >=45%); population_match stays true because EF>=50 is a subset of EF>=45. Eli Lilly-sponsored, double-blind, multicenter.",
+      "n_int": 364,
+      "year": 2025,
+      "finding": "In obesity-related HFpEF (LVEF >=50%), tirzepatide improved KCCQ-CSS by a between-group difference of +6.9 points (95% CI 3.3-10.6, P<0.001) at 52 weeks AND reduced the composite of CV death or worsening HF (HR 0.62, 95% CI 0.41-0.95, P=0.026). Corroborates incretin-class symptom benefit in a closely matched population."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes - semaglutide improves heart-failure symptoms and reduces body weight in obesity-related HFpEF. The STEP-HFpEF trial (Kosiborod et al., NEJM 2023) randomized 529 patients with LVEF >=45% and BMI >=30 to semaglutide 2.4 mg vs placebo and met both dual primary endpoints: a clinically meaningful improvement in the KCCQ Clinical Summary Score (+7.8 points) and substantial weight loss (-10.7 percentage points), plus better 6-minute walk distance and lower CRP. STEP-HFpEF DM replicated this in patients with type 2 diabetes (KCCQ +7.3, weight -6.4 pp), and the pooled Lancet 2024 analysis (N=1145) confirmed consistent benefit (KCCQ +7.5, weight -8.4%). This is now reflected in heart-failure guidance for the obesity phenotype. One caveat: these trials were powered on symptoms and weight, not hard cardiovascular outcomes - the CV-event benefit in this population was shown for tirzepatide (SUMMIT), a related but different drug."
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "claim_id": "M13",
+  "claim": "Osimertinib improves survival in EGFR-mutated advanced non-small-cell lung cancer",
+  "domain": "oncology",
+  "expected_verdict": "Supported",
+  "gold_rationale": "Osimertinib's survival benefit in first-line EGFR-mutation-positive advanced NSCLC is established consensus, not merely a surrogate signal. The pivotal double-blind phase 3 FLAURA trial (NCT02296125, 556 randomized; registry enrollment 674) met its primary PFS endpoint (18.9 vs 10.2 mo vs first-generation EGFR-TKI, HR 0.46; PMID 29151359) AND its mature analysis of the pre-specified SECONDARY overall-survival endpoint demonstrated a statistically significant OS benefit (38.6 vs 31.8 mo, HR 0.80, 95.05% CI 0.64-1.00, p=0.046; PMID 31751012) \u2014 a true hard endpoint, not a surrogate. This is the key fact that moves the verdict from a surrogate-only 'Contested' to a firm 'Supported'. The survival signal is directionally reinforced by ADAURA in the resected/adjuvant setting, where osimertinib produced a large OS benefit (HR 0.49; PMID 37272535), and FLAURA2 extended the osimertinib backbone with an additional PFS gain from added chemotherapy (HR 0.62; PMID 37937763). Osimertinib is the guideline-preferred (NCCN, ESMO) first-line standard of care for advanced EGFRm NSCLC and is FDA/EMA approved in this indication. Only nuance: the OS hazard ratio of 0.80 is modest, OS was a secondary (not primary) endpoint, and the p-value (0.046) is close to the significance boundary; part of the PFS evidence base measures a surrogate \u2014 but the balance of evidence, including a positive mature OS readout on the exact claimed population, supports the claim.",
+  "outcome": "progression-free and overall survival",
+  "population": "EGFR-mutation-positive (Ex19del or L858R) advanced/metastatic non-small-cell lung cancer",
+  "rows": [
+    {
+      "source_id": "PMID:29151359",
+      "citation": "Soria JC, et al. Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cell Lung Cancer. N Engl J Med. 2017 (FLAURA primary analysis). DOI:10.1056/NEJMoa1713137",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 double-blind RCT; PubMed article types = 'Clinical Trial, Phase III; Randomized Controlled Trial; Multicenter Study'. No retraction/expression-of-concern flag (confirmed). AstraZeneca-sponsored.",
+      "n_int": 279,
+      "year": 2017,
+      "finding": "FLAURA primary analysis (NCT02296125; 556 randomized, 279 osimertinib / 277 comparator; registry enrollment listed as 674): osimertinib vs gefitinib/erlotinib first-line, median PFS 18.9 vs 10.2 mo, HR 0.46 (95% CI 0.37-0.57), p<0.001. Primary endpoint was investigator-assessed PFS (a surrogate for the claimed OS), hence outcome_match=false for the OS half of the claim; OS data were immature at this interim (25% maturity)."
+    },
+    {
+      "source_id": "PMID:31751012",
+      "citation": "Ramalingam SS, et al. Overall Survival with Osimertinib in Untreated, EGFR-Mutated Advanced NSCLC. N Engl J Med. 2019 (FLAURA final OS; print Jan 2020, Vol 382). DOI:10.1056/NEJMoa1913662",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 RCT, mature OS readout of the same FLAURA trial. No integrity flags (confirmed via PubMed publication-type search).",
+      "n_int": 279,
+      "year": 2019,
+      "finding": "FLAURA mature OS analysis: median overall survival 38.6 vs 31.8 mo (osimertinib vs comparator EGFR-TKI), HR 0.80 (95.05% CI 0.64-1.00), p=0.046. Statistically significant benefit on the TRUE hard endpoint (OS) in the exact claimed population \u2014 the linchpin row moving verdict to Supported. OS was a pre-specified SECONDARY endpoint (abstract: 'Overall survival was a secondary end point'). HR is modest and p near the significance boundary. 279 patients in the osimertinib arm."
+    },
+    {
+      "source_id": "PMID:37937763",
+      "citation": "Planchard D, et al. Osimertinib with or without Chemotherapy in EGFR-Mutated Advanced NSCLC. N Engl J Med. 2023 (FLAURA2). DOI:10.1056/NEJMoa2306434",
+      "design": "rct",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 open-label RCT (NCT04035486; 557 randomized, registry enrollment 587). No integrity flags (confirmed).",
+      "n_int": 279,
+      "year": 2023,
+      "finding": "FLAURA2: osimertinib + platinum-pemetrexed vs osimertinib alone, first-line (557 randomized). Median PFS 25.5 vs 16.7 mo (as reported in the primary publication), HR 0.62 (95% CI 0.49-0.79), p<0.001; 24-month PFS 57% vs 41%. Reinforces the osimertinib backbone as standard of care; primary endpoint is investigator-assessed PFS (surrogate), so outcome_match=false for OS. n_int reflects the osimertinib+chemo arm (~half of 557)."
+    },
+    {
+      "source_id": "PMID:37272535",
+      "citation": "Tsuboi M, et al. Overall Survival with Osimertinib in Resected EGFR-Mutated NSCLC. N Engl J Med. 2023 (ADAURA OS). DOI:10.1056/NEJMoa2304594",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 double-blind RCT (ADAURA, NCT02511106). No integrity flags (confirmed).",
+      "n_int": 339,
+      "year": 2023,
+      "finding": "ADAURA final OS: adjuvant osimertinib in RESECTED stage IB-IIIA EGFRm NSCLC, OS HR 0.49 (stage II-IIIA: 95.03% CI 0.33-0.73, p<0.001; overall IB-IIIA: 95.03% CI 0.34-0.70, p<0.001); 5-yr OS 85% vs 73% (stage II-IIIA). True OS benefit but in the resected/early-stage population, NOT advanced/metastatic \u2014 population_match=false. 339 in the osimertinib group. Directionally corroborates osimertinib survival benefit across EGFRm disease."
+    },
+    {
+      "source_id": "PMID:32955177",
+      "citation": "Wu YL, Tsuboi M, He J, et al. Osimertinib in Resected EGFR-Mutated Non-Small-Cell Lung Cancer. N Engl J Med. 2020 (ADAURA DFS interim). DOI:10.1056/NEJMoa2027071",
+      "design": "rct",
+      "direction": 1,
+      "population_match": false,
+      "outcome_match": false,
+      "integrity_ok": true,
+      "integrity_note": "Phase 3 double-blind RCT (ADAURA), DFS primary endpoint reported at unblinded interim. No integrity flags (confirmed).",
+      "n_int": 339,
+      "year": 2020,
+      "finding": "ADAURA primary DFS analysis in resected stage IB-IIIA EGFRm NSCLC (682 randomized, 339 osimertinib): overall-population disease-free survival HR 0.20 (99.12% CI 0.14-0.30), p<0.001 (stage II-IIIA primary HR 0.17). Both surrogate endpoint (DFS) and early-stage population \u2014 included to characterize the full osimertinib evidence base; neither population nor outcome matches the advanced-NSCLC OS claim."
+    },
+    {
+      "source_id": "PMID:39533233",
+      "citation": "Liu A, et al. EGFR-TKIs or EGFR-TKIs combination treatments for untreated advanced EGFR-mutated NSCLC: a network meta-analysis. BMC Cancer. 2024. DOI:10.1186/s12885-024-13168-8",
+      "design": "meta-analysis of rcts",
+      "direction": 1,
+      "population_match": true,
+      "outcome_match": true,
+      "integrity_ok": true,
+      "integrity_note": "Network meta-analysis of 26 first-line RCTs (8,359 patients); osimertinib-containing regimens rank favorably. PubMed article type = 'Network Meta-Analysis'. No integrity flags (confirmed).",
+      "n_int": 0,
+      "year": 2024,
+      "finding": "Network meta-analysis of first-line regimens for untreated advanced EGFRm NSCLC (26 trials, 8,359 patients) synthesizing PFS and OS across EGFR-TKI monotherapy and combination strategies; osimertinib+chemotherapy and lazertinib+amivantamab ranked highest for PFS, and osimertinib-based therapy is consistently among the highest-ranked, supporting its guideline-preferred position. Headline ranking is PFS; OS is pooled but less emphasized. n_int reported as 0 (pooled multi-trial synthesis)."
+    }
+  ],
+  "baseline": {
+    "answer": "Yes",
+    "confidence": "high",
+    "text": "Yes. Osimertinib is the standard first-line therapy for EGFR-mutation-positive advanced NSCLC. In the phase 3 FLAURA trial it significantly improved both progression-free survival (roughly 19 vs 10 months) and overall survival (about 38.6 vs 31.8 months, HR ~0.80) versus first-generation EGFR-TKIs, and it is the guideline-preferred (NCCN/ESMO) and FDA/EMA-approved option in this setting."
+  },
+  "build_confidence": "high",
+  "provenance": "All rows independently re-verified against primary sources on 2026-07-08. PubMed get_article_metadata confirmed PMIDs, exact titles, journals, years, DOIs, first authors, and article types (all RCTs / Network Meta-Analysis; NO 'Retracted Publication' or expression-of-concern flags, confirmed by a targeted publication-type search): 29151359 (NEJMoa1713137, Soria), 31751012 (NEJMoa1913662, Ramalingam), 37937763 (NEJMoa2306434, Planchard), 32955177 (NEJMoa2027071, Wu), 37272535 (NEJMoa2304594, Tsuboi), 39533233 (BMC Cancer, Liu). ClinicalTrials.gov confirmed NCT02296125 (FLAURA, phase 3 double-blind, enrollment 674, PFS primary/OS secondary) and NCT04035486 (FLAURA2, phase 3 open-label, enrollment 587). Effect sizes (HRs, CIs, medians, p-values) cross-checked against the published abstracts and match. n_int values are the osimertinib-arm Ns (FLAURA/FLAURA2 279; ADAURA 339); meta-analysis n_int set to 0. Corrections applied: reconciled registry-enrollment vs randomized-population N wording (FLAURA 556 randomized / 674 enrolled; FLAURA2 557 randomized / 587 enrolled) and the 2019-vs-2020 citation-year inconsistency on the FLAURA OS row (kept 2019 = PubMed electronic pub date).",
+  "notes": "Critical distinction for the gate: the claim is about SURVIVAL (PFS + OS) in ADVANCED disease. Only PMID 31751012 (FLAURA final OS) and the network meta-analysis directly match BOTH the advanced population AND a true OS endpoint. FLAURA primary (29151359) and FLAURA2 (37937763) match population but measure PFS (surrogate). Both ADAURA rows (37272535, 32955177) match a true endpoint direction for one of them but are the RESECTED/early-stage population (population_match=false). One verified nuance beyond the original build: FLAURA OS was a pre-specified SECONDARY endpoint (not primary) and crossed the significance boundary at p=0.046 \u2014 the corpus now states this explicitly. Despite surrogate/population/secondary-endpoint caveats on individual rows, the balance of evidence \u2014 anchored by a positive mature OS readout on the exact claimed population \u2014 yields GOLD verdict Supported. A naive gate that down-weights all surrogate/off-population rows could under-call to Contested; the single strong OS row (31751012) is what must carry the decision."
+}

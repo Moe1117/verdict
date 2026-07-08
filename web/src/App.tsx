@@ -106,7 +106,7 @@ export default function App() {
           <div className="panel llm">
             <div className="panel-label">A plain LLM</div>
             <div className="who"><span>🤖</span> <b>Assistant</b></div>
-            <div className="bubble">{BASELINES[card.id] ?? 'Yes.'}</div>
+            <div className="bubble">{card.baseline?.text ?? BASELINES[card.id] ?? 'Yes.'}</div>
             {bluffs(card) && (
               <div className="warn">⚠ confident, unsourced — and, here, wrong or overstated</div>
             )}
