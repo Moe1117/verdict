@@ -275,7 +275,7 @@
         "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
       }
     ],
-    "confidence": "81% (95% CI 57%-93%, n=16)",
+    "confidence": "78% (95% CI 55%-91%, n=18)",
     "robustness": {
       "stability": 0.75,
       "survives_drop_largest": true,
@@ -466,7 +466,7 @@
         "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
       }
     ],
-    "confidence": "86% (95% CI 77%-92%, n=73)",
+    "confidence": "87% (95% CI 78%-93%, n=71)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -867,7 +867,7 @@
         "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
       }
     ],
-    "confidence": "86% (95% CI 77%-92%, n=73)",
+    "confidence": "87% (95% CI 78%-93%, n=71)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -1058,7 +1058,7 @@
         "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
       }
     ],
-    "confidence": "86% (95% CI 77%-92%, n=73)",
+    "confidence": "87% (95% CI 78%-93%, n=71)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -1089,7 +1089,7 @@
       {
         "year": 2012,
         "verdict": "Not Supported",
-        "certainty": "High",
+        "certainty": "Moderate",
         "n": 5,
         "changed": true
       },
@@ -1322,7 +1322,7 @@
         "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
       }
     ],
-    "confidence": "86% (95% CI 77%-92%, n=73)",
+    "confidence": "87% (95% CI 78%-93%, n=71)",
     "robustness": {
       "stability": 1.0,
       "survives_drop_largest": true,
@@ -1828,7 +1828,7 @@
         "rationale": "not assessed (would require small-study / funnel analysis); no downgrade applied"
       }
     ],
-    "confidence": "86% (95% CI 77%-92%, n=73)",
+    "confidence": "87% (95% CI 78%-93%, n=71)",
     "robustness": {
       "stability": 0.667,
       "survives_drop_largest": false,
@@ -1845,7 +1845,7 @@
       {
         "year": 2021,
         "verdict": "Supported",
-        "certainty": "High",
+        "certainty": "Moderate",
         "n": 3,
         "changed": true
       },

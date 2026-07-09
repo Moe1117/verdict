@@ -43,6 +43,9 @@ def _legacy_score(rows, verdict):
         score = 2
     else:
         score = 1
+    # Evidence-quality cap: a lone, unreplicated meta cannot be High-certainty.
+    if len(metas) == 1 and not large and len(rcts) < 2:
+        score -= 1
     if not metas and not large and total_n and total_n < 500:
         score -= 1
     if verdict is Verdict.SUPPORTED:

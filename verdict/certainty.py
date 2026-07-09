@@ -115,23 +115,39 @@ def grade_certainty(rows: list[EvidenceRow], verdict: Verdict) -> Certainty:
 
     domains: list[GradeDomain] = []
 
+    # Evidence-quality cap (risk of bias): the engine reasons on study DESIGN TIER but cannot see
+    # the quality of the trials pooled inside a meta-analysis. A LONE, unreplicated meta — one
+    # meta, no corroborating large RCT, fewer than two primary RCTs — is exactly where
+    # pooling-of-junk hides (how, replaying history, a 2021 meta built on later-flagged ivermectin
+    # trials read as High-certainty). Replication (a second concordant meta, a large primary RCT,
+    # or >=2 primary RCTs) earns High; a lone synthesis is capped below it. Certainty-only.
+    lone_synthesis = len(metas) == 1 and not large and len(rcts) < 2
+
     # Start tier (GRADE: randomized evidence starts High; otherwise observational-grade Low).
     if randomized:
         start = 3
-        design_bits = []
-        if metas:
-            design_bits.append(f"{len(metas)} meta-analysis(es) of RCTs")
-        if large:
-            design_bits.append(f"{len(large)} large RCT(s)")
-        elif rcts:
-            design_bits.append(f"{len(rcts)} RCT(s)")
-        rob_reason = ("randomized evidence (" + ", ".join(design_bits) + ") — starts at High; "
-                      "per-study risk-of-bias appraisal requires human judgement and is not automated")
+        if lone_synthesis:
+            rob_delta = -1
+            rob_reason = ("rests on a single meta-analysis with no corroborating large RCT — the "
+                          "pooled trials' quality is unverified and unreplicated, so certainty is "
+                          "capped below High (a second concordant meta or a large RCT would earn it)")
+        else:
+            rob_delta = 0
+            design_bits = []
+            if metas:
+                design_bits.append(f"{len(metas)} meta-analysis(es) of RCTs")
+            if large:
+                design_bits.append(f"{len(large)} large RCT(s)")
+            elif rcts:
+                design_bits.append(f"{len(rcts)} RCT(s)")
+            rob_reason = ("randomized evidence (" + ", ".join(design_bits) + ") — starts at High; "
+                          "per-study risk-of-bias appraisal requires human judgement and is not automated")
     else:
         start = 1
+        rob_delta = 0
         rob_reason = ("no randomized / meta-analytic evidence — starts at observational-grade (Low) "
                       "certainty")
-    domains.append(GradeDomain("risk of bias", 0, rob_reason))
+    domains.append(GradeDomain("risk of bias", rob_delta, rob_reason))
 
     # Inconsistency — the gate required directional agreement before deciding, so a decided
     # (non-Contested) verdict is, by construction, directionally consistent.
