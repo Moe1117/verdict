@@ -1,0 +1,4394 @@
+{
+  "rows": {
+    "C01:PMID14969594": {
+      "cid": "C01",
+      "pmid": "14969594",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C01:PMID17472817": {
+      "cid": "C01",
+      "pmid": "17472817",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C01:PMID20102893": {
+      "cid": "C01",
+      "pmid": "20102893",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C01:PMID16214597": {
+      "cid": "C01",
+      "pmid": "16214597",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C01:PMID15325833": {
+      "cid": "C01",
+      "pmid": "15325833",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C01:PMID26246463": {
+      "cid": "C01",
+      "pmid": "26246463",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C05:PMID40243198": {
+      "cid": "C05",
+      "pmid": "40243198",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C05:PMID22875195": {
+      "cid": "C05",
+      "pmid": "22875195",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C05:PMID37227368": {
+      "cid": "C05",
+      "pmid": "37227368",
+      "gold": {
+        "design": "target-trial emulation",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "target-trial emulation",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C05:PMID32958585": {
+      "cid": "C05",
+      "pmid": "32958585",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C05:PMID22448244": {
+      "cid": "C05",
+      "pmid": "22448244",
+      "gold": {
+        "design": "systematic review",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C05:PMID24837144": {
+      "cid": "C05",
+      "pmid": "24837144",
+      "gold": {
+        "design": "systematic review",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C08:PMID35353979": {
+      "cid": "C08",
+      "pmid": "35353979",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C08:PMID38431155": {
+      "cid": "C08",
+      "pmid": "38431155",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C08:PMID35179551": {
+      "cid": "C08",
+      "pmid": "35179551",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C08:PMID35870876": {
+      "cid": "C08",
+      "pmid": "35870876",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C08:PMID34237554": {
+      "cid": "C08",
+      "pmid": "34237554",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C14:PMID30415628": {
+      "cid": "C14",
+      "pmid": "30415628",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C14:PMID33190147": {
+      "cid": "C14",
+      "pmid": "33190147",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C14:PMID30415637": {
+      "cid": "C14",
+      "pmid": "30415637",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C14:PMID30146932": {
+      "cid": "C14",
+      "pmid": "30146932",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "C14:PMID31567003": {
+      "cid": "C14",
+      "pmid": "31567003",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F01:PMID19923501": {
+      "cid": "F01",
+      "pmid": "19923501",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": false
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F01:PMID18184958": {
+      "cid": "F01",
+      "pmid": "18184958",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F01:PMID22738085": {
+      "cid": "F01",
+      "pmid": "22738085",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F01:PMID23075127": {
+      "cid": "F01",
+      "pmid": "23075127",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F01:PMID23418281": {
+      "cid": "F01",
+      "pmid": "23418281",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F01:PMID24262273": {
+      "cid": "F01",
+      "pmid": "24262273",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F03:PMID17056968": {
+      "cid": "F03",
+      "pmid": "17056968",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F03:PMID17578978": {
+      "cid": "F03",
+      "pmid": "17578978",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F03:PMID16418018": {
+      "cid": "F03",
+      "pmid": "16418018",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F03:PMID32667154": {
+      "cid": "F03",
+      "pmid": "32667154",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F03:PMID41239206": {
+      "cid": "F03",
+      "pmid": "41239206",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "F03:PMID24150982": {
+      "cid": "F03",
+      "pmid": "24150982",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F03:PMID24894888": {
+      "cid": "F03",
+      "pmid": "24894888",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F03:PMID28751024": {
+      "cid": "F03",
+      "pmid": "28751024",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F04:PMID32205204": {
+      "cid": "F04",
+      "pmid": "32205204",
+      "gold": {
+        "design": "prospective cohort",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": false
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F04:PMID33031652": {
+      "cid": "F04",
+      "pmid": "33031652",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F04:PMID33264556": {
+      "cid": "F04",
+      "pmid": "33264556",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F04:PMID33165621": {
+      "cid": "F04",
+      "pmid": "33165621",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "F04:PMID33859192": {
+      "cid": "F04",
+      "pmid": "33859192",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M01:PMID37952131": {
+      "cid": "M01",
+      "pmid": "37952131",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M01:PMID39608381": {
+      "cid": "M01",
+      "pmid": "39608381",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M01:PMID27633186": {
+      "cid": "M01",
+      "pmid": "27633186",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M01:PMID34425083": {
+      "cid": "M01",
+      "pmid": "34425083",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M02:PMID35658024": {
+      "cid": "M02",
+      "pmid": "35658024",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M02:PMID37385275": {
+      "cid": "M02",
+      "pmid": "37385275",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M02:PMID40353578": {
+      "cid": "M02",
+      "pmid": "40353578",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M02:PMID33567185": {
+      "cid": "M02",
+      "pmid": "33567185",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M02:PMID40321113": {
+      "cid": "M02",
+      "pmid": "40321113",
+      "gold": {
+        "design": "systematic review",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M03:PMID27295427": {
+      "cid": "M03",
+      "pmid": "27295427",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M03:PMID27633186": {
+      "cid": "M03",
+      "pmid": "27633186",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M03:PMID34425083": {
+      "cid": "M03",
+      "pmid": "34425083",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M03:PMID26630143": {
+      "cid": "M03",
+      "pmid": "26630143",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M03:PMID29627109": {
+      "cid": "M03",
+      "pmid": "29627109",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M04:PMID38785209": {
+      "cid": "M04",
+      "pmid": "38785209",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M04:PMID39608381": {
+      "cid": "M04",
+      "pmid": "39608381",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M04:PMID40156846": {
+      "cid": "M04",
+      "pmid": "40156846",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M04:PMID39210781": {
+      "cid": "M04",
+      "pmid": "39210781",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M04:PMID38914124": {
+      "cid": "M04",
+      "pmid": "38914124",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M04:PMID27633186": {
+      "cid": "M04",
+      "pmid": "27633186",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M05:PMID37622681": {
+      "cid": "M05",
+      "pmid": "37622681",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M05:PMID38587233": {
+      "cid": "M05",
+      "pmid": "38587233",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M05:PMID38599221": {
+      "cid": "M05",
+      "pmid": "38599221",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M05:PMID38913004": {
+      "cid": "M05",
+      "pmid": "38913004",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M05:PMID39555826": {
+      "cid": "M05",
+      "pmid": "39555826",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M06:PMID37423541": {
+      "cid": "M06",
+      "pmid": "37423541",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M06:PMID38429615": {
+      "cid": "M06",
+      "pmid": "38429615",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M07:PMID36449413": {
+      "cid": "M07",
+      "pmid": "36449413",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M07:PMID33865446": {
+      "cid": "M07",
+      "pmid": "33865446",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M07:PMID38730496": {
+      "cid": "M07",
+      "pmid": "38730496",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M07:PMID37874099": {
+      "cid": "M07",
+      "pmid": "37874099",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M08:PMID37459141": {
+      "cid": "M08",
+      "pmid": "37459141",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M08:PMID33720637": {
+      "cid": "M08",
+      "pmid": "33720637",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M08:PMID36449413": {
+      "cid": "M08",
+      "pmid": "36449413",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M08:PMID40473116": {
+      "cid": "M08",
+      "pmid": "40473116",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M08:PMID40316479": {
+      "cid": "M08",
+      "pmid": "40316479",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M08:PMID39468148": {
+      "cid": "M08",
+      "pmid": "39468148",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M09:PMID29365294": {
+      "cid": "M09",
+      "pmid": "29365294",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M09:PMID24450890": {
+      "cid": "M09",
+      "pmid": "24450890",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M09:PMID37458272": {
+      "cid": "M09",
+      "pmid": "37458272",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M09:PMID33046560": {
+      "cid": "M09",
+      "pmid": "33046560",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M10:PMID37966285": {
+      "cid": "M10",
+      "pmid": "37966285",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M10:PMID29221491": {
+      "cid": "M10",
+      "pmid": "29221491",
+      "error": "HTTPStatusError: Client error '400 Bad Request' for url 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=verdict&email=sharab.ahmadnv%4"
+    },
+    "M10:PMID34155411": {
+      "cid": "M10",
+      "pmid": "34155411",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M10:PMID36449413": {
+      "cid": "M10",
+      "pmid": "36449413",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M11:PMID16236737": {
+      "cid": "M11",
+      "pmid": "16236737",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M11:PMID16236738": {
+      "cid": "M11",
+      "pmid": "16236738",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M11:PMID21768458": {
+      "cid": "M11",
+      "pmid": "21768458",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M11:PMID25332249": {
+      "cid": "M11",
+      "pmid": "25332249",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M11:PMID28215665": {
+      "cid": "M11",
+      "pmid": "28215665",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M11:PMID34339645": {
+      "cid": "M11",
+      "pmid": "34339645",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M11:PMID22513938": {
+      "cid": "M11",
+      "pmid": "22513938",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M12:PMID18160686": {
+      "cid": "M12",
+      "pmid": "18160686",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M12:PMID19720913": {
+      "cid": "M12",
+      "pmid": "19720913",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M12:PMID21383283": {
+      "cid": "M12",
+      "pmid": "21383283",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M12:PMID23422754": {
+      "cid": "M12",
+      "pmid": "23422754",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M12:PMID23894038": {
+      "cid": "M12",
+      "pmid": "23894038",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M12:PMID22786517": {
+      "cid": "M12",
+      "pmid": "22786517",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M13:PMID29151359": {
+      "cid": "M13",
+      "pmid": "29151359",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M13:PMID31751012": {
+      "cid": "M13",
+      "pmid": "31751012",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M13:PMID37937763": {
+      "cid": "M13",
+      "pmid": "37937763",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M13:PMID37272535": {
+      "cid": "M13",
+      "pmid": "37272535",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M13:PMID32955177": {
+      "cid": "M13",
+      "pmid": "32955177",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M13:PMID39533233": {
+      "cid": "M13",
+      "pmid": "39533233",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M14:PMID28822576": {
+      "cid": "M14",
+      "pmid": "28822576",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M14:PMID31345627": {
+      "cid": "M14",
+      "pmid": "31345627",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M14:PMID25891173": {
+      "cid": "M14",
+      "pmid": "25891173",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M14:PMID28961465": {
+      "cid": "M14",
+      "pmid": "28961465",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M14:PMID33857412": {
+      "cid": "M14",
+      "pmid": "33857412",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M14:PMID39684531": {
+      "cid": "M14",
+      "pmid": "39684531",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M15:PMID36028483": {
+      "cid": "M15",
+      "pmid": "36028483",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M15:PMID31318392": {
+      "cid": "M15",
+      "pmid": "31318392",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M15:PMID32554514": {
+      "cid": "M15",
+      "pmid": "32554514",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M15:PMID20842054": {
+      "cid": "M15",
+      "pmid": "20842054",
+      "gold": {
+        "design": "prospective cohort",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M15:PMID40860833": {
+      "cid": "M15",
+      "pmid": "40860833",
+      "gold": {
+        "design": "systematic review",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M17:PMID28304224": {
+      "cid": "M17",
+      "pmid": "28304224",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M17:PMID36779348": {
+      "cid": "M17",
+      "pmid": "36779348",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "prospective cohort",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M17:PMID30403574": {
+      "cid": "M17",
+      "pmid": "30403574",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M17:PMID38055686": {
+      "cid": "M17",
+      "pmid": "38055686",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M17:PMID28304242": {
+      "cid": "M17",
+      "pmid": "28304242",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M17:PMID39304616": {
+      "cid": "M17",
+      "pmid": "39304616",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M18:PMID25176015": {
+      "cid": "M18",
+      "pmid": "25176015",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M18:PMID30415601": {
+      "cid": "M18",
+      "pmid": "30415601",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M18:PMID31475794": {
+      "cid": "M18",
+      "pmid": "31475794",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M18:PMID40643788": {
+      "cid": "M18",
+      "pmid": "40643788",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M19:PMID31535829": {
+      "cid": "M19",
+      "pmid": "31535829",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M19:PMID32865377": {
+      "cid": "M19",
+      "pmid": "32865377",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M19:PMID32877652": {
+      "cid": "M19",
+      "pmid": "32877652",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M20:PMID26551272": {
+      "cid": "M20",
+      "pmid": "26551272",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M20:PMID39555827": {
+      "cid": "M20",
+      "pmid": "39555827",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M20:PMID38945140": {
+      "cid": "M20",
+      "pmid": "38945140",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M20:PMID20228401": {
+      "cid": "M20",
+      "pmid": "20228401",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M20:PMID34491661": {
+      "cid": "M20",
+      "pmid": "34491661",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M20:PMID41266861": {
+      "cid": "M20",
+      "pmid": "41266861",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M21:PMID22085343": {
+      "cid": "M21",
+      "pmid": "22085343",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M21:PMID25038074": {
+      "cid": "M21",
+      "pmid": "25038074",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": -1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M21:PMID11757504": {
+      "cid": "M21",
+      "pmid": "11757504",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M21:PMID3782631": {
+      "cid": "M21",
+      "pmid": "3782631",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M22:PMID26039521": {
+      "cid": "M22",
+      "pmid": "26039521",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M22:PMID30480766": {
+      "cid": "M22",
+      "pmid": "30480766",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M22:PMID27673306": {
+      "cid": "M22",
+      "pmid": "27673306",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M22:PMID35863366": {
+      "cid": "M22",
+      "pmid": "35863366",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M22:PMID28430910": {
+      "cid": "M22",
+      "pmid": "28430910",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M23:PMID31733140": {
+      "cid": "M23",
+      "pmid": "31733140",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M23:PMID32865380": {
+      "cid": "M23",
+      "pmid": "32865380",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M23:PMID39555823": {
+      "cid": "M23",
+      "pmid": "39555823",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M23:PMID32862667": {
+      "cid": "M23",
+      "pmid": "32862667",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M23:PMID41334610": {
+      "cid": "M23",
+      "pmid": "41334610",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M24:PMID30548390": {
+      "cid": "M24",
+      "pmid": "30548390",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M24:PMID25041462": {
+      "cid": "M24",
+      "pmid": "25041462",
+      "gold": {
+        "design": "prospective cohort",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "cross-sectional",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M24:PMID30906924": {
+      "cid": "M24",
+      "pmid": "30906924",
+      "gold": {
+        "design": "guideline / regulatory",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "guideline / regulatory",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M24:PMID41957871": {
+      "cid": "M24",
+      "pmid": "41957871",
+      "gold": {
+        "design": "guideline / regulatory",
+        "direction": 0,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "systematic review",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M25:PMID36322843": {
+      "cid": "M25",
+      "pmid": "36322843",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": false
+      }
+    },
+    "M25:PMID33852780": {
+      "cid": "M25",
+      "pmid": "33852780",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M25:PMID39627679": {
+      "cid": "M25",
+      "pmid": "39627679",
+      "gold": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "meta-analysis of rcts",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M25:PMID35166158": {
+      "cid": "M25",
+      "pmid": "35166158",
+      "gold": {
+        "design": "prospective cohort",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": false,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M25:PMID33146667": {
+      "cid": "M25",
+      "pmid": "33146667",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M26:PMID19587680": {
+      "cid": "M26",
+      "pmid": "19587680",
+      "gold": {
+        "design": "preclinical",
+        "direction": 1,
+        "outcome_match": true,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "preclinical",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": false,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M26:PMID29408453": {
+      "cid": "M26",
+      "pmid": "29408453",
+      "gold": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M26:PMID29997249": {
+      "cid": "M26",
+      "pmid": "29997249",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M26:PMID25540326": {
+      "cid": "M26",
+      "pmid": "25540326",
+      "gold": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": true,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    },
+    "M26:PMID33977284": {
+      "cid": "M26",
+      "pmid": "33977284",
+      "gold": {
+        "design": "rct",
+        "direction": -1,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "extracted": {
+        "design": "rct",
+        "direction": 0,
+        "outcome_match": false,
+        "population_match": true,
+        "integrity_ok": true
+      },
+      "match": {
+        "design": true,
+        "direction": false,
+        "outcome_match": true,
+        "population_match": true,
+        "integrity_ok": true,
+        "direction_polarity": true
+      }
+    }
+  },
+  "claims": {
+    "C01": {
+      "agent": "Atorvastatin",
+      "outcome": "LDL cholesterol level",
+      "population": "adults with hyperlipidemia"
+    },
+    "C05": {
+      "agent": "Metformin",
+      "outcome": "cancer incidence",
+      "population": "adults without diabetes"
+    },
+    "C08": {
+      "agent": "Ivermectin",
+      "outcome": "clinical outcomes (e.g., mortality, hospitalization, disease progression)",
+      "population": "Patients with COVID-19"
+    },
+    "C14": {
+      "agent": "Icosapent ethyl (EPA)",
+      "outcome": "cardiovascular events (composite of cardiovascular death, nonfatal MI, nonfatal stroke, coronary revascularization, unstable angina)",
+      "population": "high-risk statin-treated patients with hypertriglyceridemia"
+    },
+    "F01": {
+      "agent": "Hydroxyethyl starch (HES)",
+      "outcome": "safety and efficacy of volume resuscitation (including mortality and acute kidney injury/renal replacement therapy)",
+      "population": "critically ill adults"
+    },
+    "F03": {
+      "agent": "celecoxib/pregabalin multimodal analgesia",
+      "outcome": "postoperative pain",
+      "population": "surgical patients (perioperative)"
+    },
+    "F04": {
+      "agent": "Hydroxychloroquine",
+      "outcome": "clinical outcomes (e.g., mortality, recovery, hospitalization duration)",
+      "population": "patients with COVID-19"
+    },
+    "M01": {
+      "agent": "Semaglutide",
+      "outcome": "Major adverse cardiovascular events (MACE)",
+      "population": "Overweight or obese adults without diabetes"
+    },
+    "M02": {
+      "agent": "Tirzepatide",
+      "outcome": "weight loss",
+      "population": "adults with obesity"
+    },
+    "M03": {
+      "agent": "Liraglutide",
+      "outcome": "cardiovascular events (major adverse cardiovascular events: cardiovascular death, nonfatal myocardial infarction, nonfatal stroke)",
+      "population": "adults with type 2 diabetes at high cardiovascular risk"
+    },
+    "M04": {
+      "agent": "Semaglutide",
+      "outcome": "progression of chronic kidney disease",
+      "population": "adults with type 2 diabetes"
+    },
+    "M05": {
+      "agent": "Semaglutide",
+      "outcome": "Heart failure symptoms (KCCQ symptom score) and body weight",
+      "population": "Patients with obesity-related HFpEF"
+    },
+    "M06": {
+      "agent": "Aducanumab",
+      "outcome": "cognitive and clinical decline in Alzheimer's disease",
+      "population": "patients with early Alzheimer's disease"
+    },
+    "M07": {
+      "agent": "Lecanemab",
+      "outcome": "clinical decline",
+      "population": "patients with early symptomatic Alzheimer's disease"
+    },
+    "M08": {
+      "agent": "Donanemab",
+      "outcome": "clinical decline (cognitive and functional decline)",
+      "population": "patients with early symptomatic Alzheimer's disease (mild cognitive impairment or mild dementia due to Alzheimer's disease)"
+    },
+    "M09": {
+      "agent": "Solanezumab",
+      "outcome": "cognition",
+      "population": "patients with Alzheimer's disease"
+    },
+    "M10": {
+      "agent": "Gantenerumab",
+      "outcome": "clinical decline",
+      "population": "early Alzheimer's disease patients"
+    },
+    "M11": {
+      "agent": "trastuzumab",
+      "outcome": "overall survival",
+      "population": "HER2-positive early breast cancer patients"
+    },
+    "M12": {
+      "agent": "bevacizumab",
+      "outcome": "overall survival",
+      "population": "patients with metastatic HER2-negative breast cancer"
+    },
+    "M13": {
+      "agent": "Osimertinib",
+      "outcome": "overall survival",
+      "population": "patients with EGFR-mutated advanced non-small-cell lung cancer"
+    },
+    "M14": {
+      "agent": "Pembrolizumab",
+      "outcome": "overall survival",
+      "population": "advanced melanoma patients"
+    },
+    "M15": {
+      "agent": "PD-1/PD-L1 checkpoint inhibitor + chemotherapy",
+      "outcome": "overall survival",
+      "population": "unselected metastatic pancreatic ductal adenocarcinoma patients"
+    },
+    "M17": {
+      "agent": "Evolocumab",
+      "outcome": "major adverse cardiovascular events (cardiovascular death, myocardial infarction, stroke, hospitalization for unstable angina, coronary revascularization)",
+      "population": "patients with atherosclerotic cardiovascular disease on statin therapy"
+    },
+    "M18": {
+      "agent": "Sacubitril/valsartan",
+      "outcome": "cardiovascular death or heart failure hospitalization",
+      "population": "patients with heart failure with reduced ejection fraction"
+    },
+    "M19": {
+      "agent": "Dapagliflozin",
+      "outcome": "composite of heart-failure hospitalization or cardiovascular death",
+      "population": "patients with heart failure with reduced ejection fraction"
+    },
+    "M20": {
+      "agent": "Intensive blood-pressure control (systolic target <120 mmHg)",
+      "outcome": "cardiovascular events",
+      "population": "adults with hypertension at increased cardiovascular risk"
+    },
+    "M21": {
+      "agent": "niacin (added to statin therapy)",
+      "outcome": "cardiovascular events",
+      "population": "patients with cardiovascular disease or risk on statin therapy"
+    },
+    "M22": {
+      "agent": "ezetimibe (added to statin therapy)",
+      "outcome": "cardiovascular events",
+      "population": "patients with acute coronary syndrome"
+    },
+    "M23": {
+      "agent": "Low-dose colchicine",
+      "outcome": "cardiovascular events",
+      "population": "patients with coronary artery disease"
+    },
+    "M24": {
+      "agent": "Metformin",
+      "outcome": "delayed aging / extended healthspan",
+      "population": "non-diabetic older adults"
+    },
+    "M25": {
+      "agent": "Psilocybin-assisted therapy",
+      "outcome": "durable remission of depression",
+      "population": "patients with treatment-resistant depression"
+    },
+    "M26": {
+      "agent": "Rapamycin (sirolimus)",
+      "outcome": "healthspan/aging outcomes",
+      "population": "healthy human adults"
+    }
+  },
+  "summary": {
+    "n_rows": 162,
+    "errors": 1,
+    "design": 0.926,
+    "direction": 0.815,
+    "outcome_match": 0.852,
+    "population_match": 0.907,
+    "integrity_ok": 1.0,
+    "direction_polarity": 0.901,
+    "all_fields_exact": 0.617
+  }
+}
