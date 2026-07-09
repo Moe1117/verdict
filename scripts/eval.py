@@ -110,4 +110,7 @@ def main(path: str, out: str = "eval.json") -> None:
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        raise SystemExit("usage: python scripts/eval.py <dataset.json> [out.json]\n"
+                         "  (or reproduce the committed scorecard: python scripts/build_eval_dataset.py)")
     main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "eval.json")

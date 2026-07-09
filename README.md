@@ -14,9 +14,11 @@ A translational researcher or early-stage biotech scientist triaging a drug-effi
 
 ## The idea (and why the architecture matters)
 
-Claude does one job: **structured extraction** of evidence from each study (design, N, effect, direction, risk-of-bias). A **deterministic gate engine — with no LLM in the verdict path — makes the call.** That means every verdict is a pure, auditable function of the evidence: you can click any verdict and see exactly which studies drove it and which gate each one passed. A calibration layer maps gate configurations to an empirically-calibrated confidence.
+Claude does one job: **structured extraction** of evidence from each study (design, N, effect, direction, risk-of-bias). A **deterministic gate engine — with no LLM in the verdict path — makes the call.** That means every verdict is a pure, auditable function of the evidence: you can click any verdict and see exactly which studies drove it and which gate each one passed. A calibration layer reports the empirically-measured — and honestly imperfect — reliability of each certainty grade.
 
-This is selective prediction with a measured reject option: it doesn't just answer, it reports *how often a confidence of 0.9 is actually right*, and abstains where it can't be trusted.
+This is selective prediction with a measured reject option: certainty is an ordinal grade whose out-of-sample accuracy is measured (High is right ~82%, ECE 0.16 on 82 held-out claims), backed by a distribution-free conformal error bound at High, and it abstains where it can't be trusted.
+
+**How well does it work?** Two honest numbers: the deterministic **gate engine** scores 91% with 0 confident false-positives on 32 clinical claims (holding extraction fixed); the **full live product** (Claude extracting from raw PubMed / ClinicalTrials.gov) scores 66% with 3, still far fewer than a plain LLM's 6, and abstains rather than guess. Both are in [`SUBMISSION.md`](SUBMISSION.md) and reproducible (`scripts/live_benchmark.py`).
 
 ## Evidence states
 

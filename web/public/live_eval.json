@@ -263,7 +263,8 @@
     "accuracy": 0.656,
     "accuracy_when_answered": 0.704,
     "abstention_rate": 0.156,
-    "confidently_wrong": 1,
+    "confident_false_positives": 3,
+    "confident_false_positives_strict": 1,
     "avg_studies_retrieved": 6.8,
     "note": "End-to-end live pipeline (Claude parse -> PubMed + ClinicalTrials.gov retrieval -> Claude extraction -> deterministic gates), scored vs the same gold labels as the curated benchmark. This is a single-run point estimate: the LLM parse/extraction makes retrieval non-deterministic run-to-run, so accuracy carries a few points of variance. Compares to the curated gate-engine benchmark (91%/0), which isolates the gate logic from retrieval+extraction error."
   }

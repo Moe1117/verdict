@@ -42,15 +42,24 @@ def score(results: dict) -> dict:
     acc = sum(1 for r in scored if r["correct"]) / n
     decided = [r for r in scored if r["live_verdict"] != "Insufficient"]
     dec_acc = sum(1 for r in decided if r["correct"]) / len(decided) if decided else 0.0
-    cw = sum(1 for r in scored if r["gold"] in ("Not Supported", "Insufficient") and r["live_verdict"] == "Supported")
     abstain = sum(1 for r in scored if r["live_verdict"] == "Insufficient") / n
     errs = sum(1 for r in results.values() if "error" in r)
+    # A confident FALSE POSITIVE: a decisive 'Supported' the evidence does not warrant — gold is
+    # Not Supported, Insufficient, OR genuinely Contested (a firm 'yes' on contested evidence is a
+    # false green light too). This is the honest safety metric. The narrow legacy count (gold in
+    # {Not Supported, Insufficient} only) is kept alongside for transparency, but the headline is
+    # the broad one — asserting Supported on a Contested claim IS a confident error.
+    false_pos = sum(1 for r in scored if r["live_verdict"] == "Supported"
+                    and r["gold"] in ("Not Supported", "Insufficient", "Contested"))
+    false_pos_strict = sum(1 for r in scored if r["live_verdict"] == "Supported"
+                           and r["gold"] in ("Not Supported", "Insufficient"))
     return {
         "n": n, "errors": errs,
         "accuracy": round(acc, 3),
         "accuracy_when_answered": round(dec_acc, 3),
         "abstention_rate": round(abstain, 3),
-        "confidently_wrong": cw,
+        "confident_false_positives": false_pos,
+        "confident_false_positives_strict": false_pos_strict,
         "avg_studies_retrieved": round(sum(r.get("n_ledger", 0) for r in scored) / n, 1),
     }
 
@@ -98,7 +107,8 @@ def main() -> None:
     print(f"  accuracy vs gold        : {s['accuracy']:.0%}")
     print(f"  accuracy when answered  : {s['accuracy_when_answered']:.0%}")
     print(f"  abstention rate         : {s['abstention_rate']:.0%}")
-    print(f"  confidently-wrong       : {s['confidently_wrong']}")
+    print(f"  confident false-positives: {s['confident_false_positives']} "
+          f"(strict, gold no/unknown only: {s['confident_false_positives_strict']})")
     print(f"  avg studies retrieved   : {s['avg_studies_retrieved']}")
     print("\n(curated gate-engine benchmark for comparison: 91% accuracy, 0 confidently-wrong)")
 

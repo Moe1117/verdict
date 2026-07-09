@@ -19,9 +19,11 @@ trial — design, sample size, effect, and whether the endpoint is the *real* ou
 call. So every verdict is a pure, auditable function of the evidence: it sets aside
 aducanumab's amyloid-PET surrogate and returns Contested; it scores bevacizumab on
 survival (not PFS) and returns Not Supported; it abstains on metformin-for-aging because
-the human trials aren't in. On 32 breakthrough-medicine claims Verdict was confidently
-wrong **zero** times versus a plain model's **six**. It isn't just more accurate — it's the
-one that structurally won't bluff.
+the human trials aren't in. On 32 breakthrough-medicine claims the **gate engine** is
+confidently wrong **zero** times versus a plain model's **six**. Run end-to-end from raw
+claims — Claude extracting live — the full **product** scores 66% with **three** confident
+false-positives: still far fewer than the model's six, and it abstains rather than bluff.
+We report both numbers.
 
 ---
 
@@ -56,21 +58,39 @@ who needs a sourced, honest read, including an explicit "the evidence isn't ther
 ## The honest scorecard
 
 Blind clinical benchmark, 32 breakthrough-medicine claims (GLP-1, anti-amyloid, oncology,
-cardiometabolic, repurposing), exact 4-state match vs documented clinical/regulatory consensus:
+cardiometabolic, repurposing), exact 4-state match vs documented clinical/regulatory consensus.
+We report **two** numbers — the gate engine in isolation, and the full live product — because
+they measure different things:
 
-| Method | Accuracy | Confidently wrong |
+| Method | Accuracy | Confident false-positives |
 |---|---|---|
-| **Verdict** (gate engine) | **91%** | **0** |
+| **Verdict — gate engine** (over verified evidence rows) | **91%** | **0** |
 | Naive study-count vote | 84% | 0 |
-| Plain LLM (confident) | 63% | 6 |
+| Plain LLM (confident yes/no) | 63% | 6 |
+| **Verdict — full live product** (Claude extracts from raw PubMed / ClinicalTrials.gov) | **66%** | **3** |
 
-Verdict abstains on 12% rather than guess. Its three misses are all conservative — it held
-"insufficient" or "contested" where guidelines are more assertive (ezetimibe,
-checkpoint-inhibitor pancreatic cancer, psilocybin durability) — never a confidently-wrong
-positive. Full per-claim results are in the repo.
+The **gate engine** — the deterministic logic, holding extraction fixed — is confidently wrong
+zero times. The **live product** — Claude parsing the claim, retrieving, and extracting each
+abstract end-to-end — scores 66% with **three** confident false-positives (asserting *Supported*
+where the truth is negative or genuinely contested), still far fewer than a plain LLM's six, and
+it abstains on 16% rather than guess. The ~25-point gap is honest: it is retrieval recall +
+extraction error, not gate logic (`scripts/live_benchmark.py` measures it; per-claim results in
+`web/public/live_eval.json`). We lead with both, because hiding the live number would be exactly
+the bluffing this tool exists to prevent.
+
+**Calibration is measured, and honestly imperfect.** Certainty is an ordinal grade (High /
+Moderate / Low / Very Low) with empirically-measured reliability: High is right **~82%
+out-of-sample** (95% CI 78–93%), ECE 0.16 on 82 held-out claims. A distribution-free conformal
+guarantee bounds committed error **≤20% at High** (held in 93% of random exchangeable splits) —
+and we state openly it does **not** hold under the deliberate covariate shift to the held-out
+set. Calibration and the guarantee are measured on the **gate engine over verified rows**; the
+live product is measured separately (66%) and is not yet re-calibrated end-to-end.
 
 ## What's next
 
-Wire the live extract/retrieve path into the UI (today the demo replays the verified
-frozen corpora); widen coverage; calibrate the sufficiency gate on the handful of claims
-where clinical consensus is more assertive than the current evidence tier.
+The measured live gap is dominated by **retrieval recall** — several misses rest on a pivotal
+trial the query didn't surface (e.g. a failed confirmatory RCT). Next: an isolated extraction
+eval to separate retrieval error from extraction error, stronger retrieval (pubtype-filtered +
+trial-registry recall), an end-to-end re-calibration on the live pipeline, and wiring the live
+path into the UI so the demo resolves a fresh claim on camera (today it replays the verified
+frozen corpora).
