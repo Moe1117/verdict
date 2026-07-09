@@ -98,6 +98,17 @@ solanezumab). Broad definition (a confident *Supported* on a claim whose evidenc
 **Contested**): naive Claude commits **3** (it cannot say "contested"); Verdict returns **Contested**
 on those.
 
+**The live number is a distribution, not a point — and we disclose the variance.** The live pipeline
+is non-deterministic: the LLM parses each claim into a search query, so every run retrieves a slightly
+different evidence set. Across **three independent runs** the full product scored **60% mean
+(56–62%)**, and — the uncomfortable part — the strict confident-FP count was **0 in two runs but 1 in
+the third**, when solanezumab was retrieved *without* its disconfirming EXPEDITION3 trial and resolved
+*Supported*. So "0 strict confident-FP" is a **per-run outcome (~2 in 3 here), not a guarantee**, and
+**13 of 32 claims (40%) changed verdict across runs**. This is a **retrieval-recall** limitation, not a
+gate failure — the gate is deterministic *given* the evidence, but the evidence retrieved is not
+(`benchmark/live_variance.json`). Making retrieval reproducible (seeded/cached queries, or a
+best-of-N retrieval vote) is the single highest-value fix to the live product, and we name it openly.
+
 **We are deliberately not claiming to beat a plain LLM.** On famous, well-documented claims a strong
 naive Claude is a hard baseline — 78%, and it confidently rejects the frauds — because it has read
 the very literature the benchmark is drawn from. The live product's **62% is *below* naive Claude's

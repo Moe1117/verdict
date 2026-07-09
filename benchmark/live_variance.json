@@ -1,0 +1,149 @@
+{
+  "purpose": "Run-to-run variance of the full LIVE product on the 32-claim benchmark. The live pipeline is non-deterministic (the LLM parses the claim -> a variable search query -> variable retrieval), so accuracy and the confident-FP count are DISTRIBUTIONS, not points. Reported honestly: the deterministic gate is reproducible GIVEN the evidence, but the retrieved evidence is not.",
+  "method": "scripts/live_benchmark.py --k 8 run three independent times (falsification pass on, extraction temperature 0). Each run re-parses/re-retrieves every claim from raw text. Reproducible.",
+  "n_runs": 3,
+  "n_claims": 32,
+  "accuracy": {
+    "per_run": {
+      "run1_committed": 0.625,
+      "run2": 0.625,
+      "run3": 0.562
+    },
+    "mean": 0.604,
+    "min": 0.562,
+    "max": 0.625
+  },
+  "confident_false_positives_strict": {
+    "per_run": {
+      "run1_committed": 0,
+      "run2": 0,
+      "run3": 1
+    },
+    "note": "0 in 2 of 3 runs; 1 in run3 (solanezumab was retrieved without its disconfirming EXPEDITION3 evidence that run and resolved Supported). NOT a gate failure - a retrieval-recall failure. So 'never a strict confident-FP' is a PER-RUN outcome at ~2/3 frequency here, not a guarantee."
+  },
+  "confident_false_positives_broad": {
+    "per_run": {
+      "run1_committed": 1,
+      "run2": 1,
+      "run3": 3
+    }
+  },
+  "abstention_rate": {
+    "per_run": {
+      "run1_committed": 0.188,
+      "run2": 0.281,
+      "run3": 0.344
+    }
+  },
+  "verdict_stability": {
+    "unstable_claims": 13,
+    "total_claims": 32,
+    "note": "13 of 32 claims changed verdict across the 3 runs - the core reliability limitation of the live product. The gate is deterministic; retrieval is not.",
+    "detail": {
+      "M01": {
+        "gold": "Supported",
+        "verdicts": {
+          "run1_committed": "Supported",
+          "run2": "Supported",
+          "run3": "Insufficient"
+        }
+      },
+      "M03": {
+        "gold": "Supported",
+        "verdicts": {
+          "run1_committed": "Supported",
+          "run2": "Insufficient",
+          "run3": "Insufficient"
+        }
+      },
+      "M06": {
+        "gold": "Contested",
+        "verdicts": {
+          "run1_committed": "Insufficient",
+          "run2": "Contested",
+          "run3": "Insufficient"
+        }
+      },
+      "M09": {
+        "gold": "Not Supported",
+        "verdicts": {
+          "run1_committed": "Not Supported",
+          "run2": "Not Supported",
+          "run3": "Supported"
+        }
+      },
+      "M10": {
+        "gold": "Not Supported",
+        "verdicts": {
+          "run1_committed": "Contested",
+          "run2": "Insufficient",
+          "run3": "Insufficient"
+        }
+      },
+      "M12": {
+        "gold": "Not Supported",
+        "verdicts": {
+          "run1_committed": "Not Supported",
+          "run2": "Insufficient",
+          "run3": "Insufficient"
+        }
+      },
+      "M13": {
+        "gold": "Supported",
+        "verdicts": {
+          "run1_committed": "Not Supported",
+          "run2": "Supported",
+          "run3": "Insufficient"
+        }
+      },
+      "M14": {
+        "gold": "Supported",
+        "verdicts": {
+          "run1_committed": "Contested",
+          "run2": "Contested",
+          "run3": "Supported"
+        }
+      },
+      "M18": {
+        "gold": "Supported",
+        "verdicts": {
+          "run1_committed": "Supported",
+          "run2": "Contested",
+          "run3": "Supported"
+        }
+      },
+      "M19": {
+        "gold": "Supported",
+        "verdicts": {
+          "run1_committed": "Contested",
+          "run2": "Supported",
+          "run3": "Contested"
+        }
+      },
+      "M20": {
+        "gold": "Supported",
+        "verdicts": {
+          "run1_committed": "Contested",
+          "run2": "Contested",
+          "run3": "Supported"
+        }
+      },
+      "M21": {
+        "gold": "Not Supported",
+        "verdicts": {
+          "run1_committed": "Contested",
+          "run2": "Not Supported",
+          "run3": "Not Supported"
+        }
+      },
+      "M23": {
+        "gold": "Contested",
+        "verdicts": {
+          "run1_committed": "Contested",
+          "run2": "Insufficient",
+          "run3": "Supported"
+        }
+      }
+    }
+  }
+}
