@@ -1,0 +1,73 @@
+{
+  "purpose": "Independent cross-check of the gold verdicts against external landmark evidence, to test whether the gold set reflects external biomedical consensus rather than the author's private view. This directly addresses the reviewer critique that the headline 91% gate-engine number is circular (the author wrote the evidence rows, the gold labels, and the gate). Here the external verdict is adjudicated from the cited literature/regulatory record and then compared to the internal gold.",
+  "method": "For a representative sample spanning every decisive verdict class, each claim was searched in Consensus (medical-mode, peer-reviewed) and the external verdict was set from the highest-quality available evidence (RCT / meta-analysis > observational), plus regulatory record where relevant. Adjudication was done from the external sources; the internal gold was compared afterward. Reproducible by re-running the same queries; this is an expert/LLM-adjudicated audit, not a deterministic script.",
+  "n": 12,
+  "agreement": "12/12",
+  "classes_covered": ["Supported", "Not Supported", "Contested", "Insufficient"],
+  "notes": [
+    "Two of the sampled claims are ones the full LIVE pipeline itself got wrong (M13 under-called Supported as Not-Supported; M11 under-called Supported as Contested). The external cross-check confirms the GOLD is correct in both — i.e. these are genuine live misses, not gold errors. Included deliberately, not filtered out.",
+    "C08 (ivermectin) is a live illustration of why quality-gating matters: the raw top retrieved literature is mixed — an early observational 'positive' and a meta-analysis contaminated by the later-RETRACTED Elgazzar trial — so a naive study-count vote is misled. The quality-weighted verdict, and the gold, is Not Supported."
+  ],
+  "claims": [
+    {
+      "id": "C08", "claim": "Ivermectin improves clinical outcomes in COVID-19",
+      "gold": "Not Supported", "external_verdict": "Not Supported", "agree": true,
+      "external_basis": "Rigorous RCT meta-analysis (Roman 2021, Clin Infect Dis/IDSA): no mortality or length-of-stay benefit — 'not a viable option.' Raw literature is mixed (Rajter 2020 observational positive; Hariyanto 2021 meta-analysis contaminated by the retracted Elgazzar trial) — a naive vote is misled; quality-weighted evidence is negative. Cochrane 2022 and TOGETHER (2022) concur."
+    },
+    {
+      "id": "F04", "claim": "Hydroxychloroquine improves clinical outcomes in COVID-19",
+      "gold": "Not Supported", "external_verdict": "Not Supported", "agree": true,
+      "external_basis": "RECOVERY RCT (Horby 2020, NEJM): 28-day mortality RR 1.09, no benefit. Axfors 2021 (Nature Communications) meta-analysis: OR 1.11 — associated with INCREASED mortality. Fiolet 2020 meta-analysis: RR 0.83 (ns); HCQ+azithromycin increased mortality."
+    },
+    {
+      "id": "M09", "claim": "Solanezumab improves cognition in Alzheimer's disease",
+      "gold": "Not Supported", "external_verdict": "Not Supported", "agree": true,
+      "external_basis": "Three separate phase-3 failures: EXPEDITION3 (Honig 2018, NEJM) missed its primary cognitive endpoint (p=0.10); A4 preclinical (Sperling 2023, NEJM) did not slow decline (p=0.26); DIAN-TU (Salloway 2021, Nat Med) no cognitive benefit."
+    },
+    {
+      "id": "M01", "claim": "Semaglutide reduces major adverse cardiovascular events in overweight/obese adults without diabetes",
+      "gold": "Supported", "external_verdict": "Supported", "agree": true,
+      "external_basis": "SELECT (Lincoff 2023, NEJM, n=17,604): MACE HR 0.80 (95% CI 0.72–0.90), P<0.001."
+    },
+    {
+      "id": "C14", "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
+      "gold": "Contested", "external_verdict": "Contested", "agree": true,
+      "external_basis": "REDUCE-IT was positive (25% RRR) but its mineral-oil comparator raised LDL/CRP and atherogenic biomarkers (Ridker 2022, Circulation biomarker substudy), and the corn-oil-placebo STRENGTH trial was neutral; reviewers advise interpreting REDUCE-IT 'with caution' (Kim 2022). Genuinely contested — matches gold. NB: the live pipeline over-called this 'Supported' (the one broad confident false-positive)."
+    },
+    {
+      "id": "M21", "claim": "Adding niacin to statin therapy reduces cardiovascular events",
+      "gold": "Not Supported", "external_verdict": "Not Supported", "agree": true,
+      "external_basis": "AIM-HIGH failed to show incremental benefit over statin (Michos 2012, JACC review). HPS2-THRIVE (Haynes 2013, Eur Heart J, n=25,673): no CV benefit and increased harm (myopathy, etc.)."
+    },
+    {
+      "id": "M13", "claim": "Osimertinib improves survival in EGFR-mutated advanced NSCLC",
+      "gold": "Supported", "external_verdict": "Supported", "agree": true,
+      "external_basis": "FLAURA (Soria 2018, NEJM): PFS HR 0.46, P<0.001; final-analysis overall-survival benefit (interim OS HR 0.63 shown here; final OS significant, Ramalingam 2020 NEJM); FDA-approved first-line standard of care. LIVE-MISS: the pipeline called this 'Not Supported' — a genuine live error; the gold is externally correct."
+    },
+    {
+      "id": "M18", "claim": "Sacubitril/valsartan reduces CV death or HF hospitalization in HFrEF",
+      "gold": "Supported", "external_verdict": "Supported", "agree": true,
+      "external_basis": "PARADIGM-HF: ~20% reduction in CV death or HF hospitalization vs enalapril; pooled HR 0.84 (95% CI 0.78–0.90) (Solomon 2019). Guideline first-line therapy for HFrEF."
+    },
+    {
+      "id": "M23", "claim": "Low-dose colchicine reduces cardiovascular events in coronary artery disease",
+      "gold": "Contested", "external_verdict": "Contested", "agree": true,
+      "external_basis": "COLCOT (−23%) and LoDoCo2 (−31%) were positive and the FDA approved low-dose colchicine (2023) — but the large CLEAR SYNERGY trial was neutral; a 2026 comparative review (Jannink, Curr Atheroscler Rep) calls the results 'divergent.' Genuinely contested — matches gold."
+    },
+    {
+      "id": "M24", "claim": "Metformin delays aging or extends healthspan in non-diabetic older adults",
+      "gold": "Insufficient", "external_verdict": "Insufficient", "agree": true,
+      "external_basis": "No completed, adequately-powered RCT for the healthspan claim: the pivotal TAME trial is designed/ongoing (Barzilai 2016; Kulkarni 2020), and the only randomized readout to date is a null n=40 pilot in older adults with HIV (METFORAGING 2026, PhenoAge EAA p=0.627). Evidence cannot yet decide — matches gold."
+    },
+    {
+      "id": "M11", "claim": "Adjuvant trastuzumab improves survival in HER2-positive early breast cancer",
+      "gold": "Supported", "external_verdict": "Supported", "agree": true,
+      "external_basis": "HERA (Piccart-Gebhart 2005, NEJM): DFS HR 0.54, P<0.0001. NSABP B-31/NCCTG N9831 joint analysis (Perez 2014, JCO): OS HR 0.63, P<0.001; 10-yr OS 75.2%→84.0%. LIVE-MISS: the pipeline called this 'Contested' — a genuine live error; the gold is externally correct."
+    },
+    {
+      "id": "M12", "claim": "Adding bevacizumab to chemotherapy improves overall survival in metastatic HER2-negative breast cancer",
+      "gold": "Not Supported", "external_verdict": "Not Supported", "agree": true,
+      "external_basis": "For the overall-survival claim specifically: pooled analysis of 3 phase-3 trials (Miles 2013, Ann Oncol, n=2447) shows PFS benefit (HR 0.64) but NO OS benefit (HR 0.97, 95% CI 0.86–1.08). The FDA revoked the metastatic-breast-cancer indication (2011) on exactly this basis."
+    }
+  ]
+}

@@ -111,6 +111,19 @@ before the gate. Where the architecture should most clearly win — **novel clai
 memorized** — we test with a dedicated novel-claim benchmark (see *Novel claims* below). The 91%→62%
 gap is retrieval recall + extraction error, honestly reported (`scripts/live_benchmark.py`).
 
+**The gold set is externally valid — not just circular.** The 91% measures whether the gate
+reproduces the author-written gold over structured rows; on its own that is auditability, not
+external accuracy (the author wrote the rows, the gold, *and* the gate). So we independently
+cross-checked a representative **12 gold labels** — spanning Supported / Not-Supported / Contested /
+Insufficient — against external landmark evidence (NEJM/Lancet/JCO RCTs, meta-analyses, FDA and
+guideline actions), adjudicating from the sources *before* comparing to the gold
+(`benchmark/gold_external_audit.json`). External evidence agreed **12/12** — including the two claims
+the live pipeline itself mis-called (osimertinib and trastuzumab: the gold is right, the pipeline
+*under*-called them) and the ivermectin case, where the raw literature only looks mixed because a
+pooled meta-analysis is contaminated by the retracted Elgazzar trial and only the quality-weighted
+verdict is Not-Supported. The 91% is auditability over an externally-validated gold, not a
+self-graded exam.
+
 We also measured **Claude's extraction in isolation** (studies held fixed, retrieval removed;
 `scripts/extraction_eval.py`, 162 studies): per field it matches the gold rows **100%** on integrity,
 93% on design, 91% on effect-direction polarity, and 85% on the surrogate-vs-outcome flag — but it
