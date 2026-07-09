@@ -11,6 +11,7 @@ import os
 
 from verdict.calibrate import LEVELS, ece, fit, risk_coverage
 from verdict.certainty import grade_certainty
+from verdict.conformal import certify, certify_pooled
 from verdict.corpora import available, load_path, load_rows
 from verdict.gates import resolve
 
@@ -75,6 +76,14 @@ def main() -> None:
 
     rc = risk_coverage([(s, ok) for (_l, s, ok) in dev + held])
 
+    # Conformal selective-risk guarantee (distribution-free, under exchangeability). Demonstrated
+    # on random calibration/test splits of the pooled labels; the dev->held split is NOT
+    # exchangeable (a deliberate covariate shift), so we report that boundary honestly.
+    pooled = [(s, ok) for (_l, s, ok) in dev + held]
+    conf = certify_pooled(pooled, alpha=0.20, delta=0.10, k=500, seed=0)
+    shift = certify([(s, ok) for (_l, s, ok) in dev], [(s, ok) for (_l, s, ok) in held],
+                    alpha=0.20, delta=0.10)
+
     report = {
         "note": "Certainty calibration fit on the DEV benchmark; validated out-of-sample on the "
                 "held-out sets. Buckets with n<5 report no number (measured reject option). "
@@ -91,6 +100,19 @@ def main() -> None:
         ],
         "reliability": reliability,
         "risk_coverage": rc,
+        "conformal": {
+            "alpha": conf.alpha, "delta": conf.delta, "threshold": conf.modal_threshold_level,
+            "mean_test_error": round(conf.mean_test_error, 3), "coverage": round(conf.mean_coverage, 3),
+            "guarantee_held_fraction": round(conf.frac_guarantee_held, 3), "n_splits": conf.n_splits,
+            "covariate_shift_heldout_error": round(shift.heldout_error, 3) if shift.heldout_error is not None else None,
+            "note": (f"Distribution-free selective-risk guarantee: committing only at >= "
+                     f"{conf.modal_threshold_level} certainty holds committed error <= {conf.alpha:.0%} with "
+                     f"probability >= {1 - conf.delta:.0%} under exchangeability; empirically held in "
+                     f"{conf.frac_guarantee_held:.0%} of {conf.n_splits} random splits (mean error "
+                     f"{conf.mean_test_error:.0%}, coverage {conf.mean_coverage:.0%}). It does NOT transfer "
+                     f"to the covariate-shifted held-out set ({shift.heldout_error:.0%} realized error) — "
+                     "the honest boundary of the guarantee."),
+        },
     }
     os.makedirs(WEB, exist_ok=True)
     json.dump(report, open(os.path.join(WEB, "calibration.json"), "w"), indent=2)
@@ -109,6 +131,13 @@ def main() -> None:
     print("\nRisk–coverage (answer only when certainty >= threshold):")
     for r in rc:
         print(f"  >= {r['min_certainty']:10} coverage {r['coverage']:.0%}  accuracy {r['accuracy']:.0%}  (n={r['n_answered']})")
+
+    print(f"\nConformal selective-risk guarantee (distribution-free, delta={conf.delta:.0%}):")
+    print(f"  commit >= {conf.modal_threshold_level}: committed error <= {conf.alpha:.0%} held in "
+          f"{conf.frac_guarantee_held:.0%} of {conf.n_splits} exchangeable splits "
+          f"(mean error {conf.mean_test_error:.0%}, coverage {conf.mean_coverage:.0%})")
+    print(f"  boundary — does NOT transfer to the covariate-shifted held-out set "
+          f"({shift.heldout_error:.0%} realized error)")
 
 
 if __name__ == "__main__":

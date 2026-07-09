@@ -100,5 +100,16 @@
       "accuracy": 0.873,
       "n_answered": 71
     }
-  ]
+  ],
+  "conformal": {
+    "alpha": 0.2,
+    "delta": 0.1,
+    "threshold": "High",
+    "mean_test_error": 0.131,
+    "coverage": 0.653,
+    "guarantee_held_fraction": 0.932,
+    "n_splits": 500,
+    "covariate_shift_heldout_error": 0.268,
+    "note": "Distribution-free selective-risk guarantee: committing only at >= High certainty holds committed error <= 20% with probability >= 90% under exchangeability; empirically held in 93% of 500 random splits (mean error 13%, coverage 65%). It does NOT transfer to the covariate-shifted held-out set (27% realized error) \u2014 the honest boundary of the guarantee."
+  }
 }
