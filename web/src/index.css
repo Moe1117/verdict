@@ -262,6 +262,7 @@ body {
 }
 .lc-tag.src { color: var(--insufficient); border-color: rgba(95,155,230,0.3); }
 .lc-tag.gate { color: var(--supported); border-color: rgba(53,214,160,0.3); }
+.lc-tag.warn { color: var(--contested); border-color: rgba(246,178,60,0.35); }
 .lc-study {
   display: grid; grid-template-columns: 16px 118px auto; gap: 8px 10px; align-items: baseline;
 }

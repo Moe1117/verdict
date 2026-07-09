@@ -8,6 +8,7 @@ verified demo corpora (no network, no LLM) — the deterministic demo path.
 """
 from __future__ import annotations
 
+import os
 from collections.abc import Callable
 from dataclasses import dataclass
 
@@ -134,4 +135,33 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
         except Exception:  # noqa: BLE001
             continue
     emit(stage="gate", n=len(rows))
-    return evaluate(claim, rows)
+    card = evaluate(claim, rows)
+
+    # Falsification pass — before committing a DECIDED verdict, actively look for the evidence that
+    # would contradict it. The engine is never confidently wrong on a complete evidence set; the
+    # live risk is an INCOMPLETE set (a query that missed the pivotal negative trial). So we run a
+    # second, disconfirming retrieval and let the deterministic gate re-decide over the union. A
+    # verdict that survives is trustworthy; a missed contradiction gets its chance to flip it
+    # (usually -> Contested / Insufficient). Still no LLM in the verdict path.
+    if not aborted() and os.getenv("VERDICT_FALSIFY", "1") != "0":
+        from .disconfirm import disconfirming_query
+        dq = disconfirming_query(ct, card.verdict)
+        if dq:
+            emit(stage="disconfirm", query=dq)
+            before = len(rows)
+            # A focused pass: PubMed relevance-sorts, so the top few disconfirming hits carry the
+            # pivotal contradiction. Capped to keep the extra latency bounded.
+            try:
+                for s in search_pubmed(dq, retmax=min(k, 5)):
+                    if aborted():
+                        break
+                    try:
+                        commit(s, fetch_abstract(s.id))
+                    except Exception:  # noqa: BLE001
+                        continue
+            except Exception:  # noqa: BLE001 — a failed disconfirming search never sinks the run
+                pass
+            if len(rows) > before:
+                card = evaluate(claim, rows)
+            emit(stage="disconfirm_done", added=len(rows) - before, verdict=card.verdict.value)
+    return card

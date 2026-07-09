@@ -180,6 +180,8 @@ interface LiveEvent {
   integrity_ok?: boolean
   finding?: string
   n?: number
+  added?: number
+  verdict?: string
 }
 
 function LiveLine({ e }: { e: LiveEvent }) {
@@ -214,6 +216,21 @@ function LiveLine({ e }: { e: LiveEvent }) {
       <div className="lc-line">
         <span className="lc-tag gate">gates</span> applying the deterministic engine to {e.n} extracted
         {' '}stud{e.n === 1 ? 'y' : 'ies'} — no LLM past this point…
+      </div>
+    )
+  if (e.stage === 'disconfirm')
+    return (
+      <div className="lc-line">
+        <span className="lc-tag warn">refute</span> seeking disconfirming evidence — trying to overturn its own verdict…
+      </div>
+    )
+  if (e.stage === 'disconfirm_done')
+    return (
+      <div className="lc-line">
+        <span className="lc-tag warn">refute</span>{' '}
+        {e.added
+          ? <>found {e.added} disconfirming stud{e.added === 1 ? 'y' : 'ies'} → re-decided <em>{e.verdict}</em></>
+          : <>no disconfirming evidence found — the verdict holds</>}
       </div>
     )
   return null

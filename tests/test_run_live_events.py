@@ -37,7 +37,7 @@ def test_run_live_emits_progress_events(monkeypatch):
     study = [e for e in events if e["stage"] == "study"]
     assert {e["source_id"] for e in study} == {"PMID:1", "PMID:2"}  # one per committed row
     assert study[0]["design"] and "direction" in study[0] and "integrity_ok" in study[0]
-    assert stages[-1] == "gate"                    # the deterministic verdict step is last
+    assert "gate" in stages                        # the deterministic verdict step is emitted
     assert card.verdict is Verdict.SUPPORTED       # additive: the verdict is unchanged
     assert len(card.ledger) == 2
 
@@ -64,6 +64,91 @@ def test_run_live_aborts_when_should_abort_is_set(monkeypatch):
                         EvidenceRow(citation="c", source_id=s.id, design="rct", direction=1, population_match=True))
     card = vmod.run_live("drugX improves survival", should_abort=lambda: True)
     assert card.ledger == [] and extracted == []  # no fetch, no extraction once aborted
+
+
+def _disconfirming(q):
+    return any(w in q.lower() for w in ("no effect", "did not", "failed", "no benefit",
+                                        "nonsignificant", "improved", "reduced", "benefit", "efficacy"))
+
+
+def test_run_live_falsification_flips_supported_when_disconfirming_evidence_surfaces(monkeypatch):
+    """A first-pass Supported that rested on incomplete retrieval must not stand: the falsification
+    pass runs a disconfirming search, a large contradicting RCT surfaces, and the gate re-decides."""
+    ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)
+    monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "drugX mortality"))
+    main = [_src("PMID:1"), _src("PMID:2")]        # first pass: two large positive RCTs -> Supported
+    disc = [_src("PMID:3")]                          # disconfirming pass: a large negative RCT
+
+    def fake_search(q, retmax=8):
+        return disc if _disconfirming(q) else main
+    monkeypatch.setattr(retrieve, "search_pubmed", fake_search)
+    monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: "abstract")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [])
+    rows = {
+        "PMID:1": EvidenceRow(citation="c", source_id="PMID:1", design="rct", direction=1, population_match=True, n_int=5000),
+        "PMID:2": EvidenceRow(citation="c", source_id="PMID:2", design="rct", direction=1, population_match=True, n_int=6000),
+        "PMID:3": EvidenceRow(citation="c", source_id="PMID:3", design="rct", direction=-1, population_match=True, n_int=8000),
+    }
+    monkeypatch.setattr(extract, "extract_row", lambda s, a, c: rows[s.id])
+
+    events = []
+    card = vmod.run_live("drugX reduces mortality in adults", on_event=events.append)
+    assert any(e["stage"] == "disconfirm" for e in events)                 # it tried to refute itself
+    assert card.verdict is Verdict.CONTESTED                                # 2 large pos vs 1 large neg
+    assert {r.source_id for r in card.ledger} == {"PMID:1", "PMID:2", "PMID:3"}
+
+
+def test_run_live_verdict_holds_when_no_disconfirming_evidence(monkeypatch):
+    """When a genuine disconfirming search comes back empty, the decided verdict stands."""
+    ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)
+    monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "drugX mortality"))
+
+    def fake_search(q, retmax=8):
+        return [] if _disconfirming(q) else [_src("PMID:1"), _src("PMID:2")]
+    monkeypatch.setattr(retrieve, "search_pubmed", fake_search)
+    monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: "abstract")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [])
+    monkeypatch.setattr(extract, "extract_row", lambda s, a, c:
+                        EvidenceRow(citation="c", source_id=s.id, design="rct", direction=1,
+                                    population_match=True, n_int=5000))
+    card = vmod.run_live("drugX reduces mortality in adults")
+    assert card.verdict is Verdict.SUPPORTED                                # survived the refutation attempt
+
+
+def test_falsification_pass_can_be_disabled_via_env(monkeypatch):
+    """VERDICT_FALSIFY=0 turns the falsification pass off (fast mode / A/B baseline): a decided
+    verdict is returned without a disconfirming search."""
+    monkeypatch.setenv("VERDICT_FALSIFY", "0")
+    ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)
+    monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "drugX mortality"))
+
+    def fake_search(q, retmax=8):
+        return [_src("PMID:3")] if _disconfirming(q) else [_src("PMID:1"), _src("PMID:2")]
+    monkeypatch.setattr(retrieve, "search_pubmed", fake_search)
+    monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: "abstract")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [])
+    monkeypatch.setattr(extract, "extract_row", lambda s, a, c:
+                        EvidenceRow(citation="c", source_id=s.id, design="rct", direction=1,
+                                    population_match=True, n_int=5000))
+    events = []
+    card = vmod.run_live("drugX reduces mortality", on_event=events.append)
+    assert not any(e["stage"] == "disconfirm" for e in events)
+    assert card.verdict is Verdict.SUPPORTED   # PMID:3 (the disconfirming negative) never retrieved
+
+
+def test_run_live_no_falsification_pass_for_an_abstention(monkeypatch):
+    """An abstention (Insufficient) is already withholding — no disconfirming pass runs."""
+    ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)
+    monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "q"))
+    monkeypatch.setattr(retrieve, "search_pubmed", lambda q, retmax=8: [_src("PMID:1")])
+    monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: "abstract")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [])
+    monkeypatch.setattr(extract, "extract_row", lambda s, a, c:
+                        EvidenceRow(citation="c", source_id=s.id, design="preclinical", direction=1, population_match=True))
+    events = []
+    card = vmod.run_live("drugX reduces mortality", on_event=events.append)
+    assert card.verdict is Verdict.INSUFFICIENT
+    assert not any(e["stage"] == "disconfirm" for e in events)
 
 
 def test_run_live_still_works_without_callback(monkeypatch):
