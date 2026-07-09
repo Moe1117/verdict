@@ -4,7 +4,7 @@
       "claim": "Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 10,
       "n_excluded": 0,
       "correct": true
     },
@@ -12,7 +12,7 @@
       "claim": "Metformin reduces cancer incidence in adults without diabetes",
       "gold": "Not Supported",
       "live_verdict": "Insufficient",
-      "n_ledger": 8,
+      "n_ledger": 3,
       "n_excluded": 0,
       "correct": false
     },
@@ -20,15 +20,15 @@
       "claim": "Ivermectin improves clinical outcomes in COVID-19",
       "gold": "Not Supported",
       "live_verdict": "Not Supported",
-      "n_ledger": 8,
-      "n_excluded": 1,
+      "n_ledger": 4,
+      "n_excluded": 0,
       "correct": true
     },
     "C14": {
       "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
       "gold": "Contested",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": false
     },
@@ -36,15 +36,15 @@
       "claim": "Hydroxyethyl starch (HES) is a safe and effective fluid for volume resuscitation in critically ill adults",
       "gold": "Not Supported",
       "live_verdict": "Not Supported",
-      "n_ledger": 8,
-      "n_excluded": 1,
+      "n_ledger": 6,
+      "n_excluded": 0,
       "correct": true
     },
     "F03": {
       "claim": "Perioperative celecoxib/pregabalin multimodal analgesia reduces postoperative pain and opioid use",
       "gold": "Contested",
       "live_verdict": "Contested",
-      "n_ledger": 3,
+      "n_ledger": 4,
       "n_excluded": 0,
       "correct": true
     },
@@ -52,7 +52,7 @@
       "claim": "Hydroxychloroquine improves clinical outcomes in COVID-19",
       "gold": "Not Supported",
       "live_verdict": "Not Supported",
-      "n_ledger": 10,
+      "n_ledger": 7,
       "n_excluded": 0,
       "correct": true
     },
@@ -60,7 +60,7 @@
       "claim": "Semaglutide reduces major adverse cardiovascular events in overweight or obese adults without diabetes",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 5,
       "n_excluded": 0,
       "correct": true
     },
@@ -68,7 +68,7 @@
       "claim": "Tirzepatide produces clinically significant weight loss in adults with obesity",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 12,
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": true
     },
@@ -76,7 +76,7 @@
       "claim": "Liraglutide reduces cardiovascular events in adults with type 2 diabetes at high cardiovascular risk",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": true
     },
@@ -84,7 +84,7 @@
       "claim": "Semaglutide slows progression of chronic kidney disease in adults with type 2 diabetes",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 4,
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": true
     },
@@ -92,47 +92,47 @@
       "claim": "Semaglutide improves heart-failure symptoms in patients with obesity-related HFpEF (KCCQ symptom score and body weight)",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 9,
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": true
     },
     "M06": {
       "claim": "Aducanumab improves cognitive and clinical outcomes in patients with early Alzheimer's disease",
       "gold": "Contested",
-      "live_verdict": "Contested",
-      "n_ledger": 4,
+      "live_verdict": "Insufficient",
+      "n_ledger": 3,
       "n_excluded": 0,
-      "correct": true
+      "correct": false
     },
     "M07": {
       "claim": "Lecanemab slows clinical decline in early symptomatic Alzheimer's disease",
       "gold": "Supported",
-      "live_verdict": "Insufficient",
-      "n_ledger": 1,
+      "live_verdict": "Supported",
+      "n_ledger": 6,
       "n_excluded": 0,
-      "correct": false
+      "correct": true
     },
     "M08": {
       "claim": "Donanemab slows clinical decline in early symptomatic Alzheimer's disease",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 1,
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": true
     },
     "M09": {
       "claim": "Solanezumab improves cognition in Alzheimer's disease",
       "gold": "Not Supported",
-      "live_verdict": "Supported",
-      "n_ledger": 7,
+      "live_verdict": "Not Supported",
+      "n_ledger": 10,
       "n_excluded": 0,
-      "correct": false
+      "correct": true
     },
     "M10": {
       "claim": "Gantenerumab slows clinical decline in early Alzheimer's disease",
       "gold": "Not Supported",
       "live_verdict": "Contested",
-      "n_ledger": 7,
+      "n_ledger": 3,
       "n_excluded": 0,
       "correct": false
     },
@@ -140,39 +140,39 @@
       "claim": "Adjuvant trastuzumab improves survival in HER2-positive early breast cancer",
       "gold": "Supported",
       "live_verdict": "Contested",
-      "n_ledger": 12,
+      "n_ledger": 9,
       "n_excluded": 0,
       "correct": false
     },
     "M12": {
       "claim": "Adding bevacizumab to chemotherapy improves overall survival in metastatic HER2-negative breast cancer",
       "gold": "Not Supported",
-      "live_verdict": "Contested",
-      "n_ledger": 14,
+      "live_verdict": "Not Supported",
+      "n_ledger": 13,
       "n_excluded": 0,
-      "correct": false
+      "correct": true
     },
     "M13": {
       "claim": "Osimertinib improves survival in EGFR-mutated advanced non-small-cell lung cancer",
       "gold": "Supported",
-      "live_verdict": "Supported",
-      "n_ledger": 8,
+      "live_verdict": "Not Supported",
+      "n_ledger": 6,
       "n_excluded": 0,
-      "correct": true
+      "correct": false
     },
     "M14": {
       "claim": "Pembrolizumab improves survival in advanced melanoma",
       "gold": "Supported",
       "live_verdict": "Contested",
-      "n_ledger": 9,
+      "n_ledger": 8,
       "n_excluded": 0,
       "correct": false
     },
     "M15": {
       "claim": "Adding a PD-1/PD-L1 checkpoint inhibitor to chemotherapy improves survival in unselected metastatic pancreatic ductal adenocarcinoma",
       "gold": "Not Supported",
-      "live_verdict": "Contested",
-      "n_ledger": 6,
+      "live_verdict": "Insufficient",
+      "n_ledger": 0,
       "n_excluded": 0,
       "correct": false
     },
@@ -180,7 +180,7 @@
       "claim": "Evolocumab (a PCSK9 inhibitor) reduces cardiovascular events in patients with atherosclerotic cardiovascular disease on statins",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": true
     },
@@ -188,49 +188,49 @@
       "claim": "Sacubitril/valsartan reduces cardiovascular death or heart-failure hospitalization in heart failure with reduced ejection fraction",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": true
     },
     "M19": {
       "claim": "Dapagliflozin reduces heart-failure hospitalization or cardiovascular death in heart failure with reduced ejection fraction",
       "gold": "Supported",
-      "live_verdict": "Supported",
-      "n_ledger": 9,
+      "live_verdict": "Contested",
+      "n_ledger": 6,
       "n_excluded": 0,
-      "correct": true
+      "correct": false
     },
     "M20": {
       "claim": "Intensive blood-pressure control to a systolic target below 120 mmHg reduces cardiovascular events compared with standard control",
       "gold": "Supported",
-      "live_verdict": "Supported",
-      "n_ledger": 6,
+      "live_verdict": "Contested",
+      "n_ledger": 5,
       "n_excluded": 0,
-      "correct": true
+      "correct": false
     },
     "M21": {
       "claim": "Adding niacin to statin therapy reduces cardiovascular events",
       "gold": "Not Supported",
-      "live_verdict": "Not Supported",
-      "n_ledger": 2,
+      "live_verdict": "Contested",
+      "n_ledger": 5,
       "n_excluded": 0,
-      "correct": true
+      "correct": false
     },
     "M22": {
       "claim": "Adding ezetimibe to statin therapy reduces cardiovascular events after acute coronary syndrome",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 4,
       "n_excluded": 0,
       "correct": true
     },
     "M23": {
       "claim": "Low-dose colchicine reduces cardiovascular events in patients with coronary artery disease",
       "gold": "Contested",
-      "live_verdict": "Supported",
+      "live_verdict": "Contested",
       "n_ledger": 8,
       "n_excluded": 0,
-      "correct": false
+      "correct": true
     },
     "M24": {
       "claim": "Metformin delays aging or extends healthspan in non-diabetic older adults",
@@ -252,7 +252,7 @@
       "claim": "Rapamycin (sirolimus) extends healthspan or improves aging outcomes in healthy humans",
       "gold": "Insufficient",
       "live_verdict": "Insufficient",
-      "n_ledger": 4,
+      "n_ledger": 1,
       "n_excluded": 0,
       "correct": true
     }
@@ -260,12 +260,11 @@
   "summary": {
     "n": 32,
     "errors": 0,
-    "accuracy": 0.656,
-    "accuracy_when_answered": 0.704,
-    "abstention_rate": 0.156,
-    "confident_false_positives": 3,
-    "confident_false_positives_strict": 1,
-    "avg_studies_retrieved": 6.8,
-    "note": "End-to-end live pipeline (Claude parse -> PubMed + ClinicalTrials.gov retrieval -> Claude extraction -> deterministic gates), scored vs the same gold labels as the curated benchmark. This is a single-run point estimate: the LLM parse/extraction makes retrieval non-deterministic run-to-run, so accuracy carries a few points of variance. Compares to the curated gate-engine benchmark (91%/0), which isolates the gate logic from retrieval+extraction error."
+    "accuracy": 0.625,
+    "accuracy_when_answered": 0.692,
+    "abstention_rate": 0.188,
+    "confident_false_positives": 1,
+    "confident_false_positives_strict": 0,
+    "avg_studies_retrieved": 5.4
   }
 }

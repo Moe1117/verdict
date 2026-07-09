@@ -13,6 +13,7 @@ import sys
 import time
 
 from verdict.baseline import plain_llm_baseline
+from verdict.certainty import grade_certainty
 from verdict.env import load_dotenv
 from verdict.verdict import run_live
 
@@ -20,7 +21,9 @@ NOT_POSITIVE = ("Not Supported", "Insufficient", "Contested")
 
 
 def _confident_fp(pred: str | None, gold: str, confident: bool) -> bool:
-    """Broad definition: a confident 'Supported' where the truth is not Supported."""
+    """Broad definition: a CONFIDENT 'Supported' where the truth is not Supported. Symmetric across
+    arms — naive Claude is 'confident' at high/medium confidence, Verdict at High/Moderate certainty
+    — so neither side gets a free pass."""
     return bool(confident and pred == "Supported" and gold in NOT_POSITIVE)
 
 
@@ -38,16 +41,19 @@ def main() -> None:
         b = plain_llm_baseline(claim)
         npred = None if not b else ("Supported" if b["answer"] == "Yes" else "Not Supported")
         nconf = (b or {}).get("confidence", "low")
+        vcert = "Very Low"
         try:
-            vverdict = run_live(claim, k=8).verdict.value
+            card = run_live(claim, k=8)
+            vverdict = card.verdict.value
+            vcert = grade_certainty(card.ledger, card.verdict).level
         except Exception as e:  # noqa: BLE001
             vverdict = f"ERROR:{type(e).__name__}"
         r = {
             "claim": claim, "gold": gold,
             "naive_pred": npred, "naive_conf": nconf, "naive_correct": npred == gold,
             "naive_confident_fp": _confident_fp(npred, gold, nconf in ("high", "medium")),
-            "verdict": vverdict, "verdict_correct": vverdict == gold,
-            "verdict_confident_fp": _confident_fp(vverdict, gold, True),
+            "verdict": vverdict, "verdict_cert": vcert, "verdict_correct": vverdict == gold,
+            "verdict_confident_fp": _confident_fp(vverdict, gold, vcert in ("High", "Moderate")),
             "sec": round(time.time() - t0),
         }
         results.append(r)

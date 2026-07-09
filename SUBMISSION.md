@@ -20,7 +20,7 @@ trial — design, sample size, effect, and whether the endpoint is the *real* ou
 verdict. So every verdict is a pure, auditable function of the evidence: it sets aside
 aducanumab's amyloid-PET surrogate and returns Contested, and abstains on metformin-for-aging
 because the human trials aren't in yet. The **gate engine** is 91% accurate here; the full live
-**product** scores 66% and abstains on 16% rather than overstate — both reported. We don't claim
+**product** scores 62% and abstains on 19% rather than overstate — both reported. We don't claim
 to out-score a strong LLM on famous claims (a naive Claude gets 78%). Verdict's edge is that it
 *shows its work*, is calibrated, abstains when the evidence is genuinely split, and won't
 reproduce a fraud-driven result.
@@ -67,8 +67,10 @@ who needs a sourced, rigorous assessment, including an explicit determination th
 - **Falsification pass.** Before committing a decided verdict, the live pipeline runs a second,
   *disconfirming* retrieval — it actively searches for the evidence that would overturn itself,
   then lets the gate re-decide over the union. A verdict that survives has survived an attempt to
-  refute it; a missed contradicting trial gets its chance to flip it (on the live benchmark this
-  removed the strict confident false-positive with no loss of accuracy).
+  refute it; a missed contradicting trial gets its chance to flip it. Measured on the live benchmark,
+  the pass flips solanezumab off a confident *Supported*, taking the strict confident false-positive
+  **1→0** and the broad count **3→1**, at a ~4-point accuracy cost (66%→62%) and +3 points abstention
+  — the honest safety trade.
 - **Adversarial hardening.** We red-teamed the engine with 40 cases grounded in real trials, built
   to force a confident error. The gate held on 36; of the breaks, two were genuine bugs (a large
   *null* meta-analysis and a lone pooled meta were each letting a positive signal through) — both
@@ -88,7 +90,7 @@ to `benchmark/baselines_audit.json`) — a reproducible tool-vs-tool comparison,
 | **Verdict — gate engine** (logic only, over verified rows) | **91%** | **0** |
 | Naive study-count vote | 84% | 0 |
 | Plain LLM — naive Claude (confident yes/no, no tools) | 78% | 0 · 3 † |
-| **Verdict — full live product** (Claude extracts from raw PubMed / CT.gov) | **66%** | 3 † |
+| **Verdict — full live product** (Claude extracts end-to-end, falsification pass on) | **62%** | 0 strict · 1 broad † |
 
 † Strict definition (a confident *Supported* where the truth is Not-Supported/Insufficient): **every
 method here is 0** — a strong naive Claude already rejects the debunked claims (ivermectin, HCQ,
@@ -98,7 +100,7 @@ on those.
 
 **We are deliberately not claiming to beat a plain LLM.** On famous, well-documented claims a strong
 naive Claude is a hard baseline — 78%, and it confidently rejects the frauds — because it has read
-the very literature the benchmark is drawn from. The live product's **66% is *below* naive Claude's
+the very literature the benchmark is drawn from. The live product's **62% is *below* naive Claude's
 78%** on this set, and that is honest: for claims a model has effectively memorized, retrieval +
 extraction only add noise. So an all-famous-claims benchmark *understates* where the architecture
 earns its keep. Verdict's real edge is threefold: (1) it is **sourced and auditable** — every verdict
@@ -106,7 +108,7 @@ traces to trials + gates, where the LLM gives an unsourced sentence; (2) it is *
 abstains** — it returns Contested/Insufficient on the borderline claims where naive Claude commits a
 confident wrong answer; (3) it **resists a fraud-driven result** — retracted evidence is excluded
 before the gate. Where the architecture should most clearly win — **novel claims a model has not
-memorized** — we test with a dedicated novel-claim benchmark (see *Novel claims* below). The 91%→66%
+memorized** — we test with a dedicated novel-claim benchmark (see *Novel claims* below). The 91%→62%
 gap is retrieval recall + extraction error, honestly reported (`scripts/live_benchmark.py`).
 
 We also measured **Claude's extraction in isolation** (studies held fixed, retrieval removed;
@@ -128,7 +130,7 @@ data and are **not** out-of-sample. ECE 0.156 across 82 held-out claims. A distr
 conformal guarantee bounds committed error **≤20% at High** (held in 93% of random exchangeable
 splits) — and it does **not** hold under the deliberate covariate shift to the held-out set (27%
 realized error), which we state openly. Calibration and the guarantee are measured on the **gate
-engine over verified rows**; the live product (66%) is not yet re-calibrated end-to-end.
+engine over verified rows**; the live product (62%) is not yet re-calibrated end-to-end.
 
 ## Novel claims — where the architecture is supposed to win
 
