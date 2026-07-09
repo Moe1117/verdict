@@ -77,6 +77,11 @@ def _assemble(start: int, domains: list[GradeDomain]) -> Certainty:
 
 def grade_certainty(rows: list[EvidenceRow], verdict: Verdict) -> Certainty:
     # --- Verdict-level floors, expressed as GRADE profiles ---------------------------------
+    if verdict is Verdict.UNDECIDABLE:
+        # Input-guard rejection: the claim was never posed as a measurable question, so there is
+        # no evidence body to grade. Emit an EMPTY profile — grading nothing would be fabrication.
+        return _assemble(0, [])
+
     if verdict is Verdict.INSUFFICIENT:
         # No gradable body of decision-grade evidence: the profile records WHY there is
         # nothing to grade (absence / indirectness), and every domain is 0 -> Very Low.

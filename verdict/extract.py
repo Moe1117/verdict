@@ -63,7 +63,9 @@ def extract_row(source: Source, abstract: str, claim: ClaimTuple) -> EvidenceRow
     d = call_tool(_SYSTEM, user, _TOOL, max_tokens=1200)
     return EvidenceRow(
         citation=f"{source.title}. {source.journal} {source.year}.",
-        source_id=source.id.replace("NCT:", "NCT").replace("PMID:", "PMID:"),
+        # Display id: drop the "NCT:" scheme prefix (the id already reads as an NCT number) and
+        # keep "PMID:xxxx" as-is — never double the registry prefix into "NCTNCT...".
+        source_id=source.id.replace("NCT:", ""),
         design=d["design"], direction=int(d["direction"]),
         population_match=bool(d["population_match"]), outcome_match=bool(d["outcome_match"]),
         dramatic_effect=bool(d.get("dramatic_effect", False)),

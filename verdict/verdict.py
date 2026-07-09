@@ -46,7 +46,8 @@ def run_frozen(claim_id: str) -> VerdictCard:
     return evaluate(meta.get("claim", claim_id), rows)
 
 
-def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = None) -> VerdictCard:
+def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = None,
+             should_abort: Callable[[], bool] | None = None) -> VerdictCard:
     """The full live path: claim -> Claude parse -> PubMed retrieval -> Claude extraction
     -> deterministic gates. Requires ANTHROPIC_API_KEY (+ NCBI_EMAIL per NCBI policy).
     The LLM only parses the claim and extracts each study; the verdict is still a pure
@@ -54,7 +55,11 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
 
     `on_event`, if given, is called with a small dict at each pipeline milestone (parse, each
     retrieval, each extracted study, the gate step) so a UI can stream the resolution live. It is
-    purely observational: the returned verdict is identical whether or not it is passed."""
+    purely observational: the returned verdict is identical whether or not it is passed.
+
+    `should_abort`, if given, is polled before each expensive step; when it returns True the run
+    stops early (e.g. the SSE client disconnected) and resolves whatever was gathered so far,
+    rather than continuing ~40s of paid Claude + retrieval calls no one is waiting for."""
     from .extract import extract_row
     from .parse import parse_claim
     from .retrieve import fetch_abstract, fetch_trial, retraction_note, search_pubmed, search_trials
@@ -62,6 +67,9 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
     def emit(**event) -> None:
         if on_event is not None:
             on_event(event)
+
+    def aborted() -> bool:
+        return should_abort is not None and should_abort()
 
     ct, query = parse_claim(claim)
     emit(stage="parse", measurable=bool(ct.measurable), query=query)
@@ -92,14 +100,20 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
         emit(stage="study", source_id=row.source_id or s.id, design=row.design,
              direction=row.direction, integrity_ok=row.integrity_ok, finding=row.finding)
 
+    if aborted():
+        return evaluate(claim, rows)
     pubmed = search_pubmed(query, retmax=k)
     emit(stage="search", source="pubmed", found=len(pubmed))
     for s in pubmed:
+        if aborted():
+            return evaluate(claim, rows)
         try:
             abstract = fetch_abstract(s.id)
         except Exception:  # noqa: BLE001
             continue
         commit(s, abstract)
+    if aborted():
+        return evaluate(claim, rows)
     # ClinicalTrials.gov: add trials with POSTED RESULTS (orthogonal recall — the definitive
     # trials a PubMed query can miss). Registrations without results are skipped (not evidence).
     try:
@@ -108,6 +122,8 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
         trials = []
     emit(stage="search", source="clinicaltrials", found=len(trials))
     for s in trials:
+        if aborted():
+            return evaluate(claim, rows)
         try:
             commit(s, fetch_trial(s.id))
         except Exception:  # noqa: BLE001

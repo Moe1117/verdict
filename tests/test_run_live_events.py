@@ -51,6 +51,21 @@ def test_run_live_events_stop_at_guard_when_unmeasurable(monkeypatch):
     assert events and events[0]["stage"] == "parse" and events[0]["measurable"] is False
 
 
+def test_run_live_aborts_when_should_abort_is_set(monkeypatch):
+    """A cooperative should_abort() lets a disconnected SSE client stop the ~40s of paid work.
+    When it is already set, run_live extracts nothing and returns immediately."""
+    ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)
+    monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "q"))
+    monkeypatch.setattr(retrieve, "search_pubmed", lambda q, retmax=8: [_src("PMID:1"), _src("PMID:2")])
+    extracted: list = []
+    monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: extracted.append(pid) or "abstract")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [])
+    monkeypatch.setattr(extract, "extract_row", lambda s, a, c:
+                        EvidenceRow(citation="c", source_id=s.id, design="rct", direction=1, population_match=True))
+    card = vmod.run_live("drugX improves survival", should_abort=lambda: True)
+    assert card.ledger == [] and extracted == []  # no fetch, no extraction once aborted
+
+
 def test_run_live_still_works_without_callback(monkeypatch):
     """Backward compatibility: the callback defaults to off and nothing changes."""
     ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)

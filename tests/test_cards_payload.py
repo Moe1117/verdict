@@ -29,6 +29,18 @@ def test_card_payload_reproduces_frozen_deck(frozen):
     assert got == frozen
 
 
+def test_card_payload_undecidable_emits_no_fabricated_grade_profile():
+    """An ill-posed claim is rejected at the input guard (Undecidable) — there is no evidence body,
+    so the card must NOT show a fabricated per-domain GRADE certainty analysis."""
+    from verdict.gates import GateTrace, Verdict
+    from verdict.verdict import VerdictCard
+    card = VerdictCard(claim="does this vibe well", verdict=Verdict.UNDECIDABLE, confidence=None,
+                       ledger=[], gate_trace=[GateTrace("input-guard", False, "not measurable")])
+    got = card_payload(card, id="LIVE")
+    assert got["verdict"] == "Undecidable"
+    assert got["certainty_domains"] == []   # no GRADE analysis of evidence that was never gathered
+
+
 def test_card_payload_live_shape_without_meta():
     """A live claim carries no meta: expected/baseline are null, but every key the web Card
     interface consumes is still present and the verdict/certainty are computed from the rows."""

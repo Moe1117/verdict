@@ -51,6 +51,31 @@ pip install -e .
 python -m verdict "metformin reduces cancer incidence in adults without diabetes"
 ```
 
+### Live demo — the web UI + resolve-your-own-claim API
+
+The demo has two lanes: a **frozen deck** (pre-resolved cards, served statically — the demo can
+never fail live) and a **live lane** that resolves a pasted claim end-to-end (Claude parse →
+PubMed + ClinicalTrials.gov retrieval → Claude extraction → deterministic gates, ~40s).
+
+```bash
+pip install -e ".[web]"                                   # fastapi + uvicorn
+python -m uvicorn verdict.webapp:app --port 8010          # the live API (reads .env)
+npm --prefix web install && npm --prefix web run dev      # the UI on :5175 (proxies /api -> :8010)
+```
+
+Then open the UI, or hit the API directly:
+
+```bash
+curl -s localhost:8010/api/health
+curl -sN "localhost:8010/api/resolve/stream?claim=semaglutide%20reduces%20body%20weight%20in%20adults%20with%20obesity"
+```
+
+`GET /api/resolve/stream` streams the pipeline as Server-Sent Events (each retrieved study appears
+as it is extracted), then the final gated card. `POST /api/resolve {claim}` returns the same card
+synchronously. The verdict is still a pure function of the extracted evidence — no LLM in the
+verdict path. To serve everything from one process, build the UI first
+(`npm --prefix web run build`); then `uvicorn verdict.webapp:app` also serves it from `web/dist`.
+
 ## License
 
 MIT — see [`LICENSE`](LICENSE).

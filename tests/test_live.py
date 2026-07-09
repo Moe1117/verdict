@@ -77,6 +77,19 @@ def test_model_falls_back_on_empty_or_unset(monkeypatch):
     assert parse.model() == "claude-opus-4-8"
 
 
+def test_extract_row_cleans_nct_source_id(monkeypatch):
+    """A ClinicalTrials.gov source id is 'NCT:NCT0123...' — the display id must not double the
+    registry prefix ('NCTNCT0123'); PMIDs keep their prefix."""
+    payload = {"design": "rct", "direction": 1, "population_match": True, "outcome_match": True,
+               "dramatic_effect": False, "integrity_ok": True, "n_int": 100, "year": 2020,
+               "sig": "significant", "finding": "x"}
+    monkeypatch.setattr(extract, "call_tool", lambda system, user, tool, max_tokens=1200: payload)
+    ct = ClaimTuple(raw="x", agent="d", outcome="o", population="p", direction=1)
+    nct = Source(kind="clinicaltrials", id="NCT:NCT05579977", title="t", authors="", journal="CT.gov", year="", url="u")
+    assert extract.extract_row(nct, "abstract", ct).source_id == "NCT05579977"
+    assert extract.extract_row(_src("PMID:12345"), "abstract", ct).source_id == "PMID:12345"
+
+
 def test_extract_row_maps_structured_output(monkeypatch):
     payload = {"design": "rct", "direction": 1, "population_match": True, "outcome_match": False,
                "dramatic_effect": False, "integrity_ok": True, "n_int": 1200, "year": 2019,

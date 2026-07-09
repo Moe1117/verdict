@@ -13,13 +13,14 @@ Run:  PYTHONPATH=. .venv/bin/python -m uvicorn verdict.webapp:app --port 8000
 """
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 import os
 import queue
 import threading
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from fastapi.staticfiles import StaticFiles
@@ -34,12 +35,25 @@ load_dotenv()  # make `uvicorn verdict.webapp:app` turnkey from the repo .env; r
 
 log = logging.getLogger("verdict.webapp")
 
-app = FastAPI(title="Verdict", version=__version__, description="A decidable evidence resolver.")
+# A real clinical claim is a sentence; anything longer is embedded verbatim into paid Claude
+# prompts, so cap it at the validation boundary. The endpoints are unauthenticated, so a
+# concurrency cap bounds how many paid resolutions can run at once — excess requests get 429
+# rather than fanning out into unbounded Claude spend.
+MAX_CLAIM_LEN = int(os.getenv("VERDICT_MAX_CLAIM_LEN", "600"))
+_MAX_CONCURRENT = int(os.getenv("VERDICT_MAX_CONCURRENT", "4"))
+_slots = threading.BoundedSemaphore(_MAX_CONCURRENT)
 
-# Local, public-data, no-auth tool: permissive CORS so a separately-served UI (e.g. the Vite dev
-# server on another port) can call the API without a proxy. No credentials are ever sent.
+# Scoped CORS: only the local dev UI origins may call the API cross-origin (the primary dev flow
+# goes same-origin through the Vite proxy anyway). A wildcard would let any web page drive spend.
+_CORS_ORIGINS = [o for o in os.getenv(
+    "VERDICT_CORS_ORIGINS",
+    "http://localhost:5175,http://127.0.0.1:5175,http://localhost:4173,http://localhost:8010",
+).split(",") if o.strip()]
+
+app = FastAPI(title="Verdict", version=__version__, description="A decidable evidence resolver.")
 app.add_middleware(
-    CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"], allow_credentials=False,
+    CORSMiddleware, allow_origins=_CORS_ORIGINS, allow_methods=["*"], allow_headers=["*"],
+    allow_credentials=False,
 )
 
 
@@ -49,10 +63,12 @@ class ResolveRequest(BaseModel):
 
     @field_validator("claim")
     @classmethod
-    def _nonempty(cls, v: str) -> str:
+    def _bounded_claim(cls, v: str) -> str:
         v = (v or "").strip()
         if len(v) < 3:
             raise ValueError("claim is too short to resolve")
+        if len(v) > MAX_CLAIM_LEN:
+            raise ValueError(f"claim is too long (max {MAX_CLAIM_LEN} chars)")
         return v
 
     @field_validator("k")
@@ -108,27 +124,44 @@ def health() -> dict:
 
 @app.post("/api/resolve")
 def resolve(req: ResolveRequest) -> dict:
+    if not _slots.acquire(blocking=False):
+        raise HTTPException(status_code=429, detail="server is busy — too many concurrent resolutions")
     try:
         return _resolve_card(req.claim, req.k)
     except Exception as e:  # noqa: BLE001
         log.exception("live resolution failed")
         # Generic detail only — never surface the exception text (it can carry keys / internals).
         raise HTTPException(status_code=502, detail="live resolution failed — see server logs") from e
+    finally:
+        _slots.release()
 
 
 def _sse_frame(event: str, data: object) -> str:
     return f"event: {event}\ndata: {json.dumps(data)}\n\n"
 
 
-def _stream(claim: str, k: int):
-    """Run run_live on a worker thread, relaying its progress events to the client as SSE, then the
-    final card. run_live is blocking, so a thread + queue lets us stream without awaiting it whole."""
+@app.get("/api/resolve/stream")
+async def resolve_stream(request: Request, claim: str, k: int = 8):
+    claim = (claim or "").strip()
+    if len(claim) < 3:
+        raise HTTPException(status_code=422, detail="claim is too short to resolve")
+    if len(claim) > MAX_CLAIM_LEN:
+        raise HTTPException(status_code=422, detail=f"claim is too long (max {MAX_CLAIM_LEN} chars)")
+    k = max(1, min(12, k))
+    if not _slots.acquire(blocking=False):
+        raise HTTPException(status_code=429, detail="server is busy — too many concurrent resolutions")
+
+    # run_live is blocking (~40s), so it runs on a worker thread and relays progress + the final
+    # card through a queue. The worker owns the slot: whatever happens, it releases it in finally.
     q: queue.Queue = queue.Queue()
+    stop = threading.Event()
 
     def worker() -> None:
         try:
-            card = run_live(claim, k=k, on_event=lambda ev: q.put(("progress", ev)))
-            q.put(("card", card_payload(card, id="LIVE", baseline=plain_llm_baseline(claim))))
+            card = run_live(claim, k=k, on_event=lambda ev: q.put(("progress", ev)),
+                            should_abort=stop.is_set)
+            if not stop.is_set():
+                q.put(("card", card_payload(card, id="LIVE", baseline=plain_llm_baseline(claim))))
         except Exception:  # noqa: BLE001
             log.exception("live resolution failed (stream)")
             # Named "failed", not "error": EventSource reserves the "error" event for transport
@@ -136,22 +169,30 @@ def _stream(claim: str, k: int):
             q.put(("failed", {"message": "live resolution failed — see server logs"}))
         finally:
             q.put(("done", None))
+            _slots.release()
 
     threading.Thread(target=worker, daemon=True).start()
-    while True:
-        kind, payload = q.get()
-        if kind == "done":
-            break
-        yield _sse_frame(kind, payload)
 
+    async def gen():
+        # Poll the worker queue AND the client connection: if the client disconnects, signal the
+        # worker to abort (stop paying for a resolution no one is reading) instead of running on.
+        try:
+            while True:
+                if await request.is_disconnected():
+                    stop.set()
+                    break
+                try:
+                    kind, payload = q.get_nowait()
+                except queue.Empty:
+                    await asyncio.sleep(0.1)
+                    continue
+                if kind == "done":
+                    break
+                yield _sse_frame(kind, payload)
+        finally:
+            stop.set()  # wind the worker down even if the generator is closed early
 
-@app.get("/api/resolve/stream")
-def resolve_stream(claim: str, k: int = 8):
-    claim = (claim or "").strip()
-    if len(claim) < 3:
-        raise HTTPException(status_code=422, detail="claim is too short to resolve")
-    k = max(1, min(12, k))
-    return StreamingResponse(_stream(claim, k), media_type="text/event-stream",
+    return StreamingResponse(gen(), media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
