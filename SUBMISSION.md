@@ -78,6 +78,13 @@ extraction error, not gate logic (`scripts/live_benchmark.py` measures it; per-c
 `web/public/live_eval.json`). We lead with both, because hiding the live number would be exactly
 the bluffing this tool exists to prevent.
 
+We also measured **Claude's extraction in isolation** (studies held fixed, retrieval removed;
+`scripts/extraction_eval.py`, 162 studies): it matches the gold rows **100%** on integrity, 93%
+on design, 90% on effect-direction polarity, and 85% on the surrogate-vs-outcome flag — and its
+errors are **conservative** (a positive trial read as null, more endpoints flagged as surrogate),
+which push toward abstention, not false positives. So the extraction is sound and errs in the
+cautious direction; the remaining live gap is dominated by retrieval recall.
+
 **Calibration is measured, and honestly imperfect.** Certainty is an ordinal grade (High /
 Moderate / Low / Very Low) with empirically-measured reliability: High is right **~82%
 out-of-sample** (95% CI 78–93%), ECE 0.16 on 82 held-out claims. A distribution-free conformal
