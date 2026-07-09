@@ -67,15 +67,17 @@ lecanemab (Supported), `/#M09` solanezumab (Not Supported).
 > And the fraud case that started this — ivermectin for COVID, whose signal came from a withdrawn
 > study — Not Supported. Known-bad evidence is excluded before the gate ever runs."
 
-### 7 · Resolve your own claim, live — 2:10–2:38
+### 7 · Resolve your own claim, live — 2:10–2:40
 **Screen:** Click the input at the top, type a fresh claim (default: *"atorvastatin lowers LDL
 cholesterol in adults"*), hit **resolve**. The live console streams: parse → PubMed → each study
-appearing as it's extracted → the gate. Land on the resolved card. *(Pre-recorded; cut the wait.)*
+appearing as it's extracted → the gate → **the "refute" step** ("seeking disconfirming evidence")
+→ the resolved card. *(Pre-recorded; cut the wait.)*
 
 > "And none of this is pre-baked. Paste any claim, and Verdict resolves it live — Claude parses
 > it, pulls the trials from PubMed and ClinicalTrials.gov, and extracts each one; you watch them
-> stream in. Then the same deterministic gate issues the verdict. It's a tool you'd actually use
-> — not a slideshow of our best examples."
+> stream in. Then it does something a chatbot never will: before it commits, it searches for the
+> evidence that would prove it *wrong*. Only then does the deterministic gate issue the verdict.
+> A tool you'd actually use — not a slideshow of our best examples."
 
 ### 8 · The honest scorecard — 2:38–2:52
 **Screen:** Scroll to the scorecard: Verdict 91% / **0**, plain LLM 63% / **6**, and the live line.

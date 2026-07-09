@@ -63,6 +63,16 @@ who needs a sourced, rigorous assessment, including an explicit determination th
   specific evidence that would make the claim decidable (the missing trial, the non-surrogate
   outcome); for a decided verdict, the result that would overturn it. Deterministic, read from
   the gate outcome.
+- **Falsification pass.** Before committing a decided verdict, the live pipeline runs a second,
+  *disconfirming* retrieval — it actively searches for the evidence that would overturn itself,
+  then lets the gate re-decide over the union. A verdict that survives has survived an attempt to
+  refute it; a missed contradicting trial gets its chance to flip it (on the live benchmark this
+  removed the strict confident false-positive with no loss of accuracy).
+- **Adversarial hardening.** We red-teamed the engine with 40 cases grounded in real trials, built
+  to force a confident error. The gate held on 36; of the breaks, two were genuine bugs (a large
+  *null* meta-analysis and a lone pooled meta were each letting a positive signal through) — both
+  fixed and independently verified, with **zero regression** across the curated, cold, and
+  held-out benchmarks.
 - Web UI contrasts a plain LLM's confident answer against Verdict's audited call.
 
 ## The honest scorecard
