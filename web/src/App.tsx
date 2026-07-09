@@ -146,9 +146,9 @@ function Scorecard({ ev, live, conf }: { ev: EvalSummary; live: LiveSummary | nu
           <span className="cw">{ev.confidently_wrong.naive_vote}</span>
         </div>
         <div className="sc-row">
-          <span className="m">Plain LLM <em>confident yes/no</em></span>
+          <span className="m">Naive Claude <em>confident yes/no, no tools</em></span>
           <span className="acc">{pct(ev.accuracy.plain_llm)}</span>
-          <span className="cw bad">{ev.confidently_wrong.plain_llm}</span>
+          <span className={'cw' + (ev.confidently_wrong.plain_llm > 0 ? ' bad' : '')}>{ev.confidently_wrong.plain_llm}</span>
         </div>
       </div>
       {conf && (
@@ -158,12 +158,13 @@ function Scorecard({ ev, live, conf }: { ev: EvalSummary; live: LiveSummary | nu
         </div>
       )}
       <div className="sc-foot">
-        The <b>engine</b> — the deterministic logic — records <b>zero</b> confident false-positives. The <b>full live
-        product</b>, with Claude parsing, retrieving, and extracting end-to-end, scores {live ? pct(live.accuracy) : '66%'}{' '}
-        with {live ? live.confident_false_positives : 3}, still substantially fewer than a language model’s{' '}
-        <b>{ev.confidently_wrong.plain_llm}</b>, and abstains on {live ? pct(live.abstention_rate) : '16%'} rather than
-        issue an unsupported verdict. Both figures are reported in full: withholding the live result would constitute
-        the overconfidence this system is designed to prevent.
+        The <b>gate engine</b> — deterministic logic over verified rows — reproduces the expert verdicts with <b>zero</b>{' '}
+        confident false-positives, but that holds extraction fixed. Run end-to-end, the <b>full live product</b> scores{' '}
+        {live ? pct(live.accuracy) : '66%'} and abstains on {live ? pct(live.abstention_rate) : '16%'} rather than overstate.
+        We report the uncomfortable number too: a naive Claude scores <b>{pct(ev.accuracy.plain_llm)}</b> on these famous
+        claims — <b>above</b> the live product — because it has read the literature they're drawn from. Verdict's edge is
+        not out-scoring a strong model on memorized claims; it is showing its work, knowing when to abstain, and refusing
+        fraud-driven evidence.
       </div>
     </div>
   )

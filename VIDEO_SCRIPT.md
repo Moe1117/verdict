@@ -80,12 +80,14 @@ appearing as it's extracted → the gate → **the "refute" step** ("seeking dis
 > A tool you'd actually use — not a slideshow of our best examples."
 
 ### 8 · The honest scorecard — 2:38–2:52
-**Screen:** Scroll to the scorecard: Verdict 91% / **0**, plain LLM 63% / **6**, and the live line.
+**Screen:** Scroll to the scorecard: gate engine **91% / 0**, naive Claude **78%**, full live product **66%**.
 
-> "On thirty-two real-medicine claims, the gate engine is confidently wrong zero times, against a
-> plain model's six. And I'll tell you where it loses: run end-to-end from raw text, the full live
-> product scores sixty-six — the honest number, reported right next to it. It errs toward humility,
-> never toward a false positive. It's all in the repo."
+> "Here's the honest scorecard — including the numbers we could have hidden. The gate engine
+> reproduces expert verdicts 91% of the time with zero confident errors. But I'll show you exactly
+> where the line is: a strong naive Claude already gets 78% on these famous claims, and our live
+> product scores 66% — *below* it. On claims a model has memorized, it's hard to beat. What it
+> can't do is show its work, tell you when it's guessing, or refuse a fraud-driven result. That's
+> the point."
 
 ### 9 · Close — 2:52–3:00
 **Screen:** Back to a verdict card, or the header.
