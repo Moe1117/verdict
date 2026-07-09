@@ -20,11 +20,23 @@ def test_timepoints_are_sorted_and_cumulative():
     assert [t.n_studies for t in tl] == [1, 2]          # cumulative
 
 
-def test_final_timepoint_matches_full_resolve():
-    """The last timepoint must equal the verdict over ALL the (dated) evidence."""
+def test_final_timepoint_matches_resolve_over_dated_evidence():
+    """The last timepoint equals the verdict over all DATED evidence — the module's actual
+    contract (undated rows are not placed on the timeline). For a fully-dated corpus that also
+    equals the current verdict over ALL rows."""
     _, rows = load_rows("C08")
-    tl = verdict_over_time(rows)
-    assert tl[-1].verdict == resolve(rows)[0].value
+    dated = [r for r in rows if r.year and r.year > 0]
+    assert verdict_over_time(rows)[-1].verdict == resolve(dated)[0].value
+    assert resolve(dated)[0].value == resolve(rows)[0].value   # C08 is fully dated
+
+
+def test_final_timepoint_is_dated_resolve_even_when_undated_rows_would_change_it():
+    """Precision guard for the finding: undated verdict-changing rows are intentionally NOT on
+    the timeline, so the final timepoint tracks resolve(dated), not resolve(all)."""
+    rows = [_row("rct", 1, 2020, n_int=100),        # dated, thin -> Insufficient alone
+            _row("rct", 1, 0, n_int=9000), _row("rct", 1, 0, n_int=9000)]  # undated, would decide
+    dated = [r for r in rows if r.year and r.year > 0]
+    assert verdict_over_time(rows)[-1].verdict == resolve(dated)[0].value
 
 
 def test_ivermectin_arc_turns():
