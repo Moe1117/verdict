@@ -46,6 +46,36 @@
       "survives_drop_largest": true,
       "n_perturbations": 6
     },
+    "timeline": [
+      {
+        "year": 2019,
+        "verdict": "Contested",
+        "certainty": "Low",
+        "n": 2,
+        "changed": true
+      },
+      {
+        "year": 2021,
+        "verdict": "Contested",
+        "certainty": "Low",
+        "n": 3,
+        "changed": false
+      },
+      {
+        "year": 2023,
+        "verdict": "Contested",
+        "certainty": "Low",
+        "n": 4,
+        "changed": false
+      },
+      {
+        "year": 2024,
+        "verdict": "Contested",
+        "certainty": "Low",
+        "n": 6,
+        "changed": false
+      }
+    ],
     "baseline": {
       "answer": "Yes",
       "confidence": "medium",
@@ -251,6 +281,36 @@
       "survives_drop_largest": true,
       "n_perturbations": 4
     },
+    "timeline": [
+      {
+        "year": 2021,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 1,
+        "changed": true
+      },
+      {
+        "year": 2022,
+        "verdict": "Supported",
+        "certainty": "Moderate",
+        "n": 2,
+        "changed": true
+      },
+      {
+        "year": 2023,
+        "verdict": "Supported",
+        "certainty": "Moderate",
+        "n": 3,
+        "changed": false
+      },
+      {
+        "year": 2024,
+        "verdict": "Supported",
+        "certainty": "Moderate",
+        "n": 4,
+        "changed": false
+      }
+    ],
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
@@ -412,6 +472,36 @@
       "survives_drop_largest": true,
       "n_perturbations": 4
     },
+    "timeline": [
+      {
+        "year": 2014,
+        "verdict": "Not Supported",
+        "certainty": "High",
+        "n": 1,
+        "changed": true
+      },
+      {
+        "year": 2018,
+        "verdict": "Not Supported",
+        "certainty": "High",
+        "n": 2,
+        "changed": false
+      },
+      {
+        "year": 2020,
+        "verdict": "Not Supported",
+        "certainty": "High",
+        "n": 3,
+        "changed": false
+      },
+      {
+        "year": 2023,
+        "verdict": "Not Supported",
+        "certainty": "High",
+        "n": 4,
+        "changed": false
+      }
+    ],
     "baseline": {
       "answer": "No",
       "confidence": "high",
@@ -573,6 +663,43 @@
       "survives_drop_largest": true,
       "n_perturbations": 5
     },
+    "timeline": [
+      {
+        "year": 2014,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 1,
+        "changed": true
+      },
+      {
+        "year": 2017,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 2,
+        "changed": false
+      },
+      {
+        "year": 2018,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 3,
+        "changed": false
+      },
+      {
+        "year": 2019,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 4,
+        "changed": false
+      },
+      {
+        "year": 2026,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 5,
+        "changed": false
+      }
+    ],
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
@@ -746,6 +873,36 @@
       "survives_drop_largest": true,
       "n_perturbations": 4
     },
+    "timeline": [
+      {
+        "year": 2016,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 1,
+        "changed": true
+      },
+      {
+        "year": 2021,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 2,
+        "changed": false
+      },
+      {
+        "year": 2023,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 3,
+        "changed": true
+      },
+      {
+        "year": 2025,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 4,
+        "changed": false
+      }
+    ],
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
@@ -907,6 +1064,43 @@
       "survives_drop_largest": true,
       "n_perturbations": 7
     },
+    "timeline": [
+      {
+        "year": 2007,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 1,
+        "changed": true
+      },
+      {
+        "year": 2009,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 2,
+        "changed": false
+      },
+      {
+        "year": 2011,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 3,
+        "changed": false
+      },
+      {
+        "year": 2012,
+        "verdict": "Not Supported",
+        "certainty": "High",
+        "n": 5,
+        "changed": true
+      },
+      {
+        "year": 2013,
+        "verdict": "Not Supported",
+        "certainty": "High",
+        "n": 7,
+        "changed": false
+      }
+    ],
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
@@ -1134,6 +1328,50 @@
       "survives_drop_largest": true,
       "n_perturbations": 7
     },
+    "timeline": [
+      {
+        "year": 2005,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 2,
+        "changed": true
+      },
+      {
+        "year": 2011,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 3,
+        "changed": false
+      },
+      {
+        "year": 2012,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 4,
+        "changed": false
+      },
+      {
+        "year": 2014,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 5,
+        "changed": false
+      },
+      {
+        "year": 2017,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 6,
+        "changed": false
+      },
+      {
+        "year": 2021,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 7,
+        "changed": false
+      }
+    ],
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
@@ -1361,6 +1599,36 @@
       "survives_drop_largest": true,
       "n_perturbations": 6
     },
+    "timeline": [
+      {
+        "year": 2019,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 1,
+        "changed": true
+      },
+      {
+        "year": 2020,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 3,
+        "changed": false
+      },
+      {
+        "year": 2023,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 4,
+        "changed": false
+      },
+      {
+        "year": 2025,
+        "verdict": "Contested",
+        "certainty": "Low",
+        "n": 6,
+        "changed": true
+      }
+    ],
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
@@ -1566,6 +1834,36 @@
       "survives_drop_largest": false,
       "n_perturbations": 6
     },
+    "timeline": [
+      {
+        "year": 2020,
+        "verdict": "Insufficient",
+        "certainty": "Very Low",
+        "n": 1,
+        "changed": true
+      },
+      {
+        "year": 2021,
+        "verdict": "Supported",
+        "certainty": "High",
+        "n": 3,
+        "changed": true
+      },
+      {
+        "year": 2022,
+        "verdict": "Contested",
+        "certainty": "Low",
+        "n": 6,
+        "changed": true
+      },
+      {
+        "year": 2024,
+        "verdict": "Not Supported",
+        "certainty": "High",
+        "n": 7,
+        "changed": true
+      }
+    ],
     "baseline": {
       "answer": "Yes",
       "confidence": "medium",

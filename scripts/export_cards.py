@@ -12,6 +12,7 @@ import os
 from verdict.certainty import grade_certainty
 from verdict.corpora import available, load_rows
 from verdict.robustness import robustness
+from verdict.timemachine import verdict_over_time
 from verdict.verdict import evaluate
 
 WEB_PUBLIC = os.path.join(os.path.dirname(os.path.dirname(__file__)), "web", "public")
@@ -62,6 +63,9 @@ def main() -> None:
             "confidence": conf_map.get(cert.level, cert.level),
             "robustness": {"stability": rob.stability, "survives_drop_largest": rob.survives_drop_largest,
                            "n_perturbations": rob.n_perturbations},
+            # Verdict-over-time: the trajectory of this claim as its evidence accrued (deterministic).
+            "timeline": [{"year": t.year, "verdict": t.verdict, "certainty": t.certainty,
+                          "n": t.n_studies, "changed": t.changed} for t in verdict_over_time(rows)],
             "baseline": meta.get("baseline"),  # per-corpus plain-LLM answer (clinical corpora carry their own)
             "gate_trace": [{"gate": g.gate, "passed": g.passed, "detail": g.detail} for g in card.gate_trace],
             "ledger": [dataclasses.asdict(r) for r in card.ledger],
