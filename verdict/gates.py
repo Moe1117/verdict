@@ -206,11 +206,19 @@ def resolve(rows: list[EvidenceRow]) -> tuple[Verdict, list[GateTrace]]:
             trace.append(GateTrace("definitive-evidence", False, "large RCTs themselves conflict"))
             return Verdict.CONTESTED, trace
         large_dir = -1 if lcon else 1
-        # A lone (unreplicated) large RCT does NOT overturn a meta-of-RCTs of the
-        # actively-opposite polarity — randomized synthesis outranks one trial.
-        # Two or more concordant large RCTs remain decisive (replication).
+        largest_large_n = max((r.n_int for r in large), default=0)
+        has_supporting_meta = any(m.supports for m in metas_all)
+        # A lone (unreplicated) large RCT does NOT overturn a meta-of-RCTs that conflicts with it:
+        # an actively-opposite meta (randomized synthesis outranks one trial), OR a NULL meta the RCT
+        # does not supersede WHEN no meta actually supports the effect — a meta-analysis that pooled
+        # at least as many patients and found no effect, with no corroborating positive synthesis, is
+        # decision-grade counter-evidence. Two+ concordant large RCTs remain decisive (replication);
+        # a small/old null meta a large RCT dwarfs, or a null meta counterbalanced by a positive one,
+        # does not contest it.
         if len(large) < 2 and any(
-            (large_dir == 1 and m.direction == -1) or (large_dir == -1 and m.direction == 1)
+            (large_dir == 1 and (m.direction == -1 or
+                                 (m.direction == 0 and m.n_int >= largest_large_n and not has_supporting_meta)))
+            or (large_dir == -1 and m.direction == 1)
             for m in metas_all
         ):
             trace.append(GateTrace("definitive-evidence", False,
@@ -252,7 +260,13 @@ def resolve(rows: list[EvidenceRow]) -> tuple[Verdict, list[GateTrace]]:
             # RCTs directly contradict it.
             superseded = any(o.against and o.n_int >= 10 * max(max_recent_n, 1) for o in older)
             no_pool_conflict = max_recent_n == 0 and any(r.direction in (-1, 0) for r in rcts_onpop)
-            if superseded or no_pool_conflict:
+            # Pooling-of-junk trap: a LONE positive meta (the ONLY synthesis, no corroborating large
+            # RCT) whose pooled result is contradicted by a SUBSTANTIAL on-population primary RCT
+            # (n>=300, not a pilot) has unverified quality and is directly disputed — it cannot
+            # confidently decide. A huge meta a tiny null trial merely nicks still stands.
+            lone_meta_disputed = len(metas_all) == 1 and any(
+                r.against and r.n_int >= 300 for r in rcts_onpop)
+            if superseded or no_pool_conflict or lone_meta_disputed:
                 trace.append(GateTrace("definitive-evidence", False,
                                        "positive signal rests on thin/superseded synthesis vs conflicting evidence"))
                 return Verdict.CONTESTED, trace
