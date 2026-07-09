@@ -119,15 +119,16 @@ false positives — so the remaining live gap is dominated by retrieval recall, 
 next-largest lever.
 
 **Calibration is measured, and measurably imperfect.** Certainty is an ordinal grade (High /
-Moderate / Low / Very Low) with empirically-measured reliability. High-certainty is right **87%
-of the time (95% CI 78–93%, n=71 pooled dev+held-out)**; on the held-out split *alone* it is **82%
-(n=50, Wilson 95% CI ≈ 69–90%)** — we pair each figure with its own sample rather than splice a
-point estimate to another sample's interval. ECE 0.156 across 82 held-out claims. A distribution-
-free conformal guarantee bounds committed error **≤20% at High** (held in 93% of random
-exchangeable splits) — and we state openly it does **not** hold under the deliberate covariate
-shift to the held-out set (27% realized error). Calibration and the guarantee are measured on the
-**gate engine over verified rows**; the live product is measured separately (66%) and is not yet
-re-calibrated end-to-end.
+Moderate / Low / Very Low). The honest out-of-sample check is a calibration fit on the **dev set
+only**, then tested on held-out claims never used to fit it. High-certainty is right **79% on the
+original held-out (n=24 High; heldout + heldout_v2)** and **82% across all held-out (n=50 High)** —
+a later 40-claim set was added to tighten the interval, so we report *both* rather than only the
+larger number, and note the pooled dev+held-out buckets (87%, 95% CI 78–93%, n=71) include the fit
+data and are **not** out-of-sample. ECE 0.156 across 82 held-out claims. A distribution-free
+conformal guarantee bounds committed error **≤20% at High** (held in 93% of random exchangeable
+splits) — and it does **not** hold under the deliberate covariate shift to the held-out set (27%
+realized error), which we state openly. Calibration and the guarantee are measured on the **gate
+engine over verified rows**; the live product (66%) is not yet re-calibrated end-to-end.
 
 ## Novel claims — where the architecture is supposed to win
 
