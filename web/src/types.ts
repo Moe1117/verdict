@@ -12,6 +12,14 @@ export interface GradeDomain {
   rationale: string
 }
 
+export interface TimePoint {
+  year: number
+  verdict: string
+  certainty: string
+  n: number
+  changed: boolean
+}
+
 export interface EvidenceRow {
   citation: string
   design: string
@@ -43,6 +51,7 @@ export interface Card {
   certainty_start?: { score: number; label: string }
   certainty_domains?: GradeDomain[]
   certainty_signals?: string[]
+  timeline?: TimePoint[]
   baseline?: Baseline | null
   gate_trace: GateStep[]
   ledger: EvidenceRow[]
