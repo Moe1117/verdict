@@ -7,23 +7,22 @@ Repo: https://github.com/Moe1117/verdict · Demo video: _(link)_
 
 ## Summary (≈170 words — the submission blurb)
 
-Verdict is a decidable evidence resolver for biomedical claims. Paste a claim —
-*"aducanumab improves cognitive outcomes in Alzheimer's"* — and it returns one of four
-states: **Supported, Not Supported, Contested,** or **Insufficient**, with a confidence
-and an audit ledger tracing every study to the gate it fed. When the evidence cannot
-decide, it abstains rather than return an unsupported verdict.
+Verdict is a decidable evidence resolver for biomedical claims. Paste one —
+*"aducanumab improves cognitive outcomes in Alzheimer's"* — and it resolves live,
+streaming each study in as Claude extracts it, then returns one of four states:
+**Supported, Not Supported, Contested,** or **Insufficient**, with a confidence and an audit
+ledger tracing every study to the gate it fed. When the evidence cannot decide it abstains
+rather than return an unsupported verdict — and states what evidence would change its mind.
 
 The architecture is the point. Claude does one job: structured extraction from each
 trial — design, sample size, effect, and whether the endpoint is the *real* outcome or a
 **surrogate**. A **deterministic gate engine, with no LLM in the verdict path,** issues the
 verdict. So every verdict is a pure, auditable function of the evidence: it sets aside
-aducanumab's amyloid-PET surrogate and returns Contested; it scores bevacizumab on
-survival (not PFS) and returns Not Supported; it abstains on metformin-for-aging because
-the human trials are not yet available. On 32 breakthrough-medicine claims the **gate engine** is
-confidently wrong **zero** times versus a plain model's **six**. Run end-to-end from raw
-claims — Claude extracting live — the full **product** scores 66% with **three** confident
-false-positives: still far fewer than the model's six, and it abstains rather than overstate.
-Both figures are reported.
+aducanumab's amyloid-PET surrogate and returns Contested, and abstains on metformin-for-aging
+because the human trials aren't in yet. On 32 breakthrough-medicine claims the **gate engine**
+is confidently wrong **zero** times versus a plain model's **six**. Run end-to-end from raw
+claims, the full **product** scores 66% with **three** confident false-positives — still
+fewer than six, and it abstains rather than overstate. Both are reported.
 
 ---
 
@@ -32,8 +31,10 @@ Both figures are reported.
 Grades the *state of published evidence* for a drug-efficacy or repurposing claim, and
 shows its work. Four evidence states plus a measured reject option (abstain). Click any
 verdict to see the trials, the surrogate-vs-outcome flags, the retractions, and the exact
-gate each study passed. A research / literature-triage tool for clinicians and reviewers —
-**not** medical advice, a diagnosis, or a treatment recommendation.
+gate each study passed. Paste your own claim and it resolves live — retrieving, extracting,
+and gating end-to-end; when it abstains, it names the evidence that would make the claim
+decidable. A research / literature-triage tool for clinicians and reviewers — **not** medical
+advice, a diagnosis, or a treatment recommendation.
 
 ## Who it's for
 
@@ -53,6 +54,15 @@ who needs a sourced, rigorous assessment, including an explicit determination th
   of large RCTs decides while a genuine split (aducanumab's EMERGE vs ENGAGE) stays Contested.
 - **Live retrieval** from PubMed (NCBI E-utilities) and ClinicalTrials.gov. The 32-claim
   clinical benchmark was built and adversarially fact-checked from those sources.
+- **Live lane — paste your own claim.** Verdict resolves it end-to-end in the browser:
+  Claude parses it, PubMed and ClinicalTrials.gov are searched, each study is extracted and
+  streams in as it lands, then the deterministic gate issues the verdict — over Server-Sent
+  Events, so you watch the pipeline work. The verified frozen deck stays as a fallback, so a
+  demo can't be broken by the network.
+- **Research directive.** Every verdict states what would change it — for an abstention, the
+  specific evidence that would make the claim decidable (the missing trial, the non-surrogate
+  outcome); for a decided verdict, the result that would overturn it. Deterministic, read from
+  the gate outcome.
 - Web UI contrasts a plain LLM's confident answer against Verdict's audited call.
 
 ## The honest scorecard
@@ -95,9 +105,10 @@ live product is measured separately (66%) and is not yet re-calibrated end-to-en
 
 ## What's next
 
-The measured live gap is dominated by **retrieval recall** — several misses rest on a pivotal
-trial the query didn't surface (e.g. a failed confirmatory RCT). Next: an isolated extraction
-eval to separate retrieval error from extraction error, stronger retrieval (pubtype-filtered +
-trial-registry recall), an end-to-end re-calibration on the live pipeline, and wiring the live
-path into the UI so the demo resolves a fresh claim on camera (today it replays the verified
-frozen corpora).
+The live path is now wired into the UI — paste a claim and Verdict resolves it end-to-end on
+camera, streaming each study in as it is extracted, so the tool works on anything, not just the
+curated deck. The remaining gap is **retrieval recall**: several live misses rest on a pivotal
+trial the query didn't surface (e.g. a failed confirmatory RCT). Next: stronger retrieval
+(pubtype-filtered PubMed + trial-registry recall) and an end-to-end re-calibration of the live
+pipeline — certainty is currently calibrated on the gate engine over verified rows, not yet on
+the full live product.
