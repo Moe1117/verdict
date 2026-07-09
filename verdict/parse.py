@@ -49,7 +49,11 @@ _TOOL = {
             "dose": {"type": ["string", "null"],
                      "description": "the specific dose/regimen the claim constrains to (e.g. '900 mg/day'), "
                                     "or null if the claim specifies no particular dose"},
-            "search_query": {"type": "string", "description": "a focused PubMed/ClinicalTrials.gov query"},
+            "search_query": {"type": "string",
+                             "description": "a focused PubMed/ClinicalTrials.gov query — DOSE-AGNOSTIC: "
+                                            "retrieve the agent's trials for this outcome/population at ANY "
+                                            "dose. Never put a specific dose in the query (it is judged per "
+                                            "study downstream); a dose in the query wrongly filters retrieval."},
         },
         "required": ["agent", "outcome", "population", "direction", "measurable", "search_query"],
     },
@@ -58,7 +62,8 @@ _TOOL = {
 _SYSTEM = (
     "You decompose a biomedical efficacy claim into structured parts for an evidence engine. "
     "Be literal about the CLAIMED outcome (e.g. 'reduces mortality' -> outcome is mortality, not a "
-    "surrogate). Set measurable=false only for genuinely ill-posed or unmeasurable claims."
+    "surrogate). Capture a specific claimed dose in `dose`, but keep `search_query` DOSE-AGNOSTIC so "
+    "retrieval finds trials at every dose. Set measurable=false only for genuinely ill-posed claims."
 )
 
 
