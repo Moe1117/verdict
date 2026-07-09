@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "n": 3,
+    "naive_accuracy": 0.667,
+    "naive_confident_fp": 1,
+    "verdict_accuracy": 0.667,
+    "verdict_confident_fp": 0,
+    "verdict_abstention": 0.333
+  },
+  "results": [
+    {
+      "claim": "In the phase 3 TROPION-Lung01 trial, datopotamab deruxtecan (Dato-DXd) significantly improved overall survival compared with docetaxel in patients with previously treated advanced/metastatic non-small cell lung cancer.",
+      "gold": "Not Supported",
+      "naive_pred": "Not Supported",
+      "naive_conf": "high",
+      "naive_correct": true,
+      "naive_confident_fp": false,
+      "verdict": "Not Supported",
+      "verdict_correct": true,
+      "verdict_confident_fp": false,
+      "sec": 32
+    },
+    {
+      "claim": "Navacaprant, a highly selective kappa-opioid receptor antagonist dosed at 80 mg once daily, produces a statistically significant reduction in HAMD-17 depression score versus placebo at week 8 as the primary endpoint in adults with major depressive disorder.",
+      "gold": "Not Supported",
+      "naive_pred": "Supported",
+      "naive_conf": "medium",
+      "naive_correct": false,
+      "naive_confident_fp": true,
+      "verdict": "Insufficient",
+      "verdict_correct": false,
+      "verdict_confident_fp": false,
+      "sec": 14
+    },
+    {
+      "claim": "In patients with uncontrolled or treatment-resistant hypertension, adding the aldosterone synthase inhibitor baxdrostat lowers seated systolic blood pressure by roughly 9-10 mm Hg more than placebo at 12 weeks.",
+      "gold": "Supported",
+      "naive_pred": "Supported",
+      "naive_conf": "medium",
+      "naive_correct": true,
+      "naive_confident_fp": false,
+      "verdict": "Supported",
+      "verdict_correct": true,
+      "verdict_confident_fp": false,
+      "sec": 18
+    }
+  ]
+}

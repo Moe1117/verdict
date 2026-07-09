@@ -129,6 +129,28 @@ shift to the held-out set (27% realized error). Calibration and the guarantee ar
 **gate engine over verified rows**; the live product is measured separately (66%) and is not yet
 re-calibrated end-to-end.
 
+## Novel claims — where the architecture is supposed to win
+
+The curated benchmark is all famous claims a strong LLM has read. To probe the opposite — claims a
+Jan-2026-cutoff model has *not* pinned down — we had agents search live PubMed for recent (2024–2025)
+trial readouts, ground each in a real paper, and independently verify it (`scripts/novel_benchmark.py`,
+`benchmark/novel_claims.json`). This is a small **n=3 probe** — the verification fan-out was rate-
+limited — so it illustrates rather than proves; the harness + verified claim set are committed and
+reusable to scale it up.
+
+| | naive Claude | Verdict (live) |
+|---|---|---|
+| Accuracy | 67% (2/3) | 67% (2/3) |
+| Confident false-positives | **1** | **0** |
+| Abstains | never | 33% |
+
+Same accuracy — but on the one claim the model hadn't pinned down (navacaprant, a kappa-opioid-
+antagonist antidepressant that **missed** its primary endpoint), naive Claude confidently asserted it
+**works**; Verdict retrieved the evidence, found it insufficient for a confident call, and
+**abstained**. That is the never-confidently-wrong property showing exactly where a model fails: it
+hallucinates a confident yes on a recent result it doesn't know, and Verdict doesn't. (Claude knew the
+other two 2024 results correctly — the novelty only bit on one, which we report honestly.)
+
 ## What's next
 
 The live path is now wired into the UI — paste a claim and Verdict resolves it end-to-end on
