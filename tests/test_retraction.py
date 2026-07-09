@@ -67,6 +67,7 @@ def test_live_path_marks_retracted_row_inert_over_the_llm(monkeypatch):
                    integrity_severity="retracted")
     monkeypatch.setattr(retrieve, "search_pubmed", lambda q, retmax=8: [good, fraud])
     monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: "abstract")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [])
 
     # The LLM (mocked) NAIVELY reports BOTH studies as sound and supporting the claim.
     def fake_extract(s, a, c):

@@ -52,7 +52,7 @@ def run_live(claim: str, k: int = 8) -> VerdictCard:
     function of the extracted rows."""
     from .extract import extract_row
     from .parse import parse_claim
-    from .retrieve import fetch_abstract, retraction_note, search_pubmed
+    from .retrieve import fetch_abstract, fetch_trial, retraction_note, search_pubmed, search_trials
 
     ct, query = parse_claim(claim)
     if not ct.measurable:
@@ -63,14 +63,15 @@ def run_live(claim: str, k: int = 8) -> VerdictCard:
         )
     rows: list[EvidenceRow] = []
     seen: set[str] = set()
-    for s in search_pubmed(query, retmax=k):
-        if s.id in seen:
-            continue
+
+    def commit(s, text: str | None) -> None:
+        if not text or s.id in seen:
+            return
         seen.add(s.id)
         try:
-            row = extract_row(s, fetch_abstract(s.id), ct)
+            row = extract_row(s, text, ct)
         except Exception:  # noqa: BLE001 — one bad study never sinks the run
-            continue
+            return
         # Deterministic integrity override: if the source database itself flags the study as
         # retracted / under an expression of concern, it is inert regardless of what the LLM
         # extractor concluded. Retraction is a citable fact, never an LLM judgement.
@@ -78,4 +79,22 @@ def run_live(claim: str, k: int = 8) -> VerdictCard:
             row.integrity_ok = False
             row.integrity_note = retraction_note(s)
         rows.append(row)
+
+    for s in search_pubmed(query, retmax=k):
+        try:
+            abstract = fetch_abstract(s.id)
+        except Exception:  # noqa: BLE001
+            continue
+        commit(s, abstract)
+    # ClinicalTrials.gov: add trials with POSTED RESULTS (orthogonal recall — the definitive
+    # trials a PubMed query can miss). Registrations without results are skipped (not evidence).
+    try:
+        trials = search_trials(query, page_size=k)
+    except Exception:  # noqa: BLE001 — CT.gov being unavailable never sinks the run
+        trials = []
+    for s in trials:
+        try:
+            commit(s, fetch_trial(s.id))
+        except Exception:  # noqa: BLE001
+            continue
     return evaluate(claim, rows)

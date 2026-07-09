@@ -123,6 +123,50 @@ def fetch_abstract(pmid: str, timeout: float = 20.0) -> str:
     return r.text
 
 
+def fetch_trial(nct: str, timeout: float = 20.0) -> str | None:
+    """Fetch a ClinicalTrials.gov trial's posted RESULTS as an extraction blob, or None if the
+    trial has no posted results (a registration without findings is not evidence of an effect).
+    Only citation-grade metadata + the posted between-group outcome stats are returned."""
+    nid = nct.replace("NCT:", "")
+    r = httpx.get(f"{CTGOV}/studies/{nid}", params={"format": "json"}, timeout=timeout)
+    r.raise_for_status()
+    d = r.json()
+    if not d.get("hasResults"):
+        return None
+    ps = d.get("protocolSection", {})
+    rs = d.get("resultsSection", {})
+    idm = ps.get("identificationModule", {})
+    lines = [
+        f"TRIAL: {idm.get('briefTitle', '')}",
+        f"status: {ps.get('statusModule', {}).get('overallStatus', '')}",
+        f"conditions: {', '.join(ps.get('conditionsModule', {}).get('conditions', []))}",
+    ]
+    ivs = ps.get("armsInterventionsModule", {}).get("interventions", [])
+    if ivs:
+        lines.append("interventions: " + "; ".join(i.get("name", "") for i in ivs[:4]))
+    prim = ps.get("outcomesModule", {}).get("primaryOutcomes", [])
+    if prim:
+        lines.append("primary outcome: " + prim[0].get("measure", ""))
+    lines.append("POSTED RESULTS (between-group):")
+    for o in rs.get("outcomeMeasuresModule", {}).get("outcomeMeasures", [])[:3]:
+        groups = " vs ".join(g.get("title", "") for g in o.get("groups", [])[:3])
+        line = f"- {o.get('title', '')[:140]} [{groups}]"
+        analyses = o.get("analyses", [])
+        if analyses:
+            a = analyses[0]
+            bits = []
+            if a.get("pValue"):
+                bits.append(f"p={a['pValue']}")
+            if a.get("paramValue"):
+                bits.append(f"{a.get('paramType', 'effect')}={a['paramValue']}")
+            if a.get("ciLowerLimit") and a.get("ciUpperLimit"):
+                bits.append(f"95% CI {a['ciLowerLimit']} to {a['ciUpperLimit']}")
+            if bits:
+                line += " | " + ", ".join(bits)
+        lines.append(line)
+    return "\n".join(lines)[:5500]
+
+
 def search_trials(query: str, page_size: int = 20, timeout: float = 20.0) -> list[Source]:
     r = httpx.get(f"{CTGOV}/studies", params={
         "query.term": query, "pageSize": page_size, "format": "json",

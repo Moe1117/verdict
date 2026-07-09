@@ -16,6 +16,7 @@ def test_run_live_orchestrates_to_a_verdict(monkeypatch):
     monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "drugX mortality"))
     monkeypatch.setattr(retrieve, "search_pubmed", lambda q, retmax=8: [_src("PMID:1"), _src("PMID:2")])
     monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: "transient abstract text")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [])
     rows = {
         "PMID:1": EvidenceRow(citation="c", design="meta-analysis of rcts", direction=1, population_match=True),
         "PMID:2": EvidenceRow(citation="c", design="rct", direction=1, population_match=True, n_int=5000),
@@ -24,6 +25,37 @@ def test_run_live_orchestrates_to_a_verdict(monkeypatch):
     card = vmod.run_live("drugX improves survival in adults")
     assert card.verdict is Verdict.SUPPORTED
     assert len(card.ledger) == 2
+
+
+def test_run_live_adds_clinicaltrials_results(monkeypatch):
+    """A ClinicalTrials.gov trial WITH posted results is retrieved + extracted alongside PubMed."""
+    ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)
+    monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "q"))
+    monkeypatch.setattr(retrieve, "search_pubmed", lambda q, retmax=8: [])
+    monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: "")
+    trial = Source(kind="clinicaltrials", id="NCT:1", title="t", authors="", journal="ClinicalTrials.gov", year="", url="u")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [trial])
+    monkeypatch.setattr(retrieve, "fetch_trial", lambda nct: "TRIAL: posted results, negative primary endpoint")
+    monkeypatch.setattr(extract, "extract_row", lambda s, text, c:
+                        EvidenceRow(citation="c", source_id=s.id, design="rct", direction=-1,
+                                    population_match=True, n_int=2000))
+    card = vmod.run_live("drugX improves survival")
+    assert any(r.source_id == "NCT:1" for r in card.ledger)
+
+
+def test_run_live_skips_clinicaltrials_without_results(monkeypatch):
+    """A registered trial with NO posted results is not evidence — it is never extracted."""
+    ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)
+    monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "q"))
+    monkeypatch.setattr(retrieve, "search_pubmed", lambda q, retmax=8: [])
+    trial = Source(kind="clinicaltrials", id="NCT:9", title="t", authors="", journal="ClinicalTrials.gov", year="", url="u")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [trial])
+    monkeypatch.setattr(retrieve, "fetch_trial", lambda nct: None)   # no posted results
+    called: list = []
+    monkeypatch.setattr(extract, "extract_row",
+                        lambda s, text, c: called.append(s) or EvidenceRow(citation="c", design="rct", direction=1, population_match=True))
+    card = vmod.run_live("drugX improves survival")
+    assert card.ledger == [] and called == []
 
 
 def test_input_guard_returns_undecidable(monkeypatch):
