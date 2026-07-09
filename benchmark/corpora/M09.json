@@ -86,7 +86,7 @@
   "baseline": {
     "answer": "No",
     "confidence": "high",
-    "text": "No. Solanezumab failed its pivotal Alzheimer's program \u2014 EXPEDITION3 (2018) missed its cognitive primary endpoint, and the A4 secondary-prevention trial (2023) was also negative. Anti-amyloid antibodies that bind soluble monomer without clearing plaque, like solanezumab, have not shown a cognitive benefit."
+    "text": "Solanezumab has failed to demonstrate meaningful cognitive benefit in Alzheimer's disease across multiple large clinical trials."
   },
   "build_confidence": "high",
   "notes": "All four rows re-verified against PubMed metadata (title/journal/DOI/pub-types/year/first-author) and, where applicable, ClinicalTrials.gov (NCT, enrollment, phase, primary endpoint). Effect sizes and directions read directly from primary NEJM/JNNP abstracts and all match the corpus. One numeric correction applied: A4 solanezumab n_int 585 -> 578. No retracted publications found in the solanezumab efficacy literature. FDA non-approval / March-2023 discontinuation confirmed via ALZFORUM + Eli Lilly release. DIAN-TU (NCT01760005) solanezumab arm also negative but not used as a core row (complex platform design); the four included rows span mild-to-moderate, mild, preclinical, and pooled evidence. build_confidence high \u2014 one of the clearest 'Not Supported' cases in the AD anti-amyloid literature."

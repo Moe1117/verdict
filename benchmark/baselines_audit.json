@@ -1,0 +1,346 @@
+{
+  "model": "claude-sonnet-5",
+  "n": 34,
+  "baselines": [
+    {
+      "id": "C01",
+      "claim": "Atorvastatin reduces LDL cholesterol in adults with hyperlipidemia",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Atorvastatin effectively lowers LDL cholesterol in adults with hyperlipidemia."
+    },
+    {
+      "id": "C05",
+      "claim": "Metformin reduces cancer incidence in adults without diabetes",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "medium",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Current evidence does not support that metformin reduces cancer incidence in adults without diabetes."
+    },
+    {
+      "id": "C08",
+      "claim": "Ivermectin improves clinical outcomes in COVID-19",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Rigorous large-scale trials show ivermectin does not improve clinical outcomes in COVID-19."
+    },
+    {
+      "id": "C09",
+      "claim": "Fenbendazole treats cancer in humans",
+      "gold": "Insufficient",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Fenbendazole is an animal deworming drug with no proven clinical evidence that it treats cancer in humans."
+    },
+    {
+      "id": "C14",
+      "claim": "Icosapent ethyl (EPA) reduces cardiovascular events in high-risk statin-treated patients with hypertriglyceridemia",
+      "gold": "Contested",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": true,
+      "text": "Icosapent ethyl significantly reduces cardiovascular events, as demonstrated in the REDUCE-IT trial among statin-treated high-risk patients with elevated triglycerides."
+    },
+    {
+      "id": "F01",
+      "claim": "Hydroxyethyl starch (HES) is a safe and effective fluid for volume resuscitation in critically ill adults",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Hydroxyethyl starch increases the risk of acute kidney injury, need for renal replacement therapy, and mortality in critically ill adults, so it is not considered safe or effective for volume resuscitation in this population."
+    },
+    {
+      "id": "F02",
+      "claim": "Resveratrol supplementation improves cardiovascular or metabolic health outcomes in humans",
+      "gold": "Insufficient",
+      "answer": "No",
+      "confidence": "medium",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Overall, clinical trials show resveratrol supplementation has not consistently demonstrated meaningful improvements in cardiovascular or metabolic health outcomes in humans."
+    },
+    {
+      "id": "F03",
+      "claim": "Perioperative celecoxib/pregabalin multimodal analgesia reduces postoperative pain and opioid use",
+      "gold": "Contested",
+      "answer": "Yes",
+      "confidence": "medium",
+      "pred": "Supported",
+      "confident_false_positive": true,
+      "text": "Perioperative multimodal analgesia with celecoxib and pregabalin has been shown to reduce postoperative pain scores and opioid consumption compared to standard opioid-only regimens."
+    },
+    {
+      "id": "F04",
+      "claim": "Hydroxychloroquine improves clinical outcomes in COVID-19",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Large randomized controlled trials have shown hydroxychloroquine does not improve clinical outcomes in COVID-19 patients."
+    },
+    {
+      "id": "M01",
+      "claim": "Semaglutide reduces major adverse cardiovascular events in overweight or obese adults without diabetes",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, in the SELECT trial semaglutide significantly reduced major adverse cardiovascular events in overweight or obese adults with established cardiovascular disease but without diabetes."
+    },
+    {
+      "id": "M02",
+      "claim": "Tirzepatide produces clinically significant weight loss in adults with obesity",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Tirzepatide produces substantial, clinically significant weight loss in adults with obesity, with clinical trials showing average reductions of around 15-20% of body weight."
+    },
+    {
+      "id": "M03",
+      "claim": "Liraglutide reduces cardiovascular events in adults with type 2 diabetes at high cardiovascular risk",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Liraglutide has been shown in the LEADER trial to significantly reduce major adverse cardiovascular events in adults with type 2 diabetes at high cardiovascular risk."
+    },
+    {
+      "id": "M04",
+      "claim": "Semaglutide slows progression of chronic kidney disease in adults with type 2 diabetes",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, semaglutide has been shown to slow the progression of chronic kidney disease in adults with type 2 diabetes, including reducing major kidney-related outcomes in clinical trials like FLOW."
+    },
+    {
+      "id": "M05",
+      "claim": "Semaglutide improves heart-failure symptoms in patients with obesity-related HFpEF (KCCQ symptom score and body weight)",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, in the STEP-HFpEF trial semaglutide significantly improved KCCQ symptom scores and reduced body weight in patients with obesity-related HFpEF."
+    },
+    {
+      "id": "M06",
+      "claim": "Aducanumab improves cognitive and clinical outcomes in patients with early Alzheimer's disease",
+      "gold": "Contested",
+      "answer": "No",
+      "confidence": "medium",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "The clinical trial evidence for aducanumab is inconsistent and does not convincingly demonstrate meaningful cognitive or clinical benefit in early Alzheimer's disease."
+    },
+    {
+      "id": "M07",
+      "claim": "Lecanemab slows clinical decline in early symptomatic Alzheimer's disease",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, lecanemab has been shown in clinical trials to slow clinical decline in patients with early symptomatic Alzheimer's disease."
+    },
+    {
+      "id": "M08",
+      "claim": "Donanemab slows clinical decline in early symptomatic Alzheimer's disease",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, clinical trial data show donanemab significantly slows clinical decline in patients with early symptomatic Alzheimer's disease."
+    },
+    {
+      "id": "M09",
+      "claim": "Solanezumab improves cognition in Alzheimer's disease",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Solanezumab has failed to demonstrate meaningful cognitive benefit in Alzheimer's disease across multiple large clinical trials."
+    },
+    {
+      "id": "M10",
+      "claim": "Gantenerumab slows clinical decline in early Alzheimer's disease",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Gantenerumab failed to significantly slow clinical decline in early Alzheimer's disease in the pivotal GRADUATE I and II phase 3 trials."
+    },
+    {
+      "id": "M11",
+      "claim": "Adjuvant trastuzumab improves survival in HER2-positive early breast cancer",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, adjuvant trastuzumab significantly improves both disease-free and overall survival in HER2-positive early breast cancer."
+    },
+    {
+      "id": "M12",
+      "claim": "Adding bevacizumab to chemotherapy improves overall survival in metastatic HER2-negative breast cancer",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Multiple large trials show bevacizumab added to chemotherapy improves progression-free survival but does not improve overall survival in metastatic HER2-negative breast cancer."
+    },
+    {
+      "id": "M13",
+      "claim": "Osimertinib improves survival in EGFR-mutated advanced non-small-cell lung cancer",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Osimertinib significantly improves progression-free and overall survival compared with earlier-generation EGFR-TKIs and chemotherapy in EGFR-mutated advanced NSCLC."
+    },
+    {
+      "id": "M14",
+      "claim": "Pembrolizumab improves survival in advanced melanoma",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Pembrolizumab has been shown in clinical trials to significantly improve overall survival in patients with advanced melanoma compared to standard therapies."
+    },
+    {
+      "id": "M15",
+      "claim": "Adding a PD-1/PD-L1 checkpoint inhibitor to chemotherapy improves survival in unselected metastatic pancreatic ductal adenocarcinoma",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Adding PD-1/PD-L1 checkpoint inhibitors to chemotherapy has not been shown to improve survival in unselected metastatic pancreatic ductal adenocarcinoma."
+    },
+    {
+      "id": "M17",
+      "claim": "Evolocumab (a PCSK9 inhibitor) reduces cardiovascular events in patients with atherosclerotic cardiovascular disease on statins",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, evolocumab significantly reduces cardiovascular events, as demonstrated by the FOURIER trial, in patients with atherosclerotic cardiovascular disease already on statin therapy."
+    },
+    {
+      "id": "M18",
+      "claim": "Sacubitril/valsartan reduces cardiovascular death or heart-failure hospitalization in heart failure with reduced ejection fraction",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Sacubitril/valsartan significantly reduces the composite risk of cardiovascular death or heart-failure hospitalization in patients with heart failure with reduced ejection fraction, as demonstrated in the PARADIGM-HF trial."
+    },
+    {
+      "id": "M19",
+      "claim": "Dapagliflozin reduces heart-failure hospitalization or cardiovascular death in heart failure with reduced ejection fraction",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, in the DAPA-HF trial dapagliflozin significantly reduced the composite risk of heart-failure hospitalization or cardiovascular death in patients with heart failure with reduced ejection fraction."
+    },
+    {
+      "id": "M20",
+      "claim": "Intensive blood-pressure control to a systolic target below 120 mmHg reduces cardiovascular events compared with standard control",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Yes, intensive systolic blood-pressure control to below 120 mmHg significantly reduces major cardiovascular events compared with standard targets, as demonstrated in the SPRINT trial."
+    },
+    {
+      "id": "M21",
+      "claim": "Adding niacin to statin therapy reduces cardiovascular events",
+      "gold": "Not Supported",
+      "answer": "No",
+      "confidence": "high",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Large randomized trials (AIM-HIGH, HPS2-THRIVE) showed adding niacin to statin therapy does not reduce cardiovascular events and increases side effects."
+    },
+    {
+      "id": "M22",
+      "claim": "Adding ezetimibe to statin therapy reduces cardiovascular events after acute coronary syndrome",
+      "gold": "Supported",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": false,
+      "text": "Adding ezetimibe to statin therapy after acute coronary syndrome modestly but significantly reduces cardiovascular events, as demonstrated in the IMPROVE-IT trial."
+    },
+    {
+      "id": "M23",
+      "claim": "Low-dose colchicine reduces cardiovascular events in patients with coronary artery disease",
+      "gold": "Contested",
+      "answer": "Yes",
+      "confidence": "high",
+      "pred": "Supported",
+      "confident_false_positive": true,
+      "text": "Yes, low-dose colchicine (0.5 mg daily) has been shown in trials like LoDoCo2 and COLCOT to significantly reduce major cardiovascular events in patients with coronary artery disease."
+    },
+    {
+      "id": "M24",
+      "claim": "Metformin delays aging or extends healthspan in non-diabetic older adults",
+      "gold": "Insufficient",
+      "answer": "No",
+      "confidence": "medium",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "There is currently no robust clinical trial evidence that metformin delays aging or extends healthspan in non-diabetic older adults; this remains an unproven hypothesis awaiting results from trials like TAME."
+    },
+    {
+      "id": "M25",
+      "claim": "Psilocybin-assisted therapy produces durable remission in treatment-resistant depression",
+      "gold": "Contested",
+      "answer": "No",
+      "confidence": "medium",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "Current evidence shows psilocybin-assisted therapy can produce meaningful short-term reductions in treatment-resistant depression, but durable long-term remission has not been reliably demonstrated."
+    },
+    {
+      "id": "M26",
+      "claim": "Rapamycin (sirolimus) extends healthspan or improves aging outcomes in healthy humans",
+      "gold": "Insufficient",
+      "answer": "No",
+      "confidence": "medium",
+      "pred": "Not Supported",
+      "confident_false_positive": false,
+      "text": "There is currently no robust clinical trial evidence that rapamycin extends healthspan or improves aging outcomes in healthy humans, though it does so reliably in animal models."
+    }
+  ]
+}

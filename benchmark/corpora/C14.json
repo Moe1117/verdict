@@ -4,8 +4,8 @@
   "expected_verdict": "Contested",
   "baseline": {
     "answer": "Yes",
-    "confidence": "medium",
-    "text": "Yes \u2014 omega-3 (icosapent ethyl) reduces cardiovascular events, as shown in REDUCE-IT."
+    "confidence": "high",
+    "text": "Icosapent ethyl significantly reduces cardiovascular events, as demonstrated in the REDUCE-IT trial among statin-treated high-risk patients with elevated triglycerides."
   },
   "rows": [
     {

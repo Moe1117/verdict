@@ -120,7 +120,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes. Semaglutide slows CKD progression in adults with type 2 diabetes. This is established primarily by the FLOW trial (Perkovic et al., NEJM 2024), a dedicated kidney-outcomes RCT in 3,533 patients with T2D and CKD that was stopped early for efficacy: semaglutide reduced the primary composite kidney outcome (kidney failure, >=50% eGFR decline, kidney or cardiovascular death) by 24% (HR 0.76). It also slowed the annual eGFR decline and reduced cardiovascular death and all-cause mortality. These results are supported by class-level meta-analyses of GLP-1 receptor agonists and have led to a regulatory CKD indication (FDA, Ozempic, Jan 2025) and guideline recommendations. The answer is a clear Yes."
+    "text": "Yes, semaglutide has been shown to slow the progression of chronic kidney disease in adults with type 2 diabetes, including reducing major kidney-related outcomes in clinical trials like FLOW."
   },
   "build_confidence": "high",
   "provenance": "All 6 rows independently re-verified via PubMed get_article_metadata: real PMIDs with matching titles, DOIs, journals, article types (RCT / Meta-Analysis+Systematic Review), and years; no Retracted Publication tags. All quantitative claims (N, HR/RR, CI, I2, direction) reconciled against source abstracts. FLOW design/N/primary-endpoint confirmed via ClinicalTrials.gov NCT03819153 (Phase 3, interventional, N=3533). FDA CKD indication for Ozempic (28 Jan 2025) confirmed via multiple independent sources (Novo Nordisk/PRNewswire release, Healio, Pharmacy Times, CNBC). No retracted publications in this evidence base.",

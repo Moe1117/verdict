@@ -87,7 +87,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes. Semaglutide reduces major adverse cardiovascular events in overweight/obese adults without diabetes. This was demonstrated by the landmark SELECT trial (Lincoff et al., NEJM 2023), a large double-blind RCT of 17,604 adults with a BMI >=27 and established cardiovascular disease but no diabetes, in which weekly semaglutide 2.4 mg reduced the primary composite of cardiovascular death, nonfatal MI, and nonfatal stroke by 20% (HR 0.80, 95% CI 0.72-0.90, P<0.001) versus placebo. On the strength of SELECT, the FDA in March 2024 approved a cardiovascular risk-reduction indication for Wegovy in this exact population. The finding is consistent with the established class-level MACE benefit of GLP-1 receptor agonists."
+    "text": "Yes, in the SELECT trial semaglutide significantly reduced major adverse cardiovascular events in overweight or obese adults with established cardiovascular disease but without diabetes."
   },
   "build_confidence": "high",
   "provenance": "All rows independently re-verified: PubMed get_article_metadata confirmed each PMID's title, journal, year, DOI, and publication type (no Retracted Publication); ClinicalTrials.gov get_trial_details confirmed NCT03574597 (SELECT: N=17,604, Phase 3 interventional, COMPLETED, primary 3-point MACE, age>=45/BMI>=27/established CVD/no diabetes, sponsor Novo Nordisk). Numeric effect sizes (SELECT 6.5% vs 8.0% HR 0.80; Badve HR 0.86, 11 trials/85,373; SUSTAIN-6 HR 0.74; Sattar HR 0.86, 8 trials/60,080) checked against the source abstracts. FDA 8-March-2024 Wegovy CV label expansion confirmed via the FDA press release (Exa web search).",

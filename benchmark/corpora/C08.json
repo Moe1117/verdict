@@ -3,9 +3,9 @@
   "claim": "Ivermectin improves clinical outcomes in COVID-19",
   "expected_verdict": "Not Supported",
   "baseline": {
-    "answer": "Yes",
-    "confidence": "medium",
-    "text": "Yes \u2014 several studies and a meta-analysis reported reduced mortality (RR ~0.31), so ivermectin appears beneficial for COVID-19."
+    "answer": "No",
+    "confidence": "high",
+    "text": "Rigorous large-scale trials show ivermectin does not improve clinical outcomes in COVID-19."
   },
   "rows": [
     {

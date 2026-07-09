@@ -12,7 +12,7 @@
   "baseline": {
     "answer": "No",
     "confidence": "high",
-    "text": "No. Checkpoint inhibitors have consistently failed in unselected pancreatic ductal adenocarcinoma. PDAC is an immunologically 'cold' tumor with a dense immunosuppressive stroma, low tumor mutational burden, and poor T-cell infiltration. Single-agent and dual checkpoint blockade produced essentially no responses (e.g., ipilimumab, durvalumab \u00b1 tremelimumab), and randomized addition of PD-L1/CTLA-4 blockade to gemcitabine/nab-paclitaxel (CCTG PA.7) did not improve overall survival (p=0.72). The only setting where checkpoint inhibitors help is the small MSI-H/dMMR (or TMB-high) biomarker subgroup, where pembrolizumab is approved tissue-agnostically and dostarlimab for dMMR \u2014 but that is explicitly a SELECTED population, not the unselected non-MSI-H disease the claim describes. Therefore, for unselected metastatic PDAC, adding a PD-1/PD-L1 inhibitor to chemotherapy does not improve survival."
+    "text": "Adding PD-1/PD-L1 checkpoint inhibitors to chemotherapy has not been shown to improve survival in unselected metastatic pancreatic ductal adenocarcinoma."
   },
   "rows": [
     {

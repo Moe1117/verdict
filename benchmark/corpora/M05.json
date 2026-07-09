@@ -105,6 +105,6 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes - semaglutide improves heart-failure symptoms and reduces body weight in obesity-related HFpEF. The STEP-HFpEF trial (Kosiborod et al., NEJM 2023) randomized 529 patients with LVEF >=45% and BMI >=30 to semaglutide 2.4 mg vs placebo and met both dual primary endpoints: a clinically meaningful improvement in the KCCQ Clinical Summary Score (+7.8 points) and substantial weight loss (-10.7 percentage points), plus better 6-minute walk distance and lower CRP. STEP-HFpEF DM replicated this in patients with type 2 diabetes (KCCQ +7.3, weight -6.4 pp), and the pooled Lancet 2024 analysis (N=1145) confirmed consistent benefit (KCCQ +7.5, weight -8.4%). This is now reflected in heart-failure guidance for the obesity phenotype. One caveat: these trials were powered on symptoms and weight, not hard cardiovascular outcomes - the CV-event benefit in this population was shown for tirzepatide (SUMMIT), a related but different drug."
+    "text": "Yes, in the STEP-HFpEF trial semaglutide significantly improved KCCQ symptom scores and reduced body weight in patients with obesity-related HFpEF."
   }
 }

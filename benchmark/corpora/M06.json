@@ -9,9 +9,9 @@
   "provenance": "ClinicalTrials.gov (NCT records + posted results), PubMed (peer-reviewed publications, all checked for Retracted Publication type \u2014 none retracted; PMIDs 35542991, 37423541, 38429615, 34320282 re-verified), and FDA/press primary sources via Exa (Biogen investor release confirming 10-against/1-uncertain advisory vote; Citeline/ALZFORUM confirming ENVISION termination and BLA withdrawal).",
   "notes": "M06 is the surrogate-vs-outcome showcase. Rows split on outcome_match: EMERGE/ENGAGE/ENVISION and the two meta-analyses measured the CLAIMED clinical/cognitive endpoint (outcome_match=true); the FDA accelerated approval acted on the amyloid-PET SURROGATE, so that row is outcome_match=false. Direction is defined on the CLAIMED cognitive outcome: EMERGE +1, ENGAGE -1 (numerically favored placebo, P=.833), ENVISION 0 (terminated, no verifying result), meta-analyses +1 (small pooled cognitive signal driven by EMERGE). No study is retracted or under Expression of Concern. Gate note: the direct EMERGE(+1) vs ENGAGE(-1) contradiction at the highest evidence tier, plus an abandoned confirmatory trial and BLA withdrawal, forces Contested. CORRECTIONS ON RE-VERIFICATION: the NEJM row citation, page numbers (769-771 not 772-774) and author list were corrected; the DOI itself is real (PMID 34320282). n_int for EMERGE/ENGAGE reflects the published analyzed populations (CT.gov enrollment is 1643/1653). [CORRECTED: removed the pooled EMERGE+ENGAGE publication row (double-counts the two trials already listed by NCT).]",
   "baseline": {
-    "answer": "Yes",
+    "answer": "No",
     "confidence": "medium",
-    "text": "Aducanumab (Aduhelm) is an anti-amyloid monoclonal antibody that was FDA-approved in 2021 for early Alzheimer's disease. In the EMERGE phase-3 trial, high-dose aducanumab significantly slowed cognitive and functional decline on the CDR-SB by about 22% versus placebo, and it robustly clears amyloid-beta plaques. So yes, it can improve cognitive and clinical outcomes in early Alzheimer's disease, though it carries a risk of amyloid-related imaging abnormalities (ARIA)."
+    "text": "The clinical trial evidence for aducanumab is inconsistent and does not convincingly demonstrate meaningful cognitive or clinical benefit in early Alzheimer's disease."
   },
   "build_confidence": "high",
   "rows": [

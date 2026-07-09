@@ -114,5 +114,10 @@
       "source_url": "https://retractionwatch.com/2012/06/04/retraction-count-for-resveratrol-researcher-dipak-das-rises-to-12/"
     }
   ],
-  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed."
+  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed.",
+  "baseline": {
+    "answer": "No",
+    "confidence": "medium",
+    "text": "Overall, clinical trials show resveratrol supplementation has not consistently demonstrated meaningful improvements in cardiovascular or metabolic health outcomes in humans."
+  }
 }

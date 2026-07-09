@@ -27,6 +27,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, field_validator
 
 from . import DISCLAIMER, __version__
+from .baseline import plain_llm_baseline
 from .cards import card_payload
 from .env import load_dotenv
 from .verdict import run_live
@@ -75,41 +76,6 @@ class ResolveRequest(BaseModel):
     @classmethod
     def _bounded_k(cls, v: int) -> int:
         return max(1, min(12, v))
-
-
-# --- the plain-LLM foil (the Duel's left panel for a live claim) -------------------------------
-# A deliberately confident, unsourced yes/no — the exact failure mode Verdict is built to avoid.
-# It is NEVER part of the verdict path; it exists only to be contrasted with the gated result.
-_FOIL_TOOL = {
-    "name": "answer",
-    "description": "A direct, confident yes/no answer to a clinical efficacy claim, as a general "
-                   "assistant would give it without consulting sources.",
-    "input_schema": {
-        "type": "object",
-        "properties": {
-            "answer": {"type": "string", "enum": ["Yes", "No"]},
-            "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
-            "text": {"type": "string", "description": "one confident sentence, no hedging, no citations"},
-        },
-        "required": ["answer", "confidence", "text"],
-    },
-}
-_FOIL_SYSTEM = ("You are a general-purpose assistant answering a clinical question directly and "
-                "confidently, the way a chat model does when asked offhand — no tools, no sources, "
-                "no hedging. Give a single decisive sentence.")
-
-
-def plain_llm_baseline(claim: str) -> dict | None:
-    """One confident, unsourced Claude answer — the Duel foil. Non-fatal: returns None on any
-    error so a failed foil never breaks resolution (the UI falls back to a generic answer)."""
-    try:
-        from .parse import call_tool
-        d = call_tool(_FOIL_SYSTEM, f"Claim: {claim}", _FOIL_TOOL, max_tokens=300)
-        return {"answer": d.get("answer", "Yes"), "confidence": d.get("confidence", "high"),
-                "text": d.get("text", "")}
-    except Exception:  # noqa: BLE001 — the foil is decorative; never let it sink the request
-        log.warning("plain_llm_baseline failed; falling back to no baseline", exc_info=True)
-        return None
 
 
 def _resolve_card(claim: str, k: int) -> dict:

@@ -96,5 +96,10 @@
     }
   ],
   "integrity_records": [],
-  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed."
+  "provenance": "Gathered in-window from PubMed/ClinicalTrials.gov (public). PMIDs/NCTs/DOIs only; no Consensus output redistributed.",
+  "baseline": {
+    "answer": "No",
+    "confidence": "high",
+    "text": "Fenbendazole is an animal deworming drug with no proven clinical evidence that it treats cancer in humans."
+  }
 }

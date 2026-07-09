@@ -3,9 +3,9 @@
   "claim": "Hydroxychloroquine improves clinical outcomes in COVID-19",
   "expected_verdict": "Not Supported",
   "baseline": {
-    "answer": "Yes",
-    "confidence": "medium",
-    "text": "Yes \u2014 early studies, including Gautret et al., found hydroxychloroquine (especially with azithromycin) improved viral clearance and outcomes in COVID-19."
+    "answer": "No",
+    "confidence": "high",
+    "text": "Large randomized controlled trials have shown hydroxychloroquine does not improve clinical outcomes in COVID-19 patients."
   },
   "rows": [
     {

@@ -133,7 +133,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes. Adjuvant trastuzumab is one of the best-established survival-improving therapies in oncology. The pivotal HERA and joint NSABP B-31/NCCTG N9831 trials (both NEJM 2005) showed large disease-free survival benefits, and long-term follow-up plus meta-analyses confirmed a roughly one-third reduction in the risk of death, translating to a ~6-8 percentage-point absolute overall-survival gain at 10 years. It is standard of care in every major guideline (NCCN, ASCO, ESMO), with cardiotoxicity as the main manageable trade-off."
+    "text": "Yes, adjuvant trastuzumab significantly improves both disease-free and overall survival in HER2-positive early breast cancer."
   },
   "build_confidence": "high",
   "provenance": "All 7 rows independently re-verified via PubMed get_article_metadata (real PMIDs, DOIs, journals, years, and abstracts confirming every reported effect size and CI). Article-type fields confirm RCT / Phase III RCT / Meta-Analysis / Systematic Review classifications, and NONE carry a 'Retracted Publication' tag. NCT identifiers (NCT00045032, NCT00004067, NCT00005970) are embedded in the source abstracts. Row 1 outcome_match=false verified as honest (OS immature at HERA 1-yr interim: 29 vs 37 deaths). Attribution: data retrieved from PubMed.",

@@ -82,7 +82,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes. Dapagliflozin reduces the composite of heart-failure hospitalization or cardiovascular death in HFrEF. This was established by the pivotal DAPA-HF trial (NEJM 2019), which randomized 4,744 patients with HFrEF (with and without type 2 diabetes) and found a 26% relative risk reduction in the primary composite of worsening heart failure or CV death (HR 0.74, 95% CI 0.65-0.85). The FDA approved dapagliflozin for this indication in 2020, and the finding was corroborated as a class effect by EMPEROR-Reduced (empagliflozin) and confirmed in meta-analysis. It is a Class I guideline-recommended therapy for HFrEF."
+    "text": "Yes, in the DAPA-HF trial dapagliflozin significantly reduced the composite risk of heart-failure hospitalization or cardiovascular death in patients with heart failure with reduced ejection fraction."
   },
   "provenance": "Adversarial fact-check re-verification this session: PubMed get_article_metadata confirmed PMIDs 31535829, 32865377, 32877652 (titles, DOIs, years, article types incl. RCT/Phase III/Meta-Analysis; no Retracted Publication type). ClinicalTrials.gov get_trial_details confirmed NCT03036124 (DAPA-HF: N=4744, PHASE3, double-blind placebo-controlled, LVEF<=40%, NYHA II-IV, primary=worsening HF or CV death, COMPLETED). Exa web search confirmed archived FDA press release (5 May 2020, N=4744, 'reduce risk of cardiovascular death and hospitalization for heart failure') and AstraZeneca release (HR 0.74, 26% RRR). No invented studies, PMIDs, or numbers.",
   "build_confidence": "high",

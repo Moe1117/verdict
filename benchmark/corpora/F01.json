@@ -3,9 +3,9 @@
   "claim": "Hydroxyethyl starch (HES) is a safe and effective fluid for volume resuscitation in critically ill adults",
   "expected_verdict": "Not Supported",
   "baseline": {
-    "answer": "Yes",
-    "confidence": "medium",
-    "text": "Yes \u2014 hydroxyethyl starch is an effective volume expander and is well-tolerated for fluid resuscitation in critically ill patients."
+    "answer": "No",
+    "confidence": "high",
+    "text": "Hydroxyethyl starch increases the risk of acute kidney injury, need for renal replacement therapy, and mortality in critically ill adults, so it is not considered safe or effective for volume resuscitation in this population."
   },
   "rows": [
     {

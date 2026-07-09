@@ -120,7 +120,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes. Pembrolizumab improves overall survival in advanced melanoma. The pivotal phase 3 KEYNOTE-006 trial randomized patients with advanced/metastatic melanoma to pembrolizumab vs ipilimumab and showed a significant OS benefit (HR ~0.68), with 5-year median OS roughly 33 vs 16 months. This head-to-head survival advantage made pembrolizumab a guideline-recommended first-line standard of care and supported its FDA approval. Confidence is high."
+    "text": "Pembrolizumab has been shown in clinical trials to significantly improve overall survival in patients with advanced melanoma compared to standard therapies."
   },
   "provenance": "Independently re-verified: all 6 PMIDs resolved via PubMed get_article_metadata to the exact titles/DOIs/journals/years/publication-types claimed (no Retracted Publication type on any). NCT design/N confirmed via ClinicalTrials.gov get_trial_details: NCT01866319 (phase 3, N=834, OS primary), NCT01704287 (phase 2, N=540), NCT02362594 (phase 3, N=1019, RFS co-primary). All HRs/CIs/p-values/medians in each finding matched the source abstracts exactly. FDA context (Sept 2014 accelerated ORR-based approval; Dec 2015 verification of benefit / conversion to traditional approval) confirmed via Exa web search of drugsatfda approval letter and FDA/AACR approval summaries. No fabricated studies, PMIDs, sample sizes, results, or retractions.",
   "build_confidence": "high",

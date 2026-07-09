@@ -9,9 +9,9 @@
   "provenance": "All six PMIDs independently re-verified against PubMed metadata (exact title/journal/year/N/effect sizes; no retractions). E2100 design/N confirmed against ClinicalTrials.gov NCT00028990 (phase 3, open-label, n=722, primary=PFS). FDA revocation re-verified against federalregister.gov and govinfo.gov: 77 FR 11554, Doc No. 2012-4424, Docket FDA-2010-N-0621, effective 18 Nov 2011, Commissioner Hamburg 69-page opinion, ODAC 6-0 (earlier 12-1). One fabricated DOI on the FDA row corrected to the real FR citation; RIBBON-1 OS direction recoded from -1 to 0 to match its primary-source abstract.",
   "build_confidence": "high",
   "baseline": {
-    "answer": "Yes",
+    "answer": "No",
     "confidence": "high",
-    "text": "Bevacizumab (Avastin) is a well-established anti-angiogenic agent that was FDA-approved in 2008 for first-line metastatic HER2-negative breast cancer in combination with paclitaxel. The pivotal E2100 trial showed that adding bevacizumab to chemotherapy roughly doubled progression-free survival and improved response rates, and subsequent trials (AVADO, RIBBON-1) confirmed the benefit of adding bevacizumab to first-line chemotherapy. Given these consistent positive randomized results, adding bevacizumab to chemotherapy improves outcomes including survival in this population."
+    "text": "Multiple large trials show bevacizumab added to chemotherapy improves progression-free survival but does not improve overall survival in metastatic HER2-negative breast cancer."
   },
   "rows": [
     {

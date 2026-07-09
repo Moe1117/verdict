@@ -105,7 +105,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes. Adding ezetimibe to statin therapy reduces cardiovascular events after acute coronary syndrome. This was established by the IMPROVE-IT trial (Cannon et al., NEJM 2015), which randomized over 18,000 post-ACS patients to simvastatin plus ezetimibe versus simvastatin alone and found a significant reduction in the primary composite of cardiovascular death, MI, unstable angina, revascularization, and stroke (HR ~0.94), with benefit tied to lower achieved LDL-C. Major guidelines (ACC/AHA, ESC/EAS) recommend adding ezetimibe when LDL-C targets are not met on maximally tolerated statins post-ACS. The benefit is real but modest in absolute terms."
+    "text": "Adding ezetimibe to statin therapy after acute coronary syndrome modestly but significantly reduces cardiovascular events, as demonstrated in the IMPROVE-IT trial."
   },
   "provenance": "All rows independently re-verified against PubMed (PMIDs + titles/DOIs + publication types confirmed via get_article_metadata) and ClinicalTrials.gov (NCT00202878 IMPROVE-IT and NCT03044665 RACING design/N confirmed via get_trial_details). Effect estimates (HRs, CIs, RRs, sample sizes) taken directly from verified PubMed abstracts. No retracted publications found (article_types checked on all 5). HIJ-PROPER UMIN000002742 registration reported in its verified primary paper.",
   "build_confidence": "high",

@@ -77,9 +77,9 @@
       }
     ],
     "baseline": {
-      "answer": "Yes",
+      "answer": "No",
       "confidence": "medium",
-      "text": "Aducanumab (Aduhelm) is an anti-amyloid monoclonal antibody that was FDA-approved in 2021 for early Alzheimer's disease. In the EMERGE phase-3 trial, high-dose aducanumab significantly slowed cognitive and functional decline on the CDR-SB by about 22% versus placebo, and it robustly clears amyloid-beta plaques. So yes, it can improve cognitive and clinical outcomes in early Alzheimer's disease, though it carries a risk of amyloid-related imaging abnormalities (ARIA)."
+      "text": "The clinical trial evidence for aducanumab is inconsistent and does not convincingly demonstrate meaningful cognitive or clinical benefit in early Alzheimer's disease."
     },
     "gate_trace": [
       {
@@ -321,7 +321,7 @@
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
-      "text": "Yes. Lecanemab (Leqembi) slows clinical decline in early symptomatic Alzheimer's disease. The pivotal 18-month phase 3 CLARITY-AD trial met its primary endpoint, showing a statistically significant ~27% slowing of decline on the CDR-SB versus placebo, with consistent benefit across secondary cognitive and functional measures and a large reduction in brain amyloid. This led to full FDA approval in July 2023. The effect size is modest and treatment carries a risk of amyloid-related imaging abnormalities (ARIA), but the direction of benefit on the clinical endpoint is well established and independently echoed by donanemab's TRAILBLAZER-ALZ 2 trial."
+      "text": "Yes, lecanemab has been shown in clinical trials to slow clinical decline in patients with early symptomatic Alzheimer's disease."
     },
     "gate_trace": [
       {
@@ -517,7 +517,7 @@
     "baseline": {
       "answer": "No",
       "confidence": "high",
-      "text": "No. Solanezumab failed its pivotal Alzheimer's program \u2014 EXPEDITION3 (2018) missed its cognitive primary endpoint, and the A4 secondary-prevention trial (2023) was also negative. Anti-amyloid antibodies that bind soluble monomer without clearing plaque, like solanezumab, have not shown a cognitive benefit."
+      "text": "Solanezumab has failed to demonstrate meaningful cognitive benefit in Alzheimer's disease across multiple large clinical trials."
     },
     "gate_trace": [
       {
@@ -718,9 +718,9 @@
       }
     ],
     "baseline": {
-      "answer": "Yes",
-      "confidence": "high",
-      "text": "Yes \u2014 metformin is one of the most promising anti-aging drugs. Large observational studies (like the CPRD analysis where metformin-treated diabetics outlived matched non-diabetic controls), together with strong preclinical lifespan-extension data, indicate it delays aging, and the TAME trial is testing exactly this."
+      "answer": "No",
+      "confidence": "medium",
+      "text": "There is currently no robust clinical trial evidence that metformin delays aging or extends healthspan in non-diabetic older adults; this remains an unproven hypothesis awaiting results from trials like TAME."
     },
     "gate_trace": [
       {
@@ -929,7 +929,7 @@
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
-      "text": "Yes. Semaglutide reduces major adverse cardiovascular events in overweight/obese adults without diabetes. This was demonstrated by the landmark SELECT trial (Lincoff et al., NEJM 2023), a large double-blind RCT of 17,604 adults with a BMI >=27 and established cardiovascular disease but no diabetes, in which weekly semaglutide 2.4 mg reduced the primary composite of cardiovascular death, nonfatal MI, and nonfatal stroke by 20% (HR 0.80, 95% CI 0.72-0.90, P<0.001) versus placebo. On the strength of SELECT, the FDA in March 2024 approved a cardiovascular risk-reduction indication for Wegovy in this exact population. The finding is consistent with the established class-level MACE benefit of GLP-1 receptor agonists."
+      "text": "Yes, in the SELECT trial semaglutide significantly reduced major adverse cardiovascular events in overweight or obese adults with established cardiovascular disease but without diabetes."
     },
     "gate_trace": [
       {
@@ -1130,9 +1130,9 @@
       }
     ],
     "baseline": {
-      "answer": "Yes",
+      "answer": "No",
       "confidence": "high",
-      "text": "Bevacizumab (Avastin) is a well-established anti-angiogenic agent that was FDA-approved in 2008 for first-line metastatic HER2-negative breast cancer in combination with paclitaxel. The pivotal E2100 trial showed that adding bevacizumab to chemotherapy roughly doubled progression-free survival and improved response rates, and subsequent trials (AVADO, RIBBON-1) confirmed the benefit of adding bevacizumab to first-line chemotherapy. Given these consistent positive randomized results, adding bevacizumab to chemotherapy improves outcomes including survival in this population."
+      "text": "Multiple large trials show bevacizumab added to chemotherapy improves progression-free survival but does not improve overall survival in metastatic HER2-negative breast cancer."
     },
     "gate_trace": [
       {
@@ -1411,7 +1411,7 @@
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
-      "text": "Yes. Adjuvant trastuzumab is one of the best-established survival-improving therapies in oncology. The pivotal HERA and joint NSABP B-31/NCCTG N9831 trials (both NEJM 2005) showed large disease-free survival benefits, and long-term follow-up plus meta-analyses confirmed a roughly one-third reduction in the risk of death, translating to a ~6-8 percentage-point absolute overall-survival gain at 10 years. It is standard of care in every major guideline (NCCN, ASCO, ESMO), with cardiotoxicity as the main manageable trade-off."
+      "text": "Yes, adjuvant trastuzumab significantly improves both disease-free and overall survival in HER2-positive early breast cancer."
     },
     "gate_trace": [
       {
@@ -1676,7 +1676,7 @@
     "baseline": {
       "answer": "Yes",
       "confidence": "high",
-      "text": "Yes \u2014 low-dose colchicine reduces cardiovascular events in coronary disease. COLCOT (2019) and LoDoCo2 (2020), two positive NEJM RCTs, showed roughly 23-31% relative reductions in major cardiovascular events, and in 2023 the FDA approved colchicine (Lodoco) for cardiovascular risk reduction."
+      "text": "Yes, low-dose colchicine (0.5 mg daily) has been shown in trials like LoDoCo2 and COLCOT to significantly reduce major cardiovascular events in patients with coronary artery disease."
     },
     "gate_trace": [
       {
@@ -1916,9 +1916,9 @@
       }
     ],
     "baseline": {
-      "answer": "Yes",
-      "confidence": "medium",
-      "text": "Yes \u2014 several studies and a meta-analysis reported reduced mortality (RR ~0.31), so ivermectin appears beneficial for COVID-19."
+      "answer": "No",
+      "confidence": "high",
+      "text": "Rigorous large-scale trials show ivermectin does not improve clinical outcomes in COVID-19."
     },
     "gate_trace": [
       {

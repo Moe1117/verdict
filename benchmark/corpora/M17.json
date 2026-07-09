@@ -122,7 +122,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes. Evolocumab reduces cardiovascular events in patients with atherosclerotic cardiovascular disease on statin therapy. This is established by the FOURIER trial (NEJM 2017), which randomized 27,564 ASCVD patients on statins and showed evolocumab significantly reduced the primary MACE composite (HR 0.85, 95% CI 0.79-0.92). The benefit is corroborated by the alirocumab ODYSSEY OUTCOMES trial (HR 0.85) and endorsed by ACC/AHA and ESC/EAS guidelines and by the FDA label (indicated to reduce MACE in established CVD). Caveat: FOURIER showed no mortality reduction (CV death HR 1.05, all-cause HR 1.04); the benefit is driven by nonfatal MI, stroke, and revascularization."
+    "text": "Yes, evolocumab significantly reduces cardiovascular events, as demonstrated by the FOURIER trial, in patients with atherosclerotic cardiovascular disease already on statin therapy."
   },
   "notes": "[CORRECTED: bococizumab (SPIRE) and alirocumab (ODYSSEY) are different drugs (class context), marked off-population; the claim is evolocumab-specific.]"
 }

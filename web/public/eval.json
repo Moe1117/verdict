@@ -4,14 +4,14 @@
     "accuracy": {
       "verdict": 0.906,
       "naive_vote": 0.844,
-      "plain_llm": 0.625
+      "plain_llm": 0.781
     },
     "verdict_accuracy_when_answered": 0.964,
     "verdict_abstention_rate": 0.125,
     "confidently_wrong": {
       "verdict": 0,
       "naive_vote": 0,
-      "plain_llm": 6
+      "plain_llm": 0
     }
   },
   "claims": [
@@ -22,7 +22,7 @@
       "verdict": "Supported",
       "naive": "Supported",
       "baseline": "Supported",
-      "base_conf": "medium"
+      "base_conf": "high"
     },
     {
       "id": "C05",
@@ -30,7 +30,7 @@
       "gold": "Not Supported",
       "verdict": "Not Supported",
       "naive": "Not Supported",
-      "baseline": "Supported",
+      "baseline": "Not Supported",
       "base_conf": "medium"
     },
     {
@@ -39,8 +39,8 @@
       "gold": "Not Supported",
       "verdict": "Not Supported",
       "naive": "Not Supported",
-      "baseline": "Supported",
-      "base_conf": "medium"
+      "baseline": "Not Supported",
+      "base_conf": "high"
     },
     {
       "id": "C14",
@@ -49,7 +49,7 @@
       "verdict": "Contested",
       "naive": "Not Supported",
       "baseline": "Supported",
-      "base_conf": "medium"
+      "base_conf": "high"
     },
     {
       "id": "F01",
@@ -57,8 +57,8 @@
       "gold": "Not Supported",
       "verdict": "Not Supported",
       "naive": "Not Supported",
-      "baseline": "Supported",
-      "base_conf": "medium"
+      "baseline": "Not Supported",
+      "base_conf": "high"
     },
     {
       "id": "F03",
@@ -75,8 +75,8 @@
       "gold": "Not Supported",
       "verdict": "Not Supported",
       "naive": "Not Supported",
-      "baseline": "Supported",
-      "base_conf": "medium"
+      "baseline": "Not Supported",
+      "base_conf": "high"
     },
     {
       "id": "M01",
@@ -129,7 +129,7 @@
       "gold": "Contested",
       "verdict": "Contested",
       "naive": "Contested",
-      "baseline": "Supported",
+      "baseline": "Not Supported",
       "base_conf": "medium"
     },
     {
@@ -183,7 +183,7 @@
       "gold": "Not Supported",
       "verdict": "Not Supported",
       "naive": "Not Supported",
-      "baseline": "Supported",
+      "baseline": "Not Supported",
       "base_conf": "high"
     },
     {
@@ -282,8 +282,8 @@
       "gold": "Insufficient",
       "verdict": "Insufficient",
       "naive": "Not Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
+      "baseline": "Not Supported",
+      "base_conf": "medium"
     },
     {
       "id": "M25",
@@ -291,8 +291,8 @@
       "gold": "Contested",
       "verdict": "Insufficient",
       "naive": "Supported",
-      "baseline": "Supported",
-      "base_conf": "high"
+      "baseline": "Not Supported",
+      "base_conf": "medium"
     },
     {
       "id": "M26",
@@ -301,7 +301,7 @@
       "verdict": "Insufficient",
       "naive": "Contested",
       "baseline": "Not Supported",
-      "base_conf": "high"
+      "base_conf": "medium"
     }
   ]
 }

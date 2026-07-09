@@ -4,8 +4,8 @@
   "expected_verdict": "Supported",
   "baseline": {
     "answer": "Yes",
-    "confidence": "medium",
-    "text": "Yes \u2014 atorvastatin reliably lowers LDL cholesterol in adults with high cholesterol."
+    "confidence": "high",
+    "text": "Atorvastatin effectively lowers LDL cholesterol in adults with hyperlipidemia."
   },
   "rows": [
     {

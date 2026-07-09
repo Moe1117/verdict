@@ -82,7 +82,7 @@
   "baseline": {
     "answer": "Yes",
     "confidence": "high",
-    "text": "Yes. Sacubitril/valsartan (Entresto) reduces the composite of cardiovascular death or heart-failure hospitalization in HFrEF. This is established by the pivotal PARADIGM-HF trial (McMurray et al., NEJM 2014), in which sacubitril/valsartan beat enalapril on exactly this primary endpoint (HR ~0.80), leading to FDA approval (July 2015) and a Class I guideline recommendation as a cornerstone of guideline-directed medical therapy for HFrEF."
+    "text": "Sacubitril/valsartan significantly reduces the composite risk of cardiovascular death or heart-failure hospitalization in patients with heart failure with reduced ejection fraction, as demonstrated in the PARADIGM-HF trial."
   },
   "build_confidence": "high",
   "provenance": "All rows independently re-verified: PubMed get_article_metadata confirmed all 4 PMIDs resolve to the stated titles/DOIs with correct publication types (3 RCTs + 1 Meta-Analysis/Systematic Review) and NO 'Retracted Publication' tag. RCT effect sizes/N/direction confirmed verbatim against NEJM abstracts (PARADIGM 21.8% vs 26.5%, HR 0.80; PIONEER NT-proBNP ratio 0.71 surrogate; PARAGON RR 0.87 P=0.06 in HFpEF). ClinicalTrials.gov confirmed NCT01035255 (N=8442, primary endpoint = CV death or HF hospitalization composite, TERMINATED=early stop for benefit) and NCT02554890 (PIONEER, HFrEF LVEF<=40%, primary = NT-proBNP). FDA 2015 approval indication (reduce CV death + HF hospitalization in HFrEF, based on 8442-patient PARADIGM-HF) confirmed via Exa web search of the FDA press release and Novartis release. Consensus anchor: 2022 AHA/ACC/HFSA HF guideline, ARNi Class 1 in HFrEF.",
