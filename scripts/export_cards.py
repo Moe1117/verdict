@@ -5,14 +5,11 @@ UI replays these pre-resolved cards so the demo can never fail live.
 """
 from __future__ import annotations
 
-import dataclasses
 import json
 import os
 
-from verdict.certainty import grade_certainty
+from verdict.cards import card_payload
 from verdict.corpora import available, load_rows
-from verdict.robustness import robustness
-from verdict.timemachine import verdict_over_time
 from verdict.verdict import evaluate
 
 WEB_PUBLIC = os.path.join(os.path.dirname(os.path.dirname(__file__)), "web", "public")
@@ -44,33 +41,12 @@ def main() -> None:
             continue
         meta, rows = load_rows(cid)
         card = evaluate(meta["claim"], rows)
-        cert = grade_certainty(rows, card.verdict)
-        rob = robustness(rows)
-        cards.append({
-            "id": cid,
-            "claim": card.claim,
-            "verdict": card.verdict.value,
-            "expected": meta.get("expected_verdict"),
-            "certainty": cert.level,
-            "certainty_signals": cert.signals,
-            # Full per-domain GRADE profile: start tier + a signed delta per GRADE domain,
-            # summing to the certainty score. Deterministic, auditable, no LLM.
-            "certainty_start": {"score": cert.start, "label": cert.start_label},
-            "certainty_domains": [
-                {"name": d.name, "delta": d.delta, "rationale": d.rationale} for d in cert.domains
-            ],
-            # calibrated: the EMPIRICAL accuracy of this certainty level across the labeled set
-            "confidence": conf_map.get(cert.level, cert.level),
-            "robustness": {"stability": rob.stability, "survives_drop_largest": rob.survives_drop_largest,
-                           "n_perturbations": rob.n_perturbations},
-            # Verdict-over-time: the trajectory of this claim as its evidence accrued (deterministic).
-            "timeline": [{"year": t.year, "verdict": t.verdict, "certainty": t.certainty,
-                          "n": t.n_studies, "changed": t.changed} for t in verdict_over_time(rows)],
-            "baseline": meta.get("baseline"),  # per-corpus plain-LLM answer (clinical corpora carry their own)
-            "gate_trace": [{"gate": g.gate, "passed": g.passed, "detail": g.detail} for g in card.gate_trace],
-            "ledger": [dataclasses.asdict(r) for r in card.ledger],
-            "disclaimer": card.disclaimer,
-        })
+        # One shared serializer for the frozen deck and the live API — they can never drift.
+        cards.append(card_payload(
+            card, id=cid, expected=meta.get("expected_verdict"),
+            baseline=meta.get("baseline"),  # per-corpus plain-LLM answer (clinical corpora carry their own)
+            confidence_map=conf_map,
+        ))
     with open(os.path.join(WEB_PUBLIC, "cards.json"), "w") as fh:
         json.dump(cards, fh, indent=2)
     print(f"wrote {len(cards)} cards -> web/public/cards.json")

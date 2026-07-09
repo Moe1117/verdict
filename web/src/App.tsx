@@ -167,6 +167,75 @@ function Scorecard({ ev, live, conf }: { ev: EvalSummary; live: LiveSummary | nu
   )
 }
 
+// A single live-progress event streamed from the backend as the pipeline runs.
+interface LiveEvent {
+  stage: string
+  measurable?: boolean
+  query?: string
+  source?: string
+  found?: number
+  source_id?: string
+  design?: string
+  direction?: number
+  integrity_ok?: boolean
+  finding?: string
+  n?: number
+}
+
+function LiveLine({ e }: { e: LiveEvent }) {
+  if (e.stage === 'parse')
+    return (
+      <div className="lc-line">
+        <span className="lc-tag">parse</span>{' '}
+        {e.measurable ? <>query&nbsp;<em>{e.query}</em></> : 'claim is not objectively measurable — abstaining'}
+      </div>
+    )
+  if (e.stage === 'search')
+    return (
+      <div className="lc-line">
+        <span className="lc-tag src">{e.source === 'pubmed' ? 'PubMed' : 'ClinicalTrials.gov'}</span>{' '}
+        {e.found} record{e.found === 1 ? '' : 's'} retrieved
+      </div>
+    )
+  if (e.stage === 'study') {
+    const sym = e.direction === 1 ? '+' : e.direction === -1 ? '−' : '0'
+    const dcls = e.direction === 1 ? 'pos' : e.direction === -1 ? 'neg' : 'null'
+    return (
+      <div className={'lc-line lc-study' + (e.integrity_ok ? '' : ' excl')}>
+        <span className={'lc-dir ' + dcls}>{sym}</span>
+        <span className="lc-sid">{e.source_id}</span>
+        <span className="lc-design">{e.design}{!e.integrity_ok && ' · excluded'}</span>
+        <span className="lc-finding">{e.finding}</span>
+      </div>
+    )
+  }
+  if (e.stage === 'gate')
+    return (
+      <div className="lc-line">
+        <span className="lc-tag gate">gates</span> applying the deterministic engine to {e.n} extracted
+        {' '}stud{e.n === 1 ? 'y' : 'ies'} — no LLM past this point…
+      </div>
+    )
+  return null
+}
+
+// The live resolution as it happens: Claude parses, PubMed/CT.gov are searched, each study is
+// extracted and streamed in, then the deterministic gate step. This is the real pipeline, not a
+// canned animation — the frozen deck below remains the guaranteed fallback.
+function LiveConsole({ events, error }: { events: LiveEvent[]; error: string | null }) {
+  return (
+    <div className="live-console">
+      <div className="lc-head">
+        <span className="lc-spin" /> Resolving live — Claude reads each study; the verdict stays deterministic
+      </div>
+      <div className="lc-log">
+        {events.map((e, i) => <LiveLine key={i} e={e} />)}
+      </div>
+      {error && <div className="lc-error">⚠ {error}</div>}
+    </div>
+  )
+}
+
 export default function App() {
   const [cards, setCards] = useState<Card[]>([])
   const [ev, setEv] = useState<EvalSummary | null>(null)
@@ -174,6 +243,10 @@ export default function App() {
   const [conf, setConf] = useState<Conformal | null>(null)
   const [id, setId] = useState<string>(() => window.location.hash.replace('#', '') || 'C08')
   const [runKey, setRunKey] = useState(0)
+  const [liveClaim, setLiveClaim] = useState('')
+  const [liveState, setLiveState] = useState<'idle' | 'streaming' | 'error'>('idle')
+  const [liveEvents, setLiveEvents] = useState<LiveEvent[]>([])
+  const [liveError, setLiveError] = useState<string | null>(null)
 
   useEffect(() => {
     fetch('/cards.json').then((r) => r.json()).then((cs: Card[]) => {
@@ -190,6 +263,51 @@ export default function App() {
     setRunKey((k) => k + 1)
     window.history.replaceState(null, '', `#${cid}`)
   }
+
+  // Resolve a pasted claim end-to-end, streaming the pipeline over Server-Sent Events. On success
+  // the resolved card is injected as "LIVE" and selected; on any failure the frozen deck is
+  // untouched, so the demo can never be broken by the network.
+  const resolveLive = () => {
+    const q = liveClaim.trim()
+    if (q.length < 3 || liveState === 'streaming') return
+    setLiveEvents([])
+    setLiveError(null)
+    setLiveState('streaming')
+    const es = new EventSource(`/api/resolve/stream?claim=${encodeURIComponent(q)}&k=8`)
+    let done = false
+    es.addEventListener('progress', (m) => {
+      try { setLiveEvents((xs) => [...xs, JSON.parse((m as MessageEvent).data)]) } catch { /* ignore */ }
+    })
+    es.addEventListener('card', (m) => {
+      done = true
+      es.close()
+      try {
+        const c = JSON.parse((m as MessageEvent).data) as Card
+        setCards((prev) => [c, ...prev.filter((x) => x.id !== 'LIVE')])
+        setId('LIVE')
+        setRunKey((k) => k + 1)
+        setLiveState('idle')
+        setLiveEvents([])
+        window.history.replaceState(null, '', '#LIVE')
+      } catch {
+        setLiveError('The resolver returned a malformed result.')
+        setLiveState('error')
+      }
+    })
+    es.addEventListener('failed', () => {
+      done = true
+      es.close()
+      setLiveError('Live resolution failed — the frozen examples below still work.')
+      setLiveState('error')
+    })
+    es.onerror = () => {
+      if (done) return
+      es.close()
+      setLiveError('Could not reach the live resolver (is the API running on :8010?). The frozen examples still work.')
+      setLiveState('error')
+    }
+  }
+
   const card = cards.find((c) => c.id === id)
 
   return (
@@ -206,14 +324,35 @@ export default function App() {
       </div>
 
       <div className="claimbar">
-        <div className="liveinput" title="live end-to-end resolution — coming soon">
+        <form
+          className={'liveinput' + (liveState === 'streaming' ? ' busy' : '')}
+          onSubmit={(e) => { e.preventDefault(); resolveLive() }}
+        >
           <span className="li-icon">✎</span>
-          <input placeholder="Paste a clinical claim to resolve live…" disabled />
-          <span className="li-soon">live · soon</span>
-        </div>
+          <input
+            value={liveClaim}
+            onChange={(e) => setLiveClaim(e.target.value)}
+            placeholder="Paste a clinical claim to resolve live — e.g. “semaglutide reduces body weight in adults with obesity”"
+            disabled={liveState === 'streaming'}
+            aria-label="Clinical claim to resolve live"
+          />
+          {liveState === 'streaming' ? (
+            <span className="li-run busy"><span className="lc-spin" /> resolving…</span>
+          ) : (
+            <button type="submit" className="li-run" disabled={liveClaim.trim().length < 3}>resolve ↵</button>
+          )}
+        </form>
+
+        {(liveState === 'streaming' || liveError) && <LiveConsole events={liveEvents} error={liveError} />}
+
         <div className="chips">
           {cards.map((c) => (
-            <button key={c.id} className={'chip-tab' + (c.id === id ? ' active' : '')} onClick={() => select(c.id)}>
+            <button
+              key={c.id}
+              className={'chip-tab' + (c.id === id ? ' active' : '') + (c.id === 'LIVE' ? ' live' : '')}
+              onClick={() => select(c.id)}
+            >
+              {c.id === 'LIVE' && <span className="live-dot" />}
               <span className="swatch" style={{ background: cvar(c.verdict) }} />
               {c.claim.length > 42 ? c.claim.slice(0, 40) + '…' : c.claim}
             </button>
