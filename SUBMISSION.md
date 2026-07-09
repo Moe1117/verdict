@@ -10,20 +10,20 @@ Repo: https://github.com/Moe1117/verdict · Demo video: _(link)_
 Verdict is a decidable evidence resolver for biomedical claims. Paste a claim —
 *"aducanumab improves cognitive outcomes in Alzheimer's"* — and it returns one of four
 states: **Supported, Not Supported, Contested,** or **Insufficient**, with a confidence
-and an audit ledger tracing every study to the gate it fed. When the evidence can't
-decide, it abstains instead of guessing.
+and an audit ledger tracing every study to the gate it fed. When the evidence cannot
+decide, it abstains rather than return an unsupported verdict.
 
 The architecture is the point. Claude does one job: structured extraction from each
 trial — design, sample size, effect, and whether the endpoint is the *real* outcome or a
-**surrogate**. A **deterministic gate engine, with no LLM in the verdict path,** makes the
-call. So every verdict is a pure, auditable function of the evidence: it sets aside
+**surrogate**. A **deterministic gate engine, with no LLM in the verdict path,** issues the
+verdict. So every verdict is a pure, auditable function of the evidence: it sets aside
 aducanumab's amyloid-PET surrogate and returns Contested; it scores bevacizumab on
 survival (not PFS) and returns Not Supported; it abstains on metformin-for-aging because
-the human trials aren't in. On 32 breakthrough-medicine claims the **gate engine** is
+the human trials are not yet available. On 32 breakthrough-medicine claims the **gate engine** is
 confidently wrong **zero** times versus a plain model's **six**. Run end-to-end from raw
 claims — Claude extracting live — the full **product** scores 66% with **three** confident
-false-positives: still far fewer than the model's six, and it abstains rather than bluff.
-We report both numbers.
+false-positives: still far fewer than the model's six, and it abstains rather than overstate.
+Both figures are reported.
 
 ---
 
@@ -39,7 +39,7 @@ gate each study passed. A research / literature-triage tool for clinicians and r
 
 A clinician, medical-affairs reviewer, or translational scientist triaging a
 drug-efficacy or repurposing question — *"is this real, or is it hype and a surrogate?"* —
-who needs a sourced, honest read, including an explicit "the evidence isn't there yet."
+who needs a sourced, rigorous assessment, including an explicit determination that the evidence is not yet sufficient.
 
 ## How we built it (with Claude)
 
@@ -73,10 +73,10 @@ The **gate engine** — the deterministic logic, holding extraction fixed — is
 zero times. The **live product** — Claude parsing the claim, retrieving, and extracting each
 abstract end-to-end — scores 66% with **three** confident false-positives (asserting *Supported*
 where the truth is negative or genuinely contested), still far fewer than a plain LLM's six, and
-it abstains on 16% rather than guess. The ~25-point gap is honest: it is retrieval recall +
+it abstains on 16% rather than issue an unsupported verdict. The ~25-point gap is honest: it is retrieval recall +
 extraction error, not gate logic (`scripts/live_benchmark.py` measures it; per-claim results in
 `web/public/live_eval.json`). We lead with both, because hiding the live number would be exactly
-the bluffing this tool exists to prevent.
+the overconfidence this tool is designed to prevent.
 
 We also measured **Claude's extraction in isolation** (studies held fixed, retrieval removed;
 `scripts/extraction_eval.py`, 162 studies): it matches the gold rows **100%** on integrity, 93%
@@ -85,7 +85,7 @@ errors are **conservative** (a positive trial read as null, more endpoints flagg
 which push toward abstention, not false positives. So the extraction is sound and errs in the
 cautious direction; the remaining live gap is dominated by retrieval recall.
 
-**Calibration is measured, and honestly imperfect.** Certainty is an ordinal grade (High /
+**Calibration is measured, and measurably imperfect.** Certainty is an ordinal grade (High /
 Moderate / Low / Very Low) with empirically-measured reliability: High is right **~82%
 out-of-sample** (95% CI 78–93%), ECE 0.16 on 82 held-out claims. A distribution-free conformal
 guarantee bounds committed error **≤20% at High** (held in 93% of random exchangeable splits) —

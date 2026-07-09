@@ -117,7 +117,7 @@ function Scorecard({ ev, live, conf }: { ev: EvalSummary; live: LiveSummary | nu
   return (
     <div className="scorecard">
       <div className="sc-head">
-        <div className="section-label" style={{ margin: 0 }}>how it scores — we report two numbers, honestly</div>
+        <div className="section-label" style={{ margin: 0 }}>Performance — the deterministic engine and the full live product</div>
         <div className="sc-note">the deterministic engine, and the full live product · {ev.n} breakthrough-medicine claims</div>
       </div>
       <div className="sc-table">
@@ -156,11 +156,12 @@ function Scorecard({ ev, live, conf }: { ev: EvalSummary; live: LiveSummary | nu
         </div>
       )}
       <div className="sc-foot">
-        The <b>engine</b> (deterministic logic) is confidently wrong <b>zero</b> times. The <b>full live product</b> —
-        Claude parsing, retrieving, and extracting end-to-end — scores {live ? pct(live.accuracy) : '66%'} with{' '}
-        {live ? live.confident_false_positives : 3} confident false-positives, still far fewer than a plain LLM’s{' '}
-        <b>{ev.confidently_wrong.plain_llm}</b>, and abstains on {live ? pct(live.abstention_rate) : '16%'} rather than guess.
-        We report both — hiding the live number would be the bluffing this tool exists to prevent.
+        The <b>engine</b> — the deterministic logic — records <b>zero</b> confident false-positives. The <b>full live
+        product</b>, with Claude parsing, retrieving, and extracting end-to-end, scores {live ? pct(live.accuracy) : '66%'}{' '}
+        with {live ? live.confident_false_positives : 3}, still substantially fewer than a language model’s{' '}
+        <b>{ev.confidently_wrong.plain_llm}</b>, and abstains on {live ? pct(live.abstention_rate) : '16%'} rather than
+        issue an unsupported verdict. Both figures are reported in full: withholding the live result would constitute
+        the overconfidence this system is designed to prevent.
       </div>
     </div>
   )
@@ -198,9 +199,10 @@ export default function App() {
         <div className="tag">Never confidently wrong.</div>
       </div>
       <div className="sub">
-        A plain LLM — even Claude — will confidently repeat a fraud-driven result. Verdict won’t: known-bad or thin
-        evidence is excluded <em>before</em> a deterministic gate — <b>no LLM in the verdict path</b> — returns the call,
-        and it says “I don’t know” instead of guessing.
+        A language model — Claude included — will confidently reproduce a fraud-driven result. Verdict does not:
+        compromised or insufficient evidence is excluded <em>before</em> a deterministic gate — <b>no LLM in the
+        verdict path</b> — issues the verdict, and it returns <em>Insufficient</em> when the evidence cannot support
+        a conclusion.
       </div>
 
       <div className="claimbar">
@@ -225,8 +227,8 @@ export default function App() {
             <div className="panel-label">A plain LLM</div>
             <div className="who"><span>🤖</span> <b>Assistant</b></div>
             <div className="bubble">{card.baseline?.text ?? BASELINES[card.id] ?? 'Yes.'}</div>
-            {bluffs(card) && <div className="warn">⚠ confident, unsourced — and, here, wrong or overstated</div>}
-            <div className="foot">no sources · no calibration · cannot say “I don’t know”</div>
+            {bluffs(card) && <div className="warn">⚠ Confident and unsourced — and, in this instance, incorrect or overstated.</div>}
+            <div className="foot">no sources · no calibration · cannot abstain</div>
           </div>
 
           <div className="panel">
