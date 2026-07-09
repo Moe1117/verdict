@@ -64,7 +64,7 @@ def call_tool(system: str, user: str, tool: dict, max_tokens: int = 1024) -> dic
     import anthropic
     client = anthropic.Anthropic()
     msg = client.messages.create(
-        model=model(), max_tokens=max_tokens, system=system, tools=[tool],
+        model=model(), max_tokens=max_tokens, temperature=0, system=system, tools=[tool],
         tool_choice={"type": "tool", "name": tool["name"]},
         messages=[{"role": "user", "content": user}],
     )

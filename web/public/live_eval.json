@@ -44,7 +44,7 @@
       "claim": "Perioperative celecoxib/pregabalin multimodal analgesia reduces postoperative pain and opioid use",
       "gold": "Contested",
       "live_verdict": "Contested",
-      "n_ledger": 7,
+      "n_ledger": 3,
       "n_excluded": 0,
       "correct": true
     },
@@ -52,7 +52,7 @@
       "claim": "Hydroxychloroquine improves clinical outcomes in COVID-19",
       "gold": "Not Supported",
       "live_verdict": "Not Supported",
-      "n_ledger": 8,
+      "n_ledger": 10,
       "n_excluded": 0,
       "correct": true
     },
@@ -68,7 +68,7 @@
       "claim": "Tirzepatide produces clinically significant weight loss in adults with obesity",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 12,
       "n_excluded": 0,
       "correct": true
     },
@@ -84,7 +84,7 @@
       "claim": "Semaglutide slows progression of chronic kidney disease in adults with type 2 diabetes",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 7,
+      "n_ledger": 4,
       "n_excluded": 0,
       "correct": true
     },
@@ -92,7 +92,7 @@
       "claim": "Semaglutide improves heart-failure symptoms in patients with obesity-related HFpEF (KCCQ symptom score and body weight)",
       "gold": "Supported",
       "live_verdict": "Supported",
-      "n_ledger": 8,
+      "n_ledger": 9,
       "n_excluded": 0,
       "correct": true
     },
@@ -107,10 +107,10 @@
     "M07": {
       "claim": "Lecanemab slows clinical decline in early symptomatic Alzheimer's disease",
       "gold": "Supported",
-      "live_verdict": "Supported",
-      "n_ledger": 8,
+      "live_verdict": "Insufficient",
+      "n_ledger": 1,
       "n_excluded": 0,
-      "correct": true
+      "correct": false
     },
     "M08": {
       "claim": "Donanemab slows clinical decline in early symptomatic Alzheimer's disease",
@@ -139,40 +139,40 @@
     "M11": {
       "claim": "Adjuvant trastuzumab improves survival in HER2-positive early breast cancer",
       "gold": "Supported",
-      "live_verdict": "Supported",
-      "n_ledger": 8,
+      "live_verdict": "Contested",
+      "n_ledger": 12,
       "n_excluded": 0,
-      "correct": true
+      "correct": false
     },
     "M12": {
       "claim": "Adding bevacizumab to chemotherapy improves overall survival in metastatic HER2-negative breast cancer",
       "gold": "Not Supported",
       "live_verdict": "Contested",
-      "n_ledger": 8,
+      "n_ledger": 14,
       "n_excluded": 0,
       "correct": false
     },
     "M13": {
       "claim": "Osimertinib improves survival in EGFR-mutated advanced non-small-cell lung cancer",
       "gold": "Supported",
-      "live_verdict": "Not Supported",
+      "live_verdict": "Supported",
       "n_ledger": 8,
       "n_excluded": 0,
-      "correct": false
+      "correct": true
     },
     "M14": {
       "claim": "Pembrolizumab improves survival in advanced melanoma",
       "gold": "Supported",
       "live_verdict": "Contested",
-      "n_ledger": 8,
+      "n_ledger": 9,
       "n_excluded": 0,
       "correct": false
     },
     "M15": {
       "claim": "Adding a PD-1/PD-L1 checkpoint inhibitor to chemotherapy improves survival in unselected metastatic pancreatic ductal adenocarcinoma",
       "gold": "Not Supported",
-      "live_verdict": "Insufficient",
-      "n_ledger": 0,
+      "live_verdict": "Contested",
+      "n_ledger": 6,
       "n_excluded": 0,
       "correct": false
     },
@@ -195,10 +195,10 @@
     "M19": {
       "claim": "Dapagliflozin reduces heart-failure hospitalization or cardiovascular death in heart failure with reduced ejection fraction",
       "gold": "Supported",
-      "live_verdict": "Contested",
-      "n_ledger": 8,
+      "live_verdict": "Supported",
+      "n_ledger": 9,
       "n_excluded": 0,
-      "correct": false
+      "correct": true
     },
     "M20": {
       "claim": "Intensive blood-pressure control to a systolic target below 120 mmHg reduces cardiovascular events compared with standard control",
@@ -212,7 +212,7 @@
       "claim": "Adding niacin to statin therapy reduces cardiovascular events",
       "gold": "Not Supported",
       "live_verdict": "Not Supported",
-      "n_ledger": 8,
+      "n_ledger": 2,
       "n_excluded": 0,
       "correct": true
     },
@@ -252,7 +252,7 @@
       "claim": "Rapamycin (sirolimus) extends healthspan or improves aging outcomes in healthy humans",
       "gold": "Insufficient",
       "live_verdict": "Insufficient",
-      "n_ledger": 3,
+      "n_ledger": 4,
       "n_excluded": 0,
       "correct": true
     }
@@ -264,6 +264,7 @@
     "accuracy_when_answered": 0.704,
     "abstention_rate": 0.156,
     "confidently_wrong": 1,
-    "avg_studies_retrieved": 6.6
+    "avg_studies_retrieved": 6.8,
+    "note": "End-to-end live pipeline (Claude parse -> PubMed + ClinicalTrials.gov retrieval -> Claude extraction -> deterministic gates), scored vs the same gold labels as the curated benchmark. This is a single-run point estimate: the LLM parse/extraction makes retrieval non-deterministic run-to-run, so accuracy carries a few points of variance. Compares to the curated gate-engine benchmark (91%/0), which isolates the gate logic from retrieval+extraction error."
   }
 }
