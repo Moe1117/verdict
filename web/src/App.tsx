@@ -71,7 +71,8 @@ function GradeProfile({ card }: { card: Card }) {
 }
 
 function Row({ r, i }: { r: EvidenceRow; i: number }) {
-  const cls = ['row', !r.integrity_ok ? 'excluded' : '', r.integrity_ok && !r.population_match ? 'offpop' : ''].join(' ')
+  const cls = ['row', !r.integrity_ok ? 'excluded' : '',
+    r.integrity_ok && (!r.population_match || r.dose_match === false) ? 'offpop' : ''].join(' ')
   return (
     <div className={cls} style={{ animationDelay: `${i * 80}ms` }}>
       <DirCell d={r.direction} />
@@ -82,6 +83,7 @@ function Row({ r, i }: { r: EvidenceRow; i: number }) {
           {r.n && <span className="n">n={r.n_int ? r.n_int.toLocaleString() : r.n}</span>}
           {!r.integrity_ok && <span className="chip excl">excluded</span>}
           {r.integrity_ok && !r.population_match && <span className="chip off">off-population</span>}
+          {r.integrity_ok && r.population_match && r.dose_match === false && <span className="chip off">off-dose</span>}
         </div>
         <div className="finding">{r.finding}</div>
         {!r.integrity_ok && r.integrity_note && <div className="integ">⚠ {r.integrity_note}</div>}

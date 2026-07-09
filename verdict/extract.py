@@ -28,6 +28,10 @@ _TOOL = {
             "outcome_match": {"type": "boolean",
                               "description": "the study's PRIMARY endpoint IS the claimed outcome; false if it is "
                                              "only a surrogate / different endpoint"},
+            "dose_match": {"type": "boolean",
+                           "description": "the study tested the dose/regimen the claim specifies; false ONLY if the "
+                                          "claim names a specific dose AND this study used a materially different one; "
+                                          "true if the claim specifies no dose"},
             "dramatic_effect": {"type": "boolean",
                                 "description": "true ONLY for an all-or-none / very-large effect in a fatal disease "
                                                "where single-arm evidence is the accepted standard"},
@@ -52,13 +56,16 @@ _SYSTEM = (
     "You extract ONE study into a structured evidence row for a deterministic verdict engine. "
     "You do NOT decide anything — you only report what THIS study found, judged strictly relative "
     "to the claim. Direction is on the CLAIMED outcome. Mark outcome_match=false when the endpoint "
-    "is a surrogate for the claimed outcome. Never invent numbers; use 0/not_reported when unclear."
+    "is a surrogate for the claimed outcome, and dose_match=false when the claim names a specific "
+    "dose and this study used a materially different one. Never invent numbers; use 0/not_reported "
+    "when unclear."
 )
 
 
 def extract_row(source: Source, abstract: str, claim: ClaimTuple) -> EvidenceRow:
     """Claude reads the abstract and returns one EvidenceRow, relative to the claim."""
-    user = (f"CLAIM: {claim.agent} — {claim.outcome} in {claim.population}\n\n"
+    dose = f" at {claim.dose}" if claim.dose else ""
+    user = (f"CLAIM: {claim.agent}{dose} — {claim.outcome} in {claim.population}\n\n"
             f"STUDY: {source.title} ({source.journal} {source.year})\n\nABSTRACT:\n{abstract[:6000]}")
     d = call_tool(_SYSTEM, user, _TOOL, max_tokens=1200)
     return EvidenceRow(
@@ -68,6 +75,7 @@ def extract_row(source: Source, abstract: str, claim: ClaimTuple) -> EvidenceRow
         source_id=source.id.replace("NCT:", ""),
         design=d["design"], direction=int(d["direction"]),
         population_match=bool(d["population_match"]), outcome_match=bool(d["outcome_match"]),
+        dose_match=bool(d.get("dose_match", True)),
         dramatic_effect=bool(d.get("dramatic_effect", False)),
         integrity_ok=bool(d.get("integrity_ok", True)), integrity_note=d.get("integrity_note", ""),
         n_int=int(d.get("n_int", 0) or 0), year=int(d.get("year", 0) or 0),

@@ -101,3 +101,29 @@ def test_extract_row_maps_structured_output(monkeypatch):
     assert isinstance(r, EvidenceRow)
     assert r.design == "rct" and r.n_int == 1200 and r.outcome_match is False
     assert r.effect_point == 0.75 and r.sig == "significant"
+
+
+def test_parse_extracts_the_claimed_dose(monkeypatch):
+    payload = {"agent": "gabapentin", "outcome": "pain", "population": "adults with diabetic neuropathy",
+               "direction": 1, "measurable": True, "dose": "900 mg/day", "search_query": "q"}
+    monkeypatch.setattr(parse, "call_tool", lambda system, user, tool, max_tokens=1024: payload)
+    ct, _ = parse.parse_claim("gabapentin 900 mg/day relieves diabetic neuropathy pain")
+    assert ct.dose == "900 mg/day"
+
+
+def test_extract_row_sets_dose_match_from_the_model(monkeypatch):
+    payload = {"design": "rct", "direction": 1, "population_match": True, "outcome_match": True,
+               "dose_match": False, "dramatic_effect": False, "integrity_ok": True, "n_int": 165,
+               "year": 1998, "sig": "significant", "finding": "benefit only at 3600 mg/day"}
+    monkeypatch.setattr(extract, "call_tool", lambda system, user, tool, max_tokens=1200: payload)
+    ct = ClaimTuple(raw="x", agent="gabapentin", outcome="pain", population="adults", direction=1, dose="900 mg/day")
+    assert extract.extract_row(_src("PMID:1"), "abstract", ct).dose_match is False
+
+
+def test_extract_row_dose_match_defaults_true_when_absent(monkeypatch):
+    payload = {"design": "rct", "direction": 1, "population_match": True, "outcome_match": True,
+               "dramatic_effect": False, "integrity_ok": True, "n_int": 100, "year": 2000,
+               "sig": "significant", "finding": "x"}  # no dose_match key
+    monkeypatch.setattr(extract, "call_tool", lambda system, user, tool, max_tokens=1200: payload)
+    ct = ClaimTuple(raw="x", agent="d", outcome="o", population="p", direction=1)
+    assert extract.extract_row(_src("PMID:1"), "abstract", ct).dose_match is True

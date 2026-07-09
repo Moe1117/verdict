@@ -25,6 +25,7 @@ export interface EvidenceRow {
   design: string
   direction: number
   population_match: boolean
+  dose_match?: boolean
   source_id: string
   integrity_ok: boolean
   n: string

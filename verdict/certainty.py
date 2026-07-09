@@ -55,7 +55,7 @@ class Certainty:
 
 def _deciding(rows: list[EvidenceRow]) -> list[EvidenceRow]:
     """The rows the verdict actually rested on: integrity-ok, on-population, on-outcome."""
-    return [r for r in rows if r.integrity_ok and r.population_match and r.outcome_match]
+    return [r for r in rows if r.integrity_ok and r.population_match and r.outcome_match and r.dose_match]
 
 
 def _signals(start_label: str, domains: list[GradeDomain]) -> list[str]:
@@ -88,8 +88,8 @@ def grade_certainty(rows: list[EvidenceRow], verdict: Verdict) -> Certainty:
         domains = [
             GradeDomain("risk of bias", 0, "no decision-grade trial evidence to appraise"),
             GradeDomain("inconsistency", 0, "no decision-grade trial evidence to compare"),
-            GradeDomain("indirectness", 0, "the available evidence is absent, off-population, or measures "
-                        "only a surrogate — it cannot directly address the claim"),
+            GradeDomain("indirectness", 0, "the available evidence is absent, off-population, off-dose, "
+                        "or measures only a surrogate — it cannot directly address the claim"),
             GradeDomain("imprecision", 0, "no decision-grade trial evidence to weigh for precision"),
             GradeDomain("publication bias", 0, "not assessable without a body of studies"),
         ]

@@ -27,6 +27,7 @@ class ClaimTuple:
     direction: int          # +1 "increases/improves", -1 "reduces", per the claim
     measurable: bool = True  # False -> ill-posed / not objectively measurable (input guard)
     proxies: list[str] | None = None
+    dose: str | None = None  # the specific dose/regimen the claim constrains to, if any (else None)
 
 
 _TOOL = {
@@ -45,6 +46,9 @@ _TOOL = {
                                           "objectively measurable in humans (input guard)"},
             "proxies": {"type": "array", "items": {"type": "string"},
                         "description": "accepted surrogate endpoints for this outcome, if any"},
+            "dose": {"type": ["string", "null"],
+                     "description": "the specific dose/regimen the claim constrains to (e.g. '900 mg/day'), "
+                                    "or null if the claim specifies no particular dose"},
             "search_query": {"type": "string", "description": "a focused PubMed/ClinicalTrials.gov query"},
         },
         "required": ["agent", "outcome", "population", "direction", "measurable", "search_query"],
@@ -80,6 +84,6 @@ def parse_claim(raw: str) -> tuple[ClaimTuple, str]:
     ct = ClaimTuple(
         raw=raw, agent=d["agent"], outcome=d["outcome"], population=d["population"],
         direction=int(d["direction"]), measurable=bool(d.get("measurable", True)),
-        proxies=d.get("proxies") or [],
+        proxies=d.get("proxies") or [], dose=d.get("dose") or None,
     )
     return ct, d.get("search_query", f"{d['agent']} {d['outcome']} {d['population']}")

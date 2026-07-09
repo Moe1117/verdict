@@ -59,6 +59,7 @@ class EvidenceRow:
     population_match: bool        # does the study population match the claim?
     source_id: str = ""          # PMID / NCT / DOI
     outcome_match: bool = True    # does the endpoint measure the CLAIMED outcome? False = surrogate / off-target
+    dose_match: bool = True        # did the study test the CLAIMED dose/regimen? False = off-dose (indirect)
     dramatic_effect: bool = False # all-or-none / very-large effect on the claimed outcome where the untreated
                                   # course is uniformly poor (GRADE large-effect; Oxford CEBM all-or-none) —
                                   # decision-grade even from single-arm or a single pivotal trial
@@ -128,7 +129,7 @@ def resolve(rows: list[EvidenceRow]) -> tuple[Verdict, list[GateTrace]]:
     # or a single pivotal trial stopped early for a near all-or-none benefit (nusinersen in
     # infantile SMA) — is decision-grade even without replication or a control arm, UNLESS a
     # randomized / meta-analytic study contradicts it (then the higher grade decides below).
-    onpop_out = [r for r in rows if r.population_match and r.outcome_match]
+    onpop_out = [r for r in rows if r.population_match and r.outcome_match and r.dose_match]
     dramatic = [r for r in onpop_out if r.dramatic_effect]
     if dramatic:
         if all(r.supports for r in dramatic) and not any(r.is_trial and r.against for r in onpop_out):
@@ -150,11 +151,19 @@ def resolve(rows: list[EvidenceRow]) -> tuple[Verdict, list[GateTrace]]:
         return Verdict.INSUFFICIENT, trace
     # Outcome-directness (GRADE): a trial that measures only a SURROGATE / off-target
     # endpoint is indirect — it cannot decide a claim about the actual clinical outcome.
-    trials = [r for r in on_pop if r.outcome_match]
-    if not trials:
+    on_outcome = [r for r in on_pop if r.outcome_match]
+    if not on_outcome:
         trace.append(GateTrace("direct-evidence", False,
                                "on-population trials measure only surrogate / off-target endpoints — "
                                "no direct evidence on the claimed outcome"))
+        return Verdict.INSUFFICIENT, trace
+    # Dose-directness: a trial that tested a DIFFERENT dose/regimen than the claim specifies is
+    # indirect for that dose — it cannot establish efficacy at the claimed dose.
+    trials = [r for r in on_outcome if r.dose_match]
+    if not trials:
+        trace.append(GateTrace("direct-evidence", False,
+                               "on-population trials tested a different dose/regimen than the claim "
+                               "specifies — no direct evidence at the claimed dose"))
         return Verdict.INSUFFICIENT, trace
     trace.append(GateTrace("direct-evidence", True,
                            f"{len(trials)} trial-grade on-population study(ies) on the claimed outcome"))
