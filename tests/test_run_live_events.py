@@ -151,6 +151,27 @@ def test_run_live_no_falsification_pass_for_an_abstention(monkeypatch):
     assert not any(e["stage"] == "disconfirm" for e in events)
 
 
+def test_parallel_extraction_isolates_a_failing_study(monkeypatch):
+    """Studies are fetched + extracted concurrently; one study whose extraction raises must not
+    sink the others, and the full set still resolves (order-independent)."""
+    ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)
+    monkeypatch.setattr(parse, "parse_claim", lambda c: (ct, "q"))
+    srcs = [_src("PMID:1"), _src("PMID:2"), _src("PMID:3")]
+    monkeypatch.setattr(retrieve, "search_pubmed", lambda q, retmax=8: [] if _disconfirming(q) else srcs)
+    monkeypatch.setattr(retrieve, "fetch_abstract", lambda pid: "abstract")
+    monkeypatch.setattr(retrieve, "search_trials", lambda q, page_size=8: [])
+
+    def flaky_extract(s, a, c):
+        if s.id == "PMID:2":
+            raise RuntimeError("boom")
+        return EvidenceRow(citation="c", source_id=s.id, design="rct", direction=1,
+                           population_match=True, n_int=5000)
+    monkeypatch.setattr(extract, "extract_row", flaky_extract)
+
+    card = vmod.run_live("drugX reduces mortality in adults")
+    assert {r.source_id for r in card.ledger} == {"PMID:1", "PMID:3"}  # failing PMID:2 dropped, run survived
+
+
 def test_run_live_still_works_without_callback(monkeypatch):
     """Backward compatibility: the callback defaults to off and nothing changes."""
     ct = ClaimTuple(raw="x", agent="drugX", outcome="mortality", population="adults", direction=-1)

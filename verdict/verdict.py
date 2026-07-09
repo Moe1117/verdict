@@ -9,7 +9,9 @@ verified demo corpora (no network, no LLM) — the deterministic demo path.
 from __future__ import annotations
 
 import os
+import threading
 from collections.abc import Callable
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 
 from . import DISCLAIMER
@@ -87,13 +89,20 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
         )
     rows: list[EvidenceRow] = []
     seen: set[str] = set()
+    lock = threading.Lock()
+    # Each study's fetch + Claude extraction is independent and I/O-bound, so they run concurrently
+    # (threads release the GIL on network I/O). Bounded to stay polite to NCBI / the Anthropic API.
+    workers = max(1, int(os.getenv("VERDICT_CONCURRENCY", "6")))
 
     def commit(s, text: str | None) -> None:
-        if not text or s.id in seen:
+        if not text:
             return
-        seen.add(s.id)
+        with lock:  # dedup atomically so two passes never extract the same source twice
+            if s.id in seen:
+                return
+            seen.add(s.id)
         try:
-            row = extract_row(s, text, ct)
+            row = extract_row(s, text, ct)  # the slow Claude call — deliberately OUTSIDE the lock
         except Exception:  # noqa: BLE001 — one bad study never sinks the run
             return
         # Deterministic integrity override: if the source database itself flags the study as
@@ -102,22 +111,32 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
         if s.integrity_severity:
             row.integrity_ok = False
             row.integrity_note = retraction_note(s)
-        rows.append(row)
-        emit(stage="study", source_id=row.source_id or s.id, design=row.design,
-             direction=row.direction, integrity_ok=row.integrity_ok, finding=row.finding)
+        with lock:  # shared-state mutation + emit serialized (on_event need not be thread-safe)
+            rows.append(row)
+            emit(stage="study", source_id=row.source_id or s.id, design=row.design,
+                 direction=row.direction, integrity_ok=row.integrity_ok, finding=row.finding)
+
+    def _fetch_commit(s, fetch) -> None:
+        if aborted():
+            return
+        try:
+            text = fetch(s)
+        except Exception:  # noqa: BLE001
+            return
+        commit(s, text)
+
+    def gather(sources, fetch) -> None:
+        """Fetch + extract every source concurrently (verdict is order-independent)."""
+        if not sources:
+            return
+        with ThreadPoolExecutor(max_workers=workers) as ex:
+            list(ex.map(lambda s: _fetch_commit(s, fetch), sources))
 
     if aborted():
         return evaluate(claim, rows)
     pubmed = search_pubmed(query, retmax=k)
     emit(stage="search", source="pubmed", found=len(pubmed))
-    for s in pubmed:
-        if aborted():
-            return evaluate(claim, rows)
-        try:
-            abstract = fetch_abstract(s.id)
-        except Exception:  # noqa: BLE001
-            continue
-        commit(s, abstract)
+    gather(pubmed, lambda s: fetch_abstract(s.id))
     if aborted():
         return evaluate(claim, rows)
     # ClinicalTrials.gov: add trials with POSTED RESULTS (orthogonal recall — the definitive
@@ -127,13 +146,7 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
     except Exception:  # noqa: BLE001 — CT.gov being unavailable never sinks the run
         trials = []
     emit(stage="search", source="clinicaltrials", found=len(trials))
-    for s in trials:
-        if aborted():
-            return evaluate(claim, rows)
-        try:
-            commit(s, fetch_trial(s.id))
-        except Exception:  # noqa: BLE001
-            continue
+    gather(trials, lambda s: fetch_trial(s.id))
     emit(stage="gate", n=len(rows))
     card = evaluate(claim, rows)
 
@@ -150,17 +163,12 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
             emit(stage="disconfirm", query=dq)
             before = len(rows)
             # A focused pass: PubMed relevance-sorts, so the top few disconfirming hits carry the
-            # pivotal contradiction. Capped to keep the extra latency bounded.
+            # pivotal contradiction. Capped to keep the extra latency bounded; extracted in parallel.
             try:
-                for s in search_pubmed(dq, retmax=min(k, 5)):
-                    if aborted():
-                        break
-                    try:
-                        commit(s, fetch_abstract(s.id))
-                    except Exception:  # noqa: BLE001
-                        continue
+                disc = search_pubmed(dq, retmax=min(k, 5))
             except Exception:  # noqa: BLE001 — a failed disconfirming search never sinks the run
-                pass
+                disc = []
+            gather(disc, lambda s: fetch_abstract(s.id))
             if len(rows) > before:
                 card = evaluate(claim, rows)
             emit(stage="disconfirm_done", added=len(rows) - before, verdict=card.verdict.value)
