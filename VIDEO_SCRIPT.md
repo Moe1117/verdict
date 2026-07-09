@@ -80,12 +80,12 @@ appearing as it's extracted → the gate → **the "refute" step** ("seeking dis
 > A tool you'd actually use — not a slideshow of our best examples."
 
 ### 8 · The honest scorecard — 2:38–2:52
-**Screen:** Scroll to the scorecard: gate engine **91% / 0**, naive Claude **78%**, full live product **66%**.
+**Screen:** Scroll to the scorecard: gate engine **91% / 0**, naive Claude **78%**, full live product **62%**.
 
 > "Here's the honest scorecard — including the numbers we could have hidden. The gate engine
 > reproduces expert verdicts 91% of the time with zero confident errors. But I'll show you exactly
 > where the line is: a strong naive Claude already gets 78% on these famous claims, and our live
-> product scores 66% — *below* it. On claims a model has memorized, it's hard to beat. What it
+> product scores 62% — *below* it. On claims a model has memorized, it's hard to beat. What it
 > can't do is show its work, tell you when it's guessing, or refuse a fraud-driven result. That's
 > the point."
 

@@ -8,10 +8,12 @@ interface EvalSummary {
   verdict_abstention_rate: number
   confidently_wrong: { verdict: number; naive_vote: number; plain_llm: number }
 }
-interface LiveSummary { accuracy: number; confident_false_positives: number; abstention_rate: number }
+interface LiveSummary { accuracy: number; confident_false_positives: number; confident_false_positives_strict: number; abstention_rate: number }
 interface Conformal { alpha: number; threshold: string; guarantee_held_fraction: number; mean_test_error: number }
 
-const pct = (x: number) => Math.round(x * 100) + '%'
+// round half down so 62.5% shows as 62%, matching the reported figures in SUBMISSION.md
+// (Python's :.0% uses round-half-to-even; every half-value here is even, so this agrees)
+const pct = (x: number) => Math.round(x * 100 - 1e-9) + '%'
 const cvar = (v: string) => `var(--${v.toLowerCase().replace(/\s/g, '-')})`
 
 // Canned "plain LLM" answers — deliberately confident, to contrast with Verdict.
@@ -137,7 +139,10 @@ function Scorecard({ ev, live, conf }: { ev: EvalSummary; live: LiveSummary | nu
           <div className="sc-row sc-live">
             <span className="m">Verdict — full live product <em>Claude extracts, end-to-end</em></span>
             <span className="acc">{pct(live.accuracy)}</span>
-            <span className="cw">{live.confident_false_positives}</span>
+            <span
+              className="cw"
+              title="Strict: a confident 'Supported' where the truth is Not-Supported or Insufficient — every failed or fraudulent drug is caught (0 of 32, incl. solanezumab). Broad also counts a confident 'Supported' on a genuinely contested claim — the 1 is icosapent ethyl (positive in REDUCE-IT, disputed on its mineral-oil placebo)."
+            >{live.confident_false_positives_strict} <em>strict</em> · {live.confident_false_positives} broad</span>
           </div>
         )}
         <div className="sc-row">
@@ -160,7 +165,7 @@ function Scorecard({ ev, live, conf }: { ev: EvalSummary; live: LiveSummary | nu
       <div className="sc-foot">
         The <b>gate engine</b> — deterministic logic over verified rows — reproduces the expert verdicts with <b>zero</b>{' '}
         confident false-positives, but that holds extraction fixed. Run end-to-end, the <b>full live product</b> scores{' '}
-        {live ? pct(live.accuracy) : '66%'} and abstains on {live ? pct(live.abstention_rate) : '16%'} rather than overstate.
+        {live ? pct(live.accuracy) : '62%'} and abstains on {live ? pct(live.abstention_rate) : '19%'} rather than overstate.
         We report the uncomfortable number too: a naive Claude scores <b>{pct(ev.accuracy.plain_llm)}</b> on these famous
         claims — <b>above</b> the live product — because it has read the literature they're drawn from. Verdict's edge is
         not out-scoring a strong model on memorized claims; it is showing its work, knowing when to abstain, and refusing
@@ -334,7 +339,7 @@ export default function App() {
     <div className="wrap">
       <div className="head">
         <div className="logo">Verdict<span className="dot">.</span></div>
-        <div className="tag">Never confidently wrong.</div>
+        <div className="tag">It won't confirm a fraud.</div>
       </div>
       <div className="sub">
         A language model — Claude included — will confidently reproduce a fraud-driven result. Verdict does not:

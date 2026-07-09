@@ -27,7 +27,7 @@ demo path so it can never fail on camera.
 
 ## Layout & regions (top → bottom)
 
-1. **Masthead** — `Verdict.` wordmark + one line: *"Never confidently wrong."*
+1. **Masthead** — `Verdict.` wordmark + one line: *"It won't confirm a fraud."* (the honest, strict-FP-backed claim; the earlier *"Never confidently wrong."* overstated — the live product has 1 broad confident FP and a confident false-negative)
 2. **Claim bar** — a row of deck chips (one per demo card; ivermectin selected by default) + a
    disabled "paste a claim…" input with a "live — coming soon" hint (Build 2 hook).
 3. **The Duel** — a two-column grid, both columns always visible, sharing the selected claim:
@@ -41,7 +41,7 @@ demo path so it can never fail on camera.
    year, colored by verdict state, with the certainty label; the "turns" animate as the eye moves
    left→right.
 5. **Scorecard strip** — the honest dual numbers in one compact band:
-   `engine 91% / 0` · `live 66% / 3` · `plain-LLM 62.5% / 6`, plus one conformal line
+   `engine 91% / 0` · `live 62% / 0 strict · 1 broad` · `naive Claude 78% / 0 strict · 3 broad`, plus one conformal line
    ("commit at High → ≤20% error, held in 93% of splits").
 6. **Disclaimer** — research tool, not medical advice.
 
