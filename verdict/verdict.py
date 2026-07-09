@@ -28,6 +28,8 @@ class VerdictCard:
 
 def evaluate(claim: str, rows: list[EvidenceRow], confidence: float | None = None) -> VerdictCard:
     """Given extracted evidence rows, produce the auditable verdict card."""
+    from .directive import research_directive
+
     verdict, trace = resolve(rows)
     return VerdictCard(
         claim=claim,
@@ -35,6 +37,7 @@ def evaluate(claim: str, rows: list[EvidenceRow], confidence: float | None = Non
         confidence=confidence,
         ledger=rows,
         gate_trace=trace,
+        what_would_change_it=research_directive(verdict, trace),
     )
 
 
@@ -74,10 +77,12 @@ def run_live(claim: str, k: int = 8, on_event: Callable[[dict], None] | None = N
     ct, query = parse_claim(claim)
     emit(stage="parse", measurable=bool(ct.measurable), query=query)
     if not ct.measurable:
+        from .directive import research_directive
+        guard = [GateTrace("input-guard", False,
+                           "claim is ill-posed or its outcome is not objectively measurable")]
         return VerdictCard(
             claim=claim, verdict=Verdict.UNDECIDABLE, confidence=None, ledger=[],
-            gate_trace=[GateTrace("input-guard", False,
-                                  "claim is ill-posed or its outcome is not objectively measurable")],
+            gate_trace=guard, what_would_change_it=research_directive(Verdict.UNDECIDABLE, guard),
         )
     rows: list[EvidenceRow] = []
     seen: set[str] = set()

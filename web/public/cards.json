@@ -232,6 +232,7 @@
         "is_primary": false
       }
     ],
+    "what_would_change_it": "A definitive large RCT (n\u22651000), or a current meta-analysis of RCTs, agreeing with one side would resolve the conflict.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
@@ -423,6 +424,7 @@
         "is_primary": false
       }
     ],
+    "what_would_change_it": "A large RCT or meta-analysis of RCTs showing no effect on-population would overturn this verdict.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
@@ -614,6 +616,7 @@
         "is_primary": false
       }
     ],
+    "what_would_change_it": "A large RCT or meta-analysis of RCTs showing a benefit on-population would overturn this verdict.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
@@ -824,6 +827,7 @@
         "is_primary": null
       }
     ],
+    "what_would_change_it": "A randomized trial measuring the claimed clinical outcome directly \u2014 not a surrogate endpoint \u2014 would make this decidable.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
@@ -1015,6 +1019,7 @@
         "is_primary": false
       }
     ],
+    "what_would_change_it": "A large RCT or meta-analysis of RCTs showing no effect on-population would overturn this verdict.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
@@ -1279,6 +1284,7 @@
         "is_primary": null
       }
     ],
+    "what_would_change_it": "A large RCT or meta-analysis of RCTs showing a benefit on-population would overturn this verdict.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
@@ -1550,6 +1556,7 @@
         "is_primary": null
       }
     ],
+    "what_would_change_it": "A large RCT or meta-analysis of RCTs showing no effect on-population would overturn this verdict.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
@@ -1785,6 +1792,7 @@
         "is_primary": null
       }
     ],
+    "what_would_change_it": "A definitive large RCT (n\u22651000), or a current meta-analysis of RCTs, agreeing with one side would resolve the conflict.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   },
   {
@@ -2047,6 +2055,7 @@
         "is_primary": null
       }
     ],
+    "what_would_change_it": "A large RCT or meta-analysis of RCTs showing a benefit on-population would overturn this verdict.",
     "disclaimer": "Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation."
   }
 ]

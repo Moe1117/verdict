@@ -89,6 +89,19 @@ body {
 .conf { font-size: 12px; color: var(--muted); }
 .claim { margin: 15px 0 20px; font-size: 17px; line-height: 1.45; font-weight: 500; }
 
+/* research directive — what would change the verdict */
+.directive {
+  margin: 4px 0 4px; padding: 12px 14px; border-radius: 10px;
+  background: var(--panel); border: 1px solid var(--border); border-left: 2px solid var(--faint);
+}
+.directive.abstain { border-left-color: var(--insufficient); background: rgba(95,155,230,0.05); }
+.directive .dir-label {
+  display: block; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--faint); margin-bottom: 5px;
+}
+.directive.abstain .dir-label { color: var(--insufficient); }
+.directive .dir-text { font-size: 13px; line-height: 1.5; color: var(--text); }
+
 /* gate trace */
 .section-label { font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--faint); margin: 20px 0 11px; }
 .gate {

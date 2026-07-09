@@ -1,4 +1,4 @@
-export type VerdictState = 'Supported' | 'Not Supported' | 'Contested' | 'Insufficient'
+export type VerdictState = 'Supported' | 'Not Supported' | 'Contested' | 'Insufficient' | 'Undecidable'
 
 export interface GateStep {
   gate: string
@@ -55,5 +55,6 @@ export interface Card {
   baseline?: Baseline | null
   gate_trace: GateStep[]
   ledger: EvidenceRow[]
+  what_would_change_it?: string
   disclaimer: string
 }

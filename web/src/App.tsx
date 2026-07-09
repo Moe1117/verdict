@@ -378,6 +378,19 @@ export default function App() {
             </div>
             <div className="claim">{card.claim}</div>
 
+            {card.what_would_change_it && (
+              <div className={'directive' + (card.verdict === 'Insufficient' || card.verdict === 'Contested' || card.verdict === 'Undecidable' ? ' abstain' : '')}>
+                <span className="dir-label">
+                  {card.verdict === 'Insufficient' || card.verdict === 'Undecidable'
+                    ? 'What would make this decidable'
+                    : card.verdict === 'Contested'
+                      ? 'What would resolve this'
+                      : 'What would overturn this'}
+                </span>
+                <span className="dir-text">{card.what_would_change_it}</span>
+              </div>
+            )}
+
             <div className="section-label">certainty — per-domain GRADE profile, no LLM</div>
             <GradeProfile card={card} />
 

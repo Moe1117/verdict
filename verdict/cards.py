@@ -56,5 +56,7 @@ def card_payload(
         "baseline": baseline,
         "gate_trace": [{"gate": g.gate, "passed": g.passed, "detail": g.detail} for g in card.gate_trace],
         "ledger": [dataclasses.asdict(r) for r in card.ledger],
+        # A deterministic "what would move this verdict" — an abstention becomes a research directive.
+        "what_would_change_it": card.what_would_change_it,
         "disclaimer": card.disclaimer,
     }
