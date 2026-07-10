@@ -159,7 +159,10 @@ _PROFILE_TOOL = {
             "labs": {"type": "object"}, "comorbidities": {"type": "array", "items": {"type": "string"}},
             "cns_status": {"type": ["string", "null"]},
         },
-        "required": ["age", "sex", "diagnosis"],
+        # ecog is required so the model always emits it (null if truly absent) rather than
+        # silently dropping performance status — a structured field nearly every oncology
+        # trial gates on; an omission surfaces as a false "not stated" on the ledger.
+        "required": ["age", "sex", "diagnosis", "ecog"],
     },
 }
 
