@@ -74,3 +74,29 @@ def aggregate(results: list[CriterionResult]) -> str:
     if all(r.result == "MET" for r in incl) and all(r.result == "NOT_MET" for r in excl):
         return "Likely eligible"
     return "Needs verification"
+
+def _profile_value(fieldname: str, p: PatientProfile) -> tuple[float | None, str]:
+    if fieldname == "age":
+        return (float(p.age) if p.age is not None else None, p.age_src)
+    if fieldname == "ecog":
+        return (float(p.ecog) if p.ecog is not None else None, p.ecog_src)
+    if fieldname in p.labs:
+        return (float(p.labs[fieldname]), f"{fieldname} {p.labs[fieldname]}")
+    return (None, "")
+
+def eval_structured(crit: Criterion, p: PatientProfile) -> tuple[str, str, str]:
+    """Return (result, evidence_phrase, note). result: MET if the patient's value satisfies
+    the criterion's stated condition; NOT_MET if it clearly does not; INSUFFICIENT if unknown.
+    The inclusion/exclusion meaning is applied later by aggregate()."""
+    val, src = _profile_value(crit.field, p)
+    if val is None:
+        return ("INSUFFICIENT", "not stated", f"{crit.field or 'value'} not found in note")
+    ok = True
+    if crit.op == "range":
+        ok = (crit.lo is None or val >= crit.lo) and (crit.hi is None or val <= crit.hi)
+    elif crit.op == "min":
+        ok = crit.lo is None or val >= crit.lo
+    elif crit.op == "max":
+        ok = crit.hi is None or val <= crit.hi
+    phrase = src or f"{crit.field}={val}"
+    return ("MET" if ok else "NOT_MET", phrase, f"{crit.field}={val} vs [{crit.lo},{crit.hi}]")
