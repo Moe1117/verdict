@@ -15,6 +15,13 @@ def test_iclac_passes_legitimate_lines_no_false_positive():
         assert repro.check_cell_line(name).result == "PASS", name
 
 
+def test_review_survives_none_extraction(monkeypatch):
+    # call_tool returns None intermittently under concurrency — the pipeline must degrade, not crash
+    monkeypatch.setattr(repro, "call_tool", lambda *a, **k: None)
+    rep = repro.review("Cells were the GR-M line, cultured in DMEM.")
+    assert rep.verdict in ("Needs fixes", "Needs verification", "Submission-ready")
+
+
 def test_aggregate_truth_table():
     assert aggregate([Finding("x", "cell_line", "FAIL", "")]) == "Needs fixes"
     assert aggregate([Finding("x", "rigor", "INSUFFICIENT", "")]) == "Needs verification"

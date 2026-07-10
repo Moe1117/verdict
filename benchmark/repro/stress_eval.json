@@ -1,0 +1,411 @@
+{
+ "summary": {
+  "n_misidentified": 40,
+  "n_legit": 18,
+  "end_to_end_catch_rate": 0.925,
+  "caught": 37,
+  "extraction_miss": 2,
+  "match_miss": 0,
+  "false_flags_legit": 0,
+  "by_template": {
+   "cells": "4/5",
+   "dense": "4/4",
+   "descriptor": "4/5",
+   "list": "4/4",
+   "nospace": "4/4",
+   "parenthetical": "4/4",
+   "passing": "4/4",
+   "plain": "5/5",
+   "vendor": "4/5"
+  }
+ },
+ "rows": [
+  {
+   "kind": "mis",
+   "line": "AV3",
+   "template": "plain",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "F255A4",
+   "template": "vendor",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "LED-Ti",
+   "template": "passing",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "Wong-Kilbourne derivative",
+   "template": "descriptor",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "Aedes aegypti, Suitor's clone",
+   "template": "cells",
+   "true": "Unknown, possibly Ae (Grace's Antheraea eucalypti cells)",
+   "outcome": "extraction_miss"
+  },
+  {
+   "kind": "mis",
+   "line": "SH-3",
+   "template": "parenthetical",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "TDL-4",
+   "template": "dense",
+   "true": "Raji",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "HCu-22",
+   "template": "list",
+   "true": "Hcu-10, Hcu-18, Hcu-22, Hcu-27, Hcu-33, Hcu-37, Hcu-39 (synonymous cell lines, donor origin unknown)",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "BM-1604",
+   "template": "nospace",
+   "true": "DU-145",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "LR10.6",
+   "template": "cells",
+   "true": "NALM-6",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "AKI",
+   "template": "vendor",
+   "outcome": "ERROR:AttributeError"
+  },
+  {
+   "kind": "mis",
+   "line": "RAMAK-1",
+   "template": "descriptor",
+   "true": "T-24",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "EU-7",
+   "template": "passing",
+   "true": "CCRF-CEM",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "BSCC-93",
+   "template": "list",
+   "true": "DJM-1",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "HS-SULTAN",
+   "template": "parenthetical",
+   "true": "JIJOYE",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "Hu1734",
+   "template": "plain",
+   "true": "HCV-29",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "PC-93",
+   "template": "plain",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "NCOL-1",
+   "template": "nospace",
+   "true": "LoVo",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "T-33",
+   "template": "cells",
+   "true": "K-562",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "KMT-2",
+   "template": "dense",
+   "true": "KG-1",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "WSU-ALCL",
+   "template": "descriptor",
+   "true": "CCRF-CEM",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "COLO-677",
+   "template": "vendor",
+   "true": "RPMI-8226",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "HSG",
+   "template": "list",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "RERF-LC-OK",
+   "template": "parenthetical",
+   "true": "Marcus",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "MKN28",
+   "template": "passing",
+   "true": "MKN74",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "MUTZ-1",
+   "template": "nospace",
+   "true": "Namalwa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "ACCM",
+   "template": "dense",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "DM14",
+   "template": "plain",
+   "true": "UM-SCC-1",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "T406 \n[Multiple cell lines with same name, see Cellosaurus]",
+   "template": "descriptor",
+   "true": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+   "outcome": "extraction_miss"
+  },
+  {
+   "kind": "mis",
+   "line": "NCI-H1870",
+   "template": "cells",
+   "true": "NCI-H1304, NCI-H1870 (synonymous cell lines, donor origin unknown)",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "D-17",
+   "template": "vendor",
+   "true": "Moresco",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "SLK",
+   "template": "passing",
+   "true": "Caki-1",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "OCM-8",
+   "template": "parenthetical",
+   "true": "SK-MEL-28",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "UCDK9B2",
+   "template": "nospace",
+   "true": "JURKAT",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "SMMC-7721",
+   "template": "plain",
+   "true": "HeLa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "ECC-1",
+   "template": "list",
+   "true": "Ishikawa",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "LAH2",
+   "template": "cells",
+   "true": "Unknown, possibly LAH3",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "HROBML03",
+   "template": "descriptor",
+   "true": "NCI-H460",
+   "outcome": "caught"
+  },
+  {
+   "kind": "mis",
+   "line": "A172TR3",
+   "template": "dense",
+   "true": "U-251 MG",
+   "outcome": "caught"
+  },
+  {
+   "kind": "legit",
+   "line": "HeLa",
+   "template": "plain",
+   "outcome": "clean"
+  },
+  {
+   "kind": "mis",
+   "line": "eCAS",
+   "template": "vendor",
+   "true": "RAW 264.7",
+   "outcome": "caught"
+  },
+  {
+   "kind": "legit",
+   "line": "MCF-7",
+   "template": "cells",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "HEK293",
+   "template": "descriptor",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "Jurkat",
+   "template": "passing",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "U-251 MG",
+   "template": "list",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "K-562",
+   "template": "parenthetical",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "PC-3",
+   "template": "dense",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "SH-SY5Y",
+   "template": "cells",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "HepG2",
+   "template": "plain",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "Caco-2",
+   "template": "descriptor",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "HT-29",
+   "template": "vendor",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "LNCaP",
+   "template": "passing",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "A549",
+   "template": "vendor",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "DU145",
+   "template": "list",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "U2OS",
+   "template": "plain",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "SK-BR-3",
+   "template": "parenthetical",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "THP-1",
+   "template": "dense",
+   "outcome": "clean"
+  },
+  {
+   "kind": "legit",
+   "line": "A431",
+   "template": "cells",
+   "outcome": "clean"
+  }
+ ]
+}

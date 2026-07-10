@@ -183,7 +183,14 @@ _EXTRACT_SYSTEM = (
 
 
 def extract_resources(methods_text: str) -> dict:
-    return call_tool(_EXTRACT_SYSTEM, f"Methods:\n\n{methods_text}", _EXTRACT_TOOL, max_tokens=2048)
+    # call_tool returns None when the model emits no tool_use block (happens intermittently under
+    # concurrency / API hiccups). Retry once, then fall back to an empty extraction so review()
+    # degrades to "no resources found" instead of crashing on a live paste.
+    for _ in range(2):
+        d = call_tool(_EXTRACT_SYSTEM, f"Methods:\n\n{methods_text}", _EXTRACT_TOOL, max_tokens=2048)
+        if isinstance(d, dict):
+            return d
+    return {"cell_lines": [], "antibodies": [], "rigor": {}}
 
 
 # ---------------------------------------------------------------------------
