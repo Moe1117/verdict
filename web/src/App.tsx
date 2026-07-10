@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { Card, EvidenceRow, GradeDomain, TimePoint } from './types'
 import TrialMatch from './TrialMatch'
+import Repro from './Repro'
 
 interface EvalSummary {
   n: number
@@ -273,9 +274,10 @@ export default function App() {
   const [liveState, setLiveState] = useState<'idle' | 'streaming' | 'error'>('idle')
   const [liveEvents, setLiveEvents] = useState<LiveEvent[]>([])
   const [liveError, setLiveError] = useState<string | null>(null)
-  // Top-level view: the trial reviewer is the headline; the evidence resolver is the second mode.
+  // Top-level view: the Repro Methods verifier is the headline (default); the trial reviewer and
+  // the evidence resolver are the other two modes.
   // This is NOT the .chips card-selector below — that stays the per-claim picker for the evidence view.
-  const [mode, setMode] = useState<'trials' | 'evidence'>('trials')
+  const [mode, setMode] = useState<'repro' | 'trials' | 'evidence'>('repro')
 
   useEffect(() => {
     fetch('/cards.json').then((r) => r.json()).then((cs: Card[]) => {
@@ -348,6 +350,10 @@ export default function App() {
 
       <div className="modeswitch">
         <button
+          className={'tab' + (mode === 'repro' ? ' active' : '')}
+          onClick={() => setMode('repro')}
+        >Methods Verifier</button>
+        <button
           className={'tab' + (mode === 'trials' ? ' active' : '')}
           onClick={() => setMode('trials')}
         >Trial Eligibility</button>
@@ -356,6 +362,8 @@ export default function App() {
           onClick={() => setMode('evidence')}
         >Evidence Resolver</button>
       </div>
+
+      {mode === 'repro' && <Repro />}
 
       {mode === 'trials' && <TrialMatch />}
 
