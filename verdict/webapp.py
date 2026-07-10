@@ -30,6 +30,7 @@ from . import DISCLAIMER, __version__
 from .baseline import plain_llm_baseline
 from .cards import card_payload
 from .env import load_dotenv
+from .trialmatch import card_to_dict, review
 from .verdict import run_live
 
 load_dotenv()  # make `uvicorn verdict.webapp:app` turnkey from the repo .env; real env vars still win
@@ -41,6 +42,10 @@ log = logging.getLogger("verdict.webapp")
 # concurrency cap bounds how many paid resolutions can run at once — excess requests get 429
 # rather than fanning out into unbounded Claude spend.
 MAX_CLAIM_LEN = int(os.getenv("VERDICT_MAX_CLAIM_LEN", "600"))
+# A clinical note is a paragraph, not a sentence — much longer than a claim — but still bounded
+# because it too is embedded verbatim into paid Claude prompts (profile extraction + per-criterion
+# matching across several candidate trials). Same rationale as MAX_CLAIM_LEN, larger ceiling.
+MAX_NOTE_LEN = int(os.getenv("VERDICT_MAX_NOTE_LEN", "4000"))
 _MAX_CONCURRENT = int(os.getenv("VERDICT_MAX_CONCURRENT", "4"))
 _slots = threading.BoundedSemaphore(_MAX_CONCURRENT)
 
@@ -78,6 +83,29 @@ class ResolveRequest(BaseModel):
         return max(1, min(12, v))
 
 
+class MatchRequest(BaseModel):
+    note: str
+    condition: str | None = None
+
+    @field_validator("note")
+    @classmethod
+    def _bounded_note(cls, v: str) -> str:
+        v = (v or "").strip()
+        if len(v) < 10:
+            raise ValueError("note is too short to review")
+        if len(v) > MAX_NOTE_LEN:
+            raise ValueError(f"note is too long (max {MAX_NOTE_LEN} chars)")
+        return v
+
+    @field_validator("condition")
+    @classmethod
+    def _clean_condition(cls, v: str | None) -> str | None:
+        if v is None:
+            return None
+        v = v.strip()
+        return v or None
+
+
 def _resolve_card(claim: str, k: int) -> dict:
     card = run_live(claim, k=k)
     return card_payload(card, id="LIVE", baseline=plain_llm_baseline(claim))
@@ -98,6 +126,23 @@ def resolve(req: ResolveRequest) -> dict:
         log.exception("live resolution failed")
         # Generic detail only — never surface the exception text (it can carry keys / internals).
         raise HTTPException(status_code=502, detail="live resolution failed — see server logs") from e
+    finally:
+        _slots.release()
+
+
+@app.post("/api/match")
+def api_match(req: MatchRequest) -> dict:
+    # review() fans out into several paid Claude calls (profile extraction + per-criterion matching
+    # over multiple candidate trials), so it takes a concurrency slot exactly like /api/resolve.
+    if not _slots.acquire(blocking=False):
+        raise HTTPException(status_code=429, detail="server is busy — too many concurrent reviews")
+    try:
+        cards = review(req.note, condition=req.condition)
+        return {"note": req.note, "cards": [card_to_dict(c) for c in cards]}
+    except Exception as e:  # noqa: BLE001
+        log.exception("trial-eligibility review failed")
+        # Generic detail only — never surface the exception text (it can carry keys / internals).
+        raise HTTPException(status_code=502, detail="trial-eligibility review failed — see server logs") from e
     finally:
         _slots.release()
 
