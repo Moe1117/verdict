@@ -224,7 +224,8 @@ export default function TrialMatch() {
             {state === 'loading' ? (<><span className="lc-spin" /> reviewing…</>) : 'Review trials'}
           </button>
           <span className="tm-caption">
-            Live review runs a Claude call per criterion — it can take a few minutes. The deck below is a saved example.
+            Live review runs a Claude call per criterion — it can take a few minutes, and live retrieval is
+            best-effort. The saved deck below is the reliable path.
           </span>
         </div>
         {error && <div className="tm-error">⚠ {error}</div>}
@@ -243,7 +244,7 @@ export default function TrialMatch() {
       <div className="disclaimer">
         <b>This ranks recruiting trials by how the note maps to each eligibility criterion.</b> It is a
         research and screening-triage aid for professionals — not medical advice, not an enrollment decision,
-        and never a substitute for reading the protocol.
+        and never a substitute for a study coordinator's and principal investigator's review of the full protocol.
       </div>
     </div>
   )

@@ -8,6 +8,34 @@ Paste a claim like *"metformin reduces cancer incidence in adults without diabet
 
 Built for the **Built with Claude: Life Sciences** hackathon (Builder track), July 7–13 2026.
 
+---
+
+## Trial Eligibility Reviewer — the Builder-track entry
+
+The submission applies the same decidable-engine idea (**Claude extracts, a deterministic aggregator decides**) to a sharper, named-user decision: **patient ↔ clinical-trial eligibility**. The evidence-resolver sections below document the shared engine and its calibration.
+
+**Named user:** a **clinical research coordinator** screening a patient against open trials. They paste a free-text patient note and get back **ranked recruiting ClinicalTrials.gov trials**, each with a **per-criterion audit ledger** — every inclusion/exclusion criterion marked `MET` / `NOT_MET` / `INSUFFICIENT`, tied to the exact phrase in the note — plus a verdict (`Likely eligible` / `Ineligible` / `Needs verification`). The verdict **never says eligible while any criterion is unresolved**: it **abstains** (`Needs verification`) and hands back a **to-verify checklist** of exactly what the note can't decide.
+
+**The differentiator — and the honest boundary.** Claude does two extraction jobs (patient facts from the note; each trial's eligibility text into structured criteria). The **verdict is a deterministic aggregation** of the per-criterion results — no LLM chooses it (any exclusion `MET` or inclusion `NOT_MET` → Ineligible; all clear → Likely eligible; anything unresolved → Needs verification). **Structured criteria** (age, ECOG, lab thresholds) are decided by pure comparators, labelled **`rule`** in the UI; **semantic criteria** (e.g. *"measurable disease per RECIST"*) are **Claude judgments**, labelled **`model judgment`**, deliberately biased to `INSUFFICIENT` when the note is silent so the system abstains rather than guess. The honest scope is therefore narrow and stated on-screen: *the aggregation and the structured comparisons are deterministic and auditable; the semantic reads are labelled model judgments that abstain on silence.* We do **not** claim there is no LLM in the decision, and the evidence-resolver's conformal guarantee does **not** transfer to this task.
+
+**Run it:**
+
+```bash
+pip install -e ".[web]"
+python -m uvicorn verdict.webapp:app --port 8010        # live API — POST /api/match {note}
+npm --prefix web install && npm --prefix web run dev     # UI on :5175, opens on the "Trial Eligibility" tab
+```
+
+The UI opens on a **frozen demo deck** (a real end-to-end run, served statically from `web/public/trialdeck/` so the demo can't fail live). **"Review trials"** runs a live review of a pasted note — a Claude call per criterion, so minutes, best-effort — and falls back to the frozen deck on error or timeout.
+
+> ⚕️ Research and screening-triage aid for professionals — **not** medical advice, **not** an enrollment decision, and never a substitute for a study coordinator's and principal investigator's review of the full protocol.
+
+<details><summary><b>Submission blurb (≈150 words)</b></summary>
+
+A clinical research coordinator pastes a free-text patient note; the Trial Eligibility Reviewer returns ranked recruiting ClinicalTrials.gov trials, each with a per-criterion audit ledger — every inclusion/exclusion criterion marked MET, NOT_MET, or INSUFFICIENT and tied to the exact phrase in the note — and a verdict that never says "eligible" while anything is unresolved. Instead it abstains ("Needs verification") and hands back a to-verify checklist of what the note can't decide. Claude does the extraction (patient facts; each trial's eligibility text into structured criteria); a deterministic aggregator issues the verdict — no LLM picks it. Structured criteria (age, ECOG, labs) are decided by pure comparators and labelled "rule"; semantic criteria are labelled "model judgment" and biased to abstain on silence. The result counter-positions an ML-heavy field on deterministic auditability and calibrated abstention: it tells a coordinator not just *which* trials, but *exactly what to verify* before acting.
+
+</details>
+
 ## Who it's for
 
 A translational researcher or early-stage biotech scientist triaging a drug-efficacy or drug-repurposing hypothesis — *"is this worth six months?"* — who needs a sourced, rigorous verdict, including an explicit determination that the evidence is not yet sufficient.
