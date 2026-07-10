@@ -17,3 +17,5 @@ def test_match_builds_card_and_verify_list(monkeypatch):
     assert card.verdict == "Needs verification"
     assert card.n_met == 1  # only the age inclusion
     assert any("measurable" in v.lower() or "cns" in v.lower() for v in card.to_verify)
+    # each result carries how it was decided, so the UI can label rule vs model judgment
+    assert [r.ctype for r in card.criteria] == ["structured", "semantic", "semantic"]

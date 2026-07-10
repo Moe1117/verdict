@@ -49,6 +49,7 @@ class CriterionResult:
     note: str
     predicate: str
     source_text: str
+    ctype: str = ""           # "structured" (rule) | "semantic" (model judgment) — for the UI tag
 
 @dataclass
 class TrialCard:
@@ -265,7 +266,7 @@ def match(p: PatientProfile, nct_id: str, title: str, status: str,
         else:
             res, phrase, note, conf = judge_semantic(c, p)
         results.append(CriterionResult(c.id, c.kind, res, conf, phrase, note,
-                                       c.predicate, c.source_text))
+                                       c.predicate, c.source_text, c.ctype))
     verdict = aggregate(results)
     to_verify = [f"Confirm: {r.predicate}" for r in results if r.result == "INSUFFICIENT"]
     n_met = sum(1 for r in results if r.result == "MET")

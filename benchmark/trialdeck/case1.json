@@ -9,312 +9,341 @@
       "verdict": "Needs verification",
       "criteria": [
         {
-          "id": "inc1",
+          "id": "1",
           "kind": "inclusion",
           "result": "MET",
           "confidence": "high",
           "evidence_phrase": "62-year-old",
           "note": "age=62.0 vs [18,None]",
           "predicate": "age >= 18 years",
-          "source_text": "Males or females, aged \u2265 18 years."
+          "source_text": "Males or females, aged \u2265 18 years.",
+          "ctype": "structured"
         },
         {
-          "id": "inc2",
+          "id": "2",
           "kind": "inclusion",
           "result": "MET",
           "confidence": "medium",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient has metastatic NSCLC, satisfying the locally advanced/metastatic NSCLC requirement; histological/cytological confirmation is implied by specific molecular subtyping (EGFR exon-19 deletion), which requires tissue/cytology testing.",
-          "predicate": "Histologically or cytologically confirmed locally advanced or metastatic NSCLC",
-          "source_text": "Subjects with histologically or cytologically confirmed locally advanced or metastatic NSCLC"
+          "note": "Patient has metastatic NSCLC, satisfying the locally advanced or metastatic NSCLC requirement; histologic/cytologic confirmation is reasonably implied by specific molecular subtyping (EGFR exon-19 deletion) which requires tissue diagnosis.",
+          "predicate": "histologically or cytologically confirmed locally advanced or metastatic NSCLC",
+          "source_text": "Subjects with histologically or cytologically confirmed locally advanced or metastatic NSCLC",
+          "ctype": "semantic"
         },
         {
-          "id": "inc3",
+          "id": "3",
           "kind": "inclusion",
           "result": "MET",
           "confidence": "high",
           "evidence_phrase": "progressed on first-line osimertinib",
-          "note": "Osimertinib is an EGFR-TKI; patient had progressive disease on this treatment, satisfying the criterion.",
-          "predicate": "Progressive disease on or after prior treatment with EGFR-TKIs",
-          "source_text": "Progressive disease on or after prior treatment with EGFR-TKIs."
+          "note": "Osimertinib is an EGFR-TKI; patient progressed on this treatment, satisfying the criterion of progressive disease after prior EGFR-TKI therapy.",
+          "predicate": "progressive disease on or after prior treatment with EGFR-TKIs",
+          "source_text": "Progressive disease on or after prior treatment with EGFR-TKIs.",
+          "ctype": "semantic"
         },
         {
-          "id": "inc4",
+          "id": "4",
           "kind": "inclusion",
           "result": "MET",
           "confidence": "high",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient has EGFR exon-19 deletion, an EGFR-activating mutation confirming EGFR-positive tumor status, consistent with prior EGFR testing (implied by osimertinib treatment, an EGFR-TKI).",
+          "note": "Patient has documented EGFR exon-19 deletion, indicating EGFR-positive tumor status.",
           "predicate": "EGFR-positive tumor by local or central testing",
-          "source_text": "Enrollment will be restricted to participants with evidence of EGFR-positive in tumor as determined by local or central testing."
+          "source_text": "Enrollment will be restricted to participants with evidence of EGFR-positive in tumor as determined by local or central testing.",
+          "ctype": "semantic"
         },
         {
-          "id": "inc5",
+          "id": "5",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "medium",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer, progressed on first-line osimertinib",
-          "note": "Note confirms metastatic disease but does not explicitly document presence of a measurable target lesion per RECIST 1.1 (no imaging/lesion size details provided).",
-          "predicate": "At least 1 target lesion per RECIST 1.1",
-          "source_text": "At least 1 target lesion according to RECIST 1.1."
+          "note": "Note confirms metastatic NSCLC with progression but does not specify measurable target lesion per RECIST 1.1 criteria (e.g., size, location, imaging confirmation).",
+          "predicate": "at least 1 target lesion per RECIST 1.1",
+          "source_text": "At least 1 target lesion according to RECIST 1.1.",
+          "ctype": "semantic"
         },
         {
-          "id": "inc6",
+          "id": "6",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
           "evidence_phrase": "not stated",
           "note": "ECOG not found in note",
           "predicate": "ECOG performance status 0-1",
-          "source_text": "ECOG PS score: 0-1."
+          "source_text": "ECOG PS score: 0-1.",
+          "ctype": "structured"
         },
         {
-          "id": "inc7",
+          "id": "7",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No mention of estimated life expectancy",
-          "note": "The note does not provide any information about estimated life expectancy, so this cannot be determined.",
-          "predicate": "Estimated life expectancy > 12 weeks",
-          "source_text": "Estimated life expectancy> 12 weeks."
+          "note": "The note does not provide any explicit statement or clinical assessment of the patient's estimated life expectancy. While ECOG 1 suggests reasonable performance status, this alone cannot be used to definitively confirm life expectancy >12 weeks.",
+          "predicate": "estimated life expectancy > 12 weeks",
+          "source_text": "Estimated life expectancy> 12 weeks.",
+          "ctype": "semantic"
         },
         {
-          "id": "inc8",
+          "id": "8",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of contraceptive use in note",
-          "note": "The patient note does not provide any information regarding contraceptive measures or reproductive status, so it cannot be determined whether this criterion is met.",
-          "predicate": "Men or women using adequate contraceptive measures throughout the study",
-          "source_text": "Men or women should be using adequate contraceptive measures throughout the study."
+          "evidence_phrase": "No mention of contraceptive use",
+          "note": "The patient note provides no information regarding contraceptive measures or reproductive status, so this cannot be determined from the note.",
+          "predicate": "using adequate contraceptive measures throughout the study",
+          "source_text": "Men or women should be using adequate contraceptive measures throughout the study.",
+          "ctype": "semantic"
         },
         {
-          "id": "inc9",
+          "id": "9",
           "kind": "inclusion",
           "result": "MET",
           "confidence": "medium",
           "evidence_phrase": "62-year-old woman",
-          "note": "Patient is 62 years old, well beyond typical menopausal age, indicating non-childbearing potential based on age alone; no contradicting information provided.",
-          "predicate": "Women must have evidence of non-childbearing potential",
-          "source_text": "Women must have the evidence of non-childbearing potential."
+          "note": "Patient is 62 years old, well past typical menopause age, indicating non-childbearing potential, though menopause status is not explicitly documented.",
+          "predicate": "evidence of non-childbearing potential for women",
+          "source_text": "Women must have the evidence of non-childbearing potential.",
+          "ctype": "semantic"
         },
         {
-          "id": "inc10",
+          "id": "10",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of informed consent in the note",
-          "note": "The patient note does not mention whether an informed consent form was signed and dated; this administrative/regulatory detail is not addressed in the clinical summary provided.",
-          "predicate": "Signed and dated Informed Consent Form",
-          "source_text": "Signed and dated Informed Consent Form."
+          "evidence_phrase": "No mention of informed consent in note",
+          "note": "The patient note does not mention whether informed consent was obtained, signed, or dated. This is typically an administrative/procedural criterion not usually reflected in clinical notes, so cannot be confirmed as met or not met.",
+          "predicate": "signed and dated informed consent form",
+          "source_text": "Signed and dated Informed Consent Form.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc1",
+          "id": "11",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "medium",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient has known EGFR exon-19 deletion driver mutation, but no information provided about testing for other oncogenic drivers (e.g., ALK, ROS1, KRAS, MET, etc.) to confirm absence of concurrent driver mutations.",
-          "predicate": "Known oncogenic driver genes other than EGFR",
-          "source_text": "Subjects with known oncogenic driver genes other than EGFR."
+          "note": "Patient has confirmed EGFR exon 19 deletion driver mutation, but no information is provided regarding testing for other oncogenic drivers (e.g., ALK, ROS1, KRAS, MET, BRAF, RET, HER2, etc.) to confirm absence of co-occurring driver mutations. Cannot determine if criterion is met or not met without additional molecular testing data.",
+          "predicate": "known oncogenic driver genes other than EGFR",
+          "source_text": "Subjects with known oncogenic driver genes other than EGFR.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc2",
+          "id": "12",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "medium",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer, progressed on first-line osimertinib",
-          "note": "No mention of histologic transformation (e.g., small cell transformation) or mixed cell histology is provided in the note, so it cannot be determined whether this exclusion applies.",
-          "predicate": "Mixed cell histologic or phenotypic transformation",
-          "source_text": "Subjects with mixed cell histologic or with phenotypic transformation."
+          "note": "No mention of histologic transformation (e.g., to small cell) or mixed cell histology in the note; this information is simply not provided.",
+          "predicate": "mixed cell histologic or phenotypic transformation",
+          "source_text": "Subjects with mixed cell histologic or with phenotypic transformation.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc3",
+          "id": "13",
           "kind": "exclusion",
-          "result": "NOT_MET",
+          "result": "INSUFFICIENT",
           "confidence": "medium",
           "evidence_phrase": "progressed on first-line osimertinib",
-          "note": "Osimertinib is a third-generation EGFR TKI, not a fourth-generation EGFR TKI. No mention of any fourth-generation EGFR TKI (e.g., lazertinib, BLU-945, etc.) being used, so exclusion criterion is not met.",
-          "predicate": "Prior or concurrent treatment with fourth-generation EGFR TKIs",
-          "source_text": "Prior or concurrent treatment with fourth-generation EGFR tyrosine kinase inhibitors."
+          "note": "Patient has received osimertinib (a third-generation EGFR TKI), but there is no mention of any fourth-generation EGFR TKI treatment (prior or concurrent). No information is given to confirm or deny exposure to fourth-generation agents, so this cannot be determined from the note.",
+          "predicate": "prior or concurrent treatment with fourth-generation EGFR TKIs",
+          "source_text": "Prior or concurrent treatment with fourth-generation EGFR tyrosine kinase inhibitors.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc4",
+          "id": "14",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
           "evidence_phrase": "progressed on first-line osimertinib",
-          "note": "Note does not specify timing of last osimertinib/anti-tumor treatment relative to first dose of study drug or whether continued treatment is required, so exclusion status cannot be determined.",
-          "predicate": "Cytotoxic chemotherapy, investigational drugs, traditional Chinese medicine with anti-tumor indications, or other anti-tumor drugs within 14 days prior to first dose or ongoing need",
-          "source_text": "Cytotoxic chemotherapy, any other investigational drugs, traditional Chinese medicine with anti-tumor indications, or other anti-tumor drugs within 14 days prior to the first dose of HS-10504 or require continued treatment with these drugs during the study."
+          "note": "Note does not specify timing of last osimertinib dose relative to first dose of study drug, nor mention of other cytotoxic chemo, investigational drugs, or TCM use within 14 days.",
+          "predicate": "cytotoxic chemotherapy, investigational drugs, traditional Chinese medicine with anti-tumor indications, or other anti-tumor drugs within 14 days prior to first dose or requiring continued treatment during study",
+          "source_text": "Cytotoxic chemotherapy, any other investigational drugs, traditional Chinese medicine with anti-tumor indications, or other anti-tumor drugs within 14 days prior to the first dose of HS-10504 or require continued treatment with these drugs during the study.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc5",
+          "id": "15",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No mention of radiotherapy history",
-          "note": "The patient note does not mention any prior radiotherapy, local radiation, or bone marrow irradiation, so it cannot be determined whether this exclusion criterion applies.",
-          "predicate": "Local radiotherapy within 2 weeks prior to first dose or prior irradiation of more than 30% of bone marrow",
-          "source_text": "Any local radiotherapy 2 weeks prior to the first dose of study treatment; have received irradiation of more than 30% of bone marrow prior to the first dose"
+          "note": "The patient note does not mention any prior radiotherapy or irradiation history, so it cannot be determined whether she meets or fails this exclusion criterion.",
+          "predicate": "local radiotherapy within 2 weeks prior to first dose, or received irradiation of more than 30% of bone marrow prior to first dose",
+          "source_text": "Any local radiotherapy 2 weeks prior to the first dose of study treatment; have received irradiation of more than 30% of bone marrow prior to the first dose",
+          "ctype": "semantic"
         },
         {
-          "id": "exc6",
+          "id": "16",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
           "evidence_phrase": "No mention of pleural effusion, ascites, or pericardial effusion",
-          "note": "The patient note does not provide any information regarding presence or control status of pleural effusion, ascites, or pericardial effusion, so this exclusion criterion cannot be evaluated.",
-          "predicate": "Uncontrolled pleural effusion, ascites, or pericardial effusion",
-          "source_text": "Uncontrolled pleural effusion or ascites or pericardial effusion."
+          "note": "The patient note does not provide any information regarding presence or control status of pleural effusion, ascites, or pericardial effusion, so it cannot be determined whether this exclusion criterion applies.",
+          "predicate": "uncontrolled pleural effusion, ascites, or pericardial effusion",
+          "source_text": "Uncontrolled pleural effusion or ascites or pericardial effusion.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc7",
+          "id": "17",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
-          "confidence": "high",
-          "evidence_phrase": "No mention of surgery in the note",
-          "note": "The patient note does not mention any history of major surgery or its timing relative to first dose, so it cannot be determined whether this exclusion criterion is met.",
-          "predicate": "Major surgery within 4 weeks before first dose",
-          "source_text": "Major surgery within 4 weeks before the first dose."
+          "confidence": "low",
+          "evidence_phrase": "No mention of surgery in patient note",
+          "note": "The note does not mention any history of major surgery or its timing relative to first dose, so this exclusion criterion cannot be evaluated.",
+          "predicate": "major surgery within 4 weeks before first dose",
+          "source_text": "Major surgery within 4 weeks before the first dose.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc8",
+          "id": "18",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "medium",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "No mention of CNS metastases status or brain imaging results; cannot determine if symptomatic/active CNS progression is present.",
+          "note": "The note does not mention presence or absence of CNS metastases or brain imaging results, so it cannot be determined whether symptomatic or actively progressing CNS metastases are present.",
           "predicate": "CNS metastases with symptomatic or active progression",
-          "source_text": "CNS metastases with symptomatic or active progression."
+          "source_text": "CNS metastases with symptomatic or active progression.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc9",
+          "id": "19",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
-          "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "Note does not mention any residual toxicities from prior osimertinib therapy, nor their grade. Insufficient information to determine if patient has grade \u22652 residual toxicities.",
-          "predicate": "Any grade \u22652 residual toxicities from prior therapies",
-          "source_text": "Subjects who have any grade \u22652 residual toxicities from prior therapies."
+          "evidence_phrase": "No mention of residual toxicities from prior therapies",
+          "note": "The note does not describe any residual toxicities from prior osimertinib therapy, nor does it explicitly state their absence. Without this information, it cannot be determined whether the patient has grade \u22652 residual toxicities.",
+          "predicate": "any grade >=2 residual toxicities from prior therapies",
+          "source_text": "Subjects who have any grade \u22652 residual toxicities from prior therapies.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc10",
+          "id": "20",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "medium",
-          "evidence_phrase": "No mention of other primary malignancies",
-          "note": "The note does not mention any history of other primary malignancies; absence of documentation does not confirm exclusion or inclusion status.",
-          "predicate": "History of other primary malignancies",
-          "source_text": "Subjects who have history of other primary malignancies."
+          "evidence_phrase": "No mention of other primary malignancies in the note",
+          "note": "The patient note only describes the metastatic NSCLC diagnosis and treatment history; there is no information provided about any history of other primary malignancies, so it cannot be determined whether this exclusion criterion applies.",
+          "predicate": "history of other primary malignancies",
+          "source_text": "Subjects who have history of other primary malignancies.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc11",
+          "id": "21",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "No laboratory data on bone marrow, hepatic, or renal function are provided, so adequacy cannot be determined.",
-          "predicate": "Inadequate bone marrow reserve or hepatic and renal functions",
-          "source_text": "Inadequate bone marrow reserve or hepatic and renal functions."
+          "note": "No lab values (CBC, liver/renal function) are provided to determine adequacy of bone marrow, hepatic, or renal function.",
+          "predicate": "inadequate bone marrow reserve or hepatic and renal functions",
+          "source_text": "Inadequate bone marrow reserve or hepatic and renal functions.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc12",
+          "id": "22",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The patient note does not mention any history of diabetes, cardiovascular disease, hypertension, thrombotic events, severe infection, bleeding, or GI dysfunction, so it cannot be determined whether this exclusion criterion is met or not.",
-          "predicate": "Severe or poorly controlled diabetes, cardiovascular diseases, hypertension, severe arteriovenous thrombotic events, severe infection, clinically significant bleeding, or clinically significant GI dysfunction",
-          "source_text": "Subjects with severe or poorly controlled diabetes, cardiovascular diseases or hypertension; subjects with severe arteriovenous thrombotic events, severe infection, clinically significant bleeding symptoms or clinically significant gastrointestinal dysfunction."
+          "note": "The patient note does not mention diabetes, cardiovascular disease, hypertension, thrombotic events, infection, bleeding, or GI dysfunction status, so it cannot be determined whether the exclusion criterion is met.",
+          "predicate": "severe or poorly controlled diabetes, cardiovascular diseases, hypertension, severe arteriovenous thrombotic events, severe infection, clinically significant bleeding, or clinically significant GI dysfunction",
+          "source_text": "Subjects with severe or poorly controlled diabetes, cardiovascular diseases or hypertension; subjects with severe arteriovenous thrombotic events, severe infection, clinically significant bleeding symptoms or clinically significant gastrointestinal dysfunction.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc13",
+          "id": "23",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of hypersensitivity to HS-10504",
+          "note": "The patient note does not provide any information regarding hypersensitivity to HS-10504 or its ingredients, so this cannot be determined.",
+          "predicate": "hypersensitivity to any ingredient of HS-10504",
+          "source_text": "Hypersensitivity to any ingredient of HS-10504.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "24",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "medium",
-          "evidence_phrase": "No mention of hypersensitivity to HS-10504 ingredients",
-          "note": "The patient note does not mention any history of hypersensitivity or allergic reaction to HS-10504 or its components, so this cannot be determined.",
-          "predicate": "Hypersensitivity to any ingredient of HS-10504",
-          "source_text": "Hypersensitivity to any ingredient of HS-10504."
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "Note does not mention any pulmonary disease status (e.g., COPD, pulmonary fibrosis, pneumonitis) beyond the lung cancer diagnosis itself; cannot determine presence/absence of moderate-severe pulmonary disease.",
+          "predicate": "moderate to severe pulmonary diseases",
+          "source_text": "Moderate to severe pulmonary diseases.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc14",
+          "id": "25",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The note does not mention any pulmonary function tests, dyspnea severity, oxygen requirement, or other pulmonary disease status beyond the lung cancer diagnosis itself. There is insufficient information to determine whether the patient has moderate to severe pulmonary disease (e.g., COPD, ILD) separate from the malignancy.",
-          "predicate": "Moderate to severe pulmonary diseases",
-          "source_text": "Moderate to severe pulmonary diseases."
+          "note": "The note does not mention any neurological or psychiatric history, positive or negative, so it cannot be determined whether the patient has a significant prior neurological or mental disorder.",
+          "predicate": "prior history of significant neurological or mental disorders",
+          "source_text": "Prior history of significant neurological or mental disorders.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc15",
-          "kind": "exclusion",
-          "result": "INSUFFICIENT",
-          "confidence": "medium",
-          "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The patient note does not mention any history of neurological or psychiatric disorders, nor does it explicitly rule them out. Without explicit information about neurological/mental health history, this criterion cannot be determined.",
-          "predicate": "Prior history of significant neurological or mental disorders",
-          "source_text": "Prior history of significant neurological or mental disorders."
-        },
-        {
-          "id": "exc16",
+          "id": "26",
           "kind": "exclusion",
           "result": "NOT_MET",
           "confidence": "medium",
           "evidence_phrase": "62-year-old woman with metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient is 62 years old; no mention of pregnancy or breastfeeding, and given age, pregnancy is highly unlikely, effectively excluding this criterion.",
-          "predicate": "Breastfeeding, pregnant, or planning pregnancy during study period",
-          "source_text": "Women who are breastfeeding or pregnant or planned to be pregnant during the study period."
+          "note": "Patient is 62 years old; no mention of pregnancy, breastfeeding, or planned pregnancy. Given age, pregnancy is highly unlikely, and no evidence suggests she meets the exclusion criterion.",
+          "predicate": "breastfeeding, pregnant, or planning pregnancy during study",
+          "source_text": "Women who are breastfeeding or pregnant or planned to be pregnant during the study period.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc17",
+          "id": "27",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No information provided regarding compliance likelihood",
-          "note": "The patient note contains no information about the patient's ability or willingness to comply with study procedures, restrictions, or requirements, nor any investigator opinion on this matter.",
-          "predicate": "Unlikely to comply with study procedures, restrictions, and requirements per investigator opinion",
-          "source_text": "Unlikely to comply with study procedures, restrictions, and requirements in the opinion of the investigator."
+          "note": "The patient note does not mention any details about the patient's ability or willingness to comply with study procedures, restrictions, or requirements, nor any investigator judgment on this matter.",
+          "predicate": "unlikely to comply with study procedures, restrictions, and requirements per investigator judgment",
+          "source_text": "Unlikely to comply with study procedures, restrictions, and requirements in the opinion of the investigator.",
+          "ctype": "semantic"
         },
         {
-          "id": "exc18",
+          "id": "28",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
-          "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The note provides no information regarding investigator opinion on any disease/condition that would compromise subject safety or interfere with study assessments; insufficient detail to judge this criterion.",
-          "predicate": "Any disease or condition that, per investigator opinion, would compromise subject safety or interfere with study assessments",
-          "source_text": "Any disease or condition that, in the opinion of the investigator, would compromise subject safety or interfere with study assessments."
+          "evidence_phrase": "No labs or brain imaging reported",
+          "note": "This exclusion criterion is inherently subjective, requiring investigator judgment on safety/interference. The note provides no information about comorbidities, labs, organ function, or other conditions that would allow assessment of this criterion; cannot determine if met or not met.",
+          "predicate": "any disease or condition that would compromise subject safety or interfere with study assessments per investigator judgment",
+          "source_text": "Any disease or condition that, in the opinion of the investigator, would compromise subject safety or interfere with study assessments.",
+          "ctype": "semantic"
         }
       ],
       "to_verify": [
-        "Confirm: At least 1 target lesion per RECIST 1.1",
+        "Confirm: at least 1 target lesion per RECIST 1.1",
         "Confirm: ECOG performance status 0-1",
-        "Confirm: Estimated life expectancy > 12 weeks",
-        "Confirm: Men or women using adequate contraceptive measures throughout the study",
-        "Confirm: Signed and dated Informed Consent Form",
-        "Confirm: Known oncogenic driver genes other than EGFR",
-        "Confirm: Mixed cell histologic or phenotypic transformation",
-        "Confirm: Cytotoxic chemotherapy, investigational drugs, traditional Chinese medicine with anti-tumor indications, or other anti-tumor drugs within 14 days prior to first dose or ongoing need",
-        "Confirm: Local radiotherapy within 2 weeks prior to first dose or prior irradiation of more than 30% of bone marrow",
-        "Confirm: Uncontrolled pleural effusion, ascites, or pericardial effusion",
-        "Confirm: Major surgery within 4 weeks before first dose",
+        "Confirm: estimated life expectancy > 12 weeks",
+        "Confirm: using adequate contraceptive measures throughout the study",
+        "Confirm: signed and dated informed consent form",
+        "Confirm: known oncogenic driver genes other than EGFR",
+        "Confirm: mixed cell histologic or phenotypic transformation",
+        "Confirm: prior or concurrent treatment with fourth-generation EGFR TKIs",
+        "Confirm: cytotoxic chemotherapy, investigational drugs, traditional Chinese medicine with anti-tumor indications, or other anti-tumor drugs within 14 days prior to first dose or requiring continued treatment during study",
+        "Confirm: local radiotherapy within 2 weeks prior to first dose, or received irradiation of more than 30% of bone marrow prior to first dose",
+        "Confirm: uncontrolled pleural effusion, ascites, or pericardial effusion",
+        "Confirm: major surgery within 4 weeks before first dose",
         "Confirm: CNS metastases with symptomatic or active progression",
-        "Confirm: Any grade \u22652 residual toxicities from prior therapies",
-        "Confirm: History of other primary malignancies",
-        "Confirm: Inadequate bone marrow reserve or hepatic and renal functions",
-        "Confirm: Severe or poorly controlled diabetes, cardiovascular diseases, hypertension, severe arteriovenous thrombotic events, severe infection, clinically significant bleeding, or clinically significant GI dysfunction",
-        "Confirm: Hypersensitivity to any ingredient of HS-10504",
-        "Confirm: Moderate to severe pulmonary diseases",
-        "Confirm: Prior history of significant neurological or mental disorders",
-        "Confirm: Unlikely to comply with study procedures, restrictions, and requirements per investigator opinion",
-        "Confirm: Any disease or condition that, per investigator opinion, would compromise subject safety or interfere with study assessments"
+        "Confirm: any grade >=2 residual toxicities from prior therapies",
+        "Confirm: history of other primary malignancies",
+        "Confirm: inadequate bone marrow reserve or hepatic and renal functions",
+        "Confirm: severe or poorly controlled diabetes, cardiovascular diseases, hypertension, severe arteriovenous thrombotic events, severe infection, clinically significant bleeding, or clinically significant GI dysfunction",
+        "Confirm: hypersensitivity to any ingredient of HS-10504",
+        "Confirm: moderate to severe pulmonary diseases",
+        "Confirm: prior history of significant neurological or mental disorders",
+        "Confirm: unlikely to comply with study procedures, restrictions, and requirements per investigator judgment",
+        "Confirm: any disease or condition that would compromise subject safety or interfere with study assessments per investigator judgment"
       ],
       "n_met": 5,
       "n_disqualifying": 0,
-      "n_to_verify": 21
+      "n_to_verify": 22
     },
     {
       "nct_id": "NCT06234579",
@@ -324,79 +353,86 @@
       "verdict": "Ineligible",
       "criteria": [
         {
-          "id": "inc_a",
+          "id": "inc_a_dx",
           "kind": "inclusion",
           "result": "NOT_MET",
           "confidence": "high",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient has EGFR-mutant NSCLC, not ALK-rearranged NSCLC; no mention of ALK rearrangement detected by NGS, FISH, IHC, or RT-PCR.",
-          "predicate": "Histologically confirmed diagnosis of advanced NSCLC with ALK rearrangement detected by NGS (patients with ALK+ NSCLC detected at diagnosis by FISH, IHC, or RT-PCR can be included if adequate tissue for NGS is available)",
-          "source_text": "a) histologically confirmed diagnosis of advanced NSCLC with ALK rearrangement detection by NGS (ALK+ NSCLCs patients detected at diagnosis by in hybridization (FISH), immunohistochememistry (IHC), or reverse transcriptase-PCR (RT-PCR) can be included if adequate tissue for NGS is available)"
+          "note": "Patient has EGFR exon-19 deletion driven NSCLC, not ALK rearrangement. No mention of ALK positivity by NGS/FISH/IHC/RT-PCR, so criterion for ALK-rearranged NSCLC is not met.",
+          "predicate": "Histologically confirmed diagnosis of advanced NSCLC with ALK rearrangement detected by NGS (or by FISH/IHC/RT-PCR at diagnosis if adequate tissue for NGS is available)",
+          "source_text": "a) histologically confirmed diagnosis of advanced NSCLC with ALK rearrangement detection by NGS (ALK+ NSCLCs patients detected at diagnosis by in hybridization (FISH), immunohistochememistry (IHC), or reverse transcriptase-PCR (RT-PCR) can be included if adequate tissue for NGS is available)",
+          "ctype": "semantic"
         },
         {
-          "id": "inc_b",
+          "id": "inc_b_treatment",
           "kind": "inclusion",
           "result": "NOT_MET",
           "confidence": "high",
           "evidence_phrase": "progressed on first-line osimertinib",
-          "note": "Patient has EGFR exon-19-deletion NSCLC treated with osimertinib (an EGFR TKI), not alectinib, brigatinib, or lorlatinib (ALK inhibitors), which are used for ALK-rearranged NSCLC. No mention of ALK-targeted therapy.",
-          "predicate": "Received upfront treatment with alectinib, brigatinib, or lorlatinib for at least 28 days",
-          "source_text": "b) to have received upfront treatment with alectinib, brigatinib or lorlatinib for at least 28 days"
+          "note": "Patient has EGFR exon-19 deletion NSCLC treated with osimertinib (an EGFR TKI), not alectinib, brigatinib, or lorlatinib (which are ALK inhibitors typically used for ALK-rearranged NSCLC). No mention of receiving any of the specified drugs.",
+          "predicate": "Received upfront treatment with alectinib, brigatinib or lorlatinib for at least 28 days",
+          "source_text": "b) to have received upfront treatment with alectinib, brigatinib or lorlatinib for at least 28 days",
+          "ctype": "semantic"
         },
         {
-          "id": "inc_c",
+          "id": "inc_c_ecog",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
           "evidence_phrase": "not stated",
           "note": "ECOG not found in note",
           "predicate": "ECOG PS 0-2",
-          "source_text": "c) ECOG PS 0-2"
+          "source_text": "c) ECOG PS 0-2",
+          "ctype": "structured"
         },
         {
-          "id": "inc_d",
+          "id": "inc_d_age",
           "kind": "inclusion",
           "result": "MET",
           "confidence": "high",
           "evidence_phrase": "62-year-old",
           "note": "age=62.0 vs [18,None]",
-          "predicate": "Age >= 18 years",
-          "source_text": "d) adult patients (aged \u2265 18 years) at the moment of diagnosis"
+          "predicate": "Age >= 18 years at diagnosis",
+          "source_text": "d) adult patients (aged \u2265 18 years) at the moment of diagnosis",
+          "ctype": "structured"
         },
         {
-          "id": "inc_e",
+          "id": "inc_e_consent",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No mention of informed consent in patient note",
-          "note": "The patient note does not mention whether informed consent was signed or obtained; this administrative/regulatory fact is typically not documented in clinical notes but is required per protocol. Cannot determine from given information.",
-          "predicate": "Signing of informed consent approved by the local Ethic Committee",
-          "source_text": "e) signing of informed consent approved by the local Ethic Committee"
+          "note": "The patient note does not mention whether informed consent was signed or approved by an Ethics Committee; this is an administrative/procedural criterion not typically documented in clinical narrative.",
+          "predicate": "Signed informed consent approved by the local Ethics Committee",
+          "source_text": "e) signing of informed consent approved by the local Ethic Committee",
+          "ctype": "semantic"
         },
         {
-          "id": "exc_a1",
+          "id": "exc_a_no_alk",
           "kind": "exclusion",
           "result": "MET",
-          "confidence": "medium",
+          "confidence": "high",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient has lung cancer driven by EGFR exon-19 deletion; no mention of ALK rearrangement, indicating absence of ALK rearrangement, which meets the exclusion criterion (lung cancer without ALK rearrangement).",
+          "note": "Patient has NSCLC driven by EGFR exon-19 deletion, with no mention of ALK rearrangement; thus lung cancer diagnosis without ALK rearrangement, meeting exclusion criterion.",
           "predicate": "Diagnosis of lung cancer without ALK rearrangement",
-          "source_text": "a) Diagnosis of lung cancer without ALK rearrangement"
+          "source_text": "a) Diagnosis of lung cancer without ALK rearrangement",
+          "ctype": "semantic"
         },
         {
-          "id": "exc_a2",
+          "id": "exc_b_withdrawal",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "medium",
           "evidence_phrase": "progressed on first-line osimertinib",
-          "note": "The note indicates disease progression on osimertinib, which suggests treatment was not withdrawn early due to toxicity without progression. However, there is no explicit statement addressing whether treatment was discontinued due to toxicity at any point, so this cannot be fully confirmed as excluded or not.",
+          "note": "The note indicates disease progression on osimertinib, with no mention of early treatment withdrawal due to toxicity. There is no information suggesting the patient discontinued treatment prematurely due to toxicity; rather, progression is documented. However, the note does not explicitly state whether treatment was withdrawn early for toxicity reasons at any point, so this cannot be fully confirmed as NOT_MET without more explicit statement, though the mention of progression suggests the exclusion does not apply.",
           "predicate": "Early withdrawal of treatment due to toxicity without evidence of radiological disease progression",
-          "source_text": "a) early withdrawn of treatment due to toxicity without evidence of radiological disease progression cannot be eligible for the study"
+          "source_text": "a) early withdrawn of treatment due to toxicity without evidence of radiological disease progression cannot be eligible for the study",
+          "ctype": "semantic"
         }
       ],
       "to_verify": [
         "Confirm: ECOG PS 0-2",
-        "Confirm: Signing of informed consent approved by the local Ethic Committee",
+        "Confirm: Signed informed consent approved by the local Ethics Committee",
         "Confirm: Early withdrawal of treatment due to toxicity without evidence of radiological disease progression"
       ],
       "n_met": 2,
@@ -418,7 +454,8 @@
           "evidence_phrase": "62-year-old",
           "note": "age=62.0 vs [18,None]",
           "predicate": "age >= 18 years",
-          "source_text": "At least 18 years of age at the time of cemiplimab treatment initiation"
+          "source_text": "At least 18 years of age at the time of cemiplimab treatment initiation",
+          "ctype": "structured"
         },
         {
           "id": "inc2",
@@ -426,69 +463,76 @@
           "result": "MET",
           "confidence": "medium",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient has documented NSCLC diagnosis; histology subtype (squamous/non-squamous) not explicitly stated but NSCLC diagnosis itself satisfies broad criterion.",
-          "predicate": "Diagnosed with histologically or cytologically documented squamous or non-squamous NSCLC",
-          "source_text": "Has been diagnosed with histologically or cytologically documented squamous or non-squamous NSCLC"
+          "note": "Patient has documented NSCLC diagnosis (EGFR exon-19 deletion), consistent with non-squamous NSCLC subtype, satisfying the histologic/cytologic documentation requirement.",
+          "predicate": "histologically or cytologically documented squamous or non-squamous NSCLC",
+          "source_text": "Has been diagnosed with histologically or cytologically documented squamous or non-squamous NSCLC",
+          "ctype": "semantic"
         },
         {
           "id": "inc3",
           "kind": "inclusion",
           "result": "NOT_MET",
           "confidence": "medium",
-          "evidence_phrase": "progressed on first-line osimertinib; EGFR exon-19-deletion NSCLC",
-          "note": "Patient has an EGFR-mutant NSCLC progressing on osimertinib; there is no mention of a cemiplimab-based regimen being prescribed. Cemiplimab (anti-PD-1) is not typically indicated per SmPC in EGFR-driven NSCLC without prior chemo, and the note does not state cemiplimab was prescribed at all.",
-          "predicate": "Prescribed a cemiplimab-based regimen as part of routine clinical practice per SmPC",
-          "source_text": "Prescribed a cemiplimab-based regimen as part of routine clinical practice as determined by the treating physician per standard of care and in accordance with the Summary of Product Characteristics (SmPC)."
+          "evidence_phrase": "progressed on first-line osimertinib; no mention of cemiplimab",
+          "note": "The patient has EGFR exon-19-deletion NSCLC, which typically is treated with EGFR TKIs; cemiplimab (a PD-1 inhibitor) is generally not indicated per SmPC for EGFR-mutant NSCLC, and there is no mention of the patient being prescribed cemiplimab or any immunotherapy regimen.",
+          "predicate": "prescribed cemiplimab-based regimen per routine clinical practice and SmPC",
+          "source_text": "Prescribed a cemiplimab-based regimen as part of routine clinical practice as determined by the treating physician per standard of care and in accordance with the Summary of Product Characteristics (SmPC).",
+          "ctype": "semantic"
         },
         {
           "id": "inc4",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No information provided regarding ability to understand and complete questionnaires",
-          "note": "The patient note does not mention cognitive status, language proficiency, or ability to complete study questionnaires; cannot determine if criterion is met.",
-          "predicate": "Can understand and complete the study-related questionnaires",
-          "source_text": "Can understand and complete the study-related questionnaires"
+          "evidence_phrase": "No information provided regarding ability to understand or complete questionnaires",
+          "note": "The note does not mention cognitive status, language proficiency, or ability to complete study questionnaires, so this cannot be determined.",
+          "predicate": "able to understand and complete study-related questionnaires",
+          "source_text": "Can understand and complete the study-related questionnaires",
+          "ctype": "semantic"
         },
         {
           "id": "inc5",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of informed consent status in the note",
-          "note": "The patient note does not mention anything about the patient's legal capacity to consent or whether informed consent was signed. This is typically an administrative/procedural criterion assessed at enrollment, not documented in clinical notes describing patient's disease characteristics.",
-          "predicate": "Legally capable of providing written informed consent, and has signed informed consent prior to any study activities",
-          "source_text": "Must be legally capable of providing written consent for participation in the study and have signed informed consent prior to any study activities"
+          "evidence_phrase": "No mention of legal capacity or informed consent in patient note",
+          "note": "The patient note does not provide any information regarding the patient's legal capacity to provide informed consent or whether consent was signed. This is a procedural/administrative criterion that would typically be documented at enrollment but is absent from the clinical note.",
+          "predicate": "legally capable of providing written informed consent",
+          "source_text": "Must be legally capable of providing written consent for participation in the study and have signed informed consent prior to any study activities",
+          "ctype": "semantic"
         },
         {
           "id": "exc1",
           "kind": "exclusion",
-          "result": "INSUFFICIENT",
-          "confidence": "low",
-          "evidence_phrase": "No mention of cemiplimab in the patient note",
-          "note": "The note only mentions prior treatment with osimertinib (an EGFR TKI); there is no information about prior immunotherapy or cemiplimab use, so it cannot be determined whether the patient meets this exclusion criterion.",
-          "predicate": "Has received cemiplimab prior to enrollment",
-          "source_text": "Has received cemiplimab prior to enrollment"
+          "result": "NOT_MET",
+          "confidence": "medium",
+          "evidence_phrase": "progressed on first-line osimertinib; no mention of cemiplimab",
+          "note": "Patient's treatment history only includes osimertinib; no prior cemiplimab treatment is documented, so the exclusion criterion is not met.",
+          "predicate": "prior cemiplimab treatment before enrollment",
+          "source_text": "Has received cemiplimab prior to enrollment",
+          "ctype": "semantic"
         },
         {
           "id": "exc2",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
-          "confidence": "medium",
-          "evidence_phrase": "No mention of autoimmune disease in the note",
-          "note": "The patient note does not mention any autoimmune disease, controlled or uncontrolled. No information is provided to determine whether this exclusion criterion applies.",
-          "predicate": "Has uncontrolled autoimmune disease",
-          "source_text": "Has uncontrolled autoimmune disease"
+          "confidence": "high",
+          "evidence_phrase": "No mention of autoimmune disease",
+          "note": "The note does not mention any autoimmune disease history or status, so it cannot be determined whether the patient has an uncontrolled autoimmune disease.",
+          "predicate": "uncontrolled autoimmune disease",
+          "source_text": "Has uncontrolled autoimmune disease",
+          "ctype": "semantic"
         },
         {
           "id": "exc3",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
-          "confidence": "medium",
+          "confidence": "high",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The note does not mention any contraindications to cemiplimab (e.g., hypersensitivity, autoimmune disease, prior severe immune-related adverse events), nor does it provide sufficient clinical/laboratory data to assess for such contraindications.",
-          "predicate": "Has a contraindication to cemiplimab as noted in the local SmPC",
-          "source_text": "Has a contraindication to cemiplimab as noted in the local SmPC"
+          "note": "No information provided about hypersensitivity or other contraindications to cemiplimab per local SmPC.",
+          "predicate": "contraindication to cemiplimab per local SmPC",
+          "source_text": "Has a contraindication to cemiplimab as noted in the local SmPC",
+          "ctype": "semantic"
         },
         {
           "id": "exc4",
@@ -496,33 +540,34 @@
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No mention of concurrent study participation",
-          "note": "The patient note does not provide any information regarding whether the patient is currently enrolled in another investigational drug or procedure study.",
-          "predicate": "Concurrently participating in any other study of an investigational drug or procedure",
-          "source_text": "Is concurrently participating in any other study of an investigational drug or procedure"
+          "note": "The patient note does not provide any information regarding participation in another investigational drug or procedure study, so this cannot be determined.",
+          "predicate": "concurrently participating in another investigational drug/procedure study",
+          "source_text": "Is concurrently participating in any other study of an investigational drug or procedure",
+          "ctype": "semantic"
         },
         {
           "id": "exc5",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
-          "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The patient note does not mention any cognitive impairment or medical condition affecting ability to complete questionnaires; no information provided to assess this criterion.",
-          "predicate": "Has cognitive impairment or other medical condition that would interfere with ability to complete study-related questionnaires",
-          "source_text": "Has cognitive impairment or other medical condition that, in the opinion of the investigator, would interfere with the ability to complete the study-related questionnaires"
+          "evidence_phrase": "No mention of cognitive impairment or questionnaire-related issues",
+          "note": "The patient note does not provide any information regarding cognitive status or ability to complete questionnaires, so this exclusion criterion cannot be assessed.",
+          "predicate": "cognitive impairment or medical condition interfering with ability to complete questionnaires",
+          "source_text": "Has cognitive impairment or other medical condition that, in the opinion of the investigator, would interfere with the ability to complete the study-related questionnaires",
+          "ctype": "semantic"
         }
       ],
       "to_verify": [
-        "Confirm: Can understand and complete the study-related questionnaires",
-        "Confirm: Legally capable of providing written informed consent, and has signed informed consent prior to any study activities",
-        "Confirm: Has received cemiplimab prior to enrollment",
-        "Confirm: Has uncontrolled autoimmune disease",
-        "Confirm: Has a contraindication to cemiplimab as noted in the local SmPC",
-        "Confirm: Concurrently participating in any other study of an investigational drug or procedure",
-        "Confirm: Has cognitive impairment or other medical condition that would interfere with ability to complete study-related questionnaires"
+        "Confirm: able to understand and complete study-related questionnaires",
+        "Confirm: legally capable of providing written informed consent",
+        "Confirm: uncontrolled autoimmune disease",
+        "Confirm: contraindication to cemiplimab per local SmPC",
+        "Confirm: concurrently participating in another investigational drug/procedure study",
+        "Confirm: cognitive impairment or medical condition interfering with ability to complete questionnaires"
       ],
       "n_met": 2,
       "n_disqualifying": 1,
-      "n_to_verify": 7
+      "n_to_verify": 6
     },
     {
       "nct_id": "NCT02468024",
@@ -539,7 +584,8 @@
           "evidence_phrase": "62-year-old",
           "note": "age=62.0 vs [18,None]",
           "predicate": "age > 18 years",
-          "source_text": "Age > 18 years."
+          "source_text": "Age > 18 years.",
+          "ctype": "structured"
         },
         {
           "id": "1.2",
@@ -549,17 +595,19 @@
           "evidence_phrase": "ECOG 1",
           "note": "ecog=1.0 vs [0,2]",
           "predicate": "ECOG 0-2",
-          "source_text": "ECOG/Zubrod performance status (PS) 0, 1, or 2 (reference Appendix C)."
+          "source_text": "ECOG/Zubrod performance status (PS) 0, 1, or 2 (reference Appendix C).",
+          "ctype": "structured"
         },
         {
           "id": "1.3",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The note confirms NSCLC diagnosis (EGFR exon-19-deletion, metastatic) but provides no radiographic description of ground glass opacities or solid component percentage, so this specific imaging criterion cannot be assessed.",
-          "predicate": "radiographic findings consistent with NSCLC including ground glass opacities with solid component >=50%",
-          "source_text": "Radiographic findings consistent with non-small cell lung cancer, including lesions with ground glass opacities with a solid component of 50% or greater."
+          "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer, progressed on first-line osimertinib",
+          "note": "Note confirms NSCLC diagnosis but provides no radiographic description of ground glass opacity or solid component percentage.",
+          "predicate": "Radiographic findings consistent with NSCLC including GGO with solid component >=50%",
+          "source_text": "Radiographic findings consistent with non-small cell lung cancer, including lesions with ground glass opacities with a solid component of 50% or greater.",
+          "ctype": "semantic"
         },
         {
           "id": "1.4",
@@ -567,9 +615,10 @@
           "result": "INSUFFICIENT",
           "confidence": "medium",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer, progressed on first-line osimertinib",
-          "note": "The note confirms NSCLC diagnosis but does not specify whether biopsy confirmation occurred within 180 days prior to randomization; timing of biopsy is not mentioned.",
-          "predicate": "primary lung tumor biopsy confirmed NSCLC within 180 days prior to randomization",
-          "source_text": "The primary tumor in the lung must be biopsy confirmed non-small cell lung cancer within 180 days prior to randomization."
+          "note": "Note confirms NSCLC diagnosis but does not specify timing of biopsy confirmation relative to randomization (no date or 180-day window mentioned).",
+          "predicate": "Primary lung tumor biopsy confirmed NSCLC within 180 days prior to randomization",
+          "source_text": "The primary tumor in the lung must be biopsy confirmed non-small cell lung cancer within 180 days prior to randomization.",
+          "ctype": "semantic"
         },
         {
           "id": "1.5",
@@ -577,39 +626,43 @@
           "result": "NOT_MET",
           "confidence": "high",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer, progressed on first-line osimertinib",
-          "note": "Patient has metastatic disease, which is inconsistent with clinical stage IA or IB (early-stage, localized) disease required by the criterion. No tumor size or PET/PET-CT staging information provided, but metastatic status alone disqualifies from early-stage criterion.",
-          "predicate": "tumor <=4 cm maximum diameter, clinical stage IA and selected IB by PET/PET-CT within 180 days prior to randomization",
-          "source_text": "Tumor \u2264 4 cm maximum diameter, including clinical stage IA and selected IB by PET or PET integrated with a simultaneous CT scan (PET-CT) of the chest and upper abdomen performed within 180 days prior to randomization (reference Appendix A & B). Repeat imaging within 90 days prior to randomization is recommended for re-staging but is not required based on institutional norms."
+          "note": "Patient has metastatic (stage IV) NSCLC, not clinical stage IA or selected IB early-stage disease; no PET/PET-CT staging within 180 days reported.",
+          "predicate": "Tumor <=4 cm maximum diameter, clinical stage IA and selected IB by PET or PET-CT of chest and upper abdomen within 180 days prior to randomization",
+          "source_text": "Tumor \u2264 4 cm maximum diameter, including clinical stage IA and selected IB by PET or PET integrated with a simultaneous CT scan (PET-CT) of the chest and upper abdomen performed within 180 days prior to randomization (reference Appendix A & B). Repeat imaging within 90 days prior to randomization is recommended for re-staging but is not required based on institutional norms.",
+          "ctype": "semantic"
         },
         {
           "id": "1.6",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of mediastinal lymph node status or biopsy",
-          "note": "The patient note does not mention any clinically suspicious mediastinal lymph nodes, CT/PET findings, or biopsy confirmation of nodal status, so this criterion cannot be assessed.",
-          "predicate": "clinically suspicious mediastinal lymph nodes confirmed negative for NSCLC involvement by biopsy method within 180 days of randomization",
-          "source_text": "All clinically suspicious mediastinal N1, N2, or N3 lymph nodes (> 1 cm short-axis dimension on CT scan and/or positive on PET scan) confirmed negative for involvement with NSCLC by one of the following methods: mediastinoscopy, anterior mediastinotomy, EUS/EBUS guided needle aspiration, CT-guided, video-assisted thoracoscopic or open lymph node biopsy within 180 days of randomization."
+          "evidence_phrase": "No mention of mediastinal lymph node evaluation or biopsy status",
+          "note": "Patient note lacks any information regarding mediastinal N1-N3 lymph node status, imaging findings, or biopsy confirmation, making it impossible to determine if this criterion is met.",
+          "predicate": "All clinically suspicious mediastinal N1-N3 lymph nodes confirmed negative for NSCLC involvement by biopsy method within 180 days of randomization",
+          "source_text": "All clinically suspicious mediastinal N1, N2, or N3 lymph nodes (> 1 cm short-axis dimension on CT scan and/or positive on PET scan) confirmed negative for involvement with NSCLC by one of the following methods: mediastinoscopy, anterior mediastinotomy, EUS/EBUS guided needle aspiration, CT-guided, video-assisted thoracoscopic or open lymph node biopsy within 180 days of randomization.",
+          "ctype": "semantic"
         },
         {
           "id": "1.7",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
-          "confidence": "medium",
-          "evidence_phrase": "No mention of tumor location or surgical evaluation",
-          "note": "The patient note describes metastatic NSCLC progressing on osimertinib but does not mention any surgical evaluation, tumor location, or thoracic surgeon assessment regarding sublobar resection feasibility. This is metastatic disease, which typically would not be a surgical candidate for sublobar resection, but no explicit statement is provided to confirm or deny this criterion.",
-          "predicate": "tumor location verified by thoracic surgeon to permit sublobar resection",
-          "source_text": "Tumor verified by a thoracic surgeon to be in a location that will permit sublobar resection."
+          "confidence": "high",
+          "evidence_phrase": "No mention of tumor location or thoracic surgeon evaluation",
+          "note": "Patient note lacks any information about tumor location, surgical candidacy, or thoracic surgeon assessment for sublobar resection; this appears to be a metastatic disease case where surgical resection criteria may not even apply, but no explicit statement is provided to confirm or deny.",
+          "predicate": "Tumor location verified by thoracic surgeon to permit sublobar resection",
+          "source_text": "Tumor verified by a thoracic surgeon to be in a location that will permit sublobar resection.",
+          "ctype": "semantic"
         },
         {
           "id": "1.8",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of tumor location relative to proximal bronchial tree",
-          "note": "The patient note does not provide any information about the tumor's location (peripheral vs central) or its proximity to the proximal bronchial tree, so this criterion cannot be verified.",
-          "predicate": "tumor located peripherally within lung, not within 2 cm of proximal bronchial tree",
-          "source_text": "Tumor located peripherally within the lung. NOTE: Peripheral is defined as not touching any surface within 2 cm of the proximal bronchial tree in all directions. See bronchial tree diagram below. Patients with non-peripheral (central) tumors are NOT eligible."
+          "evidence_phrase": "No information provided about tumor location relative to bronchial tree",
+          "note": "The patient note does not mention tumor location (peripheral vs central) or its distance from the proximal bronchial tree.",
+          "predicate": "Tumor located peripherally in lung (not within 2 cm of proximal bronchial tree)",
+          "source_text": "Tumor located peripherally within the lung. NOTE: Peripheral is defined as not touching any surface within 2 cm of the proximal bronchial tree in all directions. See bronchial tree diagram below. Patients with non-peripheral (central) tumors are NOT eligible.",
+          "ctype": "semantic"
         },
         {
           "id": "1.9",
@@ -617,9 +670,10 @@
           "result": "NOT_MET",
           "confidence": "high",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient explicitly has metastatic NSCLC, indicating presence of distant metastases, which directly contradicts the inclusion criterion of no evidence of distant metastases.",
-          "predicate": "no evidence of distant metastases",
-          "source_text": "No evidence of distant metastases."
+          "note": "Patient explicitly has metastatic NSCLC, indicating presence of distant metastases, which contradicts the inclusion criterion requiring no evidence of distant metastases.",
+          "predicate": "No evidence of distant metastases",
+          "source_text": "No evidence of distant metastases.",
+          "ctype": "semantic"
         },
         {
           "id": "1.10",
@@ -627,9 +681,10 @@
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The patient note does not mention pulmonary function tests (PFTs) or any surgeon documentation regarding inability to perform PFTs, so it cannot be determined whether this criterion is met.",
-          "predicate": "pulmonary function tests available within 180 days prior to registration, or surgeon documentation if unable to perform",
-          "source_text": "Availability of pulmonary function tests (PFTs - spirometry, DLCO, +/- arterial blood gases) within 180 days prior to registration. Patients with tracheotomy, etc, who are physically unable to perform PFTs (and therefore cannot be tested for the Major criteria in 3.1.11 below) are potentially still eligible if a study credentialed thoracic surgeon documents that the patient's health characteristics would otherwise have been acceptable for eligibility as a high risk but nonetheless operable patient (in particular be eligible for sublobar resection)."
+          "note": "Note contains no mention of pulmonary function tests, spirometry, DLCO, arterial blood gases, or any documented exception for inability to perform PFTs.",
+          "predicate": "Pulmonary function tests (PFTs) available within 180 days prior to registration, or documented exception for physically unable patients",
+          "source_text": "Availability of pulmonary function tests (PFTs - spirometry, DLCO, +/- arterial blood gases) within 180 days prior to registration. Patients with tracheotomy, etc, who are physically unable to perform PFTs (and therefore cannot be tested for the Major criteria in 3.1.11 below) are potentially still eligible if a study credentialed thoracic surgeon documents that the patient's health characteristics would otherwise have been acceptable for eligibility as a high risk but nonetheless operable patient (in particular be eligible for sublobar resection).",
+          "ctype": "semantic"
         },
         {
           "id": "1.11",
@@ -637,19 +692,21 @@
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "Patient note lacks any information on FEV1, DLCO, surgeon assessment, age (62, below age threshold of 75), pulmonary hypertension, LV function, pO2/SpO2, pCO2, or MMRC dyspnea scale, so high-risk surgical criteria cannot be evaluated.",
-          "predicate": "patient meets high risk surgical criteria via at least one major criterion or at least two minor criteria (FEV1, DLCO, surgeon assessment, age, pulmonary hypertension, LV function, pO2/SpO2, pCO2, MMRC dyspnea scale)",
-          "source_text": "To define eligibility of patients being at high risk for surgery, certain criteria must be met. Any one (1) of the following major criteria will define the high risk status for eligibility: Major Criteria - FEV1 \u2264 50% predicted (pre-bronchodilator value); DLCO \u2264 50% predicted (pre-bronchodilator value); Study credentialed thoracic surgeon believes the patient is potentially operable but that a lobectomy or pneumonectomy would be poorly tolerated by the patient for tangible or intangible reasons. The belief must be declared and documented in the medical record prior to randomization. If any of the major criteria are met, the patient is eligible based on high risk for surgery and minor criteria do not need to be considered. However, if no major criteria is met, at least two (2) minor criteria being met will also define eligibility for meeting the high risk status. Any two (2) of the following minor criteria will define the high risk status for eligibility: Minor Criteria - Age \u226575; FEV1 51-60% predicted (pre-bronchodilator value); DLCO 51-60% predicted (pre-bronchodilator value); Pulmonary hypertension (defined as a pulmonary artery systolic pressure greater than 40mm Hg) as estimated by echocardiography or right heart catheterization; Poor left ventricular function (defined as an ejection fraction of 40% or less); Resting or Exercise Arterial pO2 \u2264 55 mm Hg or SpO2 \u2264 88%; pCO2 > 45 mm Hg; Modified Medical Research Council (MMRC) Dyspnea Scale \u2265 3."
+          "note": "The note provides no data on FEV1, DLCO, surgeon assessment, age (62, below 75), pulmonary hypertension, LVEF, pO2/SpO2, pCO2, or MMRC dyspnea scale. No information is available to determine if major or minor high-risk-for-surgery criteria are met.",
+          "predicate": "Patient meets high-risk-for-surgery criteria: at least 1 major criterion (FEV1<=50% predicted, DLCO<=50% predicted, or surgeon-documented poor tolerance of lobectomy/pneumonectomy) OR at least 2 minor criteria (age>=75, FEV1 51-60% predicted, DLCO 51-60% predicted, pulmonary hypertension >40mmHg, LVEF<=40%, resting/exercise pO2<=55mmHg or SpO2<=88%, pCO2>45mmHg, MMRC dyspnea scale>=3)",
+          "source_text": "To define eligibility of patients being at high risk for surgery, certain criteria must be met. Any one (1) of the following major criteria will define the high risk status for eligibility: Major Criteria - FEV1 \u2264 50% predicted (pre-bronchodilator value) - DLCO \u2264 50% predicted (pre-bronchodilator value) - Study credentialed thoracic surgeon believes the patient is potentially operable but that a lobectomy or pneumonectomy would be poorly tolerated by the patient for tangible or intangible reasons. The belief must be declared and documented in the medical record prior to randomization. If any of the major criteria are met, the patient is eligible based on high risk for surgery and minor criteria do not need to be considered. However, if no major criteria is met, at least two (2) minor criteria being met will also define eligibility for meeting the high risk status. Any two (2) of the following minor criteria will define the high risk status for eligibility: Minor Criteria - Age \u226575 - FEV1 51-60% predicted (pre-bronchodilator value) - DLCO 51-60% predicted (pre-bronchodilator value) - Pulmonary hypertension (defined as a pulmonary artery systolic pressure greater than 40mm Hg) as estimated by echocardiography or right heart catheterization - Poor left ventricular function (defined as an ejection fraction of 40% or less) - Resting or Exercise Arterial pO2 \u2264 55 mm Hg or SpO2 \u2264 88% - pCO2 > 45 mm Hg - Modified Medical Research Council (MMRC) Dyspnea Scale \u2265 3.",
+          "ctype": "semantic"
         },
         {
           "id": "1.12",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of prior radiation therapy",
-          "note": "The patient note does not provide any information about prior thoracic radiation therapy history, so it cannot be determined whether this criterion is met.",
-          "predicate": "no prior ipsilateral intra-thoracic radiation therapy; contralateral radiation allowed if >3 years prior without field overlap",
-          "source_text": "No prior intra-thoracic radiation therapy for previously identified intra-thoracic primary tumor (e.g. previous lung cancer) on the ipsilateral side. NOTE: Previous radiotherapy as part of treatment for head and neck, breast, or other non-thoracic cancer is permitted to the ipsilateral side so long as possible radiation fields would not overlap. NOTE: Radiotherapy to the contralateral lung is allowed so long as it was completed more than 3 years prior to randomization and there is no overlap of radiation fields."
+          "evidence_phrase": "No mention of prior radiation therapy in patient note",
+          "note": "The patient note does not provide any information regarding prior thoracic or intra-thoracic radiation therapy history, so it cannot be determined whether this criterion is met.",
+          "predicate": "No prior intra-thoracic radiation therapy for previously identified intra-thoracic primary tumor on ipsilateral side; contralateral prior radiotherapy allowed if completed >3 years prior and no field overlap",
+          "source_text": "No prior intra-thoracic radiation therapy for previously identified intra-thoracic primary tumor (e.g. previous lung cancer) on the ipsilateral side. NOTE: Previous radiotherapy as part of treatment for head and neck, breast, or other non-thoracic cancer is permitted to the ipsilateral side so long as possible radiation fields would not overlap. NOTE: Radiotherapy to the contralateral lung is allowed so long as it was completed more than 3 years prior to randomization and there is no overlap of radiation fields.",
+          "ctype": "semantic"
         },
         {
           "id": "1.13",
@@ -657,49 +714,54 @@
           "result": "NOT_MET",
           "confidence": "high",
           "evidence_phrase": "progressed on first-line osimertinib",
-          "note": "Patient has already received prior systemic therapy (osimertinib) specifically for the lung cancer being treated on this protocol, which violates the criterion requiring no previous chemotherapy/targeted therapy, radiotherapy, or surgical resection for this cancer.",
-          "predicate": "no previous chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol",
-          "source_text": "Previous chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol is NOT permitted."
+          "note": "Patient has already received prior systemic therapy (osimertinib) specifically for the lung cancer being treated on this protocol, which violates the criterion prohibiting prior chemotherapy/targeted therapy for this cancer.",
+          "predicate": "No previous chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol",
+          "source_text": "Previous chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol is NOT permitted.",
+          "ctype": "semantic"
         },
         {
           "id": "1.14",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of prior lung resection in the note",
-          "note": "The patient note does not provide any information regarding prior surgical history, specifically lung resection on the ipsilateral side. Without this information, it cannot be determined whether the criterion is met.",
-          "predicate": "no prior lung resection on ipsilateral side",
-          "source_text": "No prior lung resection on the ipsilateral side."
+          "evidence_phrase": "No mention of prior lung resection",
+          "note": "The patient note does not provide any information about prior lung surgery or resection, so it cannot be determined whether this criterion is met.",
+          "predicate": "No prior lung resection on ipsilateral side",
+          "source_text": "No prior lung resection on the ipsilateral side.",
+          "ctype": "semantic"
         },
         {
           "id": "1.15",
           "kind": "inclusion",
-          "result": "MET",
-          "confidence": "medium",
-          "evidence_phrase": "62-year-old woman",
-          "note": "Patient is 62 years old, well beyond typical reproductive/childbearing age and highly likely postmenopausal, satisfying the non-pregnant/non-childbearing potential criterion by clinical convention, though explicit menopausal status/pregnancy test not documented.",
-          "predicate": "non-pregnant, non-lactating; negative pregnancy test if of childbearing potential; peri-menopausal amenorrheic >12 months to be considered not childbearing potential",
-          "source_text": "Non-pregnant and non-lactating. Women of child-bearing potential must have a negative urine or serum pregnancy test prior to registration. Peri-menopausal women must be amenorrheic > 12 months prior to registration to be considered not of childbearing potential."
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "Patient is 62 years old, likely post-menopausal, but no explicit statement of menopausal status, pregnancy test, or lactation status is provided in the note to confirm criterion compliance.",
+          "predicate": "Non-pregnant and non-lactating; negative pregnancy test required for women of child-bearing potential prior to registration",
+          "source_text": "Non-pregnant and non-lactating. Women of child-bearing potential must have a negative urine or serum pregnancy test prior to registration. Peri-menopausal women must be amenorrheic > 12 months prior to registration to be considered not of childbearing potential.",
+          "ctype": "semantic"
         },
         {
           "id": "1.16",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
-          "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The note does not mention any prior invasive malignancy history other than the current metastatic NSCLC, so it's unclear whether the patient has a second prior invasive malignancy that would need to meet the 3-year disease-free criterion.",
-          "predicate": "no prior invasive malignancy unless disease-free for >=3 years (except non-melanoma skin cancer, in-situ cancers)",
-          "source_text": "No prior invasive malignancy, unless disease-free for \u2265 3 years prior to registration (exceptions: non-melanoma skin cancer, in-situ cancers)."
+          "evidence_phrase": "No mention of prior malignancy history",
+          "note": "The note does not provide any information about prior invasive malignancies other than the current NSCLC, so it cannot be determined whether the patient meets or fails this criterion.",
+          "predicate": "No prior invasive malignancy unless disease-free for >=3 years prior to registration (exceptions: non-melanoma skin cancer, in-situ cancers)",
+          "source_text": "No prior invasive malignancy, unless disease-free for \u2265 3 years prior to registration (exceptions: non-melanoma skin cancer, in-situ cancers).",
+          "ctype": "semantic"
         },
         {
           "id": "1.17",
           "kind": "inclusion",
           "result": "INSUFFICIENT",
-          "confidence": "high",
-          "evidence_phrase": "No mention of consent ability in note",
-          "note": "The patient note does not provide any information regarding the patient's cognitive status or ability to understand and sign informed consent.",
-          "predicate": "ability to understand and sign written informed consent",
-          "source_text": "Ability to understand and sign a written informed consent."
+          "confidence": "medium",
+          "evidence_phrase": "No mention of consent capacity in note",
+          "note": "The patient note does not provide any information about the patient's ability to understand or sign informed consent; no cognitive or mental status details are given.",
+          "predicate": "Ability to understand and sign written informed consent",
+          "source_text": "Ability to understand and sign a written informed consent.",
+          "ctype": "semantic"
         },
         {
           "id": "2.1",
@@ -709,7 +771,8 @@
           "evidence_phrase": "62-year-old",
           "note": "age=62.0 vs [None,18]",
           "predicate": "age < 18",
-          "source_text": "Age <18"
+          "source_text": "Age <18",
+          "ctype": "structured"
         },
         {
           "id": "2.2",
@@ -717,39 +780,43 @@
           "result": "NOT_MET",
           "confidence": "high",
           "evidence_phrase": "ECOG 1",
-          "note": "ecog=1.0 vs [4,None]",
-          "predicate": "ECOG performance status greater than 3",
-          "source_text": "ECOG/Zubrod performance status (PS) greater than 3."
+          "note": "ecog=1.0 vs [3,None]",
+          "predicate": "ECOG performance status > 3",
+          "source_text": "ECOG/Zubrod performance status (PS) greater than 3.",
+          "ctype": "structured"
         },
         {
           "id": "2.3",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "medium",
-          "evidence_phrase": "No radiographic findings described in note",
-          "note": "The patient note does not mention any ground glass opacities or solid component percentage on imaging, so it cannot be determined whether this exclusion criterion applies.",
-          "predicate": "radiographic ground glass opacities with less than 50% solid component",
-          "source_text": "Radiographic findings with ground glass opacities and less than 50% solid component will be excluded."
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "The patient note does not mention any radiographic findings regarding ground glass opacities or solid component percentage, so it cannot be determined whether this exclusion criterion applies.",
+          "predicate": "Radiographic findings with ground glass opacities and less than 50% solid component",
+          "source_text": "Radiographic findings with ground glass opacities and less than 50% solid component will be excluded.",
+          "ctype": "semantic"
         },
         {
           "id": "2.4",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer, progressed on first-line osimertinib",
-          "note": "The note confirms NSCLC diagnosis but does not specify the date of biopsy confirmation relative to randomization, so it cannot be determined if biopsy occurred more than 180 days prior to randomization.",
-          "predicate": "primary lung tumor biopsy confirmed NSCLC more than 180 days prior to randomization",
-          "source_text": "The primary tumor in the lung, biopsy confirmed non-small cell lung cancer greater than 180 days prior to randomization."
+          "note": "No date of initial biopsy diagnosis or time since diagnosis relative to randomization is provided, so it cannot be determined whether biopsy confirmation occurred more than 180 days prior to randomization.",
+          "predicate": "Primary lung tumor biopsy confirmed NSCLC greater than 180 days prior to randomization",
+          "source_text": "The primary tumor in the lung, biopsy confirmed non-small cell lung cancer greater than 180 days prior to randomization.",
+          "ctype": "semantic"
         },
         {
           "id": "2.5",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
-          "confidence": "low",
-          "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "Patient note does not mention tumor size or timing of staging imaging (PET/PET-CT); also patient has metastatic disease which is inconsistent with early-stage criteria context, but no explicit data on tumor size or imaging date is given, so cannot determine if exclusion applies.",
-          "predicate": "tumor >5 cm maximum diameter or staging imaging performed more than 180 days prior to randomization",
-          "source_text": "Tumor > 5 cm maximum diameter, including clinical stage IA and selected IB by PET or PET integrated with a simultaneous CT scan (PET-CT) of the chest and upper abdomen and/or performed greater than 180 days prior to randomization."
+          "confidence": "high",
+          "evidence_phrase": "No tumor size or PET/PET-CT timing information reported",
+          "note": "The patient note does not mention tumor size, PET/PET-CT imaging results, or timing of any such imaging relative to randomization, so this exclusion criterion cannot be evaluated.",
+          "predicate": "Tumor >5 cm maximum diameter by PET/PET-CT performed greater than 180 days prior to randomization",
+          "source_text": "Tumor > 5 cm maximum diameter, including clinical stage IA and selected IB by PET or PET integrated with a simultaneous CT scan (PET-CT) of the chest and upper abdomen and/or performed greater than 180 days prior to randomization.",
+          "ctype": "semantic"
         },
         {
           "id": "2.6",
@@ -757,9 +824,10 @@
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No mention of lymph node biopsy or its timing",
-          "note": "The patient note does not mention any lymph node biopsy or its date relative to randomization, so eligibility for this exclusion criterion cannot be determined.",
-          "predicate": "lymph node biopsy performed more than 180 days prior to randomization",
-          "source_text": "Lymph node biopsy greater than 180 days prior to randomization."
+          "note": "The patient note does not provide any information about a lymph node biopsy or its timing relative to randomization, so it is impossible to determine if this exclusion criterion applies.",
+          "predicate": "Lymph node biopsy performed greater than 180 days prior to randomization",
+          "source_text": "Lymph node biopsy greater than 180 days prior to randomization.",
+          "ctype": "semantic"
         },
         {
           "id": "2.7",
@@ -767,29 +835,32 @@
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No mention of thoracic surgeon evaluation or sublobar resection feasibility",
-          "note": "The patient note does not contain any information regarding surgical evaluation, thoracic surgeon assessment, or feasibility of sublobar resection for tumor removal. This is a metastatic NSCLC case being treated systemically (osimertinib), and no surgical consultation details are provided.",
-          "predicate": "thoracic surgeon confirms unable to remove tumor with sublobar resection",
-          "source_text": "Thoracic surgeon confirms unable to remove tumor with sublobar resection."
+          "note": "The patient note does not provide any information regarding surgical evaluation, tumor resectability, or thoracic surgeon assessment for sublobar resection.",
+          "predicate": "Thoracic surgeon confirms unable to remove tumor with sublobar resection",
+          "source_text": "Thoracic surgeon confirms unable to remove tumor with sublobar resection.",
+          "ctype": "semantic"
         },
         {
           "id": "2.8",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of tumor location (central vs peripheral) in note",
-          "note": "The patient note provides no information about the tumor's anatomic location relative to the bronchial tree, so it cannot be determined whether the tumor is central or peripheral.",
-          "predicate": "tumor located in non-peripheral (central) region of lung",
-          "source_text": "Tumor located non-peripheral (central) region of lung (see bronchial tree diagram in 3.1.8)."
+          "evidence_phrase": "No tumor location described",
+          "note": "The note does not specify whether the tumor is located centrally or peripherally in the lung.",
+          "predicate": "Tumor located non-peripheral (central) region of lung",
+          "source_text": "Tumor located non-peripheral (central) region of lung (see bronchial tree diagram in 3.1.8).",
+          "ctype": "semantic"
         },
         {
           "id": "2.9",
           "kind": "exclusion",
-          "result": "NOT_MET",
+          "result": "MET",
           "confidence": "high",
           "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
-          "note": "Patient has metastatic NSCLC, indicating presence of distant metastases, which meets the exclusion criterion (i.e., patient should be excluded).",
-          "predicate": "evidence of distant metastases",
-          "source_text": "Evidence of distant metastases."
+          "note": "Patient explicitly has metastatic NSCLC, indicating distant metastases are present, which meets this exclusion criterion (i.e., patient would be excluded).",
+          "predicate": "Evidence of distant metastases",
+          "source_text": "Evidence of distant metastases.",
+          "ctype": "semantic"
         },
         {
           "id": "2.10",
@@ -797,9 +868,10 @@
           "result": "INSUFFICIENT",
           "confidence": "high",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The patient note does not mention any pulmonary function testing (PFT) date or ability to perform PFTs, so it cannot be determined whether this exclusion criterion applies.",
-          "predicate": "PFT performed more than 180 days prior to registration, or unable to perform without surgeon documentation of eligibility",
-          "source_text": "Pulmonary function test (PFT - spirometry, DLCO, +/- arterial blood gases) greater than 180 days prior to registration. Patients physically unable to perform PFT's, such as patients with tracheotomy, that do not have written documentation from study credentialed thoracic surgeon stating eligibility."
+          "note": "The patient note does not mention any pulmonary function test (PFT) date or whether PFT was performed, nor any documentation regarding inability to perform PFT with surgeon exception. Without this information, it cannot be determined whether the exclusion criterion applies.",
+          "predicate": "PFT performed greater than 180 days prior to registration, or unable to perform PFT without documented surgeon eligibility exception",
+          "source_text": "Pulmonary function test (PFT - spirometry, DLCO, +/- arterial blood gases) greater than 180 days prior to registration. Patients physically unable to perform PFT's, such as patients with tracheotomy, that do not have written documentation from study credentialed thoracic surgeon stating eligibility.",
+          "ctype": "semantic"
         },
         {
           "id": "2.11",
@@ -807,19 +879,21 @@
           "result": "INSUFFICIENT",
           "confidence": "low",
           "evidence_phrase": "No labs or brain imaging reported.",
-          "note": "The note lacks the specific data (labs, imaging, risk factor details) needed to assess whether the patient meets major or minor high-risk criteria, so this exclusion criterion cannot be evaluated.",
-          "predicate": "patients that do not meet either major or minor high-risk criteria",
-          "source_text": "Patients that do not meet either Major criteria or Minor criteria."
+          "note": "The note contains no information about cardiac, pulmonary, renal, or other surgical risk factors needed to assess Major/Minor high-risk surgery criteria, nor any mention of planned surgery. Cannot determine if patient meets or does not meet these criteria.",
+          "predicate": "Patients that do not meet either Major criteria or Minor criteria for high risk surgery status",
+          "source_text": "Patients that do not meet either Major criteria or Minor criteria.",
+          "ctype": "semantic"
         },
         {
           "id": "2.12",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of prior thoracic radiation therapy",
-          "note": "The patient note does not provide any information regarding prior radiation therapy to the thorax, making it impossible to determine if this exclusion criterion applies.",
-          "predicate": "prior ipsilateral intra-thoracic radiation therapy, or contralateral radiation completed less than 3 years prior with field overlap",
-          "source_text": "Prior intra-thoracic radiation therapy on ipsilateral side. Radiotherapy to the contralateral lung completed less than 3 years prior to randomization, with radiation field overlap."
+          "evidence_phrase": "No mention of prior radiation therapy",
+          "note": "The patient note does not mention any history of intra-thoracic radiation therapy, ipsilateral or contralateral, so it cannot be determined whether this exclusion criterion applies.",
+          "predicate": "Prior intra-thoracic radiation therapy on ipsilateral side; or contralateral radiotherapy completed less than 3 years prior with field overlap",
+          "source_text": "Prior intra-thoracic radiation therapy on ipsilateral side. Radiotherapy to the contralateral lung completed less than 3 years prior to randomization, with radiation field overlap.",
+          "ctype": "semantic"
         },
         {
           "id": "2.13",
@@ -827,79 +901,844 @@
           "result": "MET",
           "confidence": "medium",
           "evidence_phrase": "progressed on first-line osimertinib",
-          "note": "Patient received prior systemic therapy (osimertinib, an EGFR TKI) specifically for the lung cancer being treated on this protocol, which constitutes prior chemotherapy/targeted therapy, meeting the exclusion criterion.",
-          "predicate": "prior chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol",
-          "source_text": "Prior chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol."
+          "note": "Patient received prior systemic therapy (osimertinib, an EGFR TKI) specifically for the lung cancer being treated on this protocol, which constitutes prior treatment excluded by this criterion (though osimertinib is targeted therapy rather than classic chemotherapy, it is prior systemic anti-cancer treatment for this lung cancer).",
+          "predicate": "Prior chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol",
+          "source_text": "Prior chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol.",
+          "ctype": "semantic"
         },
         {
           "id": "2.14",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "high",
-          "evidence_phrase": "No mention of prior lung resection or surgery",
-          "note": "The note does not provide any information regarding prior lung surgery/resection or its laterality, so it cannot be determined whether this exclusion criterion applies.",
-          "predicate": "prior lung resection on ipsilateral side",
-          "source_text": "Prior lung resection on the ipsilateral side."
+          "evidence_phrase": "No mention of prior lung surgery",
+          "note": "Patient note does not mention any history of lung resection, so it cannot be determined whether the patient meets or violates this exclusion criterion.",
+          "predicate": "Prior lung resection on ipsilateral side",
+          "source_text": "Prior lung resection on the ipsilateral side.",
+          "ctype": "semantic"
         },
         {
           "id": "2.15",
           "kind": "exclusion",
           "result": "NOT_MET",
-          "confidence": "medium",
+          "confidence": "high",
           "evidence_phrase": "62-year-old woman",
-          "note": "Patient is a 62-year-old woman with metastatic NSCLC; given her age, pregnancy or lactation is highly unlikely, though not explicitly stated as ruled out.",
-          "predicate": "pregnant and lactating women",
-          "source_text": "Pregnant and lactating women."
+          "note": "Patient is 62 years old, well beyond typical reproductive/lactation age, and no mention of pregnancy or breastfeeding; exclusion criterion for pregnant/lactating women does not apply.",
+          "predicate": "Pregnant and lactating women",
+          "source_text": "Pregnant and lactating women.",
+          "ctype": "semantic"
         },
         {
           "id": "2.16",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
           "confidence": "low",
-          "evidence_phrase": "No mention of prior invasive malignancy or disease-free interval",
-          "note": "The note does not mention any history of a prior invasive malignancy other than the current NSCLC, nor any information about disease-free duration, so it cannot be determined whether this exclusion criterion applies.",
-          "predicate": "prior invasive malignancy with less than 3 years disease-free prior to registration (unless non-melanoma skin cancer, in-situ cancers)",
-          "source_text": "Prior invasive malignancy and less than 3 years disease free prior to registration (unless non-melanoma skin cancer, in-situ cancers)."
+          "evidence_phrase": "No mention of prior malignancy history in note",
+          "note": "The patient note does not mention any history of prior invasive malignancy, so it cannot be determined whether this exclusion criterion applies.",
+          "predicate": "Prior invasive malignancy and less than 3 years disease free prior to registration (unless non-melanoma skin cancer, in-situ cancers)",
+          "source_text": "Prior invasive malignancy and less than 3 years disease free prior to registration (unless non-melanoma skin cancer, in-situ cancers).",
+          "ctype": "semantic"
         },
         {
           "id": "2.17",
           "kind": "exclusion",
           "result": "INSUFFICIENT",
-          "confidence": "high",
-          "evidence_phrase": "No information provided regarding patient's cognitive status or ability to consent",
-          "note": "The note does not mention any cognitive impairment, mental status, or ability to understand/sign informed consent. There is no evidence to determine if this exclusion criterion applies.",
-          "predicate": "unable to understand and/or sign written informed consent",
-          "source_text": "Unable to understand and/ or sign a written informed consent."
+          "confidence": "low",
+          "evidence_phrase": "No information provided about ability to understand or sign informed consent",
+          "note": "The patient note does not mention cognitive status, mental capacity, or ability to provide informed consent. No indication of dementia, delirium, or language barriers is provided.",
+          "predicate": "Unable to understand and/or sign a written informed consent",
+          "source_text": "Unable to understand and/ or sign a written informed consent.",
+          "ctype": "semantic"
         }
       ],
       "to_verify": [
-        "Confirm: radiographic findings consistent with NSCLC including ground glass opacities with solid component >=50%",
-        "Confirm: primary lung tumor biopsy confirmed NSCLC within 180 days prior to randomization",
-        "Confirm: clinically suspicious mediastinal lymph nodes confirmed negative for NSCLC involvement by biopsy method within 180 days of randomization",
-        "Confirm: tumor location verified by thoracic surgeon to permit sublobar resection",
-        "Confirm: tumor located peripherally within lung, not within 2 cm of proximal bronchial tree",
-        "Confirm: pulmonary function tests available within 180 days prior to registration, or surgeon documentation if unable to perform",
-        "Confirm: patient meets high risk surgical criteria via at least one major criterion or at least two minor criteria (FEV1, DLCO, surgeon assessment, age, pulmonary hypertension, LV function, pO2/SpO2, pCO2, MMRC dyspnea scale)",
-        "Confirm: no prior ipsilateral intra-thoracic radiation therapy; contralateral radiation allowed if >3 years prior without field overlap",
-        "Confirm: no prior lung resection on ipsilateral side",
-        "Confirm: no prior invasive malignancy unless disease-free for >=3 years (except non-melanoma skin cancer, in-situ cancers)",
-        "Confirm: ability to understand and sign written informed consent",
-        "Confirm: radiographic ground glass opacities with less than 50% solid component",
-        "Confirm: primary lung tumor biopsy confirmed NSCLC more than 180 days prior to randomization",
-        "Confirm: tumor >5 cm maximum diameter or staging imaging performed more than 180 days prior to randomization",
-        "Confirm: lymph node biopsy performed more than 180 days prior to randomization",
-        "Confirm: thoracic surgeon confirms unable to remove tumor with sublobar resection",
-        "Confirm: tumor located in non-peripheral (central) region of lung",
-        "Confirm: PFT performed more than 180 days prior to registration, or unable to perform without surgeon documentation of eligibility",
-        "Confirm: patients that do not meet either major or minor high-risk criteria",
-        "Confirm: prior ipsilateral intra-thoracic radiation therapy, or contralateral radiation completed less than 3 years prior with field overlap",
-        "Confirm: prior lung resection on ipsilateral side",
-        "Confirm: prior invasive malignancy with less than 3 years disease-free prior to registration (unless non-melanoma skin cancer, in-situ cancers)",
-        "Confirm: unable to understand and/or sign written informed consent"
+        "Confirm: Radiographic findings consistent with NSCLC including GGO with solid component >=50%",
+        "Confirm: Primary lung tumor biopsy confirmed NSCLC within 180 days prior to randomization",
+        "Confirm: All clinically suspicious mediastinal N1-N3 lymph nodes confirmed negative for NSCLC involvement by biopsy method within 180 days of randomization",
+        "Confirm: Tumor location verified by thoracic surgeon to permit sublobar resection",
+        "Confirm: Tumor located peripherally in lung (not within 2 cm of proximal bronchial tree)",
+        "Confirm: Pulmonary function tests (PFTs) available within 180 days prior to registration, or documented exception for physically unable patients",
+        "Confirm: Patient meets high-risk-for-surgery criteria: at least 1 major criterion (FEV1<=50% predicted, DLCO<=50% predicted, or surgeon-documented poor tolerance of lobectomy/pneumonectomy) OR at least 2 minor criteria (age>=75, FEV1 51-60% predicted, DLCO 51-60% predicted, pulmonary hypertension >40mmHg, LVEF<=40%, resting/exercise pO2<=55mmHg or SpO2<=88%, pCO2>45mmHg, MMRC dyspnea scale>=3)",
+        "Confirm: No prior intra-thoracic radiation therapy for previously identified intra-thoracic primary tumor on ipsilateral side; contralateral prior radiotherapy allowed if completed >3 years prior and no field overlap",
+        "Confirm: No prior lung resection on ipsilateral side",
+        "Confirm: Non-pregnant and non-lactating; negative pregnancy test required for women of child-bearing potential prior to registration",
+        "Confirm: No prior invasive malignancy unless disease-free for >=3 years prior to registration (exceptions: non-melanoma skin cancer, in-situ cancers)",
+        "Confirm: Ability to understand and sign written informed consent",
+        "Confirm: Radiographic findings with ground glass opacities and less than 50% solid component",
+        "Confirm: Primary lung tumor biopsy confirmed NSCLC greater than 180 days prior to randomization",
+        "Confirm: Tumor >5 cm maximum diameter by PET/PET-CT performed greater than 180 days prior to randomization",
+        "Confirm: Lymph node biopsy performed greater than 180 days prior to randomization",
+        "Confirm: Thoracic surgeon confirms unable to remove tumor with sublobar resection",
+        "Confirm: Tumor located non-peripheral (central) region of lung",
+        "Confirm: PFT performed greater than 180 days prior to registration, or unable to perform PFT without documented surgeon eligibility exception",
+        "Confirm: Patients that do not meet either Major criteria or Minor criteria for high risk surgery status",
+        "Confirm: Prior intra-thoracic radiation therapy on ipsilateral side; or contralateral radiotherapy completed less than 3 years prior with field overlap",
+        "Confirm: Prior lung resection on ipsilateral side",
+        "Confirm: Prior invasive malignancy and less than 3 years disease free prior to registration (unless non-melanoma skin cancer, in-situ cancers)",
+        "Confirm: Unable to understand and/or sign a written informed consent"
       ],
       "n_met": 4,
-      "n_disqualifying": 4,
-      "n_to_verify": 23
+      "n_disqualifying": 5,
+      "n_to_verify": 24
+    },
+    {
+      "nct_id": "NCT05403554",
+      "title": "A Study of NI-1801 in Patients with Mesothelin Expressing Solid Cancers",
+      "status": "RECRUITING",
+      "url": "https://clinicaltrials.gov/study/NCT05403554",
+      "verdict": "Ineligible",
+      "criteria": [
+        {
+          "id": "inc1",
+          "kind": "inclusion",
+          "result": "MET",
+          "confidence": "high",
+          "evidence_phrase": "62-year-old",
+          "note": "age=62.0 vs [18,None]",
+          "predicate": "age >= 18",
+          "source_text": "Adults \u2265 18 years of age at the time of signing the informed consent form",
+          "ctype": "structured"
+        },
+        {
+          "id": "inc2",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
+          "note": "Patient has NSCLC, but histology subtype (squamous vs non-squamous) and method of confirmation (histologic/cytologic) are not explicitly stated in the note, though EGFR exon-19 deletion is more typical of adenocarcinoma (non-squamous). Since not explicitly documented, marking as insufficient.",
+          "predicate": "histologically_confirmed_tumor_type",
+          "source_text": "Histologically or cytologically confirmed diagnosis of epithelial OC (high-grade serous or endometroid), TNBC, or non-squamous NSCLC. For the combination with pembrolizumab, only subjects with histologically or cytologically confirmed diagnosis of epithelial OC (high-grade serous or endometroid), non-squamous NSCLC and ductal pancreatic adenocarcinoma.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "inc3",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of MSLN/mesothelin IHC testing or staining intensity in the note",
+          "note": "The patient note does not report any MSLN (mesothelin) immunohistochemistry testing, staining intensity, or percentage of tumor cells staining positive. Without this information, it cannot be determined whether the patient meets the required threshold of \u22652+ staining intensity in \u226540% of tumor cells.",
+          "predicate": "MSLN_expression_IHC_positive",
+          "source_text": "MSLN expression with staining intensity of \u2265 2+ as per IHC in \u2265 40% of tumor cells. Staining for MSLN expression can be performed using archival tumor tissue and is foreseen to be performed at the institution's pathology. A slice for centralized IHC assessment for validation and biomarker analysis is mandatory.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "inc4",
+          "kind": "inclusion",
+          "result": "MET",
+          "confidence": "high",
+          "evidence_phrase": "metastatic EGFR exon-19-deletion NSCLC, progressed on first-line osimertinib",
+          "note": "Patient has metastatic disease that progressed after at least one prior systemic therapy (osimertinib), consistent with failure of a therapy known to confer clinical benefit in EGFR-mutant NSCLC.",
+          "predicate": "advanced_metastatic_recurrent_after_prior_therapy_failure",
+          "source_text": "Patients with advanced, metastatic, or recurrent disease after at least 1 prior systemic treatment for the primary malignancy and who have failed treatment with, are intolerant to, or are not candidates for available therapies that are known to confer a clinical benefit to patients with these tumor entities.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "inc5",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer, progressed on first-line osimertinib",
+          "note": "Note confirms metastatic disease and progression but does not specify presence of measurable lesions per RECIST 1.1 criteria (e.g., target lesion size, imaging findings).",
+          "predicate": "measurable_disease_RECIST_1_1",
+          "source_text": "Measurable disease according to the revised RECIST guideline version 1.1(3)",
+          "ctype": "semantic"
+        },
+        {
+          "id": "inc6",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of biopsy accessibility or lesion location",
+          "note": "The patient note does not specify whether the patient has accessible lesions for baseline and on-treatment biopsies, nor does it indicate enrollment in a specific cohort (single agent dose expansion or combination with pembrolizumab). No information about lesion location or accessibility is provided.",
+          "predicate": "accessible_lesions_for_biopsy",
+          "source_text": "Patients treated in either the single agent recommended dose expansion cohort or in the combination with pembrolizumab cohort should have accessible lesions at screening for baseline and on treatment biopsies.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "inc7",
+          "kind": "inclusion",
+          "result": "MET",
+          "confidence": "high",
+          "evidence_phrase": "ECOG 1",
+          "note": "ecog=1.0 vs [0,1]",
+          "predicate": "ecog_ps between 0 and 1",
+          "source_text": "Eastern Cooperative Oncology Group performance status (ECOG PS) 0-1.",
+          "ctype": "structured"
+        },
+        {
+          "id": "inc8",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "Patient is a 62-year-old woman, but no pregnancy test result is mentioned in the note; given her age and postmenopausal likelihood, this may not be applicable, but no explicit information is provided to confirm.",
+          "predicate": "negative_pregnancy_test",
+          "source_text": "Negative pregnancy test at inclusion.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "inc9",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No labs or brain imaging reported",
+          "note": "Note does not explicitly state prognosis or estimated life expectancy; ECOG 1 suggests reasonable functional status but no direct statement about life expectancy of at least 2 months.",
+          "predicate": "life_expectancy_at_least_2_months",
+          "source_text": "Life expectancy of at least 2 months.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc1a",
+          "kind": "inclusion",
+          "result": "MET",
+          "confidence": "high",
+          "evidence_phrase": "62-year-old",
+          "note": "age=62.0 vs [18,None]",
+          "predicate": "age >= 18",
+          "source_text": "Female patients \u2265 18 years of age.",
+          "ctype": "structured"
+        },
+        {
+          "id": "rand_inc1b",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "not stated",
+          "note": "sex not found in note",
+          "predicate": "sex == female",
+          "source_text": "Female patients \u2265 18 years of age.",
+          "ctype": "structured"
+        },
+        {
+          "id": "rand_inc2",
+          "kind": "inclusion",
+          "result": "NOT_MET",
+          "confidence": "high",
+          "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
+          "note": "Patient has NSCLC, not high-grade serous ovarian cancer; criterion not met.",
+          "predicate": "confirmed_high_grade_serous_ovarian_cancer",
+          "source_text": "Patients must have a confirmed diagnosis of high-grade serous epithelial ovarian cancer.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc3",
+          "kind": "inclusion",
+          "result": "NOT_MET",
+          "confidence": "high",
+          "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer, progressed on first-line osimertinib",
+          "note": "Patient has NSCLC with no mention of platinum-based chemotherapy at all; only progressed on osimertinib (EGFR TKI). No platinum treatment history is documented, so the platinum-resistant disease criterion cannot be met - patient has not received platinum therapy.",
+          "predicate": "platinum_resistant_disease_criteria",
+          "source_text": "Patients must have platinum-resistant disease: 3.1. Patients who have only had 1 line of platinum-based therapy must have received at least 4 cycles of platinum, must have had a response (CR or PR) and then progressed between greater than 3 months and \u2264 6 months after the date of the last dose of platinum. 3.2. Patients who have received 2 or 3 lines of platinum therapy must have progressed on or within 6 months after the date of the last dose of platinum",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc4",
+          "kind": "inclusion",
+          "result": "MET",
+          "confidence": "medium",
+          "evidence_phrase": "progressed on first-line osimertinib",
+          "note": "Patient explicitly documented as having progressed on her most recent line of therapy (osimertinib), consistent with radiographic progression on recent therapy though imaging modality not explicitly detailed.",
+          "predicate": "radiographic_progression_on_recent_therapy",
+          "source_text": "Patients must have progressed radiographically on or after their most recent line of therapy.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc5",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of tissue/biopsy willingness",
+          "note": "The patient note does not mention anything about willingness to provide archival tumor tissue or undergo a new biopsy for MSLN IHC confirmation.",
+          "predicate": "willing_to_provide_tissue_for_MSLN_IHC",
+          "source_text": "Patients must be willing to provide an archival tumor tissue block or slides, or undergo procedure to obtain a new biopsy using a low risk, medically routine procedure for IHC confirmation of MSLN expression.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc6",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of MSLN expression or IHC testing",
+          "note": "The patient note does not provide any information regarding mesothelin (MSLN) expression or immunohistochemistry (IHC) staining results, so it cannot be determined whether the patient meets the required \u22652+ staining intensity in \u226540% of tumor cells.",
+          "predicate": "MSLN_expression_IHC_positive",
+          "source_text": "MSLN expression with staining intensity of \u2265 2+ as per IHC in \u2265 40% of tumor cells. Staining for MSLN expression can be performed using archival tumor tissue and can be done at the institution's pathology. A slice for centralized IHC assessment for validation and biomarker analysis is mandatory.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc7",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "Patient has metastatic NSCLC but no specific mention of measurable lesion by RECIST v1.1 or imaging findings confirming measurable disease.",
+          "predicate": "measurable_disease_RECIST_1_1",
+          "source_text": "Patients must have at least one lesion that meets the definition of measurable disease by RECIST v1.1 (radiologically measured by the Investigator).",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc8",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "progressed on first-line osimertinib",
+          "note": "Patient has received only 1 documented prior systemic line (osimertinib), which is within the 1-3 range, so this could meet MET. However, only one line is explicitly mentioned; no additional lines are noted, and it's unclear if any other therapy occurred before or after. Since 1 line falls within the required range (1 to 3), this technically meets the criterion, but confirmation of \"current line\" being appropriate for single-agent therapy next-line isn't addressed. Given the information, 1 prior line satisfies the minimum requirement.",
+          "predicate": "prior_systemic_lines_1_to_3",
+          "source_text": "Patients must have received at least 1 but no more than 3 prior systemic lines of anticancer therapy, and for whom single-agent therapy is appropriate as the next line of treatment: Adjuvant \u00b1 neoadjuvant considered one line of therapy; Maintenance therapy (e.g., bevacizumab, PARP inhibitors) will be considered as part of the preceding line of therapy (i.e., not counted independently); Therapy changed due to toxicity in the absence of progression will be considered as part of the same line (i.e., not counted independently); Hormonal therapy will be counted as a separate line of therapy unless it was given as maintenance",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc9",
+          "kind": "inclusion",
+          "result": "MET",
+          "confidence": "high",
+          "evidence_phrase": "ECOG 1",
+          "note": "ecog=1.0 vs [0,1]",
+          "predicate": "ecog_ps between 0 and 1",
+          "source_text": "ECOG PS of 0 or 1",
+          "ctype": "structured"
+        },
+        {
+          "id": "rand_inc10",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "progressed on first-line osimertinib",
+          "note": "No date of last osimertinib dose or discontinuation is provided, so the required washout period (5 half-lives or 4 weeks) cannot be verified.",
+          "predicate": "washout_time_from_prior_therapy",
+          "source_text": "Time from prior therapy: Systemic antineoplastic therapy (5 half-lives or 4 weeks, whichever is shorter); Focal radiation completed at least 2 weeks prior to first dose of study drug",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc11",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "No labs or brain imaging reported",
+          "note": "Note does not mention any prior therapy-related toxicities or their resolution status, so recovery cannot be confirmed.",
+          "predicate": "recovered_from_prior_toxicities",
+          "source_text": "Patients must have stabilized or recovered (Grade 1 or baseline) from all prior therapy-related toxicities.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc12",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No mention of surgery in patient note",
+          "note": "The note does not mention any history of major surgery, so it is unclear whether this criterion applies or whether the patient meets the required recovery timeframe.",
+          "predicate": "major_surgery_recovery_4_weeks",
+          "source_text": "Major surgery must be completed at least 4 weeks prior to first dose and have recovered or stabilized from the side effects of prior surgery.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc13",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "The note does not provide any hematologic, liver, or kidney function laboratory values, so adequacy of organ function cannot be assessed.",
+          "predicate": "adequate_organ_function",
+          "source_text": "Patients must have adequate hematologic, liver and kidney functions",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc14",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of informed consent capacity",
+          "note": "The patient note does not provide any information about the patient's ability or willingness to sign informed consent or adhere to protocol requirements.",
+          "predicate": "able_to_sign_informed_consent",
+          "source_text": "Patients or their legally authorized representative must be willing and able to sign the informed consent form (ICF) and to adhere to the protocol requirements.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_inc15",
+          "kind": "inclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "No pregnancy test result mentioned in the note; patient is 62-year-old (likely postmenopausal) but no explicit pregnancy test or menopausal status confirmed, so cannot be certain.",
+          "predicate": "negative_pregnancy_test",
+          "source_text": "Negative pregnancy test at inclusion",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc1",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of NI-1801 hypersensitivity in note",
+          "note": "The patient note does not mention any history of hypersensitivity or allergic reaction to NI-1801 or its constituents; this information is simply not documented, so it cannot be determined whether the exclusion applies.",
+          "predicate": "hypersensitivity_to_NI1801",
+          "source_text": "Patient has known hypersensitivity to NI-1801 or any of the constituent compounds.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc2",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of radiotherapy",
+          "note": "The note does not mention any radiotherapy history or timing relative to target lesions, so it cannot be determined whether this exclusion criterion is met.",
+          "predicate": "radiotherapy_to_target_lesions_within_4_weeks",
+          "source_text": "Radiotherapy to the target lesions within 4 weeks prior to the first NI-1801 infusion.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc3",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "progressed on first-line osimertinib",
+          "note": "The note states the patient progressed on osimertinib but does not provide the date of last dose or timing relative to planned NI-1801 start, so washout period compliance cannot be determined.",
+          "predicate": "prior_anticancer_therapy_washout",
+          "source_text": "Prior anti-cancer therapy including chemotherapy, hormonal therapy, and investigational agents within 2 weeks or within \u2264 5 half-lives prior to starting NI-1801 dosing (up to a maximum of 4 weeks), whichever is longer. The maximum required washout period will thus not exceed 4 weeks prior to the day of first treatment with NI-1801. Note: Low dose steroids (oral prednisone or equivalent \u2264 20 mg per day, including systemic or topic use), localized noncentral nervous system (CNS) radiotherapy of non-target lesions, and treatment with bisphosphonates and RANKL inhibitors are not criteria for exclusion.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc4",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No mention of concurrent investigational therapy or clinical trial participation",
+          "note": "The patient note does not provide any information about whether the patient is currently enrolled in another clinical trial or receiving investigational therapy, so this exclusion criterion cannot be evaluated.",
+          "predicate": "concurrent_investigational_therapy_not_allowed",
+          "source_text": "Other investigational therapies must not be used, i.e., treatment within another clinical trial is not permitted, while the patient is on study. COVID-19 vaccination is allowed only starting from Cycle 2 (if not completed before study inclusion).",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc5",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "No mention of cardiac status",
+          "note": "The patient note does not report any cardiac history or NYHA classification, so it cannot be determined whether she meets this exclusion criterion.",
+          "predicate": "severe_cardiac_dysfunction_NYHA_III_IV",
+          "source_text": "Severe cardiac dysfunction (NYHA classification III-IV).",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc6",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "not stated",
+          "note": "bilirubin_or_AST_ALT not found in note",
+          "predicate": "bilirubin >= 1.5 mg/dL OR AST/ALT >= 2.5x ULN (unless liver metastasis)",
+          "source_text": "Significant hepatic dysfunction (serum bilirubin \u2265 1.5 mg/dL or AST and/or ALT \u2265 2.5 times normal level), unless related to liver metastasis.",
+          "ctype": "structured"
+        },
+        {
+          "id": "exc7",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of HIV, hepatitis B/C, or COVID-19 status in the note",
+          "note": "The patient note does not provide any information regarding HIV status, hepatitis B or C serology, or active SARS-CoV-2 infection, so it cannot be determined whether this exclusion criterion is met.",
+          "predicate": "HIV_hepatitis_or_active_covid_infection",
+          "source_text": "Patients with known human immunodeficiency virus (HIV) infection or known history or serological evidence of prior hepatitis B or C virus infection. Active SARS-COV2 infection.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc8",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of infection status in note",
+          "note": "The patient note does not provide any information regarding presence or absence of active infection, antibiotic use, or IV anti-infective treatment, so this criterion cannot be assessed.",
+          "predicate": "uncontrolled_active_infection",
+          "source_text": "Uncontrolled active systemic bacterial, viral, fungal, or other infection (defined as exhibiting ongoing signs/symptoms related to the infection and without improvement, despite appropriate antibiotics or other treatment), or intravenous anti-infective treatment within 2 weeks prior to first dose of NI-1801.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc9",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No mention of concomitant malignancy",
+          "note": "The note does not mention any other active malignancy besides the NSCLC being treated; no information provided to confirm or exclude a second concurrent malignancy requiring treatment.",
+          "predicate": "concomitant_active_malignancy_requiring_treatment",
+          "source_text": "Patients with concomitant active malignancy, requiring ongoing systemic treatment.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc10",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "Patient has metastatic NSCLC but no brain imaging data provided; CNS metastasis status unknown, cannot confirm presence or absence.",
+          "predicate": "known_CNS_metastases",
+          "source_text": "Patients with known CNS metastases.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc11",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "not stated",
+          "note": "platelet_count not found in note",
+          "predicate": "platelet_count >= 100 x10^9/L",
+          "source_text": "Platelet count lower than 100 x 10^9/L (transfusion support within 14 days before the test is not allowed).",
+          "ctype": "structured"
+        },
+        {
+          "id": "exc12",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "not stated",
+          "note": "hemoglobin not found in note",
+          "predicate": "hemoglobin >= 10.0 g/dL",
+          "source_text": "Hemoglobin lower than 10.0 g/dL. Prior RBC transfusion is permitted.",
+          "ctype": "structured"
+        },
+        {
+          "id": "exc13",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "not stated",
+          "note": "ANC not found in note",
+          "predicate": "ANC >= 1 x10^9/L",
+          "source_text": "ANC lower than 1 x 10^9/L (the use of colony stimulating factors, G-CSF or GM-CSF, within 14 days before the test is not allowed).",
+          "ctype": "structured"
+        },
+        {
+          "id": "exc14",
+          "kind": "exclusion",
+          "result": "NOT_MET",
+          "confidence": "medium",
+          "evidence_phrase": "62-year-old woman",
+          "note": "No mention of pregnancy or lactation; patient is 62 years old, post-menopausal age, making pregnancy/lactation highly unlikely. Excluding criterion not met.",
+          "predicate": "pregnancy_or_lactation",
+          "source_text": "Pregnancy and lactation.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc15",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of psychiatric illness or substance abuse in the note",
+          "note": "The patient note does not provide any information regarding history of psychiatric illness or substance abuse, so it cannot be determined whether this exclusion criterion is met or not.",
+          "predicate": "psychiatric_illness_or_substance_abuse",
+          "source_text": "History of psychiatric illness or substance abuse likely to interfere with ability to comply with protocol requirements or give informed consent.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc16",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "Note lacks information about significant medical conditions, labs, cardiac history, diabetes control, immunosuppression status, or recent surgery needed to assess this exclusion criterion.",
+          "predicate": "significant_medical_conditions_increasing_risk",
+          "source_text": "Significant medical diseases or conditions, including laboratory abnormalities, as assessed by the Investigators and Sponsor, which would substantially increase the risk-benefit ratio of participating in the study. This includes, but is not limited to, acute myocardial infarction within the last 6 months, unstable angina, uncontrolled diabetes mellitus, and severely immunocompromised state, major surgery \u2264 4 weeks prior to starting NI-1801.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc17",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "progressed on first-line osimertinib",
+          "note": "The note only mentions prior osimertinib (EGFR TKI) treatment; no information is provided regarding prior CD47, SIRP\u03b1, or MSLN targeting agents, so this cannot be determined.",
+          "predicate": "prior_CD47_SIRPa_MSLN_targeting_agent",
+          "source_text": "Prior treatment with a CD47, SIRP\u03b1, or MSLN targeting agent.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc18",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "The note does not mention any prior toxicities from previous treatments or their resolution status, so it's impossible to determine if this criterion is met.",
+          "predicate": "unresolved_prior_treatment_toxicities",
+          "source_text": "Patients in whom acute toxic effects of any prior radiotherapy, chemotherapy, or surgical procedure have not resolved to Grade \u2264 1 or returned to baseline except for alopecia (any grade), anemia, and peripheral neuropathy (for the latter, recovery to Grade \u2264 2 is acceptable).",
+          "ctype": "semantic"
+        },
+        {
+          "id": "exc19",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "No mention of legal status or capacity to consent",
+          "note": "The patient note contains no information regarding detainment, involuntary psychiatric care, guardianship, or ability to provide consent.",
+          "predicate": "legally_restricted_or_incapacitated_persons",
+          "source_text": "People who are detained through a court or administrative decision, receiving psychiatric care against their will, adults who are the subject of a legal protection order (under tutorship/curatorship), people who are unable to express their consent, and people who are subject to a legal guardianship order.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "sub_exc1",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "No mention of pneumonitis or ILD in note",
+          "note": "The note does not mention any history of pneumonitis or interstitial lung disease, so it cannot be determined whether the patient meets this exclusion criterion.",
+          "predicate": "history_active_pneumonitis_or_ILD",
+          "source_text": "History of/active non-infectious pneumonitis or interstitial lung disease.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "sub_exc2",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of pembrolizumab hypersensitivity in the note",
+          "note": "The patient note does not mention any history of hypersensitivity to pembrolizumab or its excipients, so this cannot be determined from the available information.",
+          "predicate": "hypersensitivity_to_pembrolizumab",
+          "source_text": "Known hypersensitivity to pembrolizumab or excipients.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "sub_exc3",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No mention of autoimmune disease",
+          "note": "The patient note does not mention any history of autoimmune disease, active or suspected, nor does it mention type I diabetes, hypothyroidism, or skin disorders. Without explicit information, cannot determine if exclusion applies.",
+          "predicate": "active_autoimmune_disease",
+          "source_text": "Participants with an active, known or suspected autoimmune disease. Participants with type I diabetes mellitus, hypothyroidism only requiring hormone replacement, skin disorders not requiring systemic treatment, or conditions not expected to recur in the absence of an external trigger are permitted to enroll.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "sub_exc4",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No mention of prior organ or tissue allograft in the note",
+          "note": "The patient note does not mention any history of organ or tissue transplantation, so it cannot be determined whether this exclusion criterion applies.",
+          "predicate": "prior_organ_or_tissue_allograft",
+          "source_text": "Prior organ or tissue allograft.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "sub_exc5",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No mention of prior checkpoint inhibitor or T-cell agonist therapy",
+          "note": "The patient note does not mention any prior treatment with T-cell agonist or checkpoint inhibitor therapy, nor any history of related toxicity, so it cannot be determined whether this exclusion applies.",
+          "predicate": "history_grade3plus_toxicity_checkpoint_inhibitor",
+          "source_text": "History of Grade \u2265 3 toxicity related to prior T-cell agonist or checkpoint inhibitor therapy, except those that are unlikely to re-occur with standard countermeasures.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "sub_exc6",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "No mention of myocarditis history in the note",
+          "note": "The patient note does not mention any history of myocarditis or cardiac condition. Absence of information means we cannot confirm exclusion criterion status.",
+          "predicate": "history_of_myocarditis",
+          "source_text": "History of myocarditis, regardless of etiology.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc1",
+          "kind": "exclusion",
+          "result": "NOT_MET",
+          "confidence": "high",
+          "evidence_phrase": "metastatic EGFR exon-19-deletion non-small cell lung cancer",
+          "note": "The patient has NSCLC, not an ovarian tumor, so the exclusion criterion regarding specific ovarian histology (clear cell, mucinous, sarcomatous, mixed, low-grade/borderline) does not apply; there is no evidence of the excluded histology being present.",
+          "predicate": "non_high_grade_serous_histology",
+          "source_text": "Patients with clear cell, mucinous, or sarcomatous histology, mixed tumors containing any of the above histology, or low-grade or borderline ovarian tumor.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc2",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "progressed on first-line osimertinib",
+          "note": "Patient has NSCLC treated with osimertinib (EGFR TKI), not platinum-containing chemotherapy. No mention of platinum-based chemotherapy or response/progression relative to it, so platinum-refractory status cannot be determined.",
+          "predicate": "primary_platinum_refractory_disease",
+          "source_text": "Patients with primary platinum-refractory disease, defined as disease that did not respond to (CR or PR) or has progressed within 3 months of the last dose of first line platinum-containing chemotherapy.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc3",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No mention of prior radiotherapy in the note",
+          "note": "The patient's history does not mention any radiotherapy treatment, so it cannot be determined whether she received prior wide-field RT affecting \u226520% of bone marrow.",
+          "predicate": "prior_wide_field_radiotherapy_20pct_bone_marrow",
+          "source_text": "Patients with prior wide-field radiotherapy (RT) affecting at least 20% of the bone marrow.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc4",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "The patient note does not mention any information about serious concurrent illness, active infections (hepatitis B/C, HIV, CMV), infectious disease requiring IV antibiotics, or history of demyelinating disease/Lambert-Eaton syndrome. No clinical data is provided to confirm or rule out these exclusion criteria.",
+          "predicate": "serious_concurrent_illness_or_active_infection",
+          "source_text": "Patients with serious concurrent illness or clinically relevant active infection, including, but not limited to the following: Active hepatitis B or C infection (whether or not on active antiviral therapy); HIV infection; Active cytomegalovirus infection; Any other concurrent infectious disease requiring IV antibiotics within 2 weeks before starting study drug Note: Testing at screening is not required for the above infections unless clinically indicated; Patients with history of multiple sclerosis or other demyelinating disease and/or Lambert-Eaton syndrome (paraneoplastic syndrome)",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc5",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "The patient note does not mention any cardiac history, echocardiogram/MUGA results, blood pressure control, arrhythmia status, or stroke history, so it is impossible to determine whether the patient has clinically significant cardiac disease as defined by the exclusion criterion.",
+          "predicate": "clinically_significant_cardiac_disease",
+          "source_text": "Patients with clinically significant cardiac disease including, but not limited to, any one of the following: Myocardial infarction \u2264 6 months prior to first dose; Unstable angina pectoris; Uncontrolled congestive heart failure (New York Heart Association greater than class II); Uncontrolled \u2265 Grade 3 hypertension (per CTCAE); Uncontrolled cardiac arrhythmias; Patients assigned to PLD stratum only: Left ventricular ejection fraction (LVEF) below the institutional limit of normal as measured by echocardiography (ECHO) or multigated acquisition (MUGA) scan; History of hemorrhagic or ischemic stroke within six months prior to randomization",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc6",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of liver disease or Child-Pugh status",
+          "note": "The patient note contains no information regarding cirrhosis or liver disease status, so it cannot be determined whether this exclusion criterion is met.",
+          "predicate": "history_cirrhotic_liver_disease_ChildPugh_B_or_C",
+          "source_text": "History of cirrhotic liver disease (Child-Pugh Class B or C)",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc7",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "low",
+          "evidence_phrase": "No mention of ILD or pneumonitis history",
+          "note": "The patient note does not mention any prior diagnosis of interstitial lung disease or non-infectious pneumonitis, so it cannot be determined whether this exclusion criterion applies.",
+          "predicate": "prior_noninfectious_ILD_or_pneumonitis",
+          "source_text": "Previous clinical diagnosis of non-infectious interstitial lung disease (ILD), including noninfectious pneumonitis",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc8",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of hypersensitivity history",
+          "note": "The patient note does not mention any prior hypersensitivity reactions to monoclonal antibodies, so this cannot be determined from the given information.",
+          "predicate": "prior_hypersensitivity_to_monoclonal_antibodies",
+          "source_text": "Patients with prior hypersensitivity to monoclonal antibodies.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc9",
+          "kind": "exclusion",
+          "result": "NOT_MET",
+          "confidence": "medium",
+          "evidence_phrase": "62-year-old woman",
+          "note": "Patient is 62 years old; pregnancy/lactation is not applicable given age and no mention of such status, making exclusion criterion effectively not met.",
+          "predicate": "pregnant_or_lactating",
+          "source_text": "Women who are pregnant or lactating.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc10",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "medium",
+          "evidence_phrase": "progressed on first-line osimertinib",
+          "note": "No mention of prior CD47, SIRP\u03b1, or MSLN targeting agent treatment in the note; only osimertinib exposure documented.",
+          "predicate": "prior_CD47_SIRPa_MSLN_targeting_agent",
+          "source_text": "Patients with prior treatment with a CD47, signal regulatory protein (SIRP) alpha, or MSLN targeting agent.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc11",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No labs or brain imaging reported.",
+          "note": "No information provided on presence or absence of CNS metastases; brain imaging not reported, so cannot determine if exclusion criterion is met.",
+          "predicate": "CNS_metastases",
+          "source_text": "Patients with central nervous system (CNS) metastases.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc12",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of other malignancy history",
+          "note": "The patient note does not mention any history of other malignancies within 3 years prior to randomization, so it's unclear whether this exclusion criterion applies.",
+          "predicate": "other_malignancy_within_3_years",
+          "source_text": "Patients with a history of other malignancy within 3 years prior to randomization.",
+          "ctype": "semantic"
+        },
+        {
+          "id": "rand_exc13",
+          "kind": "exclusion",
+          "result": "INSUFFICIENT",
+          "confidence": "high",
+          "evidence_phrase": "No mention of hypersensitivity reactions in note",
+          "note": "The patient note does not provide any information regarding prior hypersensitivity reactions to study drugs or excipients, so this cannot be determined.",
+          "predicate": "prior_hypersensitivity_to_study_drugs",
+          "source_text": "Prior known hypersensitivity reactions to study drugs and/or any of their excipients.",
+          "ctype": "semantic"
+        }
+      ],
+      "to_verify": [
+        "Confirm: histologically_confirmed_tumor_type",
+        "Confirm: MSLN_expression_IHC_positive",
+        "Confirm: measurable_disease_RECIST_1_1",
+        "Confirm: accessible_lesions_for_biopsy",
+        "Confirm: negative_pregnancy_test",
+        "Confirm: life_expectancy_at_least_2_months",
+        "Confirm: sex == female",
+        "Confirm: willing_to_provide_tissue_for_MSLN_IHC",
+        "Confirm: MSLN_expression_IHC_positive",
+        "Confirm: measurable_disease_RECIST_1_1",
+        "Confirm: prior_systemic_lines_1_to_3",
+        "Confirm: washout_time_from_prior_therapy",
+        "Confirm: recovered_from_prior_toxicities",
+        "Confirm: major_surgery_recovery_4_weeks",
+        "Confirm: adequate_organ_function",
+        "Confirm: able_to_sign_informed_consent",
+        "Confirm: negative_pregnancy_test",
+        "Confirm: hypersensitivity_to_NI1801",
+        "Confirm: radiotherapy_to_target_lesions_within_4_weeks",
+        "Confirm: prior_anticancer_therapy_washout",
+        "Confirm: concurrent_investigational_therapy_not_allowed",
+        "Confirm: severe_cardiac_dysfunction_NYHA_III_IV",
+        "Confirm: bilirubin >= 1.5 mg/dL OR AST/ALT >= 2.5x ULN (unless liver metastasis)",
+        "Confirm: HIV_hepatitis_or_active_covid_infection",
+        "Confirm: uncontrolled_active_infection",
+        "Confirm: concomitant_active_malignancy_requiring_treatment",
+        "Confirm: known_CNS_metastases",
+        "Confirm: platelet_count >= 100 x10^9/L",
+        "Confirm: hemoglobin >= 10.0 g/dL",
+        "Confirm: ANC >= 1 x10^9/L",
+        "Confirm: psychiatric_illness_or_substance_abuse",
+        "Confirm: significant_medical_conditions_increasing_risk",
+        "Confirm: prior_CD47_SIRPa_MSLN_targeting_agent",
+        "Confirm: unresolved_prior_treatment_toxicities",
+        "Confirm: legally_restricted_or_incapacitated_persons",
+        "Confirm: history_active_pneumonitis_or_ILD",
+        "Confirm: hypersensitivity_to_pembrolizumab",
+        "Confirm: active_autoimmune_disease",
+        "Confirm: prior_organ_or_tissue_allograft",
+        "Confirm: history_grade3plus_toxicity_checkpoint_inhibitor",
+        "Confirm: history_of_myocarditis",
+        "Confirm: primary_platinum_refractory_disease",
+        "Confirm: prior_wide_field_radiotherapy_20pct_bone_marrow",
+        "Confirm: serious_concurrent_illness_or_active_infection",
+        "Confirm: clinically_significant_cardiac_disease",
+        "Confirm: history_cirrhotic_liver_disease_ChildPugh_B_or_C",
+        "Confirm: prior_noninfectious_ILD_or_pneumonitis",
+        "Confirm: prior_hypersensitivity_to_monoclonal_antibodies",
+        "Confirm: prior_CD47_SIRPa_MSLN_targeting_agent",
+        "Confirm: CNS_metastases",
+        "Confirm: other_malignancy_within_3_years",
+        "Confirm: prior_hypersensitivity_to_study_drugs"
+      ],
+      "n_met": 6,
+      "n_disqualifying": 2,
+      "n_to_verify": 52
     }
   ]
 }
