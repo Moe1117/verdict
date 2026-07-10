@@ -1,6 +1,10 @@
 """Patient <-> clinical-trial eligibility matching. Claude extracts; deterministic code decides."""
 from __future__ import annotations
-from dataclasses import dataclass, field
+
+from dataclasses import asdict, dataclass, field
+
+from .parse import call_tool
+from . import trials as _trials
 
 @dataclass
 class PatientProfile:
@@ -100,3 +104,100 @@ def eval_structured(crit: Criterion, p: PatientProfile) -> tuple[str, str, str]:
         ok = crit.hi is None or val <= crit.hi
     phrase = src or f"{crit.field}={val}"
     return ("MET" if ok else "NOT_MET", phrase, f"{crit.field}={val} vs [{crit.lo},{crit.hi}]")
+
+
+def profile_from_json(d: dict, raw_note: str) -> PatientProfile:
+    """Pure parser: tool-call payload -> PatientProfile. No LLM call here."""
+    return PatientProfile(
+        age=d.get("age"), age_src=d.get("age_src", ""), sex=d.get("sex"),
+        sex_src=d.get("sex_src", ""), diagnosis=d.get("diagnosis"),
+        diagnosis_src=d.get("diagnosis_src", ""), stage=d.get("stage"),
+        biomarkers=list(d.get("biomarkers") or []), biomarkers_src=d.get("biomarkers_src", ""),
+        prior_therapies=list(d.get("prior_therapies") or []),
+        prior_therapies_src=d.get("prior_therapies_src", ""),
+        ecog=d.get("ecog"), ecog_src=d.get("ecog_src", ""),
+        labs=dict(d.get("labs") or {}), comorbidities=list(d.get("comorbidities") or []),
+        cns_status=d.get("cns_status"), raw_note=raw_note)
+
+
+def criteria_from_json(d: dict) -> list[Criterion]:
+    """Pure parser: tool-call payload -> list[Criterion]. No LLM call here."""
+    out: list[Criterion] = []
+    for c in d.get("criteria", []):
+        out.append(Criterion(
+            id=c["id"], kind=c["kind"], ctype=c["ctype"], predicate=c["predicate"],
+            source_text=c.get("source_text", ""), field=c.get("field", ""),
+            op=c.get("op", ""), lo=c.get("lo"), hi=c.get("hi")))
+    return out
+
+
+_PROFILE_TOOL = {
+    "name": "emit_profile",
+    "description": "Structured patient facts.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "age": {"type": ["integer", "null"]}, "age_src": {"type": "string"},
+            "sex": {"type": ["string", "null"], "enum": ["MALE", "FEMALE", None]},
+            "diagnosis": {"type": ["string", "null"]}, "stage": {"type": ["string", "null"]},
+            "biomarkers": {"type": "array", "items": {"type": "string"}},
+            "prior_therapies": {"type": "array", "items": {"type": "string"}},
+            "ecog": {"type": ["integer", "null"]}, "ecog_src": {"type": "string"},
+            "labs": {"type": "object"}, "comorbidities": {"type": "array", "items": {"type": "string"}},
+            "cns_status": {"type": ["string", "null"]},
+        },
+        "required": ["age", "sex", "diagnosis"],
+    },
+}
+
+_PROFILE_SYSTEM = (
+    "You extract ONLY facts explicitly stated in a clinical note into a structured patient "
+    "profile for a deterministic eligibility engine. For every field, put the verbatim phrase "
+    "in the corresponding *_src field, or leave the field null if not stated. Never infer."
+)
+
+
+def extract_profile(note: str) -> PatientProfile:
+    """Claude tool-use call: patient note -> PatientProfile. Requires ANTHROPIC_API_KEY."""
+    d = call_tool(_PROFILE_SYSTEM, f"Note:\n\n{note}", _PROFILE_TOOL, max_tokens=1024)
+    return profile_from_json(d, raw_note=note)
+
+
+_CRITERIA_TOOL = {
+    "name": "emit_criteria",
+    "description": "One entry per eligibility criterion.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "criteria": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "string"}, "kind": {"enum": ["inclusion", "exclusion"]},
+                        "ctype": {"enum": ["structured", "semantic"]},
+                        "predicate": {"type": "string"}, "source_text": {"type": "string"},
+                        "field": {"type": "string"}, "op": {"enum": ["range", "min", "max", ""]},
+                        "lo": {"type": ["number", "null"]}, "hi": {"type": ["number", "null"]},
+                    },
+                    "required": ["id", "kind", "ctype", "predicate", "source_text"],
+                },
+            },
+        },
+        "required": ["criteria"],
+    },
+}
+
+_CRITERIA_SYSTEM = (
+    "You split a clinical trial's eligibility criteria into one entry each for a deterministic "
+    "eligibility engine. Mark ctype='structured' ONLY for age, ECOG, sex, or numeric lab "
+    "thresholds (fill field/op/lo/hi); everything else is 'semantic'. Preserve source_text "
+    "verbatim."
+)
+
+
+def extract_criteria(eligibility_text: str) -> list[Criterion]:
+    """Claude tool-use call: trial eligibility text -> list[Criterion]. Requires ANTHROPIC_API_KEY."""
+    d = call_tool(_CRITERIA_SYSTEM, f"Eligibility text:\n\n{eligibility_text}",
+                  _CRITERIA_TOOL, max_tokens=3000)
+    return criteria_from_json(d)
