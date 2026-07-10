@@ -1,6 +1,7 @@
 """Patient <-> clinical-trial eligibility matching. Claude extracts; deterministic code decides."""
 from __future__ import annotations
 
+import json
 from dataclasses import asdict, dataclass, field
 
 from .parse import call_tool
@@ -121,9 +122,20 @@ def profile_from_json(d: dict, raw_note: str) -> PatientProfile:
 
 
 def criteria_from_json(d: dict) -> list[Criterion]:
-    """Pure parser: tool-call payload -> list[Criterion]. No LLM call here."""
+    """Pure parser: tool-call payload -> list[Criterion]. No LLM call here.
+
+    Defensive against an observed model quirk: for some inputs the tool call comes back
+    with `criteria` as a JSON-encoded *string* (occasionally double-wrapped as another
+    `{"criteria": [...]}` object) instead of a native array, even though the declared
+    input_schema types it as an array. Recover by decoding the string before iterating,
+    rather than raising downstream on `c["id"]` against a string index.
+    """
+    raw = d.get("criteria", [])
+    if isinstance(raw, str):
+        parsed = json.loads(raw)
+        raw = parsed.get("criteria", []) if isinstance(parsed, dict) else parsed
     out: list[Criterion] = []
-    for c in d.get("criteria", []):
+    for c in raw:
         out.append(Criterion(
             id=c["id"], kind=c["kind"], ctype=c["ctype"], predicate=c["predicate"],
             source_text=c.get("source_text", ""), field=c.get("field", ""),
@@ -197,9 +209,15 @@ _CRITERIA_SYSTEM = (
 
 
 def extract_criteria(eligibility_text: str) -> list[Criterion]:
-    """Claude tool-use call: trial eligibility text -> list[Criterion]. Requires ANTHROPIC_API_KEY."""
+    """Claude tool-use call: trial eligibility text -> list[Criterion]. Requires ANTHROPIC_API_KEY.
+
+    max_tokens=8000: observed in the wild (real CT.gov trials) that dense eligibility text
+    (10k+ chars, 20+ lettered sub-criteria) can truncate a 3000-token tool-use response
+    mid-JSON, which silently yields an empty `{}` payload -> zero criteria for a trial that
+    actually has many. 8000 covers the longest real eligibility blocks seen so far.
+    """
     d = call_tool(_CRITERIA_SYSTEM, f"Eligibility text:\n\n{eligibility_text}",
-                  _CRITERIA_TOOL, max_tokens=3000)
+                  _CRITERIA_TOOL, max_tokens=8000)
     return criteria_from_json(d)
 
 
@@ -272,13 +290,28 @@ def card_to_dict(c: TrialCard) -> dict:
     return asdict(c)
 
 
+# Below this length, a genuinely trivial trial can legitimately have zero extracted
+# criteria (e.g. "see protocol" placeholder text). Above it, zero criteria almost always
+# means extraction failed (usually a truncated tool-use response on unusually dense,
+# deeply-nested eligibility text) rather than that the trial truly has no criteria.
+_MIN_ELIGIBILITY_LEN_FOR_NONEMPTY_CRITERIA = 200
+
+
 def review(note: str, condition: str | None = None, max_trials: int = 5) -> list[TrialCard]:
-    """End-to-end: note -> profile -> candidate trials -> per-criterion match -> ranked cards."""
+    """End-to-end: note -> profile -> candidate trials -> per-criterion match -> ranked cards.
+
+    Skips (does not fabricate a card for) any candidate trial whose criteria extraction
+    comes back empty despite substantial eligibility text — that is an extraction failure,
+    not a trial with no criteria, and silently emitting a "Needs verification" card with
+    zero criteria would misrepresent an unresolved trial as one with nothing to check.
+    """
     profile = extract_profile(note)
     cond = condition or profile.diagnosis or ""
     cards: list[TrialCard] = []
     for cand in _trials.search_candidates_by_condition(cond, page_size=max_trials):
         elig = _trials.get_eligibility(cand.nct_id)
         crits = extract_criteria(elig.text)
+        if not crits and len(elig.text) >= _MIN_ELIGIBILITY_LEN_FOR_NONEMPTY_CRITERIA:
+            continue
         cards.append(match(profile, cand.nct_id, cand.title, cand.status, crits))
     return rank_cards(cards)
