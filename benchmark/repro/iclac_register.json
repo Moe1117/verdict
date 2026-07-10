@@ -1,0 +1,5378 @@
+{
+ "222": {
+  "name": "222",
+  "iclac_id": "ICLAC-00454",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_1T15",
+  "true_identity": "PA1",
+  "sheet": "Version 13 Table 1"
+ },
+ "1.1b4": {
+  "name": "1.1B4",
+  "iclac_id": "ICLAC-00599",
+  "claimed_origin": "Hybrid, pancreatic islet cells / pancreatic carcinoma",
+  "cvcl": "CVCL_1778",
+  "true_identity": "Hybrid, PANC-1 / unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "1.1e7": {
+  "name": "1.1E7",
+  "iclac_id": "ICLAC-00600",
+  "claimed_origin": "Hybrid, pancreatic islet cells / pancreatic carcinoma",
+  "cvcl": "CVCL_2257",
+  "true_identity": "Hybrid, PANC-1 / unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "1-1ras1000": {
+  "name": "1-1ras1000 (BALB/3T3 A31-1-1 derivative)",
+  "iclac_id": "ICLAC-00531",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_8653",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "balb": {
+  "name": "Bhas42 (BALB/3T3 A31-1-1 derivative)",
+  "iclac_id": "ICLAC-00530",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_5494",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "3t3 a31-1-1 derivative": {
+  "name": "Bhas42 (BALB/3T3 A31-1-1 derivative)",
+  "iclac_id": "ICLAC-00530",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_5494",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "1-1src": {
+  "name": "1-1src (BALB/3T3 A31-1-1 derivative)",
+  "iclac_id": "ICLAC-00532",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_8654",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "1e8": {
+  "name": "1E8 (BLIN-1 derivative)",
+  "iclac_id": "ICLAC-00169",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_L811",
+  "true_identity": "NALM-6",
+  "sheet": "Version 13 Table 1"
+ },
+ "blin-1 derivative": {
+  "name": "1E8 (BLIN-1 derivative)",
+  "iclac_id": "ICLAC-00169",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_L811",
+  "true_identity": "NALM-6",
+  "sheet": "Version 13 Table 1"
+ },
+ "2008/c13*5.25": {
+  "name": "2008/C13*5.25 (C13, OV2008/C13)",
+  "iclac_id": "ICLAC-00522 (contains: ICLAC-00457)",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_0114",
+  "true_identity": "ME-180",
+  "sheet": "Version 13 Table 1"
+ },
+ "c13": {
+  "name": "2008/C13*5.25 (C13, OV2008/C13)",
+  "iclac_id": "ICLAC-00522 (contains: ICLAC-00457)",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_0114",
+  "true_identity": "ME-180",
+  "sheet": "Version 13 Table 1"
+ },
+ "ov2008": {
+  "name": "OV2008 (A2008)",
+  "iclac_id": "ICLAC-00466 (contains: ICLAC-00455)",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_0473",
+  "true_identity": "ME-180",
+  "sheet": "Version 13 Table 1"
+ },
+ "2474/90": {
+  "name": "2474/90",
+  "iclac_id": "ICLAC-00107",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_9556",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "2563": {
+  "name": "2563 (MAC-21)",
+  "iclac_id": "ICLAC-00032",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_M629",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "mac-21": {
+  "name": "2563 (MAC-21)",
+  "iclac_id": "ICLAC-00032",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_M629",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "28sc-es": {
+  "name": "28SC-ES (SC derivative)",
+  "iclac_id": "ICLAC-00526",
+  "claimed_origin": "Blood, monocyte/ macrophage",
+  "cvcl": "CVCL_EP74",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "sc derivative": {
+  "name": "28SC-ES (SC derivative)",
+  "iclac_id": "ICLAC-00526",
+  "claimed_origin": "Blood, monocyte/ macrophage",
+  "cvcl": "CVCL_EP74",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "2957/90": {
+  "name": "2957/90",
+  "iclac_id": "ICLAC-00108",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_9557",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "3051/80": {
+  "name": "3051/80",
+  "iclac_id": "ICLAC-00109",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_9558",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "3ab-os": {
+  "name": "3AB-OS (MG-63 derivative)",
+  "iclac_id": "ICLAC-00545",
+  "claimed_origin": "Sarcoma (osteosarcoma)",
+  "cvcl": "CVCL_LM95",
+  "true_identity": "RD",
+  "sheet": "Version 13 Table 1"
+ },
+ "mg-63 derivative": {
+  "name": "3AB-OS (MG-63 derivative)",
+  "iclac_id": "ICLAC-00545",
+  "claimed_origin": "Sarcoma (osteosarcoma)",
+  "cvcl": "CVCL_LM95",
+  "true_identity": "RD",
+  "sheet": "Version 13 Table 1"
+ },
+ "41m": {
+  "name": "41M",
+  "iclac_id": "ICLAC-00110",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_4993",
+  "true_identity": "OAW 28",
+  "sheet": "Version 13 Table 1"
+ },
+ "5-8f": {
+  "name": "5-8F (SUNE1 derivative)",
+  "iclac_id": "ICLAC-00596",
+  "claimed_origin": "Nasal pharynx, carcinoma",
+  "cvcl": "CVCL_C528",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sune1 derivative": {
+  "name": "6-10B (SUNE1 derivative)",
+  "iclac_id": "ICLAC-00597",
+  "claimed_origin": "Nasal pharynx, carcinoma",
+  "cvcl": "CVCL_C529",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "6-10b": {
+  "name": "6-10B (SUNE1 derivative)",
+  "iclac_id": "ICLAC-00597",
+  "claimed_origin": "Nasal pharynx, carcinoma",
+  "cvcl": "CVCL_C529",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "a172tr3": {
+  "name": "A172TR3 (U251-TR3)",
+  "iclac_id": "ICLAC-00523",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_1G29",
+  "true_identity": "U-251 MG",
+  "sheet": "Version 13 Table 1"
+ },
+ "u251-tr3": {
+  "name": "A172TR3 (U251-TR3)",
+  "iclac_id": "ICLAC-00523",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_1G29",
+  "true_identity": "U-251 MG",
+  "sheet": "Version 13 Table 1"
+ },
+ "acc2": {
+  "name": "ACC2",
+  "iclac_id": "ICLAC-00357",
+  "claimed_origin": "Salivary gland, adenoid cystic carcinoma",
+  "cvcl": "CVCL_6872",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "acc3": {
+  "name": "ACC3",
+  "iclac_id": "ICLAC-00358",
+  "claimed_origin": "Salivary gland, adenoid cystic carcinoma",
+  "cvcl": "CVCL_6873",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "accm": {
+  "name": "ACCM",
+  "iclac_id": "ICLAC-00359",
+  "claimed_origin": "Salivary gland, adenoid cystic carcinoma",
+  "cvcl": "CVCL_6874",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "accns": {
+  "name": "ACCNS",
+  "iclac_id": "ICLAC-00360",
+  "claimed_origin": "Salivary gland, adenoid cystic carcinoma",
+  "cvcl": "CVCL_6875",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "accs": {
+  "name": "ACCS",
+  "iclac_id": "ICLAC-00361",
+  "claimed_origin": "Salivary gland, adenoid cystic carcinoma",
+  "cvcl": "CVCL_6876",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "acn": {
+  "name": "ACN",
+  "iclac_id": "ICLAC-00623",
+  "claimed_origin": "Neuroblastoma",
+  "cvcl": "CVCL_1068",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "adlc-5m2": {
+  "name": "ADLC-5M2",
+  "iclac_id": "ICLAC-00111",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_8169",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "aedes aegypti, suitor's clone": {
+  "name": "Aedes aegypti, Suitor's clone",
+  "iclac_id": "ICLAC-00014",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_1R48",
+  "true_identity": "Unknown, possibly Ae (Grace's Antheraea eucalypti cells)",
+  "sheet": "Version 13 Table 1"
+ },
+ "aedes vexans culture": {
+  "name": "Aedes vexans culture",
+  "iclac_id": "ICLAC-00015",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_1R46",
+  "true_identity": "Unknown, possibly Ae (Grace's Antheraea eucalypti cells)",
+  "sheet": "Version 13 Table 1"
+ },
+ "ag-f": {
+  "name": "AG-F",
+  "iclac_id": "ICLAC-00171",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_D101",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 1"
+ },
+ "aki": {
+  "name": "AKI",
+  "iclac_id": "ICLAC-00172",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_8170",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "alva-101": {
+  "name": "ALVA-101",
+  "iclac_id": "ICLAC-00176",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4735",
+  "true_identity": "PC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "alva-31": {
+  "name": "ALVA-31",
+  "iclac_id": "ICLAC-00173",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4737",
+  "true_identity": "PC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "alva-41": {
+  "name": "ALVA-41",
+  "iclac_id": "ICLAC-00174",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4734",
+  "true_identity": "PC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "alva-55": {
+  "name": "ALVA-55",
+  "iclac_id": "ICLAC-00175",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4736",
+  "true_identity": "PC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "ao": {
+  "name": "AO",
+  "iclac_id": "ICLAC-00033",
+  "claimed_origin": "Amnion",
+  "cvcl": "CVCL_D631",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ao38": {
+  "name": "Ao38 (BTI-Tnao38)",
+  "iclac_id": "ICLAC-00510",
+  "claimed_origin": "Eggs, normal",
+  "cvcl": "CVCL_Z252",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "bti-tnao38": {
+  "name": "Ao38 (BTI-Tnao38)",
+  "iclac_id": "ICLAC-00510",
+  "claimed_origin": "Eggs, normal",
+  "cvcl": "CVCL_Z252",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "aro81-1": {
+  "name": "ARO81-1 (ARO)",
+  "iclac_id": "ICLAC-00177 (contains: ICLAC-00393)",
+  "claimed_origin": "Thyroid, anaplastic carcinoma",
+  "cvcl": "CVCL_0144",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "aro": {
+  "name": "ARO81-1 (ARO)",
+  "iclac_id": "ICLAC-00177 (contains: ICLAC-00393)",
+  "claimed_origin": "Thyroid, anaplastic carcinoma",
+  "cvcl": "CVCL_0144",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "av3": {
+  "name": "AV3",
+  "iclac_id": "ICLAC-00001",
+  "claimed_origin": "Amnion",
+  "cvcl": "CVCL_1904",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "az521": {
+  "name": "AZ521",
+  "iclac_id": "ICLAC-00369",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_2862",
+  "true_identity": "HuTu 80",
+  "sheet": "Version 13 Table 1"
+ },
+ "balb/3t3 a31-1-1": {
+  "name": "BALB/3T3 A31-1-1 (1-1, A31-1-1, Balb/c 3T3 A31-I-1; BALB/3T3 A31 derivative)",
+  "iclac_id": "ICLAC-00528",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_J646",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "1-1": {
+  "name": "BALB/3T3 A31-1-1 (1-1, A31-1-1, Balb/c 3T3 A31-I-1; BALB/3T3 A31 derivative)",
+  "iclac_id": "ICLAC-00528",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_J646",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "a31-1-1": {
+  "name": "BALB/3T3 A31-1-1 (1-1, A31-1-1, Balb/c 3T3 A31-I-1; BALB/3T3 A31 derivative)",
+  "iclac_id": "ICLAC-00528",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_J646",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "c 3t3 a31-i-1": {
+  "name": "BALB/3T3 A31-1-1 (1-1, A31-1-1, Balb/c 3T3 A31-I-1; BALB/3T3 A31 derivative)",
+  "iclac_id": "ICLAC-00528",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_J646",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "3t3 a31 derivative": {
+  "name": "BALB/3T3 A31-1-13 (Balb/c 3T3 A31-1-13; BALB/3T3 A31 derivative)",
+  "iclac_id": "ICLAC-00529",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_L996",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "balb/3t3 a31-1-13": {
+  "name": "BALB/3T3 A31-1-13 (Balb/c 3T3 A31-1-13; BALB/3T3 A31 derivative)",
+  "iclac_id": "ICLAC-00529",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_L996",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "c 3t3 a31-1-13": {
+  "name": "BALB/3T3 A31-1-13 (Balb/c 3T3 A31-1-13; BALB/3T3 A31 derivative)",
+  "iclac_id": "ICLAC-00529",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_L996",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "bcap-37": {
+  "name": "BCaP-37",
+  "iclac_id": "ICLAC-00625",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_0164",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "bcc1/kmc": {
+  "name": "BCC1/KMC",
+  "iclac_id": "ICLAC-00112",
+  "claimed_origin": "Basal cell carcinoma",
+  "cvcl": "CVCL_A033",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "be-13": {
+  "name": "BE-13",
+  "iclac_id": "ICLAC-00178",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_1081",
+  "true_identity": "PEER",
+  "sheet": "Version 13 Table 1"
+ },
+ "bel-7402": {
+  "name": "BEL-7402",
+  "iclac_id": "ICLAC-00549",
+  "claimed_origin": "Liver, hepatocellular carcinoma",
+  "cvcl": "CVCL_5492",
+  "true_identity": "HeLa / HCT 8",
+  "sheet": "Version 13 Table 1"
+ },
+ "bel-7404": {
+  "name": "BEL-7404",
+  "iclac_id": "ICLAC-00550",
+  "claimed_origin": "Liver, hepatocellular carcinoma",
+  "cvcl": "CVCL_6568",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "bgc-823": {
+  "name": "BGC-823",
+  "iclac_id": "ICLAC-00570",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_3360",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhas42": {
+  "name": "Bhas42 (BALB/3T3 A31-1-1 derivative)",
+  "iclac_id": "ICLAC-00530",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_5494",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhp 10-3": {
+  "name": "BHP 10-3",
+  "iclac_id": "ICLAC-00179",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6278",
+  "true_identity": "TPC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhp 14-9": {
+  "name": "BHP 14-9",
+  "iclac_id": "ICLAC-00180",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6279",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhp 15-3": {
+  "name": "BHP 15-3",
+  "iclac_id": "ICLAC-00555",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6280",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhp 17-10": {
+  "name": "BHP 17-10",
+  "iclac_id": "ICLAC-00181",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6281",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhp 18-21": {
+  "name": "BHP 18-21",
+  "iclac_id": "ICLAC-00571",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6282",
+  "true_identity": "Mixture, M14 / TPC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhp 2-7": {
+  "name": "BHP 2-7",
+  "iclac_id": "ICLAC-00182",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6283",
+  "true_identity": "TPC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhp 5-16": {
+  "name": "BHP 5-16",
+  "iclac_id": "ICLAC-00183",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6284",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "bhp 7-13": {
+  "name": "BHP 7-13",
+  "iclac_id": "ICLAC-00184",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6285",
+  "true_identity": "TPC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "bic-1": {
+  "name": "BIC-1",
+  "iclac_id": "ICLAC-00365",
+  "claimed_origin": "Esophageal adenocarcinoma",
+  "cvcl": "CVCL_8092",
+  "true_identity": "SW-480, SW-620",
+  "sheet": "Version 13 Table 1"
+ },
+ "blin-1": {
+  "name": "BLIN-1",
+  "iclac_id": "ICLAC-00170",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_8173",
+  "true_identity": "NALM-6",
+  "sheet": "Version 13 Table 1"
+ },
+ "bm-1604": {
+  "name": "BM-1604",
+  "iclac_id": "ICLAC-00113",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_1968",
+  "true_identity": "DU-145",
+  "sheet": "Version 13 Table 1"
+ },
+ "brca 5": {
+  "name": "BrCA 5",
+  "iclac_id": "ICLAC-00016",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_D280",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "bscc-93": {
+  "name": "BSCC-93",
+  "iclac_id": "ICLAC-00185",
+  "claimed_origin": "Skin, squamous cell carcinoma",
+  "cvcl": "CVCL_8157",
+  "true_identity": "DJM-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "bt-b": {
+  "name": "BT-B",
+  "iclac_id": "ICLAC-00394",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_1858",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "c16": {
+  "name": "C16 (MRC-5 derivative)",
+  "iclac_id": "ICLAC-00296",
+  "claimed_origin": "Lung cells, fetal",
+  "cvcl": "CVCL_2322",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "mrc-5 derivative": {
+  "name": "C16 (MRC-5 derivative)",
+  "iclac_id": "ICLAC-00296",
+  "claimed_origin": "Lung cells, fetal",
+  "cvcl": "CVCL_2322",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "c-433": {
+  "name": "C-433",
+  "iclac_id": "ICLAC-00395",
+  "claimed_origin": "Giant cell tumor, benign",
+  "cvcl": "CVCL_1969",
+  "true_identity": "RD-ES",
+  "sheet": "Version 13 Table 1"
+ },
+ "cac2": {
+  "name": "CAC2",
+  "iclac_id": "ICLAC-00362",
+  "claimed_origin": "Salivary gland, adenoid cystic carcinoma",
+  "cvcl": "CVCL_6883",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "caes-17": {
+  "name": "CaES-17",
+  "iclac_id": "ICLAC-00604",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_UY83",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "cama": {
+  "name": "CaMa (clone 15)",
+  "iclac_id": "ICLAC-00034",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_1T14",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "clone 15": {
+  "name": "CaMa (clone 15)",
+  "iclac_id": "ICLAC-00034",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_1T14",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "caov": {
+  "name": "CaOV",
+  "iclac_id": "ICLAC-00035",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_M091",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "caov-2": {
+  "name": "Caov-2",
+  "iclac_id": "ICLAC-00458",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_6861",
+  "true_identity": "NIH:OVCAR-2",
+  "sheet": "Version 13 Table 1"
+ },
+ "cave": {
+  "name": "CaVe",
+  "iclac_id": "ICLAC-00036",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_8444",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ccl3": {
+  "name": "CCL3",
+  "iclac_id": "ICLAC-00381",
+  "claimed_origin": "Chordoma",
+  "cvcl": "CVCL_M023",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "cco": {
+  "name": "CCO",
+  "iclac_id": "ICLAC-00618",
+  "claimed_origin": "Ovary, normal",
+  "cvcl": "CVCL_4142",
+  "true_identity": "Unknown, possibly BB",
+  "sheet": "Version 13 Table 1"
+ },
+ "cco-sfm": {
+  "name": "CCO-SFM (CCO derivative)",
+  "iclac_id": "ICLAC-00619",
+  "claimed_origin": "Ovary, normal",
+  "cvcl": "CVCL_JX47",
+  "true_identity": "Unknown, possibly BB",
+  "sheet": "Version 13 Table 1"
+ },
+ "cco derivative": {
+  "name": "CCO-SFM (CCO derivative)",
+  "iclac_id": "ICLAC-00619",
+  "claimed_origin": "Ovary, normal",
+  "cvcl": "CVCL_JX47",
+  "true_identity": "Unknown, possibly BB",
+  "sheet": "Version 13 Table 1"
+ },
+ "cgth-w-1": {
+  "name": "CGTH-W-1",
+  "iclac_id": "ICLAC-00536",
+  "claimed_origin": "Thyroid, follicular carcinoma",
+  "cvcl": "CVCL_1120",
+  "true_identity": "SW579",
+  "sheet": "Version 13 Table 1"
+ },
+ "ch1": {
+  "name": "CH1",
+  "iclac_id": "ICLAC-00459",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_4992",
+  "true_identity": "PA1",
+  "sheet": "Version 13 Table 1"
+ },
+ "ch1-cisr": {
+  "name": "CH1-cisR (CH1 derivative)",
+  "iclac_id": "ICLAC-00559",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_X012",
+  "true_identity": "PA1",
+  "sheet": "Version 13 Table 1"
+ },
+ "ch1 derivative": {
+  "name": "CH1-cisR (CH1 derivative)",
+  "iclac_id": "ICLAC-00559",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_X012",
+  "true_identity": "PA1",
+  "sheet": "Version 13 Table 1"
+ },
+ "chang liver": {
+  "name": "Chang liver",
+  "iclac_id": "ICLAC-00002",
+  "claimed_origin": "Liver, normal hepatic cells",
+  "cvcl": "CVCL_0238",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "chb": {
+  "name": "CHB",
+  "iclac_id": "ICLAC-00017",
+  "claimed_origin": "Astrocytoma",
+  "cvcl": "CVCL_1R45",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "chp-234": {
+  "name": "CHP-234",
+  "iclac_id": "ICLAC-00297",
+  "claimed_origin": "Neuroblastoma",
+  "cvcl": "CVCL_4359",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "clom 15": {
+  "name": "Clom 15",
+  "iclac_id": "ICLAC-00383",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_1R52",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "clone 1-5c-4": {
+  "name": "Clone 1-5c-4",
+  "iclac_id": "ICLAC-00298",
+  "claimed_origin": "Conjunctiva",
+  "cvcl": "CVCL_2260",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "clone 1a": {
+  "name": "Clone 1A",
+  "iclac_id": "ICLAC-00371",
+  "claimed_origin": "Blood",
+  "cvcl": "CVCL_1T03",
+  "true_identity": "CHSE-214",
+  "sheet": "Version 13 Table 1"
+ },
+ "cm-319": {
+  "name": "CM-319",
+  "iclac_id": "ICLAC-00626",
+  "claimed_origin": "Chordoma",
+  "cvcl": "CVCL_M022",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "cmp": {
+  "name": "CMP",
+  "iclac_id": "ICLAC-00003",
+  "claimed_origin": "Rectal adenocarcinoma",
+  "cvcl": "CVCL_D297",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "cmpii c2": {
+  "name": "CMPII C2",
+  "iclac_id": "ICLAC-00038",
+  "claimed_origin": "Rectal adenocarcinoma",
+  "cvcl": "CVCL_L115",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "cndt2": {
+  "name": "CNDT2",
+  "iclac_id": "ICLAC-00384",
+  "claimed_origin": "Carcinoid tumour",
+  "cvcl": "CVCL_L293",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "cne-1": {
+  "name": "CNE-1",
+  "iclac_id": "ICLAC-00473",
+  "claimed_origin": "Nasal pharynx, carcinoma",
+  "cvcl": "CVCL_6888",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "cne-2": {
+  "name": "CNE-2",
+  "iclac_id": "ICLAC-00474",
+  "claimed_origin": "Nasal pharynx, carcinoma",
+  "cvcl": "CVCL_6889",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "co": {
+  "name": "CO (COLE)",
+  "iclac_id": "ICLAC-00186",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_J653",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 1"
+ },
+ "cole": {
+  "name": "CO (COLE)",
+  "iclac_id": "ICLAC-00186",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_J653",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 1"
+ },
+ "colo-38": {
+  "name": "COLO-38",
+  "iclac_id": "ICLAC-00556",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_3934",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "colo-587": {
+  "name": "COLO-587",
+  "iclac_id": "ICLAC-00396",
+  "claimed_origin": "Pancreatic carcinoma",
+  "cvcl": "CVCL_F641",
+  "true_identity": "COLO-320DM",
+  "sheet": "Version 13 Table 1"
+ },
+ "colo-677": {
+  "name": "COLO-677",
+  "iclac_id": "ICLAC-00299",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_1862",
+  "true_identity": "RPMI-8226",
+  "sheet": "Version 13 Table 1"
+ },
+ "colo-775": {
+  "name": "COLO-775",
+  "iclac_id": "ICLAC-00537",
+  "claimed_origin": "Leukemia, chronic myeloid",
+  "cvcl": "CVCL_1996",
+  "true_identity": "RPMI-8226",
+  "sheet": "Version 13 Table 1"
+ },
+ "colo-818": {
+  "name": "COLO-818",
+  "iclac_id": "ICLAC-00114",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_1998",
+  "true_identity": "COLO-800",
+  "sheet": "Version 13 Table 1"
+ },
+ "colo-tc": {
+  "name": "CoLo-TC",
+  "iclac_id": "ICLAC-00300",
+  "claimed_origin": "Colon carcinoma",
+  "cvcl": "CVCL_8290",
+  "true_identity": "COLO-205",
+  "sheet": "Version 13 Table 1"
+ },
+ "culiseta inornata": {
+  "name": "Culiseta inornata",
+  "iclac_id": "ICLAC-00018",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_1R47",
+  "true_identity": "Unknown, possibly Ae (Grace's Antheraea eucalypti cells)",
+  "sheet": "Version 13 Table 1"
+ },
+ "d-11": {
+  "name": "D-11 (R1 derivative)",
+  "iclac_id": "ICLAC-00582",
+  "claimed_origin": "Liver, normal hepatic cells",
+  "cvcl": "CVCL_2012",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "r1 derivative": {
+  "name": "D-11 (R1 derivative)",
+  "iclac_id": "ICLAC-00582",
+  "claimed_origin": "Liver, normal hepatic cells",
+  "cvcl": "CVCL_2012",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "d18t": {
+  "name": "D18T",
+  "iclac_id": "ICLAC-00039",
+  "claimed_origin": "Synovial cell",
+  "cvcl": "CVCL_8669",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "d-54 mg": {
+  "name": "D-54 MG",
+  "iclac_id": "ICLAC-00505",
+  "claimed_origin": "Glioma",
+  "cvcl": "CVCL_5735",
+  "true_identity": "A-172",
+  "sheet": "Version 13 Table 1"
+ },
+ "d98/ah": {
+  "name": "D98/AH",
+  "iclac_id": "ICLAC-00115",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_U961",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "d98/ah2 clone b": {
+  "name": "D98/AH2 Clone B",
+  "iclac_id": "ICLAC-00301",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_2884",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "dami": {
+  "name": "DAMI",
+  "iclac_id": "ICLAC-00116",
+  "claimed_origin": "Leukemia, acute myeloid, M7",
+  "cvcl": "CVCL_4360",
+  "true_identity": "HEL",
+  "sheet": "Version 13 Table 1"
+ },
+ "dapt": {
+  "name": "DAPT",
+  "iclac_id": "ICLAC-00040",
+  "claimed_origin": "Astrocytoma, piloid",
+  "cvcl": "CVCL_D279",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "dd": {
+  "name": "DD",
+  "iclac_id": "ICLAC-00187",
+  "claimed_origin": "Malignant histiocytosis",
+  "cvcl": "CVCL_J651",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "det30a": {
+  "name": "Det30A",
+  "iclac_id": "ICLAC-00041",
+  "claimed_origin": "Breast carcinoma, ascitic fluid",
+  "cvcl": "CVCL_8674",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "detroit 98/ag": {
+  "name": "Detroit 98/AG",
+  "iclac_id": "ICLAC-00019",
+  "claimed_origin": "Sternal marrow cells",
+  "cvcl": "CVCL_8189",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "detroit 98/ah-2": {
+  "name": "Detroit 98/AH-2",
+  "iclac_id": "ICLAC-00020",
+  "claimed_origin": "Sternal marrow cells",
+  "cvcl": "CVCL_8190",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "detroit 98/ah-r": {
+  "name": "Detroit 98/AH-R",
+  "iclac_id": "ICLAC-00021",
+  "claimed_origin": "Sternal marrow cells",
+  "cvcl": "CVCL_8191",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "detroit 98s": {
+  "name": "Detroit 98s",
+  "iclac_id": "ICLAC-00022",
+  "claimed_origin": "Sternal marrow cells",
+  "cvcl": "CVCL_8192",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "detroit-6": {
+  "name": "Detroit-6 (Det6)",
+  "iclac_id": "ICLAC-00004",
+  "claimed_origin": "Sternal marrow cells",
+  "cvcl": "CVCL_2436",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "det6": {
+  "name": "Detroit-6 (Det6)",
+  "iclac_id": "ICLAC-00004",
+  "claimed_origin": "Sternal marrow cells",
+  "cvcl": "CVCL_2436",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "detroit-98": {
+  "name": "Detroit-98",
+  "iclac_id": "ICLAC-00005",
+  "claimed_origin": "Sternal marrow cells",
+  "cvcl": "CVCL_8188",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "dm12": {
+  "name": "DM12 (Tu-167 derivative)",
+  "iclac_id": "ICLAC-00397",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1Q83",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "tu-167 derivative": {
+  "name": "JMAR (Tu-167 derivative)",
+  "iclac_id": "ICLAC-00407",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1Q86",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "dm14": {
+  "name": "DM14 (Tu-167 derivative)",
+  "iclac_id": "ICLAC-00398",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1Q84",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "dro90-1": {
+  "name": "DRO90-1 (DRO)",
+  "iclac_id": "ICLAC-00188 (contains: ICLAC-00399)",
+  "claimed_origin": "Thyroid, anaplastic carcinoma",
+  "cvcl": "CVCL_6286",
+  "true_identity": "A-375",
+  "sheet": "Version 13 Table 1"
+ },
+ "dro": {
+  "name": "DRO90-1 (DRO)",
+  "iclac_id": "ICLAC-00188 (contains: ICLAC-00399)",
+  "claimed_origin": "Thyroid, anaplastic carcinoma",
+  "cvcl": "CVCL_6286",
+  "true_identity": "A-375",
+  "sheet": "Version 13 Table 1"
+ },
+ "dupro-1": {
+  "name": "DuPro-1",
+  "iclac_id": "ICLAC-00189",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4738",
+  "true_identity": "PC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "e006aa": {
+  "name": "E006AA",
+  "iclac_id": "ICLAC-00585",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4834",
+  "true_identity": "786-O",
+  "sheet": "Version 13 Table 1"
+ },
+ "e006aa-ht": {
+  "name": "E006AA-hT (E006AA derivative)",
+  "iclac_id": "ICLAC-00586",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_X480",
+  "true_identity": "786-O",
+  "sheet": "Version 13 Table 1"
+ },
+ "e006aa derivative": {
+  "name": "E006AA-hT (E006AA derivative)",
+  "iclac_id": "ICLAC-00586",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_X480",
+  "true_identity": "786-O",
+  "sheet": "Version 13 Table 1"
+ },
+ "eb33": {
+  "name": "EB33",
+  "iclac_id": "ICLAC-00023",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_8344",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ec9706": {
+  "name": "EC9706",
+  "iclac_id": "ICLAC-00633",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_E307",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ecas": {
+  "name": "eCAS",
+  "iclac_id": "ICLAC-00601",
+  "claimed_origin": "Macrophage, transformed",
+  "cvcl": "CVCL_7189",
+  "true_identity": "RAW 264.7",
+  "sheet": "Version 13 Table 1"
+ },
+ "ecc-1": {
+  "name": "ECC-1",
+  "iclac_id": "ICLAC-00460",
+  "claimed_origin": "Endometrial carcinoma",
+  "cvcl": "CVCL_7260",
+  "true_identity": "Ishikawa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ectc": {
+  "name": "ECTC",
+  "iclac_id": "ICLAC-00190",
+  "claimed_origin": "Thyroid, embryonic",
+  "cvcl": "CVCL_4518",
+  "true_identity": "Vero",
+  "sheet": "Version 13 Table 1"
+ },
+ "ecv-304": {
+  "name": "ECV-304",
+  "iclac_id": "ICLAC-00117",
+  "claimed_origin": "Endothelium, normal cells",
+  "cvcl": "CVCL_2029",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "ed27": {
+  "name": "ED27",
+  "iclac_id": "ICLAC-00191",
+  "claimed_origin": "Chorionic villus",
+  "cvcl": "CVCL_8345",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "eek": {
+  "name": "EEK",
+  "iclac_id": "ICLAC-00192",
+  "claimed_origin": "Kidney, embryonic renal cells",
+  "cvcl": "CVCL_8346",
+  "true_identity": "NSK",
+  "sheet": "Version 13 Table 1"
+ },
+ "eh": {
+  "name": "EH",
+  "iclac_id": "ICLAC-00193",
+  "claimed_origin": "Leukemia, hairy cell",
+  "cvcl": "CVCL_L804",
+  "true_identity": "HK",
+  "sheet": "Version 13 Table 1"
+ },
+ "ej-1": {
+  "name": "EJ-1",
+  "iclac_id": "ICLAC-00194",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_2893",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "ej138": {
+  "name": "Ej138",
+  "iclac_id": "ICLAC-00195",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_2443",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "el 1": {
+  "name": "EL 1",
+  "iclac_id": "ICLAC-00524",
+  "claimed_origin": "Spleen, monocyte/ macrophage",
+  "cvcl": "CVCL_3680",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "elco": {
+  "name": "ElCo",
+  "iclac_id": "ICLAC-00042",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_8686",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "epc": {
+  "name": "EPC",
+  "iclac_id": "ICLAC-00302",
+  "claimed_origin": "Epithelial papilloma",
+  "cvcl": "CVCL_4361",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "eplc3-2m1": {
+  "name": "EPLC3-2M1",
+  "iclac_id": "ICLAC-00118",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_8193",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "eplc-65": {
+  "name": "EPLC-65",
+  "iclac_id": "ICLAC-00119",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_8194",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "esp1": {
+  "name": "ESP1",
+  "iclac_id": "ICLAC-00043",
+  "claimed_origin": "Lymphoma, Burkitt",
+  "cvcl": "CVCL_8351",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "etk-1": {
+  "name": "ETK-1",
+  "iclac_id": "ICLAC-00196",
+  "claimed_origin": "Cholangiocarcinoma",
+  "cvcl": "CVCL_1206",
+  "true_identity": "SSP-25",
+  "sheet": "Version 13 Table 1"
+ },
+ "eu-1": {
+  "name": "EU-1",
+  "iclac_id": "ICLAC-00197",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_8857",
+  "true_identity": "REH",
+  "sheet": "Version 13 Table 1"
+ },
+ "eu-7": {
+  "name": "EU-7",
+  "iclac_id": "ICLAC-00198",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_8865",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 1"
+ },
+ "eue": {
+  "name": "EUE",
+  "iclac_id": "ICLAC-00044",
+  "claimed_origin": "Subcutis, fetal",
+  "cvcl": "CVCL_7262",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "evlc2": {
+  "name": "EVLC2",
+  "iclac_id": "ICLAC-00199",
+  "claimed_origin": "Umbilical vein endothelium, transfected",
+  "cvcl": "CVCL_8687",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "f2-4e5": {
+  "name": "F2-4E5",
+  "iclac_id": "ICLAC-00120",
+  "claimed_origin": "Thymic epithelium",
+  "cvcl": "CVCL_A040",
+  "true_identity": "SK-HEP-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "f255a4": {
+  "name": "F255A4",
+  "iclac_id": "ICLAC-00045",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_8688",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "f2-5b6": {
+  "name": "F2-5B6",
+  "iclac_id": "ICLAC-00121",
+  "claimed_origin": "Thymic epithelium",
+  "cvcl": "CVCL_A041",
+  "true_identity": "SK-HEP-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "fb2": {
+  "name": "FB2",
+  "iclac_id": "ICLAC-00200",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_9917",
+  "true_identity": "TPC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "fitz-hsa": {
+  "name": "Fitz-HSA",
+  "iclac_id": "ICLAC-00400",
+  "claimed_origin": "Sarcoma (hemangiosarcoma)",
+  "cvcl": "CVCL_1R34",
+  "true_identity": "DEN-HSA",
+  "sheet": "Version 13 Table 1"
+ },
+ "fl": {
+  "name": "FL",
+  "iclac_id": "ICLAC-00046",
+  "claimed_origin": "Amnion",
+  "cvcl": "CVCL_1905",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "flow 13000": {
+  "name": "Flow 13000",
+  "iclac_id": "ICLAC-00303",
+  "claimed_origin": "Lung cells, embryonic fibroblast",
+  "cvcl": "CVCL_F664",
+  "true_identity": "MRC-5",
+  "sheet": "Version 13 Table 1"
+ },
+ "flow 5000": {
+  "name": "Flow 5000",
+  "iclac_id": "ICLAC-00304",
+  "claimed_origin": "Lung cells, embryonic fibroblast",
+  "cvcl": "CVCL_5910",
+  "true_identity": "Flow 1000",
+  "sheet": "Version 13 Table 1"
+ },
+ "flow 6000": {
+  "name": "Flow 6000",
+  "iclac_id": "ICLAC-00305",
+  "claimed_origin": "Lung cells, embryonic fibroblast",
+  "cvcl": "CVCL_F662",
+  "true_identity": "Flow 1000",
+  "sheet": "Version 13 Table 1"
+ },
+ "flow 7000": {
+  "name": "Flow 7000",
+  "iclac_id": "ICLAC-00306",
+  "claimed_origin": "Lung cells, embryonic fibroblast",
+  "cvcl": "CVCL_2904",
+  "true_identity": "Flow 3000",
+  "sheet": "Version 13 Table 1"
+ },
+ "fq": {
+  "name": "FQ",
+  "iclac_id": "ICLAC-00047",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_L984",
+  "true_identity": "OMK-210",
+  "sheet": "Version 13 Table 1"
+ },
+ "fri-spim-1229": {
+  "name": "FRI-SpIm-1229",
+  "iclac_id": "ICLAC-00566",
+  "claimed_origin": "Neonate larvae",
+  "cvcl": "CVCL_Z133",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "g-11": {
+  "name": "G-11 (HBT-3 derivative)",
+  "iclac_id": "ICLAC-00048",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_U962",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hbt-3 derivative": {
+  "name": "G-11 (HBT-3 derivative)",
+  "iclac_id": "ICLAC-00048",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_U962",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ghe": {
+  "name": "GHE",
+  "iclac_id": "ICLAC-00122",
+  "claimed_origin": "Astrocytoma",
+  "cvcl": "CVCL_8199",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "girardi heart": {
+  "name": "Girardi heart",
+  "iclac_id": "ICLAC-00006",
+  "claimed_origin": "Heart, normal cells",
+  "cvcl": "CVCL_2254",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "glc-82": {
+  "name": "GLC-82",
+  "iclac_id": "ICLAC-00572",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_3371",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "gm1312": {
+  "name": "GM1312",
+  "iclac_id": "ICLAC-00201",
+  "claimed_origin": "Myeloma",
+  "cvcl": "CVCL_J111",
+  "true_identity": "Correct name, incorrect cell type",
+  "sheet": "Version 13 Table 1"
+ },
+ "gos-3": {
+  "name": "GOS-3",
+  "iclac_id": "ICLAC-00449",
+  "claimed_origin": "Glioma, mixed astro-oligodendroglioma",
+  "cvcl": "CVCL_2050",
+  "true_identity": "U-343 MG",
+  "sheet": "Version 13 Table 1"
+ },
+ "gps-m": {
+  "name": "GPS-M",
+  "iclac_id": "ICLAC-00049",
+  "claimed_origin": "Spleen, adult cells",
+  "cvcl": "CVCL_1R31",
+  "true_identity": "Strain L-M",
+  "sheet": "Version 13 Table 1"
+ },
+ "gps-pd": {
+  "name": "GPS-PD",
+  "iclac_id": "ICLAC-00050",
+  "claimed_origin": "Spleen, adult cells",
+  "cvcl": "CVCL_1R32",
+  "true_identity": "Strain L-M",
+  "sheet": "Version 13 Table 1"
+ },
+ "gref-x": {
+  "name": "GREF-X",
+  "iclac_id": "ICLAC-00123",
+  "claimed_origin": "Liver, hepatic myofibroblast",
+  "cvcl": "CVCL_7667",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "gr-m": {
+  "name": "GR-M",
+  "iclac_id": "ICLAC-00538",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_2451",
+  "true_identity": "PSN1",
+  "sheet": "Version 13 Table 1"
+ },
+ "gt3tkb": {
+  "name": "GT3TKB",
+  "iclac_id": "ICLAC-00202",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_1237",
+  "true_identity": "RERF-LC-A1",
+  "sheet": "Version 13 Table 1"
+ },
+ "h-494": {
+  "name": "H-494",
+  "iclac_id": "ICLAC-00051",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_7669",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "h7d7a": {
+  "name": "H7D7A",
+  "iclac_id": "ICLAC-00203",
+  "claimed_origin": "Liver, normal cells (SV40-transformed)",
+  "cvcl": "CVCL_1T06",
+  "true_identity": "HepG2",
+  "sheet": "Version 13 Table 1"
+ },
+ "h7d7b": {
+  "name": "H7D7B",
+  "iclac_id": "ICLAC-00204",
+  "claimed_origin": "Liver, normal cells (SV40-transformed)",
+  "cvcl": "CVCL_1T07",
+  "true_identity": "HepG2",
+  "sheet": "Version 13 Table 1"
+ },
+ "h7d7bd5": {
+  "name": "H7D7BD5 (H7D7B derivative)",
+  "iclac_id": "ICLAC-00560",
+  "claimed_origin": "Liver, normal cells (SV40-transformed)",
+  "cvcl": "CVCL_1T10",
+  "true_identity": "HepG2",
+  "sheet": "Version 13 Table 1"
+ },
+ "h7d7b derivative": {
+  "name": "H7D7BD5 (H7D7B derivative)",
+  "iclac_id": "ICLAC-00560",
+  "claimed_origin": "Liver, normal cells (SV40-transformed)",
+  "cvcl": "CVCL_1T10",
+  "true_identity": "HepG2",
+  "sheet": "Version 13 Table 1"
+ },
+ "h7d7c": {
+  "name": "H7D7C",
+  "iclac_id": "ICLAC-00205",
+  "claimed_origin": "Liver, normal cells (SV40-transformed)",
+  "cvcl": "CVCL_1T08",
+  "true_identity": "HepG2",
+  "sheet": "Version 13 Table 1"
+ },
+ "h7d7d": {
+  "name": "H7D7D",
+  "iclac_id": "ICLAC-00206",
+  "claimed_origin": "Liver, normal cells (SV40-transformed)",
+  "cvcl": "CVCL_1T09",
+  "true_identity": "HepG2",
+  "sheet": "Version 13 Table 1"
+ },
+ "hac15": {
+  "name": "HAC15",
+  "iclac_id": "ICLAC-00518",
+  "claimed_origin": "Adrenal gland, adrenal cortex carcinoma",
+  "cvcl": "CVCL_S898",
+  "true_identity": "NCI-H295R",
+  "sheet": "Version 13 Table 1"
+ },
+ "hac-84": {
+  "name": "HAC-84 (GLC-82 derivative)",
+  "iclac_id": "ICLAC-00605",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_6906",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "glc-82 derivative": {
+  "name": "HAC-84 (GLC-82 derivative)",
+  "iclac_id": "ICLAC-00605",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_6906",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hag": {
+  "name": "HAG",
+  "iclac_id": "ICLAC-00124",
+  "claimed_origin": "Thyroid adenoma (goitre)",
+  "cvcl": "CVCL_8223",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hapi": {
+  "name": "HAPI",
+  "iclac_id": "ICLAC-00602",
+  "claimed_origin": "Brain, non-neoplastic glial cells",
+  "cvcl": "CVCL_0F62",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "hbc": {
+  "name": "HBC",
+  "iclac_id": "ICLAC-00024",
+  "claimed_origin": "Breast carcinoma, invasive ductal tumor",
+  "cvcl": "CVCL_M630",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "hbl-100": {
+  "name": "HBL-100",
+  "iclac_id": "ICLAC-00207",
+  "claimed_origin": "Breast, cells from expressed milk sample",
+  "cvcl": "CVCL_4362",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "hbt-3": {
+  "name": "HBT-3",
+  "iclac_id": "ICLAC-00052",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_D281",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hbt-39b": {
+  "name": "HBT-39b",
+  "iclac_id": "ICLAC-00053",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_J652",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hbt-e": {
+  "name": "HBT-E (HBT-3 clone)",
+  "iclac_id": "ICLAC-00054",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_M746",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hbt-3 clone": {
+  "name": "HBT-E (HBT-3 clone)",
+  "iclac_id": "ICLAC-00054",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_M746",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcc60": {
+  "name": "HCC60",
+  "iclac_id": "ICLAC-00533",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_G002",
+  "true_identity": "NCI-H23",
+  "sheet": "Version 13 Table 1"
+ },
+ "hce": {
+  "name": "HCE",
+  "iclac_id": "ICLAC-00055",
+  "claimed_origin": "Cervical carcinoma",
+  "cvcl": "CVCL_M619",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcu-10": {
+  "name": "HCu-10",
+  "iclac_id": "ICLAC-00056",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_M850",
+  "true_identity": "Hcu-10, Hcu-18, Hcu-22, Hcu-27, Hcu-33, Hcu-37, Hcu-39 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcu-18": {
+  "name": "HCu-18",
+  "iclac_id": "ICLAC-00057",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_M852",
+  "true_identity": "Hcu-10, Hcu-18, Hcu-22, Hcu-27, Hcu-33, Hcu-37, Hcu-39 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcu-22": {
+  "name": "HCu-22",
+  "iclac_id": "ICLAC-00058",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_M853",
+  "true_identity": "Hcu-10, Hcu-18, Hcu-22, Hcu-27, Hcu-33, Hcu-37, Hcu-39 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcu-27": {
+  "name": "HCu-27",
+  "iclac_id": "ICLAC-00059",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_M854",
+  "true_identity": "Hcu-10, Hcu-18, Hcu-22, Hcu-27, Hcu-33, Hcu-37, Hcu-39 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcu-33": {
+  "name": "HCu-33",
+  "iclac_id": "ICLAC-00060",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_M855",
+  "true_identity": "Hcu-10, Hcu-18, Hcu-22, Hcu-27, Hcu-33, Hcu-37, Hcu-39 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcu-37": {
+  "name": "HCu-37",
+  "iclac_id": "ICLAC-00061",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_M856",
+  "true_identity": "Hcu-10, Hcu-18, Hcu-22, Hcu-27, Hcu-33, Hcu-37, Hcu-39 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcu-39": {
+  "name": "HCu-39",
+  "iclac_id": "ICLAC-00062",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_M857",
+  "true_identity": "Hcu-10, Hcu-18, Hcu-22, Hcu-27, Hcu-33, Hcu-37, Hcu-39 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcv-29tmv": {
+  "name": "HCV-29Tmv (HCV-29 derivative)",
+  "iclac_id": "ICLAC-00125",
+  "claimed_origin": "Bladder, tumorigenic urothelial cells",
+  "cvcl": "CVCL_8229",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hcv-29 derivative": {
+  "name": "HCV-29Tmv (HCV-29 derivative)",
+  "iclac_id": "ICLAC-00125",
+  "claimed_origin": "Bladder, tumorigenic urothelial cells",
+  "cvcl": "CVCL_8229",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hec-155": {
+  "name": "HEC-155",
+  "iclac_id": "ICLAC-00307",
+  "claimed_origin": "Uterine adenocarcinoma",
+  "cvcl": "CVCL_2926",
+  "true_identity": "HEC-155, HEC-180 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hec-180": {
+  "name": "HEC-180",
+  "iclac_id": "ICLAC-00308",
+  "claimed_origin": "Uterine adenocarcinoma",
+  "cvcl": "CVCL_8313",
+  "true_identity": "HEC-155, HEC-180 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "hek": {
+  "name": "HEK",
+  "iclac_id": "ICLAC-00063",
+  "claimed_origin": "Kidney, embryonic renal cells",
+  "cvcl": "CVCL_M624",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hek/hrv": {
+  "name": "HEK/HRV (HEK derivative)",
+  "iclac_id": "ICLAC-00064",
+  "claimed_origin": "Kidney, transformed embryonic renal cells",
+  "cvcl": "CVCL_M625",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hek derivative": {
+  "name": "HEK/HRV (HEK derivative)",
+  "iclac_id": "ICLAC-00064",
+  "claimed_origin": "Kidney, transformed embryonic renal cells",
+  "cvcl": "CVCL_M625",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hel-r66": {
+  "name": "HEL-R66",
+  "iclac_id": "ICLAC-00065",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_1R39",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "hep2": {
+  "name": "Hep2 (Clone 2B)",
+  "iclac_id": "ICLAC-00310",
+  "claimed_origin": "Laryngeal carcinoma",
+  "cvcl": "CVCL_2817",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "clone 2b": {
+  "name": "Hep2 (Clone 2B)",
+  "iclac_id": "ICLAC-00310",
+  "claimed_origin": "Laryngeal carcinoma",
+  "cvcl": "CVCL_2817",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hep-2": {
+  "name": "HEp-2 (H.Ep.-2)",
+  "iclac_id": "ICLAC-00007",
+  "claimed_origin": "Laryngeal carcinoma",
+  "cvcl": "CVCL_1906",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "h.ep.-2": {
+  "name": "HEp-2 (H.Ep.-2)",
+  "iclac_id": "ICLAC-00007",
+  "claimed_origin": "Laryngeal carcinoma",
+  "cvcl": "CVCL_1906",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hep-2c": {
+  "name": "Hep-2C",
+  "iclac_id": "ICLAC-00309",
+  "claimed_origin": "Laryngeal carcinoma",
+  "cvcl": "CVCL_2940",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hepa-t1": {
+  "name": "Hepa-T1",
+  "iclac_id": "ICLAC-00567",
+  "claimed_origin": "Liver, normal hepatic cells",
+  "cvcl": "CVCL_4226",
+  "true_identity": "Unknown, possibly Hepa-E1",
+  "sheet": "Version 13 Table 1"
+ },
+ "hes": {
+  "name": "HES",
+  "iclac_id": "ICLAC-00461",
+  "claimed_origin": "Endometrium",
+  "cvcl": "CVCL_W635",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hhua": {
+  "name": "HHUA",
+  "iclac_id": "ICLAC-00628",
+  "claimed_origin": "Endometrial carcinoma",
+  "cvcl": "CVCL_3866",
+  "true_identity": "SNG-M, HHUA (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "himeg-1": {
+  "name": "HIMEG-1",
+  "iclac_id": "ICLAC-00208",
+  "claimed_origin": "Leukemia, chronic myeloid",
+  "cvcl": "CVCL_8439",
+  "true_identity": "HL-60",
+  "sheet": "Version 13 Table 1"
+ },
+ "hkb-1": {
+  "name": "HKB-1",
+  "iclac_id": "ICLAC-00209",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_5290",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "hkmus": {
+  "name": "HKMUS",
+  "iclac_id": "ICLAC-00311",
+  "claimed_origin": "Cervical carcinoma",
+  "cvcl": "CVCL_8776",
+  "true_identity": "SKG-II-SF",
+  "sheet": "Version 13 Table 1"
+ },
+ "hkmus-sf": {
+  "name": "HKMUS-SF",
+  "iclac_id": "ICLAC-00210",
+  "claimed_origin": "Cervical carcinoma",
+  "cvcl": "CVCL_8230",
+  "true_identity": "SKG-II-SF",
+  "sheet": "Version 13 Table 1"
+ },
+ "hktn-2": {
+  "name": "HKTN-2",
+  "iclac_id": "ICLAC-00635",
+  "claimed_origin": "Skin, keratinocytes",
+  "cvcl": "CVCL_W669",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hl111783": {
+  "name": "HL111783",
+  "iclac_id": "ICLAC-00211",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_8231",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hmv-1": {
+  "name": "HMV-1",
+  "iclac_id": "ICLAC-00126",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_8233",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hnos": {
+  "name": "HNOS",
+  "iclac_id": "ICLAC-00580",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_M838",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "ho-8910": {
+  "name": "HO-8910",
+  "iclac_id": "ICLAC-00606",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_6868",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ho-8910pm": {
+  "name": "HO-8910PM (HO-8910 derivative)",
+  "iclac_id": "ICLAC-00607",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_0310",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ho-8910 derivative": {
+  "name": "HO-8910PM (HO-8910 derivative)",
+  "iclac_id": "ICLAC-00607",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_0310",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hone-1": {
+  "name": "HONE-1",
+  "iclac_id": "ICLAC-00496",
+  "claimed_origin": "Nasal pharynx, carcinoma",
+  "cvcl": "CVCL_8706",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hpb-mlt": {
+  "name": "HPB-MLT",
+  "iclac_id": "ICLAC-00212",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_7959",
+  "true_identity": "HPB-ALL",
+  "sheet": "Version 13 Table 1"
+ },
+ "hpc-36m": {
+  "name": "HPC-36M (HPC-36 derivative)",
+  "iclac_id": "ICLAC-00213",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_8446",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hpc-36 derivative": {
+  "name": "HPC-36M (HPC-36 derivative)",
+  "iclac_id": "ICLAC-00213",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_8446",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hptc": {
+  "name": "hPTC",
+  "iclac_id": "ICLAC-00127",
+  "claimed_origin": "Thyroid, papillary cell",
+  "cvcl": "CVCL_8224",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "hrobml03": {
+  "name": "HROBML03",
+  "iclac_id": "ICLAC-00587",
+  "claimed_origin": "Lung carcinoma, large cell",
+  "cvcl": "CVCL_1D09",
+  "true_identity": "NCI-H460",
+  "sheet": "Version 13 Table 1"
+ },
+ "hs 677.st": {
+  "name": "Hs 677.St",
+  "iclac_id": "ICLAC-00401",
+  "claimed_origin": "Gastric tissue, normal",
+  "cvcl": "CVCL_F646",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "hsc-41": {
+  "name": "HSC-41",
+  "iclac_id": "ICLAC-00312",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_8355",
+  "true_identity": "HSC-42",
+  "sheet": "Version 13 Table 1"
+ },
+ "hsg": {
+  "name": "HSG",
+  "iclac_id": "ICLAC-00313",
+  "claimed_origin": "Salivary gland, submandibular",
+  "cvcl": "CVCL_2517",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hsg-aza1": {
+  "name": "HSG-AZA1",
+  "iclac_id": "ICLAC-00314",
+  "claimed_origin": "Salivary gland, submandibular",
+  "cvcl": "CVCL_A047",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hsg-aza3": {
+  "name": "HSG-AZA3",
+  "iclac_id": "ICLAC-00315",
+  "claimed_origin": "Salivary gland, submandibular",
+  "cvcl": "CVCL_A048",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hsgc-c5": {
+  "name": "HSGc-C5",
+  "iclac_id": "ICLAC-00316",
+  "claimed_origin": "Oral carcinoma",
+  "cvcl": "CVCL_2951",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hs-sultan": {
+  "name": "HS-SULTAN",
+  "iclac_id": "ICLAC-00214",
+  "claimed_origin": "Myeloma",
+  "cvcl": "CVCL_2516",
+  "true_identity": "JIJOYE",
+  "sheet": "Version 13 Table 1"
+ },
+ "hsy": {
+  "name": "HSY",
+  "iclac_id": "ICLAC-00317",
+  "claimed_origin": "Salivary gland, parotid",
+  "cvcl": "CVCL_B032",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "htert-eec": {
+  "name": "hTERT-EEC",
+  "iclac_id": "ICLAC-00462",
+  "claimed_origin": "Endometrium, immortalized",
+  "cvcl": "CVCL_X007",
+  "true_identity": "MCF-7",
+  "sheet": "Version 13 Table 1"
+ },
+ "hu1734": {
+  "name": "Hu1734",
+  "iclac_id": "ICLAC-00128",
+  "claimed_origin": "Bladder, non-malignant urothelial cells",
+  "cvcl": "CVCL_8451",
+  "true_identity": "HCV-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "hu456": {
+  "name": "Hu456",
+  "iclac_id": "ICLAC-00129",
+  "claimed_origin": "Bladder, tumorigenic urothelial cells",
+  "cvcl": "CVCL_8238",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hu549": {
+  "name": "Hu549",
+  "iclac_id": "ICLAC-00130",
+  "claimed_origin": "Bladder, tumorigenic urothelial cells",
+  "cvcl": "CVCL_8239",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hu609": {
+  "name": "Hu609",
+  "iclac_id": "ICLAC-00131",
+  "claimed_origin": "Bladder, non-malignant urothelial cells",
+  "cvcl": "CVCL_8240",
+  "true_identity": "J82",
+  "sheet": "Version 13 Table 1"
+ },
+ "hu609tmv": {
+  "name": "Hu609Tmv (Hu609 derivative)",
+  "iclac_id": "ICLAC-00132",
+  "claimed_origin": "Bladder, tumorigenic urothelial cells",
+  "cvcl": "CVCL_8242",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hu609 derivative": {
+  "name": "Hu609Tmv (Hu609 derivative)",
+  "iclac_id": "ICLAC-00132",
+  "claimed_origin": "Bladder, tumorigenic urothelial cells",
+  "cvcl": "CVCL_8242",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hu961a, hu961t": {
+  "name": "Hu961a, Hu961t (Hu961 derivatives)",
+  "iclac_id": "ICLAC-00133",
+  "claimed_origin": "Bladder, tumorigenic urothelial cells",
+  "cvcl": "CVCL_8243",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hu961 derivatives": {
+  "name": "Hu961a, Hu961t (Hu961 derivatives)",
+  "iclac_id": "ICLAC-00133",
+  "claimed_origin": "Bladder, tumorigenic urothelial cells",
+  "cvcl": "CVCL_8243",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "huker": {
+  "name": "Huker",
+  "iclac_id": "ICLAC-00636",
+  "claimed_origin": "Skin, keratinocytes",
+  "cvcl": "CVCL_9T09",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "huko39": {
+  "name": "HuKo39",
+  "iclac_id": "ICLAC-00066",
+  "claimed_origin": "Kidney, normal renal cells",
+  "cvcl": "CVCL_8283",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hul-1": {
+  "name": "HuL-1",
+  "iclac_id": "ICLAC-00318",
+  "claimed_origin": "Liver, hepatocellular carcinoma",
+  "cvcl": "CVCL_8357",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hut": {
+  "name": "Hut",
+  "iclac_id": "ICLAC-00067",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_M861",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "imc-2": {
+  "name": "IMC-2",
+  "iclac_id": "ICLAC-00134",
+  "claimed_origin": "Maxillary carcinoma",
+  "cvcl": "CVCL_8245",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "imc-3": {
+  "name": "IMC-3",
+  "iclac_id": "ICLAC-00215",
+  "claimed_origin": "Maxillary carcinoma",
+  "cvcl": "CVCL_8246",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "imc-4": {
+  "name": "IMC-4",
+  "iclac_id": "ICLAC-00319",
+  "claimed_origin": "Maxillary carcinoma",
+  "cvcl": "CVCL_8247",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "imkc": {
+  "name": "ImKC",
+  "iclac_id": "ICLAC-00620",
+  "claimed_origin": "Liver, normal Kupffer cells",
+  "cvcl": "CVCL_HF55",
+  "true_identity": "RAW 264.7",
+  "sheet": "Version 13 Table 1"
+ },
+ "intestine 407": {
+  "name": "Intestine 407 (Int-407, HEI)",
+  "iclac_id": "ICLAC-00008",
+  "claimed_origin": "Intestinal cells (jejunum/ileum), embryonic",
+  "cvcl": "CVCL_1907",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "int-407": {
+  "name": "Intestine 407 (Int-407, HEI)",
+  "iclac_id": "ICLAC-00008",
+  "claimed_origin": "Intestinal cells (jejunum/ileum), embryonic",
+  "cvcl": "CVCL_1907",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "hei": {
+  "name": "Intestine 407 (Int-407, HEI)",
+  "iclac_id": "ICLAC-00008",
+  "claimed_origin": "Intestinal cells (jejunum/ileum), embryonic",
+  "cvcl": "CVCL_1907",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ipddc-a2": {
+  "name": "IPDDC-A2",
+  "iclac_id": "ICLAC-00320",
+  "claimed_origin": "Astrocytoma",
+  "cvcl": "CVCL_7169",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "iprb": {
+  "name": "IPRB",
+  "iclac_id": "ICLAC-00385",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_1R53",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "ipri-ol-11": {
+  "name": "IPRI-OL-11",
+  "iclac_id": "ICLAC-00512",
+  "claimed_origin": "Neonate larvae",
+  "cvcl": "CVCL_Z489",
+  "true_identity": "IPRI-CF-124",
+  "sheet": "Version 13 Table 1"
+ },
+ "ipri-ol-7": {
+  "name": "IPRI-OL-7",
+  "iclac_id": "ICLAC-00511",
+  "claimed_origin": "Neonate larvae",
+  "cvcl": "CVCL_Z490",
+  "true_identity": "IPRI-CF-124",
+  "sheet": "Version 13 Table 1"
+ },
+ "iptp/98": {
+  "name": "IPTP/98",
+  "iclac_id": "ICLAC-00321",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_7168",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "ist-1": {
+  "name": "IST-1",
+  "iclac_id": "ICLAC-00402",
+  "claimed_origin": "Placenta",
+  "cvcl": "CVCL_F642",
+  "true_identity": "SK-OV-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "izd-mb-0503": {
+  "name": "IZD-MB-0503",
+  "iclac_id": "ICLAC-00603",
+  "claimed_origin": "Neonate larvae, hemocytes",
+  "cvcl": "CVCL_C411",
+  "true_identity": "Unknown, possibly TN-CL1",
+  "sheet": "Version 13 Table 1"
+ },
+ "j-111": {
+  "name": "J-111",
+  "iclac_id": "ICLAC-00009",
+  "claimed_origin": "Leukemia, acute myeloid, M5",
+  "cvcl": "CVCL_2965",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "j96": {
+  "name": "J96",
+  "iclac_id": "ICLAC-00068",
+  "claimed_origin": "Leukemia",
+  "cvcl": "CVCL_3990",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "jca-1": {
+  "name": "JCA-1",
+  "iclac_id": "ICLAC-00216",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4015",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "jhc": {
+  "name": "JHC",
+  "iclac_id": "ICLAC-00069",
+  "claimed_origin": "Placenta",
+  "cvcl": "CVCL_M093",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "jhpi-1 clone 16": {
+  "name": "JHPI-1 clone 16 (Clone-16)",
+  "iclac_id": "ICLAC-00037",
+  "claimed_origin": "Pancreas, fetal endocrine cells",
+  "cvcl": "CVCL_1T11",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "clone-16": {
+  "name": "JHPI-1 clone 16 (Clone-16)",
+  "iclac_id": "ICLAC-00037",
+  "claimed_origin": "Pancreas, fetal endocrine cells",
+  "cvcl": "CVCL_1T11",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "jht": {
+  "name": "JHT (JHC derivative)",
+  "iclac_id": "ICLAC-00070",
+  "claimed_origin": "Placenta",
+  "cvcl": "CVCL_M620",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "jhc derivative": {
+  "name": "JHT (JHC derivative)",
+  "iclac_id": "ICLAC-00070",
+  "claimed_origin": "Placenta",
+  "cvcl": "CVCL_M620",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "jhu012": {
+  "name": "JHU012",
+  "iclac_id": "ICLAC-00403",
+  "claimed_origin": "Oral squamous cell carcinoma (lymph node)",
+  "cvcl": "CVCL_5987",
+  "true_identity": "JHU022",
+  "sheet": "Version 13 Table 1"
+ },
+ "jhu013": {
+  "name": "JHU013 (JHU012 derivative)",
+  "iclac_id": "ICLAC-00404",
+  "claimed_origin": "Oral squamous cell carcinoma (lymph node)",
+  "cvcl": "CVCL_5988",
+  "true_identity": "FaDu",
+  "sheet": "Version 13 Table 1"
+ },
+ "jhu012 derivative": {
+  "name": "JHU013 (JHU012 derivative)",
+  "iclac_id": "ICLAC-00404",
+  "claimed_origin": "Oral squamous cell carcinoma (lymph node)",
+  "cvcl": "CVCL_5988",
+  "true_identity": "FaDu",
+  "sheet": "Version 13 Table 1"
+ },
+ "jhu019": {
+  "name": "JHU019",
+  "iclac_id": "ICLAC-00405",
+  "claimed_origin": "Oropharyngeal squamous cell carcinoma",
+  "cvcl": "CVCL_5989",
+  "true_identity": "PC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "jhu028": {
+  "name": "JHU028",
+  "iclac_id": "ICLAC-00406",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_5992",
+  "true_identity": "A549",
+  "sheet": "Version 13 Table 1"
+ },
+ "jmar": {
+  "name": "JMAR (Tu-167 derivative)",
+  "iclac_id": "ICLAC-00407",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1Q86",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "josk-i": {
+  "name": "JOSK-I",
+  "iclac_id": "ICLAC-00135",
+  "claimed_origin": "Leukemia, acute myeloid, M4",
+  "cvcl": "CVCL_2082",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "josk-k": {
+  "name": "JOSK-K",
+  "iclac_id": "ICLAC-00136",
+  "claimed_origin": "Leukemia, acute myeloid, M5",
+  "cvcl": "CVCL_8141",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "josk-m": {
+  "name": "JOSK-M",
+  "iclac_id": "ICLAC-00137",
+  "claimed_origin": "Leukemia, chronic myeloid, blast crisis",
+  "cvcl": "CVCL_2083",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "josk-s": {
+  "name": "JOSK-S",
+  "iclac_id": "ICLAC-00138",
+  "claimed_origin": "Leukemia, acute myeloid, M5",
+  "cvcl": "CVCL_8142",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "jroecl 47": {
+  "name": "JROECL 47 (OE47)",
+  "iclac_id": "ICLAC-00546",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_4627",
+  "true_identity": "HCT-116",
+  "sheet": "Version 13 Table 1"
+ },
+ "oe47": {
+  "name": "JROECL 47 (OE47)",
+  "iclac_id": "ICLAC-00546",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_4627",
+  "true_identity": "HCT-116",
+  "sheet": "Version 13 Table 1"
+ },
+ "jroecl 50": {
+  "name": "JROECL 50 (OE50)",
+  "iclac_id": "ICLAC-00547",
+  "claimed_origin": "Esophageal adenocarcinoma",
+  "cvcl": "CVCL_4628",
+  "true_identity": "HCT-116",
+  "sheet": "Version 13 Table 1"
+ },
+ "oe50": {
+  "name": "JROECL 50 (OE50)",
+  "iclac_id": "ICLAC-00547",
+  "claimed_origin": "Esophageal adenocarcinoma",
+  "cvcl": "CVCL_4628",
+  "true_identity": "HCT-116",
+  "sheet": "Version 13 Table 1"
+ },
+ "jtc-17": {
+  "name": "JTC-17",
+  "iclac_id": "ICLAC-00139",
+  "claimed_origin": "Skin",
+  "cvcl": "CVCL_8362",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "jtc-3": {
+  "name": "JTC-3",
+  "iclac_id": "ICLAC-00140",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_A034",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "k051": {
+  "name": "K051",
+  "iclac_id": "ICLAC-00217",
+  "claimed_origin": "Leukemia, acute myeloid, M2",
+  "cvcl": "CVCL_3000",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "k1": {
+  "name": "K1",
+  "iclac_id": "ICLAC-00218",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_2537",
+  "true_identity": "GLAG-66",
+  "sheet": "Version 13 Table 1"
+ },
+ "k2 [multiple cell lines with same name, see cellosaurus]": {
+  "name": "K2 [multiple cell lines with same name, see Cellosaurus]",
+  "iclac_id": "ICLAC-00219",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6308",
+  "true_identity": "GLAG-66",
+  "sheet": "Version 13 Table 1"
+ },
+ "k5": {
+  "name": "K5",
+  "iclac_id": "ICLAC-00590",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_1322",
+  "true_identity": "GLAG-66",
+  "sheet": "Version 13 Table 1"
+ },
+ "kak1": {
+  "name": "KAK1",
+  "iclac_id": "ICLAC-00220",
+  "claimed_origin": "Thyroid, follicular adenoma",
+  "cvcl": "CVCL_6301",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "kat10": {
+  "name": "KAT10",
+  "iclac_id": "ICLAC-00221",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_6302",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "kat4": {
+  "name": "KAT4",
+  "iclac_id": "ICLAC-00222",
+  "claimed_origin": "Thyroid, anaplastic carcinoma",
+  "cvcl": "CVCL_6304",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "kat5": {
+  "name": "KAT5",
+  "iclac_id": "ICLAC-00223",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_0370",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "kat50": {
+  "name": "KAT50",
+  "iclac_id": "ICLAC-00224",
+  "claimed_origin": "Thyroid, differentiated cells",
+  "cvcl": "CVCL_6305",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "kat7": {
+  "name": "KAT7",
+  "iclac_id": "ICLAC-00225",
+  "claimed_origin": "Thyroid, benign follicular hyperplasia",
+  "cvcl": "CVCL_6306",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "kb": {
+  "name": "KB",
+  "iclac_id": "ICLAC-00010",
+  "claimed_origin": "Oral carcinoma",
+  "cvcl": "CVCL_0372",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "kb-3-1": {
+  "name": "KB-3-1 (KB derivative)",
+  "iclac_id": "ICLAC-00372",
+  "claimed_origin": "Oral carcinoma",
+  "cvcl": "CVCL_2088",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "kb derivative": {
+  "name": "KB-V1 (KB derivative)",
+  "iclac_id": "ICLAC-00373",
+  "claimed_origin": "Oral carcinoma",
+  "cvcl": "CVCL_2089",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "kb-v1": {
+  "name": "KB-V1 (KB derivative)",
+  "iclac_id": "ICLAC-00373",
+  "claimed_origin": "Oral carcinoma",
+  "cvcl": "CVCL_2089",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "kci-moh1": {
+  "name": "KCI-MOH1",
+  "iclac_id": "ICLAC-00322",
+  "claimed_origin": "Pancreatic carcinoma",
+  "cvcl": "CVCL_2090",
+  "true_identity": "HPAC",
+  "sheet": "Version 13 Table 1"
+ },
+ "kku-213b": {
+  "name": "KKU-213B (KKU-M214)",
+  "iclac_id": "ICLAC-00592",
+  "claimed_origin": "Cholangiocarcinoma",
+  "cvcl": "CVCL_M264",
+  "true_identity": "KKU-213A (KKU-M213)",
+  "sheet": "Version 13 Table 1"
+ },
+ "kku-m214": {
+  "name": "KKU-213B (KKU-M214)",
+  "iclac_id": "ICLAC-00592",
+  "claimed_origin": "Cholangiocarcinoma",
+  "cvcl": "CVCL_M264",
+  "true_identity": "KKU-213A (KKU-M213)",
+  "sheet": "Version 13 Table 1"
+ },
+ "kku-213c": {
+  "name": "KKU-213C (KKU-M156)",
+  "iclac_id": "ICLAC-00591",
+  "claimed_origin": "Cholangiocarcinoma",
+  "cvcl": "CVCL_M260",
+  "true_identity": "KKU-213A (KKU-M213)",
+  "sheet": "Version 13 Table 1"
+ },
+ "kku-m156": {
+  "name": "KKU-213C (KKU-M156)",
+  "iclac_id": "ICLAC-00591",
+  "claimed_origin": "Cholangiocarcinoma",
+  "cvcl": "CVCL_M260",
+  "true_identity": "KKU-213A (KKU-M213)",
+  "sheet": "Version 13 Table 1"
+ },
+ "km20": {
+  "name": "KM20",
+  "iclac_id": "ICLAC-00513",
+  "claimed_origin": "Colon carcinoma",
+  "cvcl": "CVCL_L095",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "km20l2": {
+  "name": "KM20L2 (KM20 derivative)",
+  "iclac_id": "ICLAC-00514",
+  "claimed_origin": "Colon carcinoma",
+  "cvcl": "CVCL_D889",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "km20 derivative": {
+  "name": "KM20L2 (KM20 derivative)",
+  "iclac_id": "ICLAC-00514",
+  "claimed_origin": "Colon carcinoma",
+  "cvcl": "CVCL_D889",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "km3": {
+  "name": "KM3",
+  "iclac_id": "ICLAC-00227",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_1R51",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "km-3": {
+  "name": "KM-3",
+  "iclac_id": "ICLAC-00226",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_0011",
+  "true_identity": "REH",
+  "sheet": "Version 13 Table 1"
+ },
+ "kms-21-bm": {
+  "name": "KMS-21-BM",
+  "iclac_id": "ICLAC-00228",
+  "claimed_origin": "Myeloma",
+  "cvcl": "CVCL_2991",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "kmt-2": {
+  "name": "KMT-2",
+  "iclac_id": "ICLAC-00229",
+  "claimed_origin": "Umbilical cord blood",
+  "cvcl": "CVCL_5301",
+  "true_identity": "KG-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "kns-89": {
+  "name": "KNS-89",
+  "iclac_id": "ICLAC-00323",
+  "claimed_origin": "Gliosarcoma",
+  "cvcl": "CVCL_2800",
+  "true_identity": "U-251 MG",
+  "sheet": "Version 13 Table 1"
+ },
+ "kosc-3": {
+  "name": "KOSC-3",
+  "iclac_id": "ICLAC-00324",
+  "claimed_origin": "Oral carcinoma",
+  "cvcl": "CVCL_2789",
+  "true_identity": "Ca9-22",
+  "sheet": "Version 13 Table 1"
+ },
+ "kp-1n": {
+  "name": "KP-1N",
+  "iclac_id": "ICLAC-00374",
+  "claimed_origin": "Pancreatic carcinoma",
+  "cvcl": "CVCL_3002",
+  "true_identity": "PANC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "kpb-m15": {
+  "name": "KPB-M15",
+  "iclac_id": "ICLAC-00230",
+  "claimed_origin": "Leukemia, chronic myeloid, blast crisis",
+  "cvcl": "CVCL_5308",
+  "true_identity": "KYO-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "kpl-1": {
+  "name": "KPL-1",
+  "iclac_id": "ICLAC-00325",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_2094",
+  "true_identity": "MCF-7",
+  "sheet": "Version 13 Table 1"
+ },
+ "kp-p1": {
+  "name": "KP-P1",
+  "iclac_id": "ICLAC-00071",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_D283",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ksy-1": {
+  "name": "KSY-1",
+  "iclac_id": "ICLAC-00408",
+  "claimed_origin": "Sarcoma (Kaposi)",
+  "cvcl": "CVCL_F660",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "ku7": {
+  "name": "KU7",
+  "iclac_id": "ICLAC-00480",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_4714",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ku-ys": {
+  "name": "KU-YS",
+  "iclac_id": "ICLAC-00326",
+  "claimed_origin": "Neuroblastoma",
+  "cvcl": "CVCL_E131",
+  "true_identity": "KU-SN",
+  "sheet": "Version 13 Table 1"
+ },
+ "l-02": {
+  "name": "L-02",
+  "iclac_id": "ICLAC-00575",
+  "claimed_origin": "Liver, normal hepatic cells",
+  "cvcl": "CVCL_6926",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "l-132": {
+  "name": "L-132",
+  "iclac_id": "ICLAC-00025",
+  "claimed_origin": "Lung cells, embryonic",
+  "cvcl": "CVCL_1908",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "l-41": {
+  "name": "L-41 (J96 derivative)",
+  "iclac_id": "ICLAC-00327",
+  "claimed_origin": "Leukemia, bone marrow",
+  "cvcl": "CVCL_7170",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "j96 derivative": {
+  "name": "L-41 (J96 derivative)",
+  "iclac_id": "ICLAC-00327",
+  "claimed_origin": "Leukemia, bone marrow",
+  "cvcl": "CVCL_7170",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "lah1": {
+  "name": "LAH1",
+  "iclac_id": "ICLAC-00568",
+  "claimed_origin": "Skin, melanotic melanophore",
+  "cvcl": "CVCL_6666",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "lah2": {
+  "name": "LAH2",
+  "iclac_id": "ICLAC-00569",
+  "claimed_origin": "Skin, melanotic melanophore",
+  "cvcl": "CVCL_6667",
+  "true_identity": "Unknown, possibly LAH3",
+  "sheet": "Version 13 Table 1"
+ },
+ "lc5": {
+  "name": "LC5 (L-132 derivative)",
+  "iclac_id": "ICLAC-00515",
+  "claimed_origin": "Lung cells, embryonic",
+  "cvcl": "CVCL_5G52",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "l-132 derivative": {
+  "name": "LC5-HIV (L-132 derivative)",
+  "iclac_id": "ICLAC-00516",
+  "claimed_origin": "Lung cells, embryonic",
+  "cvcl": "CVCL_5G53",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "lc5-hiv": {
+  "name": "LC5-HIV (L-132 derivative)",
+  "iclac_id": "ICLAC-00516",
+  "claimed_origin": "Lung cells, embryonic",
+  "cvcl": "CVCL_5G53",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "led-ti": {
+  "name": "LED-Ti",
+  "iclac_id": "ICLAC-00072",
+  "claimed_origin": "Cervical carcinoma",
+  "cvcl": "CVCL_8438",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "lf-bk": {
+  "name": "LF-BK",
+  "iclac_id": "ICLAC-00612",
+  "claimed_origin": "Kidney, normal renal cells",
+  "cvcl": "CVCL_RX26",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "lfbk-alphavbeta6": {
+  "name": "LFBK-alphaVbeta6 (LF-BK derivative)",
+  "iclac_id": "ICLAC-00613",
+  "claimed_origin": "Kidney, normal renal cells",
+  "cvcl": "CVCL_RX27",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "lf-bk derivative": {
+  "name": "LFBK-alphaVbeta6 (LF-BK derivative)",
+  "iclac_id": "ICLAC-00613",
+  "claimed_origin": "Kidney, normal renal cells",
+  "cvcl": "CVCL_RX27",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "llc-15mb": {
+  "name": "LLC-15MB",
+  "iclac_id": "ICLAC-00231",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_B055",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "ln-319": {
+  "name": "LN-319",
+  "iclac_id": "ICLAC-00450",
+  "claimed_origin": "Glioma, anaplastic astrocytoma",
+  "cvcl": "CVCL_3958",
+  "true_identity": "LN-992",
+  "sheet": "Version 13 Table 1"
+ },
+ "ln-443": {
+  "name": "LN-443",
+  "iclac_id": "ICLAC-00451",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_3960",
+  "true_identity": "LN-444",
+  "sheet": "Version 13 Table 1"
+ },
+ "ln-464": {
+  "name": "LN-464",
+  "iclac_id": "ICLAC-00624",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_3962",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "lr10.6": {
+  "name": "LR10.6",
+  "iclac_id": "ICLAC-00141",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_8260",
+  "true_identity": "NALM-6",
+  "sheet": "Version 13 Table 1"
+ },
+ "lt-1": {
+  "name": "LT-1",
+  "iclac_id": "ICLAC-00073",
+  "claimed_origin": "Kidney, renal adenocarcinoma",
+  "cvcl": "CVCL_1R49",
+  "true_identity": "Mixture, FHM  / TH",
+  "sheet": "Version 13 Table 1"
+ },
+ "ltep-a2": {
+  "name": "LTEP-a2",
+  "iclac_id": "ICLAC-00576",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_6929",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "lu": {
+  "name": "LU",
+  "iclac_id": "ICLAC-00074",
+  "claimed_origin": "Lung cells, fetal",
+  "cvcl": "CVCL_M631",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "lu 106": {
+  "name": "LU 106",
+  "iclac_id": "ICLAC-00075",
+  "claimed_origin": "Lung cells, embryonic",
+  "cvcl": "CVCL_8892",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "lu-130": {
+  "name": "Lu-130",
+  "iclac_id": "ICLAC-00232",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_6862",
+  "true_identity": "Lu-134A, B",
+  "sheet": "Version 13 Table 1"
+ },
+ "m10t": {
+  "name": "M10T",
+  "iclac_id": "ICLAC-00076",
+  "claimed_origin": "Synovial cell",
+  "cvcl": "CVCL_M094",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "m4a4": {
+  "name": "M4A4 (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00375",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_B057",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "mda-mb-435 derivative": {
+  "name": "NM2C5 GFP (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00564",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_B065",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "m4a4 gfp": {
+  "name": "M4A4 GFP (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00561",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_B058",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "m4a4 lm3-2 gfp": {
+  "name": "M4A4 LM3-2 GFP (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00562",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_B059",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "m4a4 lm3-4 cl16 gfp": {
+  "name": "M4A4 LM3-4 CL16 GFP (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00563",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_B060",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "ma-1": {
+  "name": "MA-1",
+  "iclac_id": "ICLAC-00471",
+  "claimed_origin": "Lymphoma, MALT",
+  "cvcl": "CVCL_M665",
+  "true_identity": "Pfeiffer",
+  "sheet": "Version 13 Table 1"
+ },
+ "ma-104": {
+  "name": "MA-104",
+  "iclac_id": "ICLAC-00077",
+  "claimed_origin": "Kidney, embryonic renal cells",
+  "cvcl": "CVCL_3845",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "ma-111": {
+  "name": "MA-111",
+  "iclac_id": "ICLAC-00078",
+  "claimed_origin": "Kidney, newborn",
+  "cvcl": "CVCL_U963",
+  "true_identity": "Unknown, possibly Vero",
+  "sheet": "Version 13 Table 1"
+ },
+ "ma-160": {
+  "name": "MA-160",
+  "iclac_id": "ICLAC-00026",
+  "claimed_origin": "Prostate adenoma",
+  "cvcl": "CVCL_8261",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "marc-145": {
+  "name": "MARC-145 (MA-104 derivative)",
+  "iclac_id": "ICLAC-00621",
+  "claimed_origin": "Kidney, embryonic renal cells",
+  "cvcl": "CVCL_4540",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "ma-104 derivative": {
+  "name": "MARC-145 (MA-104 derivative)",
+  "iclac_id": "ICLAC-00621",
+  "claimed_origin": "Kidney, embryonic renal cells",
+  "cvcl": "CVCL_4540",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "mash-1": {
+  "name": "Mash-1",
+  "iclac_id": "ICLAC-00233",
+  "claimed_origin": "Schwannoma",
+  "cvcl": "CVCL_8158",
+  "true_identity": "MMac",
+  "sheet": "Version 13 Table 1"
+ },
+ "matu": {
+  "name": "MaTu",
+  "iclac_id": "ICLAC-00142",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_5328",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "mc-4000": {
+  "name": "MC-4000",
+  "iclac_id": "ICLAC-00143",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_5331",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "mccoy": {
+  "name": "McCoy",
+  "iclac_id": "ICLAC-00079",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_3742",
+  "true_identity": "Strain L",
+  "sheet": "Version 13 Table 1"
+ },
+ "mcf-7/adrr": {
+  "name": "MCF-7/AdrR (NCI/ADR-RES)",
+  "iclac_id": "ICLAC-00234",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_1452",
+  "true_identity": "OVCAR-8",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci": {
+  "name": "MCF-7/AdrR (NCI/ADR-RES)",
+  "iclac_id": "ICLAC-00234",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_1452",
+  "true_identity": "OVCAR-8",
+  "sheet": "Version 13 Table 1"
+ },
+ "adr-res": {
+  "name": "MCF-7/AdrR (NCI/ADR-RES)",
+  "iclac_id": "ICLAC-00234",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_1452",
+  "true_identity": "OVCAR-8",
+  "sheet": "Version 13 Table 1"
+ },
+ "mda-mb-435": {
+  "name": "MDA-MB-435",
+  "iclac_id": "ICLAC-00235",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_0417",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "mda-mb-435s": {
+  "name": "MDA-MB-435S (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00565",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_0622",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "mda-n": {
+  "name": "MDA-N (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00236",
+  "claimed_origin": "Breast carcinoma, HER2/ERBB2-transfected",
+  "cvcl": "CVCL_1910",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "mds": {
+  "name": "MDS",
+  "iclac_id": "ICLAC-00237",
+  "claimed_origin": "Leukemia, chronic myelomonocytic",
+  "cvcl": "CVCL_L807",
+  "true_identity": "JURKAT",
+  "sheet": "Version 13 Table 1"
+ },
+ "mel-ho": {
+  "name": "MEL-HO",
+  "iclac_id": "ICLAC-00144",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_1402",
+  "true_identity": "MEL-HO, MEL-WEI (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "mel-wei": {
+  "name": "MEL-WEI",
+  "iclac_id": "ICLAC-00145",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_3981",
+  "true_identity": "MEL-HO, MEL-WEI (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "mgc-803": {
+  "name": "MGC-803 (MGc80-3)",
+  "iclac_id": "ICLAC-00588",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_5334",
+  "true_identity": "Hybrid, HeLa / unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "mgc80-3": {
+  "name": "MGC-803 (MGc80-3)",
+  "iclac_id": "ICLAC-00588",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_5334",
+  "true_identity": "Hybrid, HeLa / unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "mgh-u1": {
+  "name": "MGH-U1 (EJ)",
+  "iclac_id": "ICLAC-00080",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_2443",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "ej": {
+  "name": "MGH-U1 (EJ)",
+  "iclac_id": "ICLAC-00080",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_2443",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "mgh-u2": {
+  "name": "MGH-U2 (HM)",
+  "iclac_id": "ICLAC-00081",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_9826",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "hm": {
+  "name": "MGH-U2 (HM)",
+  "iclac_id": "ICLAC-00081",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_9826",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "mhh-225": {
+  "name": "MHH-225",
+  "iclac_id": "ICLAC-00238",
+  "claimed_origin": "Leukemia, acute myeloid, M7",
+  "cvcl": "CVCL_8894",
+  "true_identity": "JURKAT",
+  "sheet": "Version 13 Table 1"
+ },
+ "minnesota ee": {
+  "name": "Minnesota EE",
+  "iclac_id": "ICLAC-00011",
+  "claimed_origin": "Esophageal epithelium",
+  "cvcl": "CVCL_8264",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "mkb-1": {
+  "name": "MKB-1",
+  "iclac_id": "ICLAC-00146",
+  "claimed_origin": "Leukemia, acute myeloid",
+  "cvcl": "CVCL_8265",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 1"
+ },
+ "mkn28": {
+  "name": "MKN28",
+  "iclac_id": "ICLAC-00328",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_1416",
+  "true_identity": "MKN74",
+  "sheet": "Version 13 Table 1"
+ },
+ "mobs-1": {
+  "name": "MOBS-1",
+  "iclac_id": "ICLAC-00239",
+  "claimed_origin": "Leukemia, acute myeloid, M5",
+  "cvcl": "CVCL_8442",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "moc2-10": {
+  "name": "MOC2-10 (MOC10)",
+  "iclac_id": "ICLAC-00594",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_ZD35",
+  "true_identity": "MOC2",
+  "sheet": "Version 13 Table 1"
+ },
+ "moc10": {
+  "name": "MOC2-10 (MOC10)",
+  "iclac_id": "ICLAC-00594",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_ZD35",
+  "true_identity": "MOC2",
+  "sheet": "Version 13 Table 1"
+ },
+ "molt-15": {
+  "name": "MOLT-15",
+  "iclac_id": "ICLAC-00147",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_8150",
+  "true_identity": "CTV-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "mpanc-96": {
+  "name": "MPanc-96",
+  "iclac_id": "ICLAC-00329",
+  "claimed_origin": "Pancreatic carcinoma",
+  "cvcl": "CVCL_7165",
+  "true_identity": "AsPC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "mro87-1": {
+  "name": "MRO87-1",
+  "iclac_id": "ICLAC-00240",
+  "claimed_origin": "Thyroid, follicular carcinoma",
+  "cvcl": "CVCL_6310",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "ms": {
+  "name": "MS (Monkey Stable)",
+  "iclac_id": "ICLAC-00241",
+  "claimed_origin": "Kidney, normal renal cells",
+  "cvcl": "CVCL_4243",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "monkey stable": {
+  "name": "MS (Monkey Stable)",
+  "iclac_id": "ICLAC-00241",
+  "claimed_origin": "Kidney, normal renal cells",
+  "cvcl": "CVCL_4243",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "mt-1 [multiple cell lines with same name, see cellosaurus]": {
+  "name": "MT-1 [Multiple cell lines with same name, see Cellosaurus]",
+  "iclac_id": "ICLAC-00148",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_0441",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "mt-3 [multiple cell lines with same name, see cellosaurus]": {
+  "name": "MT-3 [Multiple cell lines with same name, see Cellosaurus]",
+  "iclac_id": "ICLAC-00506",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_2129",
+  "true_identity": "LS-174T (LS-180 derivative)",
+  "sheet": "Version 13 Table 1"
+ },
+ "mum2c": {
+  "name": "MUM2C",
+  "iclac_id": "ICLAC-00501",
+  "claimed_origin": "Melanoma,metastatic uveal",
+  "cvcl": "CVCL_3448",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "mutz-1": {
+  "name": "MUTZ-1",
+  "iclac_id": "ICLAC-00376",
+  "claimed_origin": "Leukemia, acute myeloid, M2",
+  "cvcl": "CVCL_1431",
+  "true_identity": "Namalwa",
+  "sheet": "Version 13 Table 1"
+ },
+ "mv522": {
+  "name": "MV522",
+  "iclac_id": "ICLAC-00409",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_7204",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "nc-37": {
+  "name": "NC-37",
+  "iclac_id": "ICLAC-00330",
+  "claimed_origin": "Lymphoblastoid cell line, normal donor",
+  "cvcl": "CVCL_3042",
+  "true_identity": "Raji",
+  "sheet": "Version 13 Table 1"
+ },
+ "ncc16": {
+  "name": "NCC16",
+  "iclac_id": "ICLAC-00331",
+  "claimed_origin": "Cervical carcinoma",
+  "cvcl": "CVCL_U219",
+  "true_identity": "PHK16-0b",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h1264": {
+  "name": "NCI-H1264",
+  "iclac_id": "ICLAC-00410",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_3970",
+  "true_identity": "NCI-H157, NCI-H1264 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h1304": {
+  "name": "NCI-H1304",
+  "iclac_id": "ICLAC-00411",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_1462",
+  "true_identity": "NCI-H1304, NCI-H1870 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h1514": {
+  "name": "NCI-H1514",
+  "iclac_id": "ICLAC-00242",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_4363",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h157": {
+  "name": "NCI-H157",
+  "iclac_id": "ICLAC-00412",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_0463",
+  "true_identity": "NCI-H157, NCI-H1264 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h1622": {
+  "name": "NCI-H1622",
+  "iclac_id": "ICLAC-00332",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_4364",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h1870": {
+  "name": "NCI-H1870",
+  "iclac_id": "ICLAC-00413",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_1502",
+  "true_identity": "NCI-H1304, NCI-H1870 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h249": {
+  "name": "NCI-H249",
+  "iclac_id": "ICLAC-00334 (contains: ICLAC-00333)",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_A537",
+  "true_identity": "NCI-H69",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h513": {
+  "name": "NCI-H513",
+  "iclac_id": "ICLAC-00414",
+  "claimed_origin": "Mesothelioma",
+  "cvcl": "CVCL_A570",
+  "true_identity": "NCI-H125",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h592": {
+  "name": "NCI-H592",
+  "iclac_id": "ICLAC-00415",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_A590",
+  "true_identity": "NCI-H69",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h60": {
+  "name": "NCI-H60",
+  "iclac_id": "ICLAC-00416",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_A592",
+  "true_identity": "NCI-N417",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h630": {
+  "name": "NCI-H630",
+  "iclac_id": "ICLAC-00417",
+  "claimed_origin": "Metastatic sample",
+  "cvcl": "CVCL_1572",
+  "true_identity": "Mixture",
+  "sheet": "Version 13 Table 1"
+ },
+ "nci-h738": {
+  "name": "NCI-H738",
+  "iclac_id": "ICLAC-00335",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_4365",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "ncol-1": {
+  "name": "NCOL-1",
+  "iclac_id": "ICLAC-00243",
+  "claimed_origin": "Intestinal cells, normal colon",
+  "cvcl": "CVCL_8375",
+  "true_identity": "LoVo",
+  "sheet": "Version 13 Table 1"
+ },
+ "nctc 2544": {
+  "name": "NCTC 2544",
+  "iclac_id": "ICLAC-00012",
+  "claimed_origin": "Skin epithelium",
+  "cvcl": "CVCL_0461",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "nctc 3075": {
+  "name": "NCTC 3075",
+  "iclac_id": "ICLAC-00027",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_8156",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "nd-1": {
+  "name": "ND-1",
+  "iclac_id": "ICLAC-00244",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4781",
+  "true_identity": "DU-145",
+  "sheet": "Version 13 Table 1"
+ },
+ "nm2c5": {
+  "name": "NM2C5 (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00377",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_B064",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "nm2c5 gfp": {
+  "name": "NM2C5 GFP (MDA-MB-435 derivative)",
+  "iclac_id": "ICLAC-00564",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_B065",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "noi-90": {
+  "name": "NOI-90",
+  "iclac_id": "ICLAC-00245",
+  "claimed_origin": "Lymphoma, non-Hodgkin, natural killer cell",
+  "cvcl": "CVCL_8462",
+  "true_identity": "REH",
+  "sheet": "Version 13 Table 1"
+ },
+ "nok-si": {
+  "name": "NOK-SI",
+  "iclac_id": "ICLAC-00589",
+  "claimed_origin": "Oral keratinocytes, spontaneously immortalized",
+  "cvcl": "CVCL_BW57",
+  "true_identity": "HaCaT",
+  "sheet": "Version 13 Table 1"
+ },
+ "nose06": {
+  "name": "NOSE06",
+  "iclac_id": "ICLAC-00464",
+  "claimed_origin": "Ovary, normal",
+  "cvcl": "CVCL_X010",
+  "true_identity": "DOV-13",
+  "sheet": "Version 13 Table 1"
+ },
+ "nose07": {
+  "name": "NOSE07",
+  "iclac_id": "ICLAC-00465",
+  "claimed_origin": "Ovary, normal",
+  "cvcl": "CVCL_X011",
+  "true_identity": "DOV-13",
+  "sheet": "Version 13 Table 1"
+ },
+ "npa'87": {
+  "name": "NPA'87",
+  "iclac_id": "ICLAC-00246",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_0467",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "ns-3": {
+  "name": "NS-3",
+  "iclac_id": "ICLAC-00336",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_8377",
+  "true_identity": "COLO 201",
+  "sheet": "Version 13 Table 1"
+ },
+ "ocm-1": {
+  "name": "OCM-1",
+  "iclac_id": "ICLAC-00502",
+  "claimed_origin": "Melanoma, primary uveal",
+  "cvcl": "CVCL_6934",
+  "true_identity": "M14",
+  "sheet": "Version 13 Table 1"
+ },
+ "ocm-3": {
+  "name": "OCM-3",
+  "iclac_id": "ICLAC-00503",
+  "claimed_origin": "Melanoma, primary uveal",
+  "cvcl": "CVCL_6937",
+  "true_identity": "SK-MEL-28",
+  "sheet": "Version 13 Table 1"
+ },
+ "ocm-8": {
+  "name": "OCM-8",
+  "iclac_id": "ICLAC-00504",
+  "claimed_origin": "Melanoma, primary uveal",
+  "cvcl": "CVCL_6938",
+  "true_identity": "SK-MEL-28",
+  "sheet": "Version 13 Table 1"
+ },
+ "ocum-6": {
+  "name": "OCUM-6",
+  "iclac_id": "ICLAC-00337",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_8387",
+  "true_identity": "OCUM-11",
+  "sheet": "Version 13 Table 1"
+ },
+ "oe": {
+  "name": "OE",
+  "iclac_id": "ICLAC-00082",
+  "claimed_origin": "Endometrium",
+  "cvcl": "CVCL_J350",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "of": {
+  "name": "OF",
+  "iclac_id": "ICLAC-00149",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_M621",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "olga-ph-j/92": {
+  "name": "OLGA-PH-J/92 (OL-J/92)",
+  "iclac_id": "ICLAC-00378",
+  "claimed_origin": "Brain, cerebral ganglion",
+  "cvcl": "CVCL_U272",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "ol-j": {
+  "name": "OLGA-PH-J/92 (OL-J/92)",
+  "iclac_id": "ICLAC-00378",
+  "claimed_origin": "Brain, cerebral ganglion",
+  "cvcl": "CVCL_U272",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "92": {
+  "name": "OLGA-PH-J/92 (OL-J/92)",
+  "iclac_id": "ICLAC-00378",
+  "claimed_origin": "Brain, cerebral ganglion",
+  "cvcl": "CVCL_U272",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "onco-dg-1": {
+  "name": "ONCO-DG-1",
+  "iclac_id": "ICLAC-00338",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_1882",
+  "true_identity": "OVCAR-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "os 187": {
+  "name": "OS 187",
+  "iclac_id": "ICLAC-00485",
+  "claimed_origin": "Sarcoma (osteosarcoma)",
+  "cvcl": "CVCL_1R50",
+  "true_identity": "HCT-15",
+  "sheet": "Version 13 Table 1"
+ },
+ "ost": {
+  "name": "OST",
+  "iclac_id": "ICLAC-00339",
+  "claimed_origin": "Sarcoma (osteosarcoma)",
+  "cvcl": "CVCL_8399",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "ou-aml-1": {
+  "name": "OU-AML-1",
+  "iclac_id": "ICLAC-00247",
+  "claimed_origin": "Leukemia, acute myeloid, M4",
+  "cvcl": "CVCL_8391",
+  "true_identity": "OCI/AML2",
+  "sheet": "Version 13 Table 1"
+ },
+ "ou-aml-2": {
+  "name": "OU-AML-2",
+  "iclac_id": "ICLAC-00248",
+  "claimed_origin": "Leukemia, acute myeloid, M2",
+  "cvcl": "CVCL_8392",
+  "true_identity": "OCI/AML2",
+  "sheet": "Version 13 Table 1"
+ },
+ "ou-aml-3": {
+  "name": "OU-AML-3",
+  "iclac_id": "ICLAC-00249",
+  "claimed_origin": "Leukemia, acute myeloid, M4",
+  "cvcl": "CVCL_8393",
+  "true_identity": "OCI/AML2",
+  "sheet": "Version 13 Table 1"
+ },
+ "ou-aml-4": {
+  "name": "OU-AML-4",
+  "iclac_id": "ICLAC-00250",
+  "claimed_origin": "Leukemia, acute myeloid, M2",
+  "cvcl": "CVCL_8394",
+  "true_identity": "OCI/AML2",
+  "sheet": "Version 13 Table 1"
+ },
+ "ou-aml-5": {
+  "name": "OU-AML-5",
+  "iclac_id": "ICLAC-00251",
+  "claimed_origin": "Leukemia, acute myeloid, M5",
+  "cvcl": "CVCL_8395",
+  "true_identity": "OCI/AML2",
+  "sheet": "Version 13 Table 1"
+ },
+ "ou-aml-6": {
+  "name": "OU-AML-6",
+  "iclac_id": "ICLAC-00252",
+  "claimed_origin": "Leukemia, acute myeloid, M1",
+  "cvcl": "CVCL_8396",
+  "true_identity": "OCI/AML2",
+  "sheet": "Version 13 Table 1"
+ },
+ "ou-aml-7": {
+  "name": "OU-AML-7",
+  "iclac_id": "ICLAC-00253",
+  "claimed_origin": "Leukemia, acute myeloid, M4",
+  "cvcl": "CVCL_8397",
+  "true_identity": "OCI/AML2",
+  "sheet": "Version 13 Table 1"
+ },
+ "ou-aml-8": {
+  "name": "OU-AML-8",
+  "iclac_id": "ICLAC-00254",
+  "claimed_origin": "Leukemia, acute myeloid, M4",
+  "cvcl": "CVCL_8398",
+  "true_identity": "OCI/AML2",
+  "sheet": "Version 13 Table 1"
+ },
+ "a2008": {
+  "name": "OV2008 (A2008)",
+  "iclac_id": "ICLAC-00466 (contains: ICLAC-00455)",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_0473",
+  "true_identity": "ME-180",
+  "sheet": "Version 13 Table 1"
+ },
+ "ovary1847": {
+  "name": "Ovary1847",
+  "iclac_id": "ICLAC-00467",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_D703",
+  "true_identity": "NIH:OVCAR-8",
+  "sheet": "Version 13 Table 1"
+ },
+ "ovmiu": {
+  "name": "OVMIU",
+  "iclac_id": "ICLAC-00341",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_3112",
+  "true_identity": "OVSAYO",
+  "sheet": "Version 13 Table 1"
+ },
+ "p1-1a3": {
+  "name": "P1-1A3",
+  "iclac_id": "ICLAC-00150",
+  "claimed_origin": "Thymic epithelium",
+  "cvcl": "CVCL_A042",
+  "true_identity": "SK-HEP-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "p1-4d6": {
+  "name": "P1-4D6",
+  "iclac_id": "ICLAC-00151",
+  "claimed_origin": "Thymic epithelium",
+  "cvcl": "CVCL_A046",
+  "true_identity": "SK-HEP-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "p39/tsugane": {
+  "name": "P39/TSUGANE (P39/TSU)",
+  "iclac_id": "ICLAC-00255",
+  "claimed_origin": "Leukemia, acute myeloid, M2",
+  "cvcl": "CVCL_0478",
+  "true_identity": "HL-60",
+  "sheet": "Version 13 Table 1"
+ },
+ "p39": {
+  "name": "P39/TSUGANE (P39/TSU)",
+  "iclac_id": "ICLAC-00255",
+  "claimed_origin": "Leukemia, acute myeloid, M2",
+  "cvcl": "CVCL_0478",
+  "true_identity": "HL-60",
+  "sheet": "Version 13 Table 1"
+ },
+ "tsu": {
+  "name": "P39/TSUGANE (P39/TSU)",
+  "iclac_id": "ICLAC-00255",
+  "claimed_origin": "Leukemia, acute myeloid, M2",
+  "cvcl": "CVCL_0478",
+  "true_identity": "HL-60",
+  "sheet": "Version 13 Table 1"
+ },
+ "panc 01.28": {
+  "name": "Panc 01.28",
+  "iclac_id": "ICLAC-00519",
+  "claimed_origin": "Pancreatic adenocarcinoma",
+  "cvcl": "CVCL_7666",
+  "true_identity": "Panc 01.28, Panc 06.03 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "panc 06.03": {
+  "name": "Panc 06.03",
+  "iclac_id": "ICLAC-00521",
+  "claimed_origin": "Pancreatic adenocarcinoma",
+  "cvcl": "CVCL_7665",
+  "true_identity": "Panc 01.28, Panc 06.03 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "pbei": {
+  "name": "PBEI",
+  "iclac_id": "ICLAC-00152",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_8270",
+  "true_identity": "NALM-6",
+  "sheet": "Version 13 Table 1"
+ },
+ "pc-93": {
+  "name": "PC-93",
+  "iclac_id": "ICLAC-00256",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4888",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "pci-22a": {
+  "name": "PCI-22A",
+  "iclac_id": "ICLAC-00418",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1T56",
+  "true_identity": "Unknown, does not match other cell line from same donor",
+  "sheet": "Version 13 Table 1"
+ },
+ "pci-22b": {
+  "name": "PCI-22B",
+  "iclac_id": "ICLAC-00419",
+  "claimed_origin": "Oral squamous cell carcinoma (lymph node)",
+  "cvcl": "CVCL_1T57",
+  "true_identity": "Unknown, does not match other cell line from same donor",
+  "sheet": "Version 13 Table 1"
+ },
+ "pci-3": {
+  "name": "PCI-3",
+  "iclac_id": "ICLAC-00420",
+  "claimed_origin": "Oropharyngeal squamous cell carcinoma",
+  "cvcl": "CVCL_C169",
+  "true_identity": "PC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "pc-mds": {
+  "name": "PC-MDS",
+  "iclac_id": "ICLAC-00379",
+  "claimed_origin": "Myelodysplastic syndrome, therapy-related",
+  "cvcl": "CVCL_1Q81",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "peaz-1": {
+  "name": "PEAZ-1",
+  "iclac_id": "ICLAC-00257",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_8437",
+  "true_identity": "HT-1080",
+  "sheet": "Version 13 Table 1"
+ },
+ "ph [multiple cell lines with same name, see cellosaurus]": {
+  "name": "PH [Multiple cell lines with same name, see Cellosaurus]",
+  "iclac_id": "ICLAC-00527",
+  "claimed_origin": "Spleen, monocyte/ macrophage",
+  "cvcl": "CVCL_L107",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "ph61-n": {
+  "name": "PH61-N",
+  "iclac_id": "ICLAC-00342",
+  "claimed_origin": "Not specified",
+  "cvcl": "CVCL_D282",
+  "true_identity": "MIA PaCa-2",
+  "sheet": "Version 13 Table 1"
+ },
+ "plb-985": {
+  "name": "PLB-985",
+  "iclac_id": "ICLAC-00258",
+  "claimed_origin": "Leukemia, acute myeloid, M4",
+  "cvcl": "CVCL_2162",
+  "true_identity": "HL-60",
+  "sheet": "Version 13 Table 1"
+ },
+ "pmf-ko14": {
+  "name": "PMF-ko14",
+  "iclac_id": "ICLAC-00629",
+  "claimed_origin": "Colon carcinoma",
+  "cvcl": "CVCL_8747",
+  "true_identity": "KM12",
+  "sheet": "Version 13 Table 1"
+ },
+ "ppc-1": {
+  "name": "PPC-1",
+  "iclac_id": "ICLAC-00153",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4778",
+  "true_identity": "PC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "psv811": {
+  "name": "PSV811",
+  "iclac_id": "ICLAC-00343",
+  "claimed_origin": "Skin fibroblast, Werner's syndrome",
+  "cvcl": "CVCL_3142",
+  "true_identity": "WI-38",
+  "sheet": "Version 13 Table 1"
+ },
+ "qgy-7701": {
+  "name": "QGY-7701",
+  "iclac_id": "ICLAC-00551",
+  "claimed_origin": "Liver, hepatocellular carcinoma",
+  "cvcl": "CVCL_6859",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "qgy-7703": {
+  "name": "QGY-7703",
+  "iclac_id": "ICLAC-00552",
+  "claimed_origin": "Liver, hepatocellular carcinoma",
+  "cvcl": "CVCL_6715",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "qsg-7701": {
+  "name": "QSG-7701",
+  "iclac_id": "ICLAC-00553",
+  "claimed_origin": "Liver, normal hepatic cells",
+  "cvcl": "CVCL_6944",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "r1": {
+  "name": "R1",
+  "iclac_id": "ICLAC-00581",
+  "claimed_origin": "Liver, normal hepatic cells",
+  "cvcl": "CVCL_4607",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "ramak-1": {
+  "name": "RAMAK-1",
+  "iclac_id": "ICLAC-00154",
+  "claimed_origin": "Muscle synovium",
+  "cvcl": "CVCL_8271",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "rb": {
+  "name": "RB",
+  "iclac_id": "ICLAC-00083",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_L985",
+  "true_identity": "OMK-210",
+  "sheet": "Version 13 Table 1"
+ },
+ "rbhf-1": {
+  "name": "RBHF-1",
+  "iclac_id": "ICLAC-00155",
+  "claimed_origin": "Liver, hepatoma",
+  "cvcl": "CVCL_Y465",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "rc-2a": {
+  "name": "RC-2A",
+  "iclac_id": "ICLAC-00259",
+  "claimed_origin": "Leukemia, acute myeloid, M4",
+  "cvcl": "CVCL_L808",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 1"
+ },
+ "red-3": {
+  "name": "RED-3",
+  "iclac_id": "ICLAC-00260",
+  "claimed_origin": "Leukemia, acute myeloid",
+  "cvcl": "CVCL_8907",
+  "true_identity": "HL-60",
+  "sheet": "Version 13 Table 1"
+ },
+ "reh-6": {
+  "name": "REH-6",
+  "iclac_id": "ICLAC-00261",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_L803",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "repc": {
+  "name": "REPC",
+  "iclac_id": "ICLAC-00487",
+  "claimed_origin": "Kidney, normal renal cells",
+  "cvcl": "CVCL_W815",
+  "true_identity": "Hep 3B",
+  "sheet": "Version 13 Table 1"
+ },
+ "rerf-lc-ma": {
+  "name": "RERF-LC-MA",
+  "iclac_id": "ICLAC-00386",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_3153",
+  "true_identity": "SK-MES-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "rerf-lc-ok": {
+  "name": "RERF-LC-OK",
+  "iclac_id": "ICLAC-00344",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_3154",
+  "true_identity": "Marcus",
+  "sheet": "Version 13 Table 1"
+ },
+ "rgc-5": {
+  "name": "RGC-5",
+  "iclac_id": "ICLAC-00472",
+  "claimed_origin": "Retinal ganglion",
+  "cvcl": "CVCL_4059",
+  "true_identity": "661W",
+  "sheet": "Version 13 Table 1"
+ },
+ "rm-10": {
+  "name": "RM-10",
+  "iclac_id": "ICLAC-00262",
+  "claimed_origin": "Leukemia, chronic myeloid, blast crisis",
+  "cvcl": "CVCL_8463",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "rml-15 [rml-rse]": {
+  "name": "RML-15 [RML-RSE]",
+  "iclac_id": "ICLAC-00583",
+  "claimed_origin": "Embryo, normal",
+  "cvcl": "CVCL_Z182",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "rmug-l": {
+  "name": "RMUG-L",
+  "iclac_id": "ICLAC-00421",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_3157",
+  "true_identity": "SNG-II",
+  "sheet": "Version 13 Table 1"
+ },
+ "ro-d81-1": {
+  "name": "RO-D81-1",
+  "iclac_id": "ICLAC-00482",
+  "claimed_origin": "Thyroid, medullary carcinoma",
+  "cvcl": "CVCL_M779",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "ro-h85-1": {
+  "name": "RO-H85-1",
+  "iclac_id": "ICLAC-00481",
+  "claimed_origin": "Thyroid, medullary carcinoma",
+  "cvcl": "CVCL_A666",
+  "true_identity": "647-V",
+  "sheet": "Version 13 Table 1"
+ },
+ "rpmi-4788": {
+  "name": "RPMI-4788",
+  "iclac_id": "ICLAC-00387",
+  "claimed_origin": "Colon carcinoma",
+  "cvcl": "CVCL_0U46",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "rpmi-6666": {
+  "name": "RPMI-6666",
+  "iclac_id": "ICLAC-00263",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_1665",
+  "true_identity": "Correct name, incorrect cell type",
+  "sheet": "Version 13 Table 1"
+ },
+ "rptc-1": {
+  "name": "RPTC-1",
+  "iclac_id": "ICLAC-00422",
+  "claimed_origin": "Thyroid, papillary carcinoma",
+  "cvcl": "CVCL_V277",
+  "true_identity": "TPC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "rs-1": {
+  "name": "RS-1",
+  "iclac_id": "ICLAC-00264",
+  "claimed_origin": "Leukemia, acute myeloid, M7",
+  "cvcl": "CVCL_8423",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "rtsg": {
+  "name": "RTSG",
+  "iclac_id": "ICLAC-00423",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_1671",
+  "true_identity": "SNG-II",
+  "sheet": "Version 13 Table 1"
+ },
+ "ry": {
+  "name": "RY",
+  "iclac_id": "ICLAC-00084",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_U964",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "sa4": {
+  "name": "SA4",
+  "iclac_id": "ICLAC-00085",
+  "claimed_origin": "Sarcoma (liposarcoma)",
+  "cvcl": "CVCL_8910",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sam-1": {
+  "name": "SAM-1",
+  "iclac_id": "ICLAC-00265",
+  "claimed_origin": "Leukemia, chronic myeloid, blast crisis",
+  "cvcl": "CVCL_8440",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "saml-1": {
+  "name": "SAML-1",
+  "iclac_id": "ICLAC-00424",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_9997",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "sbc-2": {
+  "name": "SBC-2",
+  "iclac_id": "ICLAC-00156",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_1677",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sbc-7": {
+  "name": "SBC-7",
+  "iclac_id": "ICLAC-00157",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_1680",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sc": {
+  "name": "SC (28SC)",
+  "iclac_id": "ICLAC-00525",
+  "claimed_origin": "Blood, monocyte/ macrophage",
+  "cvcl": "CVCL_6444",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "28sc": {
+  "name": "SC (28SC)",
+  "iclac_id": "ICLAC-00525",
+  "claimed_origin": "Blood, monocyte/ macrophage",
+  "cvcl": "CVCL_6444",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "scctf": {
+  "name": "SCCTF",
+  "iclac_id": "ICLAC-00266",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_0517",
+  "true_identity": "SCCKN",
+  "sheet": "Version 13 Table 1"
+ },
+ "sclc-16h": {
+  "name": "SCLC-16H",
+  "iclac_id": "ICLAC-00158",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_X025",
+  "true_identity": "SCLC-21/22H",
+  "sheet": "Version 13 Table 1"
+ },
+ "sclc-24h": {
+  "name": "SCLC-24H",
+  "iclac_id": "ICLAC-00159",
+  "claimed_origin": "Lung carcinoma, small cell",
+  "cvcl": "CVCL_8262",
+  "true_identity": "SCLC-21/22H",
+  "sheet": "Version 13 Table 1"
+ },
+ "seg-1": {
+  "name": "SEG-1",
+  "iclac_id": "ICLAC-00366",
+  "claimed_origin": "Esophageal adenocarcinoma",
+  "cvcl": "CVCL_8113",
+  "true_identity": "NCI-H460",
+  "sheet": "Version 13 Table 1"
+ },
+ "sf767": {
+  "name": "SF767",
+  "iclac_id": "ICLAC-00452",
+  "claimed_origin": "Glioma, anaplastic astrocytoma",
+  "cvcl": "CVCL_6950",
+  "true_identity": "ME-180",
+  "sheet": "Version 13 Table 1"
+ },
+ "sgc-7901": {
+  "name": "SGC-7901",
+  "iclac_id": "ICLAC-00577",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_0520",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sh-2": {
+  "name": "SH-2",
+  "iclac_id": "ICLAC-00086",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_M622",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sh-3": {
+  "name": "SH-3",
+  "iclac_id": "ICLAC-00087",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_M383",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sjpl": {
+  "name": "SJPL",
+  "iclac_id": "ICLAC-00367",
+  "claimed_origin": "Lung cells, immortalized epithelial",
+  "cvcl": "CVCL_1T04",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "sk-gt-5": {
+  "name": "SK-GT-5",
+  "iclac_id": "ICLAC-00368",
+  "claimed_origin": "Esophageal adenocarcinoma",
+  "cvcl": "CVCL_8114",
+  "true_identity": "SK-GT-2",
+  "sheet": "Version 13 Table 1"
+ },
+ "sk-mg-1": {
+  "name": "SK-MG-1",
+  "iclac_id": "ICLAC-00345",
+  "claimed_origin": "Astrocytoma",
+  "cvcl": "CVCL_1698",
+  "true_identity": "Marcus",
+  "sheet": "Version 13 Table 1"
+ },
+ "sk-n-mc": {
+  "name": "SK-N-MC",
+  "iclac_id": "ICLAC-00267",
+  "claimed_origin": "Neuroblastoma",
+  "cvcl": "CVCL_0530",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "sk-ov-4": {
+  "name": "SK-OV-4",
+  "iclac_id": "ICLAC-00469",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_X008",
+  "true_identity": "C-33A",
+  "sheet": "Version 13 Table 1"
+ },
+ "sk-ov-6": {
+  "name": "SK-OV-6",
+  "iclac_id": "ICLAC-00470",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_A457",
+  "true_identity": "C-33A",
+  "sheet": "Version 13 Table 1"
+ },
+ "skw 6.4": {
+  "name": "SKW 6.4 (Daudi derivative)",
+  "iclac_id": "ICLAC-00617",
+  "claimed_origin": "Lymphoma, Burkitt",
+  "cvcl": "CVCL_3796",
+  "true_identity": "WIL2-A3 (WIL2 derivative)",
+  "sheet": "Version 13 Table 1"
+ },
+ "daudi derivative": {
+  "name": "SKW 6.4 (Daudi derivative)",
+  "iclac_id": "ICLAC-00617",
+  "claimed_origin": "Lymphoma, Burkitt",
+  "cvcl": "CVCL_3796",
+  "true_identity": "WIL2-A3 (WIL2 derivative)",
+  "sheet": "Version 13 Table 1"
+ },
+ "skw-3": {
+  "name": "SKW-3",
+  "iclac_id": "ICLAC-00346",
+  "claimed_origin": "Leukemia, chronic lymphocytic, T cell",
+  "cvcl": "CVCL_2197",
+  "true_identity": "KE-37",
+  "sheet": "Version 13 Table 1"
+ },
+ "slk": {
+  "name": "SLK",
+  "iclac_id": "ICLAC-00477",
+  "claimed_origin": "Sarcoma (Kaposi)",
+  "cvcl": "CVCL_9569",
+  "true_identity": "Caki-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "slr20": {
+  "name": "SLR20",
+  "iclac_id": "ICLAC-00573",
+  "claimed_origin": "Kidney, clear cell carcinoma",
+  "cvcl": "CVCL_V606",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "slr24": {
+  "name": "SLR24",
+  "iclac_id": "ICLAC-00574",
+  "claimed_origin": "Kidney, clear cell carcinoma",
+  "cvcl": "CVCL_V610",
+  "true_identity": "RCC4",
+  "sheet": "Version 13 Table 1"
+ },
+ "smmc-7721": {
+  "name": "SMMC-7721",
+  "iclac_id": "ICLAC-00554",
+  "claimed_origin": "Liver, hepatocellular carcinoma",
+  "cvcl": "CVCL_0534",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "snb-19": {
+  "name": "SNB-19",
+  "iclac_id": "ICLAC-00268",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_0535",
+  "true_identity": "U-251 MG",
+  "sheet": "Version 13 Table 1"
+ },
+ "sng-m": {
+  "name": "SNG-M",
+  "iclac_id": "ICLAC-00632",
+  "claimed_origin": "Endometrial carcinoma",
+  "cvcl": "CVCL_1707",
+  "true_identity": "SNG-M, HHUA (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "snu-1958": {
+  "name": "SNU-1958",
+  "iclac_id": "ICLAC-00539",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_T040",
+  "true_identity": "LS513",
+  "sheet": "Version 13 Table 1"
+ },
+ "spc-a1": {
+  "name": "SPC-A1",
+  "iclac_id": "ICLAC-00608",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_6955",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "spc-bm-36": {
+  "name": "SPC-BM-36",
+  "iclac_id": "ICLAC-00584",
+  "claimed_origin": "Ovary, normal",
+  "cvcl": "CVCL_Z327",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "spi-801": {
+  "name": "SPI-801",
+  "iclac_id": "ICLAC-00160",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_2200",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "spi-802": {
+  "name": "SPI-802",
+  "iclac_id": "ICLAC-00161",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_2201",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "spr": {
+  "name": "SpR",
+  "iclac_id": "ICLAC-00088",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_L986",
+  "true_identity": "OMK-210",
+  "sheet": "Version 13 Table 1"
+ },
+ "sq-5": {
+  "name": "SQ-5",
+  "iclac_id": "ICLAC-00269",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_8273",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sr-91": {
+  "name": "SR-91",
+  "iclac_id": "ICLAC-00270",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_8441",
+  "true_identity": "AML-193",
+  "sheet": "Version 13 Table 1"
+ },
+ "su-dhl-9": {
+  "name": "SU-DHL-9",
+  "iclac_id": "ICLAC-00558",
+  "claimed_origin": "Lymphoma, diffuse large B-cell",
+  "cvcl": "CVCL_4379",
+  "true_identity": "SU-DHL-8",
+  "sheet": "Version 13 Table 1"
+ },
+ "sune1": {
+  "name": "SUNE1",
+  "iclac_id": "ICLAC-00595",
+  "claimed_origin": "Nasal pharynx, carcinoma",
+  "cvcl": "CVCL_6946",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sune2": {
+  "name": "SUNE2",
+  "iclac_id": "ICLAC-00598",
+  "claimed_origin": "Nasal pharynx, carcinoma",
+  "cvcl": "CVCL_6956",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "sw-527": {
+  "name": "SW-527",
+  "iclac_id": "ICLAC-00089",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_3799",
+  "true_identity": "SW-480, SW-620",
+  "sheet": "Version 13 Table 1"
+ },
+ "sw-598": {
+  "name": "SW-598",
+  "iclac_id": "ICLAC-00090",
+  "claimed_origin": "Meningioma",
+  "cvcl": "CVCL_F649",
+  "true_identity": "SW-480, SW-620",
+  "sheet": "Version 13 Table 1"
+ },
+ "sw-608": {
+  "name": "SW-608",
+  "iclac_id": "ICLAC-00091",
+  "claimed_origin": "Astrocytoma",
+  "cvcl": "CVCL_F653",
+  "true_identity": "SW-480, SW-620",
+  "sheet": "Version 13 Table 1"
+ },
+ "sw-613": {
+  "name": "SW-613",
+  "iclac_id": "ICLAC-00092",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_F650",
+  "true_identity": "SW-480, SW-620",
+  "sheet": "Version 13 Table 1"
+ },
+ "sw-732": {
+  "name": "SW-732",
+  "iclac_id": "ICLAC-00093",
+  "claimed_origin": "Cervical carcinoma",
+  "cvcl": "CVCL_F651",
+  "true_identity": "SW-480, SW-620",
+  "sheet": "Version 13 Table 1"
+ },
+ "sw-733": {
+  "name": "SW-733",
+  "iclac_id": "ICLAC-00094",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_F652",
+  "true_identity": "SW-480, SW-620",
+  "sheet": "Version 13 Table 1"
+ },
+ "t1": {
+  "name": "T1",
+  "iclac_id": "ICLAC-00453",
+  "claimed_origin": "Neural stem cell",
+  "cvcl": "CVCL_1U15",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "t-1": {
+  "name": "T-1",
+  "iclac_id": "ICLAC-00095",
+  "claimed_origin": "Kidney, normal renal cells",
+  "cvcl": "CVCL_M858",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "t-33": {
+  "name": "T-33",
+  "iclac_id": "ICLAC-00271",
+  "claimed_origin": "Leukemia, chronic myeloid, blast crisis",
+  "cvcl": "CVCL_8427",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "t404": {
+  "name": "T404",
+  "iclac_id": "ICLAC-00425",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1T20",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "t406 [multiple cell lines with same name, see cellosaurus]": {
+  "name": "T406 \n[Multiple cell lines with same name, see Cellosaurus]",
+  "iclac_id": "ICLAC-00426",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1T19",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "t409": {
+  "name": "T409",
+  "iclac_id": "ICLAC-00427",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1Q88",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "t-9": {
+  "name": "T-9 (WI-38 derivative)",
+  "iclac_id": "ICLAC-00096",
+  "claimed_origin": "Lung cells, transformed normal diploid fibroblasts",
+  "cvcl": "CVCL_M092",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "wi-38 derivative": {
+  "name": "T-9 (WI-38 derivative)",
+  "iclac_id": "ICLAC-00096",
+  "claimed_origin": "Lung cells, transformed normal diploid fibroblasts",
+  "cvcl": "CVCL_M092",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "tca8113": {
+  "name": "Tca8113",
+  "iclac_id": "ICLAC-00578",
+  "claimed_origin": "Oral squamous cell carcinoma (tongue)",
+  "cvcl": "CVCL_6851",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "tco-1": {
+  "name": "TCO-1",
+  "iclac_id": "ICLAC-00272",
+  "claimed_origin": "Cervical carcinoma",
+  "cvcl": "CVCL_3179",
+  "true_identity": "TCS",
+  "sheet": "Version 13 Table 1"
+ },
+ "tdl-1": {
+  "name": "TDL-1",
+  "iclac_id": "ICLAC-00097",
+  "claimed_origin": "Tonsillar lymphoid cells, non-neoplastic",
+  "cvcl": "CVCL_8428",
+  "true_identity": "P3JHR-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "tdl-2": {
+  "name": "TDL-2",
+  "iclac_id": "ICLAC-00098",
+  "claimed_origin": "Tonsillar lymphoid cells, non-neoplastic",
+  "cvcl": "CVCL_8429",
+  "true_identity": "P3JHR-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "tdl-3": {
+  "name": "TDL-3",
+  "iclac_id": "ICLAC-00099",
+  "claimed_origin": "Tonsillar lymphoid cells, non-neoplastic",
+  "cvcl": "CVCL_8430",
+  "true_identity": "RPMI 1788",
+  "sheet": "Version 13 Table 1"
+ },
+ "tdl-4": {
+  "name": "TDL-4",
+  "iclac_id": "ICLAC-00100",
+  "claimed_origin": "Tonsillar lymphoid cells, non-neoplastic",
+  "cvcl": "CVCL_8431",
+  "true_identity": "Raji",
+  "sheet": "Version 13 Table 1"
+ },
+ "te-12": {
+  "name": "TE-12",
+  "iclac_id": "ICLAC-00273",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_1762",
+  "true_identity": "TE-2, TE-3, TE-7, TE-12, TE-13 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "te-13": {
+  "name": "TE-13",
+  "iclac_id": "ICLAC-00274",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_4463",
+  "true_identity": "TE-2, TE-3, TE-7, TE-12, TE-13 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "te-2": {
+  "name": "TE-2",
+  "iclac_id": "ICLAC-00275",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_4455",
+  "true_identity": "TE-2, TE-3, TE-7, TE-12, TE-13 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "te-3": {
+  "name": "TE-3",
+  "iclac_id": "ICLAC-00276",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_9971",
+  "true_identity": "TE-2, TE-3, TE-7, TE-12, TE-13 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "te671": {
+  "name": "TE671",
+  "iclac_id": "ICLAC-00101",
+  "claimed_origin": "Medulloblastoma",
+  "cvcl": "CVCL_1756",
+  "true_identity": "RD",
+  "sheet": "Version 13 Table 1"
+ },
+ "te671 subline no.2": {
+  "name": "TE671 Subline No.2",
+  "iclac_id": "ICLAC-00347",
+  "claimed_origin": "Medulloblastoma",
+  "cvcl": "CVCL_2731",
+  "true_identity": "RD",
+  "sheet": "Version 13 Table 1"
+ },
+ "te-7": {
+  "name": "TE-7",
+  "iclac_id": "ICLAC-00277",
+  "claimed_origin": "Esophageal adenocarcinoma",
+  "cvcl": "CVCL_9972",
+  "true_identity": "TE-2, TE-3, TE-7, TE-12, TE-13 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "tec61": {
+  "name": "TEC61",
+  "iclac_id": "ICLAC-00364",
+  "claimed_origin": "Thyroid, endothelium",
+  "cvcl": "CVCL_7167",
+  "true_identity": "JEG3",
+  "sheet": "Version 13 Table 1"
+ },
+ "ti-1": {
+  "name": "TI-1",
+  "iclac_id": "ICLAC-00278",
+  "claimed_origin": "Leukemia, acute myeloid, M2",
+  "cvcl": "CVCL_L806",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 1"
+ },
+ "tk-1": {
+  "name": "TK-1",
+  "iclac_id": "ICLAC-00348",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_B325",
+  "true_identity": "U-251 MG",
+  "sheet": "Version 13 Table 1"
+ },
+ "tmh-1": {
+  "name": "TMH-1",
+  "iclac_id": "ICLAC-00349",
+  "claimed_origin": "Thyroid, benign goitre",
+  "cvcl": "CVCL_3219",
+  "true_identity": "IHH-4",
+  "sheet": "Version 13 Table 1"
+ },
+ "tmm": {
+  "name": "TMM",
+  "iclac_id": "ICLAC-00279",
+  "claimed_origin": "Leukemia, chronic myeloid, blast crisis",
+  "cvcl": "CVCL_1894",
+  "true_identity": "Correct name, incorrect cell type",
+  "sheet": "Version 13 Table 1"
+ },
+ "tscca": {
+  "name": "TSCCa",
+  "iclac_id": "ICLAC-00579",
+  "claimed_origin": "Oral squamous cell carcinoma (tongue)",
+  "cvcl": "CVCL_VL15",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "tsu-pr1": {
+  "name": "TSU-Pr1",
+  "iclac_id": "ICLAC-00280",
+  "claimed_origin": "Prostate carcinoma",
+  "cvcl": "CVCL_4014",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "tu-138": {
+  "name": "Tu-138",
+  "iclac_id": "ICLAC-00428",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_4910",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "tu-158ln": {
+  "name": "Tu-158LN",
+  "iclac_id": "ICLAC-00429",
+  "claimed_origin": "Oropharyngeal squamous cell carcinoma",
+  "cvcl": "CVCL_1T17",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "tu-159": {
+  "name": "Tu-159",
+  "iclac_id": "ICLAC-00430",
+  "claimed_origin": "Oropharyngeal squamous cell carcinoma",
+  "cvcl": "CVCL_4911",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "tu-167": {
+  "name": "Tu-167",
+  "iclac_id": "ICLAC-00431",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_4912",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "tu-182": {
+  "name": "Tu-182",
+  "iclac_id": "ICLAC-00432",
+  "claimed_origin": "Oropharyngeal squamous cell carcinoma",
+  "cvcl": "CVCL_4914",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "tu-212": {
+  "name": "Tu-212",
+  "iclac_id": "ICLAC-00433",
+  "claimed_origin": "Hypopharyngeal squamous cell carcinoma",
+  "cvcl": "CVCL_4915",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "tu-212ln": {
+  "name": "Tu-212LN",
+  "iclac_id": "ICLAC-00434",
+  "claimed_origin": "Hypopharyngeal squamous cell carcinoma (lymph node)",
+  "cvcl": "CVCL_1T18",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 1"
+ },
+ "tuwi": {
+  "name": "TuWi",
+  "iclac_id": "ICLAC-00028",
+  "claimed_origin": "Kidney, Wilms' tumor",
+  "cvcl": "CVCL_8275",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "u-118 mg": {
+  "name": "U-118 MG",
+  "iclac_id": "ICLAC-00350",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_0633",
+  "true_identity": "U-138 MG",
+  "sheet": "Version 13 Table 1"
+ },
+ "ucdk9b1": {
+  "name": "UCDK9B1",
+  "iclac_id": "ICLAC-00540",
+  "claimed_origin": "Lymphoma, B-cell",
+  "cvcl": "CVCL_GY10",
+  "true_identity": "JURKAT",
+  "sheet": "Version 13 Table 1"
+ },
+ "ucdk9b2": {
+  "name": "UCDK9B2",
+  "iclac_id": "ICLAC-00541",
+  "claimed_origin": "Lymphoma, B-cell",
+  "cvcl": "CVCL_GY11",
+  "true_identity": "JURKAT",
+  "sheet": "Version 13 Table 1"
+ },
+ "ucdk9b3": {
+  "name": "UCDK9B3",
+  "iclac_id": "ICLAC-00542",
+  "claimed_origin": "Lymphoma, B-cell",
+  "cvcl": "CVCL_GY12",
+  "true_identity": "JURKAT",
+  "sheet": "Version 13 Table 1"
+ },
+ "ucdk9b4": {
+  "name": "UCDK9B4",
+  "iclac_id": "ICLAC-00543",
+  "claimed_origin": "Lymphoma, B-cell",
+  "cvcl": "CVCL_GY13",
+  "true_identity": "JURKAT",
+  "sheet": "Version 13 Table 1"
+ },
+ "ucdk9b5": {
+  "name": "UCDK9B5",
+  "iclac_id": "ICLAC-00544",
+  "claimed_origin": "Lymphoma, B-cell",
+  "cvcl": "CVCL_GY14",
+  "true_identity": "JURKAT",
+  "sheet": "Version 13 Table 1"
+ },
+ "um-uc-2": {
+  "name": "UM-UC-2",
+  "iclac_id": "ICLAC-00281",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_8155",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 1"
+ },
+ "um-uc-3-gfp": {
+  "name": "UM-UC-3-GFP (UM-UC-3 derivative)",
+  "iclac_id": "ICLAC-00282",
+  "claimed_origin": "Bladder carcinoma, GFP-transfected",
+  "cvcl": "CVCL_1R40",
+  "true_identity": "Unknown, NOT UM-UC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "um-uc-3 derivative": {
+  "name": "UM-UC-3-GFP (UM-UC-3 derivative)",
+  "iclac_id": "ICLAC-00282",
+  "claimed_origin": "Bladder carcinoma, GFP-transfected",
+  "cvcl": "CVCL_1R40",
+  "true_identity": "Unknown, NOT UM-UC-3",
+  "sheet": "Version 13 Table 1"
+ },
+ "upes/c": {
+  "name": "UPES/C",
+  "iclac_id": "ICLAC-00388",
+  "claimed_origin": "Brain, non-neoplastic astrocytes",
+  "cvcl": "CVCL_1R55",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "uphhja": {
+  "name": "UPHHJA",
+  "iclac_id": "ICLAC-00389",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_1R56",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "utmb-460": {
+  "name": "UTMB-460",
+  "iclac_id": "ICLAC-00283",
+  "claimed_origin": "B-cells",
+  "cvcl": "CVCL_8276",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 1"
+ },
+ "vc312r": {
+  "name": "VC312R",
+  "iclac_id": "ICLAC-00390",
+  "claimed_origin": "Medulloblastoma",
+  "cvcl": "CVCL_1R57",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 1"
+ },
+ "widr": {
+  "name": "WiDr",
+  "iclac_id": "ICLAC-00103",
+  "claimed_origin": "Colon carcinoma",
+  "cvcl": "CVCL_2760",
+  "true_identity": "HT-29",
+  "sheet": "Version 13 Table 1"
+ },
+ "wish": {
+  "name": "WISH",
+  "iclac_id": "ICLAC-00013",
+  "claimed_origin": "Amnion, normal cells",
+  "cvcl": "CVCL_1909",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "wong-kilbourne derivative": {
+  "name": "Wong-Kilbourne derivative (WKD)",
+  "iclac_id": "ICLAC-00030 (contains: ICLAC-00029)",
+  "claimed_origin": "Conjunctiva",
+  "cvcl": "CVCL_2764",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "wkd": {
+  "name": "Wong-Kilbourne derivative (WKD)",
+  "iclac_id": "ICLAC-00030 (contains: ICLAC-00029)",
+  "claimed_origin": "Conjunctiva",
+  "cvcl": "CVCL_2764",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "wrl 68": {
+  "name": "WRL 68",
+  "iclac_id": "ICLAC-00351",
+  "claimed_origin": "Liver, embryonic cells",
+  "cvcl": "CVCL_0581",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "wsu-alcl": {
+  "name": "WSU-ALCL",
+  "iclac_id": "ICLAC-00284",
+  "claimed_origin": "Lymphoma, anaplastic large cell",
+  "cvcl": "CVCL_A036",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 1"
+ },
+ "wsu-cll": {
+  "name": "WSU-CLL",
+  "iclac_id": "ICLAC-00285",
+  "claimed_origin": "Leukemia, chronic lymphocytic",
+  "cvcl": "CVCL_A049",
+  "true_identity": "REH",
+  "sheet": "Version 13 Table 1"
+ },
+ "yaa": {
+  "name": "YAA",
+  "iclac_id": "ICLAC-00286",
+  "claimed_origin": "Monocytes",
+  "cvcl": "CVCL_8466",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "yap": {
+  "name": "YAP",
+  "iclac_id": "ICLAC-00287",
+  "claimed_origin": "Monocytes",
+  "cvcl": "CVCL_8467",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 1"
+ },
+ "yj": {
+  "name": "YJ",
+  "iclac_id": "ICLAC-00288",
+  "claimed_origin": "Leukemia, chronic myelomonocytic",
+  "cvcl": "CVCL_8931",
+  "true_identity": "HL-60",
+  "sheet": "Version 13 Table 1"
+ },
+ "ymb-1": {
+  "name": "YMB-1",
+  "iclac_id": "ICLAC-00391",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_2814",
+  "true_identity": "ZR-75-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "ymb-1-e": {
+  "name": "YMB-1-E",
+  "iclac_id": "ICLAC-00392",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_2815",
+  "true_identity": "ZR-75-1",
+  "sheet": "Version 13 Table 1"
+ },
+ "z-hl16c": {
+  "name": "Z-HL16C",
+  "iclac_id": "ICLAC-00609",
+  "claimed_origin": "Lung cells, embryonic fibroblast",
+  "cvcl": "CVCL_RL03",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 1"
+ },
+ "1205lu": {
+  "name": "1205Lu (WM793 derivative)",
+  "iclac_id": "ICLAC-00483",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_5239",
+  "true_identity": "Unknown, probably from xenograft host",
+  "sheet": "Version 13 Table 2"
+ },
+ "wm793 derivative": {
+  "name": "1205Lu (WM793 derivative)",
+  "iclac_id": "ICLAC-00483",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_5239",
+  "true_identity": "Unknown, probably from xenograft host",
+  "sheet": "Version 13 Table 2"
+ },
+ "1483": {
+  "name": "1483",
+  "iclac_id": "ICLAC-00435",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_6980",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 2"
+ },
+ "183": {
+  "name": "183",
+  "iclac_id": "ICLAC-00436",
+  "claimed_origin": "Oropharyngeal squamous cell carcinoma",
+  "cvcl": "CVCL_6978",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 2"
+ },
+ "207": {
+  "name": "207 (EU-2)",
+  "iclac_id": "ICLAC-00162",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_K034",
+  "true_identity": "Mixture, REH / SUP-B2",
+  "sheet": "Version 13 Table 2"
+ },
+ "eu-2": {
+  "name": "207 (EU-2)",
+  "iclac_id": "ICLAC-00162",
+  "claimed_origin": "Leukemia, acute lymphoblastic, B cell precursor",
+  "cvcl": "CVCL_K034",
+  "true_identity": "Mixture, REH / SUP-B2",
+  "sheet": "Version 13 Table 2"
+ },
+ "amdur ii": {
+  "name": "Amdur II (AMDURII)",
+  "iclac_id": "ICLAC-00289",
+  "claimed_origin": "Skin",
+  "cvcl": "CVCL_3643",
+  "true_identity": "LLC-PK1",
+  "sheet": "Version 13 Table 2"
+ },
+ "amdurii": {
+  "name": "Amdur II (AMDURII)",
+  "iclac_id": "ICLAC-00289",
+  "claimed_origin": "Skin",
+  "cvcl": "CVCL_3643",
+  "true_identity": "LLC-PK1",
+  "sheet": "Version 13 Table 2"
+ },
+ "bg-1": {
+  "name": "BG-1",
+  "iclac_id": "ICLAC-00456",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_6570",
+  "true_identity": "MCF-7",
+  "sheet": "Version 13 Table 2"
+ },
+ "bja-b": {
+  "name": "BJA-B",
+  "iclac_id": "ICLAC-00031",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_5711",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 2"
+ },
+ "bt-20": {
+  "name": "BT-20",
+  "iclac_id": "ICLAC-00104",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_0178",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 2"
+ },
+ "ca9-22": {
+  "name": "Ca9-22",
+  "iclac_id": "ICLAC-00437",
+  "claimed_origin": "Oral squamous cell carcinoma",
+  "cvcl": "CVCL_1102",
+  "true_identity": "MSK-922",
+  "sheet": "Version 13 Table 2"
+ },
+ "chp-100": {
+  "name": "CHP-100",
+  "iclac_id": "ICLAC-00382",
+  "claimed_origin": "Ewing sarcoma",
+  "cvcl": "CVCL_7166",
+  "true_identity": "IMR-32",
+  "sheet": "Version 13 Table 2"
+ },
+ "chp-100l": {
+  "name": "CHP-100L (CHP-100 derivative)",
+  "iclac_id": "ICLAC-00610",
+  "claimed_origin": "Ewing sarcoma",
+  "cvcl": "CVCL_IV94",
+  "true_identity": "IMR-32",
+  "sheet": "Version 13 Table 2"
+ },
+ "chp-100 derivative": {
+  "name": "CHP-100L (CHP-100 derivative)",
+  "iclac_id": "ICLAC-00610",
+  "claimed_origin": "Ewing sarcoma",
+  "cvcl": "CVCL_IV94",
+  "true_identity": "IMR-32",
+  "sheet": "Version 13 Table 2"
+ },
+ "colo-720e": {
+  "name": "COLO-720E",
+  "iclac_id": "ICLAC-00438",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_1995",
+  "true_identity": "COLO704",
+  "sheet": "Version 13 Table 2"
+ },
+ "d-17": {
+  "name": "D-17",
+  "iclac_id": "ICLAC-00439",
+  "claimed_origin": "Sarcoma (osteosarcoma)",
+  "cvcl": "CVCL_1916",
+  "true_identity": "Moresco",
+  "sheet": "Version 13 Table 2"
+ },
+ "eb-3": {
+  "name": "EB-3",
+  "iclac_id": "ICLAC-00380",
+  "claimed_origin": "Lymphoma, Burkitt",
+  "cvcl": "CVCL_1185",
+  "true_identity": "Daudi",
+  "sheet": "Version 13 Table 2"
+ },
+ "eca-109": {
+  "name": "Eca-109 (EC109)",
+  "iclac_id": "ICLAC-00634",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_6898",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 2"
+ },
+ "ec109": {
+  "name": "Eca-109 (EC109)",
+  "iclac_id": "ICLAC-00634",
+  "claimed_origin": "Esophageal squamous cell carcinoma",
+  "cvcl": "CVCL_6898",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 2"
+ },
+ "fu-rpnt-2": {
+  "name": "FU-RPNT-2",
+  "iclac_id": "ICLAC-00352",
+  "claimed_origin": "Kidney, renal primitive neuroectodermal tumor",
+  "cvcl": "CVCL_4838",
+  "true_identity": "FU-RPNT-1",
+  "sheet": "Version 13 Table 2"
+ },
+ "grey": {
+  "name": "Grey",
+  "iclac_id": "ICLAC-00440",
+  "claimed_origin": "Sarcoma (osteosarcoma)",
+  "cvcl": "CVCL_L354",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "hpb-all": {
+  "name": "HPB-ALL",
+  "iclac_id": "ICLAC-00290",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_1820",
+  "true_identity": "JURKAT",
+  "sheet": "Version 13 Table 2"
+ },
+ "j-82": {
+  "name": "J-82",
+  "iclac_id": "ICLAC-00105",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_0359",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 2"
+ },
+ "jhh-1": {
+  "name": "JHH-1",
+  "iclac_id": "ICLAC-00353",
+  "claimed_origin": "Liver, hepatocellular carcinoma",
+  "cvcl": "CVCL_2785",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "karpas-45": {
+  "name": "KARPAS-45",
+  "iclac_id": "ICLAC-00163",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_1326",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "kbm-3": {
+  "name": "KBM-3",
+  "iclac_id": "ICLAC-00291",
+  "claimed_origin": "Leukemia, acute myeloid, M4",
+  "cvcl": "CVCL_A425",
+  "true_identity": "HL-60",
+  "sheet": "Version 13 Table 2"
+ },
+ "ke-37": {
+  "name": "KE-37",
+  "iclac_id": "ICLAC-00164",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_1327",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 2"
+ },
+ "l-540": {
+  "name": "L-540",
+  "iclac_id": "ICLAC-00292",
+  "claimed_origin": "Lymphoma, Hodgkin",
+  "cvcl": "CVCL_1362",
+  "true_identity": "CCRF-CEM",
+  "sheet": "Version 13 Table 2"
+ },
+ "mb-02": {
+  "name": "MB-02",
+  "iclac_id": "ICLAC-00165",
+  "claimed_origin": "Leukemia, acute myeloid, M7",
+  "cvcl": "CVCL_7075",
+  "true_identity": "HU-3",
+  "sheet": "Version 13 Table 2"
+ },
+ "mda1986ln": {
+  "name": "MDA1986LN",
+  "iclac_id": "ICLAC-00441",
+  "claimed_origin": "Oral squamous cell carcinoma (lymph node)",
+  "cvcl": "CVCL_AT80",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 2"
+ },
+ "mda686ln": {
+  "name": "MDA686LN",
+  "iclac_id": "ICLAC-00442",
+  "claimed_origin": "Oropharyngeal squamous cell carcinoma (lymph node)",
+  "cvcl": "CVCL_6984",
+  "true_identity": "UM-SCC-1",
+  "sheet": "Version 13 Table 2"
+ },
+ "mda686tu": {
+  "name": "MDA686TU",
+  "iclac_id": "ICLAC-00443",
+  "claimed_origin": "Oropharyngeal squamous cell carcinoma",
+  "cvcl": "CVCL_6985",
+  "true_identity": "T404, T406, Tu-138, Tu-158LN, Tu-159, Tu-182, Tu-212, Tu-212LN (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 2"
+ },
+ "mkn-7": {
+  "name": "MKN-7",
+  "iclac_id": "ICLAC-00166",
+  "claimed_origin": "Gastric carcinoma",
+  "cvcl": "CVCL_1417",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "nci-h1339": {
+  "name": "NCI-H1339",
+  "iclac_id": "ICLAC-00534",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_A472",
+  "true_identity": "NCI-H157, NCI-H1264 (synonymous cell lines, donor origin unknown)",
+  "sheet": "Version 13 Table 2"
+ },
+ "nci-h929": {
+  "name": "NCI-H929",
+  "iclac_id": "ICLAC-00478",
+  "claimed_origin": "Myeloma",
+  "cvcl": "CVCL_1600",
+  "true_identity": "K-562",
+  "sheet": "Version 13 Table 2"
+ },
+ "oci-ly3": {
+  "name": "OCI-Ly3",
+  "iclac_id": "ICLAC-00517",
+  "claimed_origin": "Lymphoma, non-Hodgkin, diffuse large B-cell",
+  "cvcl": "CVCL_8800",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "ov-1063": {
+  "name": "OV-1063",
+  "iclac_id": "ICLAC-00340",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_4366",
+  "true_identity": "DU-145",
+  "sheet": "Version 13 Table 2"
+ },
+ "panc 05.04": {
+  "name": "Panc 05.04 (PL18)",
+  "iclac_id": "ICLAC-00614",
+  "claimed_origin": "Pancreatic adenocarcinoma",
+  "cvcl": "CVCL_1637 / CVCL_X507",
+  "true_identity": "OCUG-1",
+  "sheet": "Version 13 Table 2"
+ },
+ "pl18": {
+  "name": "Panc 05.04 (PL18)",
+  "iclac_id": "ICLAC-00614",
+  "claimed_origin": "Pancreatic adenocarcinoma",
+  "cvcl": "CVCL_1637 / CVCL_X507",
+  "true_identity": "OCUG-1",
+  "sheet": "Version 13 Table 2"
+ },
+ "parks": {
+  "name": "Parks",
+  "iclac_id": "ICLAC-00444",
+  "claimed_origin": "Melanoma",
+  "cvcl": "CVCL_DN32",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "rmg-ii": {
+  "name": "RMG-II",
+  "iclac_id": "ICLAC-00354",
+  "claimed_origin": "Ovarian carcinoma",
+  "cvcl": "CVCL_2803",
+  "true_identity": "RMG-I",
+  "sheet": "Version 13 Table 2"
+ },
+ "rpmi-8402": {
+  "name": "RPMI-8402",
+  "iclac_id": "ICLAC-00167",
+  "claimed_origin": "Leukemia, acute lymphoblastic, T cell",
+  "cvcl": "CVCL_1667",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "rt4": {
+  "name": "RT4",
+  "iclac_id": "ICLAC-00106",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_0036",
+  "true_identity": "HeLa",
+  "sheet": "Version 13 Table 2"
+ },
+ "su-dhl-7": {
+  "name": "SU-DHL-7",
+  "iclac_id": "ICLAC-00557",
+  "claimed_origin": "Lymphoma, diffuse large B-cell",
+  "cvcl": "CVCL_4380",
+  "true_identity": "SU-DHL-8",
+  "sheet": "Version 13 Table 2"
+ },
+ "sum229pe": {
+  "name": "SUM229PE",
+  "iclac_id": "ICLAC-00548",
+  "claimed_origin": "Breast carcinoma",
+  "cvcl": "CVCL_5594",
+  "true_identity": "SUM149PT",
+  "sheet": "Version 13 Table 2"
+ },
+ "t3m-12": {
+  "name": "T3M-12",
+  "iclac_id": "ICLAC-00355",
+  "claimed_origin": "Lung carcinoma",
+  "cvcl": "CVCL_4058",
+  "true_identity": "T3M-1",
+  "sheet": "Version 13 Table 2"
+ },
+ "u-373 mg": {
+  "name": "U-373 MG",
+  "iclac_id": "ICLAC-00295",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_2219",
+  "true_identity": "U-251 MG",
+  "sheet": "Version 13 Table 2"
+ },
+ "u-87 mg": {
+  "name": "U-87 MG (U-87 MG Uppsala)",
+  "iclac_id": "ICLAC-00535",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_GP63",
+  "true_identity": "Unknown, referred to as U-87 MG ATCC",
+  "sheet": "Version 13 Table 2"
+ },
+ "u-87 mg uppsala": {
+  "name": "U-87 MG (U-87 MG Uppsala)",
+  "iclac_id": "ICLAC-00535",
+  "claimed_origin": "Glioblastoma",
+  "cvcl": "CVCL_GP63",
+  "true_identity": "Unknown, referred to as U-87 MG ATCC",
+  "sheet": "Version 13 Table 2"
+ },
+ "u-937": {
+  "name": "U-937",
+  "iclac_id": "ICLAC-00168",
+  "claimed_origin": "Lymphoma, histiocytic",
+  "cvcl": "CVCL_0007",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "urotsa": {
+  "name": "UROtsa",
+  "iclac_id": "ICLAC-00484",
+  "claimed_origin": "Bladder, non-malignant urothelial cells",
+  "cvcl": "CVCL_0571",
+  "true_identity": "T-24",
+  "sheet": "Version 13 Table 2"
+ },
+ "ut-7": {
+  "name": "UT-7",
+  "iclac_id": "ICLAC-00293",
+  "claimed_origin": "Leukemia, acute myeloid, M7",
+  "cvcl": "CVCL_2233",
+  "true_identity": "U-937",
+  "sheet": "Version 13 Table 2"
+ },
+ "vm-cub-iii": {
+  "name": "VM-CUB-III",
+  "iclac_id": "ICLAC-00102",
+  "claimed_origin": "Bladder carcinoma",
+  "cvcl": "CVCL_9830",
+  "true_identity": "VM-CUB-I",
+  "sheet": "Version 13 Table 2"
+ },
+ "yamada": {
+  "name": "Yamada",
+  "iclac_id": "ICLAC-00445",
+  "claimed_origin": "Sarcoma (osteosarcoma)",
+  "cvcl": "CVCL_FA16",
+  "true_identity": "Unknown",
+  "sheet": "Version 13 Table 2"
+ },
+ "b2-17": {
+  "name": "B2-17",
+  "iclac_id": "ICLAC-00370",
+  "claimed_origin": "Astrocytoma",
+  "cvcl": "CVCL_2864",
+  "true_identity": "U-251 MG",
+  "sheet": "Version 13 Withdrawn"
+ }
+}

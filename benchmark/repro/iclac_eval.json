@@ -1,0 +1,211 @@
+{
+ "summary": {
+  "n": 20,
+  "llm_accuracy": 0.2,
+  "llm_confident_wrong": 6,
+  "tool_accuracy": 1.0,
+  "tool_confident_wrong": 0
+ },
+ "rows": [
+  {
+   "name": "AV3",
+   "true_identity": "HeLa",
+   "iclac_id": "ICLAC-00001",
+   "cvcl": "CVCL_1904",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "D18T",
+   "true_identity": "HeLa",
+   "iclac_id": "ICLAC-00039",
+   "cvcl": "CVCL_8669",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "Hut",
+   "true_identity": "HeLa",
+   "iclac_id": "ICLAC-00067",
+   "cvcl": "CVCL_M861",
+   "llm_verdict": "actually HeLa",
+   "llm_confidence": "medium",
+   "llm_correct": true,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "T-1",
+   "true_identity": "HeLa",
+   "iclac_id": "ICLAC-00095",
+   "cvcl": "CVCL_M858",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "GHE",
+   "true_identity": "T-24",
+   "iclac_id": "ICLAC-00122",
+   "cvcl": "CVCL_8199",
+   "llm_verdict": "actually HeLa",
+   "llm_confidence": "medium",
+   "llm_correct": false,
+   "llm_confident_wrong": true
+  },
+  {
+   "name": "P1-1A3",
+   "true_identity": "SK-HEP-1",
+   "iclac_id": "ICLAC-00150",
+   "cvcl": "CVCL_A042",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "BHP 17-10",
+   "true_identity": "M14",
+   "iclac_id": "ICLAC-00181",
+   "cvcl": "CVCL_6281",
+   "llm_verdict": "clean",
+   "llm_confidence": "medium",
+   "llm_correct": false,
+   "llm_confident_wrong": true
+  },
+  {
+   "name": "HKMUS-SF",
+   "true_identity": "SKG-II-SF",
+   "iclac_id": "ICLAC-00210",
+   "cvcl": "CVCL_8230",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "MOBS-1",
+   "true_identity": "U-937",
+   "iclac_id": "ICLAC-00239",
+   "cvcl": "CVCL_8442",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "SNB-19",
+   "true_identity": "U-251 MG",
+   "iclac_id": "ICLAC-00268",
+   "cvcl": "CVCL_0535",
+   "llm_verdict": "actually U-251 MG",
+   "llm_confidence": "high",
+   "llm_correct": true,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "U-373 MG",
+   "true_identity": "U-251 MG",
+   "iclac_id": "ICLAC-00295",
+   "cvcl": "CVCL_2219",
+   "llm_verdict": "actually U-251 MG",
+   "llm_confidence": "high",
+   "llm_correct": true,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "KPL-1",
+   "true_identity": "MCF-7",
+   "iclac_id": "ICLAC-00325",
+   "cvcl": "CVCL_2094",
+   "llm_verdict": "actually MCF-7",
+   "llm_confidence": "medium",
+   "llm_correct": true,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "T3M-12",
+   "true_identity": "T3M-1",
+   "iclac_id": "ICLAC-00355",
+   "cvcl": "CVCL_4058",
+   "llm_verdict": "actually HeLa",
+   "llm_confidence": "medium",
+   "llm_correct": false,
+   "llm_confident_wrong": true
+  },
+  {
+   "name": "C-433",
+   "true_identity": "RD-ES",
+   "iclac_id": "ICLAC-00395",
+   "cvcl": "CVCL_1969",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "RTSG",
+   "true_identity": "SNG-II",
+   "iclac_id": "ICLAC-00423",
+   "cvcl": "CVCL_1671",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "BG-1",
+   "true_identity": "MCF-7",
+   "iclac_id": "ICLAC-00456",
+   "cvcl": "CVCL_6570",
+   "llm_verdict": "clean",
+   "llm_confidence": "medium",
+   "llm_correct": false,
+   "llm_confident_wrong": true
+  },
+  {
+   "name": "MUM2C",
+   "true_identity": "M14",
+   "iclac_id": "ICLAC-00501",
+   "cvcl": "CVCL_3448",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "GR-M",
+   "true_identity": "PSN1",
+   "iclac_id": "ICLAC-00538",
+   "cvcl": "CVCL_2451",
+   "llm_verdict": "actually MDA-MB-435",
+   "llm_confidence": "medium",
+   "llm_correct": false,
+   "llm_confident_wrong": true
+  },
+  {
+   "name": "NM2C5 GFP",
+   "true_identity": "M14",
+   "iclac_id": "ICLAC-00564",
+   "cvcl": "CVCL_B065",
+   "llm_verdict": "clean",
+   "llm_confidence": "low",
+   "llm_correct": false,
+   "llm_confident_wrong": false
+  },
+  {
+   "name": "SUNE2",
+   "true_identity": "HeLa",
+   "iclac_id": "ICLAC-00598",
+   "cvcl": "CVCL_6956",
+   "llm_verdict": "clean",
+   "llm_confidence": "medium",
+   "llm_correct": false,
+   "llm_confident_wrong": true
+  }
+ ]
+}
