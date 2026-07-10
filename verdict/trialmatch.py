@@ -257,3 +257,28 @@ def match(p: PatientProfile, nct_id: str, title: str, status: str,
     return TrialCard(nct_id, title, status,
                      f"https://clinicaltrials.gov/study/{nct_id}", verdict, results,
                      to_verify, n_met, n_disq, len(to_verify))
+
+
+_RANK = {"Likely eligible": 0, "Needs verification": 1, "Ineligible": 2}
+
+
+def rank_cards(cards: list[TrialCard]) -> list[TrialCard]:
+    """Eligible trials first, then fewest open (to-verify) items within each verdict bucket."""
+    return sorted(cards, key=lambda c: (_RANK.get(c.verdict, 3), c.n_to_verify))
+
+
+def card_to_dict(c: TrialCard) -> dict:
+    """JSON-safe serialization of a TrialCard for the API/UI layer."""
+    return asdict(c)
+
+
+def review(note: str, condition: str | None = None, max_trials: int = 5) -> list[TrialCard]:
+    """End-to-end: note -> profile -> candidate trials -> per-criterion match -> ranked cards."""
+    profile = extract_profile(note)
+    cond = condition or profile.diagnosis or ""
+    cards: list[TrialCard] = []
+    for cand in _trials.search_candidates_by_condition(cond, page_size=max_trials):
+        elig = _trials.get_eligibility(cand.nct_id)
+        crits = extract_criteria(elig.text)
+        cards.append(match(profile, cand.nct_id, cand.title, cand.status, crits))
+    return rank_cards(cards)
