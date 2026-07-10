@@ -59,3 +59,39 @@ export interface Card {
   what_would_change_it?: string
   disclaimer: string
 }
+
+// ── TrialMatch (Task 10): patient-note → ranked recruiting-trial eligibility ──
+
+export type TrialVerdict = 'Likely eligible' | 'Ineligible' | 'Needs verification'
+export type CriterionResult = 'MET' | 'NOT_MET' | 'INSUFFICIENT'
+
+export interface TrialCriterion {
+  id: string
+  kind: 'inclusion' | 'exclusion'
+  result: CriterionResult
+  confidence?: string
+  evidence_phrase?: string
+  note?: string
+  predicate: string
+  source_text?: string
+  // "structured" = deterministic rule; "semantic" = model judgment. May be absent — render no tag then.
+  ctype?: 'structured' | 'semantic' | string
+}
+
+export interface TrialCard {
+  nct_id: string
+  title: string
+  status: string
+  url: string
+  verdict: TrialVerdict
+  criteria: TrialCriterion[]
+  to_verify: string[]
+  n_met: number
+  n_disqualifying: number
+  n_to_verify: number
+}
+
+export interface TrialDeck {
+  note: string
+  cards: TrialCard[]
+}

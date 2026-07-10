@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Card, EvidenceRow, GradeDomain, TimePoint } from './types'
+import TrialMatch from './TrialMatch'
 
 interface EvalSummary {
   n: number
@@ -272,6 +273,9 @@ export default function App() {
   const [liveState, setLiveState] = useState<'idle' | 'streaming' | 'error'>('idle')
   const [liveEvents, setLiveEvents] = useState<LiveEvent[]>([])
   const [liveError, setLiveError] = useState<string | null>(null)
+  // Top-level view: the trial reviewer is the headline; the evidence resolver is the second mode.
+  // This is NOT the .chips card-selector below — that stays the per-claim picker for the evidence view.
+  const [mode, setMode] = useState<'trials' | 'evidence'>('trials')
 
   useEffect(() => {
     fetch('/cards.json').then((r) => r.json()).then((cs: Card[]) => {
@@ -341,6 +345,21 @@ export default function App() {
         <div className="logo">Verdict<span className="dot">.</span></div>
         <div className="tag">It won't confirm a fraud.</div>
       </div>
+
+      <div className="modeswitch">
+        <button
+          className={'tab' + (mode === 'trials' ? ' active' : '')}
+          onClick={() => setMode('trials')}
+        >Trial Eligibility</button>
+        <button
+          className={'tab' + (mode === 'evidence' ? ' active' : '')}
+          onClick={() => setMode('evidence')}
+        >Evidence Resolver</button>
+      </div>
+
+      {mode === 'trials' && <TrialMatch />}
+
+      {mode === 'evidence' && (<>
       <div className="sub">
         A language model — Claude included — will confidently reproduce a fraud-driven result. Verdict does not:
         compromised or insufficient evidence is excluded <em>before</em> a deterministic gate — <b>no LLM in the
@@ -448,6 +467,7 @@ export default function App() {
           professionals — not medical advice, not a diagnosis, not a treatment recommendation.
         </div>
       )}
+      </>)}
     </div>
   )
 }
