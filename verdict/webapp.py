@@ -31,6 +31,8 @@ from .baseline import plain_llm_baseline
 from .cards import card_payload
 from .env import load_dotenv
 from .trialmatch import card_to_dict, review
+from .repro import report_to_dict
+from .repro import review as repro_review
 from .verdict import run_live
 
 load_dotenv()  # make `uvicorn verdict.webapp:app` turnkey from the repo .env; real env vars still win
@@ -46,6 +48,7 @@ MAX_CLAIM_LEN = int(os.getenv("VERDICT_MAX_CLAIM_LEN", "600"))
 # because it too is embedded verbatim into paid Claude prompts (profile extraction + per-criterion
 # matching across several candidate trials). Same rationale as MAX_CLAIM_LEN, larger ceiling.
 MAX_NOTE_LEN = int(os.getenv("VERDICT_MAX_NOTE_LEN", "4000"))
+MAX_METHODS_LEN = int(os.getenv("VERDICT_MAX_METHODS_LEN", "8000"))
 _MAX_CONCURRENT = int(os.getenv("VERDICT_MAX_CONCURRENT", "4"))
 _slots = threading.BoundedSemaphore(_MAX_CONCURRENT)
 
@@ -143,6 +146,35 @@ def api_match(req: MatchRequest) -> dict:
         log.exception("trial-eligibility review failed")
         # Generic detail only — never surface the exception text (it can carry keys / internals).
         raise HTTPException(status_code=502, detail="trial-eligibility review failed — see server logs") from e
+    finally:
+        _slots.release()
+
+
+class ReproRequest(BaseModel):
+    methods: str
+
+    @field_validator("methods")
+    @classmethod
+    def _bounded_methods(cls, v: str) -> str:
+        v = (v or "").strip()
+        if len(v) < 20:
+            raise ValueError("methods text is too short to review")
+        if len(v) > MAX_METHODS_LEN:
+            raise ValueError(f"methods text is too long (max {MAX_METHODS_LEN} chars)")
+        return v
+
+
+@app.post("/api/repro")
+def api_repro(req: ReproRequest) -> dict:
+    # review() makes one paid Claude extraction call plus deterministic gate lookups, so it takes
+    # a concurrency slot like the other live endpoints.
+    if not _slots.acquire(blocking=False):
+        raise HTTPException(status_code=429, detail="server is busy — too many concurrent reviews")
+    try:
+        return {"methods": req.methods, "report": report_to_dict(repro_review(req.methods))}
+    except Exception as e:  # noqa: BLE001
+        log.exception("repro review failed")
+        raise HTTPException(status_code=502, detail="reproducibility review failed — see server logs") from e
     finally:
         _slots.release()
 
