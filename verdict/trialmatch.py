@@ -201,3 +201,59 @@ def extract_criteria(eligibility_text: str) -> list[Criterion]:
     d = call_tool(_CRITERIA_SYSTEM, f"Eligibility text:\n\n{eligibility_text}",
                   _CRITERIA_TOOL, max_tokens=3000)
     return criteria_from_json(d)
+
+
+_SEMANTIC_TOOL = {
+    "name": "judge",
+    "description": "Decide if the patient meets ONE criterion.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "result": {"enum": ["MET", "NOT_MET", "INSUFFICIENT"]},
+            "evidence_phrase": {"type": "string"},  # verbatim note phrase or "not stated"
+            "note": {"type": "string"}, "confidence": {"enum": ["high", "medium", "low"]},
+        },
+        "required": ["result", "evidence_phrase", "note", "confidence"],
+    },
+}
+
+_SEMANTIC_SYSTEM = (
+    "Decide ONLY from the patient note whether the patient meets this trial criterion. "
+    "If the note does not clearly state the needed fact, answer INSUFFICIENT — never guess."
+)
+
+
+def judge_semantic(crit: Criterion, p: PatientProfile) -> tuple[str, str, str, str]:
+    """Claude judge for a semantic (non-structured) criterion. Biased to abstain: when the
+    patient note doesn't clearly state the needed fact, the model is instructed to answer
+    INSUFFICIENT rather than guess. Returns (result, evidence_phrase, note, confidence).
+    Requires ANTHROPIC_API_KEY."""
+    user = (f"CRITERION ({crit.kind}): {crit.predicate}\nSOURCE: {crit.source_text}\n\n"
+            f"PATIENT NOTE:\n{p.raw_note}")
+    d = call_tool(_SEMANTIC_SYSTEM, user, _SEMANTIC_TOOL, max_tokens=512)
+    return (d["result"], d.get("evidence_phrase", "not stated"), d.get("note", ""),
+            d.get("confidence", "low"))
+
+
+def match(p: PatientProfile, nct_id: str, title: str, status: str,
+          crits: list[Criterion]) -> TrialCard:
+    """Per-trial orchestration: run every criterion (structured via the pure comparator,
+    semantic via the Claude judge), then hand the results to the pure aggregate() for the verdict."""
+    results: list[CriterionResult] = []
+    for c in crits:
+        if c.ctype == "structured":
+            res, phrase, note = eval_structured(c, p)
+            conf = "high" if res != "INSUFFICIENT" else "low"
+        else:
+            res, phrase, note, conf = judge_semantic(c, p)
+        results.append(CriterionResult(c.id, c.kind, res, conf, phrase, note,
+                                       c.predicate, c.source_text))
+    verdict = aggregate(results)
+    to_verify = [f"Confirm: {r.predicate}" for r in results if r.result == "INSUFFICIENT"]
+    n_met = sum(1 for r in results if r.result == "MET")
+    n_disq = sum(1 for r in results
+                 if (r.kind == "exclusion" and r.result == "MET")
+                 or (r.kind == "inclusion" and r.result == "NOT_MET"))
+    return TrialCard(nct_id, title, status,
+                     f"https://clinicaltrials.gov/study/{nct_id}", verdict, results,
+                     to_verify, n_met, n_disq, len(to_verify))
