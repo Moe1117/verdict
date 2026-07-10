@@ -57,3 +57,20 @@ class TrialCard:
     n_met: int
     n_disqualifying: int
     n_to_verify: int
+
+def aggregate(results: list[CriterionResult]) -> str:
+    """Pure, deterministic verdict from per-criterion results. No LLM.
+
+    - any exclusion MET, or any inclusion NOT_MET -> Ineligible (definitive fail)
+    - all inclusions MET and all exclusions NOT_MET (nothing unresolved) -> Likely eligible
+    - otherwise -> Needs verification
+    """
+    incl = [r for r in results if r.kind == "inclusion"]
+    excl = [r for r in results if r.kind == "exclusion"]
+    if not incl and not excl:
+        return "Needs verification"
+    if any(r.result == "MET" for r in excl) or any(r.result == "NOT_MET" for r in incl):
+        return "Ineligible"
+    if all(r.result == "MET" for r in incl) and all(r.result == "NOT_MET" for r in excl):
+        return "Likely eligible"
+    return "Needs verification"
