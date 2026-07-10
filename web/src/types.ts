@@ -131,24 +131,32 @@ export interface ReproDeck {
   report: ReproReport
 }
 
-export interface IclacBenchRow {
+export interface IclacBenchExample {
   name: string
-  true_identity: string
+  model_says: string
+  confidence: 'high' | 'medium' | 'low' | string
+  register_says: string
   iclac_id: string
   cvcl: string
-  llm_verdict: string
-  llm_confidence: 'high' | 'medium' | 'low' | string
-  llm_correct: boolean
-  llm_confident_wrong: boolean
 }
 
 export interface IclacBench {
-  summary: {
-    n: number
-    llm_accuracy: number
-    llm_confident_wrong: number
-    tool_accuracy: number
-    tool_confident_wrong: number
+  model: {
+    strict_accuracy: number
+    strict_ci: [number, number]
+    confident_wrong: number
+    n_misidentified: number
+    famous_acc: number
+    tail_acc: number
+    false_flags: number
+    n_legit: number
+    false_flag_pct: number
   }
-  rows: IclacBenchRow[]
+  tool: {
+    end_to_end_catch: number
+    stress_n: number
+    false_flags: number
+    match_misses: number
+  }
+  examples: IclacBenchExample[]
 }

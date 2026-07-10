@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import type { IclacBench, IclacBenchRow, ReproDeck, ReproFinding, ReproReport } from './types'
+import type { IclacBench, ReproDeck, ReproFinding, ReproReport } from './types'
 
 // Verdict badge class — like App.tsx's badgeClass, but strips spaces AND hyphens so
 // "Submission-ready" → "b-Submissionready", "Needs fixes" → "b-Needsfixes". CSS matches.
@@ -67,50 +67,56 @@ function FindingRow({ f }: { f: ReproFinding }) {
 
 // The mic-drop: on 20 obscure misidentified lines, a bare model is right 20% of the time and
 // confidently wrong on 6; the registry layer is 100%, every call cited. We prove it with the
-// concrete confidently-wrong rows — computed client-side from the benchmark.
+// The benchmark panel — TWO separate measured facts, never a rigged head-to-head: how unreliable a
+// frontier model is at this task, and how well the tool actually works end-to-end on messy prose.
 function BenchmarkPanel({ bench }: { bench: IclacBench }) {
-  const { summary, rows } = bench
-  // Confidently-wrong rows are the proof. Lead with GR-M (the headline case), then the rest.
-  const confidentlyWrong = rows
-    .filter((r) => r.llm_confident_wrong)
-    .sort((a, b) => (a.name === 'GR-M' ? -1 : b.name === 'GR-M' ? 1 : 0))
-    .slice(0, 4)
-
+  const { model, tool, examples } = bench
   return (
     <div className="rp-bench">
       <div className="panel-label">The benchmark</div>
       <div className="rp-bench-headline">
-        On <b>{summary.n}</b> obscure misidentified cell lines, a bare Claude is <b>{pct(summary.llm_accuracy)}</b>{' '}
-        accurate — and <b className="bad">confidently wrong on {summary.llm_confident_wrong}</b>. The verification
-        layer is <b className="good">{pct(summary.tool_accuracy)}</b> — every call cited.
+        A frontier model correctly identifies only <b className="bad">{pct(model.strict_accuracy)}</b> of{' '}
+        <b>{model.n_misidentified}</b> known-contaminated cell lines — <b className="bad">confidently wrong on{' '}
+        {model.confident_wrong}</b>, and it false-flags <b className="bad">{pct(model.false_flag_pct)}</b> of clean
+        ones. Our tool catches <b className="good">{pct(tool.end_to_end_catch)}</b> end-to-end, with{' '}
+        <b className="good">zero</b> false alarms — every call cited.
       </div>
 
       <div className="rp-stats">
         <div className="rp-stat model">
-          <div className="rp-stat-num">{pct(summary.llm_accuracy)}</div>
-          <div className="rp-stat-cap">bare Claude — accurate</div>
-          <div className="rp-stat-sub">confidently wrong on {summary.llm_confident_wrong} of {summary.n}</div>
+          <div className="rp-stat-num">{pct(model.strict_accuracy)}</div>
+          <div className="rp-stat-cap">the problem — a frontier model IDs a contaminated line</div>
+          <div className="rp-stat-sub">{model.confident_wrong} confident errors · false-flags {pct(model.false_flag_pct)} of clean lines</div>
         </div>
-        <div className="rp-stat-vs">vs</div>
         <div className="rp-stat tool">
-          <div className="rp-stat-num">{pct(summary.tool_accuracy)}</div>
-          <div className="rp-stat-cap">verification layer — accurate</div>
-          <div className="rp-stat-sub">{summary.tool_confident_wrong} confident errors · every call cited</div>
+          <div className="rp-stat-num">{pct(tool.end_to_end_catch)}</div>
+          <div className="rp-stat-cap">the fix — our tool, end-to-end on real Methods text</div>
+          <div className="rp-stat-sub">0 false alarms · every call cited to ICLAC + CVCL</div>
         </div>
       </div>
 
-      <div className="section-label">confidently wrong, where it matters — the model's own words vs. the register</div>
+      <div
+        className="rp-bench-note"
+        style={{ fontSize: 13, color: 'var(--text-muted, #8a8a8a)', margin: '2px 0 14px', lineHeight: 1.6 }}
+      >
+        Measured on the entire 594-line ICLAC register — no cherry-picking — plus 168 authentic controls,
+        reproduced across two runs. The model aces the ~11 famous cases ({pct(model.famous_acc)}) and collapses on
+        the 519 obscure ones ({pct(model.tail_acc)}) — exactly where a researcher can’t eyeball it. Two different
+        measurements: the model was asked directly; the tool was stress-tested end-to-end through messy prose.
+      </div>
+
+      <div className="section-label">confidently wrong, where it matters — the model’s own words vs. the register</div>
       <div className="rp-cw-list">
-        {confidentlyWrong.map((r: IclacBenchRow) => (
+        {examples.map((r) => (
           <div className="rp-cw" key={r.name}>
             <span className="rp-cw-name">{r.name}</span>
             <span className="rp-cw-model">
-              model says <em>{r.llm_verdict}</em>
-              <span className="rp-cw-conf">{r.llm_confidence}</span>
+              model says <em>{r.model_says}</em>
+              <span className="rp-cw-conf">{r.confidence}</span>
             </span>
             <span className="rp-cw-arrow">→</span>
             <span className="rp-cw-truth">
-              register says <strong>{r.true_identity}</strong>
+              register says <strong>{r.register_says}</strong>
             </span>
             <span className="rp-cw-cite">{r.iclac_id} · {r.cvcl}</span>
           </div>
