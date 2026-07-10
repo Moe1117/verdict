@@ -1,0 +1,92 @@
+{
+ "methods": "Cell culture. Experiments used the GR-M pancreatic carcinoma line and the SNB-19 glioblastoma line, maintained in DMEM supplemented with 10% FBS at 37C.\nImmunohistochemistry. Sections were stained with anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500) to label microglia and with anti-GFAP (Dako) for astrocytes.\nAnimals. Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.",
+ "report": {
+  "findings": [
+   {
+    "item": "cell line: GR-M",
+    "kind": "cell_line",
+    "result": "FAIL",
+    "detail": "On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
+    "evidence": "GR-M pancreatic carcinoma line",
+    "citation": "ICLAC ICLAC-00538 \u00b7 CVCL_2451",
+    "method": "rule"
+   },
+   {
+    "item": "cell line: SNB-19",
+    "kind": "cell_line",
+    "result": "FAIL",
+    "detail": "On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
+    "evidence": "SNB-19 glioblastoma line",
+    "citation": "ICLAC ICLAC-00268 \u00b7 CVCL_0535",
+    "method": "rule"
+   },
+   {
+    "item": "antibody: Iba1",
+    "kind": "antibody",
+    "result": "PASS",
+    "detail": "Resolves to RRID:AB_2665520 (FUJIFILM Wako Pure Chemical Corporation 019-19741).",
+    "evidence": "anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500)",
+    "citation": "RRID:AB_2665520",
+    "method": "rule"
+   },
+   {
+    "item": "antibody: GFAP",
+    "kind": "antibody",
+    "result": "INSUFFICIENT",
+    "detail": "No RRID resolves for this reagent \u2014 add a validated catalog number and its RRID.",
+    "evidence": "anti-GFAP (Dako)",
+    "citation": "",
+    "method": "rule"
+   },
+   {
+    "item": "Sex of animals/cells reported (SABV)",
+    "kind": "rigor",
+    "result": "INSUFFICIENT",
+    "detail": "Could not determine from the text.",
+    "evidence": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.",
+    "citation": "NOT-OD-15-102",
+    "method": "model judgment"
+   },
+   {
+    "item": "Sample size (n) per group stated",
+    "kind": "rigor",
+    "result": "INSUFFICIENT",
+    "detail": "Could not determine from the text.",
+    "evidence": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.",
+    "citation": "ARRIVE 2.0 #2",
+    "method": "model judgment"
+   },
+   {
+    "item": "Randomization stated",
+    "kind": "rigor",
+    "result": "INSUFFICIENT",
+    "detail": "Could not determine from the text.",
+    "evidence": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.",
+    "citation": "ARRIVE 2.0 #4",
+    "method": "model judgment"
+   },
+   {
+    "item": "Blinding stated",
+    "kind": "rigor",
+    "result": "INSUFFICIENT",
+    "detail": "Could not determine from the text.",
+    "evidence": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.",
+    "citation": "ARRIVE 2.0 #5",
+    "method": "model judgment"
+   }
+  ],
+  "verdict": "Needs fixes",
+  "n_fail": 2,
+  "n_pass": 1,
+  "n_insufficient": 5,
+  "to_fix": [
+   "cell line: GR-M \u2014 On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
+   "cell line: SNB-19 \u2014 On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
+   "antibody: GFAP \u2014 No RRID resolves for this reagent \u2014 add a validated catalog number and its RRID.",
+   "Sex of animals/cells reported (SABV) \u2014 Could not determine from the text.",
+   "Sample size (n) per group stated \u2014 Could not determine from the text.",
+   "Randomization stated \u2014 Could not determine from the text.",
+   "Blinding stated \u2014 Could not determine from the text."
+  ]
+ }
+}

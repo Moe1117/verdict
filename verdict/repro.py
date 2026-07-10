@@ -44,6 +44,41 @@ def _norm(s: str) -> str:
     return re.sub(r"\s+", " ", str(s).strip().lower())
 
 
+def _squash(s: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", str(s).lower())
+
+
+_ICLAC_SQUASH: dict | None = None
+
+
+def _load_iclac_squash() -> dict:
+    global _ICLAC_SQUASH
+    if _ICLAC_SQUASH is None:
+        _ICLAC_SQUASH = {}
+        for key, rec in _load_iclac().items():
+            _ICLAC_SQUASH.setdefault(_squash(key), rec)
+    return _ICLAC_SQUASH
+
+
+def _iclac_lookup(name: str) -> dict | None:
+    """Robust match: extractors often return 'GR-M pancreatic carcinoma line' or 'SNB19'.
+    Try the full name, then leading-token prefixes, in both normalized and hyphen/space-insensitive
+    forms. The squashed form is only trusted at >=3 chars to avoid spurious 1-2 char collisions."""
+    reg, sq = _load_iclac(), _load_iclac_squash()
+    cand = re.sub(r"\(.*?\)", " ", name).strip()
+    toks = [t for t in re.split(r"\s+", cand) if t]
+    tries = [name, cand] + [" ".join(toks[:i]) for i in range(min(4, len(toks)), 0, -1)]
+    for t in tries:
+        if not t.strip():
+            continue
+        if _norm(t) in reg:
+            return reg[_norm(t)]
+        s = _squash(t)
+        if len(s) >= 3 and s in sq:
+            return sq[s]
+    return None
+
+
 @dataclass
 class Finding:
     item: str            # e.g. "cell line: GR-M"
@@ -57,8 +92,7 @@ class Finding:
 
 def check_cell_line(name: str, evidence: str = "") -> Finding:
     """Deterministic: is this line on the ICLAC misidentified register? A FAIL is citable."""
-    reg = _load_iclac()
-    rec = reg.get(_norm(name)) or reg.get(_norm(re.sub(r"\(.*?\)", "", name)))
+    rec = _iclac_lookup(name)
     if rec:
         return Finding(
             item=f"cell line: {name}", kind="cell_line", result="FAIL",
@@ -125,8 +159,9 @@ _EXTRACT_TOOL = {
         "type": "object",
         "properties": {
             "cell_lines": {"type": "array", "items": {"type": "object", "properties": {
-                "name": {"type": "string"}, "evidence": {"type": "string", "description": "verbatim phrase"}},
-                "required": ["name"]}},
+                "name": {"type": "string", "description": "the cell line designation ONLY, e.g. 'HeLa', "
+                         "'SNB-19', 'GR-M' — exclude tissue/descriptor words like 'glioblastoma line'"},
+                "evidence": {"type": "string", "description": "verbatim phrase"}}, "required": ["name"]}},
             "antibodies": {"type": "array", "items": {"type": "object", "properties": {
                 "name": {"type": "string"}, "vendor": {"type": "string"}, "catalog": {"type": "string"},
                 "evidence": {"type": "string"}}, "required": ["name"]}},
