@@ -319,3 +319,17 @@ def review(note: str, condition: str | None = None, max_trials: int = 5) -> list
             continue
         cards.append(match(profile, cand.nct_id, cand.title, cand.status, crits))
     return rank_cards(cards)
+
+
+def review_pair(note: str, nct_id: str, profile: PatientProfile | None = None) -> TrialCard:
+    """Score ONE caller-specified trial against a note — the same pipeline as review(), but for a
+    known NCT instead of a search result. Used by the validation harness (and 'why this verdict?').
+
+    The verdict depends only on the profile and the trial's criteria, so title/status (display-only
+    in the card) are left as the NCT id. Pass an already-extracted `profile` to avoid re-extracting
+    it once per trial when scoring many trials for the same patient note.
+    """
+    profile = profile if profile is not None else extract_profile(note)
+    elig = _trials.get_eligibility(nct_id)
+    crits = extract_criteria(elig.text)
+    return match(profile, nct_id, nct_id, "", crits)

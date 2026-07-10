@@ -1,0 +1,238 @@
+{
+  "metrics": {
+    "n": 23,
+    "n_eligible": 12,
+    "n_excluded": 11,
+    "coverage": 0.782608695652174,
+    "agreement_when_definitive": 0.5555555555555556,
+    "confident_error_rate": 0.34782608695652173,
+    "abstention_rate": 0.21739130434782608,
+    "exclusion_catch_rate": 0.9090909090909091,
+    "false_inclusion_rate": 0.0,
+    "confusion": {
+      "false_exclusion": 8,
+      "abstain_on_eligible": 4,
+      "correct_ruleout": 10,
+      "abstain_on_excluded": 1
+    },
+    "n_errors": 1,
+    "source": "TREC 2022 Clinical Trials track \u2014 physician relevance judgments (qrels)",
+    "caveats": "small N; single non-deterministic run; TREC notes are physician-written case narratives, not live EHR notes"
+  },
+  "records": [
+    {
+      "topic_id": 1,
+      "nct_id": "NCT00161421",
+      "gold": "eligible",
+      "verdict": "Ineligible",
+      "n_met": 1,
+      "n_disqualifying": 1,
+      "n_to_verify": 4
+    },
+    {
+      "topic_id": 1,
+      "nct_id": "NCT00204269",
+      "gold": "eligible",
+      "verdict": "Needs verification",
+      "n_met": 1,
+      "n_disqualifying": 0,
+      "n_to_verify": 4
+    },
+    {
+      "topic_id": 1,
+      "nct_id": "NCT00004335",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 2,
+      "n_disqualifying": 1,
+      "n_to_verify": 0
+    },
+    {
+      "topic_id": 1,
+      "nct_id": "NCT00064987",
+      "gold": "excluded",
+      "verdict": null,
+      "error": "could not convert string to float: '65 ng/dL'"
+    },
+    {
+      "topic_id": 2,
+      "nct_id": "NCT00129506",
+      "gold": "eligible",
+      "verdict": "Ineligible",
+      "n_met": 0,
+      "n_disqualifying": 1,
+      "n_to_verify": 7
+    },
+    {
+      "topic_id": 2,
+      "nct_id": "NCT00177372",
+      "gold": "eligible",
+      "verdict": "Needs verification",
+      "n_met": 2,
+      "n_disqualifying": 0,
+      "n_to_verify": 6
+    },
+    {
+      "topic_id": 2,
+      "nct_id": "NCT00001454",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 1,
+      "n_disqualifying": 5,
+      "n_to_verify": 3
+    },
+    {
+      "topic_id": 2,
+      "nct_id": "NCT00003702",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 0,
+      "n_disqualifying": 2,
+      "n_to_verify": 16
+    },
+    {
+      "topic_id": 4,
+      "nct_id": "NCT00000425",
+      "gold": "eligible",
+      "verdict": "Needs verification",
+      "n_met": 1,
+      "n_disqualifying": 0,
+      "n_to_verify": 2
+    },
+    {
+      "topic_id": 4,
+      "nct_id": "NCT00001742",
+      "gold": "eligible",
+      "verdict": "Ineligible",
+      "n_met": 3,
+      "n_disqualifying": 1,
+      "n_to_verify": 4
+    },
+    {
+      "topic_id": 4,
+      "nct_id": "NCT00000599",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 0,
+      "n_disqualifying": 2,
+      "n_to_verify": 4
+    },
+    {
+      "topic_id": 4,
+      "nct_id": "NCT00001963",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 2,
+      "n_disqualifying": 1,
+      "n_to_verify": 10
+    },
+    {
+      "topic_id": 5,
+      "nct_id": "NCT00001313",
+      "gold": "eligible",
+      "verdict": "Ineligible",
+      "n_met": 1,
+      "n_disqualifying": 6,
+      "n_to_verify": 1
+    },
+    {
+      "topic_id": 5,
+      "nct_id": "NCT00001530",
+      "gold": "eligible",
+      "verdict": "Ineligible",
+      "n_met": 2,
+      "n_disqualifying": 2,
+      "n_to_verify": 4
+    },
+    {
+      "topic_id": 5,
+      "nct_id": "NCT00004728",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 0,
+      "n_disqualifying": 4,
+      "n_to_verify": 12
+    },
+    {
+      "topic_id": 5,
+      "nct_id": "NCT00096902",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 1,
+      "n_disqualifying": 1,
+      "n_to_verify": 10
+    },
+    {
+      "topic_id": 6,
+      "nct_id": "NCT00002622",
+      "gold": "eligible",
+      "verdict": "Needs verification",
+      "n_met": 1,
+      "n_disqualifying": 0,
+      "n_to_verify": 14
+    },
+    {
+      "topic_id": 6,
+      "nct_id": "NCT00002872",
+      "gold": "eligible",
+      "verdict": "Ineligible",
+      "n_met": 3,
+      "n_disqualifying": 1,
+      "n_to_verify": 18
+    },
+    {
+      "topic_id": 6,
+      "nct_id": "NCT00079235",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 0,
+      "n_disqualifying": 2,
+      "n_to_verify": 32
+    },
+    {
+      "topic_id": 6,
+      "nct_id": "NCT00720954",
+      "gold": "excluded",
+      "verdict": "Needs verification",
+      "n_met": 1,
+      "n_disqualifying": 0,
+      "n_to_verify": 8
+    },
+    {
+      "topic_id": 9,
+      "nct_id": "NCT00001220",
+      "gold": "eligible",
+      "verdict": "Ineligible",
+      "n_met": 2,
+      "n_disqualifying": 1,
+      "n_to_verify": 2
+    },
+    {
+      "topic_id": 9,
+      "nct_id": "NCT00038350",
+      "gold": "eligible",
+      "verdict": "Ineligible",
+      "n_met": 3,
+      "n_disqualifying": 1,
+      "n_to_verify": 13
+    },
+    {
+      "topic_id": 9,
+      "nct_id": "NCT00001622",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 2,
+      "n_disqualifying": 2,
+      "n_to_verify": 8
+    },
+    {
+      "topic_id": 9,
+      "nct_id": "NCT00001936",
+      "gold": "excluded",
+      "verdict": "Ineligible",
+      "n_met": 4,
+      "n_disqualifying": 3,
+      "n_to_verify": 17
+    }
+  ]
+}

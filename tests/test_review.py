@@ -30,3 +30,20 @@ def test_review_orchestrates(monkeypatch):
     monkeypatch.setattr(tm, "extract_criteria", lambda text: [])
     cards = tm.review("62F metastatic NSCLC ...", condition="non-small cell lung cancer")
     assert isinstance(cards, list) and cards and isinstance(cards[0], TrialCard)
+
+
+def test_review_pair_scores_named_trial_and_reuses_profile(monkeypatch):
+    # a passed-in profile must be reused verbatim — extract_profile must NOT be called
+    def _boom(note):
+        raise AssertionError("extract_profile should not be called when a profile is supplied")
+    monkeypatch.setattr(tm, "extract_profile", _boom)
+    monkeypatch.setattr(trials, "get_eligibility",
+        lambda nct: trials.Eligibility(nct, "Inclusion: Aged 18-75", "18 Years", "75 Years", "ALL"))
+    from verdict.trialmatch import Criterion
+    monkeypatch.setattr(tm, "extract_criteria",
+        lambda text: [Criterion("inc1", "inclusion", "structured", "Aged 18-75", "Aged 18-75",
+                                 field="age", op="range", lo=18, hi=75)])
+    p = PatientProfile(age=62, age_src="62yo")
+    card = tm.review_pair("ignored note", "NCT9", profile=p)
+    assert card.nct_id == "NCT9"
+    assert card.criteria[0].result == "MET"  # age 62 in [18,75]
