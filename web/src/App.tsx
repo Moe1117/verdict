@@ -345,7 +345,11 @@ export default function App() {
     <div className="wrap">
       <div className="head">
         <div className="logo">Verdict<span className="dot">.</span></div>
-        <div className="tag">It won't confirm a fraud.</div>
+        <div className="tag">{mode === 'repro'
+          ? 'Catches what a confident model gets wrong in your Methods — cited.'
+          : mode === 'trials'
+            ? "It won't call a patient eligible while a criterion is unresolved."
+            : "It won't confirm a fraud."}</div>
       </div>
 
       <div className="modeswitch">
