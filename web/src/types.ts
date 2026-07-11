@@ -150,6 +150,29 @@ export interface Investigation {
   method: string
 }
 
+// ── Phase 2: whole-manuscript review + draft auto-fix (POST /api/review) ──
+
+export interface Correction {
+  item: string        // which finding this fixes, e.g. "cell line: GR-M"
+  original: string    // the verbatim manuscript phrase being corrected ("" if none)
+  suggestion: string  // the drafted corrective text
+  rationale: string   // why (traces to the gate's deterministic citation)
+  label: string       // "draft — human review required"
+}
+
+export interface ManuscriptReport {
+  report: ReproReport
+  investigations: Investigation[]
+  corrections: Correction[]
+  n_resources: number
+  n_chunks: number
+}
+
+// POST /api/review returns { report: ManuscriptReport }.
+export interface ManuscriptDeck {
+  report: ManuscriptReport
+}
+
 export interface IclacBenchExample {
   name: string
   model_says: string

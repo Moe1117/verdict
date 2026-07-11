@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import type { IclacBench, Investigation, ReproDeck, ReproFinding, ReproReport } from './types'
+import type { Correction, IclacBench, Investigation, ManuscriptReport, ReproDeck, ReproFinding, ReproReport } from './types'
 
 // Verdict badge class — like App.tsx's badgeClass, but strips spaces AND hyphens so
 // "Submission-ready" → "b-Submissionready", "Needs fixes" → "b-Needsfixes". CSS matches.
@@ -222,6 +222,93 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
   )
 }
 
+// Group findings by kind for display; anything outside the known kinds falls into "Other checks".
+function groupFindings(report: ReproReport) {
+  const groups = KIND_GROUPS
+    .map((g) => ({ ...g, items: report.findings.filter((f) => f.kind === g.kind) }))
+    .filter((g) => g.items.length > 0)
+  const other = report.findings.filter((f) => !KIND_GROUPS.some((g) => g.kind === f.kind))
+  return { groups, other }
+}
+
+// The rolled-up report card (verdict head + grouped findings). Reused by the single-paragraph verifier
+// and the whole-manuscript review; per-finding Investigate is optional (off for the manuscript view).
+function MethodsReport({ report, onInvestigate, canInvestigate, invState }: {
+  report: ReproReport
+  onInvestigate?: (f: ReproFinding) => void
+  canInvestigate?: (f: ReproFinding) => boolean
+  invState?: Record<string, { busy?: boolean; inv?: Investigation; error?: string }>
+}) {
+  const { groups, other } = groupFindings(report)
+  const handler = (f: ReproFinding) => (onInvestigate && (!canInvestigate || canInvestigate(f))) ? onInvestigate : undefined
+  const st = (f: ReproFinding) => invState?.[f.item]
+  const rows = (items: ReproFinding[]) => items.map((f, i) => (
+    <FindingRow key={f.item + i} f={f} onInvestigate={handler(f)} inv={st(f)?.inv} busy={st(f)?.busy} invError={st(f)?.error} />
+  ))
+  return (
+    <div className="panel rp-report">
+      <div className="rp-verdict-head">
+        <span className={reproBadgeClass(report.verdict)}>{report.verdict}</span>
+        <span className="rp-counts">
+          <b className="fail">{report.n_fail}</b> to fix
+          <span className="rp-dot">·</span>
+          <b className="insuf">{report.n_insufficient}</b> to verify
+          <span className="rp-dot">·</span>
+          <b className="pass">{report.n_pass}</b> ok
+        </span>
+      </div>
+      {groups.map((g) => (
+        <div className="rp-group" key={g.kind}>
+          <div className="section-label">{g.label}</div>
+          {rows(g.items)}
+        </div>
+      ))}
+      {other.length > 0 && (
+        <div className="rp-group">
+          <div className="section-label">Other checks</div>
+          {rows(other)}
+        </div>
+      )}
+      <div className="rp-rail">
+        A ✓ means <em>not on the register / resolves to an RRID</em> — not proof of correctness. Absence from the
+        ICLAC register is not proof of identity; STR-authenticate.
+      </div>
+    </div>
+  )
+}
+
+// Phase 2 auto-fix: Claude-drafted, submission-ready corrections for the flagged findings. Each is a
+// DRAFT grounded in the gate's own citation — it never invents an identity, and says so.
+function Corrections({ items }: { items: Correction[] }) {
+  if (!items.length) return null
+  return (
+    <div className="rp-group">
+      <div className="section-label">Suggested corrections — drafts to paste back (human review required)</div>
+      {items.map((c, i) => (
+        <div key={c.item + i} style={{ margin: '8px 0', paddingLeft: 10, borderLeft: '2px solid var(--border,#333)' }}>
+          <div style={{ fontSize: 13, fontWeight: 600 }}>
+            {c.item}
+            <span className="rp-tag model" style={{ marginLeft: 8, fontSize: 11 }}>{c.label || 'draft — human review required'}</span>
+          </div>
+          {c.original && (
+            <div style={{ fontSize: 12.5, color: 'var(--text-muted,#8a8a8a)', margin: '3px 0' }}><s>{c.original}</s></div>
+          )}
+          <div style={{ fontSize: 13, margin: '3px 0', lineHeight: 1.5 }}>{c.suggestion}</div>
+          {c.rationale && <div style={{ fontSize: 12, color: 'var(--text-muted,#8a8a8a)' }}>{c.rationale}</div>}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// Pre-filled full-Methods example for the whole-manuscript review mode (the frozen review_demo.json is
+// the saved result for exactly this text, so the static build shows the beat with no backend).
+const DEMO_MANUSCRIPT = `Cell culture. Experiments used the GR-M pancreatic carcinoma line and the SNB-19 glioblastoma line, maintained in DMEM supplemented with 10% FBS at 37C in 5% CO2.
+
+Immunohistochemistry. Sections were stained with anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500) to label microglia and with anti-GFAP (Dako) for astrocytes. Iba1 antibody specificity was confirmed in Iba1-knockout tissue, which showed no immunoreactivity.
+
+Animals and analysis. Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.`
+
 export default function Repro() {
   const [bench, setBench] = useState<IclacBench | null>(null)
   const [report, setReport] = useState<ReproReport | null>(null)
@@ -232,6 +319,12 @@ export default function Repro() {
   const abortRef = useRef<AbortController | null>(null)
   const [frozenInv, setFrozenInv] = useState<Record<string, Investigation>>({})
   const [invState, setInvState] = useState<Record<string, { busy?: boolean; inv?: Investigation; error?: string }>>({})
+  // Phase 2: whole-manuscript review + draft auto-fix — a second mode of the same verifier.
+  const [reviewMode, setReviewMode] = useState<'paragraph' | 'manuscript'>('paragraph')
+  const [manuscript, setManuscript] = useState<ManuscriptReport | null>(null)
+  const [manuscriptText, setManuscriptText] = useState(DEMO_MANUSCRIPT)
+  const [mstate, setMstate] = useState<'idle' | 'loading' | 'error'>('idle')
+  const [merror, setMerror] = useState<string | null>(null)
 
   // On mount: load the hero benchmark and the frozen demo report. Both are instant and
   // bulletproof — the frozen demo is what gets shown, and pre-fills the textarea.
@@ -251,6 +344,11 @@ export default function Repro() {
     fetch('/repro/investigate_demo.json')
       .then((r) => r.json())
       .then((d: Record<string, Investigation>) => setFrozenInv(d))
+      .catch(() => {})
+    // frozen whole-manuscript review (report + drafted corrections), so the static build shows Phase 2
+    fetch('/repro/review_demo.json')
+      .then((r) => r.json())
+      .then((d: ManuscriptReport) => setManuscript(d))
       .catch(() => {})
     // is a live backend reachable? (a static deploy has none — so we tell the judge upfront)
     fetch(api('/api/health'))
@@ -319,13 +417,38 @@ export default function Repro() {
       })
   }
 
-  // Bucket findings by kind; anything outside the known kinds falls into "Other checks".
-  const groups = report
-    ? KIND_GROUPS.map((g) => ({ ...g, items: report.findings.filter((f) => f.kind === g.kind) })).filter(
-        (g) => g.items.length > 0,
-      )
-    : []
-  const other = report ? report.findings.filter((f) => !KIND_GROUPS.some((g) => g.kind === f.kind)) : []
+  // Whole-manuscript review: POST the full text to /api/review (autofix on), same graceful fallback as
+  // verify() — on error OR timeout keep the frozen review showing, never blank the view.
+  const reviewManuscript = () => {
+    const m = manuscriptText.trim()
+    if (m.length < 20 || mstate === 'loading') return
+    setMstate('loading')
+    setMerror(null)
+    fetch(api('/api/review'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ manuscript: m, autofix: true }),
+    })
+      .then((r) => {
+        if (!r.ok) throw new Error(String(r.status))
+        return r.json()
+      })
+      .then((d: { report: ManuscriptReport }) => {
+        if (d && d.report) setManuscript(d.report)
+        setMstate('idle')
+      })
+      .catch(() => {
+        setMerror('Manuscript review needs the API (see README). The saved example below still works.')
+        setMstate('error')
+      })
+  }
+
+  // Offer "Investigate" only where it will actually resolve. A live backend can investigate any
+  // cell line / antibody; a static host (no backend, apiUp === false) can only replay a pre-captured
+  // frozen investigation — so on a static build we show the button ONLY for findings that have one,
+  // never a button that would just error.
+  const canInvestigate = (f: ReproFinding) =>
+    (f.kind === 'cell_line' || f.kind === 'antibody') && (apiUp !== false || !!frozenInv[f.item])
 
   return (
     <div className="repro">
@@ -336,74 +459,89 @@ export default function Repro() {
 
       {bench && <BenchmarkPanel bench={bench} />}
 
-      <div className="tm-input rp-input">
-        <textarea
-          className="tm-note"
-          value={methods}
-          onChange={(e) => setMethods(e.target.value)}
-          placeholder="Paste a Methods section — cell lines, antibodies, and rigor reporting are checked against public registries."
-          rows={5}
-          disabled={state === 'loading'}
-          aria-label="Methods section"
-        />
-        <div className="tm-actions">
-          <button
-            type="button"
-            className={'tm-run' + (state === 'loading' ? ' busy' : '')}
-            onClick={verify}
-            disabled={methods.trim().length < 3 || state === 'loading' || apiUp === false}
-          >
-            {state === 'loading' ? (<><span className="lc-spin" /> verifying…</>) : 'Verify'}
-          </button>
-          <span className="tm-caption">
-            {apiUp === false
-              ? 'This hosted build shows saved examples. For live "Verify", clone the repo and run the API (see README).'
-              : 'Verification runs one Claude extraction + deterministic registry lookups — a few seconds. The example below is a saved run.'}
-          </span>
-        </div>
-        {error && <div className="tm-error">⚠ {error}</div>}
+      <div className="modeswitch" style={{ marginBottom: 12 }}>
+        <button type="button" className={'tab' + (reviewMode === 'paragraph' ? ' active' : '')}
+          onClick={() => setReviewMode('paragraph')}>Verify a paragraph</button>
+        <button type="button" className={'tab' + (reviewMode === 'manuscript' ? ' active' : '')}
+          onClick={() => setReviewMode('manuscript')}>Review full manuscript + draft fixes</button>
       </div>
 
-      {report ? (
-        <div className="panel rp-report">
-          <div className="rp-verdict-head">
-            <span className={reproBadgeClass(report.verdict)}>{report.verdict}</span>
-            <span className="rp-counts">
-              <b className="fail">{report.n_fail}</b> to fix
-              <span className="rp-dot">·</span>
-              <b className="insuf">{report.n_insufficient}</b> to verify
-              <span className="rp-dot">·</span>
-              <b className="pass">{report.n_pass}</b> ok
+      {reviewMode === 'paragraph' && (<>
+        <div className="tm-input rp-input">
+          <textarea
+            className="tm-note"
+            value={methods}
+            onChange={(e) => setMethods(e.target.value)}
+            placeholder="Paste a Methods section — cell lines, antibodies, and rigor reporting are checked against public registries."
+            rows={5}
+            disabled={state === 'loading'}
+            aria-label="Methods section"
+          />
+          <div className="tm-actions">
+            <button
+              type="button"
+              className={'tm-run' + (state === 'loading' ? ' busy' : '')}
+              onClick={verify}
+              disabled={methods.trim().length < 3 || state === 'loading' || apiUp === false}
+            >
+              {state === 'loading' ? (<><span className="lc-spin" /> verifying…</>) : 'Verify'}
+            </button>
+            <span className="tm-caption">
+              {apiUp === false
+                ? 'This hosted build shows saved examples. For live "Verify", clone the repo and run the API (see README).'
+                : 'Verification runs one Claude extraction + deterministic registry lookups — a few seconds. The example below is a saved run.'}
             </span>
           </div>
-
-          {groups.map((g) => (
-            <div className="rp-group" key={g.kind}>
-              <div className="section-label">{g.label}</div>
-              {g.items.map((f, i) => (
-                <FindingRow key={f.item + i} f={f} onInvestigate={runInvestigate}
-                  inv={invState[f.item]?.inv} busy={invState[f.item]?.busy} invError={invState[f.item]?.error} />
-              ))}
-            </div>
-          ))}
-          {other.length > 0 && (
-            <div className="rp-group">
-              <div className="section-label">Other checks</div>
-              {other.map((f, i) => (
-                <FindingRow key={f.item + i} f={f} onInvestigate={runInvestigate}
-                  inv={invState[f.item]?.inv} busy={invState[f.item]?.busy} invError={invState[f.item]?.error} />
-              ))}
-            </div>
-          )}
-
-          <div className="rp-rail">
-            A ✓ means <em>not on the register / resolves to an RRID</em> — not proof of correctness. Absence from the
-            ICLAC register is not proof of identity; STR-authenticate.
-          </div>
+          {error && <div className="tm-error">⚠ {error}</div>}
         </div>
-      ) : (
-        !error && <div className="tm-loading"><span className="lc-spin" /> loading saved example…</div>
-      )}
+
+        {report ? (
+          <MethodsReport report={report} onInvestigate={runInvestigate} canInvestigate={canInvestigate} invState={invState} />
+        ) : (
+          !error && <div className="tm-loading"><span className="lc-spin" /> loading saved example…</div>
+        )}
+      </>)}
+
+      {reviewMode === 'manuscript' && (<>
+        <div className="tm-input rp-input">
+          <textarea
+            className="tm-note"
+            value={manuscriptText}
+            onChange={(e) => setManuscriptText(e.target.value)}
+            placeholder="Paste a whole Methods / manuscript — every cell line, antibody, and rigor item is checked, then Claude drafts the corrections."
+            rows={9}
+            disabled={mstate === 'loading'}
+            aria-label="Manuscript text"
+          />
+          <div className="tm-actions">
+            <button
+              type="button"
+              className={'tm-run' + (mstate === 'loading' ? ' busy' : '')}
+              onClick={reviewManuscript}
+              disabled={manuscriptText.trim().length < 20 || mstate === 'loading' || apiUp === false}
+            >
+              {mstate === 'loading' ? (<><span className="lc-spin" /> reviewing…</>) : 'Review manuscript + draft fixes'}
+            </button>
+            <span className="tm-caption">
+              {apiUp === false
+                ? 'This hosted build shows a saved manuscript review. For a live run, clone the repo and run the API (see README).'
+                : 'Extracts every resource across the manuscript, runs all gates, then Claude drafts submission-ready corrections — a few seconds.'}
+            </span>
+          </div>
+          {merror && <div className="tm-error">⚠ {merror}</div>}
+        </div>
+
+        {manuscript ? (<>
+          <div className="rp-rail" style={{ marginTop: 0 }}>
+            Reviewed <b>{manuscript.n_resources}</b> resource{manuscript.n_resources === 1 ? '' : 's'} across{' '}
+            <b>{manuscript.n_chunks}</b> chunk{manuscript.n_chunks === 1 ? '' : 's'} · every correction is a labelled draft.
+          </div>
+          <MethodsReport report={manuscript.report} />
+          <Corrections items={manuscript.corrections} />
+        </>) : (
+          !merror && <div className="tm-loading"><span className="lc-spin" /> loading saved example…</div>
+        )}
+      </>)}
 
       <div className="disclaimer">
         <b>Research and pre-submission screening aid</b> — not a substitute for STR authentication or peer review. The

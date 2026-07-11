@@ -1,0 +1,34 @@
+{
+ "report": {
+  "findings": [
+   {"item": "cell line: GR-M", "kind": "cell_line", "result": "FAIL", "detail": "On the ICLAC Register of Misidentified Cell Lines — claimed Melanoma, actually **PSN1**. Authenticate by STR before use.", "evidence": "GR-M pancreatic carcinoma line", "citation": "ICLAC-00538 · CVCL_2451", "method": "rule"},
+   {"item": "cell line: SNB-19", "kind": "cell_line", "result": "FAIL", "detail": "On the ICLAC Register of Misidentified Cell Lines — claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.", "evidence": "SNB-19 glioblastoma line", "citation": "ICLAC-00268 · CVCL_0535", "method": "rule"},
+   {"item": "antibody: Iba1", "kind": "antibody", "result": "PASS", "detail": "Resolves to RRID:AB_2665520 (FUJIFILM Wako Pure Chemical Corporation 019-19741).", "evidence": "anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500)", "citation": "RRID:AB_2665520", "method": "rule"},
+   {"item": "antibody: GFAP", "kind": "antibody", "result": "INSUFFICIENT", "detail": "No catalog number given — a name alone can't be authenticated; add the vendor catalog # and its RRID.", "evidence": "anti-GFAP (Dako)", "citation": "", "method": "rule"},
+   {"item": "antibody validation: Iba1", "kind": "knockout", "result": "PASS", "detail": "A genetic knockout/knockdown control validating this antibody's specificity is described.", "evidence": "Iba1-knockout tissue, which showed no immunoreactivity", "citation": "", "method": "model judgment"},
+   {"item": "antibody validation: GFAP", "kind": "knockout", "result": "INSUFFICIENT", "detail": "No antibody-specificity validation (e.g. a knockout/knockdown control) is described — add one or cite prior genetic validation.", "evidence": "", "citation": "", "method": "model judgment"},
+   {"item": "Sex of animals/cells reported (SABV)", "kind": "rigor", "result": "INSUFFICIENT", "detail": "Could not determine from the text.", "evidence": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.", "citation": "NOT-OD-15-102", "method": "model judgment"},
+   {"item": "Sample size (n) per group stated", "kind": "rigor", "result": "INSUFFICIENT", "detail": "Could not determine from the text.", "evidence": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.", "citation": "ARRIVE 2.0 #2", "method": "model judgment"},
+   {"item": "Randomization stated", "kind": "rigor", "result": "INSUFFICIENT", "detail": "Could not determine from the text.", "evidence": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.", "citation": "ARRIVE 2.0 #4", "method": "model judgment"},
+   {"item": "Blinding stated", "kind": "rigor", "result": "INSUFFICIENT", "detail": "Could not determine from the text.", "evidence": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.", "citation": "ARRIVE 2.0 #5", "method": "model judgment"}
+  ],
+  "verdict": "Needs fixes",
+  "n_fail": 2,
+  "n_pass": 2,
+  "n_insufficient": 6,
+  "to_fix": []
+ },
+ "investigations": [],
+ "corrections": [
+  {"item": "cell line: GR-M", "original": "GR-M pancreatic carcinoma line", "suggestion": "GR-M is on the ICLAC Register of Misidentified Cell Lines (ICLAC-00538 · CVCL_2451) as a PSN1 derivative, not melanoma. Authenticate the working stock by STR profiling and state, e.g.: \"GR-M was authenticated by STR profiling on <date>; per ICLAC it is a PSN1 (pancreatic carcinoma) derivative.\"", "rationale": "Deterministic ICLAC register hit — claimed Melanoma, actually PSN1.", "label": "draft — human review required"},
+  {"item": "cell line: SNB-19", "original": "SNB-19 glioblastoma line", "suggestion": "SNB-19 is listed by ICLAC (ICLAC-00268 · CVCL_0535) as a U-251 MG derivative. STR-authenticate the stock and state, e.g.: \"SNB-19 (a U-251 MG derivative per ICLAC) was STR-authenticated on <date>.\"", "rationale": "Deterministic ICLAC register hit — claimed Glioblastoma, actually U-251 MG.", "label": "draft — human review required"},
+  {"item": "antibody: GFAP", "original": "anti-GFAP (Dako)", "suggestion": "Add the vendor catalog number and its RRID so the antibody can be authenticated, e.g.: \"anti-GFAP (Dako, cat# <catalog#>, RRID:AB_<xxxxxxx>)\". A name and vendor alone do not resolve to a unique RRID.", "rationale": "No catalog number given — identity cannot be resolved against the Antibody Registry.", "label": "draft — human review required"},
+  {"item": "antibody validation: GFAP", "original": "", "suggestion": "Add an in-study genetic control validating anti-GFAP specificity (e.g. loss of signal in GFAP-knockout tissue), or cite a prior study that performed such validation for this exact antibody, e.g.: \"anti-GFAP specificity was confirmed by absence of signal in Gfap-knockout tissue (<ref>).\"", "rationale": "No antibody-specificity (knockout/knockdown) validation is described.", "label": "draft — human review required"},
+  {"item": "Sex of animals/cells reported (SABV)", "original": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.", "suggestion": "Report the sex of the animals and whether sex was considered as a biological variable, e.g.: \"Both male and female mice (n=<n> per sex) were used; sex was included as a covariate in the analysis.\"", "rationale": "NIH SABV (NOT-OD-15-102) — sex as a biological variable not reported.", "label": "draft — human review required"},
+  {"item": "Sample size (n) per group stated", "original": "Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.", "suggestion": "State the number of animals per group and how it was determined, e.g.: \"n = <n> mice per group; sample size was determined by an a priori power analysis (<effect size>, power = 0.8, alpha = 0.05).\"", "rationale": "ARRIVE 2.0 #2 — sample size per group not stated.", "label": "draft — human review required"},
+  {"item": "Randomization stated", "original": "", "suggestion": "State whether and how animals were allocated to groups, e.g.: \"Mice were randomized to treatment groups by <method, e.g. a random number generator>.\"", "rationale": "ARRIVE 2.0 #4 — randomization not reported.", "label": "draft — human review required"},
+  {"item": "Blinding stated", "original": "", "suggestion": "State whether investigators were blinded during outcome assessment, e.g.: \"Weekly imaging and survival scoring were performed by an assessor blinded to group allocation.\"", "rationale": "ARRIVE 2.0 #5 — blinding not reported.", "label": "draft — human review required"}
+ ],
+ "n_resources": 4,
+ "n_chunks": 1
+}
