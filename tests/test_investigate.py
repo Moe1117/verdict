@@ -33,3 +33,45 @@ def test_provenance_downgrades_to_partial_without_grounded_reference():
     out = verify_citations(inv, retrieved={"CVCL_2451"})
     assert out.verdict == "PARTIAL"
     assert out.grounded is True
+
+
+# ---- Task 2: Retriever (real HTTP tools + retrieval log) ------------------------------------------
+
+def test_retriever_pubmed_search_logs_pmids(monkeypatch):
+    calls = {}
+    def fake_get(url, timeout=12):
+        calls["url"] = url
+        return '{"esearchresult": {"idlist": ["111", "222"]}}'
+    monkeypatch.setattr(investigate, "_http_get", fake_get)
+    r = investigate.Retriever(email="x@y.z")
+    ids = r.pubmed_search("GABARAP knockout antibody", retmax=5)
+    assert ids == ["111", "222"]
+    assert "PMID:111" in r.retrieved and "PMID:222" in r.retrieved
+    assert "esearch.fcgi" in calls["url"] and "GABARAP" in calls["url"]
+
+
+def test_retriever_pubmed_fetch_returns_text_and_logs(monkeypatch):
+    monkeypatch.setattr(investigate, "_http_get", lambda url, timeout=12: "1. Title.\n\nAbstract: signal lost in KO.")
+    r = investigate.Retriever(email="x@y.z")
+    out = r.pubmed_fetch(["111"])
+    assert "signal lost" in out["111"]
+    assert "PMID:111" in r.retrieved
+
+
+def test_retriever_cellosaurus_logs_cvcl_and_pmids(monkeypatch):
+    body = ('{"Cellosaurus":{"cell-line-list":[{"accession-list":[{"type":"primary","value":"CVCL_2451"}],'
+            '"comment-list":[{"category":"Problematic cell line","value":"Contaminated. Is PSN1."}],'
+            '"reference-list":[{"internal-resources":[{"accession":"PubMed=1234567"}]}]}]}}')
+    monkeypatch.setattr(investigate, "_http_get", lambda url, timeout=12: body)
+    r = investigate.Retriever(email="x@y.z")
+    rec = r.cellosaurus_lookup("CVCL_2451")
+    assert rec["cvcl"] == "CVCL_2451" and "PSN1" in rec["problem"]
+    assert "CVCL_2451" in r.retrieved and "PMID:1234567" in r.retrieved
+
+
+def test_retriever_http_error_degrades(monkeypatch):
+    def boom(url, timeout=12): raise OSError("network")
+    monkeypatch.setattr(investigate, "_http_get", boom)
+    r = investigate.Retriever(email="x@y.z")
+    assert r.pubmed_search("x") == []            # never raises
+    assert r.cellosaurus_lookup("CVCL_x") == {}  # never raises
