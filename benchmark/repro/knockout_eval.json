@@ -1,8 +1,27 @@
 {
+ "corpus": "benchmark/repro/knockout_corpus.json",
  "n": 16,
- "accuracy": 0.938,
- "correct": 15,
+ "accuracy": 1.0,
+ "accuracy_ci95": [
+  0.806,
+  1.0
+ ],
+ "correct": 16,
  "false_validated": 0,
+ "product_binary_accuracy": 1.0,
+ "product_binary_ci95": [
+  0.806,
+  1.0
+ ],
+ "product_false_pass": 0,
+ "product_missed_pass": 0,
+ "n_hard": 0,
+ "hard_correct": 0,
+ "accuracy_excluding_hard": 1.0,
+ "accuracy_excluding_hard_ci95": [
+  0.806,
+  1.0
+ ],
  "confusion_matrix": {
   "validated": {
    "validated": 5,
@@ -11,8 +30,8 @@
   },
   "ambiguous": {
    "validated": 0,
-   "ambiguous": 5,
-   "not_reported": 1
+   "ambiguous": 6,
+   "not_reported": 0
   },
   "not_reported": {
    "validated": 0,
@@ -26,144 +45,128 @@
    "antibody": "TrkB",
    "gold": "validated",
    "predicted": "validated",
-   "result": "PASS",
    "correct": true,
-   "rationale": "in-study knockout showing loss of signal"
+   "hard": false
   },
   {
    "id": "kv02",
    "antibody": "STIM1",
    "gold": "validated",
    "predicted": "validated",
-   "result": "PASS",
    "correct": true,
-   "rationale": "in-study siRNA knockdown abolishing signal"
+   "hard": false
   },
   {
    "id": "kv03",
    "antibody": "CD47",
    "gold": "validated",
    "predicted": "validated",
-   "result": "PASS",
    "correct": true,
-   "rationale": "in-study CRISPR knockout, loss of staining"
+   "hard": false
   },
   {
    "id": "kv04",
    "antibody": "ATG7",
    "gold": "validated",
    "predicted": "validated",
-   "result": "PASS",
    "correct": true,
-   "rationale": "in-study shRNA knockdown, quantified loss"
+   "hard": false
   },
   {
    "id": "kv05",
    "antibody": "GFAP",
    "gold": "validated",
    "predicted": "validated",
-   "result": "PASS",
    "correct": true,
-   "rationale": "in-study knockout, band absent"
+   "hard": false
   },
   {
    "id": "ka01",
    "antibody": "Tau",
    "gold": "ambiguous",
    "predicted": "ambiguous",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "bare 'validated' claim, no genetic control described"
+   "hard": false
   },
   {
    "id": "ka02",
    "antibody": "alpha-synuclein",
    "gold": "ambiguous",
    "predicted": "ambiguous",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "validation cited from a prior paper, not performed in this study"
+   "hard": false
   },
   {
    "id": "ka03",
    "antibody": "Substance P",
    "gold": "ambiguous",
    "predicted": "ambiguous",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "peptide competition is a control but NOT a genetic (knockout/knockdown) control"
+   "hard": false
   },
   {
    "id": "ka04",
    "antibody": "PD-L1",
    "gold": "ambiguous",
-   "predicted": "not_reported",
-   "result": "INSUFFICIENT",
-   "correct": false,
-   "rationale": "manufacturer validation, no in-study genetic control"
+   "predicted": "ambiguous",
+   "correct": true,
+   "hard": false
   },
   {
    "id": "ka05",
    "antibody": "Nrf2",
    "gold": "ambiguous",
    "predicted": "ambiguous",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "gain-of-function overexpression, not a knockout loss-of-function control"
+   "hard": false
   },
   {
    "id": "ka06",
    "antibody": "Kv4.2",
    "gold": "ambiguous",
    "predicted": "ambiguous",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "a genetic control is described, but it knocks out the WRONG target (Kv4.3, not Kv4.2)"
+   "hard": false
   },
   {
    "id": "kn01",
    "antibody": "Iba1",
    "gold": "not_reported",
    "predicted": "not_reported",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "antibody named, no validation of any kind described"
+   "hard": false
   },
   {
    "id": "kn02",
    "antibody": "NeuN",
    "gold": "not_reported",
    "predicted": "not_reported",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "dilution/protocol only, no specificity validation"
+   "hard": false
   },
   {
    "id": "kn03",
    "antibody": "c-Fos",
    "gold": "not_reported",
    "predicted": "not_reported",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "primary-omission (secondary-only) control does not validate the primary's specificity"
+   "hard": false
   },
   {
    "id": "kn04",
    "antibody": "CD8",
    "gold": "not_reported",
    "predicted": "not_reported",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "multiple antibodies listed, none validated"
+   "hard": false
   },
   {
    "id": "kn05",
    "antibody": "Ki-67",
    "gold": "not_reported",
    "predicted": "not_reported",
-   "result": "INSUFFICIENT",
    "correct": true,
-   "rationale": "isotype control assesses background, not specificity validation"
+   "hard": false
   }
  ]
 }

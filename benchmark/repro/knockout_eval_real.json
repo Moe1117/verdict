@@ -1,0 +1,212 @@
+{
+ "corpus": "benchmark/repro/knockout_corpus_real.json",
+ "n": 21,
+ "accuracy": 0.667,
+ "accuracy_ci95": [
+  0.454,
+  0.828
+ ],
+ "correct": 14,
+ "false_validated": 0,
+ "product_binary_accuracy": 1.0,
+ "product_binary_ci95": [
+  0.845,
+  1.0
+ ],
+ "product_false_pass": 0,
+ "product_missed_pass": 0,
+ "n_hard": 3,
+ "hard_correct": 2,
+ "accuracy_excluding_hard": 0.667,
+ "accuracy_excluding_hard_ci95": [
+  0.437,
+  0.837
+ ],
+ "confusion_matrix": {
+  "validated": {
+   "validated": 7,
+   "ambiguous": 0,
+   "not_reported": 0
+  },
+  "ambiguous": {
+   "validated": 0,
+   "ambiguous": 4,
+   "not_reported": 7
+  },
+  "not_reported": {
+   "validated": 0,
+   "ambiguous": 0,
+   "not_reported": 3
+  }
+ },
+ "rows": [
+  {
+   "id": "r01",
+   "antibody": "RD4 (Millipore, anti-4R Tau)",
+   "gold": "validated",
+   "predicted": "validated",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r02",
+   "antibody": "T22 (anti-oligomeric Tau)",
+   "gold": "validated",
+   "predicted": "validated",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r03",
+   "antibody": "PA847p (rabbit anti-KOR)",
+   "gold": "validated",
+   "predicted": "validated",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r04",
+   "antibody": "anti-pS369 (phospho-KOR)",
+   "gold": "validated",
+   "predicted": "validated",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r05",
+   "antibody": "anti-Ntrk1 06-574 (Millipore)",
+   "gold": "validated",
+   "predicted": "validated",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r06",
+   "antibody": "anti-GABARAP 8H5 (rat monoclonal)",
+   "gold": "validated",
+   "predicted": "validated",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r07",
+   "antibody": "anti-AKT1 (Proteintech 10176-2-AP)",
+   "gold": "validated",
+   "predicted": "validated",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r08",
+   "antibody": "pSer262 (Abcam, phospho-Tau)",
+   "gold": "ambiguous",
+   "predicted": "not_reported",
+   "correct": false,
+   "hard": false
+  },
+  {
+   "id": "r09",
+   "antibody": "pSer409 (phospho-Tau)",
+   "gold": "ambiguous",
+   "predicted": "not_reported",
+   "correct": false,
+   "hard": false
+  },
+  {
+   "id": "r10",
+   "antibody": "KT2 (rabbit anti-KOR)",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r11",
+   "antibody": "KOR1 (rabbit anti-KOR)",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r12",
+   "antibody": "anti-DynA (Peninsula)",
+   "gold": "ambiguous",
+   "predicted": "not_reported",
+   "correct": false,
+   "hard": false
+  },
+  {
+   "id": "r13",
+   "antibody": "anti-TRPM6 ACC-046 (Alomone)",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "correct": true,
+   "hard": true
+  },
+  {
+   "id": "r14",
+   "antibody": "anti-Ntrk1 AB-N03 (Advanced Targeting Systems)",
+   "gold": "ambiguous",
+   "predicted": "not_reported",
+   "correct": false,
+   "hard": true
+  },
+  {
+   "id": "r15",
+   "antibody": "anti-phospho-Ntrk1 Y490 9141 (Cell Signaling)",
+   "gold": "ambiguous",
+   "predicted": "not_reported",
+   "correct": false,
+   "hard": false
+  },
+  {
+   "id": "r16",
+   "antibody": "commercial anti-GABARAP (immunoblot only)",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "correct": true,
+   "hard": true
+  },
+  {
+   "id": "r17",
+   "antibody": "anti-GABARAP 15A11 (rat monoclonal)",
+   "gold": "ambiguous",
+   "predicted": "not_reported",
+   "correct": false,
+   "hard": false
+  },
+  {
+   "id": "r18",
+   "antibody": "anti-LC3B 5F10",
+   "gold": "ambiguous",
+   "predicted": "not_reported",
+   "correct": false,
+   "hard": false
+  },
+  {
+   "id": "r19",
+   "antibody": "anti-FLAG (Sigma F7425)",
+   "gold": "not_reported",
+   "predicted": "not_reported",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r20",
+   "antibody": "anti-beta-actin (Sigma A5441)",
+   "gold": "not_reported",
+   "predicted": "not_reported",
+   "correct": true,
+   "hard": false
+  },
+  {
+   "id": "r21",
+   "antibody": "anti-tyrosine-hydroxylase MAB318 (Millipore)",
+   "gold": "not_reported",
+   "predicted": "not_reported",
+   "correct": true,
+   "hard": false
+  }
+ ]
+}
