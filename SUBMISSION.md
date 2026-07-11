@@ -160,23 +160,47 @@ engine over verified rows**; the live product (62%) is not yet re-calibrated end
 
 The curated benchmark is all famous claims a strong LLM has read. To probe the opposite — claims a
 Jan-2026-cutoff model has *not* pinned down — we had agents search live PubMed for recent (2024–2025)
-trial readouts, ground each in a real paper, and independently verify it (`scripts/novel_benchmark.py`,
-`benchmark/novel_claims.json`). This is a small **n=3 probe** — the verification fan-out was rate-
-limited — so it illustrates rather than proves; the harness + verified claim set are committed and
-reusable to scale it up.
+trial readouts chosen to be counterintuitive in **both** directions (hyped drugs that missed, unexpected
+successes), ground each in a real primary-trial PMID, and independently verify it
+(`scripts/novel_benchmark.py`, `benchmark/novel_claims.json`). The set is **n=12**, balanced 6
+Not-Supported / 6 Supported so neither a blanket "yes" nor "no" wins, and we ran the full head-to-head
+**three times** to measure run-to-run variance (`benchmark/novel_variance.json`).
+
+**The honest result: on this set naive Claude wins on accuracy, and Verdict does not.**
 
 | | naive Claude | Verdict (live) |
 |---|---|---|
-| Accuracy | 67% (2/3) | 67% (2/3) |
-| Confident false-positives | **1** | **0** |
-| Abstains | never | 33% |
+| Accuracy (mean of 3 runs) | **92%** (stable, 0 flips) | **61%** (58–67%; flips on 8/12 claims) |
+| Confident false-positives | **1 every run** | **0** (across all 36 decisions) |
+| Decisive-wrong calls | 1 every run | **0** (across all 36 decisions) |
+| Abstains | never | 33–42% |
 
-Same accuracy — but on the one claim the model hadn't pinned down (navacaprant, a kappa-opioid-
-antagonist antidepressant that **missed** its primary endpoint), naive Claude confidently asserted it
-**works**; Verdict retrieved the evidence, found it insufficient for a confident call, and
-**abstained**. That is the never-confidently-wrong property showing exactly where a model fails: it
-hallucinates a confident yes on a recent result it doesn't know, and Verdict doesn't. (Claude knew the
-other two 2024 results correctly — the novelty only bit on one, which we report honestly.)
+*(Naive Claude's single error is one event — navacaprant — that is simultaneously its confident
+false-positive and its decisive-wrong call; the two rows count the same miss, not two.)*
+
+**Why this is not the test we meant to run.** These 2024–2025 trials are **inside** Claude's Jan-2026
+training cutoff, so they are *not* genuinely novel to the model — it has read them, which is exactly why
+naive Claude scores 92%. This probe therefore does **not** exercise the intended "unknown to the model"
+regime; the clean test needs **post-cutoff (2026) readouts**, which we have not yet run. So the
+architecture's supposed edge — resolving claims a model can only guess at — is **untested here, not
+demonstrated**. We are not claiming Verdict beats the model on accuracy; on this set it plainly loses,
+61 vs 92.
+
+**What the probe does show is the one property that survives.** Across all 36 decisions Verdict
+committed **zero confident false-positives and zero decisive-wrong calls** — every error was an
+abstention, not a confident mistake — and each call ships an audit trail of the retrieved evidence.
+Naive Claude, by contrast, commits one confident false-positive every single run, and it is always the
+same claim: **navacaprant**, a kappa-opioid-antagonist antidepressant that **missed** its primary
+HAMD-17 endpoint (p=0.121). Claude confidently asserts it **works**; Verdict retrieves the trial, finds
+the evidence insufficient for a confident call, and **abstains** — every run. That is the
+never-confidently-wrong property showing exactly where a model fails: it hallucinates a confident yes on
+a result it can't reconstruct, and Verdict doesn't.
+
+The cost of that property is in the same table: Verdict abstains on a third to 40% of the set, and its
+verdict flips on 8 of 12 claims run-to-run — the same retrieval non-determinism that caps the live
+curated set. So the honest framing is not "Verdict beats the model." It is "Verdict trades raw accuracy
+for a hard no-confident-false-positive guarantee plus an audit trail" — and whether that trade earns its
+keep in the post-cutoff regime it was built for is the experiment still to run.
 
 ## What's next
 
