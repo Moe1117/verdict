@@ -50,6 +50,19 @@ lookup can't reach:
    0 missed-validated), stable across 3 runs**: every real-corpus error is the invisible
    `ambiguous`↔`not_reported` confusion, and both map to `NEEDS-VERIFICATION`. (`scripts/repro_knockout_eval.py`;
    `benchmark/repro/knockout_eval*.json`; few-shot exemplars are disjoint from both eval sets.)
+3. **Agentic investigation — Claude as an autonomous research agent.** The one place Claude doesn't
+   just reason over the pasted text but *acts*. Click **Investigate** on a flagged resource and Claude
+   runs a **bounded autonomous loop** over real public APIs (PubMed E-utilities, Cellosaurus) — it
+   chooses queries, reads abstracts, chains sources — to find real-citation evidence that an antibody
+   was knockout-validated *somewhere in the literature*, or to build a misidentified cell line's
+   **provenance chain** (`verdict/investigate.py`, `POST /api/investigate`). **Fabrication is impossible
+   by construction:** a deterministic gate strips any citation the tools did not actually return, so
+   every cited PMID/CVCL is a real, retrieved record — and it abstains when it can't ground a finding.
+   Measured on 8 known cases (`scripts/repro_investigate_eval.py`, `benchmark/repro/investigate_eval.json`):
+   **0 false-validation, 3/3 negatives correctly abstained**, and where the evidence is findable it
+   cites the right real record (anti-GABARAP 8H5 → `PMID:30679523`; GR-M → `CVCL_2451` + `PMID:25877200`).
+   Coverage is the honest limit — it abstains, rather than guesses, when a validation lives only in a
+   paper's full text. This is the agentic beat: *watch Claude autonomously hunt down the validation paper live.*
 
 Everything Claude touches is labelled as a model judgment; everything a **registry** decides is a pure
 lookup. **The deterministic gates issue every *identity* verdict** (cell line, antibody catalog#/RRID);

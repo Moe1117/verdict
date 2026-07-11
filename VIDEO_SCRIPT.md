@@ -66,7 +66,18 @@ immunoreactivity"*.
 > real reviewer judgment, made on the text in front of it, and it's labelled a model judgment, never
 > allowed to override the deterministic verdict."
 
-### 5 · Verify your own, live — 2:05–2:40
+### 4b · The agentic beat — Claude investigates the literature — 2:05–2:28
+**Screen:** On the **GR-M** finding, click **Investigate**. The step trail appears live — *looked up
+Cellosaurus → searched PubMed → fetched PMID 25877200* — then **PROVENANCE CHAIN ESTABLISHED**, citing
+`CVCL_2451` + a real, **clickable** PubMed ID. *(Pre-recorded.)*
+
+> "And it can do more than read the page — it can go *find out*. Click Investigate, and Claude runs its
+> own literature search: it queries Cellosaurus, searches PubMed, reads the papers, and builds the
+> provenance chain — that GR-M is really a PSN1 derivative — cited to a real Cellosaurus record and a
+> real PubMed ID you can click. It's an agent doing a reviewer's homework. And it *cannot* invent a
+> citation: every reference is one the tools actually returned, or it abstains and says so."
+
+### 5 · Verify your own, live — 2:28–2:48
 **Screen:** Clear the box, paste the reliable Methods snippet (above), hit **Verify**. It resolves
 end-to-end: HEp-2 → FAIL (cited), NeuN → the knockout gate reasons *validated*, rigor → n and blinding
 detected. *(Pre-recorded; cut the wait.)*
