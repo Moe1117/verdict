@@ -146,16 +146,16 @@ export interface IclacBench {
     strict_ci: [number, number]
     confident_wrong: number
     n_misidentified: number
+    n_known: number
     famous_acc: number
     tail_acc: number
-    false_flags: number
-    n_legit: number
-    false_flag_pct: number
   }
   tool: {
     end_to_end_catch: number
     stress_n: number
+    stress_ci: [number, number]
     false_flags: number
+    n_controls: number
     match_misses: number
   }
   examples: IclacBenchExample[]

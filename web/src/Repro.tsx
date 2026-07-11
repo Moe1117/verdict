@@ -73,23 +73,23 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
     <div className="rp-bench">
       <div className="panel-label">The benchmark</div>
       <div className="rp-bench-headline">
-        A frontier model correctly identifies only <b className="bad">{pct(model.strict_accuracy)}</b> of{' '}
-        <b>{model.n_misidentified}</b> known-contaminated cell lines — <b className="bad">confidently wrong on{' '}
-        {model.confident_wrong}</b>, and it false-flags <b className="bad">{pct(model.false_flag_pct)}</b> of clean
-        ones. Our tool catches <b className="good">{pct(tool.end_to_end_catch)}</b> end-to-end, with{' '}
-        <b className="good">zero</b> false alarms — every call cited.
+        A frontier model correctly identifies only <b className="bad">{pct(model.strict_accuracy)}</b> of the{' '}
+        <b>{model.n_known}</b> known-contaminated cell lines with a documented identity —{' '}
+        <b className="bad">confidently wrong on {model.confident_wrong}</b>. Our tool catches{' '}
+        <b className="good">{pct(tool.end_to_end_catch)}</b> end-to-end and false-flags{' '}
+        <b className="good">{tool.false_flags} of {tool.n_controls}</b> authentic controls — every call cited.
       </div>
 
       <div className="rp-stats">
         <div className="rp-stat model">
           <div className="rp-stat-num">{pct(model.strict_accuracy)}</div>
           <div className="rp-stat-cap">the problem — a frontier model IDs a contaminated line</div>
-          <div className="rp-stat-sub">{model.confident_wrong} confident errors · false-flags {pct(model.false_flag_pct)} of clean lines</div>
+          <div className="rp-stat-sub">{model.confident_wrong} confident errors · 95% CI {pct(model.strict_ci[0])}–{pct(model.strict_ci[1])} (n={model.n_known})</div>
         </div>
         <div className="rp-stat tool">
           <div className="rp-stat-num">{pct(tool.end_to_end_catch)}</div>
           <div className="rp-stat-cap">the fix — our tool, end-to-end on real Methods text</div>
-          <div className="rp-stat-sub">0 false alarms · every call cited to ICLAC + CVCL</div>
+          <div className="rp-stat-sub">{tool.false_flags} false alarms on {tool.n_controls} authentic lines · every FAIL cited</div>
         </div>
       </div>
 
@@ -97,10 +97,12 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
         className="rp-bench-note"
         style={{ fontSize: 13, color: 'var(--text-muted, #8a8a8a)', margin: '2px 0 14px', lineHeight: 1.6 }}
       >
-        Measured on the entire 594-line ICLAC register — no cherry-picking — plus 168 authentic controls,
-        reproduced across two runs. The model aces the ~11 famous cases ({pct(model.famous_acc)}) and collapses on
-        the 519 obscure ones ({pct(model.tail_acc)}) — exactly where a researcher can’t eyeball it. Two different
-        measurements: the model was asked directly; the tool was stress-tested end-to-end through messy prose.
+        Measured on the entire {model.n_misidentified}-line ICLAC register — no cherry-picking — plus{' '}
+        {tool.n_controls} independently-chosen authentic control lines. The model aces the ~11 famous cases
+        ({pct(model.famous_acc)}) and collapses on the 519 obscure ones ({pct(model.tail_acc)}) — exactly where a
+        researcher can’t eyeball it. Two different measurements: the model was asked directly (strict = flag +
+        correct identity, n={model.n_known}); the tool was stress-tested end-to-end through messy prose (n=
+        {tool.stress_n}, 95% CI {pct(tool.stress_ci[0])}–{pct(tool.stress_ci[1])}).
       </div>
 
       <div className="section-label">confidently wrong, where it matters — the model’s own words vs. the register</div>

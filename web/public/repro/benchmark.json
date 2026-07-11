@@ -1,33 +1,28 @@
 {
  "model": {
-  "strict_accuracy": 0.174,
+  "strict_accuracy": 0.177,
   "strict_ci": [
-   0.144,
-   0.208
+   0.147,
+   0.212
   ],
-  "confident_wrong": 256,
+  "confident_wrong": 230,
   "n_misidentified": 594,
+  "n_known": 530,
   "famous_acc": 0.909,
-  "tail_acc": 0.158,
-  "false_flags": 20,
-  "n_legit": 168,
-  "false_flag_pct": 0.119
+  "tail_acc": 0.162
  },
  "tool": {
   "end_to_end_catch": 0.925,
   "stress_n": 40,
+  "stress_ci": [
+   0.801,
+   0.974
+  ],
   "false_flags": 0,
+  "n_controls": 36,
   "match_misses": 0
  },
  "examples": [
-  {
-   "name": "J-111",
-   "model_says": "actually HL-60",
-   "confidence": "medium",
-   "register_says": "HeLa",
-   "iclac_id": "ICLAC-00009",
-   "cvcl": "CVCL_2965"
-  },
   {
    "name": "HBT-3",
    "model_says": "actually MCF7",
@@ -43,6 +38,14 @@
    "register_says": "HeLa",
    "iclac_id": "ICLAC-00054",
    "cvcl": "CVCL_M746"
+  },
+  {
+   "name": "McCoy",
+   "model_says": "actually HeLa",
+   "confidence": "high",
+   "register_says": "Strain L",
+   "iclac_id": "ICLAC-00079",
+   "cvcl": "CVCL_3742"
   },
   {
    "name": "J96",
