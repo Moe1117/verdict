@@ -196,3 +196,30 @@ def run_investigation(task: str, retriever: "Retriever", client=None, kind: str 
         pass
     return Investigation(kind=kind, verdict=_INCONCLUSIVE,
                          reasoning="investigation did not complete", steps=["investigation incomplete"])
+
+
+# ---------------------------------------------------------------------------
+# Entrypoints.
+# ---------------------------------------------------------------------------
+def investigate_antibody(name: str, target: str = "", catalog: str = "", rrid: str = "") -> Investigation:
+    """Agentically search the literature for whether `name` was ever knockout/knockdown-validated."""
+    extras = "".join(x for x in (f", target {target}" if target else "",
+                                 f", catalog {catalog}" if catalog else "",
+                                 f", {rrid}" if rrid else "") if x)
+    task = (f"Investigate whether the antibody '{name}'{extras} has ever been validated for specificity "
+            "with a GENETIC control (knockout/knockdown/CRISPR/siRNA showing signal loss) in the published "
+            "literature. Search PubMed (by target + 'knockout'/'validation'/'specificity'), read the most "
+            "relevant abstracts, and emit FOUND_VALIDATION with the real PMID if you find one, else "
+            "NO_VALIDATION_FOUND.")
+    return run_investigation(task, Retriever(), kind="antibody")
+
+
+def investigate_cell_line(name: str, iclac_id: str = "", cvcl: str = "") -> Investigation:
+    """Agentically build the misidentification provenance chain (Cellosaurus CVCL + primary PMID)."""
+    extras = "".join(x for x in (f", ICLAC {iclac_id}" if iclac_id else "",
+                                 f", {cvcl}" if cvcl else "") if x)
+    task = (f"Build the misidentification provenance chain for the cell line '{name}'{extras}. Look it up "
+            "in Cellosaurus to confirm the CVCL and the documented problem, then search PubMed for the "
+            "primary reference that first reported the misidentification. Emit PROVENANCE_CHAIN citing the "
+            "real CVCL and the real primary-reference PMID, or PARTIAL if you can only ground part of the chain.")
+    return run_investigation(task, Retriever(), kind="cell_line")

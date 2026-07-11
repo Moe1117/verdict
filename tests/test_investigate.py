@@ -134,3 +134,26 @@ def test_run_investigation_caps_and_degrades(monkeypatch):
     inv = investigate.run_investigation("t", investigate.Retriever(), client=_AlwaysSearchClient(),
                                         kind="antibody", max_steps=3)
     assert inv.verdict == "INCONCLUSIVE"
+
+
+# ---- Task 4: antibody / cell-line entrypoints ----------------------------------------------------
+
+def test_investigate_antibody_builds_task_and_runs(monkeypatch):
+    seen = {}
+    def fake_run(task, retriever, client=None, kind="antibody", **kw):
+        seen["task"], seen["kind"] = task, kind
+        return investigate.Investigation(kind=kind, verdict="NO_VALIDATION_FOUND")
+    monkeypatch.setattr(investigate, "run_investigation", fake_run)
+    inv = investigate.investigate_antibody("anti-GABARAP 8H5", target="GABARAP")
+    assert seen["kind"] == "antibody" and "GABARAP" in seen["task"] and "8H5" in seen["task"]
+    assert inv.verdict == "NO_VALIDATION_FOUND"
+
+
+def test_investigate_cell_line_builds_task(monkeypatch):
+    seen = {}
+    def fake_run(task, retriever, client=None, kind="antibody", **kw):
+        seen["task"], seen["kind"] = task, kind
+        return investigate.Investigation(kind="cell_line", verdict="PARTIAL")
+    monkeypatch.setattr(investigate, "run_investigation", fake_run)
+    investigate.investigate_cell_line("GR-M", iclac_id="ICLAC-00538", cvcl="CVCL_2451")
+    assert seen["kind"] == "cell_line" and "GR-M" in seen["task"] and "CVCL_2451" in seen["task"]
