@@ -1,0 +1,21 @@
+{
+ "about": "Known-answer eval cases for the Agentic Investigator (verdict/investigate.py). Each case is run through the REAL agentic loop (live PubMed + Cellosaurus). Positives: a real antibody with published genetic validation (expect FOUND_VALIDATION) or a real misidentified line with Cellosaurus provenance (expect PROVENANCE_CHAIN); negatives: an epitope-tag antibody for which in-study genetic validation does not apply (expect NO_VALIDATION_FOUND). `expect_id`, when given, is a real record that SHOULD appear among the grounded citations. All citations are deterministically verified against actual retrieval, so a cited id is real by construction.",
+ "cases": [
+  {"id": "iv01", "kind": "antibody", "name": "anti-GABARAP 8H5", "target": "GABARAP",
+   "expect": "FOUND_VALIDATION", "expect_id": "PMID:30679523"},
+  {"id": "iv02", "kind": "antibody", "name": "anti-AKT1 (Proteintech 10176-2-AP)", "target": "AKT1",
+   "expect": "FOUND_VALIDATION", "expect_id": ""},
+  {"id": "iv03", "kind": "antibody", "name": "anti-GFAP", "target": "GFAP",
+   "expect": "FOUND_VALIDATION", "expect_id": ""},
+  {"id": "iv04", "kind": "cell_line", "name": "GR-M", "iclac_id": "ICLAC-00538", "cvcl": "CVCL_2451",
+   "expect": "PROVENANCE_CHAIN", "expect_id": "CVCL_2451"},
+  {"id": "iv05", "kind": "cell_line", "name": "SNB-19", "iclac_id": "ICLAC-00268", "cvcl": "CVCL_0535",
+   "expect": "PROVENANCE_CHAIN", "expect_id": "CVCL_0535"},
+  {"id": "iv06", "kind": "antibody", "name": "anti-FLAG M2 (Sigma)", "target": "FLAG epitope tag",
+   "expect": "NO_VALIDATION_FOUND", "expect_id": ""},
+  {"id": "iv07", "kind": "antibody", "name": "anti-Myc 9E10", "target": "Myc epitope tag",
+   "expect": "NO_VALIDATION_FOUND", "expect_id": ""},
+  {"id": "iv08", "kind": "antibody", "name": "anti-HA (clone HA-7)", "target": "HA epitope tag",
+   "expect": "NO_VALIDATION_FOUND", "expect_id": ""}
+ ]
+}

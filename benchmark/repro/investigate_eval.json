@@ -1,0 +1,117 @@
+{
+ "n": 8,
+ "class_accuracy": 0.625,
+ "class_accuracy_ci95": [
+  0.306,
+  0.863
+ ],
+ "false_validation": 0,
+ "n_positive": 5,
+ "positives_found_grounded": 2,
+ "n_negative": 3,
+ "negatives_abstained": 3,
+ "expected_citation_hits": "2/3",
+ "rows": [
+  {
+   "id": "iv01",
+   "kind": "antibody",
+   "name": "anti-GABARAP 8H5",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "FOUND_VALIDATION",
+   "grounded": true,
+   "cited": [
+    "PMID:30679523"
+   ],
+   "class_correct": true,
+   "expected_citation_hit": true,
+   "is_negative": false
+  },
+  {
+   "id": "iv02",
+   "kind": "antibody",
+   "name": "anti-AKT1 (Proteintech 10176-2-AP)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": null,
+   "is_negative": false
+  },
+  {
+   "id": "iv03",
+   "kind": "antibody",
+   "name": "anti-GFAP",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": null,
+   "is_negative": false
+  },
+  {
+   "id": "iv04",
+   "kind": "cell_line",
+   "name": "GR-M",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "PROVENANCE_CHAIN",
+   "grounded": true,
+   "cited": [
+    "CVCL_2451",
+    "PMID:25877200"
+   ],
+   "class_correct": true,
+   "expected_citation_hit": true,
+   "is_negative": false
+  },
+  {
+   "id": "iv05",
+   "kind": "cell_line",
+   "name": "SNB-19",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "PARTIAL",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv06",
+   "kind": "antibody",
+   "name": "anti-FLAG M2 (Sigma)",
+   "expect": "NO_VALIDATION_FOUND",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": true,
+   "expected_citation_hit": null,
+   "is_negative": true
+  },
+  {
+   "id": "iv07",
+   "kind": "antibody",
+   "name": "anti-Myc 9E10",
+   "expect": "NO_VALIDATION_FOUND",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": true,
+   "expected_citation_hit": null,
+   "is_negative": true
+  },
+  {
+   "id": "iv08",
+   "kind": "antibody",
+   "name": "anti-HA (clone HA-7)",
+   "expect": "NO_VALIDATION_FOUND",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": true,
+   "expected_citation_hit": null,
+   "is_negative": true
+  }
+ ]
+}
