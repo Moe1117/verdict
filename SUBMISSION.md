@@ -55,14 +55,17 @@ lookup can't reach:
    runs a **bounded autonomous loop** over real public APIs (PubMed E-utilities, Cellosaurus) — it
    chooses queries, reads abstracts, chains sources — to find real-citation evidence that an antibody
    was knockout-validated *somewhere in the literature*, or to build a misidentified cell line's
-   **provenance chain** (`verdict/investigate.py`, `POST /api/investigate`). **Fabrication is impossible
-   by construction:** a deterministic gate strips any citation the tools did not actually return, so
-   every cited PMID/CVCL is a real, retrieved record — and it abstains when it can't ground a finding.
-   Measured on 8 known cases (`scripts/repro_investigate_eval.py`, `benchmark/repro/investigate_eval.json`):
-   **0 false-validation, 3/3 negatives correctly abstained**, and where the evidence is findable it
-   cites the right real record (anti-GABARAP 8H5 → `PMID:30679523`; GR-M → `CVCL_2451` + `PMID:25877200`).
-   Coverage is the honest limit — it abstains, rather than guesses, when a validation lives only in a
-   paper's full text. This is the agentic beat: *watch Claude autonomously hunt down the validation paper live.*
+   **provenance chain** (`verdict/investigate.py`, `POST /api/investigate`). **No fabricated citation IDs,
+   by construction:** a deterministic gate strips any citation the tools did not actually return, so every
+   cited PMID/CVCL is a real, retrieved record — whether that record *supports* the finding is a labelled
+   model judgment, and it abstains when it can't ground one at all. Measured on **30 known cases**
+   (`scripts/repro_investigate_eval.py`, `benchmark/repro/investigate_eval.json`): **0 false-validation on
+   every run** — it never wrongly "validates" a reagent — at **~⅓ class accuracy**. On a realistic corpus
+   it **abstains far more than it succeeds**, because antibody validation often lives in a paper's full text
+   the search can't reach; where the evidence is findable it cites the right real record (anti-GABARAP 8H5 →
+   `PMID:30679523`; GR-M → `CVCL_2451` + `PMID:25877200`; WiDr → `CVCL_2760`). The honest framing of the
+   agentic beat: **a grounded diligence assistant that never fabricates and never false-validates** — it
+   tells you when it couldn't confirm, rather than guessing.
 
 Everything Claude touches is labelled as a model judgment; everything a **registry** decides is a pure
 lookup. **The deterministic gates issue every *identity* verdict** (cell line, antibody catalog#/RRID);

@@ -21,8 +21,10 @@ Deterministic gates issue every *identity* verdict against ground truth a model 
 - **Investigate (agentic)** → click a flagged resource and **Claude autonomously searches PubMed +
   Cellosaurus** in a bounded loop to find whether an antibody was knockout-validated *anywhere in the
   literature* (citing the real PMID) or to build a cell line's misidentification **provenance chain**.
-  Fabrication is impossible by construction — a deterministic gate keeps only citations the tools
-  actually returned, else it abstains (`POST /api/investigate`; measured **0 false-validation**).
+  **No fabricated citation IDs, by construction** — a deterministic gate keeps only citations the tools
+  actually returned (whether a record *supports* the finding is a labelled model judgment), else it
+  abstains (`POST /api/investigate`; measured n=30: **0 false-validation, ~⅓ class accuracy** — it abstains
+  far more than it succeeds, and never wrongly validates).
 - **Rigor** → ARRIVE 2.0 / MDAR / NIH-SABV presence checks (sex/SABV, n, randomization, blinding) —
   also labelled model judgments.
 - A missing / unidentifiable datum → **abstains** (`NEEDS-VERIFICATION`), never guesses. Every
