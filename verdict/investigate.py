@@ -104,6 +104,17 @@ def verify_citations(inv: Investigation, retrieved: set) -> Investigation:
     return inv
 
 
+def _iclac_cvcl(name: str) -> str:
+    """Resolve a cell-line NAME to its CVCL via the bundled ICLAC misidentified-line register
+    (Cellosaurus REST 404s on names — it needs the CVCL). '' if not a known misidentified line."""
+    try:
+        from .repro import _iclac_lookup
+        rec = _iclac_lookup(name)
+        return rec.get("cvcl", "") if rec else ""
+    except Exception:  # noqa: BLE001
+        return ""
+
+
 class Retriever:
     """Real retrieval over public APIs. Every id it returns is logged in `retrieved` — the ground truth
     the citation-verification gate checks against. All methods degrade to empty on any error."""
@@ -174,9 +185,11 @@ class Retriever:
                 continue
         return out
 
-    def cellosaurus_lookup(self, name_or_cvcl: str) -> dict:
+    def _cello_fetch(self, ident: str) -> dict:
+        """Fetch + parse one Cellosaurus record by identifier (CVCL or, where supported, name); log its
+        CVCL + reference PMIDs. Empty on any error."""
         try:
-            body = _http_get(f"{_CELLO}/cell-line/{urllib.parse.quote(name_or_cvcl)}?format=json")
+            body = _http_get(f"{_CELLO}/cell-line/{urllib.parse.quote(ident)}?format=json")
             cl = json.loads(body)["Cellosaurus"]["cell-line-list"][0]
         except Exception:  # noqa: BLE001
             return {}
@@ -189,6 +202,18 @@ class Retriever:
         for pid in pmids:
             self.retrieved.add(f"PMID:{pid}")
         return {"cvcl": cvcl, "problem": problem, "reference_pmids": pmids}
+
+    def cellosaurus_lookup(self, name_or_cvcl: str) -> dict:
+        """Look up a cell line and log its CVCL + reference PMIDs. Cellosaurus REST 404s on cell-line
+        NAMES (it needs the CVCL), so if a name lookup finds nothing, resolve the name to its CVCL via
+        the bundled ICLAC register — the same citable source the deterministic gate uses — and fetch the
+        real record by CVCL. This makes the ICLAC -> CVCL -> reference provenance chain robust."""
+        rec = self._cello_fetch(name_or_cvcl)
+        if not rec and not name_or_cvcl.strip().upper().startswith("CVCL"):
+            cvcl = _iclac_cvcl(name_or_cvcl)
+            if cvcl:
+                rec = self._cello_fetch(cvcl)
+        return rec
 
 
 # ---------------------------------------------------------------------------
@@ -240,10 +265,39 @@ def _dispatch(retriever: "Retriever", name: str, args: dict, caps: dict) -> str:
     return json.dumps({"error": "tool budget exhausted — call emit_investigation now"})
 
 
+def _build_investigation(d: dict, kind: str) -> Investigation:
+    """Assemble an Investigation from an emit_investigation tool input (used by both the normal emit and
+    the forced final turn)."""
+    return Investigation(
+        kind=kind, verdict=d.get("verdict", _INCONCLUSIVE),
+        cited=[Citation(**{k: c.get(k, "") for k in ("id", "kind", "title", "why")})
+               for c in d.get("cited", [])],
+        reasoning=d.get("reasoning", ""), steps=list(d.get("steps", [])))
+
+
+def _force_emit(client, messages: list, kind: str) -> "Investigation | None":
+    """Final turn: FORCE emit_investigation so a loop that gathered real evidence concludes from what it
+    has, instead of discarding it as INCONCLUSIVE because it ran out of steps. Returns None if even the
+    forced call yields no verdict (the caller then degrades to INCONCLUSIVE). The forced verdict still
+    passes through the deterministic grounding gate downstream — forcing a conclusion never forces a
+    citation."""
+    from .parse import model
+    try:
+        msg = client.messages.create(model=model(), max_tokens=1200, system=_SYSTEM, tools=_TOOLS,
+                                     tool_choice={"type": "tool", "name": "emit_investigation"},
+                                     messages=messages)
+        emit = next((b for b in msg.content
+                     if getattr(b, "type", "") == "tool_use" and b.name == "emit_investigation"), None)
+        return _build_investigation(dict(emit.input), kind) if emit else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def run_investigation(task: str, retriever: "Retriever", client=None, kind: str = "antibody",
-                      max_steps: int = 8, caps: dict | None = None) -> Investigation:
-    """Run the bounded Claude tool-use loop against real APIs, then verify citations. Degrades to
-    INCONCLUSIVE on any failure — never raises."""
+                      max_steps: int = 14, caps: dict | None = None) -> Investigation:
+    """Run the bounded Claude tool-use loop against real APIs, then verify citations. If the loop runs
+    out of steps without a verdict, force a final grounded conclusion from the evidence gathered.
+    Degrades to INCONCLUSIVE on any failure — never raises."""
     caps = caps or {"search": 3, "fetch": 6, "pmc": 3}
     if client is None:
         import anthropic
@@ -259,18 +313,17 @@ def run_investigation(task: str, retriever: "Retriever", client=None, kind: str 
                 break
             emit = next((b for b in uses if b.name == "emit_investigation"), None)
             if emit:
-                d = dict(emit.input)
-                inv = Investigation(
-                    kind=kind, verdict=d.get("verdict", _INCONCLUSIVE),
-                    cited=[Citation(**{k: c.get(k, "") for k in ("id", "kind", "title", "why")})
-                           for c in d.get("cited", [])],
-                    reasoning=d.get("reasoning", ""), steps=list(d.get("steps", [])))
-                return verify_citations(inv, retriever.retrieved)
+                return verify_citations(_build_investigation(dict(emit.input), kind), retriever.retrieved)
             messages.append({"role": "assistant", "content": [
                 {"type": "tool_use", "id": b.id, "name": b.name, "input": b.input} for b in uses]})
             messages.append({"role": "user", "content": [
                 {"type": "tool_result", "tool_use_id": b.id,
                  "content": _dispatch(retriever, b.name, dict(b.input), caps)} for b in uses]})
+        # Ran out of steps (or the model stopped calling tools) without a verdict: force a final grounded
+        # conclusion from what was retrieved, rather than throwing the evidence away as INCONCLUSIVE.
+        forced = _force_emit(client, messages, kind)
+        if forced is not None:
+            return verify_citations(forced, retriever.retrieved)
     except Exception:  # noqa: BLE001 — any API/tool failure degrades, never crashes
         pass
     return Investigation(kind=kind, verdict=_INCONCLUSIVE,

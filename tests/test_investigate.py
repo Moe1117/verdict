@@ -91,6 +91,24 @@ def test_retriever_http_error_degrades(monkeypatch):
     assert r.cellosaurus_lookup("CVCL_x") == {}  # never raises
 
 
+def test_cellosaurus_resolves_name_via_iclac_when_direct_404s(monkeypatch):
+    # Cellosaurus REST 404s on cell-line NAMES (needs the CVCL) — the n=30 regression's cell-line misses.
+    # The lookup must resolve the name 'KB' -> CVCL_0372 via the bundled ICLAC register, then fetch the
+    # real record by CVCL, grounding the CVCL + its reference PMIDs.
+    body = ('{"Cellosaurus":{"cell-line-list":[{"accession-list":[{"type":"primary","value":"CVCL_0372"}],'
+            '"comment-list":[{"category":"Problematic cell line","value":"Contaminated. Is HeLa."}],'
+            '"reference-list":[{"internal-resources":[{"accession":"PubMed=4864103"}]}]}]}}')
+    def fake_get(url, timeout=12):
+        if "CVCL_0372" in url:
+            return body
+        raise OSError("404 on bare name")          # Cellosaurus 404s on 'KB'
+    monkeypatch.setattr(investigate, "_http_get", fake_get)
+    r = investigate.Retriever(email="x@y.z")
+    rec = r.cellosaurus_lookup("KB")
+    assert rec["cvcl"] == "CVCL_0372" and "HeLa" in rec["problem"]
+    assert "CVCL_0372" in r.retrieved and "PMID:4864103" in r.retrieved
+
+
 # ---- Task 3: the bounded agentic loop ------------------------------------------------------------
 
 class _FakeBlock:
@@ -216,6 +234,51 @@ def test_pmc_fetch_cap_enforced_in_dispatch(monkeypatch):
     investigate._dispatch(r, "pmc_fetch", {"pmids": ["1"]}, caps)          # n_pmc 0 -> 1
     out = investigate._dispatch(r, "pmc_fetch", {"pmids": ["2"]}, caps)    # 1 == cap -> exhausted
     assert "budget" in out
+
+
+# ---- Task 6: forced-emit final turn (fixes the n=30 INCONCLUSIVE regression) ----------------------
+# A bounded loop that gathered real evidence but ran out of steps must be FORCED to conclude from what
+# it has, not fall through to INCONCLUSIVE. The forced turn still passes through the grounding gate.
+
+class _SearchesThenForcedEmitClient:
+    """Volunteers only searches (never emit); when the loop FORCES emit (tool_choice set), returns a
+    grounded emit. Models 'ran out of steps but had real evidence in hand'."""
+    def __init__(self):
+        self.messages = self
+    def create(self, **kw):
+        if kw.get("tool_choice"):
+            return _FakeMsg([_FakeBlock(type="tool_use", id="e", name="emit_investigation",
+                             input={"verdict": "FOUND_VALIDATION", "reasoning": "evidence gathered",
+                                    "cited": [{"id": "PMID:111", "kind": "pubmed"}], "steps": ["searched"]})])
+        return _FakeMsg([_FakeBlock(type="tool_use", id="s", name="pubmed_search", input={"query": "x"})])
+
+
+class _ForcedEmitUngroundedClient:
+    """When forced, emits FOUND citing an id that was never retrieved — the grounding gate must still bite."""
+    def __init__(self):
+        self.messages = self
+    def create(self, **kw):
+        if kw.get("tool_choice"):
+            return _FakeMsg([_FakeBlock(type="tool_use", id="e", name="emit_investigation",
+                             input={"verdict": "FOUND_VALIDATION", "reasoning": "guess",
+                                    "cited": [{"id": "PMID:999", "kind": "pubmed"}], "steps": []})])
+        return _FakeMsg([_FakeBlock(type="tool_use", id="s", name="pubmed_search", input={"query": "x"})])
+
+
+def test_run_investigation_forces_emit_when_steps_exhausted(monkeypatch):
+    monkeypatch.setattr(investigate, "_http_get", lambda url, timeout=12: '{"esearchresult":{"idlist":["111"]}}')
+    r = investigate.Retriever(email="x@y.z")
+    inv = investigate.run_investigation("t", r, client=_SearchesThenForcedEmitClient(),
+                                        kind="antibody", max_steps=2)
+    assert inv.verdict == "FOUND_VALIDATION" and inv.grounded is True   # concluded, not INCONCLUSIVE
+    assert [c.id for c in inv.cited] == ["PMID:111"]
+
+
+def test_forced_emit_still_passes_through_grounding_gate(monkeypatch):
+    monkeypatch.setattr(investigate, "_http_get", lambda url, timeout=12: '{"esearchresult":{"idlist":[]}}')
+    inv = investigate.run_investigation("t", investigate.Retriever(), client=_ForcedEmitUngroundedClient(),
+                                        kind="antibody", max_steps=2)
+    assert inv.verdict == "NO_VALIDATION_FOUND" and inv.cited == []      # forcing does not bypass grounding
 
 
 def test_run_investigation_uses_pmc_fulltext_then_grounds(monkeypatch):

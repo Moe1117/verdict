@@ -1,16 +1,16 @@
 {
- "n": 8,
- "class_accuracy": 0.625,
+ "n": 30,
+ "class_accuracy": 0.333,
  "class_accuracy_ci95": [
-  0.306,
-  0.863
+  0.192,
+  0.512
  ],
  "false_validation": 0,
- "n_positive": 5,
- "positives_found_grounded": 2,
- "n_negative": 3,
- "negatives_abstained": 3,
- "expected_citation_hits": "2/3",
+ "n_positive": 22,
+ "positives_found_grounded": 4,
+ "n_negative": 8,
+ "negatives_abstained": 6,
+ "expected_citation_hits": "7/20",
  "rows": [
   {
    "id": "iv01",
@@ -20,7 +20,8 @@
    "verdict": "FOUND_VALIDATION",
    "grounded": true,
    "cited": [
-    "PMID:30679523"
+    "PMID:30679523",
+    "PMID:31822784"
    ],
    "class_correct": true,
    "expected_citation_hit": true,
@@ -43,7 +44,7 @@
    "kind": "antibody",
    "name": "anti-GFAP",
    "expect": "FOUND_VALIDATION",
-   "verdict": "NO_VALIDATION_FOUND",
+   "verdict": "INCONCLUSIVE",
    "grounded": false,
    "cited": [],
    "class_correct": false,
@@ -110,6 +111,290 @@
    "grounded": false,
    "cited": [],
    "class_correct": true,
+   "expected_citation_hit": null,
+   "is_negative": true
+  },
+  {
+   "id": "iv09",
+   "kind": "antibody",
+   "name": "RD4 (Millipore 05-804, anti-4R Tau)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv10",
+   "kind": "antibody",
+   "name": "T22 (anti-oligomeric Tau)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv11",
+   "kind": "antibody",
+   "name": "PA847p (rabbit anti-KOR)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv12",
+   "kind": "antibody",
+   "name": "anti-pS369 (phospho-KOR Ser369)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv13",
+   "kind": "antibody",
+   "name": "anti-NTRK1 06-574 (Millipore)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "INCONCLUSIVE",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv14",
+   "kind": "antibody",
+   "name": "anti-TDP-43 (Proteintech 12892-1-AP)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv15",
+   "kind": "antibody",
+   "name": "anti-Profilin-1 (Proteintech 11680-1-AP)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "INCONCLUSIVE",
+   "grounded": true,
+   "cited": [
+    "PMID:37576538"
+   ],
+   "class_correct": false,
+   "expected_citation_hit": true,
+   "is_negative": false
+  },
+  {
+   "id": "iv16",
+   "kind": "antibody",
+   "name": "anti-FUS (Proteintech 60160-1-Ig, clone 3A10B5)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "INCONCLUSIVE",
+   "grounded": true,
+   "cited": [
+    "PMID:37384305"
+   ],
+   "class_correct": false,
+   "expected_citation_hit": true,
+   "is_negative": false
+  },
+  {
+   "id": "iv17",
+   "kind": "antibody",
+   "name": "anti-Moesin (Abcam ab52490, clone EP1863Y)",
+   "expect": "FOUND_VALIDATION",
+   "verdict": "FOUND_VALIDATION",
+   "grounded": true,
+   "cited": [
+    "PMID:39444645",
+    "PMID:38106655"
+   ],
+   "class_correct": true,
+   "expected_citation_hit": true,
+   "is_negative": false
+  },
+  {
+   "id": "iv18",
+   "kind": "cell_line",
+   "name": "HEp-2",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "INCONCLUSIVE",
+   "grounded": true,
+   "cited": [
+    "CVCL_1906",
+    "PMID:4864103",
+    "PMID:5641128",
+    "PMID:566722",
+    "PMID:1246601",
+    "PMID:20143388"
+   ],
+   "class_correct": false,
+   "expected_citation_hit": true,
+   "is_negative": false
+  },
+  {
+   "id": "iv19",
+   "kind": "cell_line",
+   "name": "KB",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "PARTIAL",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv20",
+   "kind": "cell_line",
+   "name": "Chang liver",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "PARTIAL",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv21",
+   "kind": "cell_line",
+   "name": "Intestine 407",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "PARTIAL",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv22",
+   "kind": "cell_line",
+   "name": "ECV-304",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "PARTIAL",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv23",
+   "kind": "cell_line",
+   "name": "TE671",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "PARTIAL",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv24",
+   "kind": "cell_line",
+   "name": "WiDr",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "PROVENANCE_CHAIN",
+   "grounded": true,
+   "cited": [
+    "CVCL_2760",
+    "PMID:3472642",
+    "PMID:20143388"
+   ],
+   "class_correct": true,
+   "expected_citation_hit": true,
+   "is_negative": false
+  },
+  {
+   "id": "iv25",
+   "kind": "cell_line",
+   "name": "MDA-MB-435",
+   "expect": "PROVENANCE_CHAIN",
+   "verdict": "INCONCLUSIVE",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": false,
+   "is_negative": false
+  },
+  {
+   "id": "iv26",
+   "kind": "antibody",
+   "name": "anti-V5 tag (clone SV5-Pk1)",
+   "expect": "NO_VALIDATION_FOUND",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": true,
+   "expected_citation_hit": null,
+   "is_negative": true
+  },
+  {
+   "id": "iv27",
+   "kind": "antibody",
+   "name": "anti-His6 (6xHis, clone HIS.H8)",
+   "expect": "NO_VALIDATION_FOUND",
+   "verdict": "INCONCLUSIVE",
+   "grounded": false,
+   "cited": [],
+   "class_correct": false,
+   "expected_citation_hit": null,
+   "is_negative": true
+  },
+  {
+   "id": "iv28",
+   "kind": "antibody",
+   "name": "anti-GST (clone GST-2)",
+   "expect": "NO_VALIDATION_FOUND",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": true,
+   "expected_citation_hit": null,
+   "is_negative": true
+  },
+  {
+   "id": "iv29",
+   "kind": "antibody",
+   "name": "anti-T7 tag (clone T7.Tag)",
+   "expect": "NO_VALIDATION_FOUND",
+   "verdict": "NO_VALIDATION_FOUND",
+   "grounded": false,
+   "cited": [],
+   "class_correct": true,
+   "expected_citation_hit": null,
+   "is_negative": true
+  },
+  {
+   "id": "iv30",
+   "kind": "antibody",
+   "name": "anti-Strep-tag II (StrepMAB-Classic)",
+   "expect": "NO_VALIDATION_FOUND",
+   "verdict": "INCONCLUSIVE",
+   "grounded": true,
+   "cited": [
+    "PMID:17571060"
+   ],
+   "class_correct": false,
    "expected_citation_hit": null,
    "is_negative": true
   }
