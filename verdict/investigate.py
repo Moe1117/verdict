@@ -23,6 +23,11 @@ def _http_get(url: str, timeout: int = 12) -> str:
     with urllib.request.urlopen(url, timeout=timeout) as resp:  # noqa: S310
         return resp.read().decode("utf-8", "replace")
 
+
+def _strip_tags(xml: str) -> str:
+    """PMC full text arrives as JATS XML; hand Claude readable text (tags removed, whitespace collapsed)."""
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", xml)).strip()
+
 # Terminal verdicts.
 _ANTIBODY_FOUND = "FOUND_VALIDATION"     # a real PMID shows a genetic validation of this antibody
 _ANTIBODY_NONE = "NO_VALIDATION_FOUND"   # searched, found none — honest abstention
@@ -108,6 +113,7 @@ class Retriever:
         self.retrieved: set = set()
         self.n_search = 0
         self.n_fetch = 0
+        self.n_pmc = 0
 
     def _eutil(self, tool: str, params: dict) -> str:
         params = {**params, "tool": "verdict", "email": self.email}
@@ -140,6 +146,34 @@ class Retriever:
         # one text blob per batch; a single-pmid fetch is keyed by that pmid (Claude reads the blob)
         return {pmids[0]: text} if len(pmids) == 1 else {"_pmids": pmids, "_text": text}
 
+    def pmc_fetch(self, pmids: list) -> dict:
+        """Escalate to PMC OPEN-ACCESS full text for candidate PMIDs — antibody genetic-validation
+        usually lives in the Methods, not the abstract. Map each PMID -> its PMC id (elink), fetch the
+        OA full text (efetch db=pmc), strip JATS tags, and log the PMID ONLY when full text was actually
+        retrieved. Non-OA records or any error degrade to empty. Citations stay keyed to the PMID, so the
+        deterministic grounding gate is unchanged."""
+        self.n_pmc += 1
+        out: dict = {}
+        for pid in [str(p).replace("PMID:", "").strip() for p in pmids][:3]:
+            if not pid:
+                continue
+            try:
+                link = json.loads(self._eutil("elink.fcgi", {
+                    "dbfrom": "pubmed", "db": "pmc", "id": pid, "retmode": "json"}))
+                pmcids = [lk for ls in link.get("linksets", [])
+                          for db in ls.get("linksetdbs", []) if db.get("dbto") == "pmc"
+                          for lk in db.get("links", [])]
+                if not pmcids:
+                    continue
+                text = _strip_tags(self._eutil("efetch.fcgi", {
+                    "db": "pmc", "id": str(pmcids[0]), "retmode": "xml"}))
+                if text:
+                    out[pid] = text[:6000]
+                    self.retrieved.add(f"PMID:{pid}")
+            except Exception:  # noqa: BLE001
+                continue
+        return out
+
     def cellosaurus_lookup(self, name_or_cvcl: str) -> dict:
         try:
             body = _http_get(f"{_CELLO}/cell-line/{urllib.parse.quote(name_or_cvcl)}?format=json")
@@ -166,6 +200,12 @@ _TOOLS = [
     {"name": "pubmed_fetch", "description": "Fetch title+abstract text for PMIDs you already found.",
      "input_schema": {"type": "object", "properties": {
          "pmids": {"type": "array", "items": {"type": "string"}}}, "required": ["pmids"]}},
+    {"name": "pmc_fetch",
+     "description": "Fetch PMC OPEN-ACCESS FULL TEXT for PMIDs you already found. Use when the abstract is "
+                    "promising but doesn't confirm a genetic (knockout/knockdown/CRISPR/siRNA) validation — "
+                    "that evidence usually lives in the Methods full text, not the abstract.",
+     "input_schema": {"type": "object", "properties": {
+         "pmids": {"type": "array", "items": {"type": "string"}}}, "required": ["pmids"]}},
     {"name": "cellosaurus_lookup", "description": "Look up a cell line in Cellosaurus by name or CVCL id.",
      "input_schema": {"type": "object", "properties": {"name": {"type": "string"}}, "required": ["name"]}},
     {"name": "emit_investigation",
@@ -183,7 +223,9 @@ _TOOLS = [
 
 _SYSTEM = ("You are a research-integrity investigator. Use the tools to find REAL evidence, then call "
            "emit_investigation. NEVER cite a PMID or CVCL the tools did not return to you. If you cannot "
-           "find genuine evidence, emit the abstain verdict. Be efficient: a few targeted searches, decide.")
+           "find genuine evidence, emit the abstain verdict. When an abstract is promising but does not "
+           "confirm a genetic (knockout/knockdown/CRISPR/siRNA) validation, escalate with pmc_fetch to read "
+           "the open-access full text before deciding. Be efficient: a few targeted searches, decide.")
 
 
 def _dispatch(retriever: "Retriever", name: str, args: dict, caps: dict) -> str:
@@ -191,6 +233,8 @@ def _dispatch(retriever: "Retriever", name: str, args: dict, caps: dict) -> str:
         return json.dumps({"pmids": retriever.pubmed_search(args.get("query", ""))})
     if name == "pubmed_fetch" and retriever.n_fetch < caps["fetch"]:
         return json.dumps(retriever.pubmed_fetch(args.get("pmids", [])))
+    if name == "pmc_fetch" and retriever.n_pmc < caps.get("pmc", 3):
+        return json.dumps(retriever.pmc_fetch(args.get("pmids", [])))
     if name == "cellosaurus_lookup":
         return json.dumps(retriever.cellosaurus_lookup(args.get("name", "")))
     return json.dumps({"error": "tool budget exhausted — call emit_investigation now"})
@@ -200,7 +244,7 @@ def run_investigation(task: str, retriever: "Retriever", client=None, kind: str 
                       max_steps: int = 8, caps: dict | None = None) -> Investigation:
     """Run the bounded Claude tool-use loop against real APIs, then verify citations. Degrades to
     INCONCLUSIVE on any failure — never raises."""
-    caps = caps or {"search": 3, "fetch": 6}
+    caps = caps or {"search": 3, "fetch": 6, "pmc": 3}
     if client is None:
         import anthropic
         client = anthropic.Anthropic()

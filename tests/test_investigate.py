@@ -171,3 +171,71 @@ def test_investigate_cell_line_builds_task(monkeypatch):
     monkeypatch.setattr(investigate, "run_investigation", fake_run)
     investigate.investigate_cell_line("GR-M", iclac_id="ICLAC-00538", cvcl="CVCL_2451")
     assert seen["kind"] == "cell_line" and "GR-M" in seen["task"] and "CVCL_2451" in seen["task"]
+
+
+# ---- Task 5: PMC open-access FULL-TEXT escalation --------------------------------------------------
+# Antibody genetic-validation usually lives in the Methods full text, not the abstract. pmc_fetch maps
+# a PMID -> its PMC open-access record and returns full text, so the agent stops abstaining when the
+# evidence is real but buried. Citations stay keyed to the PMID (grounding gate is unchanged).
+
+def test_retriever_pmc_fetch_returns_fulltext_and_logs(monkeypatch):
+    def fake_get(url, timeout=12):
+        if "elink" in url:
+            return '{"linksets":[{"linksetdbs":[{"dbto":"pmc","links":["6349789"]}]}]}'
+        return "<article><body><p>anti-GABARAP 8H5 signal was abolished in GABARAP-knockout cells.</p></body></article>"
+    monkeypatch.setattr(investigate, "_http_get", fake_get)
+    r = investigate.Retriever(email="x@y.z")
+    out = r.pmc_fetch(["30679523"])
+    assert "abolished" in out["30679523"]        # full-text body, tags stripped
+    assert "<p>" not in out["30679523"]           # XML tags removed
+    assert "PMID:30679523" in r.retrieved         # logged only because full text was retrieved
+    assert r.n_pmc == 1
+
+
+def test_retriever_pmc_fetch_no_oa_record_degrades(monkeypatch):
+    # A PMID with no PMC open-access link yields nothing — and is NOT logged as retrieved (so it can't
+    # be cited off the back of a full-text read that never happened).
+    monkeypatch.setattr(investigate, "_http_get",
+                        lambda url, timeout=12: '{"linksets":[{"linksetdbs":[]}]}' if "elink" in url else "<article/>")
+    r = investigate.Retriever(email="x@y.z")
+    assert r.pmc_fetch(["999"]) == {}
+    assert "PMID:999" not in r.retrieved
+
+
+def test_retriever_pmc_fetch_http_error_degrades(monkeypatch):
+    def boom(url, timeout=12): raise OSError("network")
+    monkeypatch.setattr(investigate, "_http_get", boom)
+    r = investigate.Retriever(email="x@y.z")
+    assert r.pmc_fetch(["111"]) == {}            # never raises
+
+
+def test_pmc_fetch_cap_enforced_in_dispatch(monkeypatch):
+    monkeypatch.setattr(investigate, "_http_get", lambda url, timeout=12: '{"linksets":[]}')
+    r = investigate.Retriever(email="x@y.z")
+    caps = {"search": 3, "fetch": 6, "pmc": 1}
+    investigate._dispatch(r, "pmc_fetch", {"pmids": ["1"]}, caps)          # n_pmc 0 -> 1
+    out = investigate._dispatch(r, "pmc_fetch", {"pmids": ["2"]}, caps)    # 1 == cap -> exhausted
+    assert "budget" in out
+
+
+def test_run_investigation_uses_pmc_fulltext_then_grounds(monkeypatch):
+    def fake_get(url, timeout=12):
+        if "esearch" in url:
+            return '{"esearchresult":{"idlist":["30679523"]}}'
+        if "elink" in url:
+            return '{"linksets":[{"linksetdbs":[{"dbto":"pmc","links":["6349789"]}]}]}'
+        return "<article><body><p>GABARAP-knockout abolished the 8H5 signal.</p></body></article>"
+    monkeypatch.setattr(investigate, "_http_get", fake_get)
+    turns = [
+        _FakeMsg([_FakeBlock(type="tool_use", id="t1", name="pubmed_search", input={"query": "GABARAP 8H5 knockout"})]),
+        _FakeMsg([_FakeBlock(type="tool_use", id="t2", name="pmc_fetch", input={"pmids": ["30679523"]})]),
+        _FakeMsg([_FakeBlock(type="tool_use", id="t3", name="emit_investigation",
+                             input={"verdict": "FOUND_VALIDATION", "reasoning": "KO abolished signal (full text)",
+                                    "cited": [{"id": "PMID:30679523", "kind": "pubmed", "title": "t", "why": "KO"}],
+                                    "steps": ["searched", "read PMC full text PMID:30679523"]})]),
+    ]
+    r = investigate.Retriever(email="x@y.z")
+    inv = investigate.run_investigation("Investigate 8H5 (GABARAP).", r,
+                                        client=_ScriptedClient(turns), kind="antibody")
+    assert inv.verdict == "FOUND_VALIDATION" and inv.grounded is True
+    assert [c.id for c in inv.cited] == ["PMID:30679523"]
