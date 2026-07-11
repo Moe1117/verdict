@@ -20,6 +20,7 @@ import logging
 import os
 import queue
 import threading
+from dataclasses import asdict
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -32,6 +33,7 @@ from .baseline import plain_llm_baseline
 from .cards import card_payload
 from .env import load_dotenv
 from .trialmatch import card_to_dict, review
+from .investigate import Investigation, investigate_antibody, investigate_cell_line
 from .repro import report_to_dict
 from .repro import review as repro_review
 from .verdict import run_live
@@ -201,6 +203,46 @@ def api_repro(req: ReproRequest) -> dict:
         raise HTTPException(status_code=502, detail="reproducibility review failed — see server logs") from e
     finally:
         _slots.release()
+
+
+class InvestigateRequest(BaseModel):
+    kind: str
+    name: str
+    target: str | None = None
+    catalog: str | None = None
+    rrid: str | None = None
+    iclac_id: str | None = None
+    cvcl: str | None = None
+
+    @field_validator("name")
+    @classmethod
+    def _bounded_name(cls, v: str) -> str:
+        v = (v or "").strip()
+        if not v:
+            raise ValueError("name is required")
+        return v[:200]
+
+
+@app.post("/api/investigate")
+def api_investigate(req: InvestigateRequest) -> dict:
+    # The agentic investigator makes several paid Claude calls + live API lookups, so it takes a
+    # daily-budget slot AND a concurrency slot like the other paid endpoints.
+    _daily_gate()
+    if not _slots.acquire(blocking=False):
+        raise HTTPException(status_code=429, detail="server is busy — too many concurrent investigations")
+    try:
+        if req.kind == "cell_line":
+            inv = investigate_cell_line(name=req.name, iclac_id=req.iclac_id or "", cvcl=req.cvcl or "")
+        else:
+            inv = investigate_antibody(name=req.name, target=req.target or "", catalog=req.catalog or "",
+                                       rrid=req.rrid or "")
+    except Exception:  # noqa: BLE001 — degrade gracefully, never 502
+        log.exception("investigation failed")
+        inv = Investigation(kind=req.kind, verdict="INCONCLUSIVE",
+                            reasoning="investigation failed", steps=["investigation failed"])
+    finally:
+        _slots.release()
+    return {"investigation": asdict(inv)}
 
 
 def _sse_frame(event: str, data: object) -> str:
