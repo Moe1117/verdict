@@ -33,10 +33,10 @@
     "item": "antibody: GFAP",
     "kind": "antibody",
     "result": "INSUFFICIENT",
-    "detail": "No RRID resolves for this reagent \u2014 add a validated catalog number and its RRID.",
+    "detail": "No catalog number given \u2014 a name alone can't be authenticated; add the vendor catalog # and its RRID.",
     "evidence": "anti-GFAP (Dako)",
     "citation": "",
-    "method": "rule"
+    "method": "model judgment"
    },
    {
     "item": "Sex of animals/cells reported (SABV)",
@@ -82,7 +82,7 @@
   "to_fix": [
    "cell line: GR-M \u2014 On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
    "cell line: SNB-19 \u2014 On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
-   "antibody: GFAP \u2014 No RRID resolves for this reagent \u2014 add a validated catalog number and its RRID.",
+   "antibody: GFAP \u2014 No catalog number given \u2014 a name alone can't be authenticated; add the vendor catalog # and its RRID.",
    "Sex of animals/cells reported (SABV) \u2014 Could not determine from the text.",
    "Sample size (n) per group stated \u2014 Could not determine from the text.",
    "Randomization stated \u2014 Could not determine from the text.",

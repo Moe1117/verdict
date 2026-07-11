@@ -10,7 +10,8 @@ A missing datum -> INSUFFICIENT (abstain), never a guess. Every FAIL carries a c
 The honest boundary: the cell-line and antibody gates are deterministic lookups (result = "rule").
 Whether a knockout control was *run* is a labelled model judgment. We do not claim no LLM in the
 loop; we claim the verdicts trace to a citable record, and the tool catches what a confident model
-misses on the obscure long tail (see scripts/repro_iclac_benchmark.py: bare model 20% / tool 100%).
+misses on the obscure long tail (see scripts/repro_iclac_benchmark.py: a frontier model correctly
+identifies ~17% of known-contaminated lines; the tool catches ~92% end-to-end, every FAIL cited).
 """
 from __future__ import annotations
 
@@ -121,32 +122,53 @@ def _ab_cache() -> dict:
     return {}
 
 
+def _ab(label: str, result: str, detail: str, evidence: str, citation: str = "", method: str = "rule") -> Finding:
+    return Finding(item=f"antibody: {label}", kind="antibody", result=result, detail=detail,
+                   evidence=evidence, citation=citation, method=method)
+
+
 def check_antibody(name: str, vendor: str = "", catalog: str = "", evidence: str = "") -> Finding:
-    """Resolve a catalog number to an RRID via the Antibody Registry (cache first, then live)."""
-    q = (catalog or name).strip()
-    label = name or f"{vendor} {catalog}".strip() or q
-    hit = _ab_cache().get(_norm(q))
-    if hit is None:
-        try:
+    """Resolve a catalog number to an RRID via the Antibody Registry — a live best-effort search.
+
+    We cite a PASS only when a returned record's catalog number MATCHES the queried catalog (and the
+    vendor, when one is given), so we never cite a different vendor's RRID for the same number. A bare
+    name, an ambiguous multi-vendor match, no match, or an unreachable registry all yield
+    NEEDS-VERIFICATION — never a guessed PASS. (The one place this differs from the deterministic ICLAC
+    gate: the search is a live network call, so it is best-effort, not offline-deterministic.)
+    """
+    label = (name or f"{vendor} {catalog}").strip()
+    if not catalog.strip():
+        return _ab(label, "INSUFFICIENT", "No catalog number given — a name alone can't be authenticated; "
+                   "add the vendor catalog # and its RRID.", evidence, method="model judgment")
+    cached = _ab_cache().get(_squash(catalog))
+    try:
+        if cached is not None:
+            items = cached
+        else:
             url = "https://www.antibodyregistry.org/api/fts-antibodies?" + urllib.parse.urlencode(
-                {"q": q, "page": 1, "size": 5})
+                {"q": catalog, "page": 1, "size": 10})
             with urllib.request.urlopen(url, timeout=10) as resp:  # noqa: S310
                 items = json.loads(resp.read()).get("items", [])
-            if items:
-                it = items[0]
-                hit = {"rrid": f"RRID:AB_{it.get('accession')}",
-                       "vendor": it.get("vendorName", ""), "catalog": it.get("catalogNum", "")}
-        except Exception:  # noqa: BLE001
-            hit = None
-    if hit:
-        return Finding(
-            item=f"antibody: {label}", kind="antibody", result="PASS",
-            detail=f"Resolves to {hit['rrid']} ({hit.get('vendor','')} {hit.get('catalog','')}).".strip(),
-            evidence=evidence, citation=hit["rrid"], method="rule")
-    return Finding(
-        item=f"antibody: {label}", kind="antibody", result="INSUFFICIENT",
-        detail="No RRID resolves for this reagent — add a validated catalog number and its RRID.",
-        evidence=evidence, citation="", method="rule")
+    except Exception:  # noqa: BLE001
+        return _ab(label, "INSUFFICIENT", "Could not reach the Antibody Registry — verify the RRID manually.",
+                   evidence)
+    # keep only records whose catalog number matches what was written, then disambiguate by vendor
+    cand = [it for it in items if _squash(str(it.get("catalogNum", ""))) == _squash(catalog)]
+    if vendor.strip():
+        v = _norm(vendor)
+        vend = [it for it in cand if v in _norm(str(it.get("vendorName", "")))]
+        if vend:
+            cand = vend
+    if not cand:
+        return _ab(label, "INSUFFICIENT", "No RRID resolves for this exact catalog number — verify it is registered.",
+                   evidence)
+    if len(cand) > 1 and not vendor.strip():
+        return _ab(label, "INSUFFICIENT", "Multiple vendors list this catalog number — specify the vendor "
+                   "so the RRID is unambiguous.", evidence)
+    it = cand[0]
+    rrid = f"RRID:AB_{it.get('accession')}"
+    return _ab(label, "PASS", f"Resolves to {rrid} ({it.get('vendorName','')} {it.get('catalogNum','')}).".strip(),
+               evidence, citation=rrid)
 
 
 # ---------------------------------------------------------------------------

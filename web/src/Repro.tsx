@@ -5,7 +5,7 @@ import type { IclacBench, ReproDeck, ReproFinding, ReproReport } from './types'
 // "Submission-ready" → "b-Submissionready", "Needs fixes" → "b-Needsfixes". CSS matches.
 const reproBadgeClass = (v: string) => 'badge b-' + v.replace(/[\s-]/g, '')
 
-const pct = (x: number) => Math.round(x * 100) + '%'
+const pct = (x: number) => Math.round(x * 100 - 1e-9) + '%'  // round-half-down so 92.5% shows as 92%, matching the docs
 
 // Per-finding result → glyph + colour class. INSUFFICIENT is the abstention state.
 const RESULT_META: Record<string, { icon: string; cls: string; label: string }> = {
@@ -65,8 +65,6 @@ function FindingRow({ f }: { f: ReproFinding }) {
   )
 }
 
-// The mic-drop: on 20 obscure misidentified lines, a bare model is right 20% of the time and
-// confidently wrong on 6; the registry layer is 100%, every call cited. We prove it with the
 // The benchmark panel — TWO separate measured facts, never a rigged head-to-head: how unreliable a
 // frontier model is at this task, and how well the tool actually works end-to-end on messy prose.
 function BenchmarkPanel({ bench }: { bench: IclacBench }) {

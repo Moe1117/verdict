@@ -28,3 +28,16 @@ def test_aggregate_truth_table():
     assert aggregate([Finding("x", "cell_line", "PASS", "")]) == "Submission-ready"
     # a FAIL dominates an INSUFFICIENT
     assert aggregate([Finding("a", "cell_line", "FAIL", ""), Finding("b", "rigor", "INSUFFICIENT", "")]) == "Needs fixes"
+
+
+def test_antibody_requires_matching_catalog(monkeypatch):
+    # a bare name (no catalog) must abstain, never PASS
+    assert repro.check_antibody("anti-GFAP", "Dako", "").result == "INSUFFICIENT"
+    # a catalog that resolves to a DIFFERENT vendor must not be cited as a PASS for the queried vendor
+    monkeypatch.setattr(repro, "_ab_cache", lambda: {repro._squash("ab290"): [
+        {"accession": 111, "vendorName": "Advanced Targeting Systems", "catalogNum": "AB-290"},
+        {"accession": 303395, "vendorName": "Abcam", "catalogNum": "ab290"}]})
+    f = repro.check_antibody("anti-GFP", "Abcam", "ab290")
+    assert f.result == "PASS" and f.citation == "RRID:AB_303395", (f.result, f.citation)
+    # same catalog, wrong/absent vendor + two vendors -> ambiguous -> abstain
+    assert repro.check_antibody("anti-GFP", "", "ab290").result == "INSUFFICIENT"

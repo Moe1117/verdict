@@ -92,16 +92,11 @@ for rec in repro._load_iclac().values():
 misids.sort(key=lambda x: x[1]["iclac_id"])
 if len(sys.argv) > 1:
     misids = misids[: int(sys.argv[1])]
-# large legit control set: curated famous lines + the register's own true-identity lines
-# (authentic lines that are NOT themselves misidentified) — a real specificity test at scale.
-_ti = set()
-for _r in repro._load_iclac().values():
-    _t = _r["true_identity"]
-    if _t and _t.lower() not in ("unknown", ""):
-        _c = re.split(r"[;,/]", re.sub(r"\(.*?\)", "", _t))[0].strip()
-        if _c:
-            _ti.add(_c)
-legit = [n for n in dict.fromkeys(LEGIT + sorted(_ti)) if repro.check_cell_line(n).result == "PASS"]
+# INDEPENDENT authentic control set — famous cell lines that are unambiguously real (never on the
+# misidentified register), chosen by common knowledge, NOT filtered by the tool's own verdict. The
+# tool's false-flag rate on these is therefore a genuine specificity measurement (does its name
+# matching ever WRONGLY flag an authentic line?), not the tautology of "keep only what it passes".
+legit = list(dict.fromkeys(LEGIT))
 
 items = [("mis", n, rec) for n, rec in misids] + [("legit", n, None) for n in legit]
 print(f"testing {len(misids)} misidentified + {len(legit)} legit = {len(items)} lines (threaded)...")
@@ -157,8 +152,11 @@ summary = {
     "llm_strict_famous": acc(famous), "llm_strict_tail": acc(tail),
     "llm_flag_recall_tail": acc(tail, "llm_flagged"),
     "llm_confident_wrong": sum(r["llm_confident_wrong"] for r in rows),
+    "llm_confident_wrong_misidentified": sum(r["llm_confident_wrong"] for r in mis),  # the honest "N of 594"
     "llm_false_flag_legit": sum(1 for r in leg if r["llm_flagged"]),
-    "tool_catches_known": 1.0, "tool_false_positive_legit": 0,   # deterministic register lookup
+    "tool_catches_known": 1.0,
+    # MEASURED, not asserted: run the tool on each independent authentic control and count real false-flags
+    "tool_false_positive_legit": sum(1 for r in leg if repro.check_cell_line(r["name"]).result == "FAIL"),
     "errors": sum(1 for r in rows if r["error"]),
 }
 json.dump({"summary": summary, "rows": rows}, open("benchmark/repro/iclac_eval.json", "w"), indent=1)
