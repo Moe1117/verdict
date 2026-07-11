@@ -75,3 +75,62 @@ def test_retriever_http_error_degrades(monkeypatch):
     r = investigate.Retriever(email="x@y.z")
     assert r.pubmed_search("x") == []            # never raises
     assert r.cellosaurus_lookup("CVCL_x") == {}  # never raises
+
+
+# ---- Task 3: the bounded agentic loop ------------------------------------------------------------
+
+class _FakeBlock:
+    def __init__(self, **kw): self.__dict__.update(kw)
+
+class _FakeMsg:
+    def __init__(self, blocks): self.content = blocks
+
+class _ScriptedClient:
+    """Returns a fixed sequence of assistant turns (one per create call)."""
+    def __init__(self, turns):
+        self._turns = turns
+        self.messages = self
+    def create(self, **kw):
+        return self._turns.pop(0)
+
+class _AlwaysSearchClient:
+    """Never emits — always asks for another search (exercises the cap/degrade path)."""
+    def __init__(self):
+        self.messages = self
+    def create(self, **kw):
+        return _FakeMsg([_FakeBlock(type="tool_use", id="t", name="pubmed_search", input={"query": "x"})])
+
+
+def test_run_investigation_executes_tools_then_emits_grounded(monkeypatch):
+    monkeypatch.setattr(investigate, "_http_get",
+                        lambda url, timeout=12: '{"esearchresult":{"idlist":["111"]}}' if "esearch" in url else "KO abstract")
+    turns = [
+        _FakeMsg([_FakeBlock(type="tool_use", id="t1", name="pubmed_search", input={"query": "GABARAP 8H5 knockout"})]),
+        _FakeMsg([_FakeBlock(type="tool_use", id="t2", name="emit_investigation",
+                             input={"verdict": "FOUND_VALIDATION", "reasoning": "KO abolished signal",
+                                    "cited": [{"id": "PMID:111", "kind": "pubmed", "title": "t", "why": "KO"}],
+                                    "steps": ["searched GABARAP 8H5", "read PMID:111"]})]),
+    ]
+    r = investigate.Retriever(email="x@y.z")
+    inv = investigate.run_investigation("Investigate antibody 8H5 (GABARAP).", r,
+                                        client=_ScriptedClient(turns), kind="antibody")
+    assert inv.verdict == "FOUND_VALIDATION" and inv.grounded is True
+    assert [c.id for c in inv.cited] == ["PMID:111"]
+    assert "read PMID:111" in inv.steps
+
+
+def test_run_investigation_strips_ungrounded_citation(monkeypatch):
+    # the model emits without ever retrieving PMID:999 -> stripped -> downgraded to abstain
+    monkeypatch.setattr(investigate, "_http_get", lambda url, timeout=12: '{"esearchresult":{"idlist":[]}}')
+    turns = [_FakeMsg([_FakeBlock(type="tool_use", id="t", name="emit_investigation",
+                                  input={"verdict": "FOUND_VALIDATION", "reasoning": "made up",
+                                         "cited": [{"id": "PMID:999", "kind": "pubmed"}], "steps": []})])]
+    inv = investigate.run_investigation("t", investigate.Retriever(), client=_ScriptedClient(turns), kind="antibody")
+    assert inv.verdict == "NO_VALIDATION_FOUND" and inv.cited == []
+
+
+def test_run_investigation_caps_and_degrades(monkeypatch):
+    monkeypatch.setattr(investigate, "_http_get", lambda url, timeout=12: '{"esearchresult":{"idlist":[]}}')
+    inv = investigate.run_investigation("t", investigate.Retriever(), client=_AlwaysSearchClient(),
+                                        kind="antibody", max_steps=3)
+    assert inv.verdict == "INCONCLUSIVE"
