@@ -131,6 +131,25 @@ export interface ReproDeck {
   report: ReproReport
 }
 
+// ── Agentic Investigator: Claude autonomously searches PubMed/Cellosaurus for real-citation evidence ──
+
+export interface InvestigationCitation {
+  id: string          // "PMID:30679523" | "CVCL_2451" | "RRID:AB_..."
+  kind: string        // "pubmed" | "cellosaurus" | "antibody_registry"
+  title?: string
+  why?: string
+}
+
+export interface Investigation {
+  kind: string        // "antibody" | "cell_line"
+  verdict: string     // FOUND_VALIDATION | NO_VALIDATION_FOUND | PROVENANCE_CHAIN | PARTIAL | INCONCLUSIVE
+  cited: InvestigationCitation[]
+  reasoning: string
+  steps: string[]     // the agentic trail (searched -> read -> concluded)
+  grounded: boolean
+  method: string
+}
+
 export interface IclacBenchExample {
   name: string
   model_says: string

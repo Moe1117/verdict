@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import type { IclacBench, ReproDeck, ReproFinding, ReproReport } from './types'
+import type { IclacBench, Investigation, ReproDeck, ReproFinding, ReproReport } from './types'
 
 // Verdict badge class — like App.tsx's badgeClass, but strips spaces AND hyphens so
 // "Submission-ready" → "b-Submissionready", "Needs fixes" → "b-Needsfixes". CSS matches.
@@ -50,12 +50,78 @@ function renderDetail(detail: string) {
   )
 }
 
-// One finding row: result icon · item · citation badge · provenance tag, then the detail
-// verdict and (when present) the verbatim manuscript evidence in quotes.
-function FindingRow({ f }: { f: ReproFinding }) {
+// Agentic-investigation verdict -> label + tone class (reuse the pass/insuf colours).
+const INV_META: Record<string, { label: string; cls: string }> = {
+  FOUND_VALIDATION: { label: 'validation found in the literature', cls: 'pass' },
+  PROVENANCE_CHAIN: { label: 'provenance chain established', cls: 'pass' },
+  PARTIAL: { label: 'partly grounded — verify', cls: 'insuf' },
+  NO_VALIDATION_FOUND: { label: 'no validation found — verify', cls: 'insuf' },
+  INCONCLUSIVE: { label: 'investigation inconclusive', cls: 'insuf' },
+}
+
+function citeHref(id: string): string | null {
+  if (id.startsWith('PMID:')) return `https://pubmed.ncbi.nlm.nih.gov/${id.slice(5)}/`
+  if (id.startsWith('CVCL_')) return `https://www.cellosaurus.org/${id}`
+  return null
+}
+
+// Build the /api/investigate request from a finding (parse the name + any CVCL/ICLAC/RRID from its citation).
+function buildInvReq(f: ReproFinding) {
+  const name = f.item.replace(/^(cell line|antibody|antibody validation):\s*/i, '').trim()
+  const cite = f.citation || ''
+  if (f.kind === 'cell_line') {
+    return { kind: 'cell_line', name,
+             cvcl: (cite.match(/CVCL_\w+/) || [''])[0], iclac_id: (cite.match(/ICLAC-\d+/) || [''])[0] }
+  }
+  return { kind: 'antibody', name, target: name, rrid: (cite.match(/RRID:AB_\w+/) || [''])[0] }
+}
+
+// The agentic investigation: the step trail (searched -> read -> concluded), then the grounded verdict
+// + REAL citations (every id is deterministically verified against actual retrieval — no fabrication).
+function InvestigationView({ inv }: { inv: Investigation }) {
+  const meta = INV_META[inv.verdict] ?? INV_META.INCONCLUSIVE
+  return (
+    <div style={{ marginTop: 8, paddingLeft: 10, borderLeft: '2px solid var(--border, #333)' }}>
+      <div style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: 0.4, color: 'var(--text-muted,#8a8a8a)' }}>
+        Claude investigated the literature
+      </div>
+      <ol style={{ margin: '4px 0 8px', paddingLeft: 18, fontSize: 12.5, color: 'var(--text-muted,#8a8a8a)', lineHeight: 1.55 }}>
+        {inv.steps.map((s, i) => <li key={i}>{s}</li>)}
+      </ol>
+      <div className={'rp-tag ' + (meta.cls === 'pass' ? 'rule' : 'model')} style={{ fontSize: 12.5 }}>
+        {meta.label}
+      </div>
+      {inv.reasoning && <div style={{ fontSize: 12.5, margin: '6px 0', lineHeight: 1.5 }}>{inv.reasoning}</div>}
+      {inv.cited.length > 0 && (
+        <div style={{ fontSize: 12.5 }}>
+          {inv.cited.map((c) => {
+            const href = citeHref(c.id)
+            return (
+              <div key={c.id} style={{ margin: '2px 0' }}>
+                {href ? <a href={href} target="_blank" rel="noreferrer"><b>{c.id}</b></a> : <b>{c.id}</b>}
+                {c.title && <span style={{ color: 'var(--text-muted,#8a8a8a)' }}> — {c.title}</span>}
+              </div>
+            )
+          })}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// One finding row: result icon · item · citation badge · provenance tag, then the detail verdict, the
+// verbatim manuscript evidence, and (for cell lines / antibodies) an agentic "Investigate" affordance.
+function FindingRow({ f, onInvestigate, inv, busy, invError }: {
+  f: ReproFinding
+  onInvestigate?: (f: ReproFinding) => void
+  inv?: Investigation
+  busy?: boolean
+  invError?: string
+}) {
   const meta = RESULT_META[f.result] ?? RESULT_META.INSUFFICIENT
   const cite = f.citation?.trim()
   const ev = f.evidence?.trim()
+  const canInvestigate = onInvestigate && (f.kind === 'cell_line' || f.kind === 'antibody')
   return (
     <div className={'rp-find ' + meta.cls}>
       <span className={'rp-icon ' + meta.cls} title={meta.label}>{meta.icon}</span>
@@ -64,9 +130,19 @@ function FindingRow({ f }: { f: ReproFinding }) {
           <span className="rp-item">{f.item}</span>
           {cite && <span className="rp-cite">{cite}</span>}
           {methodTag(f.method)}
+          {canInvestigate && !inv && (
+            <button type="button" onClick={() => onInvestigate!(f)} disabled={busy}
+              style={{ marginLeft: 'auto', fontSize: 11.5, padding: '2px 8px', cursor: busy ? 'default' : 'pointer',
+                       border: '1px solid var(--border,#333)', borderRadius: 5, background: 'transparent',
+                       color: 'inherit', opacity: busy ? 0.6 : 1 }}>
+              {busy ? <><span className="lc-spin" /> investigating…</> : '⚲ Investigate'}
+            </button>
+          )}
         </div>
         <div className="rp-detail">{renderDetail(f.detail)}</div>
         {ev && <div className="rp-ev">{ev}</div>}
+        {invError && <div className="tm-error" style={{ marginTop: 6 }}>⚠ {invError}</div>}
+        {inv && <InvestigationView inv={inv} />}
       </div>
     </div>
   )
@@ -154,6 +230,8 @@ export default function Repro() {
   const [error, setError] = useState<string | null>(null)
   const [apiUp, setApiUp] = useState<boolean | null>(null)  // null = unknown; false = static host, no backend
   const abortRef = useRef<AbortController | null>(null)
+  const [frozenInv, setFrozenInv] = useState<Record<string, Investigation>>({})
+  const [invState, setInvState] = useState<Record<string, { busy?: boolean; inv?: Investigation; error?: string }>>({})
 
   // On mount: load the hero benchmark and the frozen demo report. Both are instant and
   // bulletproof — the frozen demo is what gets shown, and pre-fills the textarea.
@@ -169,6 +247,11 @@ export default function Repro() {
         setMethods((cur) => cur || d.methods)
       })
       .catch(() => setError('Could not load the saved demo.'))
+    // frozen agentic-investigation examples, so the static build can show the trail with no backend
+    fetch('/repro/investigate_demo.json')
+      .then((r) => r.json())
+      .then((d: Record<string, Investigation>) => setFrozenInv(d))
+      .catch(() => {})
     // is a live backend reachable? (a static deploy has none — so we tell the judge upfront)
     fetch(api('/api/health'))
       .then((r) => setApiUp(r.ok))
@@ -208,6 +291,32 @@ export default function Repro() {
         setState('error')
       })
       .finally(() => clearTimeout(timer))
+  }
+
+  // Launch the agentic investigator for one finding: live via /api/investigate, falling back to a
+  // frozen saved investigation (keyed by the finding item) on a static host or any error.
+  const runInvestigate = (f: ReproFinding) => {
+    const key = f.item
+    setInvState((s) => ({ ...s, [key]: { busy: true } }))
+    fetch(api('/api/investigate'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(buildInvReq(f)),
+    })
+      .then((r) => {
+        if (!r.ok) throw new Error(String(r.status))
+        return r.json()
+      })
+      .then((d: { investigation: Investigation }) => setInvState((s) => ({ ...s, [key]: { inv: d.investigation } })))
+      .catch(() => {
+        const fz = frozenInv[key]
+        setInvState((s) => ({
+          ...s,
+          [key]: fz
+            ? { inv: fz }
+            : { error: 'Live investigation needs the API (see README). This hosted build shows a saved example only where one was pre-captured.' },
+        }))
+      })
   }
 
   // Bucket findings by kind; anything outside the known kinds falls into "Other checks".
@@ -272,7 +381,8 @@ export default function Repro() {
             <div className="rp-group" key={g.kind}>
               <div className="section-label">{g.label}</div>
               {g.items.map((f, i) => (
-                <FindingRow key={f.item + i} f={f} />
+                <FindingRow key={f.item + i} f={f} onInvestigate={runInvestigate}
+                  inv={invState[f.item]?.inv} busy={invState[f.item]?.busy} invError={invState[f.item]?.error} />
               ))}
             </div>
           ))}
@@ -280,7 +390,8 @@ export default function Repro() {
             <div className="rp-group">
               <div className="section-label">Other checks</div>
               {other.map((f, i) => (
-                <FindingRow key={f.item + i} f={f} />
+                <FindingRow key={f.item + i} f={f} onInvestigate={runInvestigate}
+                  inv={invState[f.item]?.inv} busy={invState[f.item]?.busy} invError={invState[f.item]?.error} />
               ))}
             </div>
           )}

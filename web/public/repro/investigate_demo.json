@@ -1,0 +1,49 @@
+{
+ "cell line: GR-M": {
+  "kind": "cell_line",
+  "verdict": "PROVENANCE_CHAIN",
+  "cited": [
+   {
+    "id": "CVCL_2451",
+    "kind": "cellosaurus",
+    "title": "GR-M",
+    "why": "Confirms cell line is documented as contaminated, being a PSN1 derivative, not melanoma-derived as originally believed."
+   },
+   {
+    "id": "PMID:25877200",
+    "kind": "pubmed",
+    "title": "A resource for cell line authentication, annotation and quality control.",
+    "why": "Cellosaurus-cited reference identifying/supporting the GR-M misidentification as a PSN1 derivative via STR/SNP profiling resource."
+   }
+  ],
+  "reasoning": "Cellosaurus entry CVCL_2451 (GR-M) confirms the cell line is documented as contaminated/misidentified, being a PSN1 (pancreatic carcinoma) derivative rather than the originally reported melanoma-derived line. The Cellosaurus record cites PMID 25877200 as a key supporting reference. Fetching this PMID confirms it is Yu et al., Nature 2015, 'A resource for cell line authentication, annotation and quality control,' a large-scale cell line authentication study (Genentech) that catalogued misidentified/synonymous cell lines using STR/SNP profiling — consistent with the type of primary study that would have identified GR-M as a PSN1 derivative. Direct PubMed search using 'GR-M cell line misidentification melanoma' returned no independent hits, so the Yu et al. 2015 paper (already linked via Cellosaurus) stands as the grounded primary reference in the chain rather than an additional independently retrieved paper. The provenance chain is therefore: CVCL_2451 (GR-M, documented as contaminated/PSN1 derivative) -> PMID 25877200 (Yu et al. 2015, Nature) as the cited authentication resource identifying the misidentification.",
+  "steps": [
+   "Looked up CVCL_2451 in Cellosaurus: confirmed GR-M is flagged as contaminated, a PSN1 derivative, originally misattributed as melanoma-patient derived.",
+   "Searched PubMed for 'GR-M cell line misidentification melanoma' - no direct hits returned.",
+   "Fetched PMID 25877200 (linked by Cellosaurus as primary supporting reference) and confirmed it is Yu et al. 2015 Nature paper on cell line authentication resource, which underlies the misidentification finding."
+  ],
+  "grounded": true,
+  "method": "model investigation"
+ },
+ "antibody: GABARAP (8H5)": {
+  "kind": "antibody",
+  "verdict": "FOUND_VALIDATION",
+  "cited": [
+   {
+    "id": "PMID:30679523",
+    "kind": "pubmed",
+    "title": "The highly GABARAP specific rat monoclonal antibody 8H5 visualizes GABARAP in immunofluorescence imaging at endogenous levels.",
+    "why": "Primary paper describing generation and validation of anti-GABARAP 8H5 antibody, explicitly using GABARAP knockout cells as a genetic control to confirm specificity and lack of cross-reactivity with other mATG8 family members."
+   }
+  ],
+  "reasoning": "The primary characterization paper for the anti-GABARAP 8H5 rat monoclonal antibody explicitly describes genetic knockout-based validation. The authors generated GABARAP knockout cells and tested the antibody for unspecific staining in these cells under both fed and macroautophagy-inducing conditions, and compared antibody staining to ectopically expressed fluorescence-tagged GABARAP, GABARAPL1, or GABARAPL2 in the GABARAP knockout background. This directly satisfies the definition of genetic control validation (knockout showing signal loss/specificity), as stated in the abstract: \"We compared the antibody staining pattern with that obtained for fluorescence protein tagged GABARAP, GABARAPL1 or GABARAPL2 each ectopically expressed in GABARAP knockout cells... and checked GABARAP knockout cells for unspecific staining under fed or macroautophagy-inducing conditions.\"",
+  "steps": [
+   "Searched PubMed for 'GABARAP 8H5 antibody knockout' and 'GABARAP antibody specificity knockout validation'",
+   "Both searches returned the same relevant PMID: 30679523",
+   "Fetched abstract for PMID 30679523, confirming it is the original characterization paper for the 8H5 clone",
+   "Abstract explicitly describes use of GABARAP knockout cells to test antibody specificity, satisfying genetic control validation criteria"
+  ],
+  "grounded": true,
+  "method": "model investigation"
+ }
+}
