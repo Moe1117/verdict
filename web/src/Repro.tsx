@@ -132,6 +132,7 @@ export default function Repro() {
   const [methods, setMethods] = useState('')
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle')
   const [error, setError] = useState<string | null>(null)
+  const [apiUp, setApiUp] = useState<boolean | null>(null)  // null = unknown; false = static host, no backend
   const abortRef = useRef<AbortController | null>(null)
 
   // On mount: load the hero benchmark and the frozen demo report. Both are instant and
@@ -148,6 +149,10 @@ export default function Repro() {
         setMethods((cur) => cur || d.methods)
       })
       .catch(() => setError('Could not load the saved demo.'))
+    // is a live backend reachable? (a static deploy has none — so we tell the judge upfront)
+    fetch('/api/health')
+      .then((r) => setApiUp(r.ok))
+      .catch(() => setApiUp(false))
   }, [])
 
   // Live verify: POST the Methods text to /api/repro with a client timeout. On success swap in
@@ -217,13 +222,14 @@ export default function Repro() {
             type="button"
             className={'tm-run' + (state === 'loading' ? ' busy' : '')}
             onClick={verify}
-            disabled={methods.trim().length < 3 || state === 'loading'}
+            disabled={methods.trim().length < 3 || state === 'loading' || apiUp === false}
           >
             {state === 'loading' ? (<><span className="lc-spin" /> verifying…</>) : 'Verify'}
           </button>
           <span className="tm-caption">
-            Verification runs one Claude extraction + deterministic registry lookups — a few seconds. The example
-            below is a saved run.
+            {apiUp === false
+              ? 'This hosted build shows saved examples. For live "Verify", clone the repo and run the API (see README).'
+              : 'Verification runs one Claude extraction + deterministic registry lookups — a few seconds. The example below is a saved run.'}
           </span>
         </div>
         {error && <div className="tm-error">⚠ {error}</div>}
