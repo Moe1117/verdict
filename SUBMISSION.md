@@ -1,213 +1,124 @@
-# Verdict — hackathon submission
+# Methods Verifier — hackathon submission
 
 **Built with Claude: Life Sciences · Builder track · July 7–13 2026**
 Repo: https://github.com/Moe1117/verdict · Demo video: _(link)_
 
 ---
 
-## Summary (≈170 words — the submission blurb)
+## Summary (≈185 words)
 
-Verdict is a decidable evidence resolver for biomedical claims. Paste one —
-*"aducanumab improves cognitive outcomes in Alzheimer's"* — and it resolves live,
-streaming each study in as Claude extracts it, then returns one of four states:
-**Supported, Not Supported, Contested,** or **Insufficient**, with a confidence and an audit
-ledger tracing every study to the gate it fed. When the evidence cannot decide it abstains
-rather than return an unsupported verdict — and states what evidence would change its mind.
+Journals now require, at submission, that a manuscript's Methods declare RRIDs for antibodies,
+authentication for cell lines, and animal-rigor reporting (sex/SABV, n, randomization, blinding).
+Methods Verifier is the pre-submission check for exactly that. Paste your Methods + Key-Resources
+section and it returns a per-resource verdict — **PASS / FAIL / NEEDS-VERIFICATION** — each tied to
+a citable public record, rolled up into a submission-ready gate.
 
-The architecture is the point. Claude does one job: structured extraction from each
-trial — design, sample size, effect, and whether the endpoint is the *real* outcome or a
-**surrogate**. A **deterministic gate engine, with no LLM in the verdict path,** issues the
-verdict. So every verdict is a pure, auditable function of the evidence: it sets aside
-aducanumab's amyloid-PET surrogate and returns Contested, and abstains on metformin-for-aging
-because the human trials aren't in yet. The **gate engine** is 91% accurate here; the full live
-**product** scores 62% and abstains on 19% rather than overstate — both reported. We don't claim
-to out-score a strong LLM on famous claims (a naive Claude gets 78%). Verdict's edge is that it
-*shows its work*, is calibrated, abstains when the evidence is genuinely split, and won't
-reproduce a fraud-driven result.
+Claude does **extraction only**; deterministic gates issue every verdict against ground truth a
+model cannot fabricate: cell lines against the **ICLAC Register of Misidentified Cell Lines**,
+antibodies against the **Antibody Registry** (catalog# → RRID), rigor items against ARRIVE/MDAR/SABV.
+When a datum is missing it **abstains**, never guesses.
+
+Why it needs to exist, measured: on the *entire* 594-line ICLAC register, a frontier model correctly
+identifies only **17%** of known-contaminated cell lines (95% CI 14–21%), is **confidently wrong on
+256**, and **false-flags 12%** of genuinely clean lines. The tool, stress-tested end-to-end through
+messy Methods prose, catches **92%** with **zero** false alarms — every call cited to an ICLAC ID +
+CVCL. It catches what a confident model gets wrong, before Reviewer 2 does.
 
 ---
 
 ## What it does
 
-Grades the *state of published evidence* for a drug-efficacy or repurposing claim, and
-shows its work. Four evidence states plus a measured reject option (abstain). Click any
-verdict to see the trials, the surrogate-vs-outcome flags, the retractions, and the exact
-gate each study passed. Paste your own claim and it resolves live — retrieving, extracting,
-and gating end-to-end; when it abstains, it names the evidence that would make the claim
-decidable. A research / literature-triage tool for clinicians and reviewers — **not** medical
-advice, a diagnosis, or a treatment recommendation.
+Reads a manuscript's Methods / Key-Resources section and issues a per-resource report card:
+- **Cell lines** → checked against the ICLAC misidentified-cell-line register (bundled offline).
+  On the register → **FAIL**, cited with the ICLAC ID, CVCL/RRID, and the line's *true* identity.
+- **Antibodies** → resolved against the Antibody Registry (catalog# → `RRID:AB_…`). Resolves →
+  **PASS** with the RRID; no RRID → **NEEDS-VERIFICATION**.
+- **Rigor reporting** → ARRIVE 2.0 / MDAR / NIH-SABV presence checks (sex, n, randomization, blinding).
+- A missing datum → **NEEDS-VERIFICATION** (abstain), never a guess. Every finding opens an audit
+  ledger: the source phrase, the registry record, and which gate fired.
+
+The demo opens on a **frozen example** (bulletproof, served statically), and a **live lane** verifies
+your own pasted Methods end-to-end. A pre-submission screening aid for professionals — **not** a
+substitute for STR authentication or peer review.
 
 ## Who it's for
 
-A clinician, medical-affairs reviewer, or translational scientist triaging a
-drug-efficacy or repurposing question — *"is this real, or is it hype and a surrogate?"* —
-who needs a sourced, rigorous assessment, including an explicit determination that the evidence is not yet sufficient.
+A **bench scientist or PI self-checking their own manuscript** before journal submission — the person
+who writes and owns the Methods, and who eats the correction if a cell line turns out to be a HeLa
+contaminant. Every scientist and trainee touches this; nobody memorizes the 600-entry misidentified
+register.
 
 ## How we built it (with Claude)
 
-- **Claude = structured extraction only.** From each trial it pulls design, N, effect
-  direction, population fit, and — decisively — whether the endpoint measures the *claimed*
-  outcome or only a surrogate (amyloid vs cognition, PFS vs OS, LDL vs CV events). It never
-  decides.
-- **Deterministic gate engine decides.** A pure function over the rows: integrity screen
-  (drops retracted/withdrawn work), outcome-directness (surrogate-only → Insufficient), a
-  sufficiency gate (abstains on thin evidence), and a definitive tier where a *supermajority*
-  of large RCTs decides while a genuine split (aducanumab's EMERGE vs ENGAGE) stays Contested.
-- **Live retrieval** from PubMed (NCBI E-utilities) and ClinicalTrials.gov. The 32-claim
-  clinical benchmark was built and adversarially fact-checked from those sources.
-- **Live lane — paste your own claim.** Verdict resolves it end-to-end in the browser:
-  Claude parses it, PubMed and ClinicalTrials.gov are searched, each study is extracted and
-  streams in as it lands, then the deterministic gate issues the verdict — over Server-Sent
-  Events, so you watch the pipeline work. The verified frozen deck stays as a fallback, so a
-  demo can't be broken by the network.
-- **Research directive.** Every verdict states what would change it — for an abstention, the
-  specific evidence that would make the claim decidable (the missing trial, the non-surrogate
-  outcome); for a decided verdict, the result that would overturn it. Deterministic, read from
-  the gate outcome.
-- **Falsification pass.** Before committing a decided verdict, the live pipeline runs a second,
-  *disconfirming* retrieval — it actively searches for the evidence that would overturn itself,
-  then lets the gate re-decide over the union. A verdict that survives has survived an attempt to
-  refute it; a missed contradicting trial gets its chance to flip it. Measured on the live benchmark,
-  the pass flips solanezumab off a confident *Supported*, taking the strict confident false-positive
-  **1→0** and the broad count **3→1**, at a ~4-point accuracy cost (66%→62%) and +3 points abstention
-  — the honest safety trade.
-- **Adversarial hardening.** We red-teamed the engine with 40 cases grounded in real trials, built
-  to force a confident error. The gate held on 36; of the breaks, two were genuine bugs (a large
-  *null* meta-analysis and a lone pooled meta were each letting a positive signal through) — both
-  fixed and independently verified, with **zero regression** across the curated, cold, and
-  held-out benchmarks.
-- Web UI contrasts a plain LLM's confident answer against Verdict's audited call.
+- **Claude = structured extraction only.** From messy Methods prose it pulls a typed inventory —
+  every cell line, antibody (with catalog#), and rigor fact — each carrying its verbatim source span.
+  It never issues a verdict.
+- **Deterministic gates decide.** Pure lookups over public ground truth: ICLAC/Cellosaurus for
+  cell-line identity, the Antibody Registry for RRIDs, ARRIVE/MDAR/SABV presence rules for rigor.
+  Same extract → gate → abstain → audit-ledger architecture used across this repo.
+- **Calibrated abstention.** Absence of an extracted fact forces `NEEDS-VERIFICATION`, so the tool
+  surfaces what a reviewer must check rather than inventing a pass.
+- **Fail-proof demo, real live lane.** The ICLAC register ships as a bundled 594-line asset (no live
+  dependency); the Antibody Registry is a live, key-less API. `POST /api/repro` verifies any pasted
+  Methods; the frozen example is the fallback so the network can't break a demo.
+- Public data only (ICLAC/Cellosaurus, Antibody Registry, ARRIVE/MDAR/NIH policy) — MIT.
 
 ## The honest scorecard
 
-Blind clinical benchmark, 32 breakthrough-medicine claims (GLP-1, anti-amyloid, oncology,
-cardiometabolic, repurposing), exact 4-state match vs documented clinical/regulatory consensus.
-Every **plain-LLM** answer is a **real, logged Claude call** (`scripts/live_baseline.py`, committed
-to `benchmark/baselines_audit.json`) — a reproducible tool-vs-tool comparison, not a cached string.
+Two **separate, measured** results — never a rigged head-to-head. The first measures how unreliable a
+frontier model is at this task; the second measures how well the tool works end-to-end.
 
-| Method | Accuracy | Confident false-positives |
+**1 — A frontier model is unreliable, both ways.** Bare Claude asked, for each line, "is this
+misidentified, and if so what is it really?", scored over the **entire 594-line ICLAC register** (no
+cherry-picking) plus **168 authentic control lines**, reproduced across two independent runs
+(`scripts/repro_iclac_benchmark.py`, `benchmark/repro/iclac_eval.json`):
+
+| | Bare Claude | The register |
 |---|---|---|
-| **Verdict — gate engine** (logic only, over verified rows) | **91%** | **0** |
-| Naive study-count vote | 84% | 0 |
-| Plain LLM — naive Claude (confident yes/no, no tools) | 78% | 0 · 3 † |
-| **Verdict — full live product** (Claude extracts end-to-end, falsification pass on) | **62%** | 0 strict · 1 broad † |
+| Correctly names a known-contaminated line (strict) | **17%** (95% CI 14–21%) | 100% completeness † |
+| Confidently wrong | **256 of 594** | 0 |
+| False-flags a *clean* line | **20 of 168 (12%)** | **0 of 168** |
+| Famous (~11) vs obscure tail (519) | 91% vs **16%** | — |
 
-† Strict definition (a confident *Supported* where the truth is Not-Supported/Insufficient): **every
-method here is 0** — a strong naive Claude already rejects the debunked claims (ivermectin, HCQ,
-solanezumab). Broad definition (a confident *Supported* on a claim whose evidence is genuinely
-**Contested**): naive Claude commits **3** (it cannot say "contested"); Verdict returns **Contested**
-on those.
+† The register's "100%" is the **completeness of a lookup** — it *contains* every known misidentified
+line, so it flags them all by definition. That number is not the claim; the measured, non-tautological
+results are the model's 17% / 256 / 12% and the tool's end-to-end catch below.
 
-**The live number is a distribution, not a point — and we disclose the variance.** The live pipeline
-is non-deterministic: the LLM parses each claim into a search query, so every run retrieves a slightly
-different evidence set. Across **three independent runs** the full product scored **60% mean
-(56–62%)**, and — the uncomfortable part — the strict confident-FP count was **0 in two runs but 1 in
-the third**, when solanezumab was retrieved *without* its disconfirming EXPEDITION3 trial and resolved
-*Supported*. So "0 strict confident-FP" is a **per-run outcome (~2 in 3 here), not a guarantee**, and
-**13 of 32 claims (40%) changed verdict across runs**. This is a **retrieval-recall** limitation, not a
-gate failure — the gate is deterministic *given* the evidence, but the evidence retrieved is not
-(`benchmark/live_variance.json`). Making retrieval reproducible (seeded/cached queries, or a
-best-of-N retrieval vote) is the single highest-value fix to the live product, and we name it openly.
+**2 — The tool works end-to-end on messy prose.** The register lookup is deterministic; the real risk
+is that Claude fails to *extract* the line name from realistic Methods text. Stress-tested on 40
+known-contaminated lines embedded in nine phrasings (clean → dense → in-a-list → hyphen-stripped) plus
+18 legit controls (`scripts/repro_stress_test.py`, `benchmark/repro/stress_eval.json`):
 
-**We are deliberately not claiming to beat a plain LLM.** On famous, well-documented claims a strong
-naive Claude is a hard baseline — 78%, and it confidently rejects the frauds — because it has read
-the very literature the benchmark is drawn from. The live product's **62% is *below* naive Claude's
-78%** on this set, and that is honest: for claims a model has effectively memorized, retrieval +
-extraction only add noise. So an all-famous-claims benchmark *understates* where the architecture
-earns its keep. Verdict's real edge is threefold: (1) it is **sourced and auditable** — every verdict
-traces to trials + gates, where the LLM gives an unsourced sentence; (2) it is **calibrated and
-abstains** — it returns Contested/Insufficient on the borderline claims where naive Claude commits a
-confident wrong answer; (3) it **resists a fraud-driven result** — retracted evidence is excluded
-before the gate. Where the architecture should most clearly win — **novel claims a model has not
-memorized** — we test with a dedicated novel-claim benchmark (see *Novel claims* below). The 91%→62%
-gap is retrieval recall + extraction error, honestly reported (`scripts/live_benchmark.py`).
+- **92% end-to-end catch** (37/40) · **0 name-match misses** (the lookup held across every phrasing) ·
+  **0 false-flags** on legit lines. The 3 misses were 2 genuinely bizarre non-standard names and 1
+  intermittent crash (a `None` extraction under concurrency), now hardened to degrade gracefully.
 
-**The gold set is externally valid — not just circular.** The 91% measures whether the gate
-reproduces the author-written gold over structured rows; on its own that is auditability, not
-external accuracy (the author wrote the rows, the gold, *and* the gate). So we independently
-cross-checked a representative **12 gold labels** — spanning Supported / Not-Supported / Contested /
-Insufficient — against external landmark evidence (NEJM/Lancet/JCO RCTs, meta-analyses, FDA and
-guideline actions), adjudicating from the sources *before* comparing to the gold
-(`benchmark/gold_external_audit.json`). External evidence agreed **12/12** — including the two claims
-the live pipeline itself mis-called (osimertinib and trastuzumab: the gold is right, the pipeline
-*under*-called them) and the ivermectin case, where the raw literature only looks mixed because a
-pooled meta-analysis is contaminated by the retracted Elgazzar trial and only the quality-weighted
-verdict is Not-Supported. The 91% is auditability over an externally-validated gold, not a
-self-graded exam.
+## The honest boundaries (stated up front)
 
-We also measured **Claude's extraction in isolation** (studies held fixed, retrieval removed;
-`scripts/extraction_eval.py`, 162 studies): per field it matches the gold rows **100%** on integrity,
-93% on design, 91% on effect-direction polarity, and 85% on the surrogate-vs-outcome flag — but it
-gets **every field of a study exactly right only 62% of the time** (raw effect-direction 82%), which
-is the load-bearing number since one wrong field can flip a gate. Its errors are **conservative** (a
-positive trial read as null, more endpoints flagged as surrogate), which push toward abstention, not
-false positives — so the remaining live gap is dominated by retrieval recall, but extraction is the
-next-largest lever.
+This audience rewards knowing exactly what you have — so:
 
-**Calibration is measured, and measurably imperfect.** Certainty is an ordinal grade (High /
-Moderate / Low / Very Low). The honest out-of-sample check is a calibration fit on the **dev set
-only**, then tested on held-out claims never used to fit it. High-certainty is right **79% on the
-original held-out (n=24 High; heldout + heldout_v2)** and **82% across all held-out (n=50 High)** —
-a later 40-claim set was added to tighten the interval, so we report *both* rather than only the
-larger number, and note the pooled dev+held-out buckets (87%, 95% CI 78–93%, n=71) include the fit
-data and are **not** out-of-sample. ECE 0.156 across 82 held-out claims. A distribution-free
-conformal guarantee bounds committed error **≤20% at High** (held in 93% of random exchangeable
-splits) — and it does **not** hold under the deliberate covariate shift to the held-out set (27%
-realized error), which we state openly. Calibration and the guarantee are measured on the **gate
-engine over verified rows**; the live product (62%) is not yet re-calibrated end-to-end.
-
-## Novel claims — where the architecture is supposed to win
-
-The curated benchmark is all famous claims a strong LLM has read. To probe the opposite — claims a
-Jan-2026-cutoff model has *not* pinned down — we had agents search live PubMed for recent (2024–2025)
-trial readouts chosen to be counterintuitive in **both** directions (hyped drugs that missed, unexpected
-successes), ground each in a real primary-trial PMID, and independently verify it
-(`scripts/novel_benchmark.py`, `benchmark/novel_claims.json`). The set is **n=12**, balanced 6
-Not-Supported / 6 Supported so neither a blanket "yes" nor "no" wins, and we ran the full head-to-head
-**three times** to measure run-to-run variance (`benchmark/novel_variance.json`).
-
-**The honest result: on this set naive Claude wins on accuracy, and Verdict does not.**
-
-| | naive Claude | Verdict (live) |
-|---|---|---|
-| Accuracy (mean of 3 runs) | **92%** (stable, 0 flips) | **61%** (58–67%; flips on 8/12 claims) |
-| Confident false-positives | **1 every run** | **0** (across all 36 decisions) |
-| Decisive-wrong calls | 1 every run | **0** (across all 36 decisions) |
-| Abstains | never | 33–42% |
-
-*(Naive Claude's single error is one event — navacaprant — that is simultaneously its confident
-false-positive and its decisive-wrong call; the two rows count the same miss, not two.)*
-
-**Why this is not the test we meant to run.** These 2024–2025 trials are **inside** Claude's Jan-2026
-training cutoff, so they are *not* genuinely novel to the model — it has read them, which is exactly why
-naive Claude scores 92%. This probe therefore does **not** exercise the intended "unknown to the model"
-regime; the clean test needs **post-cutoff (2026) readouts**, which we have not yet run. So the
-architecture's supposed edge — resolving claims a model can only guess at — is **untested here, not
-demonstrated**. We are not claiming Verdict beats the model on accuracy; on this set it plainly loses,
-61 vs 92.
-
-**What the probe does show is the one property that survives.** Across all 36 decisions Verdict
-committed **zero confident false-positives and zero decisive-wrong calls** — every error was an
-abstention, not a confident mistake — and each call ships an audit trail of the retrieved evidence.
-Naive Claude, by contrast, commits one confident false-positive every single run, and it is always the
-same claim: **navacaprant**, a kappa-opioid-antagonist antidepressant that **missed** its primary
-HAMD-17 endpoint (p=0.121). Claude confidently asserts it **works**; Verdict retrieves the trial, finds
-the evidence insufficient for a confident call, and **abstains** — every run. That is the
-never-confidently-wrong property showing exactly where a model fails: it hallucinates a confident yes on
-a result it can't reconstruct, and Verdict doesn't.
-
-The cost of that property is in the same table: Verdict abstains on a third to 40% of the set, and its
-verdict flips on 8 of 12 claims run-to-run — the same retrieval non-determinism that caps the live
-curated set. So the honest framing is not "Verdict beats the model." It is "Verdict trades raw accuracy
-for a hard no-confident-false-positive guarantee plus an audit trail" — and whether that trade earns its
-keep in the post-cutoff regime it was built for is the experiment still to run.
+- **We lose to a bare model on the famous cases** (it's 91% there). The edge is the ~519 obscure lines
+  (model 16%) + **citability** (the tool turns "I think that's HeLa" into `ICLAC-00010 · CVCL_0372`).
+- **Cell-line and antibody-identity checks are deterministic lookups** (labelled "registry"); the
+  **rigor-reporting checks are model judgments** (labelled). We don't blur the two.
+- **Absence from the register is not proof of identity** — STR authentication is still required, stated
+  on-screen.
+- **A knockout-control reasoning gate** — did the paper actually validate the antibody with a genetic
+  control? — is **designed but not built**; it's the honest next step and the one place the model would
+  do genuine reasoning rather than extraction.
+- **Prior art:** SciScore and the Rigor & Transparency Index already run RRID + rigor checks at
+  submission (some journals integrate them). Our wedge is **calibrated abstention + the audit ledger +
+  the measured benchmark**, not the checklist itself.
 
 ## What's next
 
-The live path is now wired into the UI — paste a claim and Verdict resolves it end-to-end on
-camera, streaming each study in as it is extracted, so the tool works on anything, not just the
-curated deck. The remaining gap is **retrieval recall**: several live misses rest on a pivotal
-trial the query didn't surface (e.g. a failed confirmatory RCT). Next: stronger retrieval
-(pubtype-filtered PubMed + trial-registry recall) and an end-to-end re-calibration of the live
-pipeline — certainty is currently calibrated on the gate engine over verified rows, not yet on
-the full live product.
+The knockout-control reasoning gate (grounded against real papers), a Human Protein Atlas
+validation-tier gate for antibodies, and a public deploy so the tool runs without the author in the
+room. The engine is validated; the numbers on screen are the numbers in `benchmark/repro/`.
+
+---
+
+*This repo's decidable-gates engine also powers two sibling applications built during the event — a
+clinical-trial eligibility reviewer and a biomedical-evidence resolver (its prior drug-efficacy
+submission is preserved in git history). Same architecture: Claude extracts, a deterministic gate
+decides, it abstains when it can't, and it shows the trail.*

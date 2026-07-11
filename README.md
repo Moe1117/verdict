@@ -1,40 +1,49 @@
-# Verdict
+# Verdict — decidable verification for biomedical work
 
-**A decidable evidence resolver for biomedical claims — one that reports when the evidence is insufficient to decide.**
-
-Paste a claim like *"metformin reduces cancer incidence in adults without diabetes"* and Verdict returns one of four evidence states — **Supported · Not Supported · Contested · Insufficient** — with a calibrated confidence and a full audit ledger tracing every study to the gate it fed. When the evidence cannot decide, Verdict **abstains** rather than overstate.
-
-> ⚕️ **Verdict grades the state of published EVIDENCE for a claim. It is a research and literature-triage tool for professionals. It is NOT medical advice, NOT a diagnosis, and NOT a treatment recommendation.**
+**Claude extracts; a deterministic gate decides; it abstains when it can't — and shows the receipts.** One engine, three applications built during the event: a **Methods Verifier** (the Builder-track submission), a clinical-**trial eligibility reviewer**, and a biomedical-**evidence resolver**.
 
 Built for the **Built with Claude: Life Sciences** hackathon (Builder track), July 7–13 2026.
 
 ---
 
-## Trial Eligibility Reviewer — the Builder-track entry
+## Methods Verifier — the Builder-track entry
 
-The submission applies the same decidable-engine idea (**Claude extracts, a deterministic aggregator decides**) to a sharper, named-user decision: **patient ↔ clinical-trial eligibility**. The evidence-resolver sections below document the shared engine and its calibration.
+The pre-submission reproducibility check for a manuscript's Methods. A **bench scientist or PI** pastes their Methods + Key-Resources section and gets a per-resource report card — **PASS / FAIL / NEEDS-VERIFICATION**, each cited — before Reviewer 2, or a post-publication correction, finds the problem.
 
-**Named user:** a **clinical research coordinator** screening a patient against open trials. They paste a free-text patient note and get back **ranked recruiting ClinicalTrials.gov trials**, each with a **per-criterion audit ledger** — every inclusion/exclusion criterion marked `MET` / `NOT_MET` / `INSUFFICIENT`, tied to the exact phrase in the note — plus a verdict (`Likely eligible` / `Ineligible` / `Needs verification`). The verdict **never says eligible while any criterion is unresolved**: it **abstains** (`Needs verification`) and hands back a **to-verify checklist** of exactly what the note can't decide.
+- **Cell lines** → the **ICLAC Register of Misidentified Cell Lines** (594 lines, bundled offline). On the register → **FAIL**, cited with the ICLAC ID + CVCL/RRID + the line's true identity.
+- **Antibodies** → the **Antibody Registry** (catalog# → `RRID:AB_…`, live API).
+- **Rigor** → ARRIVE 2.0 / MDAR / NIH-SABV presence checks (sex/SABV, n, randomization, blinding).
+- A missing datum → **abstains** (`NEEDS-VERIFICATION`), never guesses. Every finding cites its source; the ledger shows which gate fired.
 
-**The differentiator — and the honest boundary.** Claude does two extraction jobs (patient facts from the note; each trial's eligibility text into structured criteria). The **verdict is a deterministic aggregation** of the per-criterion results — no LLM chooses it (any exclusion `MET` or inclusion `NOT_MET` → Ineligible; all clear → Likely eligible; anything unresolved → Needs verification). **Structured criteria** (age, ECOG, lab thresholds) are decided by pure comparators, labelled **`rule`** in the UI; **semantic criteria** (e.g. *"measurable disease per RECIST"*) are **Claude judgments**, labelled **`model judgment`**, deliberately biased to `INSUFFICIENT` when the note is silent so the system abstains rather than guess. The honest scope is therefore narrow and stated on-screen: *the aggregation and the structured comparisons are deterministic and auditable; the semantic reads are labelled model judgments that abstain on silence.* We do **not** claim there is no LLM in the decision, and the evidence-resolver's conformal guarantee does **not** transfer to this task.
+**Why it exists, measured** (the *entire* 594-line register + 168 authentic controls, reproduced twice): a frontier model correctly identifies only **17%** of known-contaminated cell lines (95% CI 14–21%), is confidently wrong on **256**, and false-flags **12%** of clean lines. The tool, stress-tested end-to-end through messy Methods prose, catches **92%** with **zero** false alarms — every call cited. Full scorecard + honest boundaries in [`SUBMISSION.md`](SUBMISSION.md); reproduce with `scripts/repro_iclac_benchmark.py` and `scripts/repro_stress_test.py`.
+
+**The honest boundary.** Cell-line and antibody-identity checks are **deterministic lookups** (labelled `registry`); the rigor checks are **labelled model judgments**. The register's "100%" is a lookup's *completeness*, not general accuracy — we lose to a bare model on the ~11 famous cases (91%) and win on the 519 obscure ones (16%) + citability. Absence from the register is not proof of identity (STR still required). A knockout-control *reasoning* gate is designed, not built. Prior art (SciScore, the Rigor & Transparency Index) already runs RRID/rigor checks; our wedge is calibrated abstention + the audit ledger + the measured benchmark.
 
 **Run it:**
 
 ```bash
 pip install -e ".[web]"
-python -m uvicorn verdict.webapp:app --port 8010        # live API — POST /api/match {note}
-npm --prefix web install && npm --prefix web run dev     # UI on :5175, opens on the "Trial Eligibility" tab
+python -m uvicorn verdict.webapp:app --port 8010        # live API — POST /api/repro {methods}
+npm --prefix web install && npm --prefix web run dev     # UI on :5175, opens on "Methods Verifier"
 ```
 
-The UI opens on a **frozen demo deck** (a real end-to-end run, served statically from `web/public/trialdeck/` so the demo can't fail live). **"Review trials"** runs a live review of a pasted note — a Claude call per criterion, so minutes, best-effort — and falls back to the frozen deck on error or timeout.
+The UI opens on a **frozen example** (bulletproof, static). **"Verify"** runs your own pasted Methods live end-to-end, falling back to the frozen example on error.
 
-> ⚕️ Research and screening-triage aid for professionals — **not** medical advice, **not** an enrollment decision, and never a substitute for a study coordinator's and principal investigator's review of the full protocol.
+> ⚕️ Pre-submission screening aid for professionals — **not** a substitute for STR authentication or peer review.
 
-<details><summary><b>Submission blurb (≈150 words)</b></summary>
+---
 
-A clinical research coordinator pastes a free-text patient note; the Trial Eligibility Reviewer returns ranked recruiting ClinicalTrials.gov trials, each with a per-criterion audit ledger — every inclusion/exclusion criterion marked MET, NOT_MET, or INSUFFICIENT and tied to the exact phrase in the note — and a verdict that never says "eligible" while anything is unresolved. Instead it abstains ("Needs verification") and hands back a to-verify checklist of what the note can't decide. Claude does the extraction (patient facts; each trial's eligibility text into structured criteria); a deterministic aggregator issues the verdict — no LLM picks it. Structured criteria (age, ECOG, labs) are decided by pure comparators and labelled "rule"; semantic criteria are labelled "model judgment" and biased to abstain on silence. The result counter-positions an ML-heavy field on deterministic auditability and calibrated abstention: it tells a coordinator not just *which* trials, but *exactly what to verify* before acting.
+## Also in this repo — the same engine, two sibling applications
 
-</details>
+### Trial Eligibility Reviewer
+
+A **research coordinator** pastes a free-text patient note → ranked recruiting ClinicalTrials.gov trials, each with a per-criterion audit ledger (`MET` / `NOT_MET` / `INSUFFICIENT`, tied to the note phrase) and a verdict that **never says eligible while a criterion is unresolved** — it abstains and hands back a to-verify checklist. Structured criteria (age, ECOG) are pure-comparator `rule`s; semantic criteria are labelled `model judgment`, biased to abstain on silence. Opens on the **"Trial Eligibility"** tab; the API is `POST /api/match {note}` (frozen deck in `web/public/trialdeck/`).
+
+### Evidence Resolver
+
+The original application (the sections below document it): paste a biomedical claim → one of four evidence states with a calibrated confidence and an audit ledger. The evidence resolver's calibration/conformal claims apply to **it**, not to the Methods Verifier or the trial reviewer.
+
+> ⚕️ **These tools grade the *state of published evidence / reporting*. They are research and triage aids for professionals — NOT medical advice, a diagnosis, or a treatment recommendation.**
 
 ## Who it's for
 
