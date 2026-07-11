@@ -25,6 +25,20 @@ def test_grounded_found_keeps_only_retrieved_citations():
     assert out.grounded is True
 
 
+def test_verify_normalizes_id_forms_before_matching():
+    # Claude emits ids in many forms (bare number, 'PMID: 30..', a cvcl in lowercase); each must be
+    # canonicalized so it matches the retrieval log — otherwise a real, retrieved citation is wrongly stripped.
+    inv = Investigation(kind="antibody", verdict="FOUND_VALIDATION",
+                        cited=[Citation(id="30679523", kind="pubmed", title="t", why="KO"),      # bare number
+                               Citation(id="PMID: 111", kind="pubmed", title="t", why="x"),      # spaced
+                               Citation(id="cvcl_2451", kind="misc", title="", why="")])          # lc cvcl
+    out = verify_citations(inv, retrieved={"PMID:30679523", "PMID:111", "CVCL_2451"})
+    assert out.verdict == "FOUND_VALIDATION" and out.grounded is True
+    assert {c.id for c in out.cited} == {"PMID:30679523", "PMID:111", "CVCL_2451"}
+    # kind is re-derived from the canonical id (not trusted from the model)
+    assert {c.kind for c in out.cited if c.id.startswith("PMID")} == {"pubmed"}
+
+
 def test_provenance_downgrades_to_partial_without_grounded_reference():
     inv = Investigation(kind="cell_line", verdict="PROVENANCE_CHAIN",
                         cited=[Citation(id="CVCL_2451", kind="cellosaurus", title="", why="")],

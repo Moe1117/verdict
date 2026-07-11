@@ -50,10 +50,45 @@ class Investigation:
     method: str = "model investigation"
 
 
+def _canon_id(raw: str) -> str:
+    """Canonicalize an id to the form the retrieval log stores: models emit PMIDs bare / spaced /
+    URL-wrapped and CVCLs in mixed case. Check CVCL/RRID before the digit fallback (a CVCL has digits)."""
+    s = str(raw).strip()
+    m = re.search(r"PMID[:\s]*(\d+)", s, re.I)  # explicit PMID prefix, any length
+    if m:
+        return "PMID:" + m.group(1)
+    m = re.search(r"CVCL[_ ]?([0-9A-Za-z]+)", s, re.I)
+    if m:
+        return "CVCL_" + m.group(1)
+    m = re.search(r"\bAB[_ ]?(\d[0-9A-Za-z]*)", s, re.I)
+    if m:
+        return "RRID:AB_" + m.group(1)
+    m = re.search(r"\b(\d{5,9})\b", s)  # a bare PubMed id (no prefix)
+    if m:
+        return "PMID:" + m.group(1)
+    return s
+
+
+def _kind_of(cid: str) -> str:
+    if cid.startswith("PMID:"):
+        return "pubmed"
+    if cid.startswith("CVCL_"):
+        return "cellosaurus"
+    if cid.startswith("RRID:"):
+        return "antibody_registry"
+    return "misc"
+
+
 def verify_citations(inv: Investigation, retrieved: set) -> Investigation:
-    """Deterministic grounding gate: keep only citations whose id was actually retrieved by a tool;
-    downgrade an ungrounded 'found' verdict to abstain. Fabricated citations cannot survive this."""
-    kept = [c for c in inv.cited if c.id in retrieved]
+    """Deterministic grounding gate: canonicalize each citation id, keep only those actually retrieved
+    by a tool, re-derive their kind, and downgrade an ungrounded 'found' verdict to abstain. Fabricated
+    citations cannot survive this."""
+    kept = []
+    for c in inv.cited:
+        cid = _canon_id(c.id)
+        if cid in retrieved:
+            c.id, c.kind = cid, _kind_of(cid)
+            kept.append(c)
     inv.cited = kept
     inv.grounded = bool(kept)
     has_pubmed = any(c.kind == "pubmed" for c in kept)
