@@ -22,6 +22,11 @@ dev = ["pytest>=8.0"]
 [project.scripts]
 verdict = "verdict.__main__:main"
 
+[tool.pytest.ini_options]
+# only collect the real test suite — scripts/ holds runnable benchmarks (some end in _test.py and
+# have module-level argv parsing that pytest must not import as tests).
+testpaths = ["tests"]
+
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
