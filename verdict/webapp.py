@@ -59,7 +59,9 @@ _CORS_ORIGINS = [o for o in os.getenv(
     "http://localhost:5175,http://127.0.0.1:5175,http://localhost:4173,http://localhost:8010",
 ).split(",") if o.strip()]
 
-app = FastAPI(title="Verdict", version=__version__, description="A decidable evidence resolver.")
+app = FastAPI(title="Verdict", version=__version__,
+              description="Decidable verification for biomedical work — Methods Verifier (POST /api/repro), "
+                          "trial-eligibility reviewer (/api/match), evidence resolver (/api/resolve).")
 app.add_middleware(
     CORSMiddleware, allow_origins=_CORS_ORIGINS, allow_methods=["*"], allow_headers=["*"],
     allow_credentials=False,

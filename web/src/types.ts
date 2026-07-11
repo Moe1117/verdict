@@ -99,7 +99,7 @@ export interface TrialDeck {
 // ── Repro (verification layer): Methods-section reproducibility screen ──
 
 export type ReproResult = 'FAIL' | 'PASS' | 'INSUFFICIENT'
-export type ReproKind = 'cell_line' | 'antibody' | 'rigor'
+export type ReproKind = 'cell_line' | 'antibody' | 'knockout' | 'rigor'
 export type ReproVerdict = 'Submission-ready' | 'Needs fixes' | 'Needs verification'
 
 export interface ReproFinding {
@@ -111,7 +111,7 @@ export interface ReproFinding {
   detail: string
   // verbatim phrase from the manuscript (may be empty).
   evidence: string
-  // e.g. "ICLAC ICLAC-00538 · CVCL_2451" or "RRID:AB_2665520" (may be empty).
+  // e.g. "ICLAC-00538 · CVCL_2451" or "RRID:AB_2665520" (may be empty).
   citation: string
   // "rule" → registry lookup; "model judgment" → Claude. May be absent/unknown → no tag.
   method: 'rule' | 'model judgment' | string
@@ -144,7 +144,9 @@ export interface IclacBench {
   model: {
     strict_accuracy: number
     strict_ci: [number, number]
+    flag_recall?: number          // same-task honest comparison: did it flag the line at all?
     confident_wrong: number
+    confident_wrong_high?: number // of the confident-wrong, how many at HIGH confidence
     n_misidentified: number
     n_known: number
     famous_acc: number
@@ -154,8 +156,10 @@ export interface IclacBench {
     end_to_end_catch: number
     stress_n: number
     stress_ci: [number, number]
-    false_flags: number
+    false_flags: number           // register-lookup specificity (bare names, no extraction)
     n_controls: number
+    false_flags_endtoend?: number // end-to-end specificity (through prose), measured separately
+    n_controls_endtoend?: number
     match_misses: number
   }
   examples: IclacBenchExample[]

@@ -1,117 +1,111 @@
-# Verdict — decidable verification for biomedical work
+# Methods Verifier — a pre-submission reproducibility check for your Methods
 
-**Claude extracts; a deterministic gate decides; it abstains when it can't — and shows the receipts.** One engine, three applications built during the event: a **Methods Verifier** (the Builder-track submission), a clinical-**trial eligibility reviewer**, and a biomedical-**evidence resolver**.
+**Built with Claude: Life Sciences · Builder track · July 7–13 2026**
+Repo: https://github.com/Moe1117/verdict · Demo video: _(link)_ · Live demo: _(link)_
 
-Built for the **Built with Claude: Life Sciences** hackathon (Builder track), July 7–13 2026.
+A bench scientist or PI pastes their manuscript's **Methods + Key-Resources** section and gets a
+per-resource report card — **PASS / FAIL / NEEDS-VERIFICATION**, each cited to a public record —
+before Reviewer 2, or a post-publication correction, finds the problem.
 
----
+Claude does the two things a lookup can't: it **extracts** a typed resource inventory out of messy
+reagent prose, and it **reasons** about whether an antibody was validated with a genetic control.
+Deterministic gates issue every *identity* verdict against ground truth a model cannot fabricate.
 
-## Methods Verifier — the Builder-track entry
+- **Cell lines** → the **ICLAC Register of Misidentified Cell Lines** (594 lines, bundled offline).
+  On the register → **FAIL**, cited with the ICLAC ID + CVCL + the line's *true* identity.
+- **Antibodies** → the **Antibody Registry** (catalog# → `RRID:AB_…`, live API). Catalog#/vendor
+  must match, or it abstains — it never cites a different vendor's RRID.
+- **Antibody validation (knockout controls)** → **Claude reasons** about whether the paper validated
+  each antibody with a genetic knockout/knockdown/CRISPR/siRNA control (the specificity gold
+  standard). A **labelled model judgment**, `PASS`/`NEEDS-VERIFICATION`, never a deterministic FAIL.
+- **Rigor** → ARRIVE 2.0 / MDAR / NIH-SABV presence checks (sex/SABV, n, randomization, blinding) —
+  also labelled model judgments.
+- A missing / unidentifiable datum → **abstains** (`NEEDS-VERIFICATION`), never guesses. Every
+  finding shows its source phrase, and the report tags each check **`registry`** (deterministic) vs
+  **`model judgment`** (Claude), so you always know which is which.
 
-The pre-submission reproducibility check for a manuscript's Methods. A **bench scientist or PI** pastes their Methods + Key-Resources section and gets a per-resource report card — **PASS / FAIL / NEEDS-VERIFICATION**, each cited — before Reviewer 2, or a post-publication correction, finds the problem.
-
-- **Cell lines** → the **ICLAC Register of Misidentified Cell Lines** (594 lines, bundled offline). On the register → **FAIL**, cited with the ICLAC ID + CVCL/RRID + the line's true identity.
-- **Antibodies** → the **Antibody Registry** (catalog# → `RRID:AB_…`, live API).
-- **Rigor** → ARRIVE 2.0 / MDAR / NIH-SABV presence checks (sex/SABV, n, randomization, blinding).
-- A missing datum → **abstains** (`NEEDS-VERIFICATION`), never guesses. Every finding cites its source; the ledger shows which gate fired.
-
-**Why it exists, measured** (the *entire* 594-line register + 36 independently-chosen authentic controls): a frontier model correctly identifies only **18%** of the contaminated lines with a documented identity (n=530, 95% CI 15–21%) and is confidently wrong on **230**. The tool, stress-tested end-to-end through messy Methods prose, catches **92%** (n=40, 95% CI 80–97%) and **false-flags 0 of 36** authentic controls — every FAIL cited. Full scorecard + honest boundaries in [`SUBMISSION.md`](SUBMISSION.md); reproduce with `scripts/repro_iclac_benchmark.py` and `scripts/repro_stress_test.py`.
-
-**The honest boundary.** Cell-line and antibody-identity checks are **deterministic lookups** (labelled `registry`); the rigor checks are **labelled model judgments**. The register's "100%" is a lookup's *completeness*, not general accuracy — we lose to a bare model on the ~11 famous cases (91%) and win on the 519 obscure ones (16%) + citability. Absence from the register is not proof of identity (STR still required). A knockout-control *reasoning* gate is designed, not built. Prior art (SciScore, the Rigor & Transparency Index) already runs RRID/rigor checks; our wedge is calibrated abstention + the audit ledger + the measured benchmark.
-
-**Run it:**
+## Run it
 
 ```bash
 pip install -e ".[web]"
-python -m uvicorn verdict.webapp:app --port 8010        # live API — POST /api/repro {methods}
-npm --prefix web install && npm --prefix web run dev     # UI on :5175, opens on "Methods Verifier"
+PYTHONPATH=. python -m uvicorn verdict.webapp:app --port 8010   # POST /api/repro {methods}
+npm --prefix web install && npm --prefix web run dev            # UI on :5175, opens on Methods Verifier
 ```
 
-The UI opens on a **frozen example** (bulletproof, static). **"Verify"** runs your own pasted Methods live end-to-end, falling back to the frozen example on error.
+The UI opens on a **frozen example** (bulletproof, served statically — the demo can't fail live).
+**"Verify"** runs your own pasted Methods end-to-end (Claude extraction + reasoning + registry
+lookups, a few seconds), degrading back to the frozen example on any error.
 
-> ⚕️ Pre-submission screening aid for professionals — **not** a substitute for STR authentication or peer review.
+> ⚕️ Pre-submission screening aid for professionals — **not** a substitute for STR authentication or
+> peer review.
+
+## Why it exists — measured, honestly
+
+Two **separate** measurements, framed as such — never a rigged head-to-head. Reproduce with
+`scripts/repro_iclac_benchmark.py` and `scripts/repro_stress_test.py`; every number ties out to
+`benchmark/repro/*.json` (full scorecard in [`SUBMISSION.md`](SUBMISSION.md)).
+
+1. **A frontier model is unreliable at this from memory.** Over the *entire* 594-line ICLAC register
+   (no cherry-picking), bare Claude correctly names only **18%** of the documented-identity
+   contaminated lines (n=530, 95% CI 15–21%) — and even just *flags* a line as suspect only **37%**
+   of the time. It is **confidently wrong on 230** (41 at high confidence). It aces the ~11 famous
+   cases (**91%**) and collapses on the 519 obscure ones (**16%**) — exactly where you can't eyeball it.
+2. **Give it the register and the only failure point left is extraction — which holds.** Stress-tested
+   end-to-end through nine messy phrasings, the tool's **extraction recall is 92%** (37/40, 95% CI
+   80–97%) with **0 false-flags on 18 authentic controls** end-to-end (and 0/36 on the bare register
+   lookup). On a catch, the identity is the *register's*, not the model's — so this measures whether
+   Claude can pull the name out of prose, not whether it remembers the answer.
+
+On the **same** task — did you flag a contaminated line at all? — the model manages 37% to the tool's
+92%. That's the honest comparison; the 18-vs-92 split measures two different jobs.
+
+## The honest boundary
+
+- **Cell-line and antibody *identity* are deterministic lookups** (tagged `registry`). **Rigor and
+  knockout-control validation are *labelled model judgments*** (tagged `model judgment`) — the
+  knockout gate is the one place Claude genuinely reasons, and it never issues the deterministic
+  verdict or a FAIL.
+- The register lookup catches **98.8% of known-misidentified lines by name** (587/594): it
+  deliberately **declines 7** whose entire designation is a generic lab token (AO = acridine orange,
+  EPC = endothelial progenitor cells, …) rather than risk a false accusation. Specificity over
+  completeness for a trust-the-citation tool.
+- **Absence from the register is not proof of identity** — STR authentication is still required
+  (stated on-screen).
+- **Prior art:** SciScore and the Rigor & Transparency Index already run RRID + rigor checks at
+  submission. Our wedge is the **offline citable register** (true identity + CVCL, not just "missing
+  RRID"), **calibrated abstention**, the **knockout-control reasoning gate**, and the **measured
+  benchmark** — not the checklist itself. A first measured comparison harness is in
+  `scripts/repro_head_to_head.py`.
 
 ---
 
-## Also in this repo — the same engine, two sibling applications
+## Also in this repo — the same engine, two sibling apps
 
-### Trial Eligibility Reviewer
+The decidable-gates architecture (Claude extracts → a deterministic gate decides → it abstains when
+it can't → it shows the trail) also powers two other applications built during the event. **These are
+not the Builder-track entry and their numbers are their own:**
 
-A **research coordinator** pastes a free-text patient note → ranked recruiting ClinicalTrials.gov trials, each with a per-criterion audit ledger (`MET` / `NOT_MET` / `INSUFFICIENT`, tied to the note phrase) and a verdict that **never says eligible while a criterion is unresolved** — it abstains and hands back a to-verify checklist. Structured criteria (age, ECOG) are pure-comparator `rule`s; semantic criteria are labelled `model judgment`, biased to abstain on silence. Opens on the **"Trial Eligibility"** tab; the API is `POST /api/match {note}` (frozen deck in `web/public/trialdeck/`).
+- **Trial Eligibility Reviewer** — paste a free-text patient note → ranked recruiting
+  ClinicalTrials.gov trials, each with a per-criterion audit ledger (`MET`/`NOT_MET`/`INSUFFICIENT`)
+  that never says "eligible" while a criterion is unresolved. Opens on the **"Trial Eligibility"**
+  tab; API `POST /api/match {note}`.
+- **Evidence Resolver** — paste a biomedical claim → one of four evidence states with a calibrated
+  confidence and an audit ledger. *Evidence Resolver:* the gate engine reproduces expert verdicts
+  **91%** with 0 confident false-positives (auditability over fixed input); run end-to-end the full
+  live product scores **62%** and a naive Claude scores **78%** on these famous claims; High-certainty
+  is ~79–82% out-of-sample, ECE 0.16. Those figures describe the **Evidence Resolver only**, not the
+  Methods Verifier. Try it: `python -m verdict "metformin reduces cancer incidence in adults without diabetes"`.
 
-### Evidence Resolver
-
-The original application (the sections below document it): paste a biomedical claim → one of four evidence states with a calibrated confidence and an audit ledger. The evidence resolver's calibration/conformal claims apply to **it**, not to the Methods Verifier or the trial reviewer.
-
-> ⚕️ **These tools grade the *state of published evidence / reporting*. They are research and triage aids for professionals — NOT medical advice, a diagnosis, or a treatment recommendation.**
-
-## Who it's for
-
-A translational researcher or early-stage biotech scientist triaging a drug-efficacy or drug-repurposing hypothesis — *"is this worth six months?"* — who needs a sourced, rigorous verdict, including an explicit determination that the evidence is not yet sufficient.
-
-## The idea (and why the architecture matters)
-
-Claude does one job: **structured extraction** of evidence from each study (design, N, effect, direction, risk-of-bias). A **deterministic gate engine — with no LLM in the verdict path — issues the verdict.** That means every verdict is a pure, auditable function of the evidence: you can click any verdict and see exactly which studies drove it and which gate each one passed. A calibration layer reports the empirically-measured — and measurably imperfect — reliability of each certainty grade.
-
-This is selective prediction with a measured reject option: certainty is an ordinal grade whose out-of-sample accuracy is measured (High-certainty is ~79% on the original held-out set and ~82% across all held-out claims, ECE 0.16), backed by a distribution-free conformal error bound at High, and it abstains where it cannot be relied upon.
-
-**How well does it work? — the honest numbers.** The deterministic **gate engine** reproduces expert-adjudicated verdicts 91% of the time with 0 confident false-positives on 32 clinical claims (holding extraction fixed — an auditability result over structured input, not external accuracy — independently, a cross-check of 12 gold labels against external landmark RCTs/meta-analyses/FDA actions agreed 12/12, `benchmark/gold_external_audit.json`). Run **end-to-end from raw claims**, the **full live product** scores 62% and abstains on 19% rather than overstate. A strong naive Claude already scores 78% on these famous claims — we do **not** claim to beat it there; Verdict's edge is that it is sourced, calibrated, abstains, and won't reproduce a fraud-driven result. See [`SUBMISSION.md`](SUBMISSION.md); reproducible (`scripts/build_eval_dataset.py`, `scripts/live_benchmark.py`, `scripts/live_baseline.py`).
-
-## Evidence states
-
-| State | Meaning |
-|-------|---------|
-| **Supported** | Consistent high-quality evidence (RCTs / meta-analyses) shows the claimed effect |
-| **Not Supported** | Sufficient high-quality evidence shows *no* effect / contradicts it (evidence of absence) |
-| **Contested** | High-quality evidence genuinely conflicts and doesn't resolve |
-| **Insufficient** | Not enough human evidence to decide (absence of evidence) |
-
-`Undecidable` exists only as an *input guard* for ill-posed / unmeasurable claims — not as an evidence verdict.
+> ⚕️ These tools grade the *state of published evidence / reporting*. Research and triage aids for
+> professionals — **NOT** medical advice, diagnosis, or a treatment recommendation.
 
 ## Data & attribution
 
-Retrieval uses public sources only:
-- **PubMed** via NCBI E-utilities — see the NCBI [disclaimer and usage policy](https://www.ncbi.nlm.nih.gov/home/about/policies/).
-- **ClinicalTrials.gov** API — U.S. Government work, public domain.
-
-Verdict displays citation metadata (title, authors, journal, year, PMID/DOI/NCT) and its own extracted structured rows; it does not redistribute copyrighted full text.
-
-## Provenance
-
-See [`PROVENANCE.md`](PROVENANCE.md). Built from scratch during the event; no pre-existing code, data, or benchmark reused.
-
-## Quickstart
-
-```bash
-cp .env.example .env       # add your ANTHROPIC_API_KEY and NCBI_EMAIL
-pip install -e .
-python -m verdict "metformin reduces cancer incidence in adults without diabetes"
-```
-
-### Live demo — the web UI + resolve-your-own-claim API
-
-The demo has two lanes: a **frozen deck** (pre-resolved cards, served statically — the demo can
-never fail live) and a **live lane** that resolves a pasted claim end-to-end (Claude parse →
-PubMed + ClinicalTrials.gov retrieval → Claude extraction → deterministic gates, ~40s).
-
-```bash
-pip install -e ".[web]"                                   # fastapi + uvicorn
-python -m uvicorn verdict.webapp:app --port 8010          # the live API (reads .env)
-npm --prefix web install && npm --prefix web run dev      # the UI on :5175 (proxies /api -> :8010)
-```
-
-Then open the UI, or hit the API directly:
-
-```bash
-curl -s localhost:8010/api/health
-curl -sN "localhost:8010/api/resolve/stream?claim=semaglutide%20reduces%20body%20weight%20in%20adults%20with%20obesity"
-```
-
-`GET /api/resolve/stream` streams the pipeline as Server-Sent Events (each retrieved study appears
-as it is extracted), then the final gated card. `POST /api/resolve {claim}` returns the same card
-synchronously. The verdict is still a pure function of the extracted evidence — no LLM in the
-verdict path. To serve everything from one process, build the UI first
-(`npm --prefix web run build`); then `uvicorn verdict.webapp:app` also serves it from `web/dist`.
+Public sources only: the **ICLAC** Register of Misidentified Cell Lines + **Cellosaurus** (CVCL),
+the **Antibody Registry** (RRID), **ARRIVE 2.0 / MDAR / NIH** reporting policy, and for the siblings
+**PubMed** (NCBI E-utilities) and **ClinicalTrials.gov**. The tool displays citation metadata and its
+own extracted rows; it does not redistribute copyrighted full text. Built from scratch during the
+event (see [`PROVENANCE.md`](PROVENANCE.md)).
 
 ## License
 

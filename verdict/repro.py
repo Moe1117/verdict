@@ -11,7 +11,7 @@ The honest boundary: the cell-line and antibody gates are deterministic lookups 
 Whether a knockout control was *run* is a labelled model judgment. We do not claim no LLM in the
 loop; we claim the verdicts trace to a citable record, and the tool catches what a confident model
 misses on the obscure long tail (see scripts/repro_iclac_benchmark.py: a frontier model correctly
-identifies ~17% of known-contaminated lines; the tool catches ~92% end-to-end, every FAIL cited).
+identifies ~18% of known-contaminated lines; the tool catches ~92% end-to-end, every FAIL cited).
 """
 from __future__ import annotations
 
@@ -22,6 +22,7 @@ import urllib.parse
 import urllib.request
 from dataclasses import asdict, dataclass, field
 
+from .knockout import assess_knockout_control
 from .parse import call_tool
 
 _ROOT = os.path.dirname(os.path.dirname(__file__))
@@ -61,22 +62,46 @@ def _load_iclac_squash() -> dict:
     return _ICLAC_SQUASH
 
 
+# Generic lab abbreviations / cell-TYPE terms / stains that collide with obscure short register
+# keys. Matching one of these as a misidentified LINE is a false accusation ("AO" = acridine orange,
+# "EPC" = endothelial progenitor cells, "OE" = overexpression, "MS"/"SC"/"CO"/"NCI"), so the
+# deterministic gate declines to FAIL on them — trading a catch on a handful of ultra-obscure lines
+# for never confidently accusing a clean one. (Specificity beats completeness for a trust-the-cite tool.)
+_GENERIC_TOKENS = frozenset({"ao", "oe", "of", "ms", "sc", "co", "epc", "nci"})
+
+
+def _match_iclac_token(t: str, reg: dict, sq: dict, min_len: int) -> dict | None:
+    """Match one candidate token against the register. `min_len` is the shortest squashed form we
+    trust at this path: 1 for the whole designation as written (a bare 'KB'/'FL' is a real line),
+    3 for leading-token prefixes reduced from a descriptor phrase (higher collision risk)."""
+    t = t.strip()
+    s = _squash(t)
+    if not s or s in _GENERIC_TOKENS or len(s) < min_len:
+        return None
+    if _norm(t) in reg:
+        return reg[_norm(t)]
+    if len(s) >= 3 and s in sq:
+        return sq[s]
+    return None
+
+
 def _iclac_lookup(name: str) -> dict | None:
     """Robust match: extractors often return 'GR-M pancreatic carcinoma line' or 'SNB19'.
-    Try the full name, then leading-token prefixes, in both normalized and hyphen/space-insensitive
-    forms. The squashed form is only trusted at >=3 chars to avoid spurious 1-2 char collisions."""
+    Match the designation as written first (a short whole-string name like 'KB'/'FL' is a real
+    misidentified line), then leading-token prefixes of a descriptor phrase. Prefix fragments and the
+    squashed form are only trusted at >=3 chars — and generic lab abbreviations are declined — so the
+    gate does not over-fire on 2-char / cell-TYPE collisions (see _GENERIC_TOKENS, _match_iclac_token)."""
     reg, sq = _load_iclac(), _load_iclac_squash()
     cand = re.sub(r"\(.*?\)", " ", name).strip()
     toks = [t for t in re.split(r"\s+", cand) if t]
-    tries = [name, cand] + [" ".join(toks[:i]) for i in range(min(4, len(toks)), 0, -1)]
-    for t in tries:
-        if not t.strip():
-            continue
-        if _norm(t) in reg:
-            return reg[_norm(t)]
-        s = _squash(t)
-        if len(s) >= 3 and s in sq:
-            return sq[s]
+    for t in (name, cand):  # the designation as written — a 2-char whole name may be a real line
+        rec = _match_iclac_token(t, reg, sq, min_len=1)
+        if rec:
+            return rec
+    for i in range(min(4, len(toks)), 0, -1):  # leading-token prefixes — reductions, require >=3
+        rec = _match_iclac_token(" ".join(toks[:i]), reg, sq, min_len=3)
+        if rec:
+            return rec
     return None
 
 
@@ -91,8 +116,27 @@ class Finding:
     method: str = "rule"  # "rule" (deterministic lookup) | "model judgment"
 
 
+# Descriptor / generic words that carry no cell-line identity. If a name is only these (or empty),
+# there is nothing to check — the gate must abstain rather than assert a PASS on an unknown line.
+_CL_DESCRIPTORS = frozenset({"cell", "cells", "line", "lines", "the", "a", "an", "primary", "our",
+                             "lab", "isolate", "isolated", "culture", "cultured", "cellline"})
+
+
+def _has_designation(name: str) -> bool:
+    """True if `name` carries at least one token that is not a pure descriptor/generic word."""
+    return any(_squash(t) and _squash(t) not in _CL_DESCRIPTORS
+               for t in re.split(r"\s+", _norm(name)) if t)
+
+
 def check_cell_line(name: str, evidence: str = "") -> Finding:
-    """Deterministic: is this line on the ICLAC misidentified register? A FAIL is citable."""
+    """Deterministic: is this line on the ICLAC misidentified register? A FAIL is citable.
+    A missing / descriptor-only name abstains (INSUFFICIENT) — never a PASS on an unidentifiable line."""
+    if not _has_designation(name):
+        return Finding(
+            item=f"cell line: {name.strip() or '(unnamed)'}", kind="cell_line", result="INSUFFICIENT",
+            detail=("No identifiable cell-line designation was extracted — name the line so it can be "
+                    "checked against the register (and STR-authenticate before use)."),
+            evidence=evidence, citation="", method="rule")
     rec = _iclac_lookup(name)
     if rec:
         return Finding(
@@ -100,7 +144,7 @@ def check_cell_line(name: str, evidence: str = "") -> Finding:
             detail=(f"On the ICLAC Register of Misidentified Cell Lines — claimed "
                     f"{rec['claimed_origin'] or 'unspecified origin'}, actually **{rec['true_identity']}**. "
                     f"Authenticate by STR before use."),
-            evidence=evidence, citation=f"ICLAC {rec['iclac_id']} · {rec['cvcl']}", method="rule")
+            evidence=evidence, citation=f"{rec['iclac_id']} · {rec['cvcl']}", method="rule")
     # Absence from the register is NOT proof of identity — stay honest.
     return Finding(
         item=f"cell line: {name}", kind="cell_line", result="PASS",
@@ -138,8 +182,9 @@ def check_antibody(name: str, vendor: str = "", catalog: str = "", evidence: str
     """
     label = (name or f"{vendor} {catalog}").strip()
     if not catalog.strip():
+        # Deterministic: no catalog # -> nothing to resolve against the registry -> abstain (rule).
         return _ab(label, "INSUFFICIENT", "No catalog number given — a name alone can't be authenticated; "
-                   "add the vendor catalog # and its RRID.", evidence, method="model judgment")
+                   "add the vendor catalog # and its RRID.", evidence)
     cached = _ab_cache().get(_squash(catalog))
     try:
         if cached is not None:
@@ -159,6 +204,14 @@ def check_antibody(name: str, vendor: str = "", catalog: str = "", evidence: str
         vend = [it for it in cand if v in _norm(str(it.get("vendorName", "")))]
         if vend:
             cand = vend
+        else:
+            # A vendor was named but matches NONE of the catalog-matching records. Do not fall
+            # through and cite a different vendor's RRID as a PASS — abstain. (A mis-attributed
+            # vendor for a real catalog number is exactly the error this tool exists to catch.)
+            return _ab(label, "INSUFFICIENT",
+                       f"Catalog #{catalog} is registered, but not under the stated vendor "
+                       f"({vendor.strip()}) — verify the vendor/catalog pairing and its RRID.",
+                       evidence)
     if not cand:
         return _ab(label, "INSUFFICIENT", "No RRID resolves for this exact catalog number — verify it is registered.",
                    evidence)
@@ -205,11 +258,14 @@ _EXTRACT_SYSTEM = (
 
 
 def extract_resources(methods_text: str) -> dict:
-    # call_tool returns None when the model emits no tool_use block (happens intermittently under
-    # concurrency / API hiccups). Retry once, then fall back to an empty extraction so review()
-    # degrades to "no resources found" instead of crashing on a live paste.
+    # call_tool RAISES when the model emits no tool_use block (parse.call_tool) or the Anthropic API
+    # errors (429/529/network). Retry once, then fall back to an empty extraction so review()
+    # degrades to a "no resources found" report instead of crashing (502) on a live paste.
     for _ in range(2):
-        d = call_tool(_EXTRACT_SYSTEM, f"Methods:\n\n{methods_text}", _EXTRACT_TOOL, max_tokens=2048)
+        try:
+            d = call_tool(_EXTRACT_SYSTEM, f"Methods:\n\n{methods_text}", _EXTRACT_TOOL, max_tokens=2048)
+        except Exception:  # noqa: BLE001 — any extraction failure degrades, never propagates
+            continue
         if isinstance(d, dict):
             return d
     return {"cell_lines": [], "antibodies": [], "rigor": {}}
@@ -254,9 +310,13 @@ class ReproReport:
 
 
 def aggregate(findings: list[Finding]) -> str:
-    if any(f.result == "FAIL" for f in findings):
+    # The headline verdict is issued by the DETERMINISTIC (rule) gates only — a deterministic FAIL
+    # (a cell line on the register, a catalog#/vendor mismatch) is "Needs fixes". A model-judgment
+    # finding (rigor presence, knockout-control reasoning) can only ask for a human check, never
+    # fabricate the deterministic failure — it degrades to "Needs verification".
+    if any(f.result == "FAIL" and f.method == "rule" for f in findings):
         return "Needs fixes"
-    if any(f.result == "INSUFFICIENT" for f in findings):
+    if any(f.result in ("FAIL", "INSUFFICIENT") for f in findings):
         return "Needs verification"
     return "Submission-ready"
 
@@ -268,8 +328,16 @@ def review(methods_text: str) -> ReproReport:
     for cl in res.get("cell_lines", []):
         findings.append(check_cell_line(cl.get("name", ""), cl.get("evidence", "")))
     for ab in res.get("antibodies", []):
-        findings.append(check_antibody(ab.get("name", ""), ab.get("vendor", ""),
+        name = ab.get("name", "")
+        findings.append(check_antibody(name, ab.get("vendor", ""),
                                        ab.get("catalog", ""), ab.get("evidence", "")))
+        # The ONE reasoning gate: did the paper validate THIS antibody with a genetic control?
+        # A labelled model judgment (PASS / INSUFFICIENT), never a deterministic FAIL.
+        if name.strip():
+            kf = assess_knockout_control(methods_text, name)
+            findings.append(Finding(item=f"antibody validation: {name}", kind="knockout",
+                                    result=kf.result, detail=kf.detail, evidence=kf.evidence,
+                                    method=kf.method))
     findings += rigor_findings(res.get("rigor", {}))
     verdict = aggregate(findings)
     to_fix = [f"{f.item} — {f.detail}" for f in findings if f.result in ("FAIL", "INSUFFICIENT")]

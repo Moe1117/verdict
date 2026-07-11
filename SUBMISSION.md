@@ -1,132 +1,109 @@
 # Methods Verifier — hackathon submission
 
 **Built with Claude: Life Sciences · Builder track · July 7–13 2026**
-Repo: https://github.com/Moe1117/verdict · Demo video: _(link)_
+Repo: https://github.com/Moe1117/verdict · Demo video: _(link)_ · Live demo: _(link)_
 
 ---
 
-## Summary (≈185 words)
+## Summary (≈190 words)
 
 Journals now require, at submission, that a manuscript's Methods declare RRIDs for antibodies,
-authentication for cell lines, and animal-rigor reporting (sex/SABV, n, randomization, blinding).
-Methods Verifier is the pre-submission check for exactly that. Paste your Methods + Key-Resources
-section and it returns a per-resource verdict — **PASS / FAIL / NEEDS-VERIFICATION** — each tied to
-a citable public record, rolled up into a submission-ready gate.
+authentication for cell lines, and animal-rigor reporting. **Methods Verifier** is the pre-submission
+check for exactly that: paste your Methods + Key-Resources and it returns a per-resource verdict —
+**PASS / FAIL / NEEDS-VERIFICATION** — each tied to a citable public record.
 
-Claude does **extraction only**; deterministic gates issue every verdict against ground truth a
-model cannot fabricate: cell lines against the **ICLAC Register of Misidentified Cell Lines**,
-antibodies against the **Antibody Registry** (catalog# → RRID), rigor items against ARRIVE/MDAR/SABV.
-When a datum is missing it **abstains**, never guesses.
+Claude does the two jobs a lookup can't. It **extracts** a typed resource inventory out of messy,
+hyphen-stripped reagent prose, and it **reasons** about whether each antibody was validated with a
+genetic knockout/knockdown control — the specificity gold standard. Deterministic gates then issue
+every *identity* verdict against ground truth a model cannot fabricate: cell lines against the
+**ICLAC register**, antibodies against the **Antibody Registry**. A missing datum → it **abstains**,
+cited. Every finding is tagged `registry` (deterministic) or `model judgment` (Claude), so the two
+are never blurred.
 
-Why it needs to exist, measured: across the *entire* 594-line ICLAC register a frontier model
-correctly identifies only **18%** of the contaminated lines with a documented identity (n=530, 95% CI
-15–21%) and is **confidently wrong on 230**. The tool, stress-tested end-to-end through messy Methods
-prose, catches **92%** (n=40, 95% CI 80–97%) and **false-flags 0 of 36** independently-chosen authentic
-controls — every FAIL cited to an ICLAC ID + CVCL. It catches what a confident model gets wrong,
-before Reviewer 2 does.
+Why it needs to exist, measured over the *entire* 594-line ICLAC register: a frontier model names
+only **18%** of documented-identity contaminated lines from memory — and even *flags* them just
+**37%** of the time, confidently wrong on **230**. Give it the register and the tool's extraction
+catches **92%** end-to-end, **0** false-flags on 18 controls — every FAIL cited to an ICLAC ID + CVCL.
 
 ---
 
-## What it does
+## What Claude does (and where the line is)
 
-Reads a manuscript's Methods / Key-Resources section and issues a per-resource report card:
-- **Cell lines** → checked against the ICLAC misidentified-cell-line register (bundled offline).
-  On the register → **FAIL**, cited with the ICLAC ID, CVCL/RRID, and the line's *true* identity.
-- **Antibodies** → resolved against the Antibody Registry (catalog# → `RRID:AB_…`). Resolves →
-  **PASS** with the RRID; no RRID → **NEEDS-VERIFICATION**.
-- **Rigor reporting** → ARRIVE 2.0 / MDAR / NIH-SABV presence checks (sex, n, randomization, blinding).
-- A missing datum → **NEEDS-VERIFICATION** (abstain), never a guess. Every finding opens an audit
-  ledger: the source phrase, the registry record, and which gate fired.
+This is a *Built with Claude* entry, so the design puts Claude where a model earns its keep and a
+lookup can't reach:
 
-The demo opens on a **frozen example** (bulletproof, served statically), and a **live lane** verifies
-your own pasted Methods end-to-end. A pre-submission screening aid for professionals — **not** a
-substitute for STR authentication or peer review.
+1. **Hard extraction.** Real Methods prose is adversarial — "GR-M pancreatic carcinoma line",
+   "anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500)", multi-vendor reagent lists, hyphen-stripped names.
+   Claude pulls a typed inventory (cell line, antibody + catalog#, rigor facts) with a verbatim source
+   span for each. The stress test shows this is the real failure point, and it holds at **92%**.
+2. **Reasoning — the knockout-control gate.** An RRID proves an antibody *exists*, not that it was
+   *validated* in this study. The gold standard is a genetic control (knockout / knockdown / CRISPR /
+   siRNA showing the signal disappears). Whether the Methods actually describe one — versus a bare
+   "validated" claim, versus a weaker non-genetic control — is a **reasoning judgment**, and it's the
+   one gate where Claude decides. It's a **labelled model judgment** (`PASS` / `NEEDS-VERIFICATION`,
+   never a deterministic FAIL), and `aggregate()` never lets it fabricate the deterministic verdict.
 
-## Who it's for
-
-A **bench scientist or PI self-checking their own manuscript** before journal submission — the person
-who writes and owns the Methods, and who eats the correction if a cell line turns out to be a HeLa
-contaminant. Every scientist and trainee touches this; nobody memorizes the 594-entry misidentified
-register.
-
-## How we built it (with Claude)
-
-- **Claude = structured extraction only.** From messy Methods prose it pulls a typed inventory —
-  every cell line, antibody (with catalog#), and rigor fact — each carrying its verbatim source span.
-  It never issues a verdict.
-- **Deterministic gates decide.** Pure lookups over public ground truth: ICLAC/Cellosaurus for
-  cell-line identity, the Antibody Registry for RRIDs, ARRIVE/MDAR/SABV presence rules for rigor.
-  Same extract → gate → abstain → audit-ledger architecture used across this repo.
-- **Calibrated abstention.** Absence of an extracted fact forces `NEEDS-VERIFICATION`, so the tool
-  surfaces what a reviewer must check rather than inventing a pass.
-- **Fail-proof demo, real live lane.** The ICLAC register ships as a bundled 594-line asset (no live
-  dependency); the Antibody Registry is a live, key-less API. `POST /api/repro` verifies any pasted
-  Methods; the frozen example is the fallback so the network can't break a demo.
-- Public data only (ICLAC/Cellosaurus, Antibody Registry, ARRIVE/MDAR/NIH policy) — MIT.
+Everything Claude touches is labelled as a model judgment; everything a **registry** decides is a pure
+lookup. **The deterministic gates issue every *identity* verdict** (cell line, antibody catalog#/RRID);
+rigor and knockout validation are the labelled model judgments. We never claim "no LLM in the loop" —
+we claim you can always see which is which.
 
 ## The honest scorecard
 
-Two **separate, measured** results — never a rigged head-to-head. The first measures how unreliable a
-frontier model is at this task; the second measures how well the tool works end-to-end.
+Two **separate, measured** results — deliberately *not* a rigged head-to-head. Reproduce with
+`scripts/repro_iclac_benchmark.py` + `scripts/repro_stress_test.py`; every number ties to
+`benchmark/repro/*.json`.
 
-**1 — A frontier model is unreliable at this task.** Bare Claude asked, for each line, "is this
-misidentified, and if so what is it really?", scored over the **entire 594-line ICLAC register** (no
-cherry-picking) plus **36 independently-chosen authentic control lines** — a single full-register pass
-with Wilson 95% CIs (`scripts/repro_iclac_benchmark.py`, `benchmark/repro/iclac_eval.json`):
+**1 — A frontier model is unreliable at this from memory.** Bare Claude asked, per line, "is this
+misidentified, and if so what is it really?", scored over the **entire 594-line register** (no
+cherry-picking) + 36 authentic controls, Wilson 95% CIs:
 
-| | Bare Claude | The register |
+| | Bare Claude (from memory) | The tool |
 |---|---|---|
-| Correctly names a known-contaminated line (strict, n=530) | **18%** (95% CI 15–21%) | 100% completeness † |
-| Confidently wrong (of the 594) | **230** | 0 |
-| False-flags an authentic control line (n=36) | **0** | **0** ‡ |
-| Famous (~11) vs obscure tail (519) | 91% vs **16%** | — |
+| Correctly **names** a contaminated line (strict, n=530) | **18%** (CI 15–21%) | identity is the register's, not recalled |
+| Even just **flags** it as suspect (same task as the tool) | **37%** | **92%** end-to-end |
+| Confidently wrong (of 594) | **230** (41 high, 189 medium) | 0 |
+| Famous ~11 vs obscure tail 519 | 91% vs **16%** | catches the tail it can't recall |
 
-† The register's "100%" is the **completeness of a lookup** — it *contains* every known misidentified
-line, so it flags them all by definition. That number is not the claim; the measured, non-tautological
-result is the model's 18% strict accuracy and its 230 confident errors, and the tool's end-to-end
-catch below.
-‡ The 36 controls are famous, unambiguously-real lines chosen by common knowledge — **not** filtered
-by the tool's own verdict — so the tool's 0 false-flags is a genuine specificity measurement (its name
-matching does not over-fire), not a tautology. On these easy cases the model also false-flags none; we
-report only what an independent control set supports (an earlier claim that the model false-flags ~12%
-rested on a non-independent control set and is withdrawn).
+**2 — Give it the register and the only failure point left is extraction — which holds.**
+Stress-tested end-to-end through nine phrasings (clean → dense → in-a-list → hyphen-stripped): **92%
+catch** (37/40, CI 80–97%), **0 name-match misses**, and **0 false-flags on 18 controls end-to-end**
+(and 0/36 on the bare register lookup — the two specificity measurements are reported separately, not
+welded together). The register lookup itself catches **98.8% of known lines by name** (587/594): it
+deliberately **declines 7** whose entire designation is a generic lab token (AO = acridine orange,
+EPC = endothelial progenitor cells, …) rather than risk a false accusation.
 
-**2 — The tool works end-to-end on messy prose.** The register lookup is deterministic; the real risk
-is that Claude fails to *extract* the line name from realistic Methods text. Stress-tested on 40
-known-contaminated lines embedded in nine phrasings — clean → dense → in-a-list → hyphen-stripped
-(`scripts/repro_stress_test.py`, `benchmark/repro/stress_eval.json`):
-
-- **92% end-to-end catch** (37/40, 95% CI 80–97%) · **0 name-match misses** (the lookup held across
-  every phrasing). The 3 misses were 2 genuinely bizarre non-standard names and 1 intermittent crash (a
-  `None` extraction under concurrency), now hardened to degrade gracefully. (Specificity — does it
-  wrongly flag an authentic line? — is measured separately above: 0 of 36 independent controls.)
+The honest same-task comparison is **model 37% vs tool 92%** on "did you flag a contaminated line";
+the 18-vs-92 numbers measure two *different* jobs (recall-the-identity vs extract-and-look-up).
 
 ## The honest boundaries (stated up front)
 
-This audience rewards knowing exactly what you have — so:
-
-- **We lose to a bare model on the famous cases** (it's 91% there). The edge is the ~519 obscure lines
-  (model 16%) + **citability** (the tool turns "I think that's HeLa" into `ICLAC-00010 · CVCL_0372`).
-- **Cell-line and antibody-identity checks are deterministic lookups** (labelled "registry"); the
-  **rigor-reporting checks are model judgments** (labelled). We don't blur the two.
-- **Absence from the register is not proof of identity** — STR authentication is still required, stated
-  on-screen.
-- **A knockout-control reasoning gate** — did the paper actually validate the antibody with a genetic
-  control? — is **designed but not built**; it's the honest next step and the one place the model would
-  do genuine reasoning rather than extraction.
+- **We lose to a bare model on the famous cases** (it's 91% there). Our edge is the ~519 obscure lines
+  (model 16%) + **citability** (turning "I think that's HeLa" into `ICLAC-00010 · CVCL_0372`).
+- **Identity checks are deterministic lookups; rigor + knockout validation are labelled model
+  judgments.** We don't blur them — the report tags each finding, and the deterministic verdict is
+  computed from the rule findings alone.
+- **The knockout-control reasoning gate is built, but thin** — a first-cut single-antibody reasoning
+  judgment over the pasted Methods, not a corpus-grounded validator. It's the honest next depth, and
+  it's the one on-screen beat where Claude reasons rather than parses.
+- **Absence from the register is not proof of identity** — STR authentication is still required, on-screen.
 - **Prior art:** SciScore and the Rigor & Transparency Index already run RRID + rigor checks at
-  submission (some journals integrate them). Our wedge is **calibrated abstention + the audit ledger +
-  the measured benchmark**, not the checklist itself.
+  submission. Our wedge is the offline **citable** register (true identity + CVCL), calibrated
+  abstention, the **knockout reasoning gate**, and the **measured benchmark**. A first measured
+  comparison harness — the tool's obscure-tail catch that a "missing-RRID" checker doesn't cite — is
+  scaffolded in `scripts/repro_head_to_head.py` (the SciScore column requires a SciScore run; we do
+  not fabricate it).
 
 ## What's next
 
-The knockout-control reasoning gate (grounded against real papers), a Human Protein Atlas
-validation-tier gate for antibodies, and a public deploy so the tool runs without the author in the
-room. The engine is validated; the numbers on screen are the numbers in `benchmark/repro/`.
+Ground the knockout-control gate against a corpus of real validated/unvalidated Methods (it currently
+reasons per-paste), a Human Protein Atlas validation-tier gate for antibodies, and the completed
+SciScore/RTI head-to-head. The engine is validated; the numbers on screen are the numbers in
+`benchmark/repro/`.
 
 ---
 
 *This repo's decidable-gates engine also powers two sibling applications built during the event — a
-clinical-trial eligibility reviewer and a biomedical-evidence resolver (its prior drug-efficacy
-submission is preserved in git history). Same architecture: Claude extracts, a deterministic gate
-decides, it abstains when it can't, and it shows the trail.*
+clinical-trial eligibility reviewer and a biomedical-evidence resolver. Their numbers (e.g. the
+resolver's 91% gate / 62% live / ECE 0.16) are **theirs**, reported in the README, not the Methods
+Verifier's.*

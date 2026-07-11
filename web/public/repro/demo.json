@@ -1,23 +1,23 @@
 {
- "methods": "Cell culture. Experiments used the GR-M pancreatic carcinoma line and the SNB-19 glioblastoma line, maintained in DMEM supplemented with 10% FBS at 37C.\nImmunohistochemistry. Sections were stained with anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500) to label microglia and with anti-GFAP (Dako) for astrocytes.\nAnimals. Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.",
+ "methods": "Cell culture. Experiments used the GR-M pancreatic carcinoma line and the SNB-19 glioblastoma line, maintained in DMEM supplemented with 10% FBS at 37C.\nImmunohistochemistry. Sections were stained with anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500) to label microglia and with anti-GFAP (Dako) for astrocytes. Iba1 antibody specificity was confirmed in Iba1-knockout tissue, which showed no immunoreactivity.\nAnimals. Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.",
  "report": {
   "findings": [
    {
     "item": "cell line: GR-M",
     "kind": "cell_line",
     "result": "FAIL",
-    "detail": "On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
+    "detail": "On the ICLAC Register of Misidentified Cell Lines — claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
     "evidence": "GR-M pancreatic carcinoma line",
-    "citation": "ICLAC ICLAC-00538 \u00b7 CVCL_2451",
+    "citation": "ICLAC-00538 · CVCL_2451",
     "method": "rule"
    },
    {
     "item": "cell line: SNB-19",
     "kind": "cell_line",
     "result": "FAIL",
-    "detail": "On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
+    "detail": "On the ICLAC Register of Misidentified Cell Lines — claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
     "evidence": "SNB-19 glioblastoma line",
-    "citation": "ICLAC ICLAC-00268 \u00b7 CVCL_0535",
+    "citation": "ICLAC-00268 · CVCL_0535",
     "method": "rule"
    },
    {
@@ -33,8 +33,26 @@
     "item": "antibody: GFAP",
     "kind": "antibody",
     "result": "INSUFFICIENT",
-    "detail": "No catalog number given \u2014 a name alone can't be authenticated; add the vendor catalog # and its RRID.",
+    "detail": "No catalog number given — a name alone can't be authenticated; add the vendor catalog # and its RRID.",
     "evidence": "anti-GFAP (Dako)",
+    "citation": "",
+    "method": "rule"
+   },
+   {
+    "item": "antibody validation: Iba1",
+    "kind": "knockout",
+    "result": "PASS",
+    "detail": "A genetic knockout/knockdown control validating this antibody's specificity is described.",
+    "evidence": "Iba1-knockout tissue, which showed no immunoreactivity",
+    "citation": "",
+    "method": "model judgment"
+   },
+   {
+    "item": "antibody validation: GFAP",
+    "kind": "knockout",
+    "result": "INSUFFICIENT",
+    "detail": "No antibody-specificity validation (e.g. a knockout/knockdown control) is described — add one or cite prior genetic validation.",
+    "evidence": "",
     "citation": "",
     "method": "model judgment"
    },
@@ -77,16 +95,17 @@
   ],
   "verdict": "Needs fixes",
   "n_fail": 2,
-  "n_pass": 1,
-  "n_insufficient": 5,
+  "n_pass": 2,
+  "n_insufficient": 6,
   "to_fix": [
-   "cell line: GR-M \u2014 On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
-   "cell line: SNB-19 \u2014 On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
-   "antibody: GFAP \u2014 No catalog number given \u2014 a name alone can't be authenticated; add the vendor catalog # and its RRID.",
-   "Sex of animals/cells reported (SABV) \u2014 Could not determine from the text.",
-   "Sample size (n) per group stated \u2014 Could not determine from the text.",
-   "Randomization stated \u2014 Could not determine from the text.",
-   "Blinding stated \u2014 Could not determine from the text."
+   "cell line: GR-M — On the ICLAC Register of Misidentified Cell Lines — claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
+   "cell line: SNB-19 — On the ICLAC Register of Misidentified Cell Lines — claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
+   "antibody: GFAP — No catalog number given — a name alone can't be authenticated; add the vendor catalog # and its RRID.",
+   "antibody validation: GFAP — No antibody-specificity validation (e.g. a knockout/knockdown control) is described — add one or cite prior genetic validation.",
+   "Sex of animals/cells reported (SABV) — Could not determine from the text.",
+   "Sample size (n) per group stated — Could not determine from the text.",
+   "Randomization stated — Could not determine from the text.",
+   "Blinding stated — Could not determine from the text."
   ]
  }
 }

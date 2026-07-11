@@ -1,7 +1,7 @@
 [project]
 name = "verdict"
 version = "0.1.0"
-description = "A decidable evidence resolver for biomedical claims — with measured abstention."
+description = "Methods Verifier — decidable pre-submission verification for a manuscript's Methods (cell lines, antibodies, knockout-control reasoning, rigor), with measured abstention."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }

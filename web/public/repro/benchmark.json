@@ -5,7 +5,9 @@
    0.147,
    0.212
   ],
+  "flag_recall": 0.369,
   "confident_wrong": 230,
+  "confident_wrong_high": 41,
   "n_misidentified": 594,
   "n_known": 530,
   "famous_acc": 0.909,
@@ -20,6 +22,8 @@
   ],
   "false_flags": 0,
   "n_controls": 36,
+  "false_flags_endtoend": 0,
+  "n_controls_endtoend": 18,
   "match_misses": 0
  },
  "examples": [

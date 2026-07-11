@@ -18,6 +18,7 @@ const RESULT_META: Record<string, { icon: string; cls: string; label: string }> 
 const KIND_GROUPS: { kind: string; label: string }[] = [
   { kind: 'cell_line', label: 'Cell lines' },
   { kind: 'antibody', label: 'Antibodies' },
+  { kind: 'knockout', label: 'Antibody validation — knockout controls (Claude reasoning)' },
   { kind: 'rigor', label: 'Rigor reporting' },
 ]
 
@@ -65,31 +66,43 @@ function FindingRow({ f }: { f: ReproFinding }) {
   )
 }
 
-// The benchmark panel — TWO separate measured facts, never a rigged head-to-head: how unreliable a
-// frontier model is at this task, and how well the tool actually works end-to-end on messy prose.
+// The benchmark panel — TWO separate measured facts, honestly framed as such (NOT a head-to-head):
+// how unreliable a frontier model is from memory, and how well extraction holds end-to-end on prose.
 function BenchmarkPanel({ bench }: { bench: IclacBench }) {
   const { model, tool, examples } = bench
+  const flagRecall = model.flag_recall != null ? pct(model.flag_recall) : null
+  const ctrlN = tool.n_controls_endtoend ?? tool.n_controls
+  const ctrlFF = tool.false_flags_endtoend ?? tool.false_flags
   return (
     <div className="rp-bench">
       <div className="panel-label">The benchmark</div>
       <div className="rp-bench-headline">
-        A frontier model correctly identifies only <b className="bad">{pct(model.strict_accuracy)}</b> of the{' '}
-        <b>{model.n_known}</b> known-contaminated cell lines with a documented identity —{' '}
-        <b className="bad">confidently wrong on {model.confident_wrong}</b>. Our tool catches{' '}
-        <b className="good">{pct(tool.end_to_end_catch)}</b> end-to-end and false-flags{' '}
-        <b className="good">{tool.false_flags} of {tool.n_controls}</b> authentic controls — every call cited.
+        Asked to name a contaminated line from memory, a frontier model gets it right only{' '}
+        <b className="bad">{pct(model.strict_accuracy)}</b> of the time
+        {flagRecall && <> — and even just <i>flags</i> the line at all <b className="bad">{flagRecall}</b> of the time</>}.
+        It is <b className="bad">confidently wrong on {model.confident_wrong}</b>
+        {model.confident_wrong_high != null && <> ({model.confident_wrong_high} at high confidence)</>}. Hand it the
+        public register and the only failure point left is <i>extraction</i> — which holds at{' '}
+        <b className="good">{pct(tool.end_to_end_catch)}</b> through messy Methods prose, every call cited to an ICLAC ID.
       </div>
 
       <div className="rp-stats">
         <div className="rp-stat model">
           <div className="rp-stat-num">{pct(model.strict_accuracy)}</div>
-          <div className="rp-stat-cap">the problem — a frontier model IDs a contaminated line</div>
-          <div className="rp-stat-sub">{model.confident_wrong} confident errors · 95% CI {pct(model.strict_ci[0])}–{pct(model.strict_ci[1])} (n={model.n_known})</div>
+          <div className="rp-stat-cap">a frontier model names a contaminated line — from memory</div>
+          <div className="rp-stat-sub">
+            {flagRecall && <>flags it at all only {flagRecall} · </>}{model.confident_wrong} confident errors
+            {model.confident_wrong_high != null && <> ({model.confident_wrong_high} high)</>} · 95% CI{' '}
+            {pct(model.strict_ci[0])}–{pct(model.strict_ci[1])} (n={model.n_known})
+          </div>
         </div>
         <div className="rp-stat tool">
           <div className="rp-stat-num">{pct(tool.end_to_end_catch)}</div>
-          <div className="rp-stat-cap">the fix — our tool, end-to-end on real Methods text</div>
-          <div className="rp-stat-sub">{tool.false_flags} false alarms on {tool.n_controls} authentic lines · every FAIL cited</div>
+          <div className="rp-stat-cap">the tool’s <b>extraction recall</b> — end-to-end on real Methods text</div>
+          <div className="rp-stat-sub">
+            identity supplied by the register lookup, not the model · {ctrlFF} false alarms on {ctrlN} controls
+            end-to-end · every FAIL cited
+          </div>
         </div>
       </div>
 
@@ -97,12 +110,13 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
         className="rp-bench-note"
         style={{ fontSize: 13, color: 'var(--text-muted, #8a8a8a)', margin: '2px 0 14px', lineHeight: 1.6 }}
       >
-        Measured on the entire {model.n_misidentified}-line ICLAC register — no cherry-picking — plus{' '}
-        {tool.n_controls} independently-chosen authentic control lines. The model aces the ~11 famous cases
-        ({pct(model.famous_acc)}) and collapses on the 519 obscure ones ({pct(model.tail_acc)}) — exactly where a
-        researcher can’t eyeball it. Two different measurements: the model was asked directly (strict = flag +
-        correct identity, n={model.n_known}); the tool was stress-tested end-to-end through messy prose (n=
-        {tool.stress_n}, 95% CI {pct(tool.stress_ci[0])}–{pct(tool.stress_ci[1])}).
+        <b>Two different measurements — not a head-to-head.</b> The model must recall the true identity from memory
+        (strict, n={model.n_known}); the tool only has to extract the name from prose and look it up (n={tool.stress_n},
+        95% CI {pct(tool.stress_ci[0])}–{pct(tool.stress_ci[1])}), so on a catch the identity is the register’s, not the
+        model’s.{flagRecall && <> On the <i>same</i> task — did you flag a contaminated line at all? — the model manages{' '}
+        {flagRecall} to the tool’s {pct(tool.end_to_end_catch)}.</>} Measured on the entire {model.n_misidentified}-line
+        ICLAC register, no cherry-picking: the model aces the ~11 famous cases ({pct(model.famous_acc)}) and collapses on
+        the 519 obscure ones ({pct(model.tail_acc)}) — exactly where a researcher can’t eyeball it.
       </div>
 
       <div className="section-label">confidently wrong, where it matters — the model’s own words vs. the register</div>
