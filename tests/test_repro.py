@@ -120,6 +120,24 @@ def test_antibody_requires_matching_catalog(monkeypatch):
     assert repro.check_antibody("anti-GFP", "", "ab290").result == "INSUFFICIENT"
 
 
+def test_run_gates_over_a_resource_dict(monkeypatch):
+    # run_gates is the reuse seam for whole-manuscript review: given an ALREADY-extracted resource
+    # dict (merged across chunks), it runs the same deterministic gates + knockout reasoning as
+    # review(), without re-extracting. review() must be exactly run_gates(extract_resources(text), text).
+    from verdict import knockout
+    monkeypatch.setattr(knockout, "call_tool",
+                        lambda *a, **k: {"status": "not_reported", "evidence": "", "reasoning": "x"})
+    res = {"cell_lines": [{"name": "GR-M", "evidence": "GR-M cells"}],
+           "antibodies": [{"name": "anti-Iba1", "vendor": "Wako", "catalog": "", "evidence": "anti-Iba1"}],
+           "rigor": {"sex_reported": True, "n_per_group_stated": False}}
+    rep = repro.run_gates(res, "GR-M cells; anti-Iba1 used.")
+    by_item = {f.item: f for f in rep.findings}
+    assert by_item["cell line: GR-M"].result == "FAIL"          # ICLAC hit, deterministic
+    assert rep.verdict == "Needs fixes"                          # a rule FAIL dominates
+    assert any(f.kind == "knockout" for f in rep.findings)       # knockout reasoning ran
+    assert by_item["Sex of animals/cells reported (SABV)"].result == "PASS"
+
+
 def test_antibody_vendor_mismatch_abstains(monkeypatch):
     # A vendor is stated that matches NONE of the catalog-matching records. The gate must NOT cite a
     # different vendor's RRID as a PASS — it must abstain. (This is the exact wrong-vendor class the

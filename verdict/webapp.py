@@ -34,6 +34,7 @@ from .cards import card_payload
 from .env import load_dotenv
 from .trialmatch import card_to_dict, review
 from .investigate import Investigation, investigate_antibody, investigate_cell_line
+from .manuscript import manuscript_report_to_dict, review_manuscript
 from .repro import report_to_dict
 from .repro import review as repro_review
 from .verdict import run_live
@@ -52,6 +53,10 @@ MAX_CLAIM_LEN = int(os.getenv("VERDICT_MAX_CLAIM_LEN", "600"))
 # matching across several candidate trials). Same rationale as MAX_CLAIM_LEN, larger ceiling.
 MAX_NOTE_LEN = int(os.getenv("VERDICT_MAX_NOTE_LEN", "4000"))
 MAX_METHODS_LEN = int(os.getenv("VERDICT_MAX_METHODS_LEN", "8000"))
+# A whole manuscript (Phase 2 /api/review) is much longer than a single Methods paste — but still
+# bounded: it is chunked into one paid Claude extraction per chunk (plus optional per-resource
+# investigations), so an unbounded paste is an unbounded fan-out. Same rationale, larger ceiling.
+MAX_MANUSCRIPT_LEN = int(os.getenv("VERDICT_MAX_MANUSCRIPT_LEN", "40000"))
 _MAX_CONCURRENT = int(os.getenv("VERDICT_MAX_CONCURRENT", "4"))
 _slots = threading.BoundedSemaphore(_MAX_CONCURRENT)
 
@@ -243,6 +248,40 @@ def api_investigate(req: InvestigateRequest) -> dict:
     finally:
         _slots.release()
     return {"investigation": asdict(inv)}
+
+
+class ReviewRequest(BaseModel):
+    manuscript: str
+    investigate: bool = False   # run the agentic investigator on flagged resources (extra paid calls)
+    autofix: bool = False       # draft submission-ready corrections (one extra paid call)
+
+    @field_validator("manuscript")
+    @classmethod
+    def _bounded_manuscript(cls, v: str) -> str:
+        v = (v or "").strip()
+        if len(v) < 20:
+            raise ValueError("manuscript text is too short to review")
+        if len(v) > MAX_MANUSCRIPT_LEN:
+            raise ValueError(f"manuscript text is too long (max {MAX_MANUSCRIPT_LEN} chars)")
+        return v
+
+
+@app.post("/api/review")
+def api_review(req: ReviewRequest) -> dict:
+    # Whole-manuscript review chunks into one paid Claude extraction per chunk, plus (optionally) an
+    # agentic investigation per flagged resource and one auto-fix call — so it takes a daily-budget
+    # slot AND a concurrency slot exactly like the other paid endpoints.
+    _daily_gate()
+    if not _slots.acquire(blocking=False):
+        raise HTTPException(status_code=429, detail="server is busy — too many concurrent reviews")
+    try:
+        rep = review_manuscript(req.manuscript, investigate=req.investigate, autofix=req.autofix)
+        return {"report": manuscript_report_to_dict(rep)}
+    except Exception as e:  # noqa: BLE001
+        log.exception("manuscript review failed")
+        raise HTTPException(status_code=502, detail="manuscript review failed — see server logs") from e
+    finally:
+        _slots.release()
 
 
 def _sse_frame(event: str, data: object) -> str:

@@ -112,3 +112,61 @@ def test_stream_emits_progress_then_final_card(client, monkeypatch):
 def test_stream_rejects_too_short_claim(client):
     r = client.get("/api/resolve/stream", params={"claim": "no"})
     assert r.status_code == 422
+
+
+# ---- Phase 2: POST /api/review (whole-manuscript) -------------------------------------------------
+
+def _fake_manuscript_report(verdict="Needs fixes", n_chunks=2):
+    from verdict import manuscript, repro
+    rep = repro.ReproReport(
+        findings=[repro.Finding("cell line: GR-M", "cell_line", "FAIL", "on the ICLAC register")],
+        verdict=verdict, n_fail=1, n_pass=0, n_insufficient=0)
+    return manuscript.ManuscriptReport(report=rep, n_resources=1, n_chunks=n_chunks)
+
+
+def test_review_returns_manuscript_report(client, monkeypatch):
+    monkeypatch.setattr(webapp, "review_manuscript",
+                        lambda text, investigate=False, autofix=False, **kw: _fake_manuscript_report())
+    r = client.post("/api/review", json={"manuscript": "GR-M cells were used in this study. " * 3})
+    assert r.status_code == 200
+    body = r.json()["report"]
+    assert body["n_chunks"] == 2 and body["report"]["verdict"] == "Needs fixes"
+    assert body["report"]["findings"][0]["item"] == "cell line: GR-M"
+
+
+def test_review_passes_investigate_and_autofix_flags_through(client, monkeypatch):
+    seen = {}
+    def fake(text, investigate=False, autofix=False, **kw):
+        seen["investigate"], seen["autofix"] = investigate, autofix
+        return _fake_manuscript_report()
+    monkeypatch.setattr(webapp, "review_manuscript", fake)
+    client.post("/api/review", json={"manuscript": "a real methods paragraph goes here, long enough.",
+                                     "investigate": True, "autofix": True})
+    assert seen == {"investigate": True, "autofix": True}
+
+
+@pytest.mark.parametrize("bad", ["", "  ", "too short"])
+def test_review_rejects_too_short_manuscript(client, bad):
+    r = client.post("/api/review", json={"manuscript": bad})
+    assert r.status_code == 422
+
+
+def test_review_rejects_oversized_manuscript(client):
+    # a whole manuscript is bounded too — it is chunked into paid Claude calls, so cap total size.
+    r = client.post("/api/review", json={"manuscript": "x " * 30000})
+    assert r.status_code == 422
+
+
+def test_review_returns_429_when_saturated(client, monkeypatch):
+    monkeypatch.setattr(webapp, "_slots", threading.Semaphore(0))  # no capacity
+    r = client.post("/api/review", json={"manuscript": "a real methods paragraph, long enough to pass."})
+    assert r.status_code == 429  # bounded like the other paid endpoints; never fans out paid calls
+
+
+def test_review_hides_engine_failure_and_never_leaks_secrets(client, monkeypatch):
+    def boom(text, **kw):
+        raise RuntimeError("ANTHROPIC_API_KEY sk-ant-secret is invalid")
+    monkeypatch.setattr(webapp, "review_manuscript", boom)
+    r = client.post("/api/review", json={"manuscript": "a real methods paragraph, long enough to pass."})
+    assert r.status_code == 502
+    assert "sk-ant-secret" not in r.text and "ANTHROPIC_API_KEY" not in r.text

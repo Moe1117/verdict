@@ -321,9 +321,11 @@ def aggregate(findings: list[Finding]) -> str:
     return "Submission-ready"
 
 
-def review(methods_text: str) -> ReproReport:
-    """End-to-end: Methods text -> extracted resources -> deterministic gates -> report."""
-    res = extract_resources(methods_text)
+def run_gates(res: dict, methods_text: str) -> ReproReport:
+    """Run the deterministic gates + the knockout-reasoning gate over an ALREADY-extracted resource
+    dict, and roll up the report. Split out from review() so whole-manuscript review can extract across
+    chunks, merge the resources, and gate the merged set once (see verdict/manuscript.py) — the gate
+    logic and its honest rule/model-judgment labelling stay in exactly one place."""
     findings: list[Finding] = []
     for cl in res.get("cell_lines", []):
         findings.append(check_cell_line(cl.get("name", ""), cl.get("evidence", "")))
@@ -347,6 +349,11 @@ def review(methods_text: str) -> ReproReport:
         n_pass=sum(1 for f in findings if f.result == "PASS"),
         n_insufficient=sum(1 for f in findings if f.result == "INSUFFICIENT"),
         to_fix=to_fix)
+
+
+def review(methods_text: str) -> ReproReport:
+    """End-to-end: Methods text -> extracted resources -> deterministic gates -> report."""
+    return run_gates(extract_resources(methods_text), methods_text)
 
 
 def report_to_dict(r: ReproReport) -> dict:
