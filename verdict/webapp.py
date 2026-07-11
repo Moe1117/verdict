@@ -14,6 +14,7 @@ Run:  PYTHONPATH=. .venv/bin/python -m uvicorn verdict.webapp:app --port 8000
 from __future__ import annotations
 
 import asyncio
+import datetime
 import json
 import logging
 import os
@@ -51,6 +52,26 @@ MAX_NOTE_LEN = int(os.getenv("VERDICT_MAX_NOTE_LEN", "4000"))
 MAX_METHODS_LEN = int(os.getenv("VERDICT_MAX_METHODS_LEN", "8000"))
 _MAX_CONCURRENT = int(os.getenv("VERDICT_MAX_CONCURRENT", "4"))
 _slots = threading.BoundedSemaphore(_MAX_CONCURRENT)
+
+# A public, unauthenticated demo endpoint spends paid Claude budget per call. The concurrency cap
+# bounds SIMULTANEOUS spend; this daily cap bounds TOTAL spend per UTC day across the paid endpoints
+# (0 = unlimited). It is a soft in-process cap (resets on process restart) — for a hard ceiling, also
+# set a budget alert on the Anthropic console. Sized for a judge-facing demo; tune via VERDICT_DAILY_CAP.
+_DAILY_CAP = int(os.getenv("VERDICT_DAILY_CAP", "300"))
+_day_lock = threading.Lock()
+_day_state = {"day": None, "count": 0}
+
+
+def _daily_gate() -> None:
+    if _DAILY_CAP <= 0:
+        return
+    today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+    with _day_lock:
+        if _day_state["day"] != today:
+            _day_state["day"], _day_state["count"] = today, 0
+        if _day_state["count"] >= _DAILY_CAP:
+            raise HTTPException(status_code=429, detail="daily demo limit reached — try again tomorrow")
+        _day_state["count"] += 1
 
 # Scoped CORS: only the local dev UI origins may call the API cross-origin (the primary dev flow
 # goes same-origin through the Vite proxy anyway). A wildcard would let any web page drive spend.
@@ -168,8 +189,9 @@ class ReproRequest(BaseModel):
 
 @app.post("/api/repro")
 def api_repro(req: ReproRequest) -> dict:
-    # review() makes one paid Claude extraction call plus deterministic gate lookups, so it takes
-    # a concurrency slot like the other live endpoints.
+    # review() makes paid Claude calls (extraction + one knockout-reasoning call per antibody) plus
+    # deterministic gate lookups, so it takes a daily-budget slot AND a concurrency slot.
+    _daily_gate()
     if not _slots.acquire(blocking=False):
         raise HTTPException(status_code=429, detail="server is busy — too many concurrent reviews")
     try:

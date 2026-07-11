@@ -1,0 +1,169 @@
+{
+ "n": 16,
+ "accuracy": 0.938,
+ "correct": 15,
+ "false_validated": 0,
+ "confusion_matrix": {
+  "validated": {
+   "validated": 5,
+   "ambiguous": 0,
+   "not_reported": 0
+  },
+  "ambiguous": {
+   "validated": 0,
+   "ambiguous": 5,
+   "not_reported": 1
+  },
+  "not_reported": {
+   "validated": 0,
+   "ambiguous": 0,
+   "not_reported": 5
+  }
+ },
+ "rows": [
+  {
+   "id": "kv01",
+   "antibody": "TrkB",
+   "gold": "validated",
+   "predicted": "validated",
+   "result": "PASS",
+   "correct": true,
+   "rationale": "in-study knockout showing loss of signal"
+  },
+  {
+   "id": "kv02",
+   "antibody": "STIM1",
+   "gold": "validated",
+   "predicted": "validated",
+   "result": "PASS",
+   "correct": true,
+   "rationale": "in-study siRNA knockdown abolishing signal"
+  },
+  {
+   "id": "kv03",
+   "antibody": "CD47",
+   "gold": "validated",
+   "predicted": "validated",
+   "result": "PASS",
+   "correct": true,
+   "rationale": "in-study CRISPR knockout, loss of staining"
+  },
+  {
+   "id": "kv04",
+   "antibody": "ATG7",
+   "gold": "validated",
+   "predicted": "validated",
+   "result": "PASS",
+   "correct": true,
+   "rationale": "in-study shRNA knockdown, quantified loss"
+  },
+  {
+   "id": "kv05",
+   "antibody": "GFAP",
+   "gold": "validated",
+   "predicted": "validated",
+   "result": "PASS",
+   "correct": true,
+   "rationale": "in-study knockout, band absent"
+  },
+  {
+   "id": "ka01",
+   "antibody": "Tau",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "bare 'validated' claim, no genetic control described"
+  },
+  {
+   "id": "ka02",
+   "antibody": "alpha-synuclein",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "validation cited from a prior paper, not performed in this study"
+  },
+  {
+   "id": "ka03",
+   "antibody": "Substance P",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "peptide competition is a control but NOT a genetic (knockout/knockdown) control"
+  },
+  {
+   "id": "ka04",
+   "antibody": "PD-L1",
+   "gold": "ambiguous",
+   "predicted": "not_reported",
+   "result": "INSUFFICIENT",
+   "correct": false,
+   "rationale": "manufacturer validation, no in-study genetic control"
+  },
+  {
+   "id": "ka05",
+   "antibody": "Nrf2",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "gain-of-function overexpression, not a knockout loss-of-function control"
+  },
+  {
+   "id": "ka06",
+   "antibody": "Kv4.2",
+   "gold": "ambiguous",
+   "predicted": "ambiguous",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "a genetic control is described, but it knocks out the WRONG target (Kv4.3, not Kv4.2)"
+  },
+  {
+   "id": "kn01",
+   "antibody": "Iba1",
+   "gold": "not_reported",
+   "predicted": "not_reported",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "antibody named, no validation of any kind described"
+  },
+  {
+   "id": "kn02",
+   "antibody": "NeuN",
+   "gold": "not_reported",
+   "predicted": "not_reported",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "dilution/protocol only, no specificity validation"
+  },
+  {
+   "id": "kn03",
+   "antibody": "c-Fos",
+   "gold": "not_reported",
+   "predicted": "not_reported",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "primary-omission (secondary-only) control does not validate the primary's specificity"
+  },
+  {
+   "id": "kn04",
+   "antibody": "CD8",
+   "gold": "not_reported",
+   "predicted": "not_reported",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "multiple antibodies listed, none validated"
+  },
+  {
+   "id": "kn05",
+   "antibody": "Ki-67",
+   "gold": "not_reported",
+   "predicted": "not_reported",
+   "result": "INSUFFICIENT",
+   "correct": true,
+   "rationale": "isotype control assesses background, not specificity validation"
+  }
+ ]
+}

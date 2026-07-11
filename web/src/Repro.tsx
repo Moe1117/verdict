@@ -7,6 +7,12 @@ const reproBadgeClass = (v: string) => 'badge b-' + v.replace(/[\s-]/g, '')
 
 const pct = (x: number) => Math.round(x * 100 - 1e-9) + '%'  // round-half-down so 92.5% shows as 92%, matching the docs
 
+// The live "Verify" lane calls the API. On a static deploy the API lives on a DIFFERENT origin, so
+// prefix /api/* with VITE_API_BASE (empty in dev → same-origin via the Vite proxy). Static assets
+// (/repro/*.json) always stay same-origin with the frontend, so they are NOT prefixed.
+const API_BASE = (((import.meta as any).env?.VITE_API_BASE as string | undefined) ?? '').replace(/\/+$/, '')
+const api = (path: string) => API_BASE + path
+
 // Per-finding result → glyph + colour class. INSUFFICIENT is the abstention state.
 const RESULT_META: Record<string, { icon: string; cls: string; label: string }> = {
   FAIL: { icon: '✗', cls: 'fail', label: 'fail' },
@@ -164,7 +170,7 @@ export default function Repro() {
       })
       .catch(() => setError('Could not load the saved demo.'))
     // is a live backend reachable? (a static deploy has none — so we tell the judge upfront)
-    fetch('/api/health')
+    fetch(api('/api/health'))
       .then((r) => setApiUp(r.ok))
       .catch(() => setApiUp(false))
   }, [])
@@ -179,7 +185,7 @@ export default function Repro() {
     const timer = setTimeout(() => ctrl.abort(), LIVE_TIMEOUT_MS)
     setState('loading')
     setError(null)
-    fetch('/api/repro', {
+    fetch(api('/api/repro'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ methods: m }),

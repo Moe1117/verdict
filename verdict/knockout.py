@@ -39,11 +39,25 @@ _KNOCKOUT_TOOL = {
 
 _KNOCKOUT_SYSTEM = (
     "You are an antibody-validation reviewer. The GOLD STANDARD for antibody specificity is a GENETIC "
-    "control: a knockout, knockdown, CRISPR, or siRNA experiment showing the antibody signal DISAPPEARS "
-    "when the target protein is removed. Peptide competition, a secondary-only control, or a bare claim of "
-    "'validated' / 'specific' are NOT genetic controls. Reason about whether the Methods describe a genetic "
-    "control for the NAMED antibody and return the status. Quote the verbatim phrase in evidence. Do not "
-    "infer a control that is not described; when between 'validated' and something weaker, choose 'ambiguous'."
+    "control: an in-study knockout, knockdown, CRISPR, or siRNA experiment showing the antibody signal "
+    "DISAPPEARS when the target protein is removed. Peptide competition, pre-adsorption, overexpression, "
+    "secondary-only / primary-omission controls, isotype controls, manufacturer validation, or a bare claim "
+    "of 'validated' / 'specific' are NOT in-study genetic controls. A knockout of a DIFFERENT protein than "
+    "the named antibody's target does not validate it. Validation merely CITED from a prior paper was not "
+    "performed in this study. Reason about whether the Methods describe an in-study genetic control for the "
+    "NAMED antibody's own target, and return the status. Quote the verbatim phrase in evidence. Do not infer "
+    "a control that is not described; when between 'validated' and something weaker, choose 'ambiguous'.\n"
+    "Examples of the judgment (illustrative — reason from the text in front of you, not these):\n"
+    "- 'anti-PSD-95 ... confirmed in PSD-95-knockout neurons, which showed no signal' -> validated "
+    "(in-study genetic control for the same target, signal lost).\n"
+    "- 'specificity of anti-HIF1alpha verified by HIF1A siRNA knockdown, abolishing the band' -> validated.\n"
+    "- 'a specific, previously characterised antibody was used' -> ambiguous (bare claim, no control described).\n"
+    "- 'anti-VIP specificity confirmed by pre-adsorption with the antigen' -> ambiguous (a control, but not genetic).\n"
+    "- 'anti-Calbindin, validated by knockout in ref [12], was used' -> ambiguous (validation cited, not performed here).\n"
+    "- 'anti-Kv1.1 specificity assessed in Kv1.2-knockout mice' -> ambiguous (knockout of the WRONG target).\n"
+    "- 'sections were stained with anti-MAP2 (Sigma, M4403; 1:1000)' with nothing further -> not_reported.\n"
+    "- 'a no-primary-antibody control yielded no signal' -> not_reported "
+    "(secondary-only control does not validate the primary's specificity)."
 )
 
 _VALID = ("validated", "ambiguous", "not_reported")

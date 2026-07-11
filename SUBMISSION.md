@@ -42,6 +42,11 @@ lookup can't reach:
    "validated" claim, versus a weaker non-genetic control — is a **reasoning judgment**, and it's the
    one gate where Claude decides. It's a **labelled model judgment** (`PASS` / `NEEDS-VERIFICATION`,
    never a deterministic FAIL), and `aggregate()` never lets it fabricate the deterministic verdict.
+   It is **grounded and measured**: on a held-out 16-case labelled corpus (genetic vs non-genetic
+   controls, in-study vs cited, wrong-target knockouts) it scores **94% (15/16)** with **0 false-validated**
+   — it never upgrades a non-validated antibody to `PASS`, the costly error for a specificity tool
+   (`scripts/repro_knockout_eval.py`, `benchmark/repro/knockout_eval.json`; few-shot exemplars are
+   disjoint from the eval set, so the number is a real held-out result, not a self-graded one).
 
 Everything Claude touches is labelled as a model judgment; everything a **registry** decides is a pure
 lookup. **The deterministic gates issue every *identity* verdict** (cell line, antibody catalog#/RRID);
@@ -83,9 +88,10 @@ the 18-vs-92 numbers measure two *different* jobs (recall-the-identity vs extrac
 - **Identity checks are deterministic lookups; rigor + knockout validation are labelled model
   judgments.** We don't blur them — the report tags each finding, and the deterministic verdict is
   computed from the rule findings alone.
-- **The knockout-control reasoning gate is built, but thin** — a first-cut single-antibody reasoning
-  judgment over the pasted Methods, not a corpus-grounded validator. It's the honest next depth, and
-  it's the one on-screen beat where Claude reasons rather than parses.
+- **The knockout-control reasoning gate is built, grounded, and measured** (94% / 0 false-validated on
+  a 16-case held-out corpus) — but still **modest in scope**: single-antibody, per-paste, a corpus of
+  16 constructed cases, not thousands of real papers. It's the one on-screen beat where Claude reasons
+  rather than parses; the honest next depth is a larger, PMID-anchored corpus.
 - **Absence from the register is not proof of identity** — STR authentication is still required, on-screen.
 - **Prior art:** SciScore and the Rigor & Transparency Index already run RRID + rigor checks at
   submission. Our wedge is the offline **citable** register (true identity + CVCL), calibrated
@@ -96,10 +102,10 @@ the 18-vs-92 numbers measure two *different* jobs (recall-the-identity vs extrac
 
 ## What's next
 
-Ground the knockout-control gate against a corpus of real validated/unvalidated Methods (it currently
-reasons per-paste), a Human Protein Atlas validation-tier gate for antibodies, and the completed
-SciScore/RTI head-to-head. The engine is validated; the numbers on screen are the numbers in
-`benchmark/repro/`.
+Expand the knockout-control corpus to a larger, PMID-anchored set of real validated/unvalidated
+Methods (it is currently grounded on 16 held-out cases at 94%), a Human Protein Atlas validation-tier
+gate for antibodies, and the completed SciScore/RTI head-to-head. The engine is validated; the numbers
+on screen are the numbers in `benchmark/repro/`.
 
 ---
 

@@ -1,0 +1,12 @@
+.git
+.venv
+.env
+.claude
+web/node_modules
+web/dist
+**/__pycache__
+*.pyc
+.pytest_cache
+.hypothesis
+.DS_Store
+notebooks

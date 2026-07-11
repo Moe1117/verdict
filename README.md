@@ -64,7 +64,8 @@ On the **same** task — did you flag a contaminated line at all? — the model 
 - **Cell-line and antibody *identity* are deterministic lookups** (tagged `registry`). **Rigor and
   knockout-control validation are *labelled model judgments*** (tagged `model judgment`) — the
   knockout gate is the one place Claude genuinely reasons, and it never issues the deterministic
-  verdict or a FAIL.
+  verdict or a FAIL. It's **grounded and measured**: **94% (15/16)** on a held-out labelled corpus
+  with **0 false-validated** (`scripts/repro_knockout_eval.py`, `benchmark/repro/knockout_eval.json`).
 - The register lookup catches **98.8% of known-misidentified lines by name** (587/594): it
   deliberately **declines 7** whose entire designation is a generic lab token (AO = acridine orange,
   EPC = endothelial progenitor cells, …) rather than risk a false accusation. Specificity over
