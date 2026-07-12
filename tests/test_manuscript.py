@@ -122,6 +122,30 @@ def test_draft_corrections_only_for_actionable_findings(monkeypatch):
     assert "HeLa" not in captured["user"] or "GR-M" in captured["user"]  # only actionable findings sent
 
 
+def test_draft_corrections_recovers_stringified_corrections(monkeypatch):
+    # some model turns return the array as a stringified JSON blob (seen live with many findings) —
+    # recover it instead of iterating chars and crashing / dropping every correction.
+    monkeypatch.setattr(manuscript, "call_tool", lambda s, u, tool, **k: {
+        "corrections": '{"corrections":[{"item":"cell line: GR-M","suggestion":"STR-authenticate.","rationale":"on register"}]}'})
+    report = repro.ReproReport(findings=[
+        repro.Finding("cell line: GR-M", "cell_line", "FAIL", "on register", "GR-M cells", "ICLAC-x")],
+        verdict="Needs fixes", n_fail=1, n_pass=0, n_insufficient=0)
+    out = manuscript.draft_corrections(report, "GR-M cells.")
+    assert len(out) == 1 and out[0].item == "cell line: GR-M"
+    assert out[0].suggestion == "STR-authenticate." and out[0].original == "GR-M cells"
+
+
+def test_draft_corrections_skips_non_dict_correction_entries(monkeypatch):
+    # a malformed entry (e.g. a bare string) must be skipped, never crash the whole review.
+    monkeypatch.setattr(manuscript, "call_tool", lambda s, u, tool, **k: {
+        "corrections": ["oops a string", {"item": "cell line: GR-M", "suggestion": "STR-authenticate."}]})
+    report = repro.ReproReport(findings=[
+        repro.Finding("cell line: GR-M", "cell_line", "FAIL", "on register", "GR-M cells", "ICLAC-x")],
+        verdict="Needs fixes", n_fail=1, n_pass=0, n_insufficient=0)
+    out = manuscript.draft_corrections(report, "GR-M cells.")
+    assert [c.item for c in out] == ["cell line: GR-M"]
+
+
 def test_draft_corrections_degrades_on_llm_error(monkeypatch):
     def boom(*a, **k): raise RuntimeError("api down")
     monkeypatch.setattr(manuscript, "call_tool", boom)

@@ -11,6 +11,7 @@ grounded in the finding's own citation, and every suggestion is LABELLED a draft
 """
 from __future__ import annotations
 
+import json
 from dataclasses import asdict, dataclass, field
 
 from . import investigate, repro
@@ -146,7 +147,7 @@ _FIX_SYSTEM = (
     "validation, add or cite a genetic knockout/knockdown/CRISPR/siRNA control; for a missing rigor element, "
     "the ARRIVE/MDAR-compliant sentence. NEVER invent an identity, catalog number, RRID, or result — write "
     "the corrective ACTION and leave a clearly-marked <placeholder> for any value the author must supply. "
-    "Every suggestion is a draft for human review.")
+    "Keep each suggestion to 1–2 sentences — concise and paste-ready. Every suggestion is a draft for human review.")
 
 
 def draft_corrections(report: ReproReport, manuscript_text: str, *, client=None) -> list[Correction]:
@@ -160,12 +161,25 @@ def draft_corrections(report: ReproReport, manuscript_text: str, *, client=None)
         f"'{f.evidence}')" for f in actionable)
     try:
         d = call_tool(_FIX_SYSTEM, f"Findings to correct:\n{payload}\n\nManuscript:\n{manuscript_text[:4000]}",
-                      _FIX_TOOL, max_tokens=1600)
+                      _FIX_TOOL, max_tokens=3000)
     except Exception:  # noqa: BLE001 — auto-fix is advisory; never block or crash a review
         return []
+    corrections = d.get("corrections", [])
+    # Some model turns return the array as a stringified JSON blob rather than a structured list — recover
+    # the list so a whole review's fixes are not silently dropped (or crashed on when iterating its chars).
+    if isinstance(corrections, str):
+        try:
+            parsed = json.loads(corrections)
+            corrections = parsed.get("corrections", []) if isinstance(parsed, dict) else parsed
+        except Exception:  # noqa: BLE001
+            corrections = []
+    if not isinstance(corrections, list):
+        corrections = []
     by_item = {f.item: f for f in actionable}
     out: list[Correction] = []
-    for c in d.get("corrections", []):
+    for c in corrections:
+        if not isinstance(c, dict):
+            continue
         src = by_item.get(c.get("item", ""))
         out.append(Correction(item=c.get("item", ""), original=(src.evidence if src else ""),
                               suggestion=c.get("suggestion", ""), rationale=c.get("rationale", "")))
