@@ -44,10 +44,10 @@ lookup can't reach:
    never a deterministic FAIL), and `aggregate()` never lets it fabricate the deterministic verdict.
    It is **grounded and measured on two corpora** — 16 constructed held-out cases and **21 real cases
    drawn from 6 open-access papers (PMIDs cited)**. On real manuscripts the 3-way reasoning accuracy is
-   **67%** (14/21, Wilson CI 45–83%; lower than the ~94–100% on the constructed set — real Methods are
-   harder). But the metric that actually reaches the report card — *does it ever wrongly PASS an
+   **67%** (14/21, Wilson CI 45–83%; lower than the 100% on the committed constructed run, Wilson CI 81–100% —
+   real Methods are harder). But the metric that actually reaches the report card — *does it ever wrongly PASS an
    unvalidated antibody, or miss a validated one?* — is **100% on both corpora (0 false-PASS,
-   0 missed-validated), stable across 3 runs**: every real-corpus error is the invisible
+   0 missed-validated)** on the committed run: every real-corpus error is the invisible
    `ambiguous`↔`not_reported` confusion, and both map to `NEEDS-VERIFICATION`. (`scripts/repro_knockout_eval.py`;
    `benchmark/repro/knockout_eval*.json`; few-shot exemplars are disjoint from both eval sets.)
 3. **Agentic investigation — Claude as an autonomous research agent.** The one place Claude doesn't
@@ -60,7 +60,7 @@ lookup can't reach:
    cited PMID/CVCL is a real, retrieved record — whether that record *supports* the finding is a labelled
    model judgment, and it abstains when it can't ground one at all. Measured on **30 known cases**
    (`scripts/repro_investigate_eval.py`, `benchmark/repro/investigate_eval.json`): **0 false-validation on
-   every run** — it never wrongly "validates" a reagent — at **~⅓ class accuracy**. On a realistic corpus
+   the committed run** — it never wrongly "validates" a reagent — at **~⅓ class accuracy**. On a realistic corpus
    it **abstains far more than it succeeds**, because antibody validation often lives in a paper's full text
    the search can't reach; where the evidence is findable it cites the right real record (anti-GABARAP 8H5 →
    `PMID:30679523`; GR-M → `CVCL_2451` + `PMID:25877200`; WiDr → `CVCL_2760`). The honest framing of the
@@ -90,15 +90,16 @@ cherry-picking) + 36 authentic controls, Wilson 95% CIs:
 | Famous ~11 vs obscure tail 519 | 91% vs **16%** | catches the tail it can't recall |
 
 **2 — Give it the register and the only failure point left is extraction — which holds.**
-Stress-tested end-to-end through nine phrasings (clean → dense → in-a-list → hyphen-stripped): **92%
-catch** (37/40, CI 80–97%), **0 name-match misses**, and **0 false-flags on 18 controls end-to-end**
+Stress-tested end-to-end through nine synthetic Methods-style phrasings (clean → dense → in-a-list →
+hyphen-stripped): **92% catch** (37/40, CI 80–97%), **0 name-match misses**, and **0 false-flags on 18 controls end-to-end**
 (and 0/36 on the bare register lookup — the two specificity measurements are reported separately, not
 welded together). The register lookup itself catches **98.8% of known lines by name** (587/594): it
 deliberately **declines 7** whose entire designation is a generic lab token (AO = acridine orange,
 EPC = endothelial progenitor cells, …) rather than risk a false accusation.
 
-The honest same-task comparison is **model 37% vs tool 92%** on "did you flag a contaminated line";
-the 18-vs-92 numbers measure two *different* jobs (recall-the-identity vs extract-and-look-up).
+The honest same-task comparison is **model 37%** (over all 594 register lines) **vs tool 92%** (over the
+40-sentence stress corpus) on "did you flag a contaminated line"; the 18-vs-92 numbers measure two
+*different* jobs (recall-the-identity vs extract-and-look-up).
 
 ## The honest boundaries (stated up front)
 
@@ -109,7 +110,7 @@ the 18-vs-92 numbers measure two *different* jobs (recall-the-identity vs extrac
   computed from the rule findings alone.
 - **The knockout-control reasoning gate is built, grounded, and measured on real manuscripts** — 100%
   PASS-vs-NEEDS-VERIFICATION on both a constructed corpus and a 21-case real-paper corpus (0 false-PASS,
-  0 missed-validated, stable across 3 runs), at a 67% 3-way reasoning accuracy on real text: it
+  0 missed-validated), at a 67% 3-way reasoning accuracy on real text: it
   under-distinguishes *weak* validation from *absent* validation, but never wrongly validates. Still
   **modest in scope** (single-antibody, per-paste, tens of cases); the honest next depth is a larger
   multi-annotator corpus and sharpening the `ambiguous`↔`not_reported` boundary.

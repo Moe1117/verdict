@@ -58,13 +58,14 @@ Two **separate** measurements, framed as such — never a rigged head-to-head. R
    of the time. It is **confidently wrong on 230** (41 at high confidence). It aces the ~11 famous
    cases (**91%**) and collapses on the 519 obscure ones (**16%**) — exactly where you can't eyeball it.
 2. **Give it the register and the only failure point left is extraction — which holds.** Stress-tested
-   end-to-end through nine messy phrasings, the tool's **extraction recall is 92%** (37/40, 95% CI
+   end-to-end through nine synthetic Methods-style phrasings, the tool's **extraction recall is 92%** (37/40, 95% CI
    80–97%) with **0 false-flags on 18 authentic controls** end-to-end (and 0/36 on the bare register
    lookup). On a catch, the identity is the *register's*, not the model's — so this measures whether
    Claude can pull the name out of prose, not whether it remembers the answer.
 
-On the **same** task — did you flag a contaminated line at all? — the model manages 37% to the tool's
-92%. That's the honest comparison; the 18-vs-92 split measures two different jobs.
+On the **same** question — did you flag a contaminated line at all? — the model manages 37% (over all
+594 register lines) to the tool's 92% (over a 40-sentence stress corpus). That's the honest comparison;
+the 18-vs-92 split measures two different jobs.
 
 ## The honest boundary
 
@@ -103,7 +104,7 @@ not the Builder-track entry and their numbers are their own:**
   confidence and an audit ledger. *Evidence Resolver:* the gate engine reproduces expert verdicts
   **91%** with 0 confident false-positives (auditability over fixed input); run end-to-end the full
   live product scores **62%** and a naive Claude scores **78%** on these famous claims; High-certainty
-  is ~79–82% out-of-sample, ECE 0.16. Those figures describe the **Evidence Resolver only**, not the
+  is ~82% out-of-sample, ECE 0.16. Those figures describe the **Evidence Resolver only**, not the
   Methods Verifier. Try it: `python -m verdict "metformin reduces cancer incidence in adults without diabetes"`.
 
 > ⚕️ These tools grade the *state of published evidence / reporting*. Research and triage aids for

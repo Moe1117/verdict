@@ -165,7 +165,7 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
         It is <b className="bad">confidently wrong on {model.confident_wrong}</b>
         {model.confident_wrong_high != null && <> ({model.confident_wrong_high} at high confidence)</>}. Hand it the
         public register and the only failure point left is <i>extraction</i> — which holds at{' '}
-        <b className="good">{pct(tool.end_to_end_catch)}</b> through messy Methods prose, every call cited to an ICLAC ID.
+        <b className="good">{pct(tool.end_to_end_catch)}</b> through templated Methods-style sentences, every call cited to an ICLAC ID.
       </div>
 
       <div className="rp-stats">
@@ -180,7 +180,7 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
         </div>
         <div className="rp-stat tool">
           <div className="rp-stat-num">{pct(tool.end_to_end_catch)}</div>
-          <div className="rp-stat-cap">the tool’s <b>extraction recall</b> — end-to-end on real Methods text</div>
+          <div className="rp-stat-cap">the tool’s <b>extraction recall</b> — end-to-end on templated Methods-style sentences</div>
           <div className="rp-stat-sub">
             identity supplied by the register lookup, not the model · {ctrlFF} false alarms on {ctrlN} controls
             end-to-end · every FAIL cited
@@ -195,9 +195,9 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
         <b>Two different measurements — not a head-to-head.</b> The model must recall the true identity from memory
         (strict, n={model.n_known}); the tool only has to extract the name from prose and look it up (n={tool.stress_n},
         95% CI {pct(tool.stress_ci[0])}–{pct(tool.stress_ci[1])}), so on a catch the identity is the register’s, not the
-        model’s.{flagRecall && <> On the <i>same</i> task — did you flag a contaminated line at all? — the model manages{' '}
-        {flagRecall} to the tool’s {pct(tool.end_to_end_catch)}.</>} Measured on the entire {model.n_misidentified}-line
-        ICLAC register, no cherry-picking: the model aces the ~11 famous cases ({pct(model.famous_acc)}) and collapses on
+        model’s.{flagRecall && <> On the <i>same</i> question — did you flag a contaminated line at all? — the model manages{' '}
+        {flagRecall} across all {model.n_misidentified} register lines to the tool’s {pct(tool.end_to_end_catch)} across a {tool.stress_n}-sentence
+        stress corpus.</>} Measured across all {model.n_misidentified} misidentified lines, no cherry-picking: the model aces the ~11 famous cases ({pct(model.famous_acc)}) and collapses on
         the 519 obscure ones ({pct(model.tail_acc)}) — exactly where a researcher can’t eyeball it.
       </div>
 

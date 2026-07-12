@@ -11,7 +11,7 @@ interface EvalSummary {
   confidently_wrong: { verdict: number; naive_vote: number; plain_llm: number }
 }
 interface LiveSummary { accuracy: number; confident_false_positives: number; confident_false_positives_strict: number; abstention_rate: number }
-interface Conformal { alpha: number; threshold: string; guarantee_held_fraction: number; mean_test_error: number }
+interface Conformal { alpha: number; threshold: string; guarantee_held_fraction: number; mean_test_error: number; covariate_shift_heldout_error: number }
 
 // round half down so 62.5% shows as 62%, matching the reported figures in SUBMISSION.md
 // (Python's :.0% uses round-half-to-even; every half-value here is even, so this agrees)
@@ -161,12 +161,13 @@ function Scorecard({ ev, live, conf }: { ev: EvalSummary; live: LiveSummary | nu
       {conf && (
         <div className="sc-guarantee">
           <span className="g-dot" /> Guaranteed: commit only at <b>{conf.threshold}</b> certainty → error ≤ {pct(conf.alpha)},
-          distribution-free — held in <b>{pct(conf.guarantee_held_fraction)}</b> of random splits.
+          distribution-free — held in <b>{pct(conf.guarantee_held_fraction)}</b> of random splits. It does <b>not</b> hold under
+          distribution shift: <b>{pct(conf.covariate_shift_heldout_error)}</b> realized error on the covariate-shifted held-out set.
         </div>
       )}
       <div className="sc-foot">
-        The <b>gate engine</b> — deterministic logic over verified rows — reproduces the expert verdicts with <b>zero</b>{' '}
-        confident false-positives, but that holds extraction fixed. Run end-to-end, the <b>full live product</b> scores{' '}
+        The <b>gate engine</b> — deterministic logic over verified rows — reproduces the expert verdicts at{' '}
+        <b>{pct(ev.accuracy.verdict)}</b> with <b>zero</b> confident false-positives, but that holds extraction fixed. Run end-to-end, the <b>full live product</b> scores{' '}
         {live ? pct(live.accuracy) : '62%'} and abstains on {live ? pct(live.abstention_rate) : '19%'} rather than overstate.
         We report the uncomfortable number too: a naive Claude scores <b>{pct(ev.accuracy.plain_llm)}</b> on these famous
         claims — <b>above</b> the live product — because it has read the literature they're drawn from. Verdict's edge is
