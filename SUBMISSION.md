@@ -98,6 +98,16 @@ welded together). The register lookup itself catches **98.8% of known lines by n
 deliberately **declines 7** whose entire designation is a generic lab token (AO = acridine orange,
 EPC = endothelial progenitor cells, …) rather than risk a false accusation.
 
+**Real-world slice (external validity).** The 92% is a controlled stress test; to check it in the wild we
+ran the same engine over **47 real open-access Methods sections** (Europe PMC, `scripts/repro_realworld_eval.py`):
+it extracted **~4.7 resources/paper** and, crucially, raised **0 false alarms on 14 clean controls** —
+specificity holds on real papers. On the string-verifiable subset (papers whose fed Methods literally
+contains a register line) it caught **12 of 18** — below the synthetic 92%, honestly, because real Methods
+bury names in STAR / Key-Resources tables and passing mentions; the gap is **extraction recall, not false
+accusation**. These are descriptive coverage + a *verifiable* catch/false-flag rate, not a recall % against
+an unlabeled gold (that needs per-paper annotation — see What's next). WISH and KB are excluded as probe
+lines (their names collide with "wish" / "kilobase" in free text).
+
 The honest same-task comparison is **model 37%** (over all 594 register lines) **vs tool 92%** (over the
 40-sentence stress corpus) on "did you flag a contaminated line"; the 18-vs-92 numbers measure two
 *different* jobs (recall-the-identity vs extract-and-look-up).

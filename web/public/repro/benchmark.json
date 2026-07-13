@@ -26,6 +26,14 @@
   "n_controls_endtoend": 18,
   "match_misses": 0
  },
+ "realworld": {
+  "n_papers": 47,
+  "mean_resources": 4.7,
+  "caught": 12,
+  "verifiable": 18,
+  "false_flags": 0,
+  "clean_papers": 14
+ },
  "examples": [
   {
    "name": "HBT-3",

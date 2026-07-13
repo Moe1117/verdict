@@ -539,6 +539,16 @@ body {
 }
 @media (max-width: 620px) { .rp-stat-vs { padding: 2px 0; } }
 
+/* real-world slice — the external-validity strip beside the synthetic 92% (same tool, real Methods) */
+.rp-realworld {
+  font-size: 13px; line-height: 1.6; color: var(--muted);
+  margin: 0 0 20px; padding: 12px 15px;
+  border: 1px solid rgba(53,214,160,0.28); border-radius: 12px;
+  background: rgba(53,214,160,0.05);
+}
+.rp-realworld b { color: var(--text); font-weight: 700; }
+.rp-realworld b.good { color: var(--supported); }
+
 /* confidently-wrong proof rows */
 .rp-cw-list { display: flex; flex-direction: column; gap: 8px; }
 .rp-cw {

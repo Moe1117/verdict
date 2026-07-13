@@ -204,5 +204,15 @@ export interface IclacBench {
     n_controls_endtoend?: number
     match_misses: number
   }
+  // Real-world slice: the same tool run over REAL open-access Methods (Europe PMC), not synthetic
+  // sentences — the external-validity companion to the stress test. (scripts/repro_realworld_eval.py)
+  realworld?: {
+    n_papers: number       // real OA Methods sections processed
+    mean_resources: number // resources extracted per paper
+    caught: number         // register lines caught, on the string-verifiable subset
+    verifiable: number     // papers whose fed Methods literally contains the register line (denominator)
+    false_flags: number    // candidate false alarms on the clean stratum
+    clean_papers: number   // clean controls
+  }
   examples: IclacBenchExample[]
 }
