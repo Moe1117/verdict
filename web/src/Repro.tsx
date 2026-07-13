@@ -188,36 +188,41 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
         </div>
       </div>
 
-      <div
-        className="rp-bench-note"
-        style={{ fontSize: 13, color: 'var(--text-muted, #8a8a8a)', margin: '2px 0 14px', lineHeight: 1.6 }}
-      >
-        <b>Two different measurements — not a head-to-head.</b> The model must recall the true identity from memory
-        (strict, n={model.n_known}); the tool only has to extract the name from prose and look it up (n={tool.stress_n},
-        95% CI {pct(tool.stress_ci[0])}–{pct(tool.stress_ci[1])}), so on a catch the identity is the register’s, not the
-        model’s.{flagRecall && <> On the <i>same</i> question — did you flag a contaminated line at all? — the model manages{' '}
-        {flagRecall} across all {model.n_misidentified} register lines to the tool’s {pct(tool.end_to_end_catch)} across a {tool.stress_n}-sentence
-        stress corpus.</>} Measured across all {model.n_misidentified} misidentified lines, no cherry-picking: the model aces the ~11 famous cases ({pct(model.famous_acc)}) and collapses on
-        the 519 obscure ones ({pct(model.tail_acc)}) — exactly where a researcher can’t eyeball it.
-      </div>
-
-      <div className="section-label">confidently wrong, where it matters — the model’s own words vs. the register</div>
-      <div className="rp-cw-list">
-        {examples.map((r) => (
-          <div className="rp-cw" key={r.name}>
-            <span className="rp-cw-name">{r.name}</span>
-            <span className="rp-cw-model">
-              model says <em>{r.model_says}</em>
-              <span className="rp-cw-conf">{r.confidence}</span>
-            </span>
-            <span className="rp-cw-arrow">→</span>
-            <span className="rp-cw-truth">
-              register says <strong>{r.register_says}</strong>
-            </span>
-            <span className="rp-cw-cite">{r.iclac_id} · {r.cvcl}</span>
+      <details className="rp-why">
+        <summary>Why it exists — the two measurements behind these numbers</summary>
+        <div className="rp-why-body">
+          <div
+            className="rp-bench-note"
+            style={{ fontSize: 13, color: 'var(--text-muted, #8a8a8a)', margin: '2px 0 14px', lineHeight: 1.6 }}
+          >
+            <b>Two different measurements — not a head-to-head.</b> The model must recall the true identity from memory
+            (strict, n={model.n_known}); the tool only has to extract the name from prose and look it up (n={tool.stress_n},
+            95% CI {pct(tool.stress_ci[0])}–{pct(tool.stress_ci[1])}), so on a catch the identity is the register’s, not the
+            model’s.{flagRecall && <> On the <i>same</i> question — did you flag a contaminated line at all? — the model manages{' '}
+            {flagRecall} across all {model.n_misidentified} register lines to the tool’s {pct(tool.end_to_end_catch)} across a {tool.stress_n}-sentence
+            stress corpus.</>} Measured across all {model.n_misidentified} misidentified lines, no cherry-picking: the model aces the ~11 famous cases ({pct(model.famous_acc)}) and collapses on
+            the 519 obscure ones ({pct(model.tail_acc)}) — exactly where a researcher can’t eyeball it.
           </div>
-        ))}
-      </div>
+
+          <div className="section-label">confidently wrong, where it matters — the model’s own words vs. the register</div>
+          <div className="rp-cw-list">
+            {examples.map((r) => (
+              <div className="rp-cw" key={r.name}>
+                <span className="rp-cw-name">{r.name}</span>
+                <span className="rp-cw-model">
+                  model says <em>{r.model_says}</em>
+                  <span className="rp-cw-conf">{r.confidence}</span>
+                </span>
+                <span className="rp-cw-arrow">→</span>
+                <span className="rp-cw-truth">
+                  register says <strong>{r.register_says}</strong>
+                </span>
+                <span className="rp-cw-cite">{r.iclac_id} · {r.cvcl}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </details>
     </div>
   )
 }

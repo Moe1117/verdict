@@ -562,6 +562,24 @@ body {
   border: 1px solid var(--border); border-radius: 6px; padding: 2px 8px; white-space: nowrap;
 }
 
+/* collapsible "why it exists" — the honest two-measurements detail + confidently-wrong proof,
+   tucked away by default so the headline + tiles carry the panel. */
+.rp-why { margin-top: 6px; border-top: 1px solid var(--border); }
+.rp-why > summary {
+  list-style: none; cursor: pointer; user-select: none;
+  display: flex; align-items: center; gap: 9px;
+  font: 600 11px var(--mono); letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--faint); padding: 12px 0 2px; transition: color 0.15s ease;
+}
+.rp-why > summary::-webkit-details-marker { display: none; }
+.rp-why > summary::before {
+  content: '▸'; font-size: 12px; color: var(--muted); line-height: 1;
+  transition: transform 0.18s ease;
+}
+.rp-why[open] > summary::before { transform: rotate(90deg); }
+.rp-why > summary:hover { color: var(--muted); }
+.rp-why-body { padding-top: 8px; }
+
 /* ── the report card ── */
 .rp-input { margin-bottom: 20px; }
 .rp-report { }
