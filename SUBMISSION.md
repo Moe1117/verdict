@@ -5,27 +5,25 @@ Repo: https://github.com/Moe1117/verdict · Demo video: _(link)_ · Live demo: _
 
 ---
 
-## Summary (≈190 words)
+## Summary (100–200 words)
 
-Journals now require, at submission, that a manuscript's Methods declare RRIDs for antibodies,
-authentication for cell lines, and animal-rigor reporting. **Methods Verifier** is the pre-submission
-check for exactly that: paste your Methods + Key-Resources and it returns a per-resource verdict —
-**PASS / FAIL / NEEDS-VERIFICATION** — each tied to a citable public record.
+Journals now require that Methods declare RRIDs for antibodies, authentication for cell lines, and
+animal-rigor reporting. **Methods Verifier** is the pre-submission check: paste your Methods +
+Key-Resources and get a per-resource verdict — **PASS / FAIL / NEEDS-VERIFICATION** — each cited to a
+public record.
 
 Claude does the two jobs a lookup can't. It **extracts** a typed resource inventory out of messy,
-hyphen-stripped reagent prose, and it **reasons** about whether each antibody was validated with a
-genetic knockout/knockdown control — the specificity gold standard. Deterministic gates then issue
-every *identity* verdict against ground truth a model cannot fabricate: cell lines against the
-**ICLAC register**, antibodies against the **Antibody Registry**, research software against the
-**SciCrunch RRID registry**. A missing datum → it **abstains**,
-cited. Every finding is tagged `registry` (deterministic) or `model judgment` (Claude), so the two
-are never blurred.
+hyphen-stripped prose, and it **reasons** about whether each antibody was validated with a genetic
+knockout control — the specificity gold standard. Deterministic gates then issue every *identity*
+verdict against ground truth a model cannot fabricate: cell lines against the **ICLAC register**,
+antibodies against the **Antibody Registry**, software against **SciCrunch RRIDs**. A missing datum →
+it **abstains**, cited. Every finding is tagged `registry` (deterministic) or `model judgment`
+(Claude), so the two are never blurred.
 
-Why it needs to exist, measured over the *entire* 594-line ICLAC register: a frontier model names
-only **18%** of documented-identity contaminated lines from memory — and even *flags* them just
-**37%** of the time, confidently wrong on **230**. Give it the register and the tool's extraction
-catches **92%** end-to-end, **0** false-flags on 18 controls — and it holds on **47 real open-access
-papers** (**16/18, 89%** caught; **0 false alarms on 14 clean controls**), every FAIL cited to an ICLAC ID + CVCL.
+Why it must exist: over the *entire* 594-line ICLAC register, a frontier model names a contaminated
+line from memory only **18%** of the time — confidently wrong on **230**. Give it the register and
+extraction catches **92%**; on **47 real open-access papers**, **89%** with **0 false alarms** on 14
+clean controls, every FAIL cited to an ICLAC ID + CVCL.
 
 ---
 
