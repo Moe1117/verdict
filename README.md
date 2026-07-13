@@ -11,7 +11,8 @@ Claude does the two things a lookup can't: it **extracts** a typed resource inve
 reagent prose, and it **reasons** about whether an antibody was validated with a genetic control.
 Deterministic gates issue every *identity* verdict against ground truth a model cannot fabricate.
 
-- **Cell lines** → the **ICLAC Register of Misidentified Cell Lines** (594 lines, bundled offline).
+- **Cell lines** → the **ICLAC Register of Misidentified Cell Lines** (594 lines, bundled offline;
+  indexed under 672 name-spelling keys so a line's aliases all resolve).
   On the register → **FAIL**, cited with the ICLAC ID + CVCL + the line's *true* identity.
 - **Antibodies** → the **Antibody Registry** (catalog# → `RRID:AB_…`, live API). Catalog#/vendor
   must match, or it abstains — it never cites a different vendor's RRID.
@@ -24,10 +25,11 @@ Deterministic gates issue every *identity* verdict against ground truth a model 
 - **Investigate (agentic)** → click a flagged resource and **Claude autonomously searches PubMed +
   Cellosaurus** in a bounded loop to find whether an antibody was knockout-validated *anywhere in the
   literature* (citing the real PMID) or to build a cell line's misidentification **provenance chain**.
-  **No fabricated citation IDs, by construction** — a deterministic gate keeps only citations the tools
-  actually returned (whether a record *supports* the finding is a labelled model judgment), else it
-  abstains (`POST /api/investigate`; measured n=30: **0 false-validation, ~⅓ class accuracy** — it abstains
-  far more than it succeeds, and never wrongly validates).
+  Its guarantee comes first: **it never fabricates a citation and never wrongly validates a reagent** —
+  a deterministic gate keeps only citations the tools actually returned (whether a record *supports* the
+  finding is a labelled model judgment), and it abstains when it can't ground one. Measured n=30:
+  **0 false-validation**, at **~⅓ class accuracy** — it succeeds where the evidence is findable and says
+  so when it isn't, rather than guessing (`POST /api/investigate`).
 - **Rigor** → ARRIVE 2.0 / MDAR / NIH-SABV presence checks (sex/SABV, n, randomization, blinding) —
   also labelled model judgments.
 - A missing / unidentifiable datum → **abstains** (`NEEDS-VERIFICATION`), never guesses. Every
@@ -65,6 +67,9 @@ Two **separate** measurements, framed as such — never a rigged head-to-head. R
    80–97%) with **0 false-flags on 18 authentic controls** end-to-end (and 0/36 on the bare register
    lookup). On a catch, the identity is the *register's*, not the model's — so this measures whether
    Claude can pull the name out of prose, not whether it remembers the answer.
+   **And it holds in the wild:** over **47 real open-access Methods sections** (Europe PMC) the engine
+   raised **0 false alarms on 14 clean controls** and caught **16/18 (89%)** on the string-verifiable
+   subset — external validity essentially matching the controlled 92%.
 
 On the **same** question — did you flag a contaminated line at all? — the model manages 37% (over all
 594 register lines) to the tool's 92% (over a 40-sentence stress corpus). That's the honest comparison;

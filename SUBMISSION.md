@@ -24,7 +24,8 @@ are never blurred.
 Why it needs to exist, measured over the *entire* 594-line ICLAC register: a frontier model names
 only **18%** of documented-identity contaminated lines from memory — and even *flags* them just
 **37%** of the time, confidently wrong on **230**. Give it the register and the tool's extraction
-catches **92%** end-to-end, **0** false-flags on 18 controls — every FAIL cited to an ICLAC ID + CVCL.
+catches **92%** end-to-end, **0** false-flags on 18 controls — and it holds on **47 real open-access
+papers** (**16/18, 89%** caught; **0 false alarms on 14 clean controls**), every FAIL cited to an ICLAC ID + CVCL.
 
 ---
 
@@ -96,7 +97,10 @@ hyphen-stripped): **92% catch** (37/40, CI 80–97%), **0 name-match misses**, a
 (and 0/36 on the bare register lookup — the two specificity measurements are reported separately, not
 welded together). The register lookup itself catches **98.8% of known lines by name** (587/594): it
 deliberately **declines 7** whose entire designation is a generic lab token (AO = acridine orange,
-EPC = endothelial progenitor cells, …) rather than risk a false accusation.
+EPC = endothelial progenitor cells, …) rather than risk a false accusation. (The offline register file
+indexes these **594 distinct lines** under **672** name-spelling keys — a line like ICLAC-00530 is
+reachable under each of its documented aliases — so matching is spelling-robust; 594 is the
+distinct-line count, 672 the lookup-key count.)
 
 **Real-world slice (external validity).** The 92% is a controlled stress test; to check it in the wild we
 ran the same engine over **47 real open-access Methods sections** (Europe PMC, `scripts/repro_realworld_eval.py`):
