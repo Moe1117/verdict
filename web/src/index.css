@@ -637,6 +637,22 @@ body {
 .am-tag.ok   { background: rgba(53,214,160,0.18); color: #5fe0b8; }
 .am-tag.ver  { background: rgba(245,183,61,0.18); color: #f5c869; }
 
+/* the detailed findings list, collapsed by default so the visual report leads */
+.rp-detail { margin: 10px 0 4px; border-top: 1px solid var(--border); }
+.rp-detail > summary {
+  list-style: none; cursor: pointer; user-select: none;
+  display: flex; align-items: center; gap: 9px;
+  font: 600 11px var(--mono); letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--faint); padding: 12px 0 2px; transition: color 0.15s ease;
+}
+.rp-detail > summary::-webkit-details-marker { display: none; }
+.rp-detail > summary::before {
+  content: '▸'; font-size: 12px; color: var(--muted); line-height: 1; transition: transform 0.18s ease;
+}
+.rp-detail[open] > summary::before { transform: rotate(90deg); }
+.rp-detail > summary:hover { color: var(--muted); }
+.rp-detail-body { padding-top: 4px; }
+
 .rp-group { margin-bottom: 4px; }
 
 /* finding rows */

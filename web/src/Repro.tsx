@@ -353,18 +353,23 @@ function MethodsReport({ report, methodsText, onInvestigate, canInvestigate, inv
         database, a fixed rule decides · <span className="rp-tag model">model judgment</span> = Claude's
         reasoning. You always see which made the call.
       </div>
-      {groups.map((g) => (
-        <div className="rp-group" key={g.kind}>
-          <div className="section-label">{g.label}</div>
-          {rows(g.items)}
+      <details className="rp-detail">
+        <summary>See every check in detail — citations, tags &amp; Investigate</summary>
+        <div className="rp-detail-body">
+          {groups.map((g) => (
+            <div className="rp-group" key={g.kind}>
+              <div className="section-label">{g.label}</div>
+              {rows(g.items)}
+            </div>
+          ))}
+          {other.length > 0 && (
+            <div className="rp-group">
+              <div className="section-label">Other checks</div>
+              {rows(other)}
+            </div>
+          )}
         </div>
-      ))}
-      {other.length > 0 && (
-        <div className="rp-group">
-          <div className="section-label">Other checks</div>
-          {rows(other)}
-        </div>
-      )}
+      </details>
       <div className="rp-rail">
         A ✓ means <em>the cell line isn't on the mix-up register, or the reagent resolves to a public ID</em> —
         not proof of correctness. Absence from the register isn't proof of identity; confirm with a
