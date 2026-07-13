@@ -613,6 +613,30 @@ body {
 }
 .rp-legend .rp-tag { margin: 0 3px; vertical-align: 1px; }
 
+/* ── visual status bar + annotated Methods — "your Methods, highlighted in place" ── */
+.am-segbar {
+  height: 10px; border-radius: 5px; overflow: hidden; display: flex;
+  background: rgba(255,255,255,0.06); margin: 12px 0 2px;
+}
+.am-segbar .am-seg { height: 100%; }
+.am-seg.fail { background: var(--not-supported); }
+.am-seg.ver  { background: var(--contested); }
+.am-seg.ok   { background: var(--supported); }
+
+.am-methods {
+  background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px;
+  padding: 15px 17px; margin: 2px 0 4px; font-size: 14.5px; line-height: 2.2;
+  color: var(--text); white-space: pre-wrap;
+}
+.am-hl { border-radius: 4px; padding: 1px 3px; }
+.am-hl.fail { background: rgba(255,95,109,0.16); box-shadow: inset 0 -2px 0 var(--not-supported); color: #fff; }
+.am-hl.ok   { background: rgba(53,214,160,0.14); box-shadow: inset 0 -2px 0 var(--supported); }
+.am-hl.ver  { background: rgba(245,183,61,0.14); box-shadow: inset 0 -2px 0 var(--contested); }
+.am-tag { font: 10px var(--mono); padding: 1px 5px; border-radius: 4px; margin-left: 3px; white-space: nowrap; vertical-align: 1px; }
+.am-tag.fail { background: rgba(255,95,109,0.2); color: #ff8a94; }
+.am-tag.ok   { background: rgba(53,214,160,0.18); color: #5fe0b8; }
+.am-tag.ver  { background: rgba(245,183,61,0.18); color: #f5c869; }
+
 .rp-group { margin-bottom: 4px; }
 
 /* finding rows */

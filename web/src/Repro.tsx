@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { type ReactNode, useEffect, useRef, useState } from 'react'
 import type { Correction, IclacBench, Investigation, ManuscriptReport, ReproDeck, ReproFinding, ReproReport } from './types'
 
 // Verdict badge class — like App.tsx's badgeClass, but strips spaces AND hyphens so
@@ -248,10 +248,82 @@ function groupFindings(report: ReproReport) {
   return { groups, other }
 }
 
+// A short status badge for an inline highlight: the true identity for a register FAIL, the resolved
+// public ID for a PASS, "verify" for an abstention.
+function annBadge(f: ReproFinding): string {
+  if (f.result === 'FAIL') {
+    const m = f.detail.match(/actually\s+\*\*(.+?)\*\*/)
+    return m ? '✗ really ' + m[1] : '✗ on register'
+  }
+  if (f.result === 'PASS') {
+    const c = (f.citation || '').replace(/^RRID:/, '')
+    return c ? '✓ ' + c : '✓'
+  }
+  return '? verify'
+}
+
+// The visual centrepiece: the pasted Methods with each extracted identity resource (cell line,
+// antibody, software) highlighted in place and colour-coded by verdict — the analog to a
+// motif-annotated sequence. Degrades to nothing if the text/evidence don't line up.
+const _ANN_KINDS = new Set(['cell_line', 'antibody', 'software'])
+interface Hit { start: number; end: number; result: string; badge: string }
+function AnnotatedMethods({ text, findings }: { text: string; findings: ReproFinding[] }) {
+  if (!text || text.trim().length < 3) return null
+  const lower = text.toLowerCase()
+  const hits: Hit[] = findings
+    .filter((f) => _ANN_KINDS.has(f.kind) && (f.evidence || '').trim().length >= 3)
+    .map((f): Hit | null => {
+      const ev = f.evidence.trim()
+      const start = lower.indexOf(ev.toLowerCase())
+      return start < 0 ? null : { start, end: start + ev.length, result: f.result, badge: annBadge(f) }
+    })
+    .filter((h): h is Hit => h !== null)
+    .sort((a, b) => a.start - b.start)
+  const kept: Hit[] = []
+  let cursor = 0
+  for (const h of hits) { if (h.start >= cursor) { kept.push(h); cursor = h.end } }  // drop overlaps
+  if (!kept.length) return null
+  const out: ReactNode[] = []
+  let pos = 0
+  kept.forEach((h, i) => {
+    if (h.start > pos) out.push(text.slice(pos, h.start))
+    const cls = h.result === 'FAIL' ? 'fail' : h.result === 'PASS' ? 'ok' : 'ver'
+    out.push(
+      <span key={i} className={'am-hl ' + cls}>
+        {text.slice(h.start, h.end)}<span className={'am-tag ' + cls}>{h.badge}</span>
+      </span>,
+    )
+    pos = h.end
+  })
+  if (pos < text.length) out.push(text.slice(pos))
+  return (
+    <>
+      <div className="section-label">Your Methods — every resource we found, highlighted in place</div>
+      <div className="am-methods">{out}</div>
+    </>
+  )
+}
+
+// The verdict counts as a proportional bar (to fix / to verify / ok) — the visual read of the report.
+function StatusBar({ report }: { report: ReproReport }) {
+  const total = report.n_fail + report.n_insufficient + report.n_pass || 1
+  const seg = (n: number, cls: string) =>
+    n > 0 ? <span className={'am-seg ' + cls} style={{ width: `${(n / total) * 100}%` }} /> : null
+  return (
+    <div className="am-segbar" role="img"
+      aria-label={`${report.n_fail} to fix, ${report.n_insufficient} to verify, ${report.n_pass} ok`}>
+      {seg(report.n_fail, 'fail')}
+      {seg(report.n_insufficient, 'ver')}
+      {seg(report.n_pass, 'ok')}
+    </div>
+  )
+}
+
 // The rolled-up report card (verdict head + grouped findings). Reused by the single-paragraph verifier
 // and the whole-manuscript review; per-finding Investigate is optional (off for the manuscript view).
-function MethodsReport({ report, onInvestigate, canInvestigate, invState }: {
+function MethodsReport({ report, methodsText, onInvestigate, canInvestigate, invState }: {
   report: ReproReport
+  methodsText?: string
   onInvestigate?: (f: ReproFinding) => void
   canInvestigate?: (f: ReproFinding) => boolean
   invState?: Record<string, { busy?: boolean; inv?: Investigation; error?: string }>
@@ -274,6 +346,8 @@ function MethodsReport({ report, onInvestigate, canInvestigate, invState }: {
           <b className="pass">{report.n_pass}</b> ok
         </span>
       </div>
+      <StatusBar report={report} />
+      {methodsText && <AnnotatedMethods text={methodsText} findings={report.findings} />}
       <div className="rp-legend">
         Every check is tagged <span className="rp-tag rule">registry</span> = looked up in a public
         database, a fixed rule decides · <span className="rp-tag model">model judgment</span> = Claude's
@@ -527,7 +601,7 @@ export default function Repro() {
         </div>
 
         {report ? (
-          <MethodsReport report={report} onInvestigate={runInvestigate} canInvestigate={canInvestigate} invState={invState} />
+          <MethodsReport report={report} methodsText={methods} onInvestigate={runInvestigate} canInvestigate={canInvestigate} invState={invState} />
         ) : (
           !error && <div className="tm-loading"><span className="lc-spin" /> loading saved example…</div>
         )}
@@ -567,7 +641,7 @@ export default function Repro() {
             Reviewed <b>{manuscript.n_resources}</b> resource{manuscript.n_resources === 1 ? '' : 's'} across{' '}
             <b>{manuscript.n_chunks}</b> chunk{manuscript.n_chunks === 1 ? '' : 's'} · every correction is a labelled draft.
           </div>
-          <MethodsReport report={manuscript.report} />
+          <MethodsReport report={manuscript.report} methodsText={manuscriptText} />
           <Corrections items={manuscript.corrections} />
         </>) : (
           !merror && <div className="tm-loading"><span className="lc-spin" /> loading saved example…</div>
