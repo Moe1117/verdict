@@ -1,6 +1,17 @@
 # Static deploy of the Methods Verifier web UI. Frozen examples are bundled JSON, so the hosted
-# build works with no backend; live "Verify" needs the API (uvicorn verdict.webapp:app --port 8010).
+# build works with no backend; live "Verify" needs the API (set VITE_API_BASE to the deployed backend
+# origin in Netlify → Site settings → Environment; see DEPLOY-BACKEND.md §2).
 [build]
   base = "web"
   command = "npm install && npm run build"
   publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The app fetches assets from absolute paths (/repro/*.json), so it must be hosted at the domain root.
+# Real files are served directly; any unmatched route falls back to index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
