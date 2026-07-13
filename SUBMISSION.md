@@ -16,7 +16,8 @@ Claude does the two jobs a lookup can't. It **extracts** a typed resource invent
 hyphen-stripped reagent prose, and it **reasons** about whether each antibody was validated with a
 genetic knockout/knockdown control — the specificity gold standard. Deterministic gates then issue
 every *identity* verdict against ground truth a model cannot fabricate: cell lines against the
-**ICLAC register**, antibodies against the **Antibody Registry**. A missing datum → it **abstains**,
+**ICLAC register**, antibodies against the **Antibody Registry**, research software against the
+**SciCrunch RRID registry**. A missing datum → it **abstains**,
 cited. Every finding is tagged `registry` (deterministic) or `model judgment` (Claude), so the two
 are never blurred.
 

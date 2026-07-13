@@ -108,7 +108,7 @@ def _iclac_lookup(name: str) -> dict | None:
 @dataclass
 class Finding:
     item: str            # e.g. "cell line: GR-M"
-    kind: str            # "cell_line" | "antibody" | "rigor"
+    kind: str            # "cell_line" | "antibody" | "knockout" | "software" | "rigor"
     result: str          # "FAIL" | "PASS" | "INSUFFICIENT"
     detail: str          # human-readable verdict
     evidence: str = ""   # verbatim phrase from the manuscript
@@ -225,6 +225,53 @@ def check_antibody(name: str, vendor: str = "", catalog: str = "", evidence: str
 
 
 # ---------------------------------------------------------------------------
+# SciCrunch RRID resolver — research software / tools -> RRID:SCR_xxxxxxx.
+# A tool is never "misidentified" (no FAIL): it either resolves to a citable RRID (PASS) or has no /
+# an unresolvable RRID (NEEDS-VERIFICATION). Like the antibody gate, this is a live network lookup.
+# ---------------------------------------------------------------------------
+_SCR_RE = re.compile(r"SCR_\d+", re.IGNORECASE)
+
+
+def _sw(label: str, result: str, detail: str, evidence: str, citation: str = "") -> Finding:
+    return Finding(item=f"software: {label}", kind="software", result=result, detail=detail,
+                   evidence=evidence, citation=citation, method="rule")
+
+
+def check_software(name: str, rrid: str = "", evidence: str = "") -> Finding:
+    """Resolve a research-tool RRID (RRID:SCR_xxxxxxx) against the SciCrunch resolver — best-effort.
+
+    Software identity is a citation-completeness check, so there is no FAIL: a tool either cites a real
+    registered record (PASS) or it does not (NEEDS-VERIFICATION). A bare tool name with no RRID, an
+    unresolvable RRID, or an unreachable resolver all abstain — never a guessed PASS. The SCR id may be
+    in the extracted `rrid` field or embedded in the evidence phrase, so we look in both.
+    """
+    label = (name or "software tool").strip()
+    m = _SCR_RE.search(rrid or "") or _SCR_RE.search(evidence or "")
+    if not m:
+        return _sw(label, "INSUFFICIENT",
+                   "No RRID given for this tool — add its Research Resource Identifier "
+                   "(RRID:SCR_xxxxxxx) so the exact software can be cited.", evidence)
+    scr = "SCR_" + m.group(0).split("_", 1)[1]
+    try:
+        url = f"https://scicrunch.org/resolver/RRID:{scr}.json"
+        # SciCrunch's WAF 403s the default Python-urllib User-Agent — send a browser UA (public
+        # JSON endpoint, no key required).
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
+        with urllib.request.urlopen(req, timeout=10) as resp:  # noqa: S310
+            data = json.loads(resp.read())
+    except Exception:  # noqa: BLE001
+        return _sw(label, "INSUFFICIENT",
+                   f"Could not reach the SciCrunch resolver to confirm RRID:{scr} — verify it manually.",
+                   evidence)
+    hits = ((data or {}).get("hits", {}) or {}).get("hits", [])
+    resolved = (hits[0].get("_source", {}).get("item", {}).get("name", "") if hits else "")
+    if not resolved:
+        return _sw(label, "INSUFFICIENT",
+                   f"RRID:{scr} does not resolve to a registered tool — verify the identifier.", evidence)
+    return _sw(label, "PASS", f"Resolves to RRID:{scr} ({resolved}).", evidence, citation=f"RRID:{scr}")
+
+
+# ---------------------------------------------------------------------------
 # Extraction (Claude, tool-use) — messy Methods prose -> typed resources.
 # ---------------------------------------------------------------------------
 _EXTRACT_TOOL = {
@@ -240,6 +287,12 @@ _EXTRACT_TOOL = {
             "antibodies": {"type": "array", "items": {"type": "object", "properties": {
                 "name": {"type": "string"}, "vendor": {"type": "string"}, "catalog": {"type": "string"},
                 "evidence": {"type": "string"}}, "required": ["name"]}},
+            "software": {"type": "array", "items": {"type": "object", "properties": {
+                "name": {"type": "string", "description": "the software/analysis tool name ONLY, e.g. "
+                         "'ImageJ', 'GraphPad Prism', 'FlowJo', 'CellProfiler'"},
+                "rrid": {"type": "string", "description": "its RRID exactly as written, e.g. "
+                         "'RRID:SCR_003070' — empty string if none is given"},
+                "evidence": {"type": "string", "description": "verbatim phrase"}}, "required": ["name"]}},
             "rigor": {"type": "object", "properties": {
                 "sex_reported": {"type": ["boolean", "null"]},
                 "n_per_group_stated": {"type": ["boolean", "null"]},
@@ -247,14 +300,16 @@ _EXTRACT_TOOL = {
                 "blinding_stated": {"type": ["boolean", "null"]},
                 "evidence": {"type": "string"}}},
         },
-        "required": ["cell_lines", "antibodies", "rigor"],
+        "required": ["cell_lines", "antibodies", "software", "rigor"],
     },
 }
 _EXTRACT_SYSTEM = (
     "You extract ONLY what is explicitly written in a manuscript Methods/Key-Resources section into a "
-    "structured resource inventory. Put the verbatim phrase in each 'evidence' field. For rigor flags, "
+    "structured resource inventory. Put the verbatim phrase in each 'evidence' field. Extract every named "
+    "research software or analysis tool (e.g. ImageJ, GraphPad Prism, FlowJo, CellProfiler) into 'software', "
+    "with any 'RRID:SCR_' identifier written for it (empty string if none). For rigor flags, "
     "set true only if the fact is explicitly stated, false if the section clearly omits it, null if "
-    "there is no basis to judge. Never infer identities or catalog numbers.")
+    "there is no basis to judge. Never infer identities, catalog numbers, or RRIDs.")
 
 
 def extract_resources(methods_text: str) -> dict:
@@ -268,7 +323,7 @@ def extract_resources(methods_text: str) -> dict:
             continue
         if isinstance(d, dict):
             return d
-    return {"cell_lines": [], "antibodies": [], "rigor": {}}
+    return {"cell_lines": [], "antibodies": [], "software": [], "rigor": {}}
 
 
 # ---------------------------------------------------------------------------
@@ -340,6 +395,8 @@ def run_gates(res: dict, methods_text: str) -> ReproReport:
             findings.append(Finding(item=f"antibody validation: {name}", kind="knockout",
                                     result=kf.result, detail=kf.detail, evidence=kf.evidence,
                                     method=kf.method))
+    for sw in res.get("software", []):
+        findings.append(check_software(sw.get("name", ""), sw.get("rrid", ""), sw.get("evidence", "")))
     findings += rigor_findings(res.get("rigor", {}))
     verdict = aggregate(findings)
     to_fix = [f"{f.item} — {f.detail}" for f in findings if f.result in ("FAIL", "INSUFFICIENT")]

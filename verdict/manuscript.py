@@ -57,11 +57,12 @@ def _chunk_text(text: str, size: int = 6000, overlap: int = 300) -> list[str]:
 
 
 def _merge_resources(parts: list[dict]) -> dict:
-    """Merge per-chunk extractions into one resource set. Dedupe cell lines by squashed name and
-    antibodies by (squashed name, squashed catalog). Rigor flags roll up as True > False > null: a
-    fact reported anywhere in the manuscript counts as reported."""
+    """Merge per-chunk extractions into one resource set. Dedupe cell lines and software by squashed
+    name, antibodies by (squashed name, squashed catalog). Rigor flags roll up as True > False > null:
+    a fact reported anywhere in the manuscript counts as reported."""
     cells, seen_c = [], set()
     antibodies, seen_a = [], set()
+    software, seen_s = [], set()
     rigor: dict = {}
     for p in parts:
         for cl in p.get("cell_lines", []) or []:
@@ -74,6 +75,11 @@ def _merge_resources(parts: list[dict]) -> dict:
             if any(key) and key not in seen_a:
                 seen_a.add(key)
                 antibodies.append(ab)
+        for sw in p.get("software", []) or []:
+            key = repro._squash(sw.get("name", ""))
+            if key and key not in seen_s:
+                seen_s.add(key)
+                software.append(sw)
         for k, v in (p.get("rigor", {}) or {}).items():
             if k == "evidence":
                 if v and not rigor.get("evidence"):
@@ -84,7 +90,7 @@ def _merge_resources(parts: list[dict]) -> dict:
                 rigor[k] = False
             elif k not in rigor:
                 rigor[k] = v
-    return {"cell_lines": cells, "antibodies": antibodies, "rigor": rigor}
+    return {"cell_lines": cells, "antibodies": antibodies, "software": software, "rigor": rigor}
 
 
 def _investigate_flagged(report: ReproReport, resources: dict, cap: int) -> list:
@@ -118,7 +124,7 @@ def review_manuscript(text: str, *, extract_fn=None, investigate: bool = False,
     chunks = _chunk_text(text)
     merged = _merge_resources([extract_fn(c) for c in chunks])
     report = repro.run_gates(merged, text)
-    n_resources = len(merged["cell_lines"]) + len(merged["antibodies"])
+    n_resources = len(merged["cell_lines"]) + len(merged["antibodies"]) + len(merged["software"])
     investigations = _investigate_flagged(report, merged, max_investigations) if investigate else []
     corrections = draft_corrections(report, text, client=client) if autofix else []
     return ManuscriptReport(report=report, investigations=investigations, corrections=corrections,

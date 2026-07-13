@@ -99,7 +99,7 @@ export interface TrialDeck {
 // ── Repro (verification layer): Methods-section reproducibility screen ──
 
 export type ReproResult = 'FAIL' | 'PASS' | 'INSUFFICIENT'
-export type ReproKind = 'cell_line' | 'antibody' | 'knockout' | 'rigor'
+export type ReproKind = 'cell_line' | 'antibody' | 'knockout' | 'software' | 'rigor'
 export type ReproVerdict = 'Submission-ready' | 'Needs fixes' | 'Needs verification'
 
 export interface ReproFinding {

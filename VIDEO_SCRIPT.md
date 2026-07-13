@@ -3,10 +3,10 @@
 **Target:** ≤ 3:00. Screen recording of the web app + first-person voiceover.
 
 **Setup — run BOTH servers so the live beats are real:**
-- API: `PYTHONPATH=. .venv/bin/python -m uvicorn verdict.webapp:app --port 8010`
-- UI: `npm --prefix web run dev` (defaults to `:5175`; the `/api` proxy points at `:8010`)
-- Full-screen the browser at ~1280px; open on the **Methods Verifier** tab. The page loads on the
-  **frozen demo card** + the **benchmark panel** (both render with no backend — bulletproof fallback).
+- API: `PYTHONPATH=. .venv/bin/python -m uvicorn verdict.webapp:app --port 8011`
+- UI: `VERDICT_API=http://localhost:8011 npm --prefix web run dev -- --port 5181` (the `/api` proxy points at `:8011`)
+- Full-screen the browser at ~1280px. The app opens straight into the Methods Verifier — its only view —
+  and loads on the **frozen demo card** + the **benchmark panel** (both render with no backend — bulletproof fallback).
 - When the API is up, the header's live buttons (**Verify**, **Investigate**, **Review manuscript**)
   are enabled. If the API is down they disable and the frozen examples still show — so you can record
   the visuals even if the backend hiccups.
@@ -25,13 +25,15 @@ sentence anywhere you run long.
 **Screen:** App open on the Methods Verifier, frozen report card visible. Cursor on the **GR-M** row —
 red **FAIL**, "actually **PSN1**", cited `ICLAC-00538 · CVCL_2451`.
 
-> "This is a Methods section from a real-looking paper — and two of its cell lines are misidentified.
-> GR-M isn't a pancreatic line, it's PSN1. SNB-19 is really U-251 MG. Nobody memorizes the register
-> that knows this. Paste your Methods, and you get a cited report card — before Reviewer 2 does."
+> "Biology papers list the exact cells and reagents they used — and sometimes a cell line is secretly
+> the wrong one, a documented mix-up that quietly wrecks the results. Here, two are: GR-M isn't a
+> pancreatic line, it's really a line called PSN1; SNB-19 is actually U-251 MG. Nobody can memorize the
+> public register that knows this. Paste your Methods section, and you get a report card — every problem
+> flagged and linked to the record that proves it — before a reviewer does."
 
 ### 2 · Why it has to exist — the benchmark — 0:20–0:48  *(~75 words)*
-**Screen:** Scroll up to the **benchmark panel** — the **18%** and **92%** tiles + the "two different
-measurements — not a head-to-head" note.
+**Screen:** Scroll up to the **benchmark panel** — the **18%** and **92%** tiles carry the beat; the
+"two different measurements — not a head-to-head" detail now sits one click down under **"Why it exists."**
 
 > "Why not just ask a model? Because from memory, a frontier model names a contaminated line correctly
 > only eighteen percent of the time — and even *flags* one as suspect only thirty-seven percent. It's

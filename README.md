@@ -15,6 +15,9 @@ Deterministic gates issue every *identity* verdict against ground truth a model 
   On the register → **FAIL**, cited with the ICLAC ID + CVCL + the line's *true* identity.
 - **Antibodies** → the **Antibody Registry** (catalog# → `RRID:AB_…`, live API). Catalog#/vendor
   must match, or it abstains — it never cites a different vendor's RRID.
+- **Software & tools** → the **SciCrunch registry** (`RRID:SCR_…`, live). A cited RRID that resolves
+  names the exact tool (ImageJ, GraphPad Prism, FlowJo…) → **PASS**; a tool with no / an unresolvable
+  RRID abstains (**NEEDS-VERIFICATION**). Software identity is a citation-completeness check, never a FAIL.
 - **Antibody validation (knockout controls)** → **Claude reasons** about whether the paper validated
   each antibody with a genetic knockout/knockdown/CRISPR/siRNA control (the specificity gold
   standard). A **labelled model judgment**, `PASS`/`NEEDS-VERIFICATION`, never a deterministic FAIL.

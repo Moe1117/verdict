@@ -1,60 +1,87 @@
 {
- "methods": "Cell culture. Experiments used the GR-M pancreatic carcinoma line and the SNB-19 glioblastoma line, maintained in DMEM supplemented with 10% FBS at 37C.\nImmunohistochemistry. Sections were stained with anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500) to label microglia and with anti-GFAP (Dako) for astrocytes. Iba1 antibody specificity was confirmed in Iba1-knockout tissue, which showed no immunoreactivity.\nAnimals. Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.",
+ "methods": "Cell culture. Experiments used the GR-M pancreatic carcinoma line and the SNB-19 glioblastoma line, maintained in DMEM supplemented with 10% FBS at 37C in 5% CO2.\n\nImmunohistochemistry. Sections were stained with anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500) to label microglia and with anti-GFAP (Dako) for astrocytes. Iba1 antibody specificity was confirmed in Iba1-knockout tissue, which showed no immunoreactivity.\n\nAnimals and analysis. Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test. Images were quantified in ImageJ (RRID:SCR_003070), flow-cytometry data were gated in FlowJo, and statistics were computed in GraphPad Prism (RRID:SCR_002798).",
  "report": {
   "findings": [
    {
     "item": "cell line: GR-M",
     "kind": "cell_line",
     "result": "FAIL",
-    "detail": "On the ICLAC Register of Misidentified Cell Lines — claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
+    "detail": "On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
     "evidence": "GR-M pancreatic carcinoma line",
-    "citation": "ICLAC-00538 · CVCL_2451",
+    "citation": "ICLAC-00538 \u00b7 CVCL_2451",
     "method": "rule"
    },
    {
     "item": "cell line: SNB-19",
     "kind": "cell_line",
     "result": "FAIL",
-    "detail": "On the ICLAC Register of Misidentified Cell Lines — claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
+    "detail": "On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
     "evidence": "SNB-19 glioblastoma line",
-    "citation": "ICLAC-00268 · CVCL_0535",
+    "citation": "ICLAC-00268 \u00b7 CVCL_0535",
     "method": "rule"
    },
    {
-    "item": "antibody: Iba1",
+    "item": "antibody: anti-Iba1",
     "kind": "antibody",
     "result": "PASS",
     "detail": "Resolves to RRID:AB_2665520 (FUJIFILM Wako Pure Chemical Corporation 019-19741).",
-    "evidence": "anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500)",
+    "evidence": "anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500) to label microglia",
     "citation": "RRID:AB_2665520",
     "method": "rule"
    },
    {
-    "item": "antibody: GFAP",
+    "item": "antibody validation: anti-Iba1",
+    "kind": "knockout",
+    "result": "PASS",
+    "detail": "A genetic knockout/knockdown control validating this antibody's specificity is described.",
+    "evidence": "Iba1 antibody specificity was confirmed in Iba1-knockout tissue, which showed no immunoreactivity.",
+    "citation": "",
+    "method": "model judgment"
+   },
+   {
+    "item": "antibody: anti-GFAP",
     "kind": "antibody",
     "result": "INSUFFICIENT",
-    "detail": "No catalog number given — a name alone can't be authenticated; add the vendor catalog # and its RRID.",
-    "evidence": "anti-GFAP (Dako)",
+    "detail": "No catalog number given \u2014 a name alone can't be authenticated; add the vendor catalog # and its RRID.",
+    "evidence": "anti-GFAP (Dako) for astrocytes",
     "citation": "",
     "method": "rule"
    },
    {
-    "item": "antibody validation: Iba1",
+    "item": "antibody validation: anti-GFAP",
     "kind": "knockout",
-    "result": "PASS",
-    "detail": "A genetic knockout/knockdown control validating this antibody's specificity is described.",
-    "evidence": "Iba1-knockout tissue, which showed no immunoreactivity",
+    "result": "INSUFFICIENT",
+    "detail": "No antibody-specificity validation (e.g. a knockout/knockdown control) is described \u2014 add one or cite prior genetic validation.",
+    "evidence": "",
     "citation": "",
     "method": "model judgment"
    },
    {
-    "item": "antibody validation: GFAP",
-    "kind": "knockout",
+    "item": "software: ImageJ",
+    "kind": "software",
+    "result": "PASS",
+    "detail": "Resolves to RRID:SCR_003070 (ImageJ).",
+    "evidence": "Images were quantified in ImageJ (RRID:SCR_003070)",
+    "citation": "RRID:SCR_003070",
+    "method": "rule"
+   },
+   {
+    "item": "software: FlowJo",
+    "kind": "software",
     "result": "INSUFFICIENT",
-    "detail": "No antibody-specificity validation (e.g. a knockout/knockdown control) is described — add one or cite prior genetic validation.",
-    "evidence": "",
+    "detail": "No RRID given for this tool \u2014 add its Research Resource Identifier (RRID:SCR_xxxxxxx) so the exact software can be cited.",
+    "evidence": "flow-cytometry data were gated in FlowJo",
     "citation": "",
-    "method": "model judgment"
+    "method": "rule"
+   },
+   {
+    "item": "software: GraphPad Prism",
+    "kind": "software",
+    "result": "PASS",
+    "detail": "Resolves to RRID:SCR_002798 (GraphPad Prism).",
+    "evidence": "statistics were computed in GraphPad Prism (RRID:SCR_002798)",
+    "citation": "RRID:SCR_002798",
+    "method": "rule"
    },
    {
     "item": "Sex of animals/cells reported (SABV)",
@@ -95,17 +122,18 @@
   ],
   "verdict": "Needs fixes",
   "n_fail": 2,
-  "n_pass": 2,
-  "n_insufficient": 6,
+  "n_pass": 4,
+  "n_insufficient": 7,
   "to_fix": [
-   "cell line: GR-M — On the ICLAC Register of Misidentified Cell Lines — claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
-   "cell line: SNB-19 — On the ICLAC Register of Misidentified Cell Lines — claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
-   "antibody: GFAP — No catalog number given — a name alone can't be authenticated; add the vendor catalog # and its RRID.",
-   "antibody validation: GFAP — No antibody-specificity validation (e.g. a knockout/knockdown control) is described — add one or cite prior genetic validation.",
-   "Sex of animals/cells reported (SABV) — Could not determine from the text.",
-   "Sample size (n) per group stated — Could not determine from the text.",
-   "Randomization stated — Could not determine from the text.",
-   "Blinding stated — Could not determine from the text."
+   "cell line: GR-M \u2014 On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Melanoma, actually **PSN1**. Authenticate by STR before use.",
+   "cell line: SNB-19 \u2014 On the ICLAC Register of Misidentified Cell Lines \u2014 claimed Glioblastoma, actually **U-251 MG**. Authenticate by STR before use.",
+   "antibody: anti-GFAP \u2014 No catalog number given \u2014 a name alone can't be authenticated; add the vendor catalog # and its RRID.",
+   "antibody validation: anti-GFAP \u2014 No antibody-specificity validation (e.g. a knockout/knockdown control) is described \u2014 add one or cite prior genetic validation.",
+   "software: FlowJo \u2014 No RRID given for this tool \u2014 add its Research Resource Identifier (RRID:SCR_xxxxxxx) so the exact software can be cited.",
+   "Sex of animals/cells reported (SABV) \u2014 Could not determine from the text.",
+   "Sample size (n) per group stated \u2014 Could not determine from the text.",
+   "Randomization stated \u2014 Could not determine from the text.",
+   "Blinding stated \u2014 Could not determine from the text."
   ]
  }
 }

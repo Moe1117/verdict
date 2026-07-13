@@ -17,15 +17,16 @@ const api = (path: string) => API_BASE + path
 const RESULT_META: Record<string, { icon: string; cls: string; label: string }> = {
   FAIL: { icon: '✗', cls: 'fail', label: 'fail' },
   PASS: { icon: '✓', cls: 'pass', label: 'pass' },
-  INSUFFICIENT: { icon: '❔', cls: 'insuf', label: 'insufficient' },
+  INSUFFICIENT: { icon: '❔', cls: 'insuf', label: "can't verify — check manually" },
 }
 
 // Findings render grouped by kind, in this order. Anything else falls through to "Other checks".
 const KIND_GROUPS: { kind: string; label: string }[] = [
   { kind: 'cell_line', label: 'Cell lines' },
   { kind: 'antibody', label: 'Antibodies' },
-  { kind: 'knockout', label: 'Antibody validation — knockout controls (Claude reasoning)' },
-  { kind: 'rigor', label: 'Rigor reporting' },
+  { kind: 'knockout', label: 'Antibody proven specific? — a "knockout" control deletes the target gene · Claude\'s reasoning' },
+  { kind: 'software', label: 'Software & tools' },
+  { kind: 'rigor', label: 'Rigor reporting — sample size, blinding, animal sex' },
 ]
 
 // Live verify runs one Claude extraction + registry lookups — seconds. Give a generous leash;
@@ -52,8 +53,8 @@ function renderDetail(detail: string) {
 
 // Agentic-investigation verdict -> label + tone class (reuse the pass/insuf colours).
 const INV_META: Record<string, { label: string; cls: string }> = {
-  FOUND_VALIDATION: { label: 'validation found in the literature', cls: 'pass' },
-  PROVENANCE_CHAIN: { label: 'provenance chain established', cls: 'pass' },
+  FOUND_VALIDATION: { label: 'validated elsewhere in the literature', cls: 'pass' },
+  PROVENANCE_CHAIN: { label: 'mix-up confirmed — paper trail traced', cls: 'pass' },
   PARTIAL: { label: 'partly grounded — verify', cls: 'insuf' },
   NO_VALIDATION_FOUND: { label: 'no validation found — verify', cls: 'insuf' },
   INCONCLUSIVE: { label: 'investigation inconclusive', cls: 'insuf' },
@@ -128,7 +129,7 @@ function FindingRow({ f, onInvestigate, inv, busy, invError }: {
       <div className="rp-find-body">
         <div className="rp-find-top">
           <span className="rp-item">{f.item}</span>
-          {cite && <span className="rp-cite">{cite}</span>}
+          {cite && <span className="rp-cite" title="Citation to the public record — ICLAC/CVCL = cell-line register + database IDs · RRID = a reagent's unique ID">{cite}</span>}
           {methodTag(f.method)}
           {canInvestigate && !inv && (
             <button type="button" onClick={() => onInvestigate!(f)} disabled={busy}
@@ -262,6 +263,11 @@ function MethodsReport({ report, onInvestigate, canInvestigate, invState }: {
           <b className="pass">{report.n_pass}</b> ok
         </span>
       </div>
+      <div className="rp-legend">
+        Every check is tagged <span className="rp-tag rule">registry</span> = looked up in a public
+        database, a fixed rule decides · <span className="rp-tag model">model judgment</span> = Claude's
+        reasoning. You always see which made the call.
+      </div>
       {groups.map((g) => (
         <div className="rp-group" key={g.kind}>
           <div className="section-label">{g.label}</div>
@@ -275,8 +281,9 @@ function MethodsReport({ report, onInvestigate, canInvestigate, invState }: {
         </div>
       )}
       <div className="rp-rail">
-        A ✓ means <em>not on the register / resolves to an RRID</em> — not proof of correctness. Absence from the
-        ICLAC register is not proof of identity; STR-authenticate.
+        A ✓ means <em>the cell line isn't on the mix-up register, or the reagent resolves to a public ID</em> —
+        not proof of correctness. Absence from the register isn't proof of identity; confirm with a
+        DNA-fingerprint (STR) test.
       </div>
     </div>
   )
@@ -312,7 +319,7 @@ const DEMO_MANUSCRIPT = `Cell culture. Experiments used the GR-M pancreatic carc
 
 Immunohistochemistry. Sections were stained with anti-Iba1 (FUJIFILM Wako, 019-19741; 1:500) to label microglia and with anti-GFAP (Dako) for astrocytes. Iba1 antibody specificity was confirmed in Iba1-knockout tissue, which showed no immunoreactivity.
 
-Animals and analysis. Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test.`
+Animals and analysis. Mice bearing orthotopic tumors were imaged weekly and survival was compared between groups by the log-rank test. Images were quantified in ImageJ (RRID:SCR_003070), flow-cytometry data were gated in FlowJo, and statistics were computed in GraphPad Prism (RRID:SCR_002798).`
 
 export default function Repro() {
   const [bench, setBench] = useState<IclacBench | null>(null)
@@ -401,10 +408,16 @@ export default function Repro() {
   const runInvestigate = (f: ReproFinding) => {
     const key = f.item
     setInvState((s) => ({ ...s, [key]: { busy: true } }))
+    // Bound the live agentic call: the loop hits PubMed/Cellosaurus and can run 10–90s. Abort past a
+    // ceiling and fall back to the frozen saved investigation (a real captured result) so the view is
+    // never stuck on a spinner — the same graceful-degradation discipline as verify().
+    const ctrl = new AbortController()
+    const timer = setTimeout(() => ctrl.abort(), 16000)
     fetch(api('/api/investigate'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(buildInvReq(f)),
+      signal: ctrl.signal,
     })
       .then((r) => {
         if (!r.ok) throw new Error(String(r.status))
@@ -420,6 +433,7 @@ export default function Repro() {
             : { error: 'Live investigation needs the API (see README). This hosted build shows a saved example only where one was pre-captured.' },
         }))
       })
+      .finally(() => clearTimeout(timer))
   }
 
   // Whole-manuscript review: POST the full text to /api/review (autofix on), same graceful fallback as
@@ -458,8 +472,9 @@ export default function Repro() {
   return (
     <div className="repro">
       <div className="tm-sub">
-        AI generates scientific claims faster than anyone can verify them. This is the layer that catches what a
-        confident model gets wrong — <b>in your Methods section, before Reviewer 2 does.</b>
+        Before you submit a paper, paste its Methods — the “how we did it” section. This flags cell lines that
+        are secretly the wrong ones and reagents that can’t be traced, each linked to the public record that
+        proves it — <b>before a journal reviewer does.</b>
       </div>
 
       {bench && <BenchmarkPanel bench={bench} />}
@@ -477,7 +492,7 @@ export default function Repro() {
             className="tm-note"
             value={methods}
             onChange={(e) => setMethods(e.target.value)}
-            placeholder="Paste a Methods section — cell lines, antibodies, and rigor reporting are checked against public registries."
+            placeholder="Paste a Methods section. It checks each cell line, antibody, and software tool against public databases, and flags missing study-quality details (sample size, blinding, animal sex)."
             rows={5}
             disabled={state === 'loading'}
             aria-label="Methods section"
@@ -513,7 +528,7 @@ export default function Repro() {
             className="tm-note"
             value={manuscriptText}
             onChange={(e) => setManuscriptText(e.target.value)}
-            placeholder="Paste a whole Methods / manuscript — every cell line, antibody, and rigor item is checked, then Claude drafts the corrections."
+            placeholder="Paste a whole Methods / manuscript — every cell line, antibody, software tool, and study-quality item is checked, then Claude drafts the corrections."
             rows={9}
             disabled={mstate === 'loading'}
             aria-label="Manuscript text"

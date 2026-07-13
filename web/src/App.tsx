@@ -8,7 +8,7 @@ export default function App() {
     <div className="wrap">
       <div className="head">
         <div className="logo">Verdict<span className="dot">.</span></div>
-        <div className="tag">Catches what a confident model gets wrong in your Methods — cited.</div>
+        <div className="tag">Catch mixed-up cell lines and untraceable reagents in your Methods — each linked to a public record.</div>
       </div>
 
       <Repro />

@@ -593,6 +593,15 @@ body {
 .rp-counts b.insuf { color: var(--contested); }
 .rp-counts b.pass { color: var(--supported); }
 .rp-counts .rp-dot { color: var(--faint); }
+/* plain-language legend for the registry / model-judgment tags — makes "you always see which made
+   the call" visible instead of relying on the reader to decode the two chips. */
+.rp-legend {
+  font-size: 12px; line-height: 1.55; color: var(--muted);
+  margin: 12px 0 4px; padding: 10px 13px;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+}
+.rp-legend .rp-tag { margin: 0 3px; vertical-align: 1px; }
 
 .rp-group { margin-bottom: 4px; }
 
