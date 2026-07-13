@@ -1,7 +1,7 @@
 # Methods Verifier — hackathon submission
 
 **Built with Claude: Life Sciences · Builder track · July 7–13 2026**
-Repo: https://github.com/Moe1117/verdict · Demo video: _(link)_ · Live demo: _(link)_
+Repo: https://github.com/Moe1117/verdict · Demo video: https://youtu.be/HQW0DZOr84U · Live demo: https://magenta-tartufo-666742.netlify.app
 
 ---
 
