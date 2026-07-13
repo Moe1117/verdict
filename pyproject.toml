@@ -30,3 +30,10 @@ testpaths = ["tests"]
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
+
+# Package only the `verdict` package (+ any subpackages). Without this, setuptools flat-layout
+# auto-discovery sees sibling dirs (web/, scripts/, benchmark/) as competing top-level packages and
+# aborts the wheel build — which breaks the non-editable `pip install ".[web]"` in the Dockerfile.
+[tool.setuptools.packages.find]
+include = ["verdict*"]
+namespaces = false
