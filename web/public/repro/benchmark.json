@@ -28,8 +28,8 @@
  },
  "realworld": {
   "n_papers": 47,
-  "mean_resources": 4.7,
-  "caught": 12,
+  "mean_resources": 6.0,
+  "caught": 16,
   "verifiable": 18,
   "false_flags": 0,
   "clean_papers": 14

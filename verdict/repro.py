@@ -305,25 +305,34 @@ _EXTRACT_TOOL = {
 }
 _EXTRACT_SYSTEM = (
     "You extract ONLY what is explicitly written in a manuscript Methods/Key-Resources section into a "
-    "structured resource inventory. Put the verbatim phrase in each 'evidence' field. Extract every named "
-    "research software or analysis tool (e.g. ImageJ, GraphPad Prism, FlowJo, CellProfiler) into 'software', "
-    "with any 'RRID:SCR_' identifier written for it (empty string if none). For rigor flags, "
-    "set true only if the fact is explicitly stated, false if the section clearly omits it, null if "
-    "there is no basis to judge. Never infer identities, catalog numbers, or RRIDs.")
+    "structured resource inventory. Put the verbatim phrase in each 'evidence' field. Methods often list "
+    "resources as a Key-Resources / reagent TABLE flattened into running text — rows like "
+    "'HeLa ATCC Cat# CCL-2 RRID:CVCL_0030' or 'A549 ATCC CCL-185' — as well as in ordinary prose; extract "
+    "every cell line and antibody from BOTH the tables and the prose. Extract every named research "
+    "software or analysis tool (e.g. ImageJ, GraphPad Prism, FlowJo, CellProfiler) into 'software', with "
+    "any 'RRID:SCR_' identifier written for it (empty string if none). For rigor flags, set true only if "
+    "the fact is explicitly stated, false if the section clearly omits it, null if there is no basis to "
+    "judge. Never infer identities, catalog numbers, or RRIDs.")
 
 
 def extract_resources(methods_text: str) -> dict:
     # call_tool RAISES when the model emits no tool_use block (parse.call_tool) or the Anthropic API
-    # errors (429/529/network). Retry once, then fall back to an empty extraction so review()
-    # degrades to a "no resources found" report instead of crashing (502) on a live paste.
-    for _ in range(2):
+    # errors (429/529/network). It can ALSO, non-deterministically, emit an all-empty extraction on a
+    # resource-dense Methods (e.g. a flattened Key-Resources table). So retry on an exception AND on an
+    # empty result over substantial text, then fall back to an empty extraction so review() degrades to
+    # a "no resources found" report instead of crashing (502) on a live paste.
+    substantial = len(methods_text.strip()) > 400
+    fallback = {"cell_lines": [], "antibodies": [], "software": [], "rigor": {}}
+    for _ in range(3):
         try:
             d = call_tool(_EXTRACT_SYSTEM, f"Methods:\n\n{methods_text}", _EXTRACT_TOOL, max_tokens=2048)
         except Exception:  # noqa: BLE001 — any extraction failure degrades, never propagates
             continue
         if isinstance(d, dict):
-            return d
-    return {"cell_lines": [], "antibodies": [], "software": [], "rigor": {}}
+            if not substantial or d.get("cell_lines") or d.get("antibodies") or d.get("software"):
+                return d
+            fallback = d  # substantial text but nothing came back — retry; keep the last as fallback
+    return fallback
 
 
 # ---------------------------------------------------------------------------

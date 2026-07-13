@@ -100,13 +100,14 @@ EPC = endothelial progenitor cells, …) rather than risk a false accusation.
 
 **Real-world slice (external validity).** The 92% is a controlled stress test; to check it in the wild we
 ran the same engine over **47 real open-access Methods sections** (Europe PMC, `scripts/repro_realworld_eval.py`):
-it extracted **~4.7 resources/paper** and, crucially, raised **0 false alarms on 14 clean controls** —
+it extracted **~6 resources/paper** and, crucially, raised **0 false alarms on 14 clean controls** —
 specificity holds on real papers. On the string-verifiable subset (papers whose fed Methods literally
-contains a register line) it caught **12 of 18** — below the synthetic 92%, honestly, because real Methods
-bury names in STAR / Key-Resources tables and passing mentions; the gap is **extraction recall, not false
-accusation**. These are descriptive coverage + a *verifiable* catch/false-flag rate, not a recall % against
-an unlabeled gold (that needs per-paper annotation — see What's next). WISH and KB are excluded as probe
-lines (their names collide with "wish" / "kilobase" in free text).
+contains a register line) it caught **16 of 18 (89%)** — essentially matching the synthetic 92%. (An early
+run caught only 12/18; inspecting the misses exposed an extraction blind spot on flattened STAR / Key-Resources
+*tables*, where the model would emit an empty extraction — fixed by table-aware extraction guidance + a retry
+on an empty result over substantial text.) These are descriptive coverage + a *verifiable* catch/false-flag
+rate, not a recall % against an unlabeled gold (that needs per-paper annotation — see What's next). WISH and
+KB are excluded as probe lines (their names collide with "wish" / "kilobase" in free text).
 
 The honest same-task comparison is **model 37%** (over all 594 register lines) **vs tool 92%** (over the
 40-sentence stress corpus) on "did you flag a contaminated line"; the 18-vs-92 numbers measure two

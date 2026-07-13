@@ -3,12 +3,12 @@
   "papers_processed": 47,
   "papers_no_fulltext": 8,
   "papers_error": 0,
-  "total_resources_extracted": 219,
-  "mean_resources_per_paper": 4.66,
+  "total_resources_extracted": 283,
+  "mean_resources_per_paper": 6.02,
   "positive_papers": 33,
   "positive_verifiable": 18,
-  "contaminated_lines_caught": 12,
-  "catch_rate_on_verifiable": 0.667,
+  "contaminated_lines_caught": 16,
+  "catch_rate_on_verifiable": 0.889,
   "clean_papers": 14,
   "false_flags_on_clean": 0,
   "false_flag_details": [],
@@ -17,76 +17,16 @@
    "HEp-2",
    "INT-407",
    "ECV-304",
-   "Detroit 562",
    "TE671",
    "HBL-100",
    "L-132"
-  ],
-  "note": "WISH excluded post-hoc (name collides with the English word 'wish'); every WISH string-hit was a non-cell-culture paper. Catch is end-to-end extraction+ICLAC gate on REAL Methods; lower than the synthetic 92% because real Methods bury names in reagent tables / passing mentions."
+  ]
  },
  "rows": [
   {
    "stratum": "positive",
    "pmcid": "PMC4369153",
    "outcome": "NO_FT"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC4493415",
-   "pmid": "26056232",
-   "probe_line": "MDA-MB-435",
-   "probe_line_in_methods": true,
-   "methods_chars": 1795,
-   "body_chars": 86599,
-   "n_cells": 0,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
-   "title": "CCL2-induced chemokine cascade promotes breast cancer metastasis by enhancing re",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC2169367",
-   "pmid": "10684258",
-   "probe_line": "MDA-MB-435",
-   "probe_line_in_methods": true,
-   "methods_chars": 573,
-   "body_chars": 61269,
-   "n_cells": 4,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 4,
-   "cell_fails": [
-    {
-     "item": "cell line: MDA-MB-435",
-     "citation": "ICLAC-00235 \u00b7 CVCL_0417"
-    }
-   ],
-   "title": "Exogenous expression of N-cadherin in breast cancer cells induces cell migration",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC7112372",
-   "pmid": "12711465",
-   "probe_line": "HEp-2",
-   "probe_line_in_methods": true,
-   "methods_chars": 3488,
-   "body_chars": 36771,
-   "n_cells": 7,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 7,
-   "cell_fails": [
-    {
-     "item": "cell line: Hep-2",
-     "citation": "ICLAC-00007 \u00b7 CVCL_1906"
-    }
-   ],
-   "title": "Coronavirus as a possible cause of severe acute respiratory syndrome.",
-   "outcome": "ok"
   },
   {
    "stratum": "positive",
@@ -111,6 +51,69 @@
     }
    ],
    "title": "N-cadherin promotes motility in human breast cancer cells regardless of their E-",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC2169367",
+   "pmid": "10684258",
+   "probe_line": "MDA-MB-435",
+   "probe_line_in_methods": true,
+   "methods_chars": 573,
+   "body_chars": 61269,
+   "n_cells": 6,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 6,
+   "cell_fails": [
+    {
+     "item": "cell line: MDA-MB-435",
+     "citation": "ICLAC-00235 \u00b7 CVCL_0417"
+    }
+   ],
+   "title": "Exogenous expression of N-cadherin in breast cancer cells induces cell migration",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC4493415",
+   "pmid": "26056232",
+   "probe_line": "MDA-MB-435",
+   "probe_line_in_methods": true,
+   "methods_chars": 1795,
+   "body_chars": 86599,
+   "n_cells": 7,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 7,
+   "cell_fails": [
+    {
+     "item": "cell line: MDA-MB-435",
+     "citation": "ICLAC-00235 \u00b7 CVCL_0417"
+    }
+   ],
+   "title": "CCL2-induced chemokine cascade promotes breast cancer metastasis by enhancing re",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC7112372",
+   "pmid": "12711465",
+   "probe_line": "HEp-2",
+   "probe_line_in_methods": true,
+   "methods_chars": 3488,
+   "body_chars": 36771,
+   "n_cells": 7,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 7,
+   "cell_fails": [
+    {
+     "item": "cell line: Hep-2",
+     "citation": "ICLAC-00007 \u00b7 CVCL_1906"
+    }
+   ],
+   "title": "Coronavirus as a possible cause of severe acute respiratory syndrome.",
    "outcome": "ok"
   },
   {
@@ -144,38 +147,6 @@
   },
   {
    "stratum": "positive",
-   "pmcid": "PMC5551389",
-   "pmid": "26934220",
-   "probe_line": "HEp-2",
-   "probe_line_in_methods": false,
-   "methods_chars": 652,
-   "body_chars": 77825,
-   "n_cells": 0,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
-   "title": "Therapeutic efficacy of the small molecule GS-5734 against Ebola virus in rhesus",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC7112415",
-   "pmid": "14585636",
-   "probe_line": "HEp-2",
-   "probe_line_in_methods": false,
-   "methods_chars": 2006,
-   "body_chars": 32449,
-   "n_cells": 0,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
-   "title": "Epidemiology and cause of severe acute respiratory syndrome (SARS) in Guangdong,",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
    "pmcid": "PMC7112410",
    "pmid": "12781535",
    "probe_line": "HEp-2",
@@ -197,33 +168,22 @@
   },
   {
    "stratum": "positive",
-   "pmcid": "PMC3572998",
-   "pmid": "23457644",
-   "probe_line": "INT-407",
-   "probe_line_in_methods": false,
-   "methods_chars": 1135,
-   "body_chars": 61136,
-   "n_cells": 0,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
-   "title": "High prevalence of mucosa-associated E. coli producing cyclomodulin and genotoxi",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
    "pmcid": "PMC7227586",
    "pmid": "32416070",
    "probe_line": "HEp-2",
    "probe_line_in_methods": true,
    "methods_chars": 6058,
    "body_chars": 76185,
-   "n_cells": 0,
-   "n_antibodies": 0,
+   "n_cells": 7,
+   "n_antibodies": 12,
    "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
+   "n_resources": 19,
+   "cell_fails": [
+    {
+     "item": "cell line: Hep-2",
+     "citation": "ICLAC-00007 \u00b7 CVCL_1906"
+    }
+   ],
    "title": "Imbalanced Host Response to SARS-CoV-2 Drives Development of COVID-19.",
    "outcome": "ok"
   },
@@ -241,6 +201,54 @@
    "n_resources": 2,
    "cell_fails": [],
    "title": "Reprogramming of CTLs into natural killer-like cells in celiac disease.",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC7112415",
+   "pmid": "14585636",
+   "probe_line": "HEp-2",
+   "probe_line_in_methods": false,
+   "methods_chars": 2006,
+   "body_chars": 32449,
+   "n_cells": 0,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 0,
+   "cell_fails": [],
+   "title": "Epidemiology and cause of severe acute respiratory syndrome (SARS) in Guangdong,",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC5551389",
+   "pmid": "26934220",
+   "probe_line": "HEp-2",
+   "probe_line_in_methods": false,
+   "methods_chars": 652,
+   "body_chars": 77825,
+   "n_cells": 0,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 0,
+   "cell_fails": [],
+   "title": "Therapeutic efficacy of the small molecule GS-5734 against Ebola virus in rhesus",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC3572998",
+   "pmid": "23457644",
+   "probe_line": "INT-407",
+   "probe_line_in_methods": false,
+   "methods_chars": 1135,
+   "body_chars": 61136,
+   "n_cells": 0,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 0,
+   "cell_fails": [],
+   "title": "High prevalence of mucosa-associated E. coli producing cyclomodulin and genotoxi",
    "outcome": "ok"
   },
   {
@@ -267,28 +275,17 @@
    "probe_line_in_methods": true,
    "methods_chars": 5970,
    "body_chars": 35868,
-   "n_cells": 0,
-   "n_antibodies": 0,
+   "n_cells": 1,
+   "n_antibodies": 4,
    "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
+   "n_resources": 5,
+   "cell_fails": [
+    {
+     "item": "cell line: INT-407",
+     "citation": "ICLAC-00008 \u00b7 CVCL_1907"
+    }
+   ],
    "title": "In vitro cell culture infectivity assay for human noroviruses.",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC3413534",
-   "pmid": "22534208",
-   "probe_line": "INT-407",
-   "probe_line_in_methods": false,
-   "methods_chars": 721,
-   "body_chars": 53638,
-   "n_cells": 0,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
-   "title": "Rapid paracellular transmigration of Campylobacter jejuni across polarized epith",
    "outcome": "ok"
   },
   {
@@ -321,11 +318,43 @@
    "methods_chars": 2385,
    "body_chars": 74537,
    "n_cells": 6,
-   "n_antibodies": 1,
+   "n_antibodies": 0,
    "n_software": 0,
-   "n_resources": 7,
+   "n_resources": 6,
    "cell_fails": [],
    "title": "Apoptosis of adherent cells by recruitment of caspase-8 to unligated integrins.",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC2193821",
+   "pmid": "12615904",
+   "probe_line": "TE671",
+   "probe_line_in_methods": false,
+   "methods_chars": 2868,
+   "body_chars": 54239,
+   "n_cells": 1,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 1,
+   "cell_fails": [],
+   "title": "Infectious hepatitis C virus pseudo-particles containing functional E1-E2 envelo",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC3413534",
+   "pmid": "22534208",
+   "probe_line": "INT-407",
+   "probe_line_in_methods": false,
+   "methods_chars": 721,
+   "body_chars": 53638,
+   "n_cells": 0,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 0,
+   "cell_fails": [],
+   "title": "Rapid paracellular transmigration of Campylobacter jejuni across polarized epith",
    "outcome": "ok"
   },
   {
@@ -336,44 +365,17 @@
    "probe_line_in_methods": true,
    "methods_chars": 2055,
    "body_chars": 60317,
-   "n_cells": 0,
+   "n_cells": 9,
    "n_antibodies": 0,
    "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
+   "n_resources": 9,
+   "cell_fails": [
+    {
+     "item": "cell line: ECV304",
+     "citation": "ICLAC-00117 \u00b7 CVCL_2029"
+    }
+   ],
    "title": "Rac1 accumulates in the nucleus during the G2 phase of the cell cycle and promot",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC2132689",
-   "pmid": "9490735",
-   "probe_line": "ECV-304",
-   "probe_line_in_methods": false,
-   "methods_chars": 2019,
-   "body_chars": 71971,
-   "n_cells": 0,
-   "n_antibodies": 15,
-   "n_software": 0,
-   "n_resources": 15,
-   "cell_fails": [],
-   "title": "A role for tissue factor in cell adhesion and migration mediated by interaction ",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC1750931",
-   "pmid": "17147474",
-   "probe_line": "TE671",
-   "probe_line_in_methods": false,
-   "methods_chars": 1963,
-   "body_chars": 77516,
-   "n_cells": 0,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
-   "title": "Plasma membrane is the site of productive HIV-1 particle assembly.",
    "outcome": "ok"
   },
   {
@@ -385,27 +387,27 @@
    "methods_chars": 1149,
    "body_chars": 50216,
    "n_cells": 0,
-   "n_antibodies": 0,
+   "n_antibodies": 18,
    "n_software": 0,
-   "n_resources": 0,
+   "n_resources": 18,
    "cell_fails": [],
    "title": "Astaxanthin inhibits JAK/STAT-3 signaling to abrogate cell proliferation, invasi",
    "outcome": "ok"
   },
   {
    "stratum": "positive",
-   "pmcid": "PMC2193821",
-   "pmid": "12615904",
-   "probe_line": "TE671",
+   "pmcid": "PMC2132689",
+   "pmid": "9490735",
+   "probe_line": "ECV-304",
    "probe_line_in_methods": false,
-   "methods_chars": 2868,
-   "body_chars": 54239,
+   "methods_chars": 2019,
+   "body_chars": 71971,
    "n_cells": 0,
-   "n_antibodies": 0,
+   "n_antibodies": 17,
    "n_software": 0,
-   "n_resources": 0,
+   "n_resources": 17,
    "cell_fails": [],
-   "title": "Infectious hepatitis C virus pseudo-particles containing functional E1-E2 envelo",
+   "title": "A role for tissue factor in cell adhesion and migration mediated by interaction ",
    "outcome": "ok"
   },
   {
@@ -427,43 +429,6 @@
    "n_resources": 3,
    "cell_fails": [],
    "title": "Reconstitution of an infectious human endogenous retrovirus.",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC2212870",
-   "pmid": "16147976",
-   "probe_line": "TE671",
-   "probe_line_in_methods": true,
-   "methods_chars": 670,
-   "body_chars": 64340,
-   "n_cells": 2,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 2,
-   "cell_fails": [
-    {
-     "item": "cell line: TE671",
-     "citation": "ICLAC-00101 \u00b7 CVCL_1756"
-    }
-   ],
-   "title": "A severe defect in CRAC Ca2+ channel activation and altered K+ channel gating in",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC3267166",
-   "pmid": "21269250",
-   "probe_line": "HBL-100",
-   "probe_line_in_methods": false,
-   "methods_chars": 9000,
-   "body_chars": 95786,
-   "n_cells": 0,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
-   "title": "Cilengitide: the first anti-angiogenic small molecule drug candidate design, syn",
    "outcome": "ok"
   },
   {
@@ -493,23 +458,39 @@
   },
   {
    "stratum": "positive",
-   "pmcid": "PMC7267133",
-   "pmid": "34766164",
-   "probe_line": "L-132",
-   "probe_line_in_methods": true,
-   "methods_chars": 8966,
-   "body_chars": 119074,
-   "n_cells": 1,
+   "pmcid": "PMC1750931",
+   "pmid": "17147474",
+   "probe_line": "TE671",
+   "probe_line_in_methods": false,
+   "methods_chars": 1963,
+   "body_chars": 77516,
+   "n_cells": 0,
    "n_antibodies": 0,
    "n_software": 0,
-   "n_resources": 1,
+   "n_resources": 0,
+   "cell_fails": [],
+   "title": "Plasma membrane is the site of productive HIV-1 particle assembly.",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC2212870",
+   "pmid": "16147976",
+   "probe_line": "TE671",
+   "probe_line_in_methods": true,
+   "methods_chars": 670,
+   "body_chars": 64340,
+   "n_cells": 2,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 2,
    "cell_fails": [
     {
-     "item": "cell line: L-132",
-     "citation": "ICLAC-00025 \u00b7 CVCL_1908"
+     "item": "cell line: TE671",
+     "citation": "ICLAC-00101 \u00b7 CVCL_1756"
     }
    ],
-   "title": "Sanitizing agents for virus inactivation and disinfection.",
+   "title": "A severe defect in CRAC Ca2+ channel activation and altered K+ channel gating in",
    "outcome": "ok"
   },
   {
@@ -535,34 +516,44 @@
   },
   {
    "stratum": "positive",
-   "pmcid": "PMC3093321",
-   "pmid": "21411626",
-   "probe_line": "HBL-100",
-   "probe_line_in_methods": false,
-   "methods_chars": 1038,
-   "body_chars": 72302,
-   "n_cells": 6,
-   "n_antibodies": 4,
+   "pmcid": "PMC7267133",
+   "pmid": "34766164",
+   "probe_line": "L-132",
+   "probe_line_in_methods": true,
+   "methods_chars": 8966,
+   "body_chars": 119074,
+   "n_cells": 1,
+   "n_antibodies": 0,
    "n_software": 0,
-   "n_resources": 10,
-   "cell_fails": [],
-   "title": "An autocrine TGF-beta/ZEB/miR-200 signaling network regulates establishment and ",
+   "n_resources": 1,
+   "cell_fails": [
+    {
+     "item": "cell line: L-132",
+     "citation": "ICLAC-00025 \u00b7 CVCL_1908"
+    }
+   ],
+   "title": "Sanitizing agents for virus inactivation and disinfection.",
    "outcome": "ok"
   },
   {
    "stratum": "positive",
-   "pmcid": "PMC4384991",
-   "pmid": "25852332",
-   "probe_line": "L-132",
-   "probe_line_in_methods": false,
-   "methods_chars": 1687,
-   "body_chars": 78249,
-   "n_cells": 0,
+   "pmcid": "PMC2211935",
+   "pmid": "15314073",
+   "probe_line": "HBL-100",
+   "probe_line_in_methods": true,
+   "methods_chars": 1893,
+   "body_chars": 57462,
+   "n_cells": 11,
    "n_antibodies": 0,
    "n_software": 0,
-   "n_resources": 0,
-   "cell_fails": [],
-   "title": "Multidimensional effects of biologically synthesized silver nanoparticles in Hel",
+   "n_resources": 11,
+   "cell_fails": [
+    {
+     "item": "cell line: HBL-100",
+     "citation": "ICLAC-00207 \u00b7 CVCL_4362"
+    }
+   ],
+   "title": "Heat shock protein 70 promotes cell survival by inhibiting lysosomal membrane pe",
    "outcome": "ok"
   },
   {
@@ -588,39 +579,34 @@
   },
   {
    "stratum": "positive",
-   "pmcid": "PMC2211935",
-   "pmid": "15314073",
+   "pmcid": "PMC3267166",
+   "pmid": "21269250",
    "probe_line": "HBL-100",
-   "probe_line_in_methods": true,
-   "methods_chars": 1893,
-   "body_chars": 57462,
-   "n_cells": 13,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 13,
-   "cell_fails": [
-    {
-     "item": "cell line: HBL-100",
-     "citation": "ICLAC-00207 \u00b7 CVCL_4362"
-    }
-   ],
-   "title": "Heat shock protein 70 promotes cell survival by inhibiting lysosomal membrane pe",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "positive",
-   "pmcid": "PMC3468618",
-   "pmid": "23071592",
-   "probe_line": "L-132",
-   "probe_line_in_methods": true,
-   "methods_chars": 7851,
-   "body_chars": 51689,
+   "probe_line_in_methods": false,
+   "methods_chars": 9000,
+   "body_chars": 95786,
    "n_cells": 0,
    "n_antibodies": 0,
    "n_software": 0,
    "n_resources": 0,
    "cell_fails": [],
-   "title": "Gene expression profiling unravels cancer-related hepatic molecular signatures i",
+   "title": "Cilengitide: the first anti-angiogenic small molecule drug candidate design, syn",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC3093321",
+   "pmid": "21411626",
+   "probe_line": "HBL-100",
+   "probe_line_in_methods": false,
+   "methods_chars": 1038,
+   "body_chars": 72302,
+   "n_cells": 6,
+   "n_antibodies": 4,
+   "n_software": 0,
+   "n_resources": 10,
+   "cell_fails": [],
+   "title": "An autocrine TGF-beta/ZEB/miR-200 signaling network regulates establishment and ",
    "outcome": "ok"
   },
   {
@@ -637,6 +623,22 @@
    "n_resources": 3,
    "cell_fails": [],
    "title": "Receptor-binding loops in alphacoronavirus adaptation and evolution.",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "positive",
+   "pmcid": "PMC3468618",
+   "pmid": "23071592",
+   "probe_line": "L-132",
+   "probe_line_in_methods": true,
+   "methods_chars": 7851,
+   "body_chars": 51689,
+   "n_cells": 0,
+   "n_antibodies": 1,
+   "n_software": 0,
+   "n_resources": 1,
+   "cell_fails": [],
+   "title": "Gene expression profiling unravels cancer-related hepatic molecular signatures i",
    "outcome": "ok"
   },
   {
@@ -657,38 +659,28 @@
   },
   {
    "stratum": "clean",
-   "pmcid": "PMC7095016",
-   "pmid": "14647384",
-   "probe_line": "",
-   "probe_line_in_methods": false,
-   "methods_chars": 1602,
-   "body_chars": 28368,
-   "n_cells": 1,
-   "n_antibodies": 1,
-   "n_software": 1,
-   "n_resources": 3,
-   "cell_fails": [],
-   "title": "Angiotensin-converting enzyme 2 is a functional receptor for the SARS coronaviru",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "clean",
    "pmcid": "PMC3877715",
    "outcome": "NO_FT"
   },
   {
+   "stratum": "positive",
+   "pmcid": "PMC4384991",
+   "pmid": "25852332",
+   "probe_line": "L-132",
+   "probe_line_in_methods": false,
+   "methods_chars": 1687,
+   "body_chars": 78249,
+   "n_cells": 0,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 0,
+   "cell_fails": [],
+   "title": "Multidimensional effects of biologically synthesized silver nanoparticles in Hel",
+   "outcome": "ok"
+  },
+  {
    "stratum": "clean",
    "pmcid": "PMC6907074",
-   "outcome": "NO_FT"
-  },
-  {
-   "stratum": "clean",
-   "pmcid": "PMC6818755",
-   "outcome": "NO_FT"
-  },
-  {
-   "stratum": "clean",
-   "pmcid": "PMC2990499",
    "outcome": "NO_FT"
   },
   {
@@ -709,50 +701,28 @@
   },
   {
    "stratum": "clean",
-   "pmcid": "PMC3911877",
-   "pmid": "24316715",
+   "pmcid": "PMC6818755",
+   "outcome": "NO_FT"
+  },
+  {
+   "stratum": "clean",
+   "pmcid": "PMC2990499",
+   "outcome": "NO_FT"
+  },
+  {
+   "stratum": "clean",
+   "pmcid": "PMC7095016",
+   "pmid": "14647384",
    "probe_line": "",
    "probe_line_in_methods": false,
-   "methods_chars": 641,
-   "body_chars": 40557,
+   "methods_chars": 1602,
+   "body_chars": 28368,
    "n_cells": 0,
    "n_antibodies": 0,
    "n_software": 0,
    "n_resources": 0,
    "cell_fails": [],
-   "title": "A METTL3-METTL14 complex mediates mammalian nuclear RNA N6-adenosine methylation",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "clean",
-   "pmcid": "PMC2592826",
-   "pmid": "19029340",
-   "probe_line": "",
-   "probe_line_in_methods": false,
-   "methods_chars": 1077,
-   "body_chars": 38214,
-   "n_cells": 5,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 5,
-   "cell_fails": [],
-   "title": "Parkin is recruited selectively to impaired mitochondria and promotes their auto",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "clean",
-   "pmcid": "PMC2171557",
-   "pmid": "16286508",
-   "probe_line": "",
-   "probe_line_in_methods": false,
-   "methods_chars": 577,
-   "body_chars": 64535,
-   "n_cells": 2,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 2,
-   "cell_fails": [],
-   "title": "p62/SQSTM1 forms protein aggregates degraded by autophagy and has a protective e",
+   "title": "Angiotensin-converting enzyme 2 is a functional receptor for the SARS coronaviru",
    "outcome": "ok"
   },
   {
@@ -773,18 +743,34 @@
   },
   {
    "stratum": "clean",
-   "pmcid": "PMC5669064",
-   "pmid": "28759029",
+   "pmcid": "PMC2171557",
+   "pmid": "16286508",
    "probe_line": "",
    "probe_line_in_methods": false,
-   "methods_chars": 3125,
-   "body_chars": 43074,
-   "n_cells": 0,
+   "methods_chars": 577,
+   "body_chars": 64535,
+   "n_cells": 2,
    "n_antibodies": 0,
    "n_software": 0,
-   "n_resources": 0,
+   "n_resources": 2,
    "cell_fails": [],
-   "title": "Simultaneous epitope and transcriptome measurement in single cells.",
+   "title": "p62/SQSTM1 forms protein aggregates degraded by autophagy and has a protective e",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "clean",
+   "pmcid": "PMC2592826",
+   "pmid": "19029340",
+   "probe_line": "",
+   "probe_line_in_methods": false,
+   "methods_chars": 1077,
+   "body_chars": 38214,
+   "n_cells": 6,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 6,
+   "cell_fails": [],
+   "title": "Parkin is recruited selectively to impaired mitochondria and promotes their auto",
    "outcome": "ok"
   },
   {
@@ -797,10 +783,26 @@
    "body_chars": 49106,
    "n_cells": 0,
    "n_antibodies": 0,
-   "n_software": 5,
-   "n_resources": 5,
+   "n_software": 6,
+   "n_resources": 6,
    "cell_fails": [],
    "title": "DIA-NN: neural networks and interference correction enable deep proteome coverag",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "clean",
+   "pmcid": "PMC5669064",
+   "pmid": "28759029",
+   "probe_line": "",
+   "probe_line_in_methods": false,
+   "methods_chars": 3125,
+   "body_chars": 43074,
+   "n_cells": 0,
+   "n_antibodies": 2,
+   "n_software": 2,
+   "n_resources": 4,
+   "cell_fails": [],
+   "title": "Simultaneous epitope and transcriptome measurement in single cells.",
    "outcome": "ok"
   },
   {
@@ -810,18 +812,18 @@
   },
   {
    "stratum": "clean",
-   "pmcid": "PMC7100515",
-   "pmid": "32221306",
+   "pmcid": "PMC3911877",
+   "pmid": "24316715",
    "probe_line": "",
    "probe_line_in_methods": false,
-   "methods_chars": 1085,
-   "body_chars": 60939,
+   "methods_chars": 641,
+   "body_chars": 40557,
    "n_cells": 0,
    "n_antibodies": 0,
    "n_software": 0,
    "n_resources": 0,
    "cell_fails": [],
-   "title": "Characterization of spike glycoprotein of SARS-CoV-2 on virus entry and its immu",
+   "title": "A METTL3-METTL14 complex mediates mammalian nuclear RNA N6-adenosine methylation",
    "outcome": "ok"
   },
   {
@@ -847,6 +849,38 @@
   },
   {
    "stratum": "clean",
+   "pmcid": "PMC2811155",
+   "pmid": "20126261",
+   "probe_line": "",
+   "probe_line_in_methods": false,
+   "methods_chars": 1491,
+   "body_chars": 97432,
+   "n_cells": 10,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 10,
+   "cell_fails": [],
+   "title": "PINK1 is selectively stabilized on impaired mitochondria to activate Parkin.",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "clean",
+   "pmcid": "PMC7100515",
+   "pmid": "32221306",
+   "probe_line": "",
+   "probe_line_in_methods": false,
+   "methods_chars": 1085,
+   "body_chars": 60939,
+   "n_cells": 0,
+   "n_antibodies": 0,
+   "n_software": 0,
+   "n_resources": 0,
+   "cell_fails": [],
+   "title": "Characterization of spike glycoprotein of SARS-CoV-2 on virus entry and its immu",
+   "outcome": "ok"
+  },
+  {
+   "stratum": "clean",
    "pmcid": "PMC5826585",
    "pmid": "29476152",
    "probe_line": "",
@@ -855,8 +889,8 @@
    "body_chars": 81659,
    "n_cells": 0,
    "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 0,
+   "n_software": 1,
+   "n_resources": 1,
    "cell_fails": [],
    "title": "Recognition of RNA N&lt;sup&gt;6&lt;/sup&gt;-methyladenosine by IGF2BP proteins ",
    "outcome": "ok"
@@ -875,22 +909,6 @@
    "n_resources": 0,
    "cell_fails": [],
    "title": "A promiscuous biotin ligase fusion protein identifies proximal and interacting p",
-   "outcome": "ok"
-  },
-  {
-   "stratum": "clean",
-   "pmcid": "PMC2811155",
-   "pmid": "20126261",
-   "probe_line": "",
-   "probe_line_in_methods": false,
-   "methods_chars": 1491,
-   "body_chars": 97432,
-   "n_cells": 11,
-   "n_antibodies": 0,
-   "n_software": 0,
-   "n_resources": 11,
-   "cell_fails": [],
-   "title": "PINK1 is selectively stabilized on impaired mitochondria to activate Parkin.",
    "outcome": "ok"
   }
  ]

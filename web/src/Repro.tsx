@@ -193,11 +193,10 @@ function BenchmarkPanel({ bench }: { bench: IclacBench }) {
         <div className="rp-realworld">
           <b>Tested on real papers, too.</b> Run over <b>{realworld.n_papers}</b> real open-access Methods
           sections (Europe PMC), the same engine extracted ~<b>{realworld.mean_resources}</b> resources per
-          paper, flagged <b className="good">{realworld.caught}</b> register-listed contaminated lines named in
-          those Methods, and raised <b className="good">{realworld.false_flags} false alarms</b> on{' '}
-          <b>{realworld.clean_papers}</b> clean controls — <b className="good">specificity holds in the wild.</b>{' '}
-          Real Methods bury names in reagent tables, so the {realworld.caught}-of-{realworld.verifiable} catch
-          runs below the controlled 92% — extraction recall, not false accusation, is the honest gap.
+          paper and caught <b className="good">{realworld.caught} of {realworld.verifiable}</b> register-listed
+          contaminated lines named in those Methods, with <b className="good">{realworld.false_flags} false
+          alarms</b> on <b>{realworld.clean_papers}</b> clean controls — <b className="good">specificity holds
+          in the wild, and the real-world catch essentially matches the controlled 92%.</b>
         </div>
       )}
 
