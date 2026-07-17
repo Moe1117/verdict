@@ -1,0 +1,93 @@
+{
+  "_comment": "Fidelity-gate registry. Every headline number in README.md / SUBMISSION.md is bound here to a field in a committed benchmark artifact. scripts/check_claims.py fails CI if data (benchmark/*.json), registry (this file), and prose (the docs) ever diverge. Re-baseline after an intentional benchmark change with: python scripts/check_claims.py --update  (then reconcile the prose). Inspired by the NCypher finalist's CI reproducibility gate — see vault Hackathons/.../Finalist-NCypher.md.",
+  "claims": [
+    {
+      "id": "llm_strict_accuracy",
+      "statement": "A frontier model strictly identifies only ~18% of documented-identity contaminated lines (n=530).",
+      "source": "benchmark/repro/iclac_eval.json",
+      "path": "summary.llm_strict_accuracy_known",
+      "expected": 0.177,
+      "tol": 0.001,
+      "display_rule": "round_pct",
+      "appears_in": ["README.md", "SUBMISSION.md"]
+    },
+    {
+      "id": "llm_confident_wrong",
+      "statement": "The model is confidently wrong on 230 of the 594 register lines.",
+      "source": "benchmark/repro/iclac_eval.json",
+      "path": "summary.llm_confident_wrong",
+      "expected": 230,
+      "tol": 0,
+      "display": "230",
+      "appears_in": ["README.md", "SUBMISSION.md"]
+    },
+    {
+      "id": "llm_strict_famous",
+      "statement": "The model is ~91% accurate on the ~11 famous lines.",
+      "source": "benchmark/repro/iclac_eval.json",
+      "path": "summary.llm_strict_famous",
+      "expected": 0.909,
+      "tol": 0.005,
+      "display_rule": "round_pct",
+      "appears_in": ["README.md", "SUBMISSION.md"]
+    },
+    {
+      "id": "llm_strict_tail",
+      "statement": "The model is ~16% accurate on the 519-line obscure tail.",
+      "source": "benchmark/repro/iclac_eval.json",
+      "path": "summary.llm_strict_tail",
+      "expected": 0.162,
+      "tol": 0.005,
+      "display_rule": "round_pct",
+      "appears_in": ["README.md", "SUBMISSION.md"]
+    },
+    {
+      "id": "llm_false_flag_legit",
+      "statement": "The model false-flags 0 of the 36 independent authentic control lines.",
+      "source": "benchmark/repro/iclac_eval.json",
+      "path": "summary.llm_false_flag_legit",
+      "expected": 0,
+      "tol": 0,
+      "display": "0 of 36",
+      "appears_in": ["README.md", "SUBMISSION.md"]
+    },
+    {
+      "id": "tool_stress_catch_rate",
+      "statement": "The tool catches 92% end-to-end on messy Methods prose.",
+      "source": "benchmark/repro/stress_eval.json",
+      "path": "summary.end_to_end_catch_rate",
+      "expected": 0.925,
+      "tol": 0.001,
+      "display_rule": "round_pct",
+      "appears_in": ["README.md", "SUBMISSION.md"]
+    },
+    {
+      "id": "tool_stress_caught_count",
+      "statement": "37 of 40 contaminated lines caught end-to-end (the 92% numerator).",
+      "source": "benchmark/repro/stress_eval.json",
+      "path": "summary.caught",
+      "expected": 37,
+      "tol": 0,
+      "display": "37/40",
+      "appears_in": ["SUBMISSION.md"]
+    },
+    {
+      "id": "tool_stress_false_flags",
+      "statement": "The tool false-flags 0 of the 18 legit stress controls (specificity holds on messy prose).",
+      "source": "benchmark/repro/stress_eval.json",
+      "path": "summary.false_flags_legit",
+      "expected": 0,
+      "tol": 0,
+      "appears_in": []
+    },
+    {
+      "id": "tool_stress_match_miss",
+      "statement": "0 name-match misses — the register lookup held across every phrasing.",
+      "source": "benchmark/repro/stress_eval.json",
+      "path": "summary.match_miss",
+      "expected": 0,
+      "tol": 0,
+      "appears_in": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+name: fidelity-gate
+
+# Prove the headline still holds on every push. If a benchmark artifact, a README/SUBMISSION number,
+# or the claims registry drifts out of agreement, this build goes red until a human reconciles them.
+# Deterministic and dependency-free (Python stdlib only) — no secrets, no API key, no model, free.
+
+on:
+  push:
+    paths:
+      - "README.md"
+      - "SUBMISSION.md"
+      - "benchmark/**"
+      - "scripts/check_claims.py"
+      - ".github/workflows/fidelity-gate.yml"
+  pull_request:
+    paths:
+      - "README.md"
+      - "SUBMISSION.md"
+      - "benchmark/**"
+      - "scripts/check_claims.py"
+  workflow_dispatch:
+
+jobs:
+  claims:
+    name: headline claims reconcile with committed data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: check_claims
+        run: python scripts/check_claims.py
