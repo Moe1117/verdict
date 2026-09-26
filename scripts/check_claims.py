@@ -140,7 +140,8 @@ def overclaim(reg: dict) -> None:
     )
     client = anthropic.Anthropic()
     resp = client.messages.create(
-        model="claude-opus-4-8", max_tokens=1024, messages=[{"role": "user", "content": msg}]
+        # Opus 5 thinks by default; max_tokens covers thinking + output, hence the headroom.
+        model="claude-opus-5", max_tokens=4096, messages=[{"role": "user", "content": msg}]
     )
     print("\n[overclaim] LLM audit (advisory, non-fatal):\n" + resp.content[0].text)
 

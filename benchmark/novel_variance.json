@@ -1,0 +1,203 @@
+{
+  "purpose": "Run-to-run variance of the NOVEL-CLAIM head-to-head (naive Claude vs the full live Verdict product) over n=12 rigorously-verified recent (2024-2025) trial readouts, chosen to be counterintuitive in both directions. Three independent runs.",
+  "method": "scripts/novel_benchmark.py benchmark/novel_claims.json, run 3x. Each run: naive Claude (plain_llm_baseline, confident yes/no) vs Verdict run_live (falsification pass on). Symmetric confident-FP = a confident 'Supported' where truth is not Supported.",
+  "IMPORTANT_caveat": "These 2024-2025 trials are INSIDE Claude's Jan-2026 training cutoff, so they are NOT genuinely novel to the model - it has read them. This did not test the intended 'unknown to the model' regime; the clean test needs POST-cutoff (2026) readouts. The one discriminating case is navacaprant (Claude confidently wrong every run; Verdict abstains every run).",
+  "n_runs": 3,
+  "n_claims": 12,
+  "naive_claude": {
+    "accuracy_per_run": [
+      0.917,
+      0.917,
+      0.917
+    ],
+    "accuracy_mean": 0.917,
+    "confident_fp_per_run": [
+      1,
+      1,
+      1
+    ],
+    "verdict_flips_across_runs": 0,
+    "note": "Perfectly stable (92% every run, 0 flips); its single confident-FP is navacaprant, reproduced every run."
+  },
+  "verdict": {
+    "accuracy_per_run": [
+      0.583,
+      0.583,
+      0.667
+    ],
+    "accuracy_mean": 0.611,
+    "accuracy_min": 0.583,
+    "accuracy_max": 0.667,
+    "confident_fp_per_run": [
+      0,
+      0,
+      0
+    ],
+    "decisive_wrong_events_total": 0,
+    "abstention_per_run": [
+      0.417,
+      0.417,
+      0.333
+    ],
+    "verdict_flips_across_runs": 8,
+    "note": "0 confident-FP and 0 decisive-wrong across all 36 decisions (every error was an abstention) - the safety property held on THIS set (it broke on solanezumab in the live/famous set). But it flips on 8/12 claims run-to-run: retrieval non-determinism, same root cause as the live set."
+  },
+  "per_claim": {
+    "In the phase 3 TROPION-Lung01 trial, datopotamab deruxtecan (Dato-DXd)": {
+      "gold": "Not Supported",
+      "verdict_per_run": {
+        "run1": "Insufficient",
+        "run2": "Insufficient",
+        "run3": "Not Supported"
+      },
+      "naive_per_run": {
+        "run1": "Not Supported",
+        "run2": "Not Supported",
+        "run3": "Not Supported"
+      }
+    },
+    "Navacaprant, a highly selective kappa-opioid receptor antagonist dosed": {
+      "gold": "Not Supported",
+      "verdict_per_run": {
+        "run1": "Insufficient",
+        "run2": "Insufficient",
+        "run3": "Insufficient"
+      },
+      "naive_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      }
+    },
+    "In the phase 3 EMPACT-MI trial, starting empagliflozin after an acute ": {
+      "gold": "Not Supported",
+      "verdict_per_run": {
+        "run1": "Not Supported",
+        "run2": "Not Supported",
+        "run3": "Contested"
+      },
+      "naive_per_run": {
+        "run1": "Not Supported",
+        "run2": "Not Supported",
+        "run3": "Not Supported"
+      }
+    },
+    "In the phase 3 KEYNOTE-991 trial, adding pembrolizumab to enzalutamide": {
+      "gold": "Not Supported",
+      "verdict_per_run": {
+        "run1": "Not Supported",
+        "run2": "Not Supported",
+        "run3": "Not Supported"
+      },
+      "naive_per_run": {
+        "run1": "Not Supported",
+        "run2": "Not Supported",
+        "run3": "Not Supported"
+      }
+    },
+    "In the phase 3 CONNEX program, the glycine transporter-1 inhibitor icl": {
+      "gold": "Not Supported",
+      "verdict_per_run": {
+        "run1": "Not Supported",
+        "run2": "Insufficient",
+        "run3": "Not Supported"
+      },
+      "naive_per_run": {
+        "run1": "Not Supported",
+        "run2": "Not Supported",
+        "run3": "Not Supported"
+      }
+    },
+    "In its phase 3 RETHINK-ALZ and REFOCUS-ALZ trials, simufilam slowed co": {
+      "gold": "Not Supported",
+      "verdict_per_run": {
+        "run1": "Insufficient",
+        "run2": "Not Supported",
+        "run3": "Insufficient"
+      },
+      "naive_per_run": {
+        "run1": "Not Supported",
+        "run2": "Not Supported",
+        "run3": "Not Supported"
+      }
+    },
+    "In the confirmatory phase 3 BaxHTN trial, the aldosterone-synthase inh": {
+      "gold": "Supported",
+      "verdict_per_run": {
+        "run1": "Contested",
+        "run2": "Supported",
+        "run3": "Insufficient"
+      },
+      "naive_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      }
+    },
+    "In the phase 3 SURMOUNT-OSA trials, tirzepatide significantly reduced ": {
+      "gold": "Supported",
+      "verdict_per_run": {
+        "run1": "Contested",
+        "run2": "Supported",
+        "run3": "Supported"
+      },
+      "naive_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      }
+    },
+    "In the phase 3 PRECISION trial, the dual endothelin antagonist aprocit": {
+      "gold": "Supported",
+      "verdict_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      },
+      "naive_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      }
+    },
+    "In the phase 3 HERCULES trial, the Bruton's tyrosine kinase inhibitor ": {
+      "gold": "Supported",
+      "verdict_per_run": {
+        "run1": "Supported",
+        "run2": "Insufficient",
+        "run3": "Supported"
+      },
+      "naive_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      }
+    },
+    "In the phase 3 APPLAUSE-IgAN trial, the alternative-complement (factor": {
+      "gold": "Supported",
+      "verdict_per_run": {
+        "run1": "Supported",
+        "run2": "Insufficient",
+        "run3": "Supported"
+      },
+      "naive_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      }
+    },
+    "In the phase 3 SUMMIT trial, tirzepatide reduced the risk of cardiovas": {
+      "gold": "Supported",
+      "verdict_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      },
+      "naive_per_run": {
+        "run1": "Supported",
+        "run2": "Supported",
+        "run3": "Supported"
+      }
+    }
+  }
+}
